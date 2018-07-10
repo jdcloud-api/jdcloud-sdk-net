@@ -38,11 +38,11 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        ///备份名称，缺省系统将分配一个随机名称
+        ///备份名称，缺省为系统分配一个随机名称
         ///</summary>
         public string BackupName{ get; set; }
         ///<summary>
-        ///需要备份的数据库名称列表。如不填，则备份整个实例。&lt;/br&gt;SQL Server支持该参数&lt;/br&gt;&lt;strong&gt;MySQL不支持该参数&lt;/strong&gt;
+        ///DbNames
         ///</summary>
         public List<string> DbNames{ get; set; }
     }

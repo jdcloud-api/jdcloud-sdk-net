@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 关闭CC防护每ip的限速
+    /// 关闭实例CC防护的观察者模式
     /// </summary>
     public class DisableCcObserverModeRequest : JdcloudRequest
     {

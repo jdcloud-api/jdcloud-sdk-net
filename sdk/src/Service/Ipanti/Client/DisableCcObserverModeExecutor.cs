@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 关闭CC防护每ip的限速
+    /// 关闭实例CC防护的观察者模式
     /// </summary>
     public class DisableCcObserverModeExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 关闭CC防护每ip的限速接口的Http 请求方法
+        /// 关闭实例CC防护的观察者模式接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +47,12 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 关闭CC防护每ip的限速接口的Http资源请求路径
+        /// 关闭实例CC防护的观察者模式接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/instances/{instanceId}:disableCcIpLimit";
+            return "/regions/{regionId}/instances/{instanceId}:disableCcObserverMode";
             }
         }
     }

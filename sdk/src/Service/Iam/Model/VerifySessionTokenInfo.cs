@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Iam.Model
 {
@@ -39,7 +40,9 @@ namespace JDCloudSDK.Iam.Model
 
         ///<summary>
         ///操作action
+        ///Required:true
         ///</summary>
-        public string Action{ get; set; }
+        [Required]
+        public string BusinessAction{ get; set; }
     }
 }

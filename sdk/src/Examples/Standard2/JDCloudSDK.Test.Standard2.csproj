@@ -15,11 +15,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
-    <ProjectReference Include="..\..\Service\Ag\JDCloudSDK.Ag.csproj" />
     <ProjectReference Include="..\..\Service\Charge\JDCloudSDK.Charge.csproj" />
     <ProjectReference Include="..\..\Service\Common\JDCloudSDK.Common.csproj" />
     <ProjectReference Include="..\..\Service\Disk\JDCloudSDK.Disk.csproj" />
-    <ProjectReference Include="..\..\Service\Lb\JDCloudSDK.Lb.csproj" />
     <ProjectReference Include="..\..\Service\Mongodb\JDCloudSDK.Mongodb.csproj" />
     <ProjectReference Include="..\..\Service\Monitor\JDCloudSDK.Monitor.csproj" />
     <ProjectReference Include="..\..\Service\Mps\JDCloudSDK.Mps.csproj" />

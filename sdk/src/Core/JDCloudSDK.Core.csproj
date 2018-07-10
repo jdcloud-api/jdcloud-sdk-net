@@ -14,6 +14,7 @@
     <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>京东云SDK C# core</PackageReleaseNotes>
+	<PackageOutputPath>..\..\Release\nuget</PackageOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

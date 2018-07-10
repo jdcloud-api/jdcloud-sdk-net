@@ -42,7 +42,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string DbName{ get; set; }
         ///<summary>
-        ///对数据库具有的权限&lt;/br&gt;ro:只读&lt;/br&gt;rw:读写
+        ///对数据库具有的权限,ro:只读  rw:读写
         ///</summary>
         public string Privilege{ get; set; }
     }

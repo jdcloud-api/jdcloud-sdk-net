@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 获取备份下载链接
     /// </summary>
     public class DescribeBackupDownloadURLResult : JdcloudResult
     {
         ///<summary>
-        ///公网下载链接，若当前不可下载，则为空串
+        ///PublicURL
         ///</summary>
         public   string PublicURL{ get; set; }
         ///<summary>
-        ///内网下载链接，若当前不可下载，则为空串
+        ///InternalURL
         ///</summary>
         public   string InternalURL{ get; set; }
     }

@@ -180,27 +180,6 @@ namespace JDCloudSDK.Oss.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// moveobject
-        ///
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public MoveObjectResponse MoveObject(MoveObjectRequest request) {
-            return  new MoveObjectExecutor().Client(this).Execute<MoveObjectResponse, MoveObjectResult, MoveObjectRequest>(request);
-        }
-#else
-        /// <summary>
-        /// moveobject
-        ///
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<MoveObjectResponse> MoveObject(MoveObjectRequest request) {
-            return await new MoveObjectExecutor().Client(this).Execute<MoveObjectResponse, MoveObjectResult, MoveObjectRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         /// 查询bucket是否存在
         ///
         /// </summary>

@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 创建备份
     /// </summary>
     public class CreateBackupRequest : JdcloudRequest
     {

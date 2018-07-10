@@ -52,8 +52,10 @@ namespace JDCloudSDK.Iam.Model
         public string Code{ get; set; }
         ///<summary>
         ///操作action
+        ///Required:true
         ///</summary>
-        public string Action{ get; set; }
+        [Required]
+        public string BusinessAction{ get; set; }
         ///<summary>
         ///令牌有效期，单位秒，OpenAPI第三方MFA方式验证有效，默认短信、邮箱token有效期300秒，MFA有效期30秒
         ///</summary>

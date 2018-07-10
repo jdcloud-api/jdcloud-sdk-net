@@ -271,7 +271,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 关闭CC防护每ip的限速
+        /// 关闭实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 关闭CC防护每ip的限速
+        /// 关闭实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 开启CC防护每ip的限速
+        /// 开启实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 开启CC防护每ip的限速
+        /// 开启实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -476,6 +476,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyForwardRuleResponse> ModifyForwardRule(ModifyForwardRuleRequest request) {
             return await new ModifyForwardRuleExecutor().Client(this).Execute<ModifyForwardRuleResponse, ModifyForwardRuleResult, ModifyForwardRuleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 关闭CC防护每ip的限速
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableCcIpLimitResponse DisableCcIpLimit(DisableCcIpLimitRequest request) {
+            return  new DisableCcIpLimitExecutor().Client(this).Execute<DisableCcIpLimitResponse, DisableCcIpLimitResult, DisableCcIpLimitRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 关闭CC防护每ip的限速
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableCcIpLimitResponse> DisableCcIpLimit(DisableCcIpLimitRequest request) {
+            return await new DisableCcIpLimitExecutor().Client(this).Execute<DisableCcIpLimitResponse, DisableCcIpLimitResult, DisableCcIpLimitRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -913,6 +932,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCcAttackLogDetailsResponse> DescribeCcAttackLogDetails(DescribeCcAttackLogDetailsRequest request) {
             return await new DescribeCcAttackLogDetailsExecutor().Client(this).Execute<DescribeCcAttackLogDetailsResponse, DescribeCcAttackLogDetailsResult, DescribeCcAttackLogDetailsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 开启CC防护每ip的限速
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableCcIpLimitResponse EnableCcIpLimit(EnableCcIpLimitRequest request) {
+            return  new EnableCcIpLimitExecutor().Client(this).Execute<EnableCcIpLimitResponse, EnableCcIpLimitResult, EnableCcIpLimitRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 开启CC防护每ip的限速
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableCcIpLimitResponse> EnableCcIpLimit(EnableCcIpLimitRequest request) {
+            return await new EnableCcIpLimitExecutor().Client(this).Execute<EnableCcIpLimitResponse, EnableCcIpLimitResult, EnableCcIpLimitRequest>(request);
         }
 #endif
 

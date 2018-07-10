@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 创建数据库账户
     /// </summary>
     public class CreateAccountRequest : JdcloudRequest
     {

@@ -13,6 +13,7 @@
         <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>媒体处理相关接口</PackageReleaseNotes>
+        <PackageOutputPath>..\..\..\Release\nuget</PackageOutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)|$(TargetFramework)'=='Debug|AnyCPU|netstandard2.0'">

@@ -13,6 +13,7 @@
         <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>云硬盘API包含云硬盘相关接口和快照相关接口。可提供批量创建云硬盘，删除云硬盘，制作云硬盘快照等功能。</PackageReleaseNotes>
+        <PackageOutputPath>..\..\..\Release\nuget</PackageOutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)|$(TargetFramework)'=='Debug|AnyCPU|netstandard2.0'">

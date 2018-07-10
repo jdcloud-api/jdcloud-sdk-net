@@ -38,15 +38,15 @@ namespace JDCloudSDK.Charge.Model
     {
 
         ///<summary>
-        ///计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
+        ///计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
         ///</summary>
         public string ChargeMode{ get; set; }
         ///<summary>
-        ///预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+        ///预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
         ///</summary>
         public string ChargeUnit{ get; set; }
         ///<summary>
-        ///预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+        ///预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
         ///</summary>
         public int? ChargeDuration{ get; set; }
     }

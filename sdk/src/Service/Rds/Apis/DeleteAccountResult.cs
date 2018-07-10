@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 删除数据库账户
     /// </summary>
     public class DeleteAccountResult : JdcloudResult
     {

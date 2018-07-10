@@ -37,5 +37,13 @@ namespace  JDCloudSDK.Xdata.Apis
     /// </summary>
     public class GetRasQueryLogResult : JdcloudResult
     {
+        ///<summary>
+        ///Status
+        ///</summary>
+        public   bool Status{ get; set; }
+        ///<summary>
+        ///Message
+        ///</summary>
+        public   string Message{ get; set; }
     }
 }

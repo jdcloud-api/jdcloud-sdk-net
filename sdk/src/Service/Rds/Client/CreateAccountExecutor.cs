@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    /// 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 创建数据库账户
     /// </summary>
     public class CreateAccountExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持接口的Http 请求方法
+        /// 创建数据库账户接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        /// 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持接口的Http资源请求路径
+        /// 创建数据库账户接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

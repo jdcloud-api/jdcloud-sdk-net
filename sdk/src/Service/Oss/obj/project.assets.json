@@ -374,7 +374,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.2.3",
+    "version": "0.2.2",
     "restore": {
       "projectUniqueName": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Oss\\JDCloudSDK.Oss.csproj",
       "projectName": "JDCloudSDK.Oss",

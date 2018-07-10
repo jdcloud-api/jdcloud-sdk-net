@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 数据库管理
- * 数据库管理相关接口
+ * 库管理
+ * 库管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 创建数据库
     /// </summary>
     public class CreateDatabaseResult : JdcloudResult
     {

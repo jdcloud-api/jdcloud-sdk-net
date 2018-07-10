@@ -129,3 +129,6 @@
 /sdk/src/Service/Ucapi/bin/Debug
 /sdk/src/Service/Vpcwaf/bin/Debug
 /sdk/src/Service/Xdata/bin/Debug
+/sdk/Release/nuget
+/sdk/src/Core/obj/Release
+/sdk/JDCloudSDK.Linux.sln

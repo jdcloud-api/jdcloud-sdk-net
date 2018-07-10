@@ -56,7 +56,7 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         ///ag信息
         ///</summary>
-        public List<JDCloudSDK.Vm.Model.Ag> Ags{ get; set; }
+        public List<Ag> Ags{ get; set; }
         ///<summary>
         ///创建时间
         ///</summary>

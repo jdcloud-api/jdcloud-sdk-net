@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 获取备份下载链接
     /// </summary>
     public class DescribeBackupDownloadURLRequest : JdcloudRequest
     {
         ///<summary>
-        ///SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数&lt;/br&gt;MySQL：无需此参数；
+        ///MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
         ///</summary>
         public   string FileName{ get; set; }
         ///<summary>

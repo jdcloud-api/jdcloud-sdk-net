@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 获取备份信息
     /// </summary>
     public class DescribeBackupsResult : JdcloudResult
     {
@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Rds.Apis
         public List<Backup> Backup{ get; set; }
 
         ///<summary>
-        ///总记录数
+        ///TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

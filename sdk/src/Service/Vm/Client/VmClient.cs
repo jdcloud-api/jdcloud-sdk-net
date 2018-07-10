@@ -336,44 +336,6 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改镜像信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest request) {
-            return  new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改镜像信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest request) {
-            return await new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 批量查询镜像限制
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeImageConstraintsBatchResponse DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
-            return  new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 批量查询镜像限制
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageConstraintsBatchResponse> DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
-            return await new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         /// 查询主机vnc
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -756,7 +718,7 @@ namespace JDCloudSDK.Vm.Client
         /// &quot;删除单个实例&quot;
         ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
         ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载的数据盘为按配置计费，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
         ///
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -769,7 +731,7 @@ namespace JDCloudSDK.Vm.Client
         /// &quot;删除单个实例&quot;
         ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
         ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载的数据盘为按配置计费，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
         ///
         /// </summary>
         /// <param name="request">请求参数信息</param>

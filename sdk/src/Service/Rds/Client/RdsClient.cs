@@ -138,406 +138,7 @@ namespace JDCloudSDK.Rds.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 获取某个审计文件的下载链接，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAuditDownloadURLResponse GetAuditDownloadURL(GetAuditDownloadURLRequest request) {
-            return  new GetAuditDownloadURLExecutor().Client(this).Execute<GetAuditDownloadURLResponse, GetAuditDownloadURLResult, GetAuditDownloadURLRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 获取某个审计文件的下载链接，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAuditDownloadURLResponse> GetAuditDownloadURL(GetAuditDownloadURLRequest request) {
-            return await new GetAuditDownloadURLExecutor().Client(this).Execute<GetAuditDownloadURLResponse, GetAuditDownloadURLResult, GetAuditDownloadURLRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 删除数据库集群实例
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request) {
-            return  new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 删除数据库集群实例
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
-            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 清除/关闭 数据库审计，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteAuditResponse DeleteAudit(DeleteAuditRequest request) {
-            return  new DeleteAuditExecutor().Client(this).Execute<DeleteAuditResponse, DeleteAuditResult, DeleteAuditRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 清除/关闭 数据库审计，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteAuditResponse> DeleteAudit(DeleteAuditRequest request) {
-            return await new DeleteAuditExecutor().Client(this).Execute<DeleteAuditResponse, DeleteAuditResult, DeleteAuditRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 获取上传导入文件的需要的Key
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetUploadKeyResponse GetUploadKey(GetUploadKeyRequest request) {
-            return  new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 获取上传导入文件的需要的Key
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetUploadKeyResponse> GetUploadKey(GetUploadKeyRequest request) {
-            return await new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 开启数据库审计，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateAuditResponse CreateAudit(CreateAuditRequest request) {
-            return  new CreateAuditExecutor().Client(this).Execute<CreateAuditResponse, CreateAuditResult, CreateAuditRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 开启数据库审计，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateAuditResponse> CreateAudit(CreateAuditRequest request) {
-            return await new CreateAuditExecutor().Client(this).Execute<CreateAuditResponse, CreateAuditResult, CreateAuditRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBackupDownloadURLResponse DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest request) {
-            return  new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBackupDownloadURLResponse> DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest request) {
-            return await new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询RDS实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
-            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询RDS实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest request) {
-            return  new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request) {
-            return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查看RDS实例备份策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetBackupPolicyResponse GetBackupPolicy(GetBackupPolicyRequest request) {
-            return  new GetBackupPolicyExecutor().Client(this).Execute<GetBackupPolicyResponse, GetBackupPolicyResult, GetBackupPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查看RDS实例备份策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetBackupPolicyResponse> GetBackupPolicy(GetBackupPolicyRequest request) {
-            return await new GetBackupPolicyExecutor().Client(this).Execute<GetBackupPolicyResponse, GetBackupPolicyResult, GetBackupPolicyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 获取单库上云文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeImportFilesResponse DescribeImportFiles(DescribeImportFilesRequest request) {
-            return  new DescribeImportFilesExecutor().Client(this).Execute<DescribeImportFilesResponse, DescribeImportFilesResult, DescribeImportFilesRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 获取单库上云文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeImportFilesResponse> DescribeImportFiles(DescribeImportFilesRequest request) {
-            return await new DescribeImportFilesExecutor().Client(this).Execute<DescribeImportFilesResponse, DescribeImportFilesResult, DescribeImportFilesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateBackupResponse CreateBackup(CreateBackupRequest request) {
-            return  new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
-            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查看审计文件列表，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAuditFilesResponse GetAuditFiles(GetAuditFilesRequest request) {
-            return  new GetAuditFilesExecutor().Client(this).Execute<GetAuditFilesResponse, GetAuditFilesResult, GetAuditFilesRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查看审计文件列表，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAuditFilesResponse> GetAuditFiles(GetAuditFilesRequest request) {
-            return await new GetAuditFilesExecutor().Client(this).Execute<GetAuditFilesResponse, GetAuditFilesResult, GetAuditFilesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
-            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request) {
-            return  new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
-            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GrantPrivilegeResponse GrantPrivilege(GrantPrivilegeRequest request) {
-            return  new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GrantPrivilegeResponse> GrantPrivilege(GrantPrivilegeRequest request) {
-            return await new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查看开启的审计选项，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAuditResponse DescribeAudit(DescribeAuditRequest request) {
-            return  new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查看开启的审计选项，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest request) {
-            return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 获取审计所有选项及推荐的选项，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAuditOptionsResponse GetAuditOptions(GetAuditOptionsRequest request) {
-            return  new GetAuditOptionsExecutor().Client(this).Execute<GetAuditOptionsResponse, GetAuditOptionsResult, GetAuditOptionsRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 获取审计所有选项及推荐的选项，目前仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAuditOptionsResponse> GetAuditOptions(GetAuditOptionsRequest request) {
-            return await new GetAuditOptionsExecutor().Client(this).Execute<GetAuditOptionsResponse, GetAuditOptionsResult, GetAuditOptionsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 从用户上传的备份文件中恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RestoreDatabaseFromFileResponse RestoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) {
-            return  new RestoreDatabaseFromFileExecutor().Client(this).Execute<RestoreDatabaseFromFileResponse, RestoreDatabaseFromFileResult, RestoreDatabaseFromFileRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 从用户上传的备份文件中恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RestoreDatabaseFromFileResponse> RestoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) {
-            return await new RestoreDatabaseFromFileExecutor().Client(this).Execute<RestoreDatabaseFromFileResponse, RestoreDatabaseFromFileResult, RestoreDatabaseFromFileRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 设置上传文件是否共享给该用户的其他实例
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetImportFileSharedResponse SetImportFileShared(SetImportFileSharedRequest request) {
-            return  new SetImportFileSharedExecutor().Client(this).Execute<SetImportFileSharedResponse, SetImportFileSharedResult, SetImportFileSharedRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 设置上传文件是否共享给该用户的其他实例
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetImportFileSharedResponse> SetImportFileShared(SetImportFileSharedRequest request) {
-            return await new SetImportFileSharedExecutor().Client(this).Execute<SetImportFileSharedResponse, SetImportFileSharedResult, SetImportFileSharedRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request) {
-            return  new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest request) {
-            return await new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 从云数据库SQL Server备份中恢复单个数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RestoreDatabaseFromBackupResponse RestoreDatabaseFromBackup(RestoreDatabaseFromBackupRequest request) {
-            return  new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 从云数据库SQL Server备份中恢复单个数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RestoreDatabaseFromBackupResponse> RestoreDatabaseFromBackup(RestoreDatabaseFromBackupRequest request) {
-            return await new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 创建数据库账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -546,7 +147,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 创建数据库账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -556,26 +157,83 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建数据库集群实例
+        /// 数据库账号授权
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
-            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+        public GrantPrivilegeResponse GrantPrivilege(GrantPrivilegeRequest request) {
+            return  new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request);
         }
 #else
         /// <summary>
-        /// 创建数据库集群实例
+        /// 数据库账号授权
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
-            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+        public async Task<GrantPrivilegeResponse> GrantPrivilege(GrantPrivilegeRequest request) {
+            return await new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取备份信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 创建数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest request) {
+            return  new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 创建数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request) {
+            return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 获取单库上云文件列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeImportFilesResponse DescribeImportFiles(DescribeImportFilesRequest request) {
+            return  new DescribeImportFilesExecutor().Client(this).Execute<DescribeImportFilesResponse, DescribeImportFilesResult, DescribeImportFilesRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 获取单库上云文件列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeImportFilesResponse> DescribeImportFiles(DescribeImportFilesRequest request) {
+            return await new DescribeImportFilesExecutor().Client(this).Execute<DescribeImportFilesResponse, DescribeImportFilesResult, DescribeImportFilesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 创建备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateBackupResponse CreateBackup(CreateBackupRequest request) {
+            return  new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 创建备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
+            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 获取备份信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -584,7 +242,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 获取备份信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 获取备份信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -594,59 +252,116 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改当前审计选项，目前仅支持SQL Server
+        /// 从用户上传的备份文件中恢复SQL Server数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyAuditResponse ModifyAudit(ModifyAuditRequest request) {
-            return  new ModifyAuditExecutor().Client(this).Execute<ModifyAuditResponse, ModifyAuditResult, ModifyAuditRequest>(request);
+        public RestoreDatabaseFromFileResponse RestoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) {
+            return  new RestoreDatabaseFromFileExecutor().Client(this).Execute<RestoreDatabaseFromFileResponse, RestoreDatabaseFromFileResult, RestoreDatabaseFromFileRequest>(request);
         }
 #else
         /// <summary>
-        /// 修改当前审计选项，目前仅支持SQL Server
+        /// 从用户上传的备份文件中恢复SQL Server数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyAuditResponse> ModifyAudit(ModifyAuditRequest request) {
-            return await new ModifyAuditExecutor().Client(this).Execute<ModifyAuditResponse, ModifyAuditResult, ModifyAuditRequest>(request);
+        public async Task<RestoreDatabaseFromFileResponse> RestoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) {
+            return await new RestoreDatabaseFromFileExecutor().Client(this).Execute<RestoreDatabaseFromFileResponse, RestoreDatabaseFromFileResult, RestoreDatabaseFromFileRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改RDS实例备份策略，目前仅支持SQL Server
+        /// 删除数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetBackupPolicyResponse SetBackupPolicy(SetBackupPolicyRequest request) {
-            return  new SetBackupPolicyExecutor().Client(this).Execute<SetBackupPolicyResponse, SetBackupPolicyResult, SetBackupPolicyRequest>(request);
+        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request) {
+            return  new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
         }
 #else
         /// <summary>
-        /// 修改RDS实例备份策略，目前仅支持SQL Server
+        /// 删除数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetBackupPolicyResponse> SetBackupPolicy(SetBackupPolicyRequest request) {
-            return await new SetBackupPolicyExecutor().Client(this).Execute<SetBackupPolicyResponse, SetBackupPolicyResult, SetBackupPolicyRequest>(request);
+        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
+            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询RDS实例详细信息
+        /// 数据库账号重置密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeInstanceAttributesResponse DescribeInstanceAttributes(DescribeInstanceAttributesRequest request) {
-            return  new DescribeInstanceAttributesExecutor().Client(this).Execute<DescribeInstanceAttributesResponse, DescribeInstanceAttributesResult, DescribeInstanceAttributesRequest>(request);
+        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
+            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
         }
 #else
         /// <summary>
-        /// 查询RDS实例详细信息
+        /// 数据库账号重置密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceAttributesResponse> DescribeInstanceAttributes(DescribeInstanceAttributesRequest request) {
-            return await new DescribeInstanceAttributesExecutor().Client(this).Execute<DescribeInstanceAttributesResponse, DescribeInstanceAttributesResult, DescribeInstanceAttributesRequest>(request);
+        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 删除数据库账户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request) {
+            return  new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 删除数据库账户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest request) {
+            return await new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 从云数据库SQL Server备份中恢复单个数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreDatabaseFromBackupResponse RestoreDatabaseFromBackup(RestoreDatabaseFromBackupRequest request) {
+            return  new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 从云数据库SQL Server备份中恢复单个数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreDatabaseFromBackupResponse> RestoreDatabaseFromBackup(RestoreDatabaseFromBackupRequest request) {
+            return await new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        /// 获取备份下载链接
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupDownloadURLResponse DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest request) {
+            return  new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request);
+        }
+#else
+        /// <summary>
+        /// 获取备份下载链接
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupDownloadURLResponse> DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest request) {
+            return await new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request);
         }
 #endif
 

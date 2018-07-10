@@ -45,5 +45,9 @@ namespace  JDCloudSDK.Xdata.Apis
         ///Message
         ///</summary>
         public   string Message{ get; set; }
+        ///<summary>
+        ///Data
+        ///</summary>
+        public   string Data{ get; set; }
     }
 }

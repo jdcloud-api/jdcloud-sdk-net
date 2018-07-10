@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    /// 数据库账号授权
     /// </summary>
     public class GrantPrivilegeResponse : JdcloudResponse<GrantPrivilegeResult>
     {
