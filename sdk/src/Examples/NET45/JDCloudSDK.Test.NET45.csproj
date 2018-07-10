@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\..\..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EDF4429-251A-416D-BB68-93F227191BCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JDCloudSDK.Test.NET45</RootNamespace>
+    <AssemblyName>JDCloudSDK.Test.NET45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VmTest.cs" />
+    <Compile Include="VpcTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj">
+      <Project>{bb7ca472-e6b5-4c2e-8e83-47ecf3a89e82}</Project>
+      <Name>JDCloudSDK.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Charge\JDCloudSDK.Charge.csproj">
+      <Project>{92551776-3164-4a70-88d3-571ac5ec64ed}</Project>
+      <Name>JDCloudSDK.Charge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Common\JDCloudSDK.Common.csproj">
+      <Project>{685b0ff5-f949-49b5-9123-1c095d0e004b}</Project>
+      <Name>JDCloudSDK.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Disk\JDCloudSDK.Disk.csproj">
+      <Project>{4abdb78c-4dc1-44f8-9397-6dd14dbd3210}</Project>
+      <Name>JDCloudSDK.Disk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Nc\JDCloudSDK.Nc.csproj">
+      <Project>{81023013-50a5-4af0-9753-a16ff3abd7c2}</Project>
+      <Name>JDCloudSDK.Nc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Oss\JDCloudSDK.Oss.csproj">
+      <Project>{010ce749-28d8-419e-99fa-255a10b2b46f}</Project>
+      <Name>JDCloudSDK.Oss</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Vm\JDCloudSDK.Vm.csproj">
+      <Project>{bee0fe35-e570-4c8f-bfcb-9fbb9c091f18}</Project>
+      <Name>JDCloudSDK.Vm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Vpc\JDCloudSDK.Vpc.csproj">
+      <Project>{fbd3289a-8afe-4ce9-99d7-3e712b1ab6ad}</Project>
+      <Name>JDCloudSDK.Vpc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
