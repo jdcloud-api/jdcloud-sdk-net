@@ -8,7 +8,7 @@
 
 * 此项目使用visual studio 2017 开发，如果需要进行代码编辑、调试，推荐使用visual studio 2017 以上版本打开。
 
-* 本项目使用最新的 dotnet standard 多目标框架的方法进行编译，项目使用了 .NET 3.5 、 .NET 4.0 、 .NET 4.5 和 .net standard 2.0 版本进行编译。在编译前需要安装 .NET Framework 3.5 、4.0 、4.5 的开发sdk和dotnet core 2.0 以上版本的sdk，在windows 10 操作系统下 .NET Framework 3.5 请在 `启用和关闭windows功能` 的控制面板勾选应用以后再安装visual studio 2017 和 .net framework 4.7 ，.dotnet core 的安装方法请查看[微软官网文档](https://www.microsoft.com/net/learn/get-started/windows)。其它目标框架请在安装时候勾选。
+* 本项目使用最新的 dotnet standard 多目标框架的方法进行编译，项目使用了 .NET 3.5 、 .NET 4.0 、 .NET 4.5 和 .net standard 2.0 版本进行编译。在编译前需要安装 .NET Framework 3.5 、4.0 、4.5 的开发sdk和dotnet core 2.0 以上版本的sdk，在windows 10 操作系统下 .NET Framework 3.5 请在 `启用和关闭windows功能` 的控制面板勾选应用以后再安装visual studio 2017 和 .net framework 4.7 ，.dotnet core 的安装方法请查看[微软官网文档](https://www.microsoft.com/net/learn/get-started/windows)。其它目标框架请在安装visual studio时候勾选或微软官方网站下载。
 
 * 本项目支持在linux 下编译dotnet standard 2.0 版本的sdk，编译的脚本为项目下的`linux-bulid.sh`,需要拷贝到sdk目录下运行。输出目录请查看脚本自行修改。
 
