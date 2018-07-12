@@ -35,22 +35,22 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
+    ///  创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
     /// </summary>
     public class CreateInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        ///创建主机规格
+        /// 创建主机规格
         ///Required:true
         ///</summary>
         [Required]
         public   InstanceSpec InstanceSpec{ get; set; }
         ///<summary>
-        ///购买实例数量；取值范围：[1,100]，默认为1
+        /// 购买实例数量；取值范围：[1,100]，默认为1
         ///</summary>
         public   int? MaxCount{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

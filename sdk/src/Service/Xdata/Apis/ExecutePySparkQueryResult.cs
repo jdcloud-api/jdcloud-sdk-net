@@ -33,20 +33,20 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 执行PySpark脚本
+    ///  执行PySpark脚本
     /// </summary>
     public class ExecutePySparkQueryResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public   int? Data{ get; set; }
     }

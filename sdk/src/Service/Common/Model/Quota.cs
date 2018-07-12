@@ -32,21 +32,21 @@ namespace JDCloudSDK.Common.Model
 {
 
     /// <summary>
-    /// quota
+    ///  quota
     /// </summary>
     public class Quota
     {
 
         ///<summary>
-        ///配额项的名称
+        /// 配额项的名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///配额
+        /// 配额
         ///</summary>
         public int? Max{ get; set; }
         ///<summary>
-        ///已使用的数目
+        /// 已使用的数目
         ///</summary>
         public int? Used{ get; set; }
     }

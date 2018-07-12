@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTypeState
+    ///  instanceTypeState
     /// </summary>
     public class InstanceTypeState
     {
 
         ///<summary>
-        ///可用区
+        /// 可用区
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///true:可用、false:已售罄不可用
+        /// true:可用、false:已售罄不可用
         ///</summary>
         public bool InStock{ get; set; }
     }

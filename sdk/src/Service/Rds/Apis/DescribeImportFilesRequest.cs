@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取单库上云文件列表
+    ///  获取单库上云文件列表
     /// </summary>
     public class DescribeImportFilesRequest : JdcloudRequest
     {
         ///<summary>
-        ///区域编码
+        /// 区域编码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]

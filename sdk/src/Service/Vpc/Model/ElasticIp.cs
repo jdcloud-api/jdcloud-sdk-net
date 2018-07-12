@@ -33,49 +33,49 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// elasticIp
+    ///  elasticIp
     /// </summary>
     public class ElasticIp
     {
 
         ///<summary>
-        ///弹性IP的Id
+        /// 弹性IP的Id
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>
-        ///弹性IP地址
+        /// 弹性IP地址
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        ///弹性ip的限速（单位：Mbps)
+        /// 弹性ip的限速（单位：Mbps)
         ///</summary>
         public int? BandwidthMbps{ get; set; }
         ///<summary>
-        ///IP服务商，取值为bgp或no_bgp
+        /// IP服务商，取值为bgp或no_bgp
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>
-        ///私有IP的IPV4地址
+        /// 私有IP的IPV4地址
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        ///配置弹性网卡Id
+        /// 配置弹性网卡Id
         ///</summary>
         public string NetworkInterfaceId{ get; set; }
         ///<summary>
-        ///实例Id
+        /// 实例Id
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        ///实例类型
+        /// 实例类型
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///计费配置
+        /// 计费配置
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        ///弹性ip创建时间
+        /// 弹性ip创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

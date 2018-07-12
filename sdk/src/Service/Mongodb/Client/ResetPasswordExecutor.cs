@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 重置密码
+    ///  重置密码
     /// </summary>
     public class ResetPasswordExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 重置密码接口的Http 请求方法
+        ///  重置密码接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 重置密码接口的Http资源请求路径
+        ///  重置密码接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

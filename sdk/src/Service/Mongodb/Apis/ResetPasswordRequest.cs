@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 重置密码
+    ///  重置密码
     /// </summary>
     public class ResetPasswordRequest : JdcloudRequest
     {
         ///<summary>
-        ///新密码，必须包含且只支持字母及数字，不少于8字符不超过16字符。
+        /// 新密码，必须包含且只支持字母及数字，不少于8字符不超过16字符。
         ///Required:true
         ///</summary>
         [Required]
         public   string AccountPassword{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

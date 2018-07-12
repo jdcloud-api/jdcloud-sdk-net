@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询主机vnc
+    ///  查询主机vnc
     /// </summary>
     public class DescribeInstanceVncUrlResult : JdcloudResult
     {
         ///<summary>
-        ///VncUrl
+        /// VncUrl
         ///</summary>
         public   string VncUrl{ get; set; }
     }

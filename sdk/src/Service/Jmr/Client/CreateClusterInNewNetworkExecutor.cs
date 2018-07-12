@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jmr.Client
 {
 
     /// <summary>
-    /// 创建新集群
+    ///  创建新集群
     /// </summary>
     public class CreateClusterInNewNetworkExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建新集群接口的Http 请求方法
+        ///  创建新集群接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jmr.Client
             }
         }
         /// <summary>
-        /// 创建新集群接口的Http资源请求路径
+        ///  创建新集群接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

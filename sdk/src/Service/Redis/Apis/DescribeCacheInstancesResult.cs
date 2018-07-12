@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 查询缓存Redis实例列表
+    ///  查询缓存Redis实例列表
     /// </summary>
     public class DescribeCacheInstancesResult : JdcloudResult
     {
         ///<summary>
-        ///CacheInstances
+        /// CacheInstances
         ///</summary>
         public List<CacheInstance> CacheInstances{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

@@ -34,21 +34,21 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 查看备份
+    ///  查看备份
     /// </summary>
     public class DescribeBackupsResult : JdcloudResult
     {
         ///<summary>
-        ///Backups
+        /// Backups
         ///</summary>
         public List<Backup> Backups{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        ///PageNumber
+        /// PageNumber
         ///</summary>
         public   int? PageNumber{ get; set; }
     }

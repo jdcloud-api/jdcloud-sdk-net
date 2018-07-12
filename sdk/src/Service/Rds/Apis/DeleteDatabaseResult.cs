@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 删除数据库
+    ///  删除数据库
     /// </summary>
     public class DeleteDatabaseResult : JdcloudResult
     {

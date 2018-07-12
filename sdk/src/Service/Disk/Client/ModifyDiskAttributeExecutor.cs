@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 修改云硬盘的名字或描述信息
+    ///  修改云硬盘的名字或描述信息
     /// </summary>
     public class ModifyDiskAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 修改云硬盘的名字或描述信息接口的Http 请求方法
+        ///  修改云硬盘的名字或描述信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 修改云硬盘的名字或描述信息接口的Http资源请求路径
+        ///  修改云硬盘的名字或描述信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

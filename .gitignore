@@ -18,3 +18,5 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+/sdk/packages
+/sdk/JDCloudSDK.Linux.sln

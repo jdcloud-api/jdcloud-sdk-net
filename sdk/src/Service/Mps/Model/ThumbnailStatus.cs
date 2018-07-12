@@ -33,23 +33,23 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// thumbnailStatus
+    ///  thumbnailStatus
     /// </summary>
     public class ThumbnailStatus
     {
 
         ///<summary>
-        ///状态 (SUCESS, ERROR, PENDDING, RUNNING)
+        /// 状态 (SUCESS, ERROR, PENDDING, RUNNING)
         ///Required:true
         ///</summary>
         [Required]
         public string Status{ get; set; }
         ///<summary>
-        ///错误码
+        /// 错误码
         ///</summary>
         public int? ErrorCode{ get; set; }
         ///<summary>
-        ///成功时生成的截图文件个数
+        /// 成功时生成的截图文件个数
         ///</summary>
         public int? Count{ get; set; }
     }

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询弹性ip列表
+    ///  查询弹性ip列表
     /// </summary>
     public class DescribeElasticIpsResponse : JdcloudResponse<DescribeElasticIpsResult>
     {

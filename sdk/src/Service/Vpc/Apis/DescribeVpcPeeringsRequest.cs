@@ -35,29 +35,29 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询VpcPeering资源列表
+    ///  查询VpcPeering资源列表
     /// </summary>
     public class DescribeVpcPeeringsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+        /// 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///vpcPeeringIds - vpcPeering ID，支持多个
-        ///vpcPeeringNames - vpcPeering名称列表，支持多个
-        ///vpcId	- vpcPeering本端Vpc Id，支持单个
-        ///remoteVpcId - vpcPeering对端Vpc Id，支持单个
-        ///
+        /// vpcPeeringIds - vpcPeering ID，支持多个
+        /// vpcPeeringNames - vpcPeering名称列表，支持多个
+        /// vpcId	- vpcPeering本端Vpc Id，支持单个
+        /// remoteVpcId - vpcPeering对端Vpc Id，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

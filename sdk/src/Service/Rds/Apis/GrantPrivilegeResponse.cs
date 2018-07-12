@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 数据库账号授权
+    ///  数据库账号授权
     /// </summary>
     public class GrantPrivilegeResponse : JdcloudResponse<GrantPrivilegeResult>
     {

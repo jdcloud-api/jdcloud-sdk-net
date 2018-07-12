@@ -34,31 +34,31 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡分配secondaryIp接口
+    ///  给网卡分配secondaryIp接口
     /// </summary>
     public class AssignSecondaryIpsRequest : JdcloudRequest
     {
         ///<summary>
-        ///secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+        /// secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
         ///</summary>
         public   bool Force{ get; set; }
         ///<summary>
-        ///指定分配的secondaryIp地址
+        /// 指定分配的secondaryIp地址
         ///</summary>
         public List<string> SecondaryIps{ get; set; }
 
         ///<summary>
-        ///指定自动分配的secondaryIp个数
+        /// 指定自动分配的secondaryIp个数
         ///</summary>
         public   double? SecondaryIpCount{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///networkInterface ID
+        /// networkInterface ID
         ///Required:true
         ///</summary>
         [Required]

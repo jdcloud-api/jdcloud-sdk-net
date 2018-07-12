@@ -34,13 +34,13 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 列出当前用户的所有bucket
-        ///        ///
+    ///  列出当前用户的所有bucket
+        ///         /// 
     /// </summary>
     public class ListBucketsRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID，例如：cn-north-1
+        /// Region ID，例如：cn-north-1
         ///Required:true
         ///</summary>
         [Required]

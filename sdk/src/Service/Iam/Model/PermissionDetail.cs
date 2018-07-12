@@ -33,19 +33,19 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// permissionDetail
+    ///  permissionDetail
     /// </summary>
     public class PermissionDetail
     {
 
         ///<summary>
-        ///权限类型，只读-R、删除-D、修改-M
+        /// 权限类型，只读-R、删除-D、修改-M
         ///Required:true
         ///</summary>
         [Required]
         public string Permission{ get; set; }
         ///<summary>
-        ///资源信息
+        /// 资源信息
         ///Required:true
         ///</summary>
         [Required]

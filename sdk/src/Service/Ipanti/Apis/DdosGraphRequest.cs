@@ -34,29 +34,29 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// ddos防护报表
+    ///  ddos防护报表
     /// </summary>
     public class DdosGraphRequest : JdcloudRequest
     {
         ///<summary>
-        ///开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///Required:true
         ///</summary>
         [Required]
         public   string StartTime{ get; set; }
         ///<summary>
-        ///查询的结束时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 查询的结束时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///Required:true
         ///</summary>
         [Required]
         public   string EndTime{ get; set; }
         ///<summary>
-        ///高防实例id，可以传0个或多个
+        /// 高防实例id，可以传0个或多个
         ///</summary>
         public List<string> InstanceId{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

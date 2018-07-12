@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// 查询镜像共享帐户列表，不能操作非私有镜像
+    ///  查询镜像共享帐户列表，不能操作非私有镜像
     /// </summary>
     public class DescribeImageMembersExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询镜像共享帐户列表，不能操作非私有镜像接口的Http 请求方法
+        ///  查询镜像共享帐户列表，不能操作非私有镜像接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// 查询镜像共享帐户列表，不能操作非私有镜像接口的Http资源请求路径
+        ///  查询镜像共享帐户列表，不能操作非私有镜像接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

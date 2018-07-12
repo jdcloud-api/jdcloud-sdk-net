@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 修改容器属性
+    ///  修改容器属性
     /// </summary>
     public class ModifyContainerAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        ///容器名称
+        /// 容器名称
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        ///容器描述；和description必须要指定一个
+        /// 容器描述；和description必须要指定一个
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Container ID
+        /// Container ID
         ///Required:true
         ///</summary>
         [Required]

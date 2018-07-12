@@ -32,17 +32,17 @@ namespace JDCloudSDK.Rds.Model
 {
 
     /// <summary>
-    /// backupSpec
+    ///  backupSpec
     /// </summary>
     public class BackupSpec
     {
 
         ///<summary>
-        ///备份名称，缺省为系统分配一个随机名称
+        /// 备份名称，缺省为系统分配一个随机名称
         ///</summary>
         public string BackupName{ get; set; }
         ///<summary>
-        ///DbNames
+        /// DbNames
         ///</summary>
         public List<string> DbNames{ get; set; }
     }

@@ -32,25 +32,25 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 机密数据
+    ///  机密数据
     /// </summary>
     public class Secret
     {
 
         ///<summary>
-        ///机密数据名称
+        /// 机密数据名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
+        /// 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreatedAt{ get; set; }
         ///<summary>
-        ///机密的数据
+        /// 机密的数据
         ///</summary>
         public DockerRegistryData Data{ get; set; }
     }

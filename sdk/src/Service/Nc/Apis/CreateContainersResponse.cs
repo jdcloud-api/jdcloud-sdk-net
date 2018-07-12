@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 创建一台或多台指定配置的实例
+    ///  创建一台或多台指定配置的实例
     /// </summary>
     public class CreateContainersResponse : JdcloudResponse<CreateContainersResult>
     {

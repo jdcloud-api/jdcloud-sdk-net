@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 关闭CC防护每ip的限速
+    ///  关闭CC防护每ip的限速
     /// </summary>
     public class DisableCcIpLimitRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

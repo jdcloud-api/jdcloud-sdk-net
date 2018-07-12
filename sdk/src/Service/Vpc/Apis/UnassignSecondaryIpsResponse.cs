@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡删除secondaryIp接口
+    ///  给网卡删除secondaryIp接口
     /// </summary>
     public class UnassignSecondaryIpsResponse : JdcloudResponse<UnassignSecondaryIpsResult>
     {

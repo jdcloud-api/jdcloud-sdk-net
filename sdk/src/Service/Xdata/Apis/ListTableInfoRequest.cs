@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 查询指定数据库下所有数据表
+    ///  查询指定数据库下所有数据表
     /// </summary>
     public class ListTableInfoRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        ///数据库名称
+        /// 数据库名称
         ///Required:true
         ///</summary>
         [Required]
         public   string DatabaseName{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

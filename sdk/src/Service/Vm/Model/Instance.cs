@@ -34,85 +34,85 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instance
+    ///  instance
     /// </summary>
     public class Instance
     {
 
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        ///实例类型
+        /// 实例类型
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///主网卡所属VPC的ID
+        /// 主网卡所属VPC的ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///主网卡所属子网的ID
+        /// 主网卡所属子网的ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        ///主网卡主IP地址
+        /// 主网卡主IP地址
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        ///主网卡主IP绑定弹性IP的ID
+        /// 主网卡主IP绑定弹性IP的ID
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>
-        ///主网卡主IP绑定弹性IP的地址
+        /// 主网卡主IP绑定弹性IP的地址
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        ///实例状态
+        /// 实例状态
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///实例描述
+        /// 实例描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///镜像ID
+        /// 镜像ID
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        ///系统盘信息
+        /// 系统盘信息
         ///</summary>
         public InstanceDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        ///数据盘信息
+        /// 数据盘信息
         ///</summary>
         public List<InstanceDiskAttachment> DataDisks{ get; set; }
         ///<summary>
-        ///主网卡信息
+        /// 主网卡信息
         ///</summary>
         public InstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string LaunchTime{ get; set; }
         ///<summary>
-        ///可用区
+        /// 可用区
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///密钥对名称
+        /// 密钥对名称
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>
-        ///计费信息
+        /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        ///Tag信息
+        /// Tag信息
         ///</summary>
         public List<Tag> Tags{ get; set; }
     }

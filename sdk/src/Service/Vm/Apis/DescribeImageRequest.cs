@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像信息
+    ///  查询镜像信息
     /// </summary>
     public class DescribeImageRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Image ID
+        /// Image ID
         ///Required:true
         ///</summary>
         [Required]

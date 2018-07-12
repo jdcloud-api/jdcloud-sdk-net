@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 获取备份下载链接
+    ///  获取备份下载链接
     /// </summary>
     public class BackupDownloadURLRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///backup ID
+        /// backup ID
         ///Required:true
         ///</summary>
         [Required]

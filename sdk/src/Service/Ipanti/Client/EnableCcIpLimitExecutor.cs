@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 开启CC防护每ip的限速
+    ///  开启CC防护每ip的限速
     /// </summary>
     public class EnableCcIpLimitExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 开启CC防护每ip的限速接口的Http 请求方法
+        ///  开启CC防护每ip的限速接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 开启CC防护每ip的限速接口的Http资源请求路径
+        ///  开启CC防护每ip的限速接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 创建一块或多块云硬盘
+    ///  创建一块或多块云硬盘
     /// </summary>
     public class CreateDisksExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建一块或多块云硬盘接口的Http 请求方法
+        ///  创建一块或多块云硬盘接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 创建一块或多块云硬盘接口的Http资源请求路径
+        ///  创建一块或多块云硬盘接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

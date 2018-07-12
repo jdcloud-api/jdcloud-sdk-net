@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// ElasticIp资源信息详情
+    ///  ElasticIp资源信息详情
     /// </summary>
     public class DescribeElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///ElasticIp ID
+        /// ElasticIp ID
         ///Required:true
         ///</summary>
         [Required]

@@ -33,14 +33,14 @@ namespace JDCloudSDK.Oss.Client
 {
 
     /// <summary>
-    /// 列出当前用户的所有bucket
-        ///
+    ///  列出当前用户的所有bucket
+        /// 
     /// </summary>
     public class ListBucketsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 列出当前用户的所有bucket
-        ///接口的Http 请求方法
+        ///  列出当前用户的所有bucket
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -49,8 +49,8 @@ namespace JDCloudSDK.Oss.Client
             }
         }
         /// <summary>
-        /// 列出当前用户的所有bucket
-        ///接口的Http资源请求路径
+        ///  列出当前用户的所有bucket
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

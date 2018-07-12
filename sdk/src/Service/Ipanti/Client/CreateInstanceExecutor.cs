@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 创建实例
+    ///  创建实例
     /// </summary>
     public class CreateInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建实例接口的Http 请求方法
+        ///  创建实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 创建实例接口的Http资源请求路径
+        ///  创建实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,47 +33,47 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// createSubUserInfo
+    ///  createSubUserInfo
     /// </summary>
     public class CreateSubUserInfo
     {
 
         ///<summary>
-        ///子账号用户名，4~20位数字、字母、中文、下划线、中划线
+        /// 子账号用户名，4~20位数字、字母、中文、下划线、中划线
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///描述，0~256个字符
+        /// 描述，0~256个字符
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///密码，6~20位，至少包含一个字母，至少包含一个数字或半角符号
+        /// 密码，6~20位，至少包含一个字母，至少包含一个数字或半角符号
         ///Required:true
         ///</summary>
         [Required]
         public string Password{ get; set; }
         ///<summary>
-        ///手机号码，区号-手机号，目前只支持0086-中国手机号码
+        /// 手机号码，区号-手机号，目前只支持0086-中国手机号码
         ///Required:true
         ///</summary>
         [Required]
         public string Phone{ get; set; }
         ///<summary>
-        ///邮箱
+        /// 邮箱
         ///Required:true
         ///</summary>
         [Required]
         public string Email{ get; set; }
         ///<summary>
-        ///确认密码
+        /// 确认密码
         ///Required:true
         ///</summary>
         [Required]
         public string PasswordConfirm{ get; set; }
         ///<summary>
-        ///是否创建accessKey
+        /// 是否创建accessKey
         ///Required:true
         ///</summary>
         [Required]

@@ -32,21 +32,21 @@ namespace JDCloudSDK.Streambus.Model
 {
 
     /// <summary>
-    /// addTopic
+    ///  addTopic
     /// </summary>
     public class AddTopic
     {
 
         ///<summary>
-        ///Topic
+        /// Topic
         ///</summary>
         public Object Topic{ get; set; }
         ///<summary>
-        ///Target
+        /// Target
         ///</summary>
         public Object Target{ get; set; }
         ///<summary>
-        ///归档相关的具体参数
+        /// 归档相关的具体参数
         ///</summary>
         public List<Object> ParameterList{ get; set; }
     }

@@ -33,14 +33,14 @@ namespace JDCloudSDK.Oss.Client
 {
 
     /// <summary>
-    /// 删除一个bucket
-        ///
+    ///  删除一个bucket
+        /// 
     /// </summary>
     public class DeleteBucketExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除一个bucket
-        ///接口的Http 请求方法
+        ///  删除一个bucket
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -49,8 +49,8 @@ namespace JDCloudSDK.Oss.Client
             }
         }
         /// <summary>
-        /// 删除一个bucket
-        ///接口的Http资源请求路径
+        ///  删除一个bucket
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

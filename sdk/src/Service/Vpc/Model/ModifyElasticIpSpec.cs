@@ -33,13 +33,13 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// modifyElasticIpSpec
+    ///  modifyElasticIpSpec
     /// </summary>
     public class ModifyElasticIpSpec
     {
 
         ///<summary>
-        ///弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+        /// 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
         ///Required:true
         ///</summary>
         [Required]

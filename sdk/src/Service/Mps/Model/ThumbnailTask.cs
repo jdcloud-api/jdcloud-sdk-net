@@ -33,45 +33,45 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// thumbnailTask
+    ///  thumbnailTask
     /// </summary>
     public class ThumbnailTask
     {
 
         ///<summary>
-        ///任务ID (readonly)
+        /// 任务ID (readonly)
         ///</summary>
         public string TaskID{ get; set; }
         ///<summary>
-        ///状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
+        /// 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///错误码 (readonly)
+        /// 错误码 (readonly)
         ///</summary>
         public int? ErrorCode{ get; set; }
         ///<summary>
-        ///任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
+        /// 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
         ///</summary>
         public string CreatedTime{ get; set; }
         ///<summary>
-        ///任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
+        /// 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
         ///</summary>
         public string LastUpdatedTime{ get; set; }
         ///<summary>
-        ///Source
+        /// Source
         ///Required:true
         ///</summary>
         [Required]
         public ThumbnailTaskSource Source{ get; set; }
         ///<summary>
-        ///Target
+        /// Target
         ///Required:true
         ///</summary>
         [Required]
         public ThumbnailTaskTarget Target{ get; set; }
         ///<summary>
-        ///Rule
+        /// Rule
         ///</summary>
         public ThumbnailTaskRule Rule{ get; set; }
     }

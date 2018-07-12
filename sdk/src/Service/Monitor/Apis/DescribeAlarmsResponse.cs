@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询监控规则
+    ///  查询监控规则
     /// </summary>
     public class DescribeAlarmsResponse : JdcloudResponse<DescribeAlarmsResult>
     {

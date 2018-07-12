@@ -33,35 +33,35 @@ namespace JDCloudSDK.Xdata.Model
 {
 
     /// <summary>
-    /// dwInstance
+    ///  dwInstance
     /// </summary>
     public class DwInstance
     {
 
         ///<summary>
-        ///实例名
+        /// 实例名
         ///Required:true
         ///</summary>
         [Required]
         public string InstanceName{ get; set; }
         ///<summary>
-        ///实例描述
+        /// 实例描述
         ///</summary>
         public string Comments{ get; set; }
         ///<summary>
-        ///实例属主
+        /// 实例属主
         ///</summary>
         public string InstanceOwnerName{ get; set; }
         ///<summary>
-        ///实例所属区域
+        /// 实例所属区域
         ///</summary>
         public string Area{ get; set; }
         ///<summary>
-        ///实例别名（在页面显示）
+        /// 实例别名（在页面显示）
         ///</summary>
         public string Uname{ get; set; }
         ///<summary>
-        ///实例创建时间
+        /// 实例创建时间
         ///</summary>
         public string CreateTime{ get; set; }
     }

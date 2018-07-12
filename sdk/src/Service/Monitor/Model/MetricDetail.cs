@@ -32,29 +32,29 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// metricDetail
+    ///  metricDetail
     /// </summary>
     public class MetricDetail
     {
 
         ///<summary>
-        ///指标的计算单位，比如bit/s、%、k等
+        /// 指标的计算单位，比如bit/s、%、k等
         ///</summary>
         public string CalculateUnit{ get; set; }
         ///<summary>
-        ///监控项英文标识
+        /// 监控项英文标识
         ///</summary>
         public string Metric{ get; set; }
         ///<summary>
-        ///监控项名称
+        /// 监控项名称
         ///</summary>
         public string MetricName{ get; set; }
         ///<summary>
-        ///产品线标识
+        /// 产品线标识
         ///</summary>
         public string ServiceCode{ get; set; }
         ///<summary>
-        ///取样频次
+        /// 取样频次
         ///</summary>
         public string DownSample{ get; set; }
     }

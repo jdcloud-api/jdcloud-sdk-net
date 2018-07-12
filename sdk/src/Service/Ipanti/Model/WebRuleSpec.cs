@@ -32,65 +32,65 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// webRuleSpec
+    ///  webRuleSpec
     /// </summary>
     public class WebRuleSpec
     {
 
         ///<summary>
-        ///子域名
+        /// 子域名
         ///</summary>
         public string Domain{ get; set; }
         ///<summary>
-        ///协议：HTTP、HTTPS、HTTP_HTTPS
+        /// 协议：HTTP、HTTPS、HTTP_HTTPS
         ///</summary>
         public string Protocol{ get; set; }
         ///<summary>
-        ///HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+        /// HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
         ///</summary>
         public string Port{ get; set; }
         ///<summary>
-        ///HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+        /// HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
         ///</summary>
         public string HttpsPort{ get; set; }
         ///<summary>
-        ///回源类型：A或者CNAME
+        /// 回源类型：A或者CNAME
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
-        ///OriginAddr
+        /// OriginAddr
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        ///OnlineAddr
+        /// OnlineAddr
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        ///回源域名,originType为CNAME时需要指定该字段
+        /// 回源域名,originType为CNAME时需要指定该字段
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        ///证书内容
+        /// 证书内容
         ///</summary>
         public string HttpsCertContent{ get; set; }
         ///<summary>
-        ///证书私钥
+        /// 证书私钥
         ///</summary>
         public string HttpsRsaKey{ get; set; }
         ///<summary>
-        ///转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+        /// 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
-        ///是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+        /// 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
         ///</summary>
         public int? ForceJump{ get; set; }
         ///<summary>
-        ///是否为自定义端口号，0为默认 1为自定义
+        /// 是否为自定义端口号，0为默认 1为自定义
         ///</summary>
         public int? CustomPortStatus{ get; set; }
         ///<summary>
-        ///是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+        /// 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
         ///</summary>
         public int? HttpOrigin{ get; set; }
     }

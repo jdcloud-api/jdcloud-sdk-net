@@ -32,17 +32,17 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// ccIpLimitSpec
+    ///  ccIpLimitSpec
     /// </summary>
     public class CcIpLimitSpec
     {
 
         ///<summary>
-        ///cc防护每ip的限速大小
+        /// cc防护每ip的限速大小
         ///</summary>
         public int? CcSpeedLimit{ get; set; }
         ///<summary>
-        ///cc防护每ip的限速大小的统计周期
+        /// cc防护每ip的限速大小的统计周期
         ///</summary>
         public int? CcSpeedPeriod{ get; set; }
     }

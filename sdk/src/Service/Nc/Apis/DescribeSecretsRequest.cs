@@ -35,26 +35,26 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询secret列表
+    ///  查询secret列表
     /// </summary>
     public class DescribeSecretsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1
+        /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///name - secret名称，支持模糊搜索
-        ///
+        /// name - secret名称，支持模糊搜索
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

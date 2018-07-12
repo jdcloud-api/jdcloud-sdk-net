@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vpc.Client
 {
 
     /// <summary>
-    /// 删除VpcPeering接口
+    ///  删除VpcPeering接口
     /// </summary>
     public class DeleteVpcPeeringExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除VpcPeering接口接口的Http 请求方法
+        ///  删除VpcPeering接口接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vpc.Client
             }
         }
         /// <summary>
-        /// 删除VpcPeering接口接口的Http资源请求路径
+        ///  删除VpcPeering接口接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

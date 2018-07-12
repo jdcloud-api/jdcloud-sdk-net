@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 修改快照的名字或描述信息
+    ///  修改快照的名字或描述信息
     /// </summary>
     public class ModifySnpAttributeResponse : JdcloudResponse<ModifySnpAttributeResult>
     {

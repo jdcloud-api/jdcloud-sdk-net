@@ -34,40 +34,40 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询监控规则
+    ///  查询监控规则
     /// </summary>
     public class DescribeAlarmsRequest : JdcloudRequest
     {
         ///<summary>
-        ///产品名称
+        /// 产品名称
         ///</summary>
         public   string ServiceCode{ get; set; }
         ///<summary>
-        ///资源Id
+        /// 资源Id
         ///</summary>
         public   string ResourceId{ get; set; }
         ///<summary>
-        ///规则报警状态, 1：正常, 2：报警，4：数据不足
+        /// 规则报警状态, 1：正常, 2：报警，4：数据不足
         ///</summary>
         public   int? Status{ get; set; }
         ///<summary>
-        ///是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
+        /// 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
         ///</summary>
         public   int? IsAlarming{ get; set; }
         ///<summary>
-        ///规则状态：1为启用，0为禁用
+        /// 规则状态：1为启用，0为禁用
         ///</summary>
         public   int? Enabled{ get; set; }
         ///<summary>
-        ///当前所在页，默认为1
+        /// 当前所在页，默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///，默认为20；取值范围[1, 100]
+        /// ，默认为20；取值范围[1, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]

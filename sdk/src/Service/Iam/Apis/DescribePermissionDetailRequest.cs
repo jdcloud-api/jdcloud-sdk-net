@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询策略详情
+    ///  查询策略详情
     /// </summary>
     public class DescribePermissionDetailRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///权限id
+        /// 权限id
         ///Required:true
         ///</summary>
         [Required]

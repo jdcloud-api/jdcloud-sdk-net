@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 开启实例CC防护
+    ///  开启实例CC防护
     /// </summary>
     public class EnableInstanceCCExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 开启实例CC防护接口的Http 请求方法
+        ///  开启实例CC防护接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 开启实例CC防护接口的Http资源请求路径
+        ///  开启实例CC防护接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

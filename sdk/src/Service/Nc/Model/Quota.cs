@@ -32,17 +32,17 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// quota
+    ///  quota
     /// </summary>
     public class Quota
     {
 
         ///<summary>
-        ///配额
+        /// 配额
         ///</summary>
         public int? Limit{ get; set; }
         ///<summary>
-        ///已使用的数目
+        /// 已使用的数目
         ///</summary>
         public int? Used{ get; set; }
     }

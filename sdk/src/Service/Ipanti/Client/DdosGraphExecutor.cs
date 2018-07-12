@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// ddos防护报表
+    ///  ddos防护报表
     /// </summary>
     public class DdosGraphExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// ddos防护报表接口的Http 请求方法
+        ///  ddos防护报表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// ddos防护报表接口的Http资源请求路径
+        ///  ddos防护报表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

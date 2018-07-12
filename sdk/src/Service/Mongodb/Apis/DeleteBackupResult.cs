@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 删除备份
+    ///  删除备份
     /// </summary>
     public class DeleteBackupResult : JdcloudResult
     {

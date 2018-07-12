@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 启用实例ip黑名单
+    ///  启用实例ip黑名单
     /// </summary>
     public class EnableInstanceIpBlackListResponse : JdcloudResponse<EnableInstanceIpBlackListResult>
     {

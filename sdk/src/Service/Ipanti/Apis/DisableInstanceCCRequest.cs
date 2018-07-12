@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 关闭实例CC防护
+    ///  关闭实例CC防护
     /// </summary>
     public class DisableInstanceCCRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

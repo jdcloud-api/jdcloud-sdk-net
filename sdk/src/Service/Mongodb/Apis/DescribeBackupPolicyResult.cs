@@ -33,20 +33,20 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 获取备份策略
+    ///  获取备份策略
     /// </summary>
     public class DescribeBackupPolicyResult : JdcloudResult
     {
         ///<summary>
-        ///PreferredBackupPeriod
+        /// PreferredBackupPeriod
         ///</summary>
         public   string PreferredBackupPeriod{ get; set; }
         ///<summary>
-        ///PreferredBackupWindow
+        /// PreferredBackupWindow
         ///</summary>
         public   string PreferredBackupWindow{ get; set; }
         ///<summary>
-        ///BackupRetentionPeriod
+        /// BackupRetentionPeriod
         ///</summary>
         public   string BackupRetentionPeriod{ get; set; }
     }

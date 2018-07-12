@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询公网Ip基本信息
+    ///  查询公网Ip基本信息
     /// </summary>
     public class DescribeIpResourceInfoRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///公网ip
+        /// 公网ip
         ///Required:true
         ///</summary>
         [Required]

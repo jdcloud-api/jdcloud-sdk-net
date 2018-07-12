@@ -32,17 +32,17 @@ namespace JDCloudSDK.Baseanti.Model
 {
 
     /// <summary>
-    /// ipResourceFlowDetail
+    ///  ipResourceFlowDetail
     /// </summary>
     public class IpResourceFlowDetail
     {
 
         ///<summary>
-        ///Used
+        /// Used
         ///</summary>
         public List<long?> Used{ get; set; }
         ///<summary>
-        ///Times
+        /// Times
         ///</summary>
         public List<string> Times{ get; set; }
     }

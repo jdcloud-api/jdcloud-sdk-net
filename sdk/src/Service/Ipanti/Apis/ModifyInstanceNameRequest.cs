@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 修改实例名称
+    ///  修改实例名称
     /// </summary>
     public class ModifyInstanceNameRequest : JdcloudRequest
     {
         ///<summary>
-        ///新的实例名称
+        /// 新的实例名称
         ///Required:true
         ///</summary>
         [Required]
         public   string Name{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

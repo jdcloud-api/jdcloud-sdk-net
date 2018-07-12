@@ -32,25 +32,25 @@ namespace JDCloudSDK.Mongodb.Model
 {
 
     /// <summary>
-    /// backupDownloadURL
+    ///  backupDownloadURL
     /// </summary>
     public class BackupDownloadURL
     {
 
         ///<summary>
-        ///备份名称
+        /// 备份名称
         ///</summary>
         public string BackupName{ get; set; }
         ///<summary>
-        ///公网下载链接的地址
+        /// 公网下载链接的地址
         ///</summary>
         public string BackupInternetDownloadURL{ get; set; }
         ///<summary>
-        ///内网下载链接的地址
+        /// 内网下载链接的地址
         ///</summary>
         public string BackupIntranetDownloadURL{ get; set; }
         ///<summary>
-        ///公网和内网的下载链接过期时间
+        /// 公网和内网的下载链接过期时间
         ///</summary>
         public string LinkExpiredTime{ get; set; }
     }

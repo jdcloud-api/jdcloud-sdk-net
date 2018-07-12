@@ -32,89 +32,89 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// webRule
+    ///  webRule
     /// </summary>
     public class WebRule
     {
 
         ///<summary>
-        ///规则id
+        /// 规则id
         ///</summary>
         public long? Id{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///</summary>
         public long? InstanceId{ get; set; }
         ///<summary>
-        ///子域名
+        /// 子域名
         ///</summary>
         public string Domain{ get; set; }
         ///<summary>
-        ///规则的cname
+        /// 规则的cname
         ///</summary>
         public string Cname{ get; set; }
         ///<summary>
-        ///协议：HTTP、HTTPS、HTTP_HTTPS
+        /// 协议：HTTP、HTTPS、HTTP_HTTPS
         ///</summary>
         public string Protocol{ get; set; }
         ///<summary>
-        ///HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+        /// HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
         ///</summary>
         public string Port{ get; set; }
         ///<summary>
-        ///HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+        /// HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
         ///</summary>
         public string HttpsPort{ get; set; }
         ///<summary>
-        ///回源类型：A或者CNAME
+        /// 回源类型：A或者CNAME
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
-        ///OriginAddr
+        /// OriginAddr
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        ///OnlineAddr
+        /// OnlineAddr
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        ///回源域名,originType为CNAME时返回该字段
+        /// 回源域名,originType为CNAME时返回该字段
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        ///证书内容
+        /// 证书内容
         ///</summary>
         public string HttpsCertContent{ get; set; }
         ///<summary>
-        ///证书私钥
+        /// 证书私钥
         ///</summary>
         public string HttpsRsaKey{ get; set; }
         ///<summary>
-        ///证书状态：0异常，1正常
+        /// 证书状态：0异常，1正常
         ///</summary>
         public int? HttpCertStatus{ get; set; }
         ///<summary>
-        ///0防御状态，1回源状态
+        /// 0防御状态，1回源状态
         ///</summary>
         public int? Status{ get; set; }
         ///<summary>
-        ///0 CC关闭 1 CC开启
+        /// 0 CC关闭 1 CC开启
         ///</summary>
         public int? CcStatus{ get; set; }
         ///<summary>
-        ///转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+        /// 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
-        ///是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+        /// 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
         ///</summary>
         public int? ForceJump{ get; set; }
         ///<summary>
-        ///是否为自定义端口号，0为默认 1为自定义
+        /// 是否为自定义端口号，0为默认 1为自定义
         ///</summary>
         public int? CustomPortStatus{ get; set; }
         ///<summary>
-        ///是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+        /// 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
         ///</summary>
         public int? HttpOrigin{ get; set; }
     }

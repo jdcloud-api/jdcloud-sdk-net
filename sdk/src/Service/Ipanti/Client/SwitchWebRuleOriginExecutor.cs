@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 网站类规则切换成回源状态
+    ///  网站类规则切换成回源状态
     /// </summary>
     public class SwitchWebRuleOriginExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 网站类规则切换成回源状态接口的Http 请求方法
+        ///  网站类规则切换成回源状态接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 网站类规则切换成回源状态接口的Http资源请求路径
+        ///  网站类规则切换成回源状态接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询公网Ip的防护明细
+    ///  查询公网Ip的防护明细
     /// </summary>
     public class DescribeIpResourceProtectInfoRequest : JdcloudRequest
     {
         ///<summary>
-        ///限制查询的开始范围
+        /// 限制查询的开始范围
         ///</summary>
         public   int? Start{ get; set; }
         ///<summary>
-        ///限制查询的记录数
+        /// 限制查询的记录数
         ///</summary>
         public   int? Limit{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///公网ip
+        /// 公网ip
         ///Required:true
         ///</summary>
         [Required]

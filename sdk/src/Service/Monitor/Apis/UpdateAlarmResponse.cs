@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 修改已创建的报警规则
+    ///  修改已创建的报警规则
     /// </summary>
     public class UpdateAlarmResponse : JdcloudResponse<UpdateAlarmResult>
     {

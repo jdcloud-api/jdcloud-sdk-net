@@ -35,20 +35,20 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 创建一台或多台指定配置的实例
+    ///  创建一台或多台指定配置的实例
     /// </summary>
     public class CreateContainersRequest : JdcloudRequest
     {
         ///<summary>
-        ///创建容器规格
+        /// 创建容器规格
         ///</summary>
         public   ContainerSpec ContainerSpec{ get; set; }
         ///<summary>
-        ///购买实例数量；取值范围：[1,100]
+        /// 购买实例数量；取值范围：[1,100]
         ///</summary>
         public   int? MaxCount{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

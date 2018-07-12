@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 查询数据库详情
+    ///  查询数据库详情
     /// </summary>
     public class GetDatabaseInfoExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询数据库详情接口的Http 请求方法
+        ///  查询数据库详情接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 查询数据库详情接口的Http资源请求路径
+        ///  查询数据库详情接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

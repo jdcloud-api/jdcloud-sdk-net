@@ -32,33 +32,33 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplate
+    ///  instanceTemplate
     /// </summary>
     public class InstanceTemplate
     {
 
         ///<summary>
-        ///启动模板ID
+        /// 启动模板ID
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        ///启动模板名称
+        /// 启动模板名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///启动模板描述
+        /// 启动模板描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///模板的数据
+        /// 模板的数据
         ///</summary>
         public InstanceTemplateData InstanceTemplateData{ get; set; }
         ///<summary>
-        ///ag信息
+        /// ag信息
         ///</summary>
         public List<Ag> Ags{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

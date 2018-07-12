@@ -35,47 +35,47 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查看某资源的监控数据
+    ///  查看某资源的监控数据
     /// </summary>
     public class DescribeMetricDataRequest : JdcloudRequest
     {
         ///<summary>
-        ///资源的类型，取值vm, lb, ip, database 等
+        /// 资源的类型，取值vm, lb, ip, database 等
         ///Required:true
         ///</summary>
         [Required]
         public   string ServiceCode{ get; set; }
         ///<summary>
-        ///资源的uuid
+        /// 资源的uuid
         ///Required:true
         ///</summary>
         [Required]
         public   string ResourceId{ get; set; }
         ///<summary>
-        ///查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
         ///</summary>
         public   string StartTime{ get; set; }
         ///<summary>
-        ///查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+        /// 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>
-        ///时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+        /// 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
         ///</summary>
         public   string TimeInterval{ get; set; }
         ///<summary>
-        ///自定义标签
+        /// 自定义标签
         ///</summary>
         public List<Tags> Tags{ get; set; }
 
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///监控项英文标识(id)
+        /// 监控项英文标识(id)
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 修改备份策略
+    ///  修改备份策略
     /// </summary>
     public class ModifyBackupPolicyResponse : JdcloudResponse<ModifyBackupPolicyResult>
     {

@@ -34,44 +34,44 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询报警历史
+    ///  查询报警历史
     /// </summary>
     public class DescribeAlarmHistoryRequest : JdcloudRequest
     {
         ///<summary>
-        ///报警规则的Id
+        /// 报警规则的Id
         ///</summary>
         public   string Id{ get; set; }
         ///<summary>
-        ///产品名称
+        /// 产品名称
         ///</summary>
         public   string ServiceCode{ get; set; }
         ///<summary>
-        ///资源Id
+        /// 资源Id
         ///</summary>
         public   string ResourceId{ get; set; }
         ///<summary>
-        ///查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+        /// 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
         ///Required:true
         ///</summary>
         [Required]
         public   string StartTime{ get; set; }
         ///<summary>
-        ///查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+        /// 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
         ///Required:true
         ///</summary>
         [Required]
         public   string EndTime{ get; set; }
         ///<summary>
-        ///当前所在页，默认为1
+        /// 当前所在页，默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///，默认为20；取值范围[1, 100]
+        /// ，默认为20；取值范围[1, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]

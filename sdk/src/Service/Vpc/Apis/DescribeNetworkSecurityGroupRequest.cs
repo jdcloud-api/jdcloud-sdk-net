@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询安全组信息详情
+    ///  查询安全组信息详情
     /// </summary>
     public class DescribeNetworkSecurityGroupRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///NetworkSecurityGroup ID
+        /// NetworkSecurityGroup ID
         ///Required:true
         ///</summary>
         [Required]

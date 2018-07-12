@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 获取SessionToken
+    ///  获取SessionToken
     /// </summary>
     public class GetSessionTokenExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 获取SessionToken接口的Http 请求方法
+        ///  获取SessionToken接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 获取SessionToken接口的Http资源请求路径
+        ///  获取SessionToken接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

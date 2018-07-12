@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘快照列表
+    ///  查询云硬盘快照列表
     /// </summary>
     public class DescribeSnapshotsResult : JdcloudResult
     {
         ///<summary>
-        ///Snapshots
+        /// Snapshots
         ///</summary>
         public List<Snapshot> Snapshots{ get; set; }
 
         ///<summary>
-        ///查询的快照数目
+        /// 查询的快照数目
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

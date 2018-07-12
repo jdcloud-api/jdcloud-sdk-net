@@ -33,13 +33,13 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// removePermissionInfo
+    ///  removePermissionInfo
     /// </summary>
     public class RemovePermissionInfo
     {
 
         ///<summary>
-        ///权限id
+        /// 权限id
         ///Required:true
         ///</summary>
         [Required]

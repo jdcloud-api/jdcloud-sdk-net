@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplateDiskSpec
+    ///  instanceTemplateDiskSpec
     /// </summary>
     public class InstanceTemplateDiskSpec
     {
 
         ///<summary>
-        ///云硬盘类型，取值为 ssd 或 premium-hdd
+        /// 云硬盘类型，取值为 ssd 或 premium-hdd
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        ///云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+        /// 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
         ///</summary>
         public int? DiskSizeGB{ get; set; }
         ///<summary>
-        ///用于创建云硬盘的快照ID
+        /// 用于创建云硬盘的快照ID
         ///</summary>
         public string SnapshotId{ get; set; }
     }

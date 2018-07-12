@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 开启实例CC防护
+    ///  开启实例CC防护
     /// </summary>
     public class EnableInstanceCCResult : JdcloudResult
     {

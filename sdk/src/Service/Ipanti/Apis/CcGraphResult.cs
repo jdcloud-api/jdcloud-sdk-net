@@ -33,27 +33,27 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 转发流量报表
+    ///  转发流量报表
     /// </summary>
     public class CcGraphResult : JdcloudResult
     {
         ///<summary>
-        ///PostProtect
+        /// PostProtect
         ///</summary>
         public List<long?> PostProtect{ get; set; }
 
         ///<summary>
-        ///PreProtect
+        /// PreProtect
         ///</summary>
         public List<long?> PreProtect{ get; set; }
 
         ///<summary>
-        ///Time
+        /// Time
         ///</summary>
         public List<long?> Time{ get; set; }
 
         ///<summary>
-        ///单位
+        /// 单位
         ///</summary>
         public   string Unit{ get; set; }
     }

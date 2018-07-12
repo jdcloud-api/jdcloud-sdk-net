@@ -32,41 +32,41 @@ namespace JDCloudSDK.Mongodb.Model
 {
 
     /// <summary>
-    /// backup
+    ///  backup
     /// </summary>
     public class Backup
     {
 
         ///<summary>
-        ///备份ID
+        /// 备份ID
         ///</summary>
         public string BackupId{ get; set; }
         ///<summary>
-        ///备份名称
+        /// 备份名称
         ///</summary>
         public string BackupName{ get; set; }
         ///<summary>
-        ///备份所属实例ID
+        /// 备份所属实例ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        ///备份状态，Waiting(等待中)、Running(备份中)、Finished(已完成)、(Failed错误)
+        /// 备份状态，Waiting(等待中)、Running(备份中)、Finished(已完成)、(Failed错误)
         ///</summary>
         public string BackupStatus{ get; set; }
         ///<summary>
-        ///备份开始时间
+        /// 备份开始时间
         ///</summary>
         public string BackupStartTime{ get; set; }
         ///<summary>
-        ///备份结束时间
+        /// 备份结束时间
         ///</summary>
         public string BackupEndTime{ get; set; }
         ///<summary>
-        ///备份模式，Automated(系统自动备份)、Manual(手动备份)
+        /// 备份模式，Automated(系统自动备份)、Manual(手动备份)
         ///</summary>
         public string BackupMode{ get; set; }
         ///<summary>
-        ///整个备份集大小，单位：Byte
+        /// 整个备份集大小，单位：Byte
         ///</summary>
         public int? BackupSizeByte{ get; set; }
     }

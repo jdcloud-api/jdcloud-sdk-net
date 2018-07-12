@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 变更实例规格
+    ///  变更实例规格
     /// </summary>
     public class ModifyInstanceSpecExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 变更实例规格接口的Http 请求方法
+        ///  变更实例规格接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 变更实例规格接口的Http资源请求路径
+        ///  变更实例规格接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

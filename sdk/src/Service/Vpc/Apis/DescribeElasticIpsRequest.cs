@@ -35,28 +35,28 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询弹性ip列表
+    ///  查询弹性ip列表
     /// </summary>
     public class DescribeElasticIpsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+        /// 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///elasticIpIds - elasticip id数组条件，支持多个
-        ///elasticIpAddress - eip的IP地址，支持单个
-        ///chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
-        ///
+        /// elasticIpIds - elasticip id数组条件，支持多个
+        /// elasticIpAddress - eip的IP地址，支持单个
+        /// chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

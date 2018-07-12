@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// 云主机使用指定镜像重置实例镜像，需要关机操作，
+    ///  云主机使用指定镜像重置实例镜像，需要关机操作，
     /// </summary>
     public class RebuildInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 云主机使用指定镜像重置实例镜像，需要关机操作，接口的Http 请求方法
+        ///  云主机使用指定镜像重置实例镜像，需要关机操作，接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// 云主机使用指定镜像重置实例镜像，需要关机操作，接口的Http资源请求路径
+        ///  云主机使用指定镜像重置实例镜像，需要关机操作，接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -32,89 +32,89 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// alarm
+    ///  alarm
     /// </summary>
     public class Alarm
     {
 
         ///<summary>
-        ///统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
+        /// 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
         ///</summary>
         public string Calculation{ get; set; }
         ///<summary>
-        ///通知的联系组，如 [“联系组1”,”联系组2”]
+        /// 通知的联系组，如 [“联系组1”,”联系组2”]
         ///</summary>
         public List<string> ContactGroups{ get; set; }
         ///<summary>
-        ///通知的联系人，如 [“联系人1”,”联系人2”]
+        /// 通知的联系人，如 [“联系人1”,”联系人2”]
         ///</summary>
         public List<string> ContactPersons{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///启用禁用 1启用，0禁用
+        /// 启用禁用 1启用，0禁用
         ///</summary>
         public int? Enabled{ get; set; }
         ///<summary>
-        ///规则id
+        /// 规则id
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        ///监控项
+        /// 监控项
         ///</summary>
         public string Metric{ get; set; }
         ///<summary>
-        ///规则id监控项名称
+        /// 规则id监控项名称
         ///</summary>
         public string MetricName{ get; set; }
         ///<summary>
-        ///通知周期 单位：小时
+        /// 通知周期 单位：小时
         ///</summary>
         public int? NoticePeriod{ get; set; }
         ///<summary>
-        ///报警的时间  , 查询正在报警规则时该字段有效
+        /// 报警的时间  , 查询正在报警规则时该字段有效
         ///</summary>
         public string NoticeTime{ get; set; }
         ///<summary>
-        ///&gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
+        /// &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
         ///</summary>
         public string Operation{ get; set; }
         ///<summary>
-        ///统计周期（单位：分钟）
+        /// 统计周期（单位：分钟）
         ///</summary>
         public int? Period{ get; set; }
         ///<summary>
-        ///地域信息
+        /// 地域信息
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        ///此规则所应用的资源id
+        /// 此规则所应用的资源id
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
-        ///报警规则对应的产品
+        /// 报警规则对应的产品
         ///</summary>
         public string ServiceCode{ get; set; }
         ///<summary>
-        ///监控项状态:1正常，2告警，4数据不足
+        /// 监控项状态:1正常，2告警，4数据不足
         ///</summary>
         public int? Status{ get; set; }
         ///<summary>
-        ///监控项附属信息
+        /// 监控项附属信息
         ///</summary>
         public string Tag{ get; set; }
         ///<summary>
-        ///阈值
+        /// 阈值
         ///</summary>
         public double? Threshold{ get; set; }
         ///<summary>
-        ///连续多少次后报警
+        /// 连续多少次后报警
         ///</summary>
         public int? Times{ get; set; }
         ///<summary>
-        ///报警值 , 查询正在报警规则时该字段有效
+        /// 报警值 , 查询正在报警规则时该字段有效
         ///</summary>
         public double? Value{ get; set; }
     }

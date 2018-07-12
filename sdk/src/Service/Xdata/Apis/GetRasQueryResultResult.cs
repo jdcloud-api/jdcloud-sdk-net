@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 获取查询的结果
+    ///  获取查询的结果
     /// </summary>
     public class GetRasQueryResultResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
     }

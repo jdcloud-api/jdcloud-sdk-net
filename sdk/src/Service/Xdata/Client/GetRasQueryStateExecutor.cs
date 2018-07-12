@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 获取查询状态
+    ///  获取查询状态
     /// </summary>
     public class GetRasQueryStateExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 获取查询状态接口的Http 请求方法
+        ///  获取查询状态接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 获取查询状态接口的Http资源请求路径
+        ///  获取查询状态接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

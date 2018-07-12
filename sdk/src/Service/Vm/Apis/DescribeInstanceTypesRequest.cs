@@ -35,19 +35,19 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询实例类型资源信息列表
+    ///  查询实例类型资源信息列表
     /// </summary>
     public class DescribeInstanceTypesRequest : JdcloudRequest
     {
         ///<summary>
-        ///instanceTypes - 实例类型，精确匹配，支持多个
-        ///az - 可用区，精确匹配，支持多个
-        ///
+        /// instanceTypes - 实例类型，精确匹配，支持多个
+        /// az - 可用区，精确匹配，支持多个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

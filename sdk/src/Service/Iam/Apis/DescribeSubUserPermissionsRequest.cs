@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询子用户策略列表
+    ///  查询子用户策略列表
     /// </summary>
     public class DescribeSubUserPermissionsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码
+        /// 页码
         ///Required:true
         ///</summary>
         [Required]
         public   int PageNumber{ get; set; }
         ///<summary>
-        ///每页显示数目
+        /// 每页显示数目
         ///Required:true
         ///</summary>
         [Required]
         public   int PageSize{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///子用户用户名
+        /// 子用户用户名
         ///Required:true
         ///</summary>
         [Required]

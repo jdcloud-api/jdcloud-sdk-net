@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询可用创建监控规则的指标列表
+    ///  查询可用创建监控规则的指标列表
     /// </summary>
     public class DescribeMetricsForCreateAlarmResponse : JdcloudResponse<DescribeMetricsForCreateAlarmResult>
     {

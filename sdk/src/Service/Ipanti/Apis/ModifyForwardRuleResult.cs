@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 更新某条非网站类规则
+    ///  更新某条非网站类规则
     /// </summary>
     public class ModifyForwardRuleResult : JdcloudResult
     {

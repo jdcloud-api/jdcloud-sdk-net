@@ -32,41 +32,41 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 描述实例的网卡信息
+    ///  描述实例的网卡信息
     /// </summary>
     public class InstanceNetworkInterface
     {
 
         ///<summary>
-        ///弹性网卡ID
+        /// 弹性网卡ID
         ///</summary>
         public string NetworkInterfaceId{ get; set; }
         ///<summary>
-        ///以太网地址
+        /// 以太网地址
         ///</summary>
         public string MacAddress{ get; set; }
         ///<summary>
-        ///虚拟网络ID
+        /// 虚拟网络ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///描述
+        /// 描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///安全组列表
+        /// 安全组列表
         ///</summary>
         public List<SecurityGroupSimple> SecurityGroups{ get; set; }
         ///<summary>
-        ///源和目标IP地址校验，取值为0或者1
+        /// 源和目标IP地址校验，取值为0或者1
         ///</summary>
         public bool SanityCheck{ get; set; }
         ///<summary>
-        ///网卡主IP
+        /// 网卡主IP
         ///</summary>
         public NetworkInterfacePrivateIp PrimaryIp{ get; set; }
         ///<summary>
-        ///null
+        /// null
         ///</summary>
         public List<NetworkInterfacePrivateIp> SecondaryIps{ get; set; }
     }

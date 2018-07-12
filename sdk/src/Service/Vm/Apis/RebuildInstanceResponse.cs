@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 云主机使用指定镜像重置实例镜像，需要关机操作，
+    ///  云主机使用指定镜像重置实例镜像，需要关机操作，
     /// </summary>
     public class RebuildInstanceResponse : JdcloudResponse<RebuildInstanceResult>
     {

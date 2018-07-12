@@ -33,14 +33,14 @@ namespace JDCloudSDK.Oss.Client
 {
 
     /// <summary>
-    /// 创建bucket
-        ///
+    ///  创建bucket
+        /// 
     /// </summary>
     public class PutBucketExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建bucket
-        ///接口的Http 请求方法
+        ///  创建bucket
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -49,8 +49,8 @@ namespace JDCloudSDK.Oss.Client
             }
         }
         /// <summary>
-        /// 创建bucket
-        ///接口的Http资源请求路径
+        ///  创建bucket
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

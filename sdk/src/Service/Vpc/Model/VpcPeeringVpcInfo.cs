@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// vpcPeeringVpcInfo
+    ///  vpcPeeringVpcInfo
     /// </summary>
     public class VpcPeeringVpcInfo
     {
 
         ///<summary>
-        ///子网所属VPC的Id
+        /// 子网所属VPC的Id
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
+        /// 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
-        ///如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
+        /// 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
         ///</summary>
         public List<string> AddressPrefix{ get; set; }
     }

@@ -33,20 +33,20 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// &quot;虚机创建私有镜像&quot;
-        ///&quot;虚机状态必须为stopped&quot;
-        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///
+    ///  &quot;虚机创建私有镜像&quot;
+        /// &quot;虚机状态必须为stopped&quot;
+        /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        /// 
     /// </summary>
     public class CreateImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// &quot;虚机创建私有镜像&quot;
-        ///&quot;虚机状态必须为stopped&quot;
-        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///接口的Http 请求方法
+        ///  &quot;虚机创建私有镜像&quot;
+        /// &quot;虚机状态必须为stopped&quot;
+        /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -55,11 +55,11 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// &quot;虚机创建私有镜像&quot;
-        ///&quot;虚机状态必须为stopped&quot;
-        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///接口的Http资源请求路径
+        ///  &quot;虚机创建私有镜像&quot;
+        /// &quot;虚机状态必须为stopped&quot;
+        /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

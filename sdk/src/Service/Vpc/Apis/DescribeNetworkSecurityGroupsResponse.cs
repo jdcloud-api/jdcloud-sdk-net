@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询安全组列表
+    ///  查询安全组列表
     /// </summary>
     public class DescribeNetworkSecurityGroupsResponse : JdcloudResponse<DescribeNetworkSecurityGroupsResult>
     {

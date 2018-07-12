@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 删除某条网站规则
+    ///  删除某条网站规则
     /// </summary>
     public class DeleteWebRuleRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///网站规则id
+        /// 网站规则id
         ///Required:true
         ///</summary>
         [Required]

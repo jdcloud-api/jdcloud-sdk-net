@@ -34,32 +34,32 @@ namespace  JDCloudSDK.Mps.Apis
 {
 
     /// <summary>
-    /// 查询截图任务
+    ///  查询截图任务
     /// </summary>
     public class ListThumbnailTaskRequest : JdcloudRequest
     {
         ///<summary>
-        ///task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
+        /// task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
         ///</summary>
         public   string Status{ get; set; }
         ///<summary>
-        ///开始时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
+        /// 开始时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
         ///</summary>
         public   string Begin{ get; set; }
         ///<summary>
-        ///结束时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
+        /// 结束时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
         ///</summary>
         public   string End{ get; set; }
         ///<summary>
-        ///查询标记
+        /// 查询标记
         ///</summary>
         public   string Marker{ get; set; }
         ///<summary>
-        ///查询记录数 [1, 1000]
+        /// 查询记录数 [1, 1000]
         ///</summary>
         public   int? Limit{ get; set; }
         ///<summary>
-        ///region id
+        /// region id
         ///Required:true
         ///</summary>
         [Required]

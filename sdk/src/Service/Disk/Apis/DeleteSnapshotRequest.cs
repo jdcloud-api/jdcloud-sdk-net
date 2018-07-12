@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 删除单个云硬盘快照:快照状态必须为 available 或 error 状态
+    ///  删除单个云硬盘快照:快照状态必须为 available 或 error 状态
     /// </summary>
     public class DeleteSnapshotRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///快照ID
+        /// 快照ID
         ///Required:true
         ///</summary>
         [Required]

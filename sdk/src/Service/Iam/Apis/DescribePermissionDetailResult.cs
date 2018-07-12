@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询策略详情
+    ///  查询策略详情
     /// </summary>
     public class DescribePermissionDetailResult : JdcloudResult
     {
         ///<summary>
-        ///权限信息
+        /// 权限信息
         ///</summary>
         public   Permission Permission{ get; set; }
     }

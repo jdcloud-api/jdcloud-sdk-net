@@ -34,16 +34,16 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    /// 查询topic
+    ///  查询topic
     /// </summary>
     public class GetTopicListRequest : JdcloudRequest
     {
         ///<summary>
-        ///Keyword
+        /// Keyword
         ///</summary>
         public   string Keyword{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

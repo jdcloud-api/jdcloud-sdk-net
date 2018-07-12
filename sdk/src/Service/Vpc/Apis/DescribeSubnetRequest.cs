@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询子网信息详情
+    ///  查询子网信息详情
     /// </summary>
     public class DescribeSubnetRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Subnet ID
+        /// Subnet ID
         ///Required:true
         ///</summary>
         [Required]

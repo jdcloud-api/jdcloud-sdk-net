@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 启用实例url白名单
+    ///  启用实例url白名单
     /// </summary>
     public class EnableInstanceUrlWhiteListExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 启用实例url白名单接口的Http 请求方法
+        ///  启用实例url白名单接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 启用实例url白名单接口的Http资源请求路径
+        ///  启用实例url白名单接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

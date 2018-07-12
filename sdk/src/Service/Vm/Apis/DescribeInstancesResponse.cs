@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询云主机列表
+    ///  查询云主机列表
     /// </summary>
     public class DescribeInstancesResponse : JdcloudResponse<DescribeInstancesResult>
     {

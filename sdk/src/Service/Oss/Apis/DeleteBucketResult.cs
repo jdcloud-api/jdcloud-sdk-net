@@ -33,8 +33,8 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 删除一个bucket
-        ///        ///
+    ///  删除一个bucket
+        ///         /// 
     /// </summary>
     public class DeleteBucketResult : JdcloudResult
     {

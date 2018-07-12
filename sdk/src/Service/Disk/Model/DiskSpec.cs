@@ -34,45 +34,45 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// diskSpec
+    ///  diskSpec
     /// </summary>
     public class DiskSpec
     {
 
         ///<summary>
-        ///云硬盘所属的可用区
+        /// 云硬盘所属的可用区
         ///Required:true
         ///</summary>
         [Required]
         public string Az{ get; set; }
         ///<summary>
-        ///云硬盘名称
+        /// 云硬盘名称
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///云硬盘描述
+        /// 云硬盘描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///云硬盘类型，取值为ssd、premium-hdd之一
+        /// 云硬盘类型，取值为ssd、premium-hdd之一
         ///Required:true
         ///</summary>
         [Required]
         public string DiskType{ get; set; }
         ///<summary>
-        ///云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+        /// 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
         ///Required:true
         ///</summary>
         [Required]
         public int DiskSizeGB{ get; set; }
         ///<summary>
-        ///用于创建云硬盘的快照ID
+        /// 用于创建云硬盘的快照ID
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        ///计费配置；如不指定，默认计费类型是后付费-按使用时常付费
+        /// 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
         ///</summary>
         public ChargeSpec Charge{ get; set; }
     }

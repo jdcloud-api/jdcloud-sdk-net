@@ -34,22 +34,22 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 创建备份
+    ///  创建备份
     /// </summary>
     public class CreateBackupRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///备份名称
+        /// 备份名称
         ///</summary>
         public   string BackupName{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

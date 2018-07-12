@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像资源信息列表
+    ///  查询镜像资源信息列表
     /// </summary>
     public class DescribeImagesResponse : JdcloudResponse<DescribeImagesResult>
     {

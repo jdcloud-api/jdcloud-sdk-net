@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 添加网站类规则
+    ///  添加网站类规则
     /// </summary>
     public class CreateWebRuleResult : JdcloudResult
     {

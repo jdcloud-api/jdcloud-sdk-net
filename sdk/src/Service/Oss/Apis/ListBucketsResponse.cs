@@ -33,8 +33,8 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 列出当前用户的所有bucket
-        ///        ///
+    ///  列出当前用户的所有bucket
+        ///         /// 
     /// </summary>
     public class ListBucketsResponse : JdcloudResponse<ListBucketsResult>
     {

@@ -34,20 +34,20 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 查询数据表信息
+    ///  查询数据表信息
     /// </summary>
     public class GetTableInfoResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public   DwTable Data{ get; set; }
     }

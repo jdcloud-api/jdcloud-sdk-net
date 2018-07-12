@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 创建实例
+    ///  创建实例
     /// </summary>
     public class CreateInstanceResponse : JdcloudResponse<CreateInstanceResult>
     {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 设置实例CC防护每ip限速
+    ///  设置实例CC防护每ip限速
     /// </summary>
     public class SetCcIpLimitResponse : JdcloudResponse<SetCcIpLimitResult>
     {

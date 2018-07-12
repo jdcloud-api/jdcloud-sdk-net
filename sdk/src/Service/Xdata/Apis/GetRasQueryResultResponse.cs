@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 获取查询的结果
+    ///  获取查询的结果
     /// </summary>
     public class GetRasQueryResultResponse : JdcloudResponse<GetRasQueryResultResult>
     {

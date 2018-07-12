@@ -33,47 +33,47 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// networkInterfaceSpec
+    ///  networkInterfaceSpec
     /// </summary>
     public class NetworkInterfaceSpec
     {
 
         ///<summary>
-        ///子网ID
+        /// 子网ID
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        ///可用区，用户的默认可用区
+        /// 可用区，用户的默认可用区
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+        /// 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
         ///</summary>
         public string NetworkInterfaceName{ get; set; }
         ///<summary>
-        ///网卡主IP，如果不指定，会自动从子网中分配
+        /// 网卡主IP，如果不指定，会自动从子网中分配
         ///</summary>
         public string PrimaryIpAddress{ get; set; }
         ///<summary>
-        ///SecondaryIp列表
+        /// SecondaryIp列表
         ///</summary>
         public List<string> SecondaryIpAddresses{ get; set; }
         ///<summary>
-        ///自动分配的SecondaryIp数量
+        /// 自动分配的SecondaryIp数量
         ///</summary>
         public int? SecondaryIpCount{ get; set; }
         ///<summary>
-        ///要绑定的安全组ID列表，最多指定5个安全组
+        /// 要绑定的安全组ID列表，最多指定5个安全组
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
         ///<summary>
-        ///源和目标IP地址校验，取值为0或者1,默认为1
+        /// 源和目标IP地址校验，取值为0或者1,默认为1
         ///</summary>
         public int? SanityCheck{ get; set; }
         ///<summary>
-        ///描述，允许输入UTF-8编码下的全部字符，不超过256字符
+        /// 描述，允许输入UTF-8编码下的全部字符，不超过256字符
         ///</summary>
         public string Description{ get; set; }
     }

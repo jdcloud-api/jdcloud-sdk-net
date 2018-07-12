@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 释放集群
+    ///  释放集群
     /// </summary>
     public class ReleaseClusterRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///集群ID；由八位字符组成
+        /// 集群ID；由八位字符组成
         ///Required:true
         ///</summary>
         [Required]

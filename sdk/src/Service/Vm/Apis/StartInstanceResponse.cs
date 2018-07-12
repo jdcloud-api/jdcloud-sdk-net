@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+    ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
     /// </summary>
     public class StartInstanceResponse : JdcloudResponse<StartInstanceResult>
     {

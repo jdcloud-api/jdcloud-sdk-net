@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 删除AccessKey
+    ///  删除AccessKey
     /// </summary>
     public class DeleteUserAccessKeyExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除AccessKey接口的Http 请求方法
+        ///  删除AccessKey接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 删除AccessKey接口的Http资源请求路径
+        ///  删除AccessKey接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

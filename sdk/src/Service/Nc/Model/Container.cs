@@ -33,121 +33,121 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// container
+    ///  container
     /// </summary>
     public class Container
     {
 
         ///<summary>
-        ///容器ID
+        /// 容器ID
         ///</summary>
         public string ContainerId{ get; set; }
         ///<summary>
-        ///容器状态
+        /// 容器状态
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///实例类型
+        /// 实例类型
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///可用区
+        /// 可用区
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///容器名称
+        /// 容器名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///域名和IP映射的信息
+        /// 域名和IP映射的信息
         ///</summary>
         public List<HostAlias> HostAliases{ get; set; }
         ///<summary>
-        ///主机名
+        /// 主机名
         ///</summary>
         public string Hostname{ get; set; }
         ///<summary>
-        ///容器执行命令
+        /// 容器执行命令
         ///</summary>
         public List<string> Command{ get; set; }
         ///<summary>
-        ///容器执行命令的参数
+        /// 容器执行命令的参数
         ///</summary>
         public List<string> Args{ get; set; }
         ///<summary>
-        ///动态指定的容器执行的环境变量
+        /// 动态指定的容器执行的环境变量
         ///</summary>
         public List<EnvVar> Envs{ get; set; }
         ///<summary>
-        ///镜像名称
+        /// 镜像名称
         ///</summary>
         public string Image{ get; set; }
         ///<summary>
-        ///secret引用的名称
+        /// secret引用的名称
         ///</summary>
         public string Secret{ get; set; }
         ///<summary>
-        ///容器是否分配tty
+        /// 容器是否分配tty
         ///</summary>
         public bool Tty{ get; set; }
         ///<summary>
-        ///容器的工作目录
+        /// 容器的工作目录
         ///</summary>
         public string WorkingDir{ get; set; }
         ///<summary>
-        ///根Volume信息
+        /// 根Volume信息
         ///</summary>
         public VolumeMount RootVolume{ get; set; }
         ///<summary>
-        ///挂载的数据Volume信息
+        /// 挂载的数据Volume信息
         ///</summary>
         public List<VolumeMount> DataVolumes{ get; set; }
         ///<summary>
-        ///主网卡所属VPC的ID
+        /// 主网卡所属VPC的ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///主网卡所属子网的ID
+        /// 主网卡所属子网的ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        ///主网卡主IP地址
+        /// 主网卡主IP地址
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        ///主网卡主IP绑定弹性IP的ID
+        /// 主网卡主IP绑定弹性IP的ID
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>
-        ///主网卡主IP绑定弹性IP的地址
+        /// 主网卡主IP绑定弹性IP的地址
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        ///主网卡信息
+        /// 主网卡信息
         ///</summary>
         public InstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        ///弹性网卡信息
+        /// 弹性网卡信息
         ///</summary>
         public List<InstanceNetworkInterfaceAttachment> SecondaryNetworkInterfaces{ get; set; }
         ///<summary>
-        ///容器日志配置信息
+        /// 容器日志配置信息
         ///</summary>
         public LogConfiguration LogConfiguration{ get; set; }
         ///<summary>
-        ///计费配置信息
+        /// 计费配置信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string LaunchTime{ get; set; }
         ///<summary>
-        ///容器终止原因
+        /// 容器终止原因
         ///</summary>
         public string Reason{ get; set; }
         ///<summary>
-        ///容器描述
+        /// 容器描述
         ///</summary>
         public string Description{ get; set; }
     }

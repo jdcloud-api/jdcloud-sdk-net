@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// ag
+    ///  ag
     /// </summary>
     public class Ag
     {
 
         ///<summary>
-        ///高可用组名称
+        /// 高可用组名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///高可用组id
+        /// 高可用组id
         ///</summary>
         public string Id{ get; set; }
     }

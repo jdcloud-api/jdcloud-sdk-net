@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询区域下的公网Ip资源列表
+    ///  查询区域下的公网Ip资源列表
     /// </summary>
     public class DescribeIpResourcesResponse : JdcloudResponse<DescribeIpResourcesResult>
     {

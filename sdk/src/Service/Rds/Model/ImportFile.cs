@@ -32,29 +32,29 @@ namespace JDCloudSDK.Rds.Model
 {
 
     /// <summary>
-    /// importFile
+    ///  importFile
     /// </summary>
     public class ImportFile
     {
 
         ///<summary>
-        ///文件名称
+        /// 文件名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
+        /// 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
         ///</summary>
         public string SharedFileGid{ get; set; }
         ///<summary>
-        ///文件大小
+        /// 文件大小
         ///</summary>
         public int? SizeByte{ get; set; }
         ///<summary>
-        ///文件上传完成时间
+        /// 文件上传完成时间
         ///</summary>
         public string UploadTime{ get; set; }
         ///<summary>
-        ///是否所属当前实例. “true”或者“false”
+        /// 是否所属当前实例. “true”或者“false”
         ///</summary>
         public string IsLocal{ get; set; }
     }

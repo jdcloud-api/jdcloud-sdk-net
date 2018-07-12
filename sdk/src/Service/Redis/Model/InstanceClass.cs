@@ -33,34 +33,34 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    /// 某缓存Redis实例规格信息
+    ///  某缓存Redis实例规格信息
     /// </summary>
     public class InstanceClass
     {
 
         ///<summary>
-        ///实例规格代码,参见实例规格代码表
+        /// 实例规格代码,参见实例规格代码表
         ///</summary>
         [JsonProperty("instanceClass")]
         public string InstanceClassValue{ get; set; }
         ///<summary>
-        ///cpu
+        /// cpu
         ///</summary>
         public int? Cpu{ get; set; }
         ///<summary>
-        ///内存
+        /// 内存
         ///</summary>
         public int? MemoryMB{ get; set; }
         ///<summary>
-        ///磁盘
+        /// 磁盘
         ///</summary>
         public int? DiskGB{ get; set; }
         ///<summary>
-        ///最大链接数
+        /// 最大链接数
         ///</summary>
         public int? MaxConnetction{ get; set; }
         ///<summary>
-        ///带宽
+        /// 带宽
         ///</summary>
         public int? BandwidthMbps{ get; set; }
     }

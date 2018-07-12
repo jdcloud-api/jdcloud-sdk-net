@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查看某资源的监控数据
+    ///  查看某资源的监控数据
     /// </summary>
     public class DescribeMetricDataResult : JdcloudResult
     {
         ///<summary>
-        ///MetricDatas
+        /// MetricDatas
         ///</summary>
         public List<MetricData> MetricDatas{ get; set; }
 

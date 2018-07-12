@@ -35,24 +35,24 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 为子用户绑定策略
+    ///  为子用户绑定策略
     /// </summary>
     public class AddPermissionsToSubUserRequest : JdcloudRequest
     {
         ///<summary>
-        ///权限信息
+        /// 权限信息
         ///Required:true
         ///</summary>
         [Required]
         public   AddPermissionsInfo AddPermissionsInfo{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///子用户用户名
+        /// 子用户用户名
         ///Required:true
         ///</summary>
         [Required]

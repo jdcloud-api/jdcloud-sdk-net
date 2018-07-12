@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡分配secondaryIp接口
+    ///  给网卡分配secondaryIp接口
     /// </summary>
     public class AssignSecondaryIpsResult : JdcloudResult
     {

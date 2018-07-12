@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 创建新集群
+    ///  创建新集群
     /// </summary>
     public class CreateClusterInNewNetworkResponse : JdcloudResponse<CreateClusterInNewNetworkResult>
     {

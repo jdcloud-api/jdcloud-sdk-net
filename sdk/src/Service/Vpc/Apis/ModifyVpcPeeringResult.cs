@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 修改VpcPeering接口
+    ///  修改VpcPeering接口
     /// </summary>
     public class ModifyVpcPeeringResult : JdcloudResult
     {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 释放集群
+    ///  释放集群
     /// </summary>
     public class ReleaseClusterResponse : JdcloudResponse<ReleaseClusterResult>
     {

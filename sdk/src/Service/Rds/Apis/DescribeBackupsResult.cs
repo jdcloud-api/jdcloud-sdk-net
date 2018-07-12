@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份信息
+    ///  获取备份信息
     /// </summary>
     public class DescribeBackupsResult : JdcloudResult
     {
         ///<summary>
-        ///Backup
+        /// Backup
         ///</summary>
         public List<Backup> Backup{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

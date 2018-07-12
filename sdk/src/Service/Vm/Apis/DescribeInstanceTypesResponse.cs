@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询实例类型资源信息列表
+    ///  查询实例类型资源信息列表
     /// </summary>
     public class DescribeInstanceTypesResponse : JdcloudResponse<DescribeInstanceTypesResult>
     {

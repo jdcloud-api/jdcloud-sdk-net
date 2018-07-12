@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询容器列表
+    ///  查询容器列表
     /// </summary>
     public class DescribeContainersResult : JdcloudResult
     {
         ///<summary>
-        ///Containers
+        /// Containers
         ///</summary>
         public List<Container> Containers{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

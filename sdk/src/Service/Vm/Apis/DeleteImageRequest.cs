@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 删除私有镜像
+    ///  删除私有镜像
     /// </summary>
     public class DeleteImageRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Image ID
+        /// Image ID
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 为指定云硬盘创建快照,新生成的快照的状态为creating
+    ///  为指定云硬盘创建快照,新生成的快照的状态为creating
     /// </summary>
     public class CreateSnapshotResponse : JdcloudResponse<CreateSnapshotResult>
     {

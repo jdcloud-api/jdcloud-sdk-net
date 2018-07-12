@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询私有网络列表
+    ///  查询私有网络列表
     /// </summary>
     public class DescribeVpcsResponse : JdcloudResponse<DescribeVpcsResult>
     {

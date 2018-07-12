@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 修改主机密码，主机没有未完成的任务时才可操作
+    ///  修改主机密码，主机没有未完成的任务时才可操作
     /// </summary>
     public class ModifyInstancePasswordResult : JdcloudResult
     {

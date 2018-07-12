@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 删除 secret
+    ///  删除 secret
     /// </summary>
     public class DeleteSecretResponse : JdcloudResponse<DeleteSecretResult>
     {

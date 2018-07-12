@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// modifyNetworkInterfaceSpec
+    ///  modifyNetworkInterfaceSpec
     /// </summary>
     public class ModifyNetworkInterfaceSpec
     {
 
         ///<summary>
-        ///弹性网卡名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
+        /// 弹性网卡名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
         ///</summary>
         public string NetworkInterfaceName{ get; set; }
         ///<summary>
-        ///描述,允许输入UTF-8编码下的全部字符，不超过256字符
+        /// 描述,允许输入UTF-8编码下的全部字符，不超过256字符
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+        /// 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
     }

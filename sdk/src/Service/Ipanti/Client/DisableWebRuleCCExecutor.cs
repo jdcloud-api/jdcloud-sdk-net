@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 网站类规则禁用CC
+    ///  网站类规则禁用CC
     /// </summary>
     public class DisableWebRuleCCExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 网站类规则禁用CC接口的Http 请求方法
+        ///  网站类规则禁用CC接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 网站类规则禁用CC接口的Http资源请求路径
+        ///  网站类规则禁用CC接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

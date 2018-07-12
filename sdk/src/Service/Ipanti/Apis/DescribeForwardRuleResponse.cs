@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询某条非网站类规则
+    ///  查询某条非网站类规则
     /// </summary>
     public class DescribeForwardRuleResponse : JdcloudResponse<DescribeForwardRuleResult>
     {

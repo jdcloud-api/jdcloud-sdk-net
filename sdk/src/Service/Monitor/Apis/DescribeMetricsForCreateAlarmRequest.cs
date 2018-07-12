@@ -33,24 +33,24 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询可用创建监控规则的指标列表
+    ///  查询可用创建监控规则的指标列表
     /// </summary>
     public class DescribeMetricsForCreateAlarmRequest : JdcloudRequest
     {
         ///<summary>
-        ///资源的类型，默认为空，展示所有项目
-        ///vm--&gt;云主机
-        ///disk--&gt;云硬盘
-        ///ip--&gt;公网ip
-        ///balance--&gt;负载均衡
-        ///database--&gt;云数据库mysql版本
-        ///cdn--&gt;京东CDN
-        ///redis--&gt;redis云缓存
-        ///mongodb--&gt;mongoDB云缓存
-        ///storage--&gt;云存储
-        ///sqlserver--&gt;云数据库sqlserver版 
-        ///nativecontainer--&gt;容器
-        ///
+        /// 资源的类型，默认为空，展示所有项目
+        /// vm--&gt;云主机
+        /// disk--&gt;云硬盘
+        /// ip--&gt;公网ip
+        /// balance--&gt;负载均衡
+        /// database--&gt;云数据库mysql版本
+        /// cdn--&gt;京东CDN
+        /// redis--&gt;redis云缓存
+        /// mongodb--&gt;mongoDB云缓存
+        /// storage--&gt;云存储
+        /// sqlserver--&gt;云数据库sqlserver版 
+        /// nativecontainer--&gt;容器
+        /// 
         ///</summary>
         public   string ServiceCode{ get; set; }
     }

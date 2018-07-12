@@ -33,65 +33,65 @@ namespace JDCloudSDK.Mongodb.Model
 {
 
     /// <summary>
-    /// dBInstanceSpec
+    ///  dBInstanceSpec
     /// </summary>
     public class DBInstanceSpec
     {
 
         ///<summary>
-        ///实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
+        /// 实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        ///数据库类型，MongoDB
+        /// 数据库类型，MongoDB
         ///</summary>
         public string Engine{ get; set; }
         ///<summary>
-        ///数据库版本，3.2
+        /// 数据库版本，3.2
         ///</summary>
         public string EngineVersion{ get; set; }
         ///<summary>
-        ///实例规格代码。mongo.s1.small：1核2G;mongo.s1.medium：2核4G;mongo.s1.large：4核8G;mongo.s1.xlarge：8核16G;mongo.s2.2xlarge：8核32G;mongo.s2.4xlarge：16核64G;
+        /// 实例规格代码。mongo.s1.small：1核2G;mongo.s1.medium：2核4G;mongo.s1.large：4核8G;mongo.s1.xlarge：8核16G;mongo.s2.2xlarge：8核32G;mongo.s2.4xlarge：16核64G;
         ///Required:true
         ///</summary>
         [Required]
         public string InstanceClass{ get; set; }
         ///<summary>
-        ///存储空间，单位GB，取值10-1000,10的倍数。
+        /// 存储空间，单位GB，取值10-1000,10的倍数。
         ///Required:true
         ///</summary>
         [Required]
         public int InstanceStorageGB{ get; set; }
         ///<summary>
-        ///是否选择多可用区部署
+        /// 是否选择多可用区部署
         ///Required:true
         ///</summary>
         [Required]
         public bool MultiAZ{ get; set; }
         ///<summary>
-        ///可用区ID，必填，第一个ID为primary所在可用区ID，第二个为secondary，第三个为hidden。multiAZ选择是，则primary与secondary的可用区ID需相同，且与hidden不同；multiAZ选择否，三个节点写相同的可用区ID。
+        /// 可用区ID，必填，第一个ID为primary所在可用区ID，第二个为secondary，第三个为hidden。multiAZ选择是，则primary与secondary的可用区ID需相同，且与hidden不同；multiAZ选择否，三个节点写相同的可用区ID。
         ///Required:true
         ///</summary>
         [Required]
         public List<string> AzId{ get; set; }
         ///<summary>
-        ///VPCID
+        /// VPCID
         ///Required:true
         ///</summary>
         [Required]
         public string VpcId{ get; set; }
         ///<summary>
-        ///子网ID
+        /// 子网ID
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        ///密码，必须包含且只支持字母及数字，不少于8字符不超过16字符。
+        /// 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符。
         ///</summary>
         public string Password{ get; set; }
         ///<summary>
-        ///按备份创建使用的具体备份ID
+        /// 按备份创建使用的具体备份ID
         ///</summary>
         public string BackupId{ get; set; }
     }

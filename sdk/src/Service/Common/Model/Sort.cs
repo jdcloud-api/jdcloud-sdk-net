@@ -32,17 +32,17 @@ namespace JDCloudSDK.Common.Model
 {
 
     /// <summary>
-    /// sort
+    ///  sort
     /// </summary>
     public class Sort
     {
 
         ///<summary>
-        ///排序条件的名称
+        /// 排序条件的名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///排序条件的方向
+        /// 排序条件的方向
         ///</summary>
         public string Direction{ get; set; }
     }

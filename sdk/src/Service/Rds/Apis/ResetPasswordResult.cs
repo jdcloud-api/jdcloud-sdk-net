@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 数据库账号重置密码
+    ///  数据库账号重置密码
     /// </summary>
     public class ResetPasswordResult : JdcloudResult
     {

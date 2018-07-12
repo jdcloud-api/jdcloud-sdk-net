@@ -35,30 +35,30 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询子网列表
+    ///  查询子网列表
     /// </summary>
     public class DescribeSubnetsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+        /// 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///subnetIds - subnet ID列表，支持多个
-        ///subnetNames - subnet名称列表，支持多个
-        ///routeTableId	- 子网关联路由表Id，支持单个
-        ///aclId - 子网关联acl Id，支持单个
-        ///vpcId - 子网所属VPC Id，支持单个
-        ///
+        /// subnetIds - subnet ID列表，支持多个
+        /// subnetNames - subnet名称列表，支持多个
+        /// routeTableId	- 子网关联路由表Id，支持单个
+        /// aclId - 子网关联acl Id，支持单个
+        /// vpcId - 子网所属VPC Id，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

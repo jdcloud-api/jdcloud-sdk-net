@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// associateElasticIpSpec
+    ///  associateElasticIpSpec
     /// </summary>
     public class AssociateElasticIpSpec
     {
 
         ///<summary>
-        ///绑定的弹性Ip Id
+        /// 绑定的弹性Ip Id
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>
-        ///绑定弹性Ip到指定的privateIp
+        /// 绑定弹性Ip到指定的privateIp
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        ///绑定的弹性Ip地址
+        /// 绑定的弹性Ip地址
         ///</summary>
         public string ElasticIpAddress{ get; set; }
     }

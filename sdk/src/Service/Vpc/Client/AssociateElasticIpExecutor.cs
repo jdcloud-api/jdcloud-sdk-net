@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vpc.Client
 {
 
     /// <summary>
-    /// 给网卡绑定弹性Ip接口
+    ///  给网卡绑定弹性Ip接口
     /// </summary>
     public class AssociateElasticIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 给网卡绑定弹性Ip接口接口的Http 请求方法
+        ///  给网卡绑定弹性Ip接口接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vpc.Client
             }
         }
         /// <summary>
-        /// 给网卡绑定弹性Ip接口接口的Http资源请求路径
+        ///  给网卡绑定弹性Ip接口接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

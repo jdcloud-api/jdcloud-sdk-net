@@ -32,33 +32,33 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// cCSpec
+    ///  cCSpec
     /// </summary>
     public class CCSpec
     {
 
         ///<summary>
-        ///cc防护模式：0正常 1宽松 2紧急 3自定义
+        /// cc防护模式：0正常 1宽松 2紧急 3自定义
         ///</summary>
         public int? CcProtectMode{ get; set; }
         ///<summary>
-        ///cc阈值大小
+        /// cc阈值大小
         ///</summary>
         public int? CcThreshold{ get; set; }
         ///<summary>
-        ///ccProtectMode为自定义模式时，指定每个Host的防护阈值
+        /// ccProtectMode为自定义模式时，指定每个Host的防护阈值
         ///</summary>
         public int? HostQps{ get; set; }
         ///<summary>
-        ///ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
+        /// ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
         ///</summary>
         public int? HostUrlQps{ get; set; }
         ///<summary>
-        ///ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
+        /// ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
         ///</summary>
         public int? IpHostQps{ get; set; }
         ///<summary>
-        ///ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
+        /// ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
         ///</summary>
         public int? IpHostUrlQps{ get; set; }
     }

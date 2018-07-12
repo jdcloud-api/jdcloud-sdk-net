@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 执行PySpark脚本
+    ///  执行PySpark脚本
     /// </summary>
     public class ExecutePySparkQueryExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 执行PySpark脚本接口的Http 请求方法
+        ///  执行PySpark脚本接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 执行PySpark脚本接口的Http资源请求路径
+        ///  执行PySpark脚本接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

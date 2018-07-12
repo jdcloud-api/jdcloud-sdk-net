@@ -34,25 +34,25 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// elasticIpSpec
+    ///  elasticIpSpec
     /// </summary>
     public class ElasticIpSpec
     {
 
         ///<summary>
-        ///弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+        /// 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
         ///Required:true
         ///</summary>
         [Required]
         public int BandwidthMbps{ get; set; }
         ///<summary>
-        ///IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：[bgp，no_bgp]；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+        /// IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：[bgp，no_bgp]；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
         ///Required:true
         ///</summary>
         [Required]
         public string Provider{ get; set; }
         ///<summary>
-        ///计费配置
+        /// 计费配置
         ///</summary>
         public ChargeSpec ChargeSpec{ get; set; }
     }

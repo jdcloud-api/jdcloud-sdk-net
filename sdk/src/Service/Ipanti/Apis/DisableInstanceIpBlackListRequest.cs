@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 禁用实例ip黑名单
+    ///  禁用实例ip黑名单
     /// </summary>
     public class DisableInstanceIpBlackListRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

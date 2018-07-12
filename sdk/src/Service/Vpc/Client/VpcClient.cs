@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Vpc.Client
 {
     /// <summary>
-    /// 京东云VPC
-    /// VPC相关API
-    /// Vpc Api 客户端
+    ///  京东云VPC
+    ///  VPC相关API
+    ///  Vpc Api 客户端
     ///</summary>
     public class VpcClient : JdcloudClient
     {
@@ -138,26 +138,7 @@ namespace JDCloudSDK.Vpc.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 删除弹性网卡接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteNetworkInterfaceResponse DeleteNetworkInterface(DeleteNetworkInterfaceRequest request) {
-            return  new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 删除弹性网卡接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteNetworkInterfaceResponse> DeleteNetworkInterface(DeleteNetworkInterfaceRequest request) {
-            return await new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询弹性ip列表
+        ///  查询弹性ip列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +147,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询弹性ip列表
+        ///  查询弹性ip列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +157,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 给网卡分配secondaryIp接口
+        ///  给网卡分配secondaryIp接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +166,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 给网卡分配secondaryIp接口
+        ///  给网卡分配secondaryIp接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +176,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询VpcPeering资源详情
+        ///  查询VpcPeering资源详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +185,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询VpcPeering资源详情
+        ///  查询VpcPeering资源详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,45 +195,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改弹性IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyElasticIpResponse ModifyElasticIp(ModifyElasticIpRequest request) {
-            return  new ModifyElasticIpExecutor().Client(this).Execute<ModifyElasticIpResponse, ModifyElasticIpResult, ModifyElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改弹性IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyElasticIpResponse> ModifyElasticIp(ModifyElasticIpRequest request) {
-            return await new ModifyElasticIpExecutor().Client(this).Execute<ModifyElasticIpResponse, ModifyElasticIpResult, ModifyElasticIpRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 创建网卡接口，只能创建辅助网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateNetworkInterfaceResponse CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
-            return  new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 创建网卡接口，只能创建辅助网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateNetworkInterfaceResponse> CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
-            return await new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 给网卡解绑弹性Ip接口
+        ///  给网卡解绑弹性Ip接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +204,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 给网卡解绑弹性Ip接口
+        ///  给网卡解绑弹性Ip接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +214,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除弹性Ip
+        ///  删除弹性Ip
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +223,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 删除弹性Ip
+        ///  删除弹性Ip
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +233,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建一个或者多个弹性Ip
+        ///  创建一个或者多个弹性Ip
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +242,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 创建一个或者多个弹性Ip
+        ///  创建一个或者多个弹性Ip
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +252,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 给网卡删除secondaryIp接口
+        ///  给网卡删除secondaryIp接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +261,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 给网卡删除secondaryIp接口
+        ///  给网卡删除secondaryIp接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,26 +271,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询弹性网卡信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNetworkInterfaceResponse DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
-            return  new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询弹性网卡信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNetworkInterfaceResponse> DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
-            return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询Vpc信息详情
+        ///  查询Vpc信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +280,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询Vpc信息详情
+        ///  查询Vpc信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +290,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询VpcPeering资源列表
+        ///  查询VpcPeering资源列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +299,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询VpcPeering资源列表
+        ///  查询VpcPeering资源列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -385,45 +309,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询子网信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
-            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询子网信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
-            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询子网列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSubnetsResponse DescribeSubnets(DescribeSubnetsRequest request) {
-            return  new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询子网列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubnetsResponse> DescribeSubnets(DescribeSubnetsRequest request) {
-            return await new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询安全组列表
+        ///  查询安全组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +318,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询安全组列表
+        ///  查询安全组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +328,45 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建VpcPeering接口
+        ///  查询子网列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubnetsResponse DescribeSubnets(DescribeSubnetsRequest request) {
+            return  new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子网列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubnetsResponse> DescribeSubnets(DescribeSubnetsRequest request) {
+            return await new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子网信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
+            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子网信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +375,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 创建VpcPeering接口
+        ///  创建VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -461,7 +385,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询安全组信息详情
+        ///  查询安全组信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -470,7 +394,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询安全组信息详情
+        ///  查询安全组信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -480,7 +404,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改VpcPeering接口
+        ///  修改VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -489,7 +413,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 修改VpcPeering接口
+        ///  修改VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -499,7 +423,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 给网卡绑定弹性Ip接口
+        ///  给网卡绑定弹性Ip接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -508,7 +432,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 给网卡绑定弹性Ip接口
+        ///  给网卡绑定弹性Ip接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -518,7 +442,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除VpcPeering接口
+        ///  删除VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -527,7 +451,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 删除VpcPeering接口
+        ///  删除VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -537,7 +461,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// ElasticIp资源信息详情
+        ///  ElasticIp资源信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -546,7 +470,7 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// ElasticIp资源信息详情
+        ///  ElasticIp资源信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -556,26 +480,7 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询弹性网卡列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
-            return  new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询弹性网卡列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
-            return await new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询私有网络列表
+        ///  查询私有网络列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -584,31 +489,12 @@ namespace JDCloudSDK.Vpc.Client
         }
 #else
         /// <summary>
-        /// 查询私有网络列表
+        ///  查询私有网络列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeVpcsResponse> DescribeVpcs(DescribeVpcsRequest request) {
             return await new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 修改弹性网卡接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyNetworkInterfaceResponse ModifyNetworkInterface(ModifyNetworkInterfaceRequest request) {
-            return  new ModifyNetworkInterfaceExecutor().Client(this).Execute<ModifyNetworkInterfaceResponse, ModifyNetworkInterfaceResult, ModifyNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改弹性网卡接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyNetworkInterfaceResponse> ModifyNetworkInterface(ModifyNetworkInterfaceRequest request) {
-            return await new ModifyNetworkInterfaceExecutor().Client(this).Execute<ModifyNetworkInterfaceResponse, ModifyNetworkInterfaceResult, ModifyNetworkInterfaceRequest>(request);
         }
 #endif
 
@@ -651,7 +537,7 @@ namespace JDCloudSDK.Vpc.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// VpcClient service client
+                ///  VpcClient service client
                 /// </summary>
                 private  VpcClient vpcClient;
 

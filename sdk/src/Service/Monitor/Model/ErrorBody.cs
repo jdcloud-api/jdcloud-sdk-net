@@ -32,21 +32,21 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// errorBody
+    ///  errorBody
     /// </summary>
     public class ErrorBody
     {
 
         ///<summary>
-        ///错误码
+        /// 错误码
         ///</summary>
         public int? Code{ get; set; }
         ///<summary>
-        ///错误信息
+        /// 错误信息
         ///</summary>
         public string Message{ get; set; }
         ///<summary>
-        ///错误状态
+        /// 错误状态
         ///</summary>
         public string Status{ get; set; }
     }

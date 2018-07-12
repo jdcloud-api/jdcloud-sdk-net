@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Rds.Client
 {
     /// <summary>
-    /// 云数据库RDS
-    /// 目前RDS OpenAPI支持云数据库SQL Server，可以通过OpenAPI实现数据库管理，账号管理，备份管理，单库上云等功能，后续将支持云数据库MySQL
-    /// Rds Api 客户端
+    ///  云数据库RDS
+    ///  目前RDS OpenAPI支持云数据库SQL Server，可以通过OpenAPI实现数据库管理，账号管理，备份管理，单库上云等功能，后续将支持云数据库MySQL
+    ///  Rds Api 客户端
     ///</summary>
     public class RdsClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Rds.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 创建数据库账户
+        ///  创建数据库账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 创建数据库账户
+        ///  创建数据库账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 数据库账号授权
+        ///  数据库账号授权
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 数据库账号授权
+        ///  数据库账号授权
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建数据库
+        ///  创建数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 创建数据库
+        ///  创建数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取单库上云文件列表
+        ///  获取单库上云文件列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 获取单库上云文件列表
+        ///  获取单库上云文件列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建备份
+        ///  创建备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 创建备份
+        ///  创建备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取备份信息
+        ///  获取备份信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 获取备份信息
+        ///  获取备份信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 从用户上传的备份文件中恢复SQL Server数据库
+        ///  从用户上传的备份文件中恢复SQL Server数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 从用户上传的备份文件中恢复SQL Server数据库
+        ///  从用户上传的备份文件中恢复SQL Server数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除数据库
+        ///  删除数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 删除数据库
+        ///  删除数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 数据库账号重置密码
+        ///  数据库账号重置密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 数据库账号重置密码
+        ///  数据库账号重置密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除数据库账户
+        ///  删除数据库账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 删除数据库账户
+        ///  删除数据库账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 从云数据库SQL Server备份中恢复单个数据库
+        ///  从云数据库SQL Server备份中恢复单个数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 从云数据库SQL Server备份中恢复单个数据库
+        ///  从云数据库SQL Server备份中恢复单个数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取备份下载链接
+        ///  获取备份下载链接
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        /// 获取备份下载链接
+        ///  获取备份下载链接
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +404,7 @@ namespace JDCloudSDK.Rds.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// RdsClient service client
+                ///  RdsClient service client
                 /// </summary>
                 private  RdsClient rdsClient;
 

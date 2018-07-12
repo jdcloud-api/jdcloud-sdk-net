@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 根据产品线查询可用监控项列表
+    ///  根据产品线查询可用监控项列表
     /// </summary>
     public class DescribeMetricsResponse : JdcloudResponse<DescribeMetricsResult>
     {

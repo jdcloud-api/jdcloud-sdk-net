@@ -32,13 +32,13 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// thumbnailTaskID
+    ///  thumbnailTaskID
     /// </summary>
     public class ThumbnailTaskID
     {
 
         ///<summary>
-        ///TaskID
+        /// TaskID
         ///</summary>
         public string TaskID{ get; set; }
     }

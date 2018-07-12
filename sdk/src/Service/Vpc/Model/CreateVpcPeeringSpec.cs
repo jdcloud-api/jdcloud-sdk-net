@@ -33,31 +33,31 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// createVpcPeeringSpec
+    ///  createVpcPeeringSpec
     /// </summary>
     public class CreateVpcPeeringSpec
     {
 
         ///<summary>
-        ///VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
         ///Required:true
         ///</summary>
         [Required]
         public string VpcPeeringName{ get; set; }
         ///<summary>
-        ///VpcPeering本端Vpc的Id
+        /// VpcPeering本端Vpc的Id
         ///Required:true
         ///</summary>
         [Required]
         public string VpcId{ get; set; }
         ///<summary>
-        ///VpcPeering对端Vpc的Id
+        /// VpcPeering对端Vpc的Id
         ///Required:true
         ///</summary>
         [Required]
         public string RemoteVpcId{ get; set; }
         ///<summary>
-        ///VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string Description{ get; set; }
     }

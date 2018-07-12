@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 获取SessionToken
+    ///  获取SessionToken
     /// </summary>
     public class GetSessionTokenResult : JdcloudResult
     {
         ///<summary>
-        ///安全令牌
+        /// 安全令牌
         ///</summary>
         public   string SessionToken{ get; set; }
     }

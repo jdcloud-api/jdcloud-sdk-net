@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+    ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
     /// </summary>
     public class StartInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

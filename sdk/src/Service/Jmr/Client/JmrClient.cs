@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Jmr.Client
 {
     /// <summary>
-    /// JMR API
-    /// 提供大数据基础服务中JMR操作的相关接口
-    /// Jmr Api 客户端
+    ///  JMR API
+    ///  提供大数据基础服务中JMR操作的相关接口
+    ///  Jmr Api 客户端
     ///</summary>
     public class JmrClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Jmr.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 释放集群
+        ///  释放集群
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Jmr.Client
         }
 #else
         /// <summary>
-        /// 释放集群
+        ///  释放集群
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Jmr.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建新集群
+        ///  创建新集群
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Jmr.Client
         }
 #else
         /// <summary>
-        /// 创建新集群
+        ///  创建新集群
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Jmr.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询集群详情
+        ///  查询集群详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Jmr.Client
         }
 #else
         /// <summary>
-        /// 查询集群详情
+        ///  查询集群详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Jmr.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// JmrClient service client
+                ///  JmrClient service client
                 /// </summary>
                 private  JmrClient jmrClient;
 

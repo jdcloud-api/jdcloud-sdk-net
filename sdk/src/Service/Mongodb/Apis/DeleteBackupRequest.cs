@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 删除备份
+    ///  删除备份
     /// </summary>
     public class DeleteBackupRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///backup ID
+        /// backup ID
         ///Required:true
         ///</summary>
         [Required]

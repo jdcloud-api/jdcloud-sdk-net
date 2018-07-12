@@ -33,23 +33,23 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// createElasticIpSpec
+    ///  createElasticIpSpec
     /// </summary>
     public class CreateElasticIpSpec
     {
 
         ///<summary>
-        ///购买弹性ip数量；取值范围：[1,100]
+        /// 购买弹性ip数量；取值范围：[1,100]
         ///Required:true
         ///</summary>
         [Required]
         public int MaxCount{ get; set; }
         ///<summary>
-        ///指定弹性ip地址进行创建，当申请创建多个弹性ip时，必须为空
+        /// 指定弹性ip地址进行创建，当申请创建多个弹性ip时，必须为空
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        ///弹性ip规格
+        /// 弹性ip规格
         ///Required:true
         ///</summary>
         [Required]

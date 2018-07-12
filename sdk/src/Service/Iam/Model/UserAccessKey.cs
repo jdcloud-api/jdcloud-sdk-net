@@ -32,29 +32,29 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// userAccessKey
+    ///  userAccessKey
     /// </summary>
     public class UserAccessKey
     {
 
         ///<summary>
-        ///accessKey
+        /// accessKey
         ///</summary>
         public string AccessKey{ get; set; }
         ///<summary>
-        ///accessKeySecret
+        /// accessKeySecret
         ///</summary>
         public string AccessKeySecret{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///禁用/启用状态[0-禁用,1-启用]
+        /// 禁用/启用状态[0-禁用,1-启用]
         ///</summary>
         public int? State{ get; set; }
         ///<summary>
-        ///删除/有效状态[0-删除,1-有效]
+        /// 删除/有效状态[0-删除,1-有效]
         ///</summary>
         public int? Yn{ get; set; }
     }

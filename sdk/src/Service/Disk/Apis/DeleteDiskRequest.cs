@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 删除单个云硬盘
+    ///  删除单个云硬盘
     /// </summary>
     public class DeleteDiskRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///Required:true
         ///</summary>
         [Required]

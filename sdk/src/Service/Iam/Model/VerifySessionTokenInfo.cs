@@ -33,13 +33,13 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// verifySessionTokenInfo
+    ///  verifySessionTokenInfo
     /// </summary>
     public class VerifySessionTokenInfo
     {
 
         ///<summary>
-        ///操作action
+        /// 操作action
         ///Required:true
         ///</summary>
         [Required]

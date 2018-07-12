@@ -35,24 +35,24 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 创建数据表
+    ///  创建数据表
     /// </summary>
     public class CreateTableRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        ///数据表描述
+        /// 数据表描述
         ///Required:true
         ///</summary>
         [Required]
         public   DwTableDesc DbModelDBTable{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

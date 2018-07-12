@@ -32,45 +32,45 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplateData
+    ///  instanceTemplateData
     /// </summary>
     public class InstanceTemplateData
     {
 
         ///<summary>
-        ///实例类型
+        /// 实例类型
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///主网卡所属VPC的ID
+        /// 主网卡所属VPC的ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///镜像ID
+        /// 镜像ID
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        ///密码不会返回，true：为包含密码，false：为不包含密码
+        /// 密码不会返回，true：为包含密码，false：为不包含密码
         ///</summary>
         public bool IncludePassword{ get; set; }
         ///<summary>
-        ///系统盘信息
+        /// 系统盘信息
         ///</summary>
         public InstanceTemplateDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        ///数据盘信息
+        /// 数据盘信息
         ///</summary>
         public List<InstanceTemplateDiskAttachment> DataDisks{ get; set; }
         ///<summary>
-        ///主网卡信息
+        /// 主网卡信息
         ///</summary>
         public InstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        ///主网卡主IP关联的弹性IP规格
+        /// 主网卡主IP关联的弹性IP规格
         ///</summary>
         public InstanceTemplateElasticIp ElasticIp{ get; set; }
         ///<summary>
-        ///密钥对名称；当前只支持一个
+        /// 密钥对名称；当前只支持一个
         ///</summary>
         public List<string> KeyNames{ get; set; }
     }

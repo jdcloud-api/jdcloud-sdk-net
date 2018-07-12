@@ -35,39 +35,39 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// &quot;虚机创建私有镜像&quot;
-        ///        ///&quot;虚机状态必须为stopped&quot;
-        ///        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///        ///
+    ///  &quot;虚机创建私有镜像&quot;
+        ///         /// &quot;虚机状态必须为stopped&quot;
+        ///         /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        ///         /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        ///         /// 
     /// </summary>
     public class CreateImageRequest : JdcloudRequest
     {
         ///<summary>
-        ///名称
+        /// 名称
         ///Required:true
         ///</summary>
         [Required]
         public   string Name{ get; set; }
         ///<summary>
-        ///描述
+        /// 描述
         ///Required:true
         ///</summary>
         [Required]
         public   string Description{ get; set; }
         ///<summary>
-        ///数据盘列表，如果指定，则随镜像一起打包创建快照，实际最多不能超过4个
+        /// 数据盘列表，如果指定，则随镜像一起打包创建快照，实际最多不能超过4个
         ///</summary>
         public List<InstanceDiskAttachmentSpec> DataDisks{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

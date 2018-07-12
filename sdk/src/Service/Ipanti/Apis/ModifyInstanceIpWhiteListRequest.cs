@@ -34,23 +34,23 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 设置实例ip白名单
+    ///  设置实例ip白名单
     /// </summary>
     public class ModifyInstanceIpWhiteListRequest : JdcloudRequest
     {
         ///<summary>
-        ///ip白名单列表
+        /// ip白名单列表
         ///</summary>
         public List<string> IpWhiteList{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

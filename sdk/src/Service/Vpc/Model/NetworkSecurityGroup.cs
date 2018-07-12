@@ -32,33 +32,33 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// networkSecurityGroup
+    ///  networkSecurityGroup
     /// </summary>
     public class NetworkSecurityGroup
     {
 
         ///<summary>
-        ///安全组ID
+        /// 安全组ID
         ///</summary>
         public string NetworkSecurityGroupId{ get; set; }
         ///<summary>
-        ///安全组名称
+        /// 安全组名称
         ///</summary>
         public string NetworkSecurityGroupName{ get; set; }
         ///<summary>
-        ///安全组描述信息
+        /// 安全组描述信息
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///安全组所在vpc的Id
+        /// 安全组所在vpc的Id
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///安全组规则信息
+        /// 安全组规则信息
         ///</summary>
         public List<SecurityGroupRule> SecurityGroupRules{ get; set; }
         ///<summary>
-        ///安全组创建时间
+        /// 安全组创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

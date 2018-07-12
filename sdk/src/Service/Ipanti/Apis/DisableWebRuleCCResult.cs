@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 网站类规则禁用CC
+    ///  网站类规则禁用CC
     /// </summary>
     public class DisableWebRuleCCResult : JdcloudResult
     {

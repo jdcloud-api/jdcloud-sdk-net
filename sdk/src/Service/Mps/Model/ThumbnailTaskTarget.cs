@@ -33,35 +33,35 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// 视频截图目标文件参数
+    ///  视频截图目标文件参数
     /// </summary>
     public class ThumbnailTaskTarget
     {
 
         ///<summary>
-        ///输入存放目标文件的 bucket
+        /// 输入存放目标文件的 bucket
         ///Required:true
         ///</summary>
         [Required]
         public string DestBucket{ get; set; }
         ///<summary>
-        ///目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
+        /// 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
         ///</summary>
         public string DestKeyPrefix{ get; set; }
         ///<summary>
-        ///目标截图的格式 default: jpg
+        /// 目标截图的格式 default: jpg
         ///</summary>
         public string Format{ get; set; }
         ///<summary>
-        ///目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
+        /// 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
         ///</summary>
         public int? WidthInPixel{ get; set; }
         ///<summary>
-        ///目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
+        /// 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
         ///</summary>
         public int? HeightInPixel{ get; set; }
         ///<summary>
-        ///目标截图的Key的集合 (readonly)
+        /// 目标截图的Key的集合 (readonly)
         ///</summary>
         public List<string> Keys{ get; set; }
     }

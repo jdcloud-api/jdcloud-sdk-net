@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘信息详情
+    ///  查询云硬盘信息详情
     /// </summary>
     public class DescribeDiskResult : JdcloudResult
     {
         ///<summary>
-        ///Disk
+        /// Disk
         ///</summary>
         public   JDCloudSDK.Disk.Model.Disk Disk{ get; set; }
     }

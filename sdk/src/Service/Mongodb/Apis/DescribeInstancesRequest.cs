@@ -35,34 +35,34 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 查询实例信息
+    ///  查询实例信息
     /// </summary>
     public class DescribeInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1，取值范围：[1,∞)
+        /// 页码；默认为1，取值范围：[1,∞)
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为10；取值范围[1, 100]
+        /// 分页大小；默认为10；取值范围[1, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///instanceId - 实例ID, 精确匹配
-        ///instanceName - 实例名称, 模糊匹配
-        ///instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
-        ///
+        /// instanceId - 实例ID, 精确匹配
+        /// instanceName - 实例名称, 模糊匹配
+        /// instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///createTime - 创建时间,asc（正序），desc（倒序）
-        ///
+        /// createTime - 创建时间,asc（正序），desc（倒序）
+        /// 
         ///</summary>
         public List<Sort> Sorts{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

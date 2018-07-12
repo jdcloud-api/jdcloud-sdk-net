@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mps.Client
 {
 
     /// <summary>
-    /// 查询截图任务
+    ///  查询截图任务
     /// </summary>
     public class ListThumbnailTaskExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询截图任务接口的Http 请求方法
+        ///  查询截图任务接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mps.Client
             }
         }
         /// <summary>
-        /// 查询截图任务接口的Http资源请求路径
+        ///  查询截图任务接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

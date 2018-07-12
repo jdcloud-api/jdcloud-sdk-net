@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 查询缓存Redis实例列表
+    ///  查询缓存Redis实例列表
     /// </summary>
     public class DescribeCacheInstancesResponse : JdcloudResponse<DescribeCacheInstancesResult>
     {

@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询（虚机、镜像、密钥、模板）配额
+    ///  查询（虚机、镜像、密钥、模板）配额
     /// </summary>
     public class DescribeQuotasRequest : JdcloudRequest
     {
         ///<summary>
-        ///resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
-        ///
+        /// resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

@@ -33,14 +33,14 @@ namespace JDCloudSDK.Oss.Client
 {
 
     /// <summary>
-    /// 查询bucket是否存在
-        ///
+    ///  查询bucket是否存在
+        /// 
     /// </summary>
     public class HeadBucketExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询bucket是否存在
-        ///接口的Http 请求方法
+        ///  查询bucket是否存在
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -49,8 +49,8 @@ namespace JDCloudSDK.Oss.Client
             }
         }
         /// <summary>
-        /// 查询bucket是否存在
-        ///接口的Http资源请求路径
+        ///  查询bucket是否存在
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

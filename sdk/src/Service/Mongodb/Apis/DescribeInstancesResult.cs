@@ -34,21 +34,21 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 查询实例信息
+    ///  查询实例信息
     /// </summary>
     public class DescribeInstancesResult : JdcloudResult
     {
         ///<summary>
-        ///DbInstances
+        /// DbInstances
         ///</summary>
         public List<DBInstance> DbInstances{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        ///PageNumber
+        /// PageNumber
         ///</summary>
         public   int? PageNumber{ get; set; }
     }

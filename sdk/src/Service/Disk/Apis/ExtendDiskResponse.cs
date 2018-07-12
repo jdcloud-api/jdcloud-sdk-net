@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 扩容云硬盘到指定大小
+    ///  扩容云硬盘到指定大小
     /// </summary>
     public class ExtendDiskResponse : JdcloudResponse<ExtendDiskResult>
     {

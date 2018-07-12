@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Oss.Client
 {
     /// <summary>
-    /// 云存储API
-    /// 云存储API，主要包含查询Bucket列表，创建Bucket, 删除Bucket，查询Bucket是否存在, 更多API见：https://www.jdcloud.com/help/detail/1901/isCatalog/1
-    /// Oss Api 客户端
+    ///  云存储API
+    ///  云存储API，主要包含查询Bucket列表，创建Bucket, 删除Bucket，查询Bucket是否存在, 更多API见：https://www.jdcloud.com/help/detail/1901/isCatalog/1
+    ///  Oss Api 客户端
     ///</summary>
     public class OssClient : JdcloudClient
     {
@@ -138,8 +138,8 @@ namespace JDCloudSDK.Oss.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 创建bucket
-        ///
+        ///  创建bucket
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -148,8 +148,8 @@ namespace JDCloudSDK.Oss.Client
         }
 #else
         /// <summary>
-        /// 创建bucket
-        ///
+        ///  创建bucket
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -159,8 +159,8 @@ namespace JDCloudSDK.Oss.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除一个bucket
-        ///
+        ///  删除一个bucket
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -169,8 +169,8 @@ namespace JDCloudSDK.Oss.Client
         }
 #else
         /// <summary>
-        /// 删除一个bucket
-        ///
+        ///  删除一个bucket
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -180,8 +180,8 @@ namespace JDCloudSDK.Oss.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询bucket是否存在
-        ///
+        ///  查询bucket是否存在
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -190,8 +190,8 @@ namespace JDCloudSDK.Oss.Client
         }
 #else
         /// <summary>
-        /// 查询bucket是否存在
-        ///
+        ///  查询bucket是否存在
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -201,8 +201,8 @@ namespace JDCloudSDK.Oss.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 列出当前用户的所有bucket
-        ///
+        ///  列出当前用户的所有bucket
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -211,8 +211,8 @@ namespace JDCloudSDK.Oss.Client
         }
 #else
         /// <summary>
-        /// 列出当前用户的所有bucket
-        ///
+        ///  列出当前用户的所有bucket
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -260,7 +260,7 @@ namespace JDCloudSDK.Oss.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// OssClient service client
+                ///  OssClient service client
                 /// </summary>
                 private  OssClient ossClient;
 

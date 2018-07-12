@@ -34,32 +34,32 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
+    ///  云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
     /// </summary>
     public class AttachDiskRequest : JdcloudRequest
     {
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///Required:true
         ///</summary>
         [Required]
         public   string DiskId{ get; set; }
         ///<summary>
-        ///逻辑挂载点[vdb,vdc,vdd,vde,vdf,vdg,vdh]
+        /// 逻辑挂载点[vdb,vdc,vdd,vde,vdf,vdg,vdh]
         ///</summary>
         public   string DeviceName{ get; set; }
         ///<summary>
-        ///当删除主机时，是否自动关联删除此硬盘，默认False，只支持按配置计费
+        /// 当删除主机时，是否自动关联删除此硬盘，默认False，只支持按配置计费
         ///</summary>
         public   bool AutoDelete{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

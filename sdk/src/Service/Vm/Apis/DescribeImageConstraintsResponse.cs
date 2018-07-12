@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像限制
+    ///  查询镜像限制
     /// </summary>
     public class DescribeImageConstraintsResponse : JdcloudResponse<DescribeImageConstraintsResult>
     {

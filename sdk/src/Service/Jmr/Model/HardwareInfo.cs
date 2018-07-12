@@ -32,69 +32,69 @@ namespace JDCloudSDK.Jmr.Model
 {
 
     /// <summary>
-    /// hardwareInfo
+    ///  hardwareInfo
     /// </summary>
     public class HardwareInfo
     {
 
         ///<summary>
-        ///节点名称
+        /// 节点名称
         ///</summary>
         public string NodeName{ get; set; }
         ///<summary>
-        ///节点类型
+        /// 节点类型
         ///</summary>
         public string NodeType{ get; set; }
         ///<summary>
-        ///节点状态
+        /// 节点状态
         ///</summary>
         public string NodeStatus{ get; set; }
         ///<summary>
-        ///内网IP
+        /// 内网IP
         ///</summary>
         public string InnerIp{ get; set; }
         ///<summary>
-        ///外网IP
+        /// 外网IP
         ///</summary>
         public string OuterIp{ get; set; }
         ///<summary>
-        ///防火墙
+        /// 防火墙
         ///</summary>
         public string Firewall{ get; set; }
         ///<summary>
-        ///节点核心数
+        /// 节点核心数
         ///</summary>
         public int? NodeCoreNum{ get; set; }
         ///<summary>
-        ///节点内存数
+        /// 节点内存数
         ///</summary>
         public int? NodeMemoryNum{ get; set; }
         ///<summary>
-        ///节点系统信息
+        /// 节点系统信息
         ///</summary>
         public string NodeSystemInfo{ get; set; }
         ///<summary>
-        ///节点硬盘类型
+        /// 节点硬盘类型
         ///</summary>
         public string NodeDiskType{ get; set; }
         ///<summary>
-        ///节点硬盘容量
+        /// 节点硬盘容量
         ///</summary>
         public int? NodeDiskVolume{ get; set; }
         ///<summary>
-        ///节点实例ID
+        /// 节点实例ID
         ///</summary>
         public string ServerId{ get; set; }
         ///<summary>
-        ///消息
+        /// 消息
         ///</summary>
         public string Msg{ get; set; }
         ///<summary>
-        ///节点硬件配置
+        /// 节点硬件配置
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///节点硬件类型
+        /// 节点硬件类型
         ///</summary>
         public string InstanceInfo{ get; set; }
     }

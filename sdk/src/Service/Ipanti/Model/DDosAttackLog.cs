@@ -32,37 +32,37 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// dDosAttackLog
+    ///  dDosAttackLog
     /// </summary>
     public class DDosAttackLog
     {
 
         ///<summary>
-        ///攻击流量大小
+        /// 攻击流量大小
         ///</summary>
         public float? AttackTraffic{ get; set; }
         ///<summary>
-        ///是否触发黑洞，0否 1是
+        /// 是否触发黑洞，0否 1是
         ///</summary>
         public int? BlackHole{ get; set; }
         ///<summary>
-        ///攻击开始时间
+        /// 攻击开始时间
         ///</summary>
         public string StartTime{ get; set; }
         ///<summary>
-        ///攻击结束时间
+        /// 攻击结束时间
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        ///流量单位，bps、Kbps、Mbps、Gbps
+        /// 流量单位，bps、Kbps、Mbps、Gbps
         ///</summary>
         public string Unit{ get; set; }
         ///<summary>
-        ///高防实例id
+        /// 高防实例id
         ///</summary>
         public long? InstanceId{ get; set; }
         ///<summary>
-        ///高防实例名称
+        /// 高防实例名称
         ///</summary>
         public string Name{ get; set; }
     }

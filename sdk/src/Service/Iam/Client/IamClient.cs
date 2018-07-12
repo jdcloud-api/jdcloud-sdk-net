@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Iam.Client
 {
     /// <summary>
-    /// IAM API
-    /// IAM相关接口
-    /// Iam Api 客户端
+    ///  IAM API
+    ///  IAM相关接口
+    ///  Iam Api 客户端
     ///</summary>
     public class IamClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Iam.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 修改策略
+        ///  修改策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 修改策略
+        ///  修改策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,26 +157,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取操作保护设置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetSensitiveOpSettingResponse GetSensitiveOpSetting(GetSensitiveOpSettingRequest request) {
-            return  new GetSensitiveOpSettingExecutor().Client(this).Execute<GetSensitiveOpSettingResponse, GetSensitiveOpSettingResult, GetSensitiveOpSettingRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 获取操作保护设置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetSensitiveOpSettingResponse> GetSensitiveOpSetting(GetSensitiveOpSettingRequest request) {
-            return await new GetSensitiveOpSettingExecutor().Client(this).Execute<GetSensitiveOpSettingResponse, GetSensitiveOpSettingResult, GetSensitiveOpSettingRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 创建子账号
+        ///  创建子账号
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +166,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 创建子账号
+        ///  创建子账号
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,26 +176,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 根据用户pin获取用户基础信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBaseInfoResponse DescribeBaseInfo(DescribeBaseInfoRequest request) {
-            return  new DescribeBaseInfoExecutor().Client(this).Execute<DescribeBaseInfoResponse, DescribeBaseInfoResult, DescribeBaseInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 根据用户pin获取用户基础信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBaseInfoResponse> DescribeBaseInfo(DescribeBaseInfoRequest request) {
-            return await new DescribeBaseInfoExecutor().Client(this).Execute<DescribeBaseInfoResponse, DescribeBaseInfoResult, DescribeBaseInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 获取SessionToken
+        ///  获取SessionToken
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +185,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 获取SessionToken
+        ///  获取SessionToken
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +195,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除AccessKey
+        ///  删除AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +204,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 删除AccessKey
+        ///  删除AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +214,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 验证SessionToken有效性
+        ///  验证SessionToken有效性
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +223,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 验证SessionToken有效性
+        ///  验证SessionToken有效性
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +233,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询AccessKey列表
+        ///  查询AccessKey列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +242,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 查询AccessKey列表
+        ///  查询AccessKey列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +252,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建策略
+        ///  创建策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +261,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 创建策略
+        ///  创建策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +271,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 为子用户绑定策略
+        ///  为子用户绑定策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +280,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 为子用户绑定策略
+        ///  为子用户绑定策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +290,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 启用AccessKey
+        ///  启用AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +299,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 启用AccessKey
+        ///  启用AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +309,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建AccessKey
+        ///  创建AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +318,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 创建AccessKey
+        ///  创建AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +328,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询策略列表
+        ///  查询策略列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +337,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 查询策略列表
+        ///  查询策略列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -385,45 +347,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 根据用户pin获取用户门槛值
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserThresholdResponse DescribeUserThreshold(DescribeUserThresholdRequest request) {
-            return  new DescribeUserThresholdExecutor().Client(this).Execute<DescribeUserThresholdResponse, DescribeUserThresholdResult, DescribeUserThresholdRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 根据用户pin获取用户门槛值
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserThresholdResponse> DescribeUserThreshold(DescribeUserThresholdRequest request) {
-            return await new DescribeUserThresholdExecutor().Client(this).Execute<DescribeUserThresholdResponse, DescribeUserThresholdResult, DescribeUserThresholdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 根据AccessKey或者AccountId获取用户信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest request) {
-            return  new DescribeUserInfoExecutor().Client(this).Execute<DescribeUserInfoResponse, DescribeUserInfoResult, DescribeUserInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 根据AccessKey或者AccountId获取用户信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserInfoResponse> DescribeUserInfo(DescribeUserInfoRequest request) {
-            return await new DescribeUserInfoExecutor().Client(this).Execute<DescribeUserInfoResponse, DescribeUserInfoResult, DescribeUserInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询策略详情
+        ///  查询策略详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +356,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 查询策略详情
+        ///  查询策略详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +366,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 为子用户解绑策略
+        ///  为子用户解绑策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +375,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 为子用户解绑策略
+        ///  为子用户解绑策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -461,7 +385,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 禁用AccessKey
+        ///  禁用AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -470,7 +394,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 禁用AccessKey
+        ///  禁用AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -480,7 +404,7 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询子用户策略列表
+        ///  查询子用户策略列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -489,7 +413,7 @@ namespace JDCloudSDK.Iam.Client
         }
 #else
         /// <summary>
-        /// 查询子用户策略列表
+        ///  查询子用户策略列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -537,7 +461,7 @@ namespace JDCloudSDK.Iam.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// IamClient service client
+                ///  IamClient service client
                 /// </summary>
                 private  IamClient iamClient;
 

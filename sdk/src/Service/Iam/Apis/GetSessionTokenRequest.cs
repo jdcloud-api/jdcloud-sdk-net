@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 获取SessionToken
+    ///  获取SessionToken
     /// </summary>
     public class GetSessionTokenRequest : JdcloudRequest
     {
         ///<summary>
-        ///获取sessionToken参数
+        /// 获取sessionToken参数
         ///Required:true
         ///</summary>
         [Required]
         public   GetSessionTokenInfo GetSessionTokenInfo{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

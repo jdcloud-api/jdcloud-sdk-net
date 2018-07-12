@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 删除单个实例
+    ///  删除单个实例
     /// </summary>
     public class DeleteContainerResult : JdcloudResult
     {

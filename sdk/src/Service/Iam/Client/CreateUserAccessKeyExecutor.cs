@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 创建AccessKey
+    ///  创建AccessKey
     /// </summary>
     public class CreateUserAccessKeyExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建AccessKey接口的Http 请求方法
+        ///  创建AccessKey接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 创建AccessKey接口的Http资源请求路径
+        ///  创建AccessKey接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

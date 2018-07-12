@@ -32,49 +32,49 @@ namespace JDCloudSDK.Xdata.Model
 {
 
     /// <summary>
-    /// dwHiveObjectPrivileges
+    ///  dwHiveObjectPrivileges
     /// </summary>
     public class DwHiveObjectPrivileges
     {
 
         ///<summary>
-        ///状态
+        /// 状态
         ///</summary>
         public bool Status{ get; set; }
         ///<summary>
-        ///返回信息
+        /// 返回信息
         ///</summary>
         public string Message{ get; set; }
         ///<summary>
-        ///select权限
+        /// select权限
         ///</summary>
         public bool Select{ get; set; }
         ///<summary>
-        ///insert权限
+        /// insert权限
         ///</summary>
         public bool Insert{ get; set; }
         ///<summary>
-        ///update权限
+        /// update权限
         ///</summary>
         public bool Update{ get; set; }
         ///<summary>
-        ///delete权限
+        /// delete权限
         ///</summary>
         public bool Delete{ get; set; }
         ///<summary>
-        ///drop权限
+        /// drop权限
         ///</summary>
         public bool Drop{ get; set; }
         ///<summary>
-        ///create权限
+        /// create权限
         ///</summary>
         public bool Create{ get; set; }
         ///<summary>
-        ///alter权限
+        /// alter权限
         ///</summary>
         public bool Alter{ get; set; }
         ///<summary>
-        ///是否为此表所有者
+        /// 是否为此表所有者
         ///</summary>
         public bool Owner{ get; set; }
     }

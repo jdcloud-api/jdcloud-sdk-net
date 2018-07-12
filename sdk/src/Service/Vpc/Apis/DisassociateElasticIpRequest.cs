@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡解绑弹性Ip接口
+    ///  给网卡解绑弹性Ip接口
     /// </summary>
     public class DisassociateElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        ///指定解绑的弹性Ip Id
+        /// 指定解绑的弹性Ip Id
         ///</summary>
         public   string ElasticIpId{ get; set; }
         ///<summary>
-        ///指定解绑的弹性Ip地址
+        /// 指定解绑的弹性Ip地址
         ///</summary>
         public   string ElasticIpAddress{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///networkInterface ID
+        /// networkInterface ID
         ///Required:true
         ///</summary>
         [Required]

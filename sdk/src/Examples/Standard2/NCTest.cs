@@ -52,20 +52,7 @@ namespace JDCloudSDK.Test.Standard2
 
         }
 
-        [Fact]
-        public void TestModifyQuota()
-        {
-            NcClient ncClient = GetNcClient();
-            ModifyQuotaRequest request = new ModifyQuotaRequest();
-
-            request.ResourceType = "container";
-            request.RegionId = "cn-north-1";
-            request.Limit = 10;
-            ncClient.SetCustomHeader("x-jdcloud-pin", "jcloud_00");
-            ncClient.SetCustomHeader("x-jdcloud-erp", "DemoUser");
-            var result = ncClient.ModifyQuota(request).Result;
-            _output.WriteLine(JsonConvert.SerializeObject(result));
-        }
+  
 
 
 

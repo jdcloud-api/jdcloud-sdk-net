@@ -33,97 +33,97 @@ namespace JDCloudSDK.Mongodb.Model
 {
 
     /// <summary>
-    /// dBInstance
+    ///  dBInstance
     /// </summary>
     public class DBInstance
     {
 
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        ///数据库类型
+        /// 数据库类型
         ///</summary>
         public string Engine{ get; set; }
         ///<summary>
-        ///数据库版本
+        /// 数据库版本
         ///</summary>
         public string EngineVersion{ get; set; }
         ///<summary>
-        ///实例规格代码
+        /// 实例规格代码
         ///</summary>
         public string InstanceClass{ get; set; }
         ///<summary>
-        ///存储空间
+        /// 存储空间
         ///</summary>
         public int? InstanceStorageGB{ get; set; }
         ///<summary>
-        ///CPU核数
+        /// CPU核数
         ///</summary>
         public int? InstanceCPU{ get; set; }
         ///<summary>
-        ///内存，单位GB
+        /// 内存，单位GB
         ///</summary>
         public int? InstanceMemoryGB{ get; set; }
         ///<summary>
-        ///可取区ID，依次为主、从、隐藏节点所在可用区
+        /// 可取区ID，依次为主、从、隐藏节点所在可用区
         ///</summary>
         public List<string> AzId{ get; set; }
         ///<summary>
-        ///VPCID
+        /// VPCID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///子网ID
+        /// 子网ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        ///副本集名称
+        /// 副本集名称
         ///</summary>
         public string ReplicaSetName{ get; set; }
         ///<summary>
-        ///域名
+        /// 域名
         ///</summary>
         public string InstanceDomain{ get; set; }
         ///<summary>
-        ///默认库名
+        /// 默认库名
         ///</summary>
         public string DBName{ get; set; }
         ///<summary>
-        ///默认用户名
+        /// 默认用户名
         ///</summary>
         public string AccountName{ get; set; }
         ///<summary>
-        ///应用访问端口
+        /// 应用访问端口
         ///</summary>
         public string InstancePort{ get; set; }
         ///<summary>
-        ///实例状态.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+        /// 实例状态.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
         ///</summary>
         public string InstanceStatus{ get; set; }
         ///<summary>
-        ///自动备份保留时间
+        /// 自动备份保留时间
         ///</summary>
         public int? BackupRetentionPeriod{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///自动备份时间，如：00:00-02:00，表示0点到2点进行数据库自动备份
+        /// 自动备份时间，如：00:00-02:00，表示0点到2点进行数据库自动备份
         ///</summary>
         public string PreferredBackupWindow{ get; set; }
         ///<summary>
-        ///系统维护时间，如：00:00-02:00，表示0点到2点进行系统维护
+        /// 系统维护时间，如：00:00-02:00，表示0点到2点进行系统维护
         ///</summary>
         public string PreferredmaintenanceWindow{ get; set; }
         ///<summary>
-        ///计费信息
+        /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
     }

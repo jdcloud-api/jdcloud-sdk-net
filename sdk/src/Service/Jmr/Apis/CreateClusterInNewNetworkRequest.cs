@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 创建新集群
+    ///  创建新集群
     /// </summary>
     public class CreateClusterInNewNetworkRequest : JdcloudRequest
     {
         ///<summary>
-        ///ClusterModel
+        /// ClusterModel
         ///Required:true
         ///</summary>
         [Required]
         public   ClusterModel ClusterModel{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

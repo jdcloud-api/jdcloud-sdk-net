@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// modifyVpcPeeringSpec
+    ///  modifyVpcPeeringSpec
     /// </summary>
     public class ModifyVpcPeeringSpec
     {
 
         ///<summary>
-        ///VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string VpcPeeringName{ get; set; }
         ///<summary>
-        ///VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string Description{ get; set; }
     }

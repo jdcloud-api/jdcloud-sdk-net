@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询cc攻击日志
+    ///  查询cc攻击日志
     /// </summary>
     public class DescribeCcAttackLogsResponse : JdcloudResponse<DescribeCcAttackLogsResult>
     {

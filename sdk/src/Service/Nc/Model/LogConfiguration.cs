@@ -32,17 +32,17 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 容器日志配置信息
+    ///  容器日志配置信息
     /// </summary>
     public class LogConfiguration
     {
 
         ///<summary>
-        ///日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
+        /// 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
         ///</summary>
         public string LogDriver{ get; set; }
         ///<summary>
-        ///日志Driver的配置选项
+        /// 日志Driver的配置选项
         ///</summary>
         public LogOption Options{ get; set; }
     }

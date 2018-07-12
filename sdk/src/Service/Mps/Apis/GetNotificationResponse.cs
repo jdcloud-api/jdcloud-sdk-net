@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mps.Apis
 {
 
     /// <summary>
-    /// 获取截图通知
+    ///  获取截图通知
     /// </summary>
     public class GetNotificationResponse : JdcloudResponse<GetNotificationResult>
     {

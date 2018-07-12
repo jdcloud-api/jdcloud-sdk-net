@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 执行Spark SQL
+    ///  执行Spark SQL
     /// </summary>
     public class ExecuteRasQueryExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 执行Spark SQL接口的Http 请求方法
+        ///  执行Spark SQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 执行Spark SQL接口的Http资源请求路径
+        ///  执行Spark SQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

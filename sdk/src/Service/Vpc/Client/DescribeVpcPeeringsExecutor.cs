@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vpc.Client
 {
 
     /// <summary>
-    /// 查询VpcPeering资源列表
+    ///  查询VpcPeering资源列表
     /// </summary>
     public class DescribeVpcPeeringsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询VpcPeering资源列表接口的Http 请求方法
+        ///  查询VpcPeering资源列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vpc.Client
             }
         }
         /// <summary>
-        /// 查询VpcPeering资源列表接口的Http资源请求路径
+        ///  查询VpcPeering资源列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

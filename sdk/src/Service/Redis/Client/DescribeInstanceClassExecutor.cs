@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    /// 查询某区域下的实例规格列表
+    ///  查询某区域下的实例规格列表
     /// </summary>
     public class DescribeInstanceClassExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询某区域下的实例规格列表接口的Http 请求方法
+        ///  查询某区域下的实例规格列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        /// 查询某区域下的实例规格列表接口的Http资源请求路径
+        ///  查询某区域下的实例规格列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

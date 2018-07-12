@@ -34,20 +34,20 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 查询集群详情
+    ///  查询集群详情
     /// </summary>
     public class ShowClusterDetailsResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public   ClusterDetailModel Data{ get; set; }
     }

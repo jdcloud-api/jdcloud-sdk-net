@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 数据恢复
+    ///  数据恢复
     /// </summary>
     public class RestoreInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 数据恢复接口的Http 请求方法
+        ///  数据恢复接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 数据恢复接口的Http资源请求路径
+        ///  数据恢复接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

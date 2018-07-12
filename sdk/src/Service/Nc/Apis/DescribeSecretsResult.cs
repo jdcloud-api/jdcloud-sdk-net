@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询secret列表
+    ///  查询secret列表
     /// </summary>
     public class DescribeSecretsResult : JdcloudResult
     {
         ///<summary>
-        ///Secrets
+        /// Secrets
         ///</summary>
         public List<Secret> Secrets{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

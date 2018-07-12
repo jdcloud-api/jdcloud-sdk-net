@@ -32,17 +32,17 @@ namespace JDCloudSDK.Baseanti.Model
 {
 
     /// <summary>
-    /// cleanThresholdSpec
+    ///  cleanThresholdSpec
     /// </summary>
     public class CleanThresholdSpec
     {
 
         ///<summary>
-        ///触发清洗的流量速率，单位bps，范围是10000000到300000000
+        /// 触发清洗的流量速率，单位bps，范围是10000000到300000000
         ///</summary>
         public long? CleanThresholdBps{ get; set; }
         ///<summary>
-        ///触发清洗的包速率，单位pps，范围是2000到70000
+        /// 触发清洗的包速率，单位pps，范围是2000到70000
         ///</summary>
         public long? CleanThresholdPps{ get; set; }
     }

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    /// 从用户上传的备份文件中恢复SQL Server数据库
+    ///  从用户上传的备份文件中恢复SQL Server数据库
     /// </summary>
     public class RestoreDatabaseFromFileExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 从用户上传的备份文件中恢复SQL Server数据库接口的Http 请求方法
+        ///  从用户上传的备份文件中恢复SQL Server数据库接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        /// 从用户上传的备份文件中恢复SQL Server数据库接口的Http资源请求路径
+        ///  从用户上传的备份文件中恢复SQL Server数据库接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

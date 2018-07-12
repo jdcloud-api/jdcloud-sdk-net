@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 创建 secret
+    ///  创建 secret
     /// </summary>
     public class CreateSecretResult : JdcloudResult
     {
         ///<summary>
-        ///SecretName
+        /// SecretName
         ///</summary>
         public   string SecretName{ get; set; }
     }

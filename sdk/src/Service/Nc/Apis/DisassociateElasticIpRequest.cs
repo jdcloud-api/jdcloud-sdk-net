@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+    ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
     /// </summary>
     public class DisassociateElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        ///弹性IP ID
+        /// 弹性IP ID
         ///Required:true
         ///</summary>
         [Required]
         public   string ElasticIpId{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Container ID
+        /// Container ID
         ///Required:true
         ///</summary>
         [Required]

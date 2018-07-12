@@ -32,41 +32,41 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// securityGroupRule
+    ///  securityGroupRule
     /// </summary>
     public class SecurityGroupRule
     {
 
         ///<summary>
-        ///安全组规则ID
+        /// 安全组规则ID
         ///</summary>
         public string RuleId{ get; set; }
         ///<summary>
-        ///安全组规则方向。0：入规则; 1：出规则
+        /// 安全组规则方向。0：入规则; 1：出规则
         ///</summary>
         public double? Direction{ get; set; }
         ///<summary>
-        ///规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
+        /// 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
         ///</summary>
         public double? Protocol{ get; set; }
         ///<summary>
-        ///匹配地址前缀
+        /// 匹配地址前缀
         ///</summary>
         public string AddressPrefix{ get; set; }
         ///<summary>
-        ///匹配地址协议版本。4：IPv4；6：IPv6
+        /// 匹配地址协议版本。4：IPv4；6：IPv6
         ///</summary>
         public double? IpVersion{ get; set; }
         ///<summary>
-        ///规则限定起始传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
+        /// 规则限定起始传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
         ///</summary>
         public double? FromPort{ get; set; }
         ///<summary>
-        ///规则限定终止传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
+        /// 规则限定终止传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
         ///</summary>
         public double? ToPort{ get; set; }
         ///<summary>
-        ///安全组规则创建时间
+        /// 安全组规则创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

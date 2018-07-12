@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询VpcPeering资源列表
+    ///  查询VpcPeering资源列表
     /// </summary>
     public class DescribeVpcPeeringsResponse : JdcloudResponse<DescribeVpcPeeringsResult>
     {

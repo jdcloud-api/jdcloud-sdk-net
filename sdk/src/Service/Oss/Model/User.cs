@@ -33,19 +33,19 @@ namespace JDCloudSDK.Oss.Model
 {
 
     /// <summary>
-    /// user
+    ///  user
     /// </summary>
     public class User
     {
 
         ///<summary>
-        ///Id
+        /// Id
         ///Required:true
         ///</summary>
         [Required]
         public string Id{ get; set; }
         ///<summary>
-        ///DisplayName
+        /// DisplayName
         ///Required:true
         ///</summary>
         [Required]

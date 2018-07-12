@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 添加非网站类规则
+    ///  添加非网站类规则
     /// </summary>
     public class CreateForwardRuleExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 添加非网站类规则接口的Http 请求方法
+        ///  添加非网站类规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 添加非网站类规则接口的Http资源请求路径
+        ///  添加非网站类规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

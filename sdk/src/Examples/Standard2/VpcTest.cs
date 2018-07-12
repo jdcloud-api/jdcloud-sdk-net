@@ -79,28 +79,8 @@ namespace JDCloudSDK.Test.Standard2
             _output.WriteLine(JsonConvert.SerializeObject(result));
         }
 
-        [Fact]
-        public void TestDescribeNetworkInterfaces()
-        {
-            VpcClient vpcClient = GetVpcClient();
-            DescribeNetworkInterfacesRequest request = new DescribeNetworkInterfacesRequest();
-            request.PageSize = 100;
-            request.PageNumber = 1;
-            request.RegionId = "cn-north-1";
-            var result = vpcClient.DescribeNetworkInterfaces(request).Result;
-            _output.WriteLine(JsonConvert.SerializeObject(result));
-        }
-
-        [Fact]
-        public void TestDescribeNetworkInterface()
-        {
-            VpcClient vpcClient = GetVpcClient();
-            DescribeNetworkInterfaceRequest request = new DescribeNetworkInterfaceRequest();
-            request.RegionId = "cn-north-1";
-            request.NetworkInterfaceId = "port-ovvw8hxuwe";
-            var result = vpcClient.DescribeNetworkInterface(request).Result;
-            _output.WriteLine(JsonConvert.SerializeObject(result));
-        }
+       
+     
 
         [Fact]
         public void TestAssociateElasticIp()

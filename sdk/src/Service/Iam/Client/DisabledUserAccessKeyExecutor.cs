@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 禁用AccessKey
+    ///  禁用AccessKey
     /// </summary>
     public class DisabledUserAccessKeyExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 禁用AccessKey接口的Http 请求方法
+        ///  禁用AccessKey接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 禁用AccessKey接口的Http资源请求路径
+        ///  禁用AccessKey接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

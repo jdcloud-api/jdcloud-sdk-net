@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Mongodb.Client
 {
     /// <summary>
-    /// 京东云数据库MongoDB接口
-    /// 数据库MongoDB相关接口
-    /// Mongodb Api 客户端
+    ///  京东云数据库MongoDB接口
+    ///  数据库MongoDB相关接口
+    ///  Mongodb Api 客户端
     ///</summary>
     public class MongodbClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Mongodb.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 修改实例名称
+        ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 修改实例名称
+        ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 数据恢复
+        ///  数据恢复
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 数据恢复
+        ///  数据恢复
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 重置密码
+        ///  重置密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 重置密码
+        ///  重置密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除实例
+        ///  删除实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 删除实例
+        ///  删除实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取备份策略
+        ///  获取备份策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 获取备份策略
+        ///  获取备份策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取备份下载链接
+        ///  获取备份下载链接
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 获取备份下载链接
+        ///  获取备份下载链接
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查看备份
+        ///  查看备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 查看备份
+        ///  查看备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询实例信息
+        ///  查询实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 查询实例信息
+        ///  查询实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 变更实例规格
+        ///  变更实例规格
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 变更实例规格
+        ///  变更实例规格
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建备份
+        ///  创建备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 创建备份
+        ///  创建备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改备份策略
+        ///  修改备份策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 修改备份策略
+        ///  修改备份策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建实例
+        ///  创建实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 创建实例
+        ///  创建实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +366,7 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除备份
+        ///  删除备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +375,7 @@ namespace JDCloudSDK.Mongodb.Client
         }
 #else
         /// <summary>
-        /// 删除备份
+        ///  删除备份
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -423,7 +423,7 @@ namespace JDCloudSDK.Mongodb.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// MongodbClient service client
+                ///  MongodbClient service client
                 /// </summary>
                 private  MongodbClient mongodbClient;
 

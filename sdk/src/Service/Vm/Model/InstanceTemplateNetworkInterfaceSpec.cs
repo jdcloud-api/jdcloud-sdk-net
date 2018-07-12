@@ -33,23 +33,23 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplateNetworkInterfaceSpec
+    ///  instanceTemplateNetworkInterfaceSpec
     /// </summary>
     public class InstanceTemplateNetworkInterfaceSpec
     {
 
         ///<summary>
-        ///子网ID
+        /// 子网ID
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        ///安全组ID列表
+        /// 安全组ID列表
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
         ///<summary>
-        ///PortSecurity，取值为0或者1，默认为1
+        /// PortSecurity，取值为0或者1，默认为1
         ///</summary>
         public int? SanityCheck{ get; set; }
     }

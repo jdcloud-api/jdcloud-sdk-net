@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 创建新集群
+    ///  创建新集群
     /// </summary>
     public class CreateClusterInNewNetworkResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
     }

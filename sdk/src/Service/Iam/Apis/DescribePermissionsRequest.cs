@@ -34,34 +34,34 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询策略列表
+    ///  查询策略列表
     /// </summary>
     public class DescribePermissionsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码
+        /// 页码
         ///Required:true
         ///</summary>
         [Required]
         public   int PageNumber{ get; set; }
         ///<summary>
-        ///每页显示数目
+        /// 每页显示数目
         ///Required:true
         ///</summary>
         [Required]
         public   int PageSize{ get; set; }
         ///<summary>
-        ///关键字
+        /// 关键字
         ///</summary>
         public   string Keyword{ get; set; }
         ///<summary>
-        ///权限类型,0-全部，1-系统权限，2-自定义权限
+        /// 权限类型,0-全部，1-系统权限，2-自定义权限
         ///Required:true
         ///</summary>
         [Required]
         public   int QueryType{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

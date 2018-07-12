@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 删除单个缓存Redis实例
+    ///  删除单个缓存Redis实例
     /// </summary>
     public class DeleteCacheInstanceResult : JdcloudResult
     {

@@ -34,54 +34,54 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 执行Spark SQL
+    ///  执行Spark SQL
     /// </summary>
     public class ExecuteRasQueryRequest : JdcloudRequest
     {
         ///<summary>
-        ///数据库名称
+        /// 数据库名称
         ///</summary>
         public   string DatabaseName{ get; set; }
         ///<summary>
-        ///sql脚本
+        /// sql脚本
         ///Required:true
         ///</summary>
         [Required]
         public   string Sql{ get; set; }
         ///<summary>
-        ///用户名称
+        /// 用户名称
         ///Required:true
         ///</summary>
         [Required]
         public   string UserName{ get; set; }
         ///<summary>
-        ///队列名称
+        /// 队列名称
         ///</summary>
         public   string QueueName{ get; set; }
         ///<summary>
-        ///资源名称
+        /// 资源名称
         ///</summary>
         public   string Source{ get; set; }
         ///<summary>
-        ///回调地址名称
+        /// 回调地址名称
         ///</summary>
         public   string CallBackURL{ get; set; }
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        ///实例拥有者名称
+        /// 实例拥有者名称
         ///</summary>
         public   string InstanceOwnerName{ get; set; }
         ///<summary>
-        ///是否需要解释
+        /// 是否需要解释
         ///</summary>
         public   string IsExplain{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

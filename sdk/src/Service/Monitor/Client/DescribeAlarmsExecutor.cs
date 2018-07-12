@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 查询监控规则
+    ///  查询监控规则
     /// </summary>
     public class DescribeAlarmsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询监控规则接口的Http 请求方法
+        ///  查询监控规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 查询监控规则接口的Http资源请求路径
+        ///  查询监控规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

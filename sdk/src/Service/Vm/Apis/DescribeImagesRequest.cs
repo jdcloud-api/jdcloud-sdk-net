@@ -34,25 +34,25 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像资源信息列表
+    ///  查询镜像资源信息列表
     /// </summary>
     public class DescribeImagesRequest : JdcloudRequest
     {
         ///<summary>
-        ///镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
+        /// 镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
         ///</summary>
         public   string ImageSource{ get; set; }
         ///<summary>
-        ///操作系统平台: Windows Server、CentOS、Ubuntu
+        /// 操作系统平台: Windows Server、CentOS、Ubuntu
         ///</summary>
         public   string Platform{ get; set; }
         ///<summary>
-        ///镜像ID列表，如果指定了此参数，其它参数可为空
+        /// 镜像ID列表，如果指定了此参数，其它参数可为空
         ///</summary>
         public List<string> Ids{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询子网信息详情
+    ///  查询子网信息详情
     /// </summary>
     public class DescribeSubnetResult : JdcloudResult
     {
         ///<summary>
-        ///子网资源信息
+        /// 子网资源信息
         ///</summary>
         public   Subnet Subnet{ get; set; }
     }

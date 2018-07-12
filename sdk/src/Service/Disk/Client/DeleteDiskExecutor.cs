@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 删除单个云硬盘
+    ///  删除单个云硬盘
     /// </summary>
     public class DeleteDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除单个云硬盘接口的Http 请求方法
+        ///  删除单个云硬盘接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 删除单个云硬盘接口的Http资源请求路径
+        ///  删除单个云硬盘接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

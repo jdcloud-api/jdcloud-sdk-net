@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    /// 获取备份信息
+    ///  获取备份信息
     /// </summary>
     public class DescribeBackupsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 获取备份信息接口的Http 请求方法
+        ///  获取备份信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        /// 获取备份信息接口的Http资源请求路径
+        ///  获取备份信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

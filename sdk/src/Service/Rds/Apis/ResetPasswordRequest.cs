@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 数据库账号重置密码
+    ///  数据库账号重置密码
     /// </summary>
     public class ResetPasswordRequest : JdcloudRequest
     {
         ///<summary>
-        ///新密码
+        /// 新密码
         ///Required:true
         ///</summary>
         [Required]
         public   string AccountPassword{ get; set; }
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///账户名
+        /// 账户名
         ///Required:true
         ///</summary>
         [Required]

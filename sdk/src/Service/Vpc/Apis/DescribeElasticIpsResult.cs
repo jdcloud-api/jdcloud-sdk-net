@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询弹性ip列表
+    ///  查询弹性ip列表
     /// </summary>
     public class DescribeElasticIpsResult : JdcloudResult
     {
         ///<summary>
-        ///ElasticIps
+        /// ElasticIps
         ///</summary>
         public List<ElasticIp> ElasticIps{ get; set; }
 
         ///<summary>
-        ///总数量
+        /// 总数量
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

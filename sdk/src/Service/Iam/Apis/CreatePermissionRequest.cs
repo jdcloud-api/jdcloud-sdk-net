@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 创建策略
+    ///  创建策略
     /// </summary>
     public class CreatePermissionRequest : JdcloudRequest
     {
         ///<summary>
-        ///权限信息
+        /// 权限信息
         ///Required:true
         ///</summary>
         [Required]
         public   CreatePermissionInfo CreatePermissionInfo{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

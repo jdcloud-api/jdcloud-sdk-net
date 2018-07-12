@@ -32,17 +32,17 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// serviceCodeMetrics
+    ///  serviceCodeMetrics
     /// </summary>
     public class ServiceCodeMetrics
     {
 
         ///<summary>
-        ///Metrics
+        /// Metrics
         ///</summary>
         public List<MetricDetail> Metrics{ get; set; }
         ///<summary>
-        ///ServiceCode
+        /// ServiceCode
         ///</summary>
         public string ServiceCode{ get; set; }
     }

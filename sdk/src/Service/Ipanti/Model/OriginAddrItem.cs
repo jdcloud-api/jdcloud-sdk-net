@@ -32,21 +32,21 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// originAddrItem
+    ///  originAddrItem
     /// </summary>
     public class OriginAddrItem
     {
 
         ///<summary>
-        ///回源ip
+        /// 回源ip
         ///</summary>
         public string Ip{ get; set; }
         ///<summary>
-        ///权重
+        /// 权重
         ///</summary>
         public int? Weight{ get; set; }
         ///<summary>
-        ///是否为京东云内公网ip
+        /// 是否为京东云内公网ip
         ///</summary>
         public bool InJdCloud{ get; set; }
     }

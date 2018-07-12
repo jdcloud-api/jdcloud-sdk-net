@@ -32,21 +32,21 @@ namespace JDCloudSDK.Xdata.Model
 {
 
     /// <summary>
-    /// dwDatabaseInfo
+    ///  dwDatabaseInfo
     /// </summary>
     public class DwDatabaseInfo
     {
 
         ///<summary>
-        ///所有者
+        /// 所有者
         ///</summary>
         public string Owner{ get; set; }
         ///<summary>
-        ///描述信息
+        /// 描述信息
         ///</summary>
         public string Comments{ get; set; }
         ///<summary>
-        ///数据库名称
+        /// 数据库名称
         ///</summary>
         public string DatabaseName{ get; set; }
     }

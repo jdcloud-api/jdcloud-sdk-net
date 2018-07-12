@@ -33,12 +33,12 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    /// 设置公网Ip的清洗阈值
+    ///  设置公网Ip的清洗阈值
     /// </summary>
     public class SetCleanThresholdExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 设置公网Ip的清洗阈值接口的Http 请求方法
+        ///  设置公网Ip的清洗阈值接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        /// 设置公网Ip的清洗阈值接口的Http资源请求路径
+        ///  设置公网Ip的清洗阈值接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    /// 变更缓存Redis实例配置
+    ///  变更缓存Redis实例配置
     /// </summary>
     public class ModifyCacheInstanceClassExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 变更缓存Redis实例配置接口的Http 请求方法
+        ///  变更缓存Redis实例配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        /// 变更缓存Redis实例配置接口的Http资源请求路径
+        ///  变更缓存Redis实例配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

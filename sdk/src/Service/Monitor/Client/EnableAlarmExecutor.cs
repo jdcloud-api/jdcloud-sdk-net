@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+    ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
     /// </summary>
     public class EnableAlarmExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。接口的Http 请求方法
+        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。接口的Http资源请求路径
+        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 更新某条网站类规则
+    ///  更新某条网站类规则
     /// </summary>
     public class ModifyWebRuleExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 更新某条网站类规则接口的Http 请求方法
+        ///  更新某条网站类规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 更新某条网站类规则接口的Http资源请求路径
+        ///  更新某条网站类规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

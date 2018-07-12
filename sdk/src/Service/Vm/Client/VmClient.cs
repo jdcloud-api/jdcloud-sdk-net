@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Vm.Client
 {
     /// <summary>
-    /// 云主机
-    /// 云主机实例、镜像、规格类型、实例模板、配额相关的接口
-    /// Vm Api 客户端
+    ///  云主机
+    ///  云主机实例、镜像、规格类型、实例模板、配额相关的接口
+    ///  Vm Api 客户端
     ///</summary>
     public class VmClient : JdcloudClient
     {
@@ -138,26 +138,7 @@ namespace JDCloudSDK.Vm.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 创建一个指定参数的启动模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateInstanceTemplateResponse CreateInstanceTemplate(CreateInstanceTemplateRequest request) {
-            return  new CreateInstanceTemplateExecutor().Client(this).Execute<CreateInstanceTemplateResponse, CreateInstanceTemplateResult, CreateInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 创建一个指定参数的启动模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceTemplateResponse> CreateInstanceTemplate(CreateInstanceTemplateRequest request) {
-            return await new CreateInstanceTemplateExecutor().Client(this).Execute<CreateInstanceTemplateResponse, CreateInstanceTemplateResult, CreateInstanceTemplateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
+        ///  云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +147,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
+        ///  云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +157,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询镜像共享帐户列表，不能操作非私有镜像
+        ///  查询镜像共享帐户列表，不能操作非私有镜像
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +166,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询镜像共享帐户列表，不能操作非私有镜像
+        ///  查询镜像共享帐户列表，不能操作非私有镜像
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +176,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询镜像信息
+        ///  查询镜像信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +185,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询镜像信息
+        ///  查询镜像信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +195,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 云主机使用指定镜像重置实例镜像，需要关机操作，
+        ///  云主机使用指定镜像重置实例镜像，需要关机操作，
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +204,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 云主机使用指定镜像重置实例镜像，需要关机操作，
+        ///  云主机使用指定镜像重置实例镜像，需要关机操作，
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +214,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
+        ///  重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +223,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
+        ///  重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,30 +233,11 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询启动模板详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceTemplateResponse DescribeInstanceTemplate(DescribeInstanceTemplateRequest request) {
-            return  new DescribeInstanceTemplateExecutor().Client(this).Execute<DescribeInstanceTemplateResponse, DescribeInstanceTemplateResult, DescribeInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询启动模板详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceTemplateResponse> DescribeInstanceTemplate(DescribeInstanceTemplateRequest request) {
-            return await new DescribeInstanceTemplateExecutor().Client(this).Execute<DescribeInstanceTemplateResponse, DescribeInstanceTemplateResult, DescribeInstanceTemplateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// &quot;共享镜像，最多可共享给20个帐户&quot;
-        ///&quot;打包镜像暂不支持共享&quot;
-        ///&quot;不能操作非私有镜像&quot;
-        ///&quot;不能共享给自己&quot;
-        ///
+        ///  &quot;共享镜像，最多可共享给20个帐户&quot;
+        /// &quot;打包镜像暂不支持共享&quot;
+        /// &quot;不能操作非私有镜像&quot;
+        /// &quot;不能共享给自己&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -284,11 +246,11 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// &quot;共享镜像，最多可共享给20个帐户&quot;
-        ///&quot;打包镜像暂不支持共享&quot;
-        ///&quot;不能操作非私有镜像&quot;
-        ///&quot;不能共享给自己&quot;
-        ///
+        ///  &quot;共享镜像，最多可共享给20个帐户&quot;
+        /// &quot;打包镜像暂不支持共享&quot;
+        /// &quot;不能操作非私有镜像&quot;
+        /// &quot;不能共享给自己&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -298,7 +260,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询镜像资源信息列表
+        ///  查询镜像资源信息列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -307,7 +269,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询镜像资源信息列表
+        ///  查询镜像资源信息列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -317,7 +279,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止
+        ///  停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -326,7 +288,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止
+        ///  停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -336,7 +298,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询主机vnc
+        ///  查询主机vnc
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -345,7 +307,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询主机vnc
+        ///  查询主机vnc
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -355,26 +317,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询启动模板列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceTemplatesResponse DescribeInstanceTemplates(DescribeInstanceTemplatesRequest request) {
-            return  new DescribeInstanceTemplatesExecutor().Client(this).Execute<DescribeInstanceTemplatesResponse, DescribeInstanceTemplatesResult, DescribeInstanceTemplatesRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询启动模板列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceTemplatesResponse> DescribeInstanceTemplates(DescribeInstanceTemplatesRequest request) {
-            return await new DescribeInstanceTemplatesExecutor().Client(this).Execute<DescribeInstanceTemplatesResponse, DescribeInstanceTemplatesResult, DescribeInstanceTemplatesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 删除私有镜像
+        ///  删除私有镜像
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -383,7 +326,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 删除私有镜像
+        ///  删除私有镜像
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -393,7 +336,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询云主机详情
+        ///  查询云主机详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -402,7 +345,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询云主机详情
+        ///  查询云主机详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -412,12 +355,12 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// &quot;云主机变更实例规格，需要关机操作&quot;
-        ///&quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-        ///&quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-        ///&quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
-        ///&quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
-        ///
+        ///  &quot;云主机变更实例规格，需要关机操作&quot;
+        /// &quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
+        /// &quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
+        /// &quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
+        /// &quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -426,12 +369,12 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// &quot;云主机变更实例规格，需要关机操作&quot;
-        ///&quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-        ///&quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-        ///&quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
-        ///&quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
-        ///
+        ///  &quot;云主机变更实例规格，需要关机操作&quot;
+        /// &quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
+        /// &quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
+        /// &quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
+        /// &quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -441,7 +384,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询（虚机、镜像、密钥、模板）配额
+        ///  查询（虚机、镜像、密钥、模板）配额
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -450,7 +393,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询（虚机、镜像、密钥、模板）配额
+        ///  查询（虚机、镜像、密钥、模板）配额
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -460,11 +403,11 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// &quot;虚机创建私有镜像&quot;
-        ///&quot;虚机状态必须为stopped&quot;
-        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///
+        ///  &quot;虚机创建私有镜像&quot;
+        /// &quot;虚机状态必须为stopped&quot;
+        /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -473,11 +416,11 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// &quot;虚机创建私有镜像&quot;
-        ///&quot;虚机状态必须为stopped&quot;
-        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///
+        ///  &quot;虚机创建私有镜像&quot;
+        /// &quot;虚机状态必须为stopped&quot;
+        /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -487,7 +430,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询云主机列表
+        ///  查询云主机列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -496,7 +439,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询云主机列表
+        ///  查询云主机列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -506,7 +449,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
+        ///  创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -515,7 +458,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
+        ///  创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -525,7 +468,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 取消共享镜像，不能操作非私有镜像
+        ///  取消共享镜像，不能操作非私有镜像
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -534,7 +477,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 取消共享镜像，不能操作非私有镜像
+        ///  取消共享镜像，不能操作非私有镜像
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -544,7 +487,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改主机密码，主机没有未完成的任务时才可操作
+        ///  修改主机密码，主机没有未完成的任务时才可操作
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -553,7 +496,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 修改主机密码，主机没有未完成的任务时才可操作
+        ///  修改主机密码，主机没有未完成的任务时才可操作
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -563,7 +506,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改主机信息
+        ///  修改主机信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -572,7 +515,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 修改主机信息
+        ///  修改主机信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -582,26 +525,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除实例模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteInstanceTemplateResponse DeleteInstanceTemplate(DeleteInstanceTemplateRequest request) {
-            return  new DeleteInstanceTemplateExecutor().Client(this).Execute<DeleteInstanceTemplateResponse, DeleteInstanceTemplateResult, DeleteInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 删除实例模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteInstanceTemplateResponse> DeleteInstanceTemplate(DeleteInstanceTemplateRequest request) {
-            return await new DeleteInstanceTemplateExecutor().Client(this).Execute<DeleteInstanceTemplateResponse, DeleteInstanceTemplateResult, DeleteInstanceTemplateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 云主机解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+        ///  云主机解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -610,7 +534,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 云主机解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+        ///  云主机解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -620,26 +544,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改一个实例模板的信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateInstanceTemplateResponse UpdateInstanceTemplate(UpdateInstanceTemplateRequest request) {
-            return  new UpdateInstanceTemplateExecutor().Client(this).Execute<UpdateInstanceTemplateResponse, UpdateInstanceTemplateResult, UpdateInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改一个实例模板的信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateInstanceTemplateResponse> UpdateInstanceTemplate(UpdateInstanceTemplateRequest request) {
-            return await new UpdateInstanceTemplateExecutor().Client(this).Execute<UpdateInstanceTemplateResponse, UpdateInstanceTemplateResult, UpdateInstanceTemplateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询镜像限制
+        ///  查询镜像限制
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -648,7 +553,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询镜像限制
+        ///  查询镜像限制
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -658,45 +563,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改（虚机、镜像、密钥、模板）配额，内部接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改（虚机、镜像、密钥、模板）配额，内部接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询主机模板信息是否可用,信息是否准确
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public VerifyInstanceTemplateResponse VerifyInstanceTemplate(VerifyInstanceTemplateRequest request) {
-            return  new VerifyInstanceTemplateExecutor().Client(this).Execute<VerifyInstanceTemplateResponse, VerifyInstanceTemplateResult, VerifyInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询主机模板信息是否可用,信息是否准确
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<VerifyInstanceTemplateResponse> VerifyInstanceTemplate(VerifyInstanceTemplateRequest request) {
-            return await new VerifyInstanceTemplateExecutor().Client(this).Execute<VerifyInstanceTemplateResponse, VerifyInstanceTemplateResult, VerifyInstanceTemplateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+        ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -705,7 +572,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+        ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -715,11 +582,11 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// &quot;删除单个实例&quot;
-        ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
-        ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
-        ///
+        ///  &quot;删除单个实例&quot;
+        /// &quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
+        /// &quot;包年包月未到期的主机不能删除&quot;
+        /// &quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -728,11 +595,11 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// &quot;删除单个实例&quot;
-        ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
-        ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
-        ///
+        ///  &quot;删除单个实例&quot;
+        /// &quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
+        /// &quot;包年包月未到期的主机不能删除&quot;
+        /// &quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -742,7 +609,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 云主机绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+        ///  云主机绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -751,7 +618,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 云主机绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+        ///  云主机绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -761,7 +628,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+        ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -770,7 +637,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+        ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -780,7 +647,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询实例类型资源信息列表
+        ///  查询实例类型资源信息列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -789,7 +656,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        /// 查询实例类型资源信息列表
+        ///  查询实例类型资源信息列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -837,7 +704,7 @@ namespace JDCloudSDK.Vm.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// VmClient service client
+                ///  VmClient service client
                 /// </summary>
                 private  VmClient vmClient;
 

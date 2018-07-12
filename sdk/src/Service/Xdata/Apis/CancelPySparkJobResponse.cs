@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 终止PySpark任务
+    ///  终止PySpark任务
     /// </summary>
     public class CancelPySparkJobResponse : JdcloudResponse<CancelPySparkJobResult>
     {

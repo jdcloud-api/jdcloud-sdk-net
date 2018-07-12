@@ -132,17 +132,7 @@ namespace JDCloudSDK.Test.Standard2
 
         }
 
-        [Fact]
-        public void TestModifyInstanceClass()
-        {
-            var redisClient = GetRedisClient();
-            ModifyInstanceClassRequest request = new ModifyInstanceClassRequest();
-            request.RegionId = "cn-north-1";
-            request.ActionType = 1;
-            request.InstanceClass = "redis.m1.small.basic";
-            var result = redisClient.ModifyInstanceClass(request).Result;
-            _output.WriteLine(JsonConvert.SerializeObject(result));
-        }
+      
 
         [Fact]
         public void TestDescribeUserQuota()
@@ -154,17 +144,7 @@ namespace JDCloudSDK.Test.Standard2
             _output.WriteLine(JsonConvert.SerializeObject(result));
         }
 
-        [Fact]
-        public void TestModifyUserQuota()
-        {
-            var redisClient = GetRedisClient();
-            ModifyUserQuotaRequest request = new ModifyUserQuotaRequest();
-            request.RegionId = "cn-north-1";
-            request.Quota = 6;
-            request.Used = 1;
-            var result = redisClient.ModifyUserQuota(request).Result;
-            _output.WriteLine(JsonConvert.SerializeObject(result));
-        }
+       
 
         public RedisClient GetRedisClient()
         {

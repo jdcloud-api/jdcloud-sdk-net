@@ -33,20 +33,20 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// &quot;共享镜像，最多可共享给20个帐户&quot;
-        ///&quot;打包镜像暂不支持共享&quot;
-        ///&quot;不能操作非私有镜像&quot;
-        ///&quot;不能共享给自己&quot;
-        ///
+    ///  &quot;共享镜像，最多可共享给20个帐户&quot;
+        /// &quot;打包镜像暂不支持共享&quot;
+        /// &quot;不能操作非私有镜像&quot;
+        /// &quot;不能共享给自己&quot;
+        /// 
     /// </summary>
     public class ShareImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// &quot;共享镜像，最多可共享给20个帐户&quot;
-        ///&quot;打包镜像暂不支持共享&quot;
-        ///&quot;不能操作非私有镜像&quot;
-        ///&quot;不能共享给自己&quot;
-        ///接口的Http 请求方法
+        ///  &quot;共享镜像，最多可共享给20个帐户&quot;
+        /// &quot;打包镜像暂不支持共享&quot;
+        /// &quot;不能操作非私有镜像&quot;
+        /// &quot;不能共享给自己&quot;
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -55,11 +55,11 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// &quot;共享镜像，最多可共享给20个帐户&quot;
-        ///&quot;打包镜像暂不支持共享&quot;
-        ///&quot;不能操作非私有镜像&quot;
-        ///&quot;不能共享给自己&quot;
-        ///接口的Http资源请求路径
+        ///  &quot;共享镜像，最多可共享给20个帐户&quot;
+        /// &quot;打包镜像暂不支持共享&quot;
+        /// &quot;不能操作非私有镜像&quot;
+        /// &quot;不能共享给自己&quot;
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

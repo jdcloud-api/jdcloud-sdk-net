@@ -36,22 +36,22 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 创建实例
+    ///  创建实例
     /// </summary>
     public class CreateInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例规格
+        /// 实例规格
         ///Required:true
         ///</summary>
         [Required]
         public   DBInstanceSpec InstanceSpec{ get; set; }
         ///<summary>
-        ///付费方式
+        /// 付费方式
         ///</summary>
         public   ChargeSpec ChargeSpec{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

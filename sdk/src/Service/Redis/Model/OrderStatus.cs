@@ -32,29 +32,29 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    /// 订单状态
+    ///  订单状态
     /// </summary>
     public class OrderStatus
     {
 
         ///<summary>
-        ///订单总数
+        /// 订单总数
         ///</summary>
         public int? Total{ get; set; }
         ///<summary>
-        ///成功数
+        /// 成功数
         ///</summary>
         public int? Success{ get; set; }
         ///<summary>
-        ///失败数
+        /// 失败数
         ///</summary>
         public int? Fail{ get; set; }
         ///<summary>
-        ///正在处理数
+        /// 正在处理数
         ///</summary>
         public int? InProcess{ get; set; }
         ///<summary>
-        ///成功的资源Id
+        /// 成功的资源Id
         ///</summary>
         public List<string> ResourceIds{ get; set; }
     }

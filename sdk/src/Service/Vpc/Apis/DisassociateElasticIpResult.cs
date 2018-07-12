@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡解绑弹性Ip接口
+    ///  给网卡解绑弹性Ip接口
     /// </summary>
     public class DisassociateElasticIpResult : JdcloudResult
     {

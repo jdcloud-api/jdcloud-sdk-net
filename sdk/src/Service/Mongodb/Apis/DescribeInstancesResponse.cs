@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 查询实例信息
+    ///  查询实例信息
     /// </summary>
     public class DescribeInstancesResponse : JdcloudResponse<DescribeInstancesResult>
     {

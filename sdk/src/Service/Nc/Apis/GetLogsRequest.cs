@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询容器日志
+    ///  查询容器日志
     /// </summary>
     public class GetLogsRequest : JdcloudRequest
     {
         ///<summary>
-        ///TailLines
+        /// TailLines
         ///</summary>
         public   int? TailLines{ get; set; }
         ///<summary>
-        ///SinceSeconds
+        /// SinceSeconds
         ///</summary>
         public   int? SinceSeconds{ get; set; }
         ///<summary>
-        ///LimitBytes
+        /// LimitBytes
         ///</summary>
         public   int? LimitBytes{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Container ID
+        /// Container ID
         ///Required:true
         ///</summary>
         [Required]

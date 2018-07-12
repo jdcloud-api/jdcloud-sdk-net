@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询AccessKey列表
+    ///  查询AccessKey列表
     /// </summary>
     public class DescribeUserAccessKeysRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

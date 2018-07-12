@@ -32,21 +32,21 @@ namespace JDCloudSDK.Baseanti.Model
 {
 
     /// <summary>
-    /// ipResource
+    ///  ipResource
     /// </summary>
     public class IpResource
     {
 
         ///<summary>
-        ///公网IP
+        /// 公网IP
         ///</summary>
         public string Ip{ get; set; }
         ///<summary>
-        ///带宽上限，单位Mbps
+        /// 带宽上限，单位Mbps
         ///</summary>
         public int? Bandwidth{ get; set; }
         ///<summary>
-        ///0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+        /// 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
         ///</summary>
         public int? SafeStatus{ get; set; }
     }

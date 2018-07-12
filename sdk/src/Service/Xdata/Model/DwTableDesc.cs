@@ -32,57 +32,57 @@ namespace JDCloudSDK.Xdata.Model
 {
 
     /// <summary>
-    /// dwTableDesc
+    ///  dwTableDesc
     /// </summary>
     public class DwTableDesc
     {
 
         ///<summary>
-        ///数据库名
+        /// 数据库名
         ///</summary>
         public string DbName{ get; set; }
         ///<summary>
-        ///表名
+        /// 表名
         ///</summary>
         public string TableName{ get; set; }
         ///<summary>
-        ///存储格式
+        /// 存储格式
         ///</summary>
         public string HiveFileFormat{ get; set; }
         ///<summary>
-        ///字段分隔符
+        /// 字段分隔符
         ///</summary>
         public string FieldsDelimit{ get; set; }
         ///<summary>
-        ///行分隔符
+        /// 行分隔符
         ///</summary>
         public string LinesDelimit{ get; set; }
         ///<summary>
-        ///其他serde属性
+        /// 其他serde属性
         ///</summary>
         public Object OtherSerdeProperties{ get; set; }
         ///<summary>
-        ///创建时间（自动生成）
+        /// 创建时间（自动生成）
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///所有者（自动生成）
+        /// 所有者（自动生成）
         ///</summary>
         public string Owner{ get; set; }
         ///<summary>
-        ///描述信息
+        /// 描述信息
         ///</summary>
         public string Comments{ get; set; }
         ///<summary>
-        ///外表位置
+        /// 外表位置
         ///</summary>
         public string ExternalLocation{ get; set; }
         ///<summary>
-        ///参数
+        /// 参数
         ///</summary>
         public Object Parameters{ get; set; }
         ///<summary>
-        ///列信息
+        /// 列信息
         ///</summary>
         public List<DwTableRow> Rows{ get; set; }
     }

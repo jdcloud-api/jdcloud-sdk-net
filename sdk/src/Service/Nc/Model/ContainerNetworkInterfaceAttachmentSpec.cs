@@ -33,21 +33,21 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 在创建容器时指定的网卡信息
+    ///  在创建容器时指定的网卡信息
     /// </summary>
     public class ContainerNetworkInterfaceAttachmentSpec
     {
 
         ///<summary>
-        ///指明删除容器时是否删除网卡，默认True；当前只能是True
+        /// 指明删除容器时是否删除网卡，默认True；当前只能是True
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        ///设备Index
+        /// 设备Index
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        ///网卡接口规范
+        /// 网卡接口规范
         ///Required:true
         ///</summary>
         [Required]

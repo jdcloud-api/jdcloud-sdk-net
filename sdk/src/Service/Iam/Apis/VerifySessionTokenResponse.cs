@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 验证SessionToken有效性
+    ///  验证SessionToken有效性
     /// </summary>
     public class VerifySessionTokenResponse : JdcloudResponse<VerifySessionTokenResult>
     {

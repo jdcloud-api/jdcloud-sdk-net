@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Monitor.Client
 {
     /// <summary>
-    /// 云监控
-    /// 云监控相关接口
-    /// Monitor Api 客户端
+    ///  云监控
+    ///  云监控相关接口
+    ///  Monitor Api 客户端
     ///</summary>
     public class MonitorClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Monitor.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 批量删除规则
+        ///  批量删除规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 批量删除规则
+        ///  批量删除规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查看某资源的监控数据
+        ///  查看某资源的监控数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 查看某资源的监控数据
+        ///  查看某资源的监控数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,26 +176,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查看某资源的最后一个点
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public LastDownsampleResponse LastDownsample(LastDownsampleRequest request) {
-            return  new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查看某资源的最后一个点
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
-            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 修改已创建的报警规则
+        ///  修改已创建的报警规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +185,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 修改已创建的报警规则
+        ///  修改已创建的报警规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +195,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询报警历史
+        ///  查询报警历史
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +204,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 查询报警历史
+        ///  查询报警历史
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +214,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 根据产品线查询可用监控项列表
+        ///  根据产品线查询可用监控项列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +223,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 根据产品线查询可用监控项列表
+        ///  根据产品线查询可用监控项列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +233,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +242,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +252,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +261,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +271,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询监控规则
+        ///  查询监控规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +280,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 查询监控规则
+        ///  查询监控规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +290,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询规则详情
+        ///  查询规则详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +299,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 查询规则详情
+        ///  查询规则详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +309,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询可用创建监控规则的指标列表
+        ///  查询可用创建监控规则的指标列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +318,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 查询可用创建监控规则的指标列表
+        ///  查询可用创建监控规则的指标列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +328,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +337,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        /// 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +385,7 @@ namespace JDCloudSDK.Monitor.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// MonitorClient service client
+                ///  MonitorClient service client
                 /// </summary>
                 private  MonitorClient monitorClient;
 

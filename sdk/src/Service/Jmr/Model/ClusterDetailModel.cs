@@ -32,77 +32,77 @@ namespace JDCloudSDK.Jmr.Model
 {
 
     /// <summary>
-    /// clusterDetailModel
+    ///  clusterDetailModel
     /// </summary>
     public class ClusterDetailModel
     {
 
         ///<summary>
-        ///集群ID
+        /// 集群ID
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        ///集群名称，长度为6到32个字符，支持中文、数字、大小写字母、英文下划线“_”及中划线“-”
+        /// 集群名称，长度为6到32个字符，支持中文、数字、大小写字母、英文下划线“_”及中划线“-”
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///集群主键ID
+        /// 集群主键ID
         ///</summary>
         public long? ClusterPrimaryId{ get; set; }
         ///<summary>
-        ///集群状态
+        /// 集群状态
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///节点数量
+        /// 节点数量
         ///</summary>
         public int? NodeCount{ get; set; }
         ///<summary>
-        ///付费类型
+        /// 付费类型
         ///</summary>
         public string PayType{ get; set; }
         ///<summary>
-        ///付费价格
+        /// 付费价格
         ///</summary>
         public string PayPrice{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///运营时长
+        /// 运营时长
         ///</summary>
         public string Duration{ get; set; }
         ///<summary>
-        ///Hardware
+        /// Hardware
         ///</summary>
         public List<HardwareInfo> Hardware{ get; set; }
         ///<summary>
-        ///软件信息
+        /// 软件信息
         ///</summary>
         public Object SoftwareStack{ get; set; }
         ///<summary>
-        ///地域，同regionID
+        /// 地域，同regionID
         ///</summary>
         public string DataCenter{ get; set; }
         ///<summary>
-        ///是否关联对象存储
+        /// 是否关联对象存储
         ///</summary>
         public bool JssFlag{ get; set; }
         ///<summary>
-        ///是否为高可用模式
+        /// 是否为高可用模式
         ///</summary>
         public bool HaFlag{ get; set; }
         ///<summary>
-        ///私有网络名称
+        /// 私有网络名称
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
-        ///子网名称
+        /// 子网名称
         ///</summary>
         public string VpcSubnetName{ get; set; }
         ///<summary>
-        ///网络带宽
+        /// 网络带宽
         ///</summary>
         public int? BandwidthOut{ get; set; }
     }

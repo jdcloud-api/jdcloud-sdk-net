@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 非网站类规则切换成回源状态
+    ///  非网站类规则切换成回源状态
     /// </summary>
     public class SwitchForwardRuleOriginResponse : JdcloudResponse<SwitchForwardRuleOriginResult>
     {

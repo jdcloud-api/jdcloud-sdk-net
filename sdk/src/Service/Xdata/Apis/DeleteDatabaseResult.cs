@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 删除数据库
+    ///  删除数据库
     /// </summary>
     public class DeleteDatabaseResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
     }

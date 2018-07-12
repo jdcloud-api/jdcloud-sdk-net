@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 关闭实例CC防护的观察者模式
+    ///  关闭实例CC防护的观察者模式
     /// </summary>
     public class DisableCcObserverModeResponse : JdcloudResponse<DisableCcObserverModeResult>
     {

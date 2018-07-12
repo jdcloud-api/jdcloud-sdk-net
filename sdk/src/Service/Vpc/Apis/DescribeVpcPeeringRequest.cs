@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询VpcPeering资源详情
+    ///  查询VpcPeering资源详情
     /// </summary>
     public class DescribeVpcPeeringRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///vpcPeeringId ID
+        /// vpcPeeringId ID
         ///Required:true
         ///</summary>
         [Required]

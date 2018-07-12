@@ -35,24 +35,24 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 设置实例CC防护
+    ///  设置实例CC防护
     /// </summary>
     public class ModifyInstanceCCRequest : JdcloudRequest
     {
         ///<summary>
-        ///cc参数
+        /// cc参数
         ///Required:true
         ///</summary>
         [Required]
         public   CCSpec CCSpec{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

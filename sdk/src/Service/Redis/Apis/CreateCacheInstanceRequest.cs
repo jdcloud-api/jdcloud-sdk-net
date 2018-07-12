@@ -36,22 +36,22 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 创建一个指定配置的缓存Redis实例
+    ///  创建一个指定配置的缓存Redis实例
     /// </summary>
     public class CreateCacheInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        ///CacheInstance
+        /// CacheInstance
         ///Required:true
         ///</summary>
         [Required]
         public   CacheInstanceSpec CacheInstance{ get; set; }
         ///<summary>
-        ///Charge
+        /// Charge
         ///</summary>
         public   ChargeSpec Charge{ get; set; }
         ///<summary>
-        ///缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+        /// 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
         ///Required:true
         ///</summary>
         [Required]

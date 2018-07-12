@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    /// 删除单个缓存Redis实例
+    ///  删除单个缓存Redis实例
     /// </summary>
     public class DeleteCacheInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除单个缓存Redis实例接口的Http 请求方法
+        ///  删除单个缓存Redis实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        /// 删除单个缓存Redis实例接口的Http资源请求路径
+        ///  删除单个缓存Redis实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

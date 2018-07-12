@@ -34,38 +34,38 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 执行PySpark脚本
+    ///  执行PySpark脚本
     /// </summary>
     public class ExecutePySparkQueryRequest : JdcloudRequest
     {
         ///<summary>
-        ///PySpark脚本
+        /// PySpark脚本
         ///Required:true
         ///</summary>
         [Required]
         public   string Script{ get; set; }
         ///<summary>
-        ///用户名称
+        /// 用户名称
         ///Required:true
         ///</summary>
         [Required]
         public   string UserName{ get; set; }
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        ///实例拥有者名称
+        /// 实例拥有者名称
         ///</summary>
         public   string InstanceOwnerName{ get; set; }
         ///<summary>
-        ///脚本类型名称
+        /// 脚本类型名称
         ///</summary>
         public   string ScriptType{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

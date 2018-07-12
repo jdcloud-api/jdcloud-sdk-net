@@ -32,17 +32,17 @@ namespace JDCloudSDK.Rds.Model
 {
 
     /// <summary>
-    /// file
+    ///  file
     /// </summary>
     public class File
     {
 
         ///<summary>
-        ///文件名
+        /// 文件名
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///文件大小，单位Byte
+        /// 文件大小，单位Byte
         ///</summary>
         public int? SizeByte{ get; set; }
     }

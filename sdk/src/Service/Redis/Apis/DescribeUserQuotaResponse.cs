@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 查询账户配额信息
+    ///  查询账户配额信息
     /// </summary>
     public class DescribeUserQuotaResponse : JdcloudResponse<DescribeUserQuotaResult>
     {

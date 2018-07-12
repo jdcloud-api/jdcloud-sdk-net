@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘信息详情
+    ///  查询云硬盘信息详情
     /// </summary>
     public class DescribeDiskRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///Required:true
         ///</summary>
         [Required]

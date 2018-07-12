@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 创建备份
+    ///  创建备份
     /// </summary>
     public class CreateBackupResult : JdcloudResult
     {
         ///<summary>
-        ///BackupId
+        /// BackupId
         ///</summary>
         public   string BackupId{ get; set; }
     }

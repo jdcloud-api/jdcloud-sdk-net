@@ -32,17 +32,17 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// tag
+    ///  tag
     /// </summary>
     public class Tag
     {
 
         ///<summary>
-        ///Tag键
+        /// Tag键
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        ///Tag值
+        /// Tag值
         ///</summary>
         public string Value{ get; set; }
     }

@@ -35,24 +35,24 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 修改策略
+    ///  修改策略
     /// </summary>
     public class UpdatePermissionRequest : JdcloudRequest
     {
         ///<summary>
-        ///权限信息
+        /// 权限信息
         ///Required:true
         ///</summary>
         [Required]
         public   UpdatePermissionInfo UpdatePermissionInfo{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///权限id
+        /// 权限id
         ///Required:true
         ///</summary>
         [Required]

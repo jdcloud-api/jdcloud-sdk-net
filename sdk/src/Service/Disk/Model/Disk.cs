@@ -33,57 +33,57 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// 云硬盘信息详情
+    ///  云硬盘信息详情
     /// </summary>
     public class Disk
     {
 
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
-        ///云硬盘所属AZ
+        /// 云硬盘所属AZ
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///云硬盘名称
+        /// 云硬盘名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///云硬盘描述
+        /// 云硬盘描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///磁盘类型，取值为 ssd 或 premium-hdd
+        /// 磁盘类型，取值为 ssd 或 premium-hdd
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        ///磁盘大小，单位为 GiB
+        /// 磁盘大小，单位为 GiB
         ///</summary>
         public int? DiskSizeGB{ get; set; }
         ///<summary>
-        ///云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+        /// 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///挂载信息
+        /// 挂载信息
         ///</summary>
         public List<DiskAttachment> Attachments{ get; set; }
         ///<summary>
-        ///创建该云硬盘的快照ID
+        /// 创建该云硬盘的快照ID
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        ///创建云硬盘时间
+        /// 创建云硬盘时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///云硬盘计费配置信息
+        /// 云硬盘计费配置信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        ///Tag信息
+        /// Tag信息
         ///</summary>
         public List<Tag> Tags{ get; set; }
     }

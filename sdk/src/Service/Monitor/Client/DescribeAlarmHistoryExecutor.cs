@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 查询报警历史
+    ///  查询报警历史
     /// </summary>
     public class DescribeAlarmHistoryExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询报警历史接口的Http 请求方法
+        ///  查询报警历史接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 查询报警历史接口的Http资源请求路径
+        ///  查询报警历史接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

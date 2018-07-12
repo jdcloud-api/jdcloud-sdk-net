@@ -33,45 +33,45 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 创建网卡请求模板
+    ///  创建网卡请求模板
     /// </summary>
     public class NetworkInterfaceSpec
     {
 
         ///<summary>
-        ///子网ID
+        /// 子网ID
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        ///可用区，用户的默认可用区
+        /// 可用区，用户的默认可用区
         ///Required:true
         ///</summary>
         [Required]
         public string Az{ get; set; }
         ///<summary>
-        ///网卡主IP
+        /// 网卡主IP
         ///</summary>
         public string PrimaryIpAddress{ get; set; }
         ///<summary>
-        ///SecondaryIp列表
+        /// SecondaryIp列表
         ///</summary>
         public List<string> SecondaryIpAddresses{ get; set; }
         ///<summary>
-        ///自动分配的SecondaryIp数量
+        /// 自动分配的SecondaryIp数量
         ///</summary>
         public int? SecondaryIpCount{ get; set; }
         ///<summary>
-        ///安全组ID列表
+        /// 安全组ID列表
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
         ///<summary>
-        ///PortSecurity，取值为0或者1，默认为1
+        /// PortSecurity，取值为0或者1，默认为1
         ///</summary>
         public bool SanityCheck{ get; set; }
         ///<summary>
-        ///描述
+        /// 描述
         ///</summary>
         public string Description{ get; set; }
     }

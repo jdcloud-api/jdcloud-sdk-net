@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询子网列表
+    ///  查询子网列表
     /// </summary>
     public class DescribeSubnetsResult : JdcloudResult
     {
         ///<summary>
-        ///Subnets
+        /// Subnets
         ///</summary>
         public List<Subnet> Subnets{ get; set; }
 
         ///<summary>
-        ///总数量
+        /// 总数量
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

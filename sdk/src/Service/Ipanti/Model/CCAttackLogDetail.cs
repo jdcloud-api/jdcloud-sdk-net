@@ -32,17 +32,17 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// cCAttackLogDetail
+    ///  cCAttackLogDetail
     /// </summary>
     public class CCAttackLogDetail
     {
 
         ///<summary>
-        ///特征key
+        /// 特征key
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        ///攻击次数
+        /// 攻击次数
         ///</summary>
         public int? Num{ get; set; }
     }

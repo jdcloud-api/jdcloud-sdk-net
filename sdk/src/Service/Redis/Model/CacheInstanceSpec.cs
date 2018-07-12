@@ -33,49 +33,49 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    /// cacheInstanceSpec
+    ///  cacheInstanceSpec
     /// </summary>
     public class CacheInstanceSpec
     {
 
         ///<summary>
-        ///所属VPC的ID
+        /// 所属VPC的ID
         ///Required:true
         ///</summary>
         [Required]
         public string VpcId{ get; set; }
         ///<summary>
-        ///所属子网的ID
+        /// 所属子网的ID
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        ///实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
+        /// 实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
         ///Required:true
         ///</summary>
         [Required]
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        ///实例规格代码，参见实例规格代码表。
+        /// 实例规格代码，参见实例规格代码表。
         ///Required:true
         ///</summary>
         [Required]
         public string CacheInstanceClass{ get; set; }
         ///<summary>
-        ///密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
+        /// 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
         ///Required:true
         ///</summary>
         [Required]
         public string Password{ get; set; }
         ///<summary>
-        ///缓存Redis实例所在区域可用区ID信息
+        /// 缓存Redis实例所在区域可用区ID信息
         ///Required:true
         ///</summary>
         [Required]
         public AzIdSpec AzId{ get; set; }
         ///<summary>
-        ///缓存Redis实例描述
+        /// 缓存Redis实例描述
         ///</summary>
         public string CacheInstanceDescription{ get; set; }
     }

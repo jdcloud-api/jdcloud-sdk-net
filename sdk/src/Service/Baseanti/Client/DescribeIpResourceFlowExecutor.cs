@@ -33,12 +33,12 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    /// 查询公网Ip的监控流量
+    ///  查询公网Ip的监控流量
     /// </summary>
     public class DescribeIpResourceFlowExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询公网Ip的监控流量接口的Http 请求方法
+        ///  查询公网Ip的监控流量接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        /// 查询公网Ip的监控流量接口的Http资源请求路径
+        ///  查询公网Ip的监控流量接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

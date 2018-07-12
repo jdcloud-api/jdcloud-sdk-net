@@ -32,17 +32,17 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// dataPoint
+    ///  dataPoint
     /// </summary>
     public class DataPoint
     {
 
         ///<summary>
-        ///时间戳
+        /// 时间戳
         ///</summary>
         public long? Timestamp{ get; set; }
         ///<summary>
-        ///值
+        /// 值
         ///</summary>
         public string Value{ get; set; }
     }

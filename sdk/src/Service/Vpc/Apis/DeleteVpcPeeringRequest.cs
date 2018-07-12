@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 删除VpcPeering接口
+    ///  删除VpcPeering接口
     /// </summary>
     public class DeleteVpcPeeringRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///vpcPeeringId ID
+        /// vpcPeeringId ID
         ///Required:true
         ///</summary>
         [Required]

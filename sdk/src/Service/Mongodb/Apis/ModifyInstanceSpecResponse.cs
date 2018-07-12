@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 变更实例规格
+    ///  变更实例规格
     /// </summary>
     public class ModifyInstanceSpecResponse : JdcloudResponse<ModifyInstanceSpecResult>
     {

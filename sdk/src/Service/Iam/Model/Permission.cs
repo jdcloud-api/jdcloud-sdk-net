@@ -32,41 +32,41 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// permission
+    ///  permission
     /// </summary>
     public class Permission
     {
 
         ///<summary>
-        ///权限id
+        /// 权限id
         ///</summary>
         public int? Id{ get; set; }
         ///<summary>
-        ///主账号pin
+        /// 主账号pin
         ///</summary>
         public string Account{ get; set; }
         ///<summary>
-        ///权限名称
+        /// 权限名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///描述
+        /// 描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///权限类型
+        /// 权限类型
         ///</summary>
         public string PermissionType{ get; set; }
         ///<summary>
-        ///权限版本号
+        /// 权限版本号
         ///</summary>
         public string Version{ get; set; }
         ///<summary>
-        ///权限内容
+        /// 权限内容
         ///</summary>
         public string Content{ get; set; }
         ///<summary>
-        ///权限详细信息
+        /// 权限详细信息
         ///</summary>
         public List<PermissionDetail> PermissionDetailList{ get; set; }
     }

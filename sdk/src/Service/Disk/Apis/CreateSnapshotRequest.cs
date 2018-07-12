@@ -35,24 +35,24 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 为指定云硬盘创建快照,新生成的快照的状态为creating
+    ///  为指定云硬盘创建快照,新生成的快照的状态为creating
     /// </summary>
     public class CreateSnapshotRequest : JdcloudRequest
     {
         ///<summary>
-        ///创建快照规格
+        /// 创建快照规格
         ///Required:true
         ///</summary>
         [Required]
         public   SnapshotSpec SnapshotSpec{ get; set; }
         ///<summary>
-        ///幂等性校验参数
+        /// 幂等性校验参数
         ///Required:true
         ///</summary>
         [Required]
         public   string ClientToken{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

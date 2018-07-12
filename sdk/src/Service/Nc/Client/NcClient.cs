@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Nc.Client
 {
     /// <summary>
-    /// 容器服务
-    /// 容器服务相关接口
-    /// Nc Api 客户端
+    ///  容器服务
+    ///  容器服务相关接口
+    ///  Nc Api 客户端
     ///</summary>
     public class NcClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Nc.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 查询容器列表
+        ///  查询容器列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 查询容器列表
+        ///  查询容器列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建一台或多台指定配置的实例
+        ///  创建一台或多台指定配置的实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 创建一台或多台指定配置的实例
+        ///  创建一台或多台指定配置的实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询容器日志
+        ///  查询容器日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 查询容器日志
+        ///  查询容器日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询 secret 详情
+        ///  查询 secret 详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 查询 secret 详情
+        ///  查询 secret 详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改容器属性
+        ///  修改容器属性
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 修改容器属性
+        ///  修改容器属性
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除单个实例
+        ///  删除单个实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 删除单个实例
+        ///  删除单个实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 停止单个实例
+        ///  停止单个实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 停止单个实例
+        ///  停止单个实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 启动单个实例
+        ///  启动单个实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 启动单个实例
+        ///  启动单个实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+        ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+        ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询secret列表
+        ///  查询secret列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 查询secret列表
+        ///  查询secret列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询资源的配额
+        ///  查询资源的配额
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 查询资源的配额
+        ///  查询资源的配额
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询容器详情
+        ///  查询容器详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 查询容器详情
+        ///  查询容器详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,26 +366,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改资源的配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改资源的配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 删除 secret
+        ///  删除 secret
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -394,7 +375,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 删除 secret
+        ///  删除 secret
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +385,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建 secret
+        ///  创建 secret
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -413,7 +394,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 创建 secret
+        ///  创建 secret
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -423,7 +404,7 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+        ///  容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +413,7 @@ namespace JDCloudSDK.Nc.Client
         }
 #else
         /// <summary>
-        /// 容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+        ///  容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -480,7 +461,7 @@ namespace JDCloudSDK.Nc.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// NcClient service client
+                ///  NcClient service client
                 /// </summary>
                 private  NcClient ncClient;
 

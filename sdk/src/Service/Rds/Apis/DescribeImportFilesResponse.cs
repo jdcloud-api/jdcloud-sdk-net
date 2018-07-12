@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取单库上云文件列表
+    ///  获取单库上云文件列表
     /// </summary>
     public class DescribeImportFilesResponse : JdcloudResponse<DescribeImportFilesResult>
     {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建备份
+    ///  创建备份
     /// </summary>
     public class CreateBackupResponse : JdcloudResponse<CreateBackupResult>
     {

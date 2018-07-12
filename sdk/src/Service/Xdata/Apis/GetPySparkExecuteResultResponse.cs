@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 获取PySpark执行的结果
+    ///  获取PySpark执行的结果
     /// </summary>
     public class GetPySparkExecuteResultResponse : JdcloudResponse<GetPySparkExecuteResultResult>
     {

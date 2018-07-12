@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 禁用AccessKey
+    ///  禁用AccessKey
     /// </summary>
     public class DisabledUserAccessKeyRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///accessKey
+        /// accessKey
         ///Required:true
         ///</summary>
         [Required]

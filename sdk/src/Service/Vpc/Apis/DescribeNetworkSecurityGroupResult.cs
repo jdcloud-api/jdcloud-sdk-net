@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询安全组信息详情
+    ///  查询安全组信息详情
     /// </summary>
     public class DescribeNetworkSecurityGroupResult : JdcloudResult
     {
         ///<summary>
-        ///安全组资源信息
+        /// 安全组资源信息
         ///</summary>
         public   NetworkSecurityGroup NetworkSecurityGroup{ get; set; }
     }

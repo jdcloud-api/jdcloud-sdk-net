@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// imageInstanceTypeConstraint
+    ///  imageInstanceTypeConstraint
     /// </summary>
     public class ImageInstanceTypeConstraint
     {
 
         ///<summary>
-        ///限制的类型  excludes：排除指定的实例类型  includes：只包含指定的实例类型，暂不支持
+        /// 限制的类型  excludes：排除指定的实例类型  includes：只包含指定的实例类型，暂不支持
         ///</summary>
         public string ConstraintsType{ get; set; }
         ///<summary>
-        ///实例类型列表
+        /// 实例类型列表
         ///</summary>
         public List<string> InstanceTypes{ get; set; }
     }

@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// assignSecondaryIpsSpec
+    ///  assignSecondaryIpsSpec
     /// </summary>
     public class AssignSecondaryIpsSpec
     {
 
         ///<summary>
-        ///secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+        /// secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
         ///</summary>
         public bool Force{ get; set; }
         ///<summary>
-        ///指定分配的secondaryIp地址
+        /// 指定分配的secondaryIp地址
         ///</summary>
         public List<string> SecondaryIps{ get; set; }
         ///<summary>
-        ///指定自动分配的secondaryIp个数
+        /// 指定自动分配的secondaryIp个数
         ///</summary>
         public double? SecondaryIpCount{ get; set; }
     }

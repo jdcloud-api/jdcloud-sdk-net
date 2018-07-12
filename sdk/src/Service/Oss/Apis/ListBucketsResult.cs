@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 列出当前用户的所有bucket
-        ///        ///
+    ///  列出当前用户的所有bucket
+        ///         /// 
     /// </summary>
     public class ListBucketsResult : JdcloudResult
     {
         ///<summary>
-        ///Owner
+        /// Owner
         ///</summary>
         public   User Owner{ get; set; }
         ///<summary>
-        ///Buckets
+        /// Buckets
         ///</summary>
         public List<Bucket> Buckets{ get; set; }
 

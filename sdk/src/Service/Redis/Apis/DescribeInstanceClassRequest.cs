@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 查询某区域下的实例规格列表
+    ///  查询某区域下的实例规格列表
     /// </summary>
     public class DescribeInstanceClassRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 获取查询状态
+    ///  获取查询状态
     /// </summary>
     public class GetRasQueryStateRequest : JdcloudRequest
     {
         ///<summary>
-        ///用户名称
+        /// 用户名称
         ///Required:true
         ///</summary>
         [Required]
         public   string UserName{ get; set; }
         ///<summary>
-        ///查询id名称
+        /// 查询id名称
         ///Required:true
         ///</summary>
         [Required]
         public   string QueryId{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceNetworkInterfaceAttachment
+    ///  instanceNetworkInterfaceAttachment
     /// </summary>
     public class InstanceNetworkInterfaceAttachment
     {
 
         ///<summary>
-        ///设备Index
+        /// 设备Index
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        ///指明删除实例时是否删除网卡，默认true；当前只能是true
+        /// 指明删除实例时是否删除网卡，默认true；当前只能是true
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        ///网卡接口规范
+        /// 网卡接口规范
         ///</summary>
         public InstanceNetworkInterface NetworkInterface{ get; set; }
     }

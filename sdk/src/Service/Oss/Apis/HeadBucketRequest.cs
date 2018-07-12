@@ -34,19 +34,19 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 查询bucket是否存在
-        ///        ///
+    ///  查询bucket是否存在
+        ///         /// 
     /// </summary>
     public class HeadBucketRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID，例如：cn-north-1
+        /// Region ID，例如：cn-north-1
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///bucket名字，例如：test-bucket
+        /// bucket名字，例如：test-bucket
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建数据库账户
+    ///  创建数据库账户
     /// </summary>
     public class CreateAccountResponse : JdcloudResponse<CreateAccountResult>
     {

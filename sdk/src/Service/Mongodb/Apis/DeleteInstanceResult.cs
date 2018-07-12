@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 删除实例
+    ///  删除实例
     /// </summary>
     public class DeleteInstanceResult : JdcloudResult
     {

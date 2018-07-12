@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mps.Apis
 {
 
     /// <summary>
-    /// 查询截图任务
+    ///  查询截图任务
     /// </summary>
     public class ListThumbnailTaskResponse : JdcloudResponse<ListThumbnailTaskResult>
     {

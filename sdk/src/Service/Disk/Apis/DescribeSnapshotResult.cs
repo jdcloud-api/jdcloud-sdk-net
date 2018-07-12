@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘快照信息详情
+    ///  查询云硬盘快照信息详情
     /// </summary>
     public class DescribeSnapshotResult : JdcloudResult
     {
         ///<summary>
-        ///Snapshot
+        /// Snapshot
         ///</summary>
         public   Snapshot Snapshot{ get; set; }
     }

@@ -33,19 +33,19 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 环境变量
+    ///  环境变量
     /// </summary>
     public class EnvVar
     {
 
         ///<summary>
-        ///环境变量名称
+        /// 环境变量名称
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///环境变量的值
+        /// 环境变量的值
         ///</summary>
         public string Value{ get; set; }
     }

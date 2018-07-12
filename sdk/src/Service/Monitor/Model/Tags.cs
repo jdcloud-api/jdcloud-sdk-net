@@ -33,19 +33,19 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// tags
+    ///  tags
     /// </summary>
     public class Tags
     {
 
         ///<summary>
-        ///标签名
+        /// 标签名
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///标签值
+        /// 标签值
         ///Required:true
         ///</summary>
         [Required]

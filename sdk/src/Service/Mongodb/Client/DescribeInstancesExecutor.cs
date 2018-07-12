@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 查询实例信息
+    ///  查询实例信息
     /// </summary>
     public class DescribeInstancesExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询实例信息接口的Http 请求方法
+        ///  查询实例信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 查询实例信息接口的Http资源请求路径
+        ///  查询实例信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

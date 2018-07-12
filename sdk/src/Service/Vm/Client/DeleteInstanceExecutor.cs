@@ -33,20 +33,20 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// &quot;删除单个实例&quot;
-        ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
-        ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
-        ///
+    ///  &quot;删除单个实例&quot;
+        /// &quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
+        /// &quot;包年包月未到期的主机不能删除&quot;
+        /// &quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        /// 
     /// </summary>
     public class DeleteInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// &quot;删除单个实例&quot;
-        ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
-        ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
-        ///接口的Http 请求方法
+        ///  &quot;删除单个实例&quot;
+        /// &quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
+        /// &quot;包年包月未到期的主机不能删除&quot;
+        /// &quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -55,11 +55,11 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// &quot;删除单个实例&quot;
-        ///&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
-        ///&quot;包年包月未到期的主机不能删除&quot;
-        ///&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
-        ///接口的Http资源请求路径
+        ///  &quot;删除单个实例&quot;
+        /// &quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
+        /// &quot;包年包月未到期的主机不能删除&quot;
+        /// &quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

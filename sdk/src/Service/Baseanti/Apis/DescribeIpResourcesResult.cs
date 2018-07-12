@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询区域下的公网Ip资源列表
+    ///  查询区域下的公网Ip资源列表
     /// </summary>
     public class DescribeIpResourcesResult : JdcloudResult
     {
         ///<summary>
-        ///DataList
+        /// DataList
         ///</summary>
         public List<IpResource> DataList{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

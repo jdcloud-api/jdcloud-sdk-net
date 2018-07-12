@@ -33,23 +33,23 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// snapshotSpec
+    ///  snapshotSpec
     /// </summary>
     public class SnapshotSpec
     {
 
         ///<summary>
-        ///快照名称
+        /// 快照名称
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///快照描述
+        /// 快照描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///用于创建快照的云盘ID
+        /// 用于创建快照的云盘ID
         ///Required:true
         ///</summary>
         [Required]

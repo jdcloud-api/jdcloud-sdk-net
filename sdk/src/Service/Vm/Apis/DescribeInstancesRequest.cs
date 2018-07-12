@@ -36,37 +36,37 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询云主机列表
+    ///  查询云主机列表
     /// </summary>
     public class DescribeInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1
+        /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///Tag筛选条件
+        /// Tag筛选条件
         ///</summary>
         public List<TagFilter> Tags{ get; set; }
 
         ///<summary>
-        ///instanceId - 实例ID，精确匹配，支持多个
-        ///privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
-        ///az - 可用区，精确匹配，支持多个
-        ///vpcId - 私有网络ID，精确匹配，支持多个
-        ///status - 云主机状态，精确匹配，支持多个
-        ///name - 实例名称，模糊匹配，支持单个
-        ///imageId - 镜像ID，模糊匹配，支持单个
-        ///
+        /// instanceId - 实例ID，精确匹配，支持多个
+        /// privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
+        /// az - 可用区，精确匹配，支持多个
+        /// vpcId - 私有网络ID，精确匹配，支持多个
+        /// status - 云主机状态，精确匹配，支持多个
+        /// name - 实例名称，模糊匹配，支持单个
+        /// imageId - 镜像ID，模糊匹配，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

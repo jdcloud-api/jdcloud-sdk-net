@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 设置公网Ip的清洗阈值
+    ///  设置公网Ip的清洗阈值
     /// </summary>
     public class SetCleanThresholdResult : JdcloudResult
     {

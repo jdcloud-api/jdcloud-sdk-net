@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘列表
+    ///  查询云硬盘列表
     /// </summary>
     public class DescribeDisksResult : JdcloudResult
     {
         ///<summary>
-        ///Disks
+        /// Disks
         ///</summary>
         public List<JDCloudSDK.Disk.Model.Disk> Disks{ get; set; }
 
         ///<summary>
-        ///查询的云硬盘数目
+        /// 查询的云硬盘数目
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

@@ -33,19 +33,19 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// 视频截图源文件参数
+    ///  视频截图源文件参数
     /// </summary>
     public class ThumbnailTaskSource
     {
 
         ///<summary>
-        ///输入视频信息的 bucket
+        /// 输入视频信息的 bucket
         ///Required:true
         ///</summary>
         [Required]
         public string Bucket{ get; set; }
         ///<summary>
-        ///输入视频信息的 Key
+        /// 输入视频信息的 Key
         ///Required:true
         ///</summary>
         [Required]

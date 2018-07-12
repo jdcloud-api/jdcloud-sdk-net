@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    /// 删除数据库账户
+    ///  删除数据库账户
     /// </summary>
     public class DeleteAccountExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除数据库账户接口的Http 请求方法
+        ///  删除数据库账户接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        /// 删除数据库账户接口的Http资源请求路径
+        ///  删除数据库账户接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

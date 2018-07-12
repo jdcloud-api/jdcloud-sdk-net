@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// quota
+    ///  quota
     /// </summary>
     public class Quota
     {
 
         ///<summary>
-        ///资源类型[instance，keypair，image]
+        /// 资源类型[instance，keypair，image]
         ///</summary>
         public string ResourceType{ get; set; }
         ///<summary>
-        ///配额上限
+        /// 配额上限
         ///</summary>
         public int? Limit{ get; set; }
         ///<summary>
-        ///已用配额
+        /// 已用配额
         ///</summary>
         public int? Used{ get; set; }
     }

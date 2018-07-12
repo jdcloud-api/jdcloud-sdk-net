@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 修改备份策略
+    ///  修改备份策略
     /// </summary>
     public class ModifyBackupPolicyRequest : JdcloudRequest
     {
         ///<summary>
-        ///备份时间，格式：HH:mmZ- HH:mmZ，只允许间隔时间为1小时的整点.
+        /// 备份时间，格式：HH:mmZ- HH:mmZ，只允许间隔时间为1小时的整点.
         ///Required:true
         ///</summary>
         [Required]
         public   string PreferredBackupTime{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

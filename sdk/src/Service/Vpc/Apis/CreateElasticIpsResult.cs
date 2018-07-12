@@ -33,17 +33,17 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 创建一个或者多个弹性Ip
+    ///  创建一个或者多个弹性Ip
     /// </summary>
     public class CreateElasticIpsResult : JdcloudResult
     {
         ///<summary>
-        ///弹性IP ID
+        /// 弹性IP ID
         ///</summary>
         public List<string> ElasticIpIds{ get; set; }
 
         ///<summary>
-        ///请求ID
+        /// 请求ID
         ///</summary>
         public   string RequestId{ get; set; }
     }

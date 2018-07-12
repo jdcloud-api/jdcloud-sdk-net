@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 查询DDos攻击日志
+    ///  查询DDos攻击日志
     /// </summary>
     public class DescribeDDosAttackLogsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询DDos攻击日志接口的Http 请求方法
+        ///  查询DDos攻击日志接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 查询DDos攻击日志接口的Http资源请求路径
+        ///  查询DDos攻击日志接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

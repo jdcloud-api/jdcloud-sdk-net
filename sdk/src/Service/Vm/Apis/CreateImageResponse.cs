@@ -33,11 +33,11 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// &quot;虚机创建私有镜像&quot;
-        ///        ///&quot;虚机状态必须为stopped&quot;
-        ///        ///&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///        ///&quot;主机没有未完成的任务才可制作镜像&quot;
-        ///        ///
+    ///  &quot;虚机创建私有镜像&quot;
+        ///         /// &quot;虚机状态必须为stopped&quot;
+        ///         /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
+        ///         /// &quot;主机没有未完成的任务才可制作镜像&quot;
+        ///         /// 
     /// </summary>
     public class CreateImageResponse : JdcloudResponse<CreateImageResult>
     {

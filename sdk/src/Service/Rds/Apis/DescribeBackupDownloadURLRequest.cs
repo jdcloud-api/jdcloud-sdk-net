@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份下载链接
+    ///  获取备份下载链接
     /// </summary>
     public class DescribeBackupDownloadURLRequest : JdcloudRequest
     {
         ///<summary>
-        ///MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
+        /// MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
         ///</summary>
         public   string FileName{ get; set; }
         ///<summary>
-        ///指定下载链接的有效时间，单位秒,缺省为86400秒（即24小时） 取值范围：1-864000
+        /// 指定下载链接的有效时间，单位秒,缺省为86400秒（即24小时） 取值范围：1-864000
         ///</summary>
         public   string UrlExpirationSecond{ get; set; }
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///备份ID
+        /// 备份ID
         ///Required:true
         ///</summary>
         [Required]

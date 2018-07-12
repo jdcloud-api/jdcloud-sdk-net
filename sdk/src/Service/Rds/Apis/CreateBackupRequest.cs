@@ -35,20 +35,20 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建备份
+    ///  创建备份
     /// </summary>
     public class CreateBackupRequest : JdcloudRequest
     {
         ///<summary>
-        ///集群ID
+        /// 集群ID
         ///</summary>
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///备份规格
+        /// 备份规格
         ///</summary>
         public   BackupSpec BackupSpec{ get; set; }
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]

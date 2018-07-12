@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询规则详情
+    ///  查询规则详情
     /// </summary>
     public class DescribeAlarmsByIDRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///规则id
+        /// 规则id
         ///Required:true
         ///</summary>
         [Required]

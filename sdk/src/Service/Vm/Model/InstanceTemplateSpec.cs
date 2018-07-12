@@ -33,49 +33,49 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplateSpec
+    ///  instanceTemplateSpec
     /// </summary>
     public class InstanceTemplateSpec
     {
 
         ///<summary>
-        ///实例类型
+        /// 实例类型
         ///Required:true
         ///</summary>
         [Required]
         public string InstanceType{ get; set; }
         ///<summary>
-        ///镜像ID
+        /// 镜像ID
         ///Required:true
         ///</summary>
         [Required]
         public string ImageId{ get; set; }
         ///<summary>
-        ///密码
+        /// 密码
         ///</summary>
         public string Password{ get; set; }
         ///<summary>
-        ///密钥对名称
+        /// 密钥对名称
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>
-        ///主网卡主IP关联的弹性IP规格
+        /// 主网卡主IP关联的弹性IP规格
         ///</summary>
         public InstanceTemplateElasticIpSpec ElasticIp{ get; set; }
         ///<summary>
-        ///主网卡配置信息
+        /// 主网卡配置信息
         ///Required:true
         ///</summary>
         [Required]
         public InstanceTemplateNetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        ///系统盘配置信息
+        /// 系统盘配置信息
         ///Required:true
         ///</summary>
         [Required]
         public InstanceTemplateDiskAttachmentSpec SystemDisk{ get; set; }
         ///<summary>
-        ///数据盘配置信息
+        /// 数据盘配置信息
         ///</summary>
         public List<InstanceTemplateDiskAttachmentSpec> DataDisks{ get; set; }
     }

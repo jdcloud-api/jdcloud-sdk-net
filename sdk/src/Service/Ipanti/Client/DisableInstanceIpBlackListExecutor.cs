@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 禁用实例ip黑名单
+    ///  禁用实例ip黑名单
     /// </summary>
     public class DisableInstanceIpBlackListExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 禁用实例ip黑名单接口的Http 请求方法
+        ///  禁用实例ip黑名单接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 禁用实例ip黑名单接口的Http资源请求路径
+        ///  禁用实例ip黑名单接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

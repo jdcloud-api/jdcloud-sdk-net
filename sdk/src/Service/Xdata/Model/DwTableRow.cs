@@ -32,25 +32,25 @@ namespace JDCloudSDK.Xdata.Model
 {
 
     /// <summary>
-    /// dwTableRow
+    ///  dwTableRow
     /// </summary>
     public class DwTableRow
     {
 
         ///<summary>
-        ///字段名称
+        /// 字段名称
         ///</summary>
         public string ColumnName{ get; set; }
         ///<summary>
-        ///字段类型
+        /// 字段类型
         ///</summary>
         public string ColumnType{ get; set; }
         ///<summary>
-        ///是否分区字段
+        /// 是否分区字段
         ///</summary>
         public bool IsPartition{ get; set; }
         ///<summary>
-        ///描述信息
+        /// 描述信息
         ///</summary>
         public string Comments{ get; set; }
     }

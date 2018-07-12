@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询云主机详情
+    ///  查询云主机详情
     /// </summary>
     public class DescribeInstanceResult : JdcloudResult
     {
         ///<summary>
-        ///Instance
+        /// Instance
         ///</summary>
         public   Instance Instance{ get; set; }
     }

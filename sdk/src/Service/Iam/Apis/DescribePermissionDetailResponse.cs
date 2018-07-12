@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询策略详情
+    ///  查询策略详情
     /// </summary>
     public class DescribePermissionDetailResponse : JdcloudResponse<DescribePermissionDetailResult>
     {

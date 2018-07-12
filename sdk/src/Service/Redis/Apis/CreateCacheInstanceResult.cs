@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 创建一个指定配置的缓存Redis实例
+    ///  创建一个指定配置的缓存Redis实例
     /// </summary>
     public class CreateCacheInstanceResult : JdcloudResult
     {
         ///<summary>
-        ///CacheInstanceId
+        /// CacheInstanceId
         ///</summary>
         public   string CacheInstanceId{ get; set; }
         ///<summary>
-        ///OrderNum
+        /// OrderNum
         ///</summary>
         public   string OrderNum{ get; set; }
     }

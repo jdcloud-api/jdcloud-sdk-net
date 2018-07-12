@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Mps.Apis
 {
 
     /// <summary>
-    /// 创建截图任务
+    ///  创建截图任务
     /// </summary>
     public class CreateThumbnailTaskResult : JdcloudResult
     {
         ///<summary>
-        ///TaskID
+        /// TaskID
         ///</summary>
         public   string TaskID{ get; set; }
     }

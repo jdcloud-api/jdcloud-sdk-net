@@ -35,28 +35,28 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询安全组列表
+    ///  查询安全组列表
     /// </summary>
     public class DescribeNetworkSecurityGroupsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+        /// 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///networkSecurityGroupIds - 安全组ID列表，支持多个
-        ///networkSecurityGroupNames - 安全组名称列表，支持多个
-        ///vpcId	- 安全组所属vpc Id，支持单个
-        ///
+        /// networkSecurityGroupIds - 安全组ID列表，支持多个
+        /// networkSecurityGroupNames - 安全组名称列表，支持多个
+        /// vpcId	- 安全组所属vpc Id，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 修改策略
+    ///  修改策略
     /// </summary>
     public class UpdatePermissionResult : JdcloudResult
     {

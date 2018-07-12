@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 创建子账号
+    ///  创建子账号
     /// </summary>
     public class CreateSubuserRequest : JdcloudRequest
     {
         ///<summary>
-        ///子账号信息
+        /// 子账号信息
         ///Required:true
         ///</summary>
         [Required]
         public   CreateSubUserInfo CreateSubUserInfo{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

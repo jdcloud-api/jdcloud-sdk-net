@@ -35,32 +35,32 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询容器列表
+    ///  查询容器列表
     /// </summary>
     public class DescribeContainersRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1
+        /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///containerId - 实例ID，精确匹配，支持多个
-        ///privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
-        ///az - 可用区，精确匹配，支持多个
-        ///vpcId - 私有网络ID，精确匹配，支持多个
-        ///status - 容器状态，精确匹配，支持多个
-        ///name - 实例名称，模糊匹配，支持单个
-        ///subnetId - 镜像ID，模糊匹配，支持单个
-        ///
+        /// containerId - 实例ID，精确匹配，支持多个
+        /// privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
+        /// az - 可用区，精确匹配，支持多个
+        /// vpcId - 私有网络ID，精确匹配，支持多个
+        /// status - 容器状态，精确匹配，支持多个
+        /// name - 实例名称，模糊匹配，支持单个
+        /// subnetId - 镜像ID，模糊匹配，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

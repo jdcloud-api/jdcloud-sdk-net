@@ -33,12 +33,12 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    /// 修改容器属性
+    ///  修改容器属性
     /// </summary>
     public class ModifyContainerAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 修改容器属性接口的Http 请求方法
+        ///  修改容器属性接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        /// 修改容器属性接口的Http资源请求路径
+        ///  修改容器属性接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

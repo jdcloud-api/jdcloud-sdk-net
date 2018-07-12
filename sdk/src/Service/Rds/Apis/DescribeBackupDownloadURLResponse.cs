@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份下载链接
+    ///  获取备份下载链接
     /// </summary>
     public class DescribeBackupDownloadURLResponse : JdcloudResponse<DescribeBackupDownloadURLResult>
     {

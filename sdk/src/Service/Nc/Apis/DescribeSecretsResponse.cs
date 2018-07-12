@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询secret列表
+    ///  查询secret列表
     /// </summary>
     public class DescribeSecretsResponse : JdcloudResponse<DescribeSecretsResult>
     {

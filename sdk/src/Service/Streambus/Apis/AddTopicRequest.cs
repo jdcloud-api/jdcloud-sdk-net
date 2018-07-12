@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    /// 创建topic
+    ///  创建topic
     /// </summary>
     public class AddTopicRequest : JdcloudRequest
     {
         ///<summary>
-        ///TopicModel
+        /// TopicModel
         ///Required:true
         ///</summary>
         [Required]
         public   AddTopic TopicModel{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

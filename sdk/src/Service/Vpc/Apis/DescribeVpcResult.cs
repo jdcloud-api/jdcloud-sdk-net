@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询Vpc信息详情
+    ///  查询Vpc信息详情
     /// </summary>
     public class DescribeVpcResult : JdcloudResult
     {
         ///<summary>
-        ///Vpc资源信息
+        /// Vpc资源信息
         ///</summary>
         public   JDCloudSDK.Vpc.Model.Vpc Vpc{ get; set; }
     }

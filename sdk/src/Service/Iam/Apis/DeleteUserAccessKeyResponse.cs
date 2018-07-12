@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 删除AccessKey
+    ///  删除AccessKey
     /// </summary>
     public class DeleteUserAccessKeyResponse : JdcloudResponse<DeleteUserAccessKeyResult>
     {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 数据恢复
+    ///  数据恢复
     /// </summary>
     public class RestoreInstanceResponse : JdcloudResponse<RestoreInstanceResult>
     {

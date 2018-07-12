@@ -33,19 +33,19 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// tagFilter
+    ///  tagFilter
     /// </summary>
     public class TagFilter
     {
 
         ///<summary>
-        ///Tag键
+        /// Tag键
         ///Required:true
         ///</summary>
         [Required]
         public string Key{ get; set; }
         ///<summary>
-        ///Tag值
+        /// Tag值
         ///Required:true
         ///</summary>
         [Required]

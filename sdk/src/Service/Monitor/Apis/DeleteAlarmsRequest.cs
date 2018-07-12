@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 批量删除规则
+    ///  批量删除规则
     /// </summary>
     public class DeleteAlarmsRequest : JdcloudRequest
     {
         ///<summary>
-        ///待删除的规则id，用&quot;|&quot;间隔
+        /// 待删除的规则id，用&quot;|&quot;间隔
         ///Required:true
         ///</summary>
         [Required]
         public   string Ids{ get; set; }
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]

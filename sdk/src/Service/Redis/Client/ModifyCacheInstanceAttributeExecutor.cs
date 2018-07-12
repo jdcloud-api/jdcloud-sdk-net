@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    /// 修改缓存Redis实例的资源名称、描述，二者至少选一
+    ///  修改缓存Redis实例的资源名称、描述，二者至少选一
     /// </summary>
     public class ModifyCacheInstanceAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 修改缓存Redis实例的资源名称、描述，二者至少选一接口的Http 请求方法
+        ///  修改缓存Redis实例的资源名称、描述，二者至少选一接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        /// 修改缓存Redis实例的资源名称、描述，二者至少选一接口的Http资源请求路径
+        ///  修改缓存Redis实例的资源名称、描述，二者至少选一接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

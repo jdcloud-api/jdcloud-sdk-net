@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 变更缓存Redis实例配置
+    ///  变更缓存Redis实例配置
     /// </summary>
     public class ModifyCacheInstanceClassRequest : JdcloudRequest
     {
         ///<summary>
-        ///变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+        /// 变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
         ///Required:true
         ///</summary>
         [Required]
         public   string CacheInstanceClass{ get; set; }
         ///<summary>
-        ///缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+        /// 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///缓存Redis实例ID
+        /// 缓存Redis实例ID
         ///Required:true
         ///</summary>
         [Required]

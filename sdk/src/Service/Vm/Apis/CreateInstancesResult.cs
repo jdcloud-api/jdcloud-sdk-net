@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
+    ///  创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
     /// </summary>
     public class CreateInstancesResult : JdcloudResult
     {
         ///<summary>
-        ///InstanceIds
+        /// InstanceIds
         ///</summary>
         public List<string> InstanceIds{ get; set; }
 

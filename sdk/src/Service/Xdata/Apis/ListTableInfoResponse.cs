@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 查询指定数据库下所有数据表
+    ///  查询指定数据库下所有数据表
     /// </summary>
     public class ListTableInfoResponse : JdcloudResponse<ListTableInfoResult>
     {

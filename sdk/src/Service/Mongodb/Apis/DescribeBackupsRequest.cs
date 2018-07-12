@@ -35,27 +35,27 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 查看备份
+    ///  查看备份
     /// </summary>
     public class DescribeBackupsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1，取值范围：[1,∞)
+        /// 页码；默认为1，取值范围：[1,∞)
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为10；取值范围[1, 100]
+        /// 分页大小；默认为10；取值范围[1, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///instanceId - 实例ID, 精确匹配
-        ///backupId - 备份ID, 精确匹配
-        ///
+        /// instanceId - 实例ID, 精确匹配
+        /// backupId - 备份ID, 精确匹配
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

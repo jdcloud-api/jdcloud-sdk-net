@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Disk.Client
 {
     /// <summary>
-    /// 云硬盘API
-    /// 云硬盘API包含云硬盘相关接口和快照相关接口。可提供批量创建云硬盘，删除云硬盘，制作云硬盘快照等功能。
-    /// Disk Api 客户端
+    ///  云硬盘API
+    ///  云硬盘API包含云硬盘相关接口和快照相关接口。可提供批量创建云硬盘，删除云硬盘，制作云硬盘快照等功能。
+    ///  Disk Api 客户端
     ///</summary>
     public class DiskClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Disk.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 为指定云硬盘创建快照,新生成的快照的状态为creating
+        ///  为指定云硬盘创建快照,新生成的快照的状态为creating
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 为指定云硬盘创建快照,新生成的快照的状态为creating
+        ///  为指定云硬盘创建快照,新生成的快照的状态为creating
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 从已有快照恢复一块云硬盘
+        ///  从已有快照恢复一块云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 从已有快照恢复一块云硬盘
+        ///  从已有快照恢复一块云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询云硬盘列表
+        ///  查询云硬盘列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 查询云硬盘列表
+        ///  查询云硬盘列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询云硬盘快照列表
+        ///  查询云硬盘快照列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 查询云硬盘快照列表
+        ///  查询云硬盘快照列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询云硬盘信息详情
+        ///  查询云硬盘信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 查询云硬盘信息详情
+        ///  查询云硬盘信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建一块或多块云硬盘
+        ///  创建一块或多块云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 创建一块或多块云硬盘
+        ///  创建一块或多块云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 扩容云硬盘到指定大小
+        ///  扩容云硬盘到指定大小
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 扩容云硬盘到指定大小
+        ///  扩容云硬盘到指定大小
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除单个云硬盘
+        ///  删除单个云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 删除单个云硬盘
+        ///  删除单个云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询云硬盘快照信息详情
+        ///  查询云硬盘快照信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 查询云硬盘快照信息详情
+        ///  查询云硬盘快照信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除单个云硬盘快照:快照状态必须为 available 或 error 状态
+        ///  删除单个云硬盘快照:快照状态必须为 available 或 error 状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 删除单个云硬盘快照:快照状态必须为 available 或 error 状态
+        ///  删除单个云硬盘快照:快照状态必须为 available 或 error 状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改快照的名字或描述信息
+        ///  修改快照的名字或描述信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 修改快照的名字或描述信息
+        ///  修改快照的名字或描述信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改云硬盘的名字或描述信息
+        ///  修改云硬盘的名字或描述信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Disk.Client
         }
 #else
         /// <summary>
-        /// 修改云硬盘的名字或描述信息
+        ///  修改云硬盘的名字或描述信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +404,7 @@ namespace JDCloudSDK.Disk.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// DiskClient service client
+                ///  DiskClient service client
                 /// </summary>
                 private  DiskClient diskClient;
 

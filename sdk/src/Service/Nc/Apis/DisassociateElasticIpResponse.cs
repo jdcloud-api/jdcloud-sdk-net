@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+    ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
     /// </summary>
     public class DisassociateElasticIpResponse : JdcloudResponse<DisassociateElasticIpResult>
     {

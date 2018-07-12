@@ -33,21 +33,21 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// null
+    ///  null
     /// </summary>
     public class ElasticIpSpec
     {
 
         ///<summary>
-        ///弹性公网IP的限速 单位：MB
+        /// 弹性公网IP的限速 单位：MB
         ///</summary>
         public int? BandwidthMbps{ get; set; }
         ///<summary>
-        ///IP服务商，取值为bgp或no_bg
+        /// IP服务商，取值为bgp或no_bg
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>
-        ///计费配置
+        /// 计费配置
         ///</summary>
         public ChargeSpec ChargeSpec{ get; set; }
     }

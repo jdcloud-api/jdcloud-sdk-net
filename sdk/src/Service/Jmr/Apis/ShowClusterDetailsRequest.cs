@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 查询集群详情
+    ///  查询集群详情
     /// </summary>
     public class ShowClusterDetailsRequest : JdcloudRequest
     {
         ///<summary>
-        ///集群ID；由八位字符组成
+        /// 集群ID；由八位字符组成
         ///Required:true
         ///</summary>
         [Required]
         public   string Id{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

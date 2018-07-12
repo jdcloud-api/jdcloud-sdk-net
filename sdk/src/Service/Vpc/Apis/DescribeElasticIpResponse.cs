@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// ElasticIp资源信息详情
+    ///  ElasticIp资源信息详情
     /// </summary>
     public class DescribeElasticIpResponse : JdcloudResponse<DescribeElasticIpResult>
     {

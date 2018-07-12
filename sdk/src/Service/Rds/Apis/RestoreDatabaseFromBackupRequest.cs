@@ -34,36 +34,36 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 从云数据库SQL Server备份中恢复单个数据库
+    ///  从云数据库SQL Server备份中恢复单个数据库
     /// </summary>
     public class RestoreDatabaseFromBackupRequest : JdcloudRequest
     {
         ///<summary>
-        ///备份ID
+        /// 备份ID
         ///Required:true
         ///</summary>
         [Required]
         public   string BackupId{ get; set; }
         ///<summary>
-        ///指定该备份中用于恢复数据库的文件名称
+        /// 指定该备份中用于恢复数据库的文件名称
         ///Required:true
         ///</summary>
         [Required]
         public   string BackupFileName{ get; set; }
         ///<summary>
-        ///区域代码
+        /// 区域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///库名称
+        /// 库名称
         ///Required:true
         ///</summary>
         [Required]

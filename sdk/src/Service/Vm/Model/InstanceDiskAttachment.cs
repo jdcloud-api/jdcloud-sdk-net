@@ -33,29 +33,29 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceDiskAttachment
+    ///  instanceDiskAttachment
     /// </summary>
     public class InstanceDiskAttachment
     {
 
         ///<summary>
-        ///磁盘分类，取值范围{local, cloud}
+        /// 磁盘分类，取值范围{local, cloud}
         ///</summary>
         public string DiskCategory{ get; set; }
         ///<summary>
-        ///自动删除，删除主机时自动删除此磁盘，默认为true
+        /// 自动删除，删除主机时自动删除此磁盘，默认为true
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        ///本地磁盘
+        /// 本地磁盘
         ///</summary>
         public LocalDisk LocalDisk{ get; set; }
         ///<summary>
-        ///云硬盘
+        /// 云硬盘
         ///</summary>
         public JDCloudSDK.Disk.Model.Disk CloudDisk{ get; set; }
         ///<summary>
-        ///数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
+        /// 数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
         ///</summary>
         public string DeviceName{ get; set; }
     }

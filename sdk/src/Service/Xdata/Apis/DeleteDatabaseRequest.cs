@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 删除数据库
+    ///  删除数据库
     /// </summary>
     public class DeleteDatabaseRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///数据库名
+        /// 数据库名
         ///Required:true
         ///</summary>
         [Required]

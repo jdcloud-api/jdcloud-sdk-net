@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 设置实例url白名单
+    ///  设置实例url白名单
     /// </summary>
     public class ModifyInstanceUrlWhiteListResponse : JdcloudResponse<ModifyInstanceUrlWhiteListResult>
     {

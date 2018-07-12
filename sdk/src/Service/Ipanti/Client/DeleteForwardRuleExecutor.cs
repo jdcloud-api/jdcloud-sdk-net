@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 删除某条非网站规则
+    ///  删除某条非网站规则
     /// </summary>
     public class DeleteForwardRuleExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除某条非网站规则接口的Http 请求方法
+        ///  删除某条非网站规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 删除某条非网站规则接口的Http资源请求路径
+        ///  删除某条非网站规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

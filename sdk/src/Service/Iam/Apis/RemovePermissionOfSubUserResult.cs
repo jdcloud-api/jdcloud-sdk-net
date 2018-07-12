@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 为子用户解绑策略
+    ///  为子用户解绑策略
     /// </summary>
     public class RemovePermissionOfSubUserResult : JdcloudResult
     {

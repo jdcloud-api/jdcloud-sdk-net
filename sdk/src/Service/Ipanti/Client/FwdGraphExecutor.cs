@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 转发流量报表
+    ///  转发流量报表
     /// </summary>
     public class FwdGraphExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 转发流量报表接口的Http 请求方法
+        ///  转发流量报表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 转发流量报表接口的Http资源请求路径
+        ///  转发流量报表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

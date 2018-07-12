@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 为子用户解绑策略
+    ///  为子用户解绑策略
     /// </summary>
     public class RemovePermissionOfSubUserRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///权限id
+        /// 权限id
         ///Required:true
         ///</summary>
         [Required]
         public   int PermissionId{ get; set; }
         ///<summary>
-        ///子用户用户名
+        /// 子用户用户名
         ///Required:true
         ///</summary>
         [Required]

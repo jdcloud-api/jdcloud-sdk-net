@@ -32,29 +32,29 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 描述容器网卡的绑定信息
+    ///  描述容器网卡的绑定信息
     /// </summary>
     public class InstanceNetworkInterfaceAttachment
     {
 
         ///<summary>
-        ///指明删除实例时是否删除网卡
+        /// 指明删除实例时是否删除网卡
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        ///设备Index
+        /// 设备Index
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        ///绑定状态
+        /// 绑定状态
         ///</summary>
         public string AttachStatus{ get; set; }
         ///<summary>
-        ///绑定时间
+        /// 绑定时间
         ///</summary>
         public string AttachTime{ get; set; }
         ///<summary>
-        ///弹性网卡信息
+        /// 弹性网卡信息
         ///</summary>
         public InstanceNetworkInterface NetworkInterface{ get; set; }
     }

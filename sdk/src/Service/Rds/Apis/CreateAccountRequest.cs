@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建数据库账户
+    ///  创建数据库账户
     /// </summary>
     public class CreateAccountRequest : JdcloudRequest
     {
         ///<summary>
-        ///用户名
+        /// 用户名
         ///Required:true
         ///</summary>
         [Required]
         public   string AccountName{ get; set; }
         ///<summary>
-        ///用户密码
+        /// 用户密码
         ///Required:true
         ///</summary>
         [Required]
         public   string AccountPassword{ get; set; }
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]

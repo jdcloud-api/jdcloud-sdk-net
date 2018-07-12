@@ -33,61 +33,61 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    /// cacheInstance
+    ///  cacheInstance
     /// </summary>
     public class CacheInstance
     {
 
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///</summary>
         public string CacheInstanceId{ get; set; }
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///</summary>
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        ///实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+        /// 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
         ///</summary>
         public string CacheInstanceClass{ get; set; }
         ///<summary>
-        ///容量，单位MB
+        /// 容量，单位MB
         ///</summary>
         public int? CacheInstanceMemoryMB{ get; set; }
         ///<summary>
-        ///实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+        /// 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
         ///</summary>
         public string CacheInstancStatus{ get; set; }
         ///<summary>
-        ///实例描述
+        /// 实例描述
         ///</summary>
         public string CacheInstanceDescription{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///az信息
+        /// az信息
         ///</summary>
         public AzId AzId{ get; set; }
         ///<summary>
-        ///所属VPC的ID
+        /// 所属VPC的ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///所属子网的ID
+        /// 所属子网的ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        ///访问域名
+        /// 访问域名
         ///</summary>
         public string ConnectionDomain{ get; set; }
         ///<summary>
-        ///端口
+        /// 端口
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        ///计费信息
+        /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
     }

@@ -32,41 +32,41 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// forwardRuleSpec
+    ///  forwardRuleSpec
     /// </summary>
     public class ForwardRuleSpec
     {
 
         ///<summary>
-        ///协议：TCP或者UDP
+        /// 协议：TCP或者UDP
         ///</summary>
         public string Protocol{ get; set; }
         ///<summary>
-        ///端口号
+        /// 端口号
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        ///转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+        /// 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
-        ///回源类型，ip或者domain
+        /// 回源类型，ip或者domain
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
-        ///OriginAddr
+        /// OriginAddr
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        ///OnlineAddr
+        /// OnlineAddr
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        ///回源域名
+        /// 回源域名
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        ///回源端口号
+        /// 回源端口号
         ///</summary>
         public int? OriginPort{ get; set; }
     }

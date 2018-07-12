@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询区域下的公网Ip资源列表
+    ///  查询区域下的公网Ip资源列表
     /// </summary>
     public class DescribeIpResourcesRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

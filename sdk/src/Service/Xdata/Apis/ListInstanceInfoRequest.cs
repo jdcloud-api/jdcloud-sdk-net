@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 查询实例列表
+    ///  查询实例列表
     /// </summary>
     public class ListInstanceInfoRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

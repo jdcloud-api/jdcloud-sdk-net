@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询规则详情
+    ///  查询规则详情
     /// </summary>
     public class DescribeAlarmsByIDResult : JdcloudResult
     {
         ///<summary>
-        ///Alarm
+        /// Alarm
         ///</summary>
         public   Alarm Alarm{ get; set; }
     }

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mps.Client
 {
 
     /// <summary>
-    /// 获取截图通知
+    ///  获取截图通知
     /// </summary>
     public class GetNotificationExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 获取截图通知接口的Http 请求方法
+        ///  获取截图通知接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mps.Client
             }
         }
         /// <summary>
-        /// 获取截图通知接口的Http资源请求路径
+        ///  获取截图通知接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

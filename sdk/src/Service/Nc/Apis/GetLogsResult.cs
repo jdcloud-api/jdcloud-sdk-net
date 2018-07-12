@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询容器日志
+    ///  查询容器日志
     /// </summary>
     public class GetLogsResult : JdcloudResult
     {
         ///<summary>
-        ///Logs
+        /// Logs
         ///</summary>
         public   Object Logs{ get; set; }
     }

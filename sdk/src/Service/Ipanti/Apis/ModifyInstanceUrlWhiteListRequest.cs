@@ -34,23 +34,23 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 设置实例url白名单
+    ///  设置实例url白名单
     /// </summary>
     public class ModifyInstanceUrlWhiteListRequest : JdcloudRequest
     {
         ///<summary>
-        ///网站类规则参数
+        /// 网站类规则参数
         ///</summary>
         public List<string> UrlWhiteList{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

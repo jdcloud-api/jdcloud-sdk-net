@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+    ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
     /// </summary>
     public class DisableAlarmResult : JdcloudResult
     {

@@ -35,28 +35,28 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 创建 secret
+    ///  创建 secret
     /// </summary>
     public class CreateSecretRequest : JdcloudRequest
     {
         ///<summary>
-        ///机密数据名称，不能重复
+        /// 机密数据名称，不能重复
         ///Required:true
         ///</summary>
         [Required]
         public   string Name{ get; set; }
         ///<summary>
-        ///私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
+        /// 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
         ///Required:true
         ///</summary>
         [Required]
         public   string SecretType{ get; set; }
         ///<summary>
-        ///机密的数据
+        /// 机密的数据
         ///</summary>
         public   DockerRegistryData Data{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

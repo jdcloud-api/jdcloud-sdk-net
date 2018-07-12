@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 修改容器属性
+    ///  修改容器属性
     /// </summary>
     public class ModifyContainerAttributeResult : JdcloudResult
     {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 终止查询
+    ///  终止查询
     /// </summary>
     public class CancelRasQueryExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 终止查询接口的Http 请求方法
+        ///  终止查询接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 终止查询接口的Http资源请求路径
+        ///  终止查询接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -35,31 +35,31 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 数据库账号授权
+    ///  数据库账号授权
     /// </summary>
     public class GrantPrivilegeRequest : JdcloudRequest
     {
         ///<summary>
-        ///账号的访问权限
+        /// 账号的访问权限
         ///Required:true
         ///</summary>
         [Required]
         public List<AccountPrivilege> AccountPrivileges{ get; set; }
 
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///账户名
+        /// 账户名
         ///Required:true
         ///</summary>
         [Required]

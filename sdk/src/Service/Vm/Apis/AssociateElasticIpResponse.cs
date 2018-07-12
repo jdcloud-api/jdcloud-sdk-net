@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 云主机绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+    ///  云主机绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
     /// </summary>
     public class AssociateElasticIpResponse : JdcloudResponse<AssociateElasticIpResult>
     {

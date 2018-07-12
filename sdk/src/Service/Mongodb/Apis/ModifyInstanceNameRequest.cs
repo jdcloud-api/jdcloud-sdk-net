@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 修改实例名称
+    ///  修改实例名称
     /// </summary>
     public class ModifyInstanceNameRequest : JdcloudRequest
     {
         ///<summary>
-        ///新的实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
+        /// 新的实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

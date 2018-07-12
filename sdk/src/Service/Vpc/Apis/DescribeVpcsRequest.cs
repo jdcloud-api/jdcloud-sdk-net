@@ -35,27 +35,27 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询私有网络列表
+    ///  查询私有网络列表
     /// </summary>
     public class DescribeVpcsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+        /// 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///vpcIds - vpc ID列表，支持多个
-        ///vpcNames - vpc名称列表,支持多个
-        ///
+        /// vpcIds - vpc ID列表，支持多个
+        /// vpcNames - vpc名称列表,支持多个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

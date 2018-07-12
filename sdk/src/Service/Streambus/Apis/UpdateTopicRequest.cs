@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    /// 更新topic
+    ///  更新topic
     /// </summary>
     public class UpdateTopicRequest : JdcloudRequest
     {
         ///<summary>
-        ///TopicModel
+        /// TopicModel
         ///Required:true
         ///</summary>
         [Required]
         public   AddTopic TopicModel{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

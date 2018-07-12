@@ -33,23 +33,23 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// transcodeStatus
+    ///  transcodeStatus
     /// </summary>
     public class TranscodeStatus
     {
 
         ///<summary>
-        ///状态 (SUCESS, ERROR, PENDDING, RUNNING)
+        /// 状态 (SUCESS, ERROR, PENDDING, RUNNING)
         ///Required:true
         ///</summary>
         [Required]
         public string Status{ get; set; }
         ///<summary>
-        ///错误码
+        /// 错误码
         ///</summary>
         public int? ErrorCode{ get; set; }
         ///<summary>
-        ///通知消息, 由work调用, 暂时方案
+        /// 通知消息, 由work调用, 暂时方案
         ///</summary>
         public string NotifyMessage{ get; set; }
     }

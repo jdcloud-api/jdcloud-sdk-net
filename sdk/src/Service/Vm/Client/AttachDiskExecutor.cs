@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// 云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
+    ///  云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘
     /// </summary>
     public class AttachDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘接口的Http 请求方法
+        ///  云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// 云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘接口的Http资源请求路径
+        ///  云主机挂载硬盘，主机和云盘没有未完成的任务时才可挂载，一个主机上最多可挂载4块数据盘接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

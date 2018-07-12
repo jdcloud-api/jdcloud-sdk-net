@@ -32,33 +32,33 @@ namespace JDCloudSDK.Baseanti.Model
 {
 
     /// <summary>
-    /// ipResourceInfo
+    ///  ipResourceInfo
     /// </summary>
     public class IpResourceInfo
     {
 
         ///<summary>
-        ///公网IP
+        /// 公网IP
         ///</summary>
         public string Ip{ get; set; }
         ///<summary>
-        ///0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+        /// 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
         ///</summary>
         public int? SafeStatus{ get; set; }
         ///<summary>
-        ///地域，cn-north-1、cn-south-1、cn-east-1、cn-east-2
+        /// 地域，cn-north-1、cn-south-1、cn-east-1、cn-east-2
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        ///黑洞阈值，单位bps
+        /// 黑洞阈值，单位bps
         ///</summary>
         public long? BlackHoleThreshold{ get; set; }
         ///<summary>
-        ///触发清洗的流量速率，单位bps
+        /// 触发清洗的流量速率，单位bps
         ///</summary>
         public long? CleanThresholdBps{ get; set; }
         ///<summary>
-        ///触发清洗的包速率，单位pps
+        /// 触发清洗的包速率，单位pps
         ///</summary>
         public long? CleanThresholdPps{ get; set; }
     }

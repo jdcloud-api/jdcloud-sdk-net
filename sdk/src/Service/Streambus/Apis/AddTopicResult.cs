@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    /// 创建topic
+    ///  创建topic
     /// </summary>
     public class AddTopicResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///状态信息
+        /// 状态信息
         ///</summary>
         public   string Message{ get; set; }
     }

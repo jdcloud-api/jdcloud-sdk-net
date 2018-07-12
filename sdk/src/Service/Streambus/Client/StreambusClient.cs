@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Streambus.Client
 {
     /// <summary>
-    /// JDCLOUD 流数据总线 API
-    /// 提供流数据总线topic操作的相关接口。
-    /// Streambus Api 客户端
+    ///  JDCLOUD 流数据总线 API
+    ///  提供流数据总线topic操作的相关接口。
+    ///  Streambus Api 客户端
     ///</summary>
     public class StreambusClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Streambus.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 创建topic
+        ///  创建topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        /// 创建topic
+        ///  创建topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 更新topic
+        ///  更新topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        /// 更新topic
+        ///  更新topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询topic
+        ///  查询topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        /// 查询topic
+        ///  查询topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Streambus.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// StreambusClient service client
+                ///  StreambusClient service client
                 /// </summary>
                 private  StreambusClient streambusClient;
 

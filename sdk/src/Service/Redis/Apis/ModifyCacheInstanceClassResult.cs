@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 变更缓存Redis实例配置
+    ///  变更缓存Redis实例配置
     /// </summary>
     public class ModifyCacheInstanceClassResult : JdcloudResult
     {
         ///<summary>
-        ///OrderNum
+        /// OrderNum
         ///</summary>
         public   string OrderNum{ get; set; }
     }

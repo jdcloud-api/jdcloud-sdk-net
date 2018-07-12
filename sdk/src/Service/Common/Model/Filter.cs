@@ -33,23 +33,23 @@ namespace JDCloudSDK.Common.Model
 {
 
     /// <summary>
-    /// filter
+    ///  filter
     /// </summary>
     public class Filter
     {
 
         ///<summary>
-        ///过滤条件的名称
+        /// 过滤条件的名称
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///过滤条件的操作符，默认eq
+        /// 过滤条件的操作符，默认eq
         ///</summary>
         public string Operator{ get; set; }
         ///<summary>
-        ///过滤条件的值
+        /// 过滤条件的值
         ///Required:true
         ///</summary>
         [Required]

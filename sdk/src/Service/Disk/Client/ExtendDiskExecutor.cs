@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 扩容云硬盘到指定大小
+    ///  扩容云硬盘到指定大小
     /// </summary>
     public class ExtendDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 扩容云硬盘到指定大小接口的Http 请求方法
+        ///  扩容云硬盘到指定大小接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 扩容云硬盘到指定大小接口的Http资源请求路径
+        ///  扩容云硬盘到指定大小接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

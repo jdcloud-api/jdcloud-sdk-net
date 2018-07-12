@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 网站类规则切换成防御状态
+    ///  网站类规则切换成防御状态
     /// </summary>
     public class SwitchWebRuleProtectResponse : JdcloudResponse<SwitchWebRuleProtectResult>
     {

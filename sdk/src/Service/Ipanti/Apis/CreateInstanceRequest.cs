@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 创建实例
+    ///  创建实例
     /// </summary>
     public class CreateInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例规格参数
+        /// 实例规格参数
         ///Required:true
         ///</summary>
         [Required]
         public   InstanceSpec InstanceSpec{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

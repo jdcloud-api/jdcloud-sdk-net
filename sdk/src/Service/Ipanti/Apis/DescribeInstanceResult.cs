@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询实例
+    ///  查询实例
     /// </summary>
     public class DescribeInstanceResult : JdcloudResult
     {
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public   Instance Data{ get; set; }
     }

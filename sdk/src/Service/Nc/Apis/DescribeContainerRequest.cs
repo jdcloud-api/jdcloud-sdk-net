@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询容器详情
+    ///  查询容器详情
     /// </summary>
     public class DescribeContainerRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Container ID
+        /// Container ID
         ///Required:true
         ///</summary>
         [Required]

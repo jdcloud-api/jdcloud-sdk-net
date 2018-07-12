@@ -32,21 +32,21 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// lastDownsampleRespItem
+    ///  lastDownsampleRespItem
     /// </summary>
     public class LastDownsampleRespItem
     {
 
         ///<summary>
-        ///Metric
+        /// Metric
         ///</summary>
         public string Metric{ get; set; }
         ///<summary>
-        ///Name
+        /// Name
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///Value
+        /// Value
         ///</summary>
         public Object Value{ get; set; }
     }

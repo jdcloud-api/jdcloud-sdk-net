@@ -32,77 +32,77 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// networkInterface
+    ///  networkInterface
     /// </summary>
     public class NetworkInterface
     {
 
         ///<summary>
-        ///弹性网卡名称
+        /// 弹性网卡名称
         ///</summary>
         public string NetworkInterfaceName{ get; set; }
         ///<summary>
-        ///弹性网卡ID
+        /// 弹性网卡ID
         ///</summary>
         public string NetworkInterfaceId{ get; set; }
         ///<summary>
-        ///可用区名称
+        /// 可用区名称
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
+        /// 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
         ///</summary>
         public string Role{ get; set; }
         ///<summary>
-        ///以太网地址
+        /// 以太网地址
         ///</summary>
         public string MacAddress{ get; set; }
         ///<summary>
-        ///虚拟网络ID
+        /// 虚拟网络ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///子网ID
+        /// 子网ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        ///安全组ID列表
+        /// 安全组ID列表
         ///</summary>
         public List<string> NetworkSecurityGroupIds{ get; set; }
         ///<summary>
-        ///源和目标IP地址校验，取值为0或者1
+        /// 源和目标IP地址校验，取值为0或者1
         ///</summary>
         public int? SanityCheck{ get; set; }
         ///<summary>
-        ///网卡主IP
+        /// 网卡主IP
         ///</summary>
         public NetworkInterfacePrivateIp PrimaryIp{ get; set; }
         ///<summary>
-        ///网卡附属IP列表
+        /// 网卡附属IP列表
         ///</summary>
         public List<NetworkInterfacePrivateIp> SecondaryIps{ get; set; }
         ///<summary>
-        ///关联实例类型，取值范围：vm
+        /// 关联实例类型，取值范围：vm
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///关联实例ID
+        /// 关联实例ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        ///实例所属的账号
+        /// 实例所属的账号
         ///</summary>
         public string InstanceOwnerId{ get; set; }
         ///<summary>
-        ///网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
+        /// 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        ///网卡描述信息
+        /// 网卡描述信息
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///弹性网卡创建时间
+        /// 弹性网卡创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

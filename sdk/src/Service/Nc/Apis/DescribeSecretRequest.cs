@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询 secret 详情
+    ///  查询 secret 详情
     /// </summary>
     public class DescribeSecretRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Secret Name
+        /// Secret Name
         ///Required:true
         ///</summary>
         [Required]

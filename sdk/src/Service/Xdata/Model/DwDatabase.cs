@@ -33,59 +33,59 @@ namespace JDCloudSDK.Xdata.Model
 {
 
     /// <summary>
-    /// dwDatabase
+    ///  dwDatabase
     /// </summary>
     public class DwDatabase
     {
 
         ///<summary>
-        ///数据库id
+        /// 数据库id
         ///</summary>
         public int? Id{ get; set; }
         ///<summary>
-        ///用户名
+        /// 用户名
         ///</summary>
         public string UserName{ get; set; }
         ///<summary>
-        ///数据库名称
+        /// 数据库名称
         ///Required:true
         ///</summary>
         [Required]
         public string DatabaseName{ get; set; }
         ///<summary>
-        ///总表数量
+        /// 总表数量
         ///</summary>
         public int? TotalTableQuantity{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        ///最新更新时间
+        /// 最新更新时间
         ///</summary>
         public string LastUpdateTime{ get; set; }
         ///<summary>
-        ///最新更新时间
+        /// 最新更新时间
         ///</summary>
         public string PhysicalStorageCapacity{ get; set; }
         ///<summary>
-        ///类别
+        /// 类别
         ///</summary>
         public string Category{ get; set; }
         ///<summary>
-        ///来源
+        /// 来源
         ///</summary>
         public string Source{ get; set; }
         ///<summary>
-        ///所有者
+        /// 所有者
         ///</summary>
         public string Owner{ get; set; }
         ///<summary>
-        ///位置
+        /// 位置
         ///</summary>
         public string Location{ get; set; }
         ///<summary>
-        ///描述信息
+        /// 描述信息
         ///</summary>
         public string Comments{ get; set; }
     }

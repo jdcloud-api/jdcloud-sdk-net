@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 创建VpcPeering接口
+    ///  创建VpcPeering接口
     /// </summary>
     public class CreateVpcPeeringResponse : JdcloudResponse<CreateVpcPeeringResult>
     {

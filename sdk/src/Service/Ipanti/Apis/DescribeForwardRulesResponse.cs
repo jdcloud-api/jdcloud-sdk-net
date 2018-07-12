@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询某个实例下的非网站转发配置
+    ///  查询某个实例下的非网站转发配置
     /// </summary>
     public class DescribeForwardRulesResponse : JdcloudResponse<DescribeForwardRulesResult>
     {

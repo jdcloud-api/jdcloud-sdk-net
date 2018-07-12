@@ -32,13 +32,13 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// unassignSecondaryIpsSpec
+    ///  unassignSecondaryIpsSpec
     /// </summary>
     public class UnassignSecondaryIpsSpec
     {
 
         ///<summary>
-        ///指定删除的secondaryIp地址
+        /// 指定删除的secondaryIp地址
         ///</summary>
         public List<string> SecondaryIps{ get; set; }
     }

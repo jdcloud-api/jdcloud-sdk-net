@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+    ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
     /// </summary>
     public class DetachDiskResult : JdcloudResult
     {

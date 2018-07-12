@@ -32,21 +32,21 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 描述网卡私有Ip资源的信息
+    ///  描述网卡私有Ip资源的信息
     /// </summary>
     public class NetworkInterfacePrivateIp
     {
 
         ///<summary>
-        ///私有IP的IPV4地址
+        /// 私有IP的IPV4地址
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        ///私有IP的IPV4地址
+        /// 私有IP的IPV4地址
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>
-        ///弹性IP实例地址
+        /// 弹性IP实例地址
         ///</summary>
         public string ElasticIpAddress{ get; set; }
     }

@@ -33,34 +33,34 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceType
+    ///  instanceType
     /// </summary>
     public class InstanceType
     {
 
         ///<summary>
-        ///实例族
+        /// 实例族
         ///</summary>
         public string Family{ get; set; }
         ///<summary>
-        ///实例类型，比如g.b1.2xlarge
+        /// 实例类型，比如g.b1.2xlarge
         ///</summary>
         [JsonProperty("instanceType")]
         public string InstanceTypeValue{ get; set; }
         ///<summary>
-        ///cpu个数
+        /// cpu个数
         ///</summary>
         public int? Cpu{ get; set; }
         ///<summary>
-        ///内存
+        /// 内存
         ///</summary>
         public int? MemoryMB{ get; set; }
         ///<summary>
-        ///描述
+        /// 描述
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
-        ///状态
+        /// 状态
         ///</summary>
         public List<InstanceTypeState> State{ get; set; }
     }

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询实例列表
+    ///  查询实例列表
     /// </summary>
     public class DescribeInstancesResponse : JdcloudResponse<DescribeInstancesResult>
     {

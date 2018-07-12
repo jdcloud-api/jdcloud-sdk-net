@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 创建数据表
+    ///  创建数据表
     /// </summary>
     public class CreateTableResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
     }

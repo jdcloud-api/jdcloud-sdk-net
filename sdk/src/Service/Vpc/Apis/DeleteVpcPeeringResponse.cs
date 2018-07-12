@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 删除VpcPeering接口
+    ///  删除VpcPeering接口
     /// </summary>
     public class DeleteVpcPeeringResponse : JdcloudResponse<DeleteVpcPeeringResult>
     {

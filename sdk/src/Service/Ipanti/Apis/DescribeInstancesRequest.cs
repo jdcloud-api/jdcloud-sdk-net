@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询实例列表
+    ///  查询实例列表
     /// </summary>
     public class DescribeInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1
+        /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///实例名称，可模糊匹配
+        /// 实例名称，可模糊匹配
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

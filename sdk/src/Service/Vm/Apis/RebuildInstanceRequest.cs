@@ -34,33 +34,33 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 云主机使用指定镜像重置实例镜像，需要关机操作，
+    ///  云主机使用指定镜像重置实例镜像，需要关机操作，
     /// </summary>
     public class RebuildInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        ///云主机密码
+        /// 云主机密码
         ///Required:true
         ///</summary>
         [Required]
         public   string Password{ get; set; }
         ///<summary>
-        ///镜像ID
+        /// 镜像ID
         ///</summary>
         public   string ImageId{ get; set; }
         ///<summary>
-        ///密钥对名称；当前只支持一个
+        /// 密钥对名称；当前只支持一个
         ///</summary>
         public List<string> KeyNames{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询某个实例下的非网站转发配置
+    ///  查询某个实例下的非网站转发配置
     /// </summary>
     public class DescribeForwardRulesResult : JdcloudResult
     {
         ///<summary>
-        ///DataList
+        /// DataList
         ///</summary>
         public List<ForwardRule> DataList{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

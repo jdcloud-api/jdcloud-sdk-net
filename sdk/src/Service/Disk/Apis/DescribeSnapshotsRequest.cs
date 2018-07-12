@@ -35,29 +35,29 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘快照列表
+    ///  查询云硬盘快照列表
     /// </summary>
     public class DescribeSnapshotsRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞)
+        /// 页码, 默认为1, 取值范围：[1,∞)
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///snapshotId - 云硬盘快照ID，支持多个
-        ///diskId - 生成快照的云硬盘ID，支持多个
-        ///status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
-        ///name - 快照名称，模糊匹配，支持单个
-        ///
+        /// snapshotId - 云硬盘快照ID，支持多个
+        /// diskId - 生成快照的云硬盘ID，支持多个
+        /// status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+        /// name - 快照名称，模糊匹配，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

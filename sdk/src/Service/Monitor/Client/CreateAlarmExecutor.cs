@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+    ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
     /// </summary>
     public class CreateAlarmExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。接口的Http 请求方法
+        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。接口的Http资源请求路径
+        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

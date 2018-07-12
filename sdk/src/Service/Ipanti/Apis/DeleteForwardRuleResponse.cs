@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 删除某条非网站规则
+    ///  删除某条非网站规则
     /// </summary>
     public class DeleteForwardRuleResponse : JdcloudResponse<DeleteForwardRuleResult>
     {

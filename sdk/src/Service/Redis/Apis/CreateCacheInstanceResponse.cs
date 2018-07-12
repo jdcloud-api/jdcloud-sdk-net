@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 创建一个指定配置的缓存Redis实例
+    ///  创建一个指定配置的缓存Redis实例
     /// </summary>
     public class CreateCacheInstanceResponse : JdcloudResponse<CreateCacheInstanceResult>
     {

@@ -32,29 +32,29 @@ namespace JDCloudSDK.Mps.Model
 {
 
     /// <summary>
-    /// 视频截图规则参数
+    ///  视频截图规则参数
     /// </summary>
     public class ThumbnailTaskRule
     {
 
         ///<summary>
-        ///截图模式 单张: single 多张: multi 平均: average default: single
+        /// 截图模式 单张: single 多张: multi 平均: average default: single
         ///</summary>
         public string Mode{ get; set; }
         ///<summary>
-        ///是否开启关键帧截图 default: true
+        /// 是否开启关键帧截图 default: true
         ///</summary>
         public bool KeyFrame{ get; set; }
         ///<summary>
-        ///生成截图的开始时间, mode&#x3D;average 时不可选. default:0
+        /// 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
         ///</summary>
         public int? StartTimeInSecond{ get; set; }
         ///<summary>
-        ///生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
+        /// 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
         ///</summary>
         public int? EndTimeInSecond{ get; set; }
         ///<summary>
-        ///截图数量, mode&#x3D;single时不可选. default:1
+        /// 截图数量, mode&#x3D;single时不可选. default:1
         ///</summary>
         public int? Count{ get; set; }
     }

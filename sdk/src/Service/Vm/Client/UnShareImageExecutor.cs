@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// 取消共享镜像，不能操作非私有镜像
+    ///  取消共享镜像，不能操作非私有镜像
     /// </summary>
     public class UnShareImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 取消共享镜像，不能操作非私有镜像接口的Http 请求方法
+        ///  取消共享镜像，不能操作非私有镜像接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// 取消共享镜像，不能操作非私有镜像接口的Http资源请求路径
+        ///  取消共享镜像，不能操作非私有镜像接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 批量删除规则
+    ///  批量删除规则
     /// </summary>
     public class DeleteAlarmsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 批量删除规则接口的Http 请求方法
+        ///  批量删除规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 批量删除规则接口的Http资源请求路径
+        ///  批量删除规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

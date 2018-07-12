@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// 描述实例的本地磁盘
+    ///  描述实例的本地磁盘
     /// </summary>
     public class LocalDisk
     {
 
         ///<summary>
-        ///磁盘类型，取值范围{premium-hdd, ssd}
+        /// 磁盘类型，取值范围{premium-hdd, ssd}
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        ///磁盘大小
+        /// 磁盘大小
         ///</summary>
         public int? DiskSizeGB{ get; set; }
     }

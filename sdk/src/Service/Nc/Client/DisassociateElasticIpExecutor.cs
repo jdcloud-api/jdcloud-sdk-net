@@ -33,12 +33,12 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+    ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
     /// </summary>
     public class DisassociateElasticIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP接口的Http 请求方法
+        ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        /// 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP接口的Http资源请求路径
+        ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

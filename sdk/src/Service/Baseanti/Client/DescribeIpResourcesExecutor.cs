@@ -33,12 +33,12 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    /// 查询区域下的公网Ip资源列表
+    ///  查询区域下的公网Ip资源列表
     /// </summary>
     public class DescribeIpResourcesExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询区域下的公网Ip资源列表接口的Http 请求方法
+        ///  查询区域下的公网Ip资源列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        /// 查询区域下的公网Ip资源列表接口的Http资源请求路径
+        ///  查询区域下的公网Ip资源列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

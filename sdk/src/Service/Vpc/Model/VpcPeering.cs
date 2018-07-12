@@ -32,37 +32,37 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// vpcPeering
+    ///  vpcPeering
     /// </summary>
     public class VpcPeering
     {
 
         ///<summary>
-        ///VpcPeering的Id
+        /// VpcPeering的Id
         ///</summary>
         public string VpcPeeringId{ get; set; }
         ///<summary>
-        ///VpcPeering名称，同账号下不允许重名，取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering名称，同账号下不允许重名，取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string VpcPeeringName{ get; set; }
         ///<summary>
-        ///状态，取值为Connected，Disconnected，Initiated
+        /// 状态，取值为Connected，Disconnected，Initiated
         ///</summary>
         public string VpcPeeringState{ get; set; }
         ///<summary>
-        ///VpcPeering 描述，可为空值，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering 描述，可为空值，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///发起VpcPeering的Vpc信息
+        /// 发起VpcPeering的Vpc信息
         ///</summary>
         public VpcPeeringVpcInfo VpcInfo{ get; set; }
         ///<summary>
-        ///对端的Vpc信息
+        /// 对端的Vpc信息
         ///</summary>
         public VpcPeeringVpcInfo RemoteVpcInfo{ get; set; }
         ///<summary>
-        ///VpcPeering创建时间
+        /// VpcPeering创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

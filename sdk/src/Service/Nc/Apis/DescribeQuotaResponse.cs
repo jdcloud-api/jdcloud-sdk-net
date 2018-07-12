@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询资源的配额
+    ///  查询资源的配额
     /// </summary>
     public class DescribeQuotaResponse : JdcloudResponse<DescribeQuotaResult>
     {

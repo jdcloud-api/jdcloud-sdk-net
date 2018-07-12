@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 获取PySpark脚本的执行状态
+    ///  获取PySpark脚本的执行状态
     /// </summary>
     public class GetPySparkExecuteStateExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 获取PySpark脚本的执行状态接口的Http 请求方法
+        ///  获取PySpark脚本的执行状态接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 获取PySpark脚本的执行状态接口的Http资源请求路径
+        ///  获取PySpark脚本的执行状态接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// 修改主机信息
+    ///  修改主机信息
     /// </summary>
     public class ModifyInstanceAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 修改主机信息接口的Http 请求方法
+        ///  修改主机信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// 修改主机信息接口的Http资源请求路径
+        ///  修改主机信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

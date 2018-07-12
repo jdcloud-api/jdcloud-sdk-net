@@ -32,17 +32,17 @@ namespace JDCloudSDK.Rds.Model
 {
 
     /// <summary>
-    /// fileDownloadURL
+    ///  fileDownloadURL
     /// </summary>
     public class FileDownloadURL
     {
 
         ///<summary>
-        ///公网下载链接，若当前不可下载，则为空串
+        /// 公网下载链接，若当前不可下载，则为空串
         ///</summary>
         public string PublicURL{ get; set; }
         ///<summary>
-        ///内网下载链接，若当前不可下载，则为空串
+        /// 内网下载链接，若当前不可下载，则为空串
         ///</summary>
         public string InternalURL{ get; set; }
     }

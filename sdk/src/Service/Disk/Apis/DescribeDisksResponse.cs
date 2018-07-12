@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘列表
+    ///  查询云硬盘列表
     /// </summary>
     public class DescribeDisksResponse : JdcloudResponse<DescribeDisksResult>
     {

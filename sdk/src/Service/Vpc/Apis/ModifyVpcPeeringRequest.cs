@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 修改VpcPeering接口
+    ///  修改VpcPeering接口
     /// </summary>
     public class ModifyVpcPeeringRequest : JdcloudRequest
     {
         ///<summary>
-        ///VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public   string VpcPeeringName{ get; set; }
         ///<summary>
-        ///VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
+        /// VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///vpcPeeringId ID
+        /// vpcPeeringId ID
         ///Required:true
         ///</summary>
         [Required]

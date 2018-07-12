@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 删除数据库账户
+    ///  删除数据库账户
     /// </summary>
     public class DeleteAccountRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///账户名
+        /// 账户名
         ///Required:true
         ///</summary>
         [Required]

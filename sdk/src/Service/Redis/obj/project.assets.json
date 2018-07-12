@@ -11,11 +11,11 @@
           "lib/net35/Newtonsoft.Json.dll": {}
         }
       },
-      "JDCloudSDK.Charge/0.2.0": {
+      "JDCloudSDK.Charge/0.2.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v3.5",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -25,11 +25,11 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Common/0.2.0": {
+      "JDCloudSDK.Common/0.2.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v3.5",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -39,7 +39,7 @@
           "bin/placeholder/JDCloudSDK.Common.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.1.0": {
+      "JDCloudSDK.Core/0.2.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v3.5",
         "dependencies": {
@@ -63,11 +63,11 @@
           "lib/net40/Newtonsoft.Json.dll": {}
         }
       },
-      "JDCloudSDK.Charge/0.2.0": {
+      "JDCloudSDK.Charge/0.2.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.0",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -77,11 +77,11 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Common/0.2.0": {
+      "JDCloudSDK.Common/0.2.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.0",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -91,7 +91,7 @@
           "bin/placeholder/JDCloudSDK.Common.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.1.0": {
+      "JDCloudSDK.Core/0.2.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.0",
         "dependencies": {
@@ -127,11 +127,11 @@
           "lib/net45/_._": {}
         }
       },
-      "JDCloudSDK.Charge/0.2.0": {
+      "JDCloudSDK.Charge/0.2.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -141,11 +141,11 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Common/0.2.0": {
+      "JDCloudSDK.Common/0.2.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -155,7 +155,7 @@
           "bin/placeholder/JDCloudSDK.Common.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.1.0": {
+      "JDCloudSDK.Core/0.2.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
         "dependencies": {
@@ -204,11 +204,11 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "JDCloudSDK.Charge/0.2.0": {
+      "JDCloudSDK.Charge/0.2.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -218,11 +218,11 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Common/0.2.0": {
+      "JDCloudSDK.Common/0.2.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "JDCloudSDK.Core": "0.1.0",
+          "JDCloudSDK.Core": "0.2.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -232,7 +232,7 @@
           "bin/placeholder/JDCloudSDK.Common.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.1.0": {
+      "JDCloudSDK.Core/0.2.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -456,17 +456,17 @@
         "system.net.http.nuspec"
       ]
     },
-    "JDCloudSDK.Charge/0.2.0": {
+    "JDCloudSDK.Charge/0.2.0.1": {
       "type": "project",
       "path": "../Charge/JDCloudSDK.Charge.csproj",
       "msbuildProject": "../Charge/JDCloudSDK.Charge.csproj"
     },
-    "JDCloudSDK.Common/0.2.0": {
+    "JDCloudSDK.Common/0.2.0.1": {
       "type": "project",
       "path": "../Common/JDCloudSDK.Common.csproj",
       "msbuildProject": "../Common/JDCloudSDK.Common.csproj"
     },
-    "JDCloudSDK.Core/0.1.0": {
+    "JDCloudSDK.Core/0.2.0": {
       "type": "project",
       "path": "../../Core/JDCloudSDK.Core.csproj",
       "msbuildProject": "../../Core/JDCloudSDK.Core.csproj"
@@ -474,27 +474,27 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v3.5": [
-      "JDCloudSDK.Charge >= 0.2.0",
-      "JDCloudSDK.Common >= 0.2.0",
-      "JDCloudSDK.Core >= 0.1.0",
+      "JDCloudSDK.Charge >= 0.2.0.1",
+      "JDCloudSDK.Common >= 0.2.0.1",
+      "JDCloudSDK.Core >= 0.2.0",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETFramework,Version=v4.0": [
-      "JDCloudSDK.Charge >= 0.2.0",
-      "JDCloudSDK.Common >= 0.2.0",
-      "JDCloudSDK.Core >= 0.1.0",
+      "JDCloudSDK.Charge >= 0.2.0.1",
+      "JDCloudSDK.Common >= 0.2.0.1",
+      "JDCloudSDK.Core >= 0.2.0",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETFramework,Version=v4.5": [
-      "JDCloudSDK.Charge >= 0.2.0",
-      "JDCloudSDK.Common >= 0.2.0",
-      "JDCloudSDK.Core >= 0.1.0",
+      "JDCloudSDK.Charge >= 0.2.0.1",
+      "JDCloudSDK.Common >= 0.2.0.1",
+      "JDCloudSDK.Core >= 0.2.0",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETStandard,Version=v2.0": [
-      "JDCloudSDK.Charge >= 0.2.0",
-      "JDCloudSDK.Common >= 0.2.0",
-      "JDCloudSDK.Core >= 0.1.0",
+      "JDCloudSDK.Charge >= 0.2.0.1",
+      "JDCloudSDK.Common >= 0.2.0.1",
+      "JDCloudSDK.Core >= 0.2.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 11.0.2"
     ]
@@ -504,13 +504,13 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.0.1",
     "restore": {
-      "projectUniqueName": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Redis\\JDCloudSDK.Redis.csproj",
+      "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Redis\\JDCloudSDK.Redis.csproj",
       "projectName": "JDCloudSDK.Redis",
-      "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Redis\\JDCloudSDK.Redis.csproj",
+      "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Redis\\JDCloudSDK.Redis.csproj",
       "packagesPath": "C:\\Users\\lishijun1\\.nuget\\packages\\",
-      "outputPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Redis\\obj\\",
+      "outputPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Redis\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -533,53 +533,53 @@
       "frameworks": {
         "net35": {
           "projectReferences": {
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
             }
           }
         },
         "net40": {
           "projectReferences": {
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
             }
           }
         },
         "net45": {
           "projectReferences": {
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
             }
           }
         },
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Charge\\JDCloudSDK.Charge.csproj"
             },
-            "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
-              "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
+            "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj": {
+              "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Common\\JDCloudSDK.Common.csproj"
             }
           }
         }

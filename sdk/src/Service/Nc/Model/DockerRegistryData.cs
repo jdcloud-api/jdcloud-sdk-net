@@ -33,31 +33,31 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// secret 的数据
+    ///  secret 的数据
     /// </summary>
     public class DockerRegistryData
     {
 
         ///<summary>
-        ///registry服务器地址
+        /// registry服务器地址
         ///Required:true
         ///</summary>
         [Required]
         public string Server{ get; set; }
         ///<summary>
-        ///用户名
+        /// 用户名
         ///Required:true
         ///</summary>
         [Required]
         public string Username{ get; set; }
         ///<summary>
-        ///密码
+        /// 密码
         ///Required:true
         ///</summary>
         [Required]
         public string Password{ get; set; }
         ///<summary>
-        ///邮件地址
+        /// 邮件地址
         ///</summary>
         public string Email{ get; set; }
     }

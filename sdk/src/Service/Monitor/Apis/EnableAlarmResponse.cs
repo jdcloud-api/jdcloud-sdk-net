@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+    ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
     /// </summary>
     public class EnableAlarmResponse : JdcloudResponse<EnableAlarmResult>
     {

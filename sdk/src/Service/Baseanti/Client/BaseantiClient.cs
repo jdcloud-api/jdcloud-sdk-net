@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Baseanti.Client
 {
     /// <summary>
-    /// 京东云DDoS基础防护相关接口
-    /// 京东云DDoS基础防护相关接口
-    /// Baseanti Api 客户端
+    ///  京东云DDoS基础防护相关接口
+    ///  京东云DDoS基础防护相关接口
+    ///  Baseanti Api 客户端
     ///</summary>
     public class BaseantiClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Baseanti.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 查询公网Ip的防护明细
+        ///  查询公网Ip的防护明细
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        /// 查询公网Ip的防护明细
+        ///  查询公网Ip的防护明细
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 设置公网Ip的清洗阈值
+        ///  设置公网Ip的清洗阈值
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        /// 设置公网Ip的清洗阈值
+        ///  设置公网Ip的清洗阈值
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询公网Ip基本信息
+        ///  查询公网Ip基本信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        /// 查询公网Ip基本信息
+        ///  查询公网Ip基本信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询区域下的公网Ip资源列表
+        ///  查询区域下的公网Ip资源列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        /// 查询区域下的公网Ip资源列表
+        ///  查询区域下的公网Ip资源列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询公网Ip的监控流量
+        ///  查询公网Ip的监控流量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        /// 查询公网Ip的监控流量
+        ///  查询公网Ip的监控流量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Baseanti.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// BaseantiClient service client
+                ///  BaseantiClient service client
                 /// </summary>
                 private  BaseantiClient baseantiClient;
 

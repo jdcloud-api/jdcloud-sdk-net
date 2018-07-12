@@ -33,23 +33,23 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplateElasticIp
+    ///  instanceTemplateElasticIp
     /// </summary>
     public class InstanceTemplateElasticIp
     {
 
         ///<summary>
-        ///弹性公网IP的限速（单位：MB）
+        /// 弹性公网IP的限速（单位：MB）
         ///Required:true
         ///</summary>
         [Required]
         public int BandwidthMbps{ get; set; }
         ///<summary>
-        ///IP服务商，取值为BGP,nonBGP
+        /// IP服务商，取值为BGP,nonBGP
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>
-        ///计费类型，bandwith，flow
+        /// 计费类型，bandwith，flow
         ///Required:true
         ///</summary>
         [Required]

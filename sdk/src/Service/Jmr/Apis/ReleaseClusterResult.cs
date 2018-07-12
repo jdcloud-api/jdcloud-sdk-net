@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    /// 释放集群
+    ///  释放集群
     /// </summary>
     public class ReleaseClusterResult : JdcloudResult
     {
         ///<summary>
-        ///Status
+        /// Status
         ///</summary>
         public   bool Status{ get; set; }
         ///<summary>
-        ///Message
+        /// Message
         ///</summary>
         public   string Message{ get; set; }
     }

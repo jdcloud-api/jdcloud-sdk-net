@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 从已有快照恢复一块云硬盘
+    ///  从已有快照恢复一块云硬盘
     /// </summary>
     public class RestoreDiskRequest : JdcloudRequest
     {
         ///<summary>
-        ///用于恢复云盘的快照ID
+        /// 用于恢复云盘的快照ID
         ///Required:true
         ///</summary>
         [Required]
         public   string SnapshotId{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///Required:true
         ///</summary>
         [Required]

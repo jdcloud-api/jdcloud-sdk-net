@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 扩容云硬盘到指定大小
+    ///  扩容云硬盘到指定大小
     /// </summary>
     public class ExtendDiskRequest : JdcloudRequest
     {
         ///<summary>
-        ///扩容后的云硬盘大小，单位为GiB
+        /// 扩容后的云硬盘大小，单位为GiB
         ///Required:true
         ///</summary>
         [Required]
         public   int DiskSizeGB{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///Required:true
         ///</summary>
         [Required]

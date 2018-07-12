@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Mps.Apis
 {
 
     /// <summary>
-    /// 获取截图任务
+    ///  获取截图任务
     /// </summary>
     public class GetThumbnailTaskRequest : JdcloudRequest
     {
         ///<summary>
-        ///region id
+        /// region id
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///task id
+        /// task id
         ///Required:true
         ///</summary>
         [Required]

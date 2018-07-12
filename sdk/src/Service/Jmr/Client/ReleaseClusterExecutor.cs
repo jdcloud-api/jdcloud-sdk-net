@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jmr.Client
 {
 
     /// <summary>
-    /// 释放集群
+    ///  释放集群
     /// </summary>
     public class ReleaseClusterExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 释放集群接口的Http 请求方法
+        ///  释放集群接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jmr.Client
             }
         }
         /// <summary>
-        /// 释放集群接口的Http资源请求路径
+        ///  释放集群接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

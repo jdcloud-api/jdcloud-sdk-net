@@ -32,57 +32,57 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// forwardRule
+    ///  forwardRule
     /// </summary>
     public class ForwardRule
     {
 
         ///<summary>
-        ///规则id
+        /// 规则id
         ///</summary>
         public long? Id{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///</summary>
         public long? InstanceId{ get; set; }
         ///<summary>
-        ///TCP或UDP
+        /// TCP或UDP
         ///</summary>
         public string Protocol{ get; set; }
         ///<summary>
-        ///规则的cname
+        /// 规则的cname
         ///</summary>
         public string Cname{ get; set; }
         ///<summary>
-        ///回源类型：ip或者domain
+        /// 回源类型：ip或者domain
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
-        ///端口号
+        /// 端口号
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        ///转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+        /// 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
-        ///OriginAddr
+        /// OriginAddr
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        ///OnlineAddr
+        /// OnlineAddr
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        ///回源域名
+        /// 回源域名
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        ///回源端口号
+        /// 回源端口号
         ///</summary>
         public int? OriginPort{ get; set; }
         ///<summary>
-        ///0防御状态，1回源状态
+        /// 0防御状态，1回源状态
         ///</summary>
         public int? Status{ get; set; }
     }

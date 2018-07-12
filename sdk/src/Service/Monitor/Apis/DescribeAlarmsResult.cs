@@ -34,29 +34,29 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询监控规则
+    ///  查询监控规则
     /// </summary>
     public class DescribeAlarmsResult : JdcloudResult
     {
         ///<summary>
-        ///AlarmList
+        /// AlarmList
         ///</summary>
         public List<Alarm> AlarmList{ get; set; }
 
         ///<summary>
-        ///当前页码
+        /// 当前页码
         ///</summary>
         public   double? PageNumber{ get; set; }
         ///<summary>
-        ///总页数
+        /// 总页数
         ///</summary>
         public   double? NumberPages{ get; set; }
         ///<summary>
-        ///总记录数
+        /// 总记录数
         ///</summary>
         public   double? NumberRecords{ get; set; }
         ///<summary>
-        ///分页大小
+        /// 分页大小
         ///</summary>
         public   double? PageSize{ get; set; }
     }

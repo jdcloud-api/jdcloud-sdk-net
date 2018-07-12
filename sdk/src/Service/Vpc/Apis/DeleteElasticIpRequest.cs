@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 删除弹性Ip
+    ///  删除弹性Ip
     /// </summary>
     public class DeleteElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///ElasticIp ID
+        /// ElasticIp ID
         ///Required:true
         ///</summary>
         [Required]

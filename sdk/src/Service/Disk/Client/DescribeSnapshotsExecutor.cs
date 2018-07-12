@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 查询云硬盘快照列表
+    ///  查询云硬盘快照列表
     /// </summary>
     public class DescribeSnapshotsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询云硬盘快照列表接口的Http 请求方法
+        ///  查询云硬盘快照列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 查询云硬盘快照列表接口的Http资源请求路径
+        ///  查询云硬盘快照列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

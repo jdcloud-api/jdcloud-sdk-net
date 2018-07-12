@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 查询策略详情
+    ///  查询策略详情
     /// </summary>
     public class DescribePermissionDetailExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询策略详情接口的Http 请求方法
+        ///  查询策略详情接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 查询策略详情接口的Http资源请求路径
+        ///  查询策略详情接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

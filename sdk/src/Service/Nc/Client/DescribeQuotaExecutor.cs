@@ -33,12 +33,12 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    /// 查询资源的配额
+    ///  查询资源的配额
     /// </summary>
     public class DescribeQuotaExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询资源的配额接口的Http 请求方法
+        ///  查询资源的配额接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        /// 查询资源的配额接口的Http资源请求路径
+        ///  查询资源的配额接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

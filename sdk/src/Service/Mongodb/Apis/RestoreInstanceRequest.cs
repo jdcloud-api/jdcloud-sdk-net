@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 数据恢复
+    ///  数据恢复
     /// </summary>
     public class RestoreInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        ///备份ID
+        /// 备份ID
         ///Required:true
         ///</summary>
         [Required]
         public   string BackupId{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

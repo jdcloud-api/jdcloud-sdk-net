@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询私有网络列表
+    ///  查询私有网络列表
     /// </summary>
     public class DescribeVpcsResult : JdcloudResult
     {
         ///<summary>
-        ///Vpcs
+        /// Vpcs
         ///</summary>
         public List<JDCloudSDK.Vpc.Model.Vpc> Vpcs{ get; set; }
 
         ///<summary>
-        ///总数量
+        /// 总数量
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

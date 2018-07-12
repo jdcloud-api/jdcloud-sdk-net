@@ -32,17 +32,17 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// metricData
+    ///  metricData
     /// </summary>
     public class MetricData
     {
 
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public List<DataPoint> Data{ get; set; }
         ///<summary>
-        ///Metric
+        /// Metric
         ///</summary>
         public Metric Metric{ get; set; }
     }

@@ -33,65 +33,65 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// updateAlarmBody
+    ///  updateAlarmBody
     /// </summary>
     public class UpdateAlarmBody
     {
 
         ///<summary>
-        ///统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+        /// 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
         ///Required:true
         ///</summary>
         [Required]
         public string Calculation{ get; set; }
         ///<summary>
-        ///通知的联系组，如 [“联系组1”,”联系组2”]
+        /// 通知的联系组，如 [“联系组1”,”联系组2”]
         ///</summary>
         public List<string> ContactGroups{ get; set; }
         ///<summary>
-        ///通知的联系人，如 [“联系人1”,”联系人2”]
+        /// 通知的联系人，如 [“联系人1”,”联系人2”]
         ///</summary>
         public List<string> ContactPersons{ get; set; }
         ///<summary>
-        ///取样频次
+        /// 取样频次
         ///</summary>
         public string DownSample{ get; set; }
         ///<summary>
-        ///根据产品线查询可用监控项列表 接口 返回的Metric字段
+        /// 根据产品线查询可用监控项列表 接口 返回的Metric字段
         ///Required:true
         ///</summary>
         [Required]
         public string Metric{ get; set; }
         ///<summary>
-        ///通知周期 单位：小时
+        /// 通知周期 单位：小时
         ///</summary>
         public int? NoticePeriod{ get; set; }
         ///<summary>
-        ///&gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
+        /// &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
         ///Required:true
         ///</summary>
         [Required]
         public string Operation{ get; set; }
         ///<summary>
-        ///统计周期（单位：分钟），可选值：2,5,15,30,60
+        /// 统计周期（单位：分钟），可选值：2,5,15,30,60
         ///Required:true
         ///</summary>
         [Required]
         public int Period{ get; set; }
         ///<summary>
-        ///产品名称
+        /// 产品名称
         ///Required:true
         ///</summary>
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
-        ///阈值
+        /// 阈值
         ///Required:true
         ///</summary>
         [Required]
         public double Threshold{ get; set; }
         ///<summary>
-        ///连续多少次后报警，可选值:1,2,3,5
+        /// 连续多少次后报警，可选值:1,2,3,5
         ///Required:true
         ///</summary>
         [Required]

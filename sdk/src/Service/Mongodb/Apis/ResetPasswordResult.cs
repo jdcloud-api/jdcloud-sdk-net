@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 重置密码
+    ///  重置密码
     /// </summary>
     public class ResetPasswordResult : JdcloudResult
     {

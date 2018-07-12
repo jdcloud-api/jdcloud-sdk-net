@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 执行Spark SQL
+    ///  执行Spark SQL
     /// </summary>
     public class ExecuteRasQueryResponse : JdcloudResponse<ExecuteRasQueryResult>
     {

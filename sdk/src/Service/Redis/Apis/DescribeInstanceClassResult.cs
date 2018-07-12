@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 查询某区域下的实例规格列表
+    ///  查询某区域下的实例规格列表
     /// </summary>
     public class DescribeInstanceClassResult : JdcloudResult
     {
         ///<summary>
-        ///InstanceClasses
+        /// InstanceClasses
         ///</summary>
         public List<InstanceClass> InstanceClasses{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

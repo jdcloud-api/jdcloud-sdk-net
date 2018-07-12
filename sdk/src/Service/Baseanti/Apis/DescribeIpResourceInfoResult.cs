@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询公网Ip基本信息
+    ///  查询公网Ip基本信息
     /// </summary>
     public class DescribeIpResourceInfoResult : JdcloudResult
     {
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public   IpResourceInfo Data{ get; set; }
     }

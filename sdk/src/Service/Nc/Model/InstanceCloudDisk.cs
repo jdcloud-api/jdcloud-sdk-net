@@ -32,41 +32,41 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 描述一个磁盘
+    ///  描述一个磁盘
     /// </summary>
     public class InstanceCloudDisk
     {
 
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
-        ///所属AZ
+        /// 所属AZ
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        ///硬盘名称
+        /// 硬盘名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///硬盘描述
+        /// 硬盘描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///磁盘类型，取值为 ssd, premium-hdd 之一
+        /// 磁盘类型，取值为 ssd, premium-hdd 之一
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        ///磁盘大小（GiB）
+        /// 磁盘大小（GiB）
         ///</summary>
         public int? DiskSize{ get; set; }
         ///<summary>
-        ///云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_creating、error_deleting、error_restoring、error_extending 之一
+        /// 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_creating、error_deleting、error_restoring、error_extending 之一
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
     }

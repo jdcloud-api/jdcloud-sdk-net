@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询某条非网站类规则
+    ///  查询某条非网站类规则
     /// </summary>
     public class DescribeForwardRuleResult : JdcloudResult
     {
         ///<summary>
-        ///Data
+        /// Data
         ///</summary>
         public   ForwardRule Data{ get; set; }
     }

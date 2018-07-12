@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询VpcPeering资源详情
+    ///  查询VpcPeering资源详情
     /// </summary>
     public class DescribeVpcPeeringResult : JdcloudResult
     {
         ///<summary>
-        ///VpcPeering资源信息
+        /// VpcPeering资源信息
         ///</summary>
         public   VpcPeering VpcPeering{ get; set; }
     }

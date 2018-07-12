@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 验证SessionToken有效性
+    ///  验证SessionToken有效性
     /// </summary>
     public class VerifySessionTokenRequest : JdcloudRequest
     {
         ///<summary>
-        ///验证sessionToken参数
+        /// 验证sessionToken参数
         ///Required:true
         ///</summary>
         [Required]
         public   VerifySessionTokenInfo VerifySessionTokenInfo{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

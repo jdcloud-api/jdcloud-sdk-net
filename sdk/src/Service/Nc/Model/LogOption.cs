@@ -32,17 +32,17 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// null
+    ///  null
     /// </summary>
     public class LogOption
     {
 
         ///<summary>
-        ///null
+        /// null
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        ///null
+        /// null
         ///</summary>
         public string Value{ get; set; }
     }

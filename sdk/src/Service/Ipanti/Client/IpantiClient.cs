@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Ipanti.Client
 {
     /// <summary>
-    /// 京东云IP高防相关接口
-    /// 京东云IP高防相关接口
-    /// Ipanti Api 客户端
+    ///  京东云IP高防相关接口
+    ///  京东云IP高防相关接口
+    ///  Ipanti Api 客户端
     ///</summary>
     public class IpantiClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Ipanti.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 关闭实例CC防护
+        ///  关闭实例CC防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 关闭实例CC防护
+        ///  关闭实例CC防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询某条网站类规则
+        ///  查询某条网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询某条网站类规则
+        ///  查询某条网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 非网站类规则切换成防御状态
+        ///  非网站类规则切换成防御状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 非网站类规则切换成防御状态
+        ///  非网站类规则切换成防御状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 非网站类规则切换成回源状态
+        ///  非网站类规则切换成回源状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 非网站类规则切换成回源状态
+        ///  非网站类规则切换成回源状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 添加非网站类规则
+        ///  添加非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 添加非网站类规则
+        ///  添加非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改实例名称
+        ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 修改实例名称
+        ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 启用实例url白名单
+        ///  启用实例url白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 启用实例url白名单
+        ///  启用实例url白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 关闭实例CC防护的观察者模式
+        ///  关闭实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 关闭实例CC防护的观察者模式
+        ///  关闭实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 开启实例CC防护的观察者模式
+        ///  开启实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 开启实例CC防护的观察者模式
+        ///  开启实例CC防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 禁用实例ip白名单
+        ///  禁用实例ip白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 禁用实例ip白名单
+        ///  禁用实例ip白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询实例
+        ///  查询实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询实例
+        ///  查询实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询某个实例下的非网站转发配置
+        ///  查询某个实例下的非网站转发配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询某个实例下的非网站转发配置
+        ///  查询某个实例下的非网站转发配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +366,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// ddos防护报表
+        ///  ddos防护报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +375,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// ddos防护报表
+        ///  ddos防护报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -385,7 +385,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 设置实例CC防护
+        ///  设置实例CC防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -394,7 +394,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 设置实例CC防护
+        ///  设置实例CC防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +404,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询某个实例下的网站类规则
+        ///  查询某个实例下的网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -413,7 +413,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询某个实例下的网站类规则
+        ///  查询某个实例下的网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -423,7 +423,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 开启实例CC防护
+        ///  开启实例CC防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +432,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 开启实例CC防护
+        ///  开启实例CC防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +442,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 禁用实例ip黑名单
+        ///  禁用实例ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +451,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 禁用实例ip黑名单
+        ///  禁用实例ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -461,7 +461,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 更新某条非网站类规则
+        ///  更新某条非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -470,7 +470,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 更新某条非网站类规则
+        ///  更新某条非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -480,7 +480,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 关闭CC防护每ip的限速
+        ///  关闭CC防护每ip的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -489,7 +489,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 关闭CC防护每ip的限速
+        ///  关闭CC防护每ip的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -499,7 +499,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 网站类规则开启CC
+        ///  网站类规则开启CC
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -508,7 +508,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 网站类规则开启CC
+        ///  网站类规则开启CC
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -518,7 +518,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除某条网站规则
+        ///  删除某条网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -527,7 +527,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 删除某条网站规则
+        ///  删除某条网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -537,7 +537,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建实例
+        ///  创建实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -546,7 +546,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 创建实例
+        ///  创建实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -556,7 +556,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 设置实例url白名单
+        ///  设置实例url白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -565,7 +565,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 设置实例url白名单
+        ///  设置实例url白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -575,7 +575,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 添加网站类规则
+        ///  添加网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -584,7 +584,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 添加网站类规则
+        ///  添加网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -594,7 +594,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 网站类规则切换成防御状态
+        ///  网站类规则切换成防御状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -603,7 +603,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 网站类规则切换成防御状态
+        ///  网站类规则切换成防御状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -613,7 +613,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询某条非网站类规则
+        ///  查询某条非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -622,7 +622,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询某条非网站类规则
+        ///  查询某条非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -632,7 +632,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 网站类规则切换成回源状态
+        ///  网站类规则切换成回源状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -641,7 +641,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 网站类规则切换成回源状态
+        ///  网站类规则切换成回源状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -651,7 +651,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 转发流量报表
+        ///  转发流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -660,7 +660,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 转发流量报表
+        ///  转发流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -670,7 +670,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 设置实例ip白名单
+        ///  设置实例ip白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -679,7 +679,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 设置实例ip白名单
+        ///  设置实例ip白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -689,7 +689,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询DDos攻击日志
+        ///  查询DDos攻击日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -698,7 +698,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询DDos攻击日志
+        ///  查询DDos攻击日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -708,7 +708,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 设置实例ip黑名单
+        ///  设置实例ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -717,7 +717,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 设置实例ip黑名单
+        ///  设置实例ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -727,7 +727,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 网站类规则禁用CC
+        ///  网站类规则禁用CC
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -736,7 +736,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 网站类规则禁用CC
+        ///  网站类规则禁用CC
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -746,7 +746,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 禁用实例url白名单
+        ///  禁用实例url白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -755,7 +755,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 禁用实例url白名单
+        ///  禁用实例url白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -765,7 +765,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 启用实例ip白名单
+        ///  启用实例ip白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -774,7 +774,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 启用实例ip白名单
+        ///  启用实例ip白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -784,7 +784,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 转发流量报表
+        ///  转发流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -793,7 +793,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 转发流量报表
+        ///  转发流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -803,7 +803,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 删除某条非网站规则
+        ///  删除某条非网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -812,7 +812,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 删除某条非网站规则
+        ///  删除某条非网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -822,7 +822,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 更新某条网站类规则
+        ///  更新某条网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -831,7 +831,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 更新某条网站类规则
+        ///  更新某条网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -841,7 +841,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 设置实例CC防护每ip限速
+        ///  设置实例CC防护每ip限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -850,7 +850,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 设置实例CC防护每ip限速
+        ///  设置实例CC防护每ip限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -860,7 +860,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询cc攻击日志
+        ///  查询cc攻击日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -869,7 +869,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询cc攻击日志
+        ///  查询cc攻击日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -879,7 +879,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 启用实例ip黑名单
+        ///  启用实例ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -888,7 +888,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 启用实例ip黑名单
+        ///  启用实例ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -898,7 +898,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询实例列表
+        ///  查询实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -907,7 +907,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询实例列表
+        ///  查询实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -917,7 +917,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询cc攻击日志详情
+        ///  查询cc攻击日志详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -926,7 +926,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 查询cc攻击日志详情
+        ///  查询cc攻击日志详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -936,7 +936,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 开启CC防护每ip的限速
+        ///  开启CC防护每ip的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -945,7 +945,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        /// 开启CC防护每ip的限速
+        ///  开启CC防护每ip的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -993,7 +993,7 @@ namespace JDCloudSDK.Ipanti.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// IpantiClient service client
+                ///  IpantiClient service client
                 /// </summary>
                 private  IpantiClient ipantiClient;
 

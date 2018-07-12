@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像限制
+    ///  查询镜像限制
     /// </summary>
     public class DescribeImageConstraintsResult : JdcloudResult
     {
         ///<summary>
-        ///镜像限制
+        /// 镜像限制
         ///</summary>
         public   ImageConstraint ImageConstraints{ get; set; }
     }

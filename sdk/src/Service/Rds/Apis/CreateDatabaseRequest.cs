@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 创建数据库
+    ///  创建数据库
     /// </summary>
     public class CreateDatabaseRequest : JdcloudRequest
     {
         ///<summary>
-        ///数据库名称
+        /// 数据库名称
         ///Required:true
         ///</summary>
         [Required]
         public   string DbName{ get; set; }
         ///<summary>
-        ///字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+        /// 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
         ///Required:true
         ///</summary>
         [Required]
         public   string CharacterSetName{ get; set; }
         ///<summary>
-        ///区域代码
+        /// 区域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 删除数据表
+    ///  删除数据表
     /// </summary>
     public class DeleteTableResponse : JdcloudResponse<DeleteTableResult>
     {

@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询（虚机、镜像、密钥、模板）配额
+    ///  查询（虚机、镜像、密钥、模板）配额
     /// </summary>
     public class DescribeQuotasResult : JdcloudResult
     {
         ///<summary>
-        ///Quotas
+        /// Quotas
         ///</summary>
         public List<Quota> Quotas{ get; set; }
 

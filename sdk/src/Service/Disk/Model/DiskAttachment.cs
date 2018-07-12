@@ -32,33 +32,33 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// diskAttachment
+    ///  diskAttachment
     /// </summary>
     public class DiskAttachment
     {
 
         ///<summary>
-        ///挂载ID
+        /// 挂载ID
         ///</summary>
         public string AttachmentId{ get; set; }
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
-        ///挂载实例的类型，取值为 vm、nc
+        /// 挂载实例的类型，取值为 vm、nc
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        ///挂载实例的ID
+        /// 挂载实例的ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        ///挂载状态，取值为 &quot;attaching&quot;, &quot;attached&quot;, &quot;detaching&quot;, &quot;detached&quot;
+        /// 挂载状态，取值为 &quot;attaching&quot;, &quot;attached&quot;, &quot;detaching&quot;, &quot;detached&quot;
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///挂载时间
+        /// 挂载时间
         ///</summary>
         public string AttachTime{ get; set; }
     }

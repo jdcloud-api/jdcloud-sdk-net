@@ -33,31 +33,31 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// getSessionTokenInfo
+    ///  getSessionTokenInfo
     /// </summary>
     public class GetSessionTokenInfo
     {
 
         ///<summary>
-        ///操作保护验证方式：1-短信,2-邮箱,3-MFA
+        /// 操作保护验证方式：1-短信,2-邮箱,3-MFA
         ///Required:true
         ///</summary>
         [Required]
         public int Type{ get; set; }
         ///<summary>
-        ///验证码
+        /// 验证码
         ///Required:true
         ///</summary>
         [Required]
         public string Code{ get; set; }
         ///<summary>
-        ///操作action
+        /// 操作action
         ///Required:true
         ///</summary>
         [Required]
         public string BusinessAction{ get; set; }
         ///<summary>
-        ///令牌有效期，单位秒，OpenAPI第三方MFA方式验证有效，默认短信、邮箱token有效期300秒，MFA有效期30秒
+        /// 令牌有效期，单位秒，OpenAPI第三方MFA方式验证有效，默认短信、邮箱token有效期300秒，MFA有效期30秒
         ///</summary>
         public int? DurationSeconds{ get; set; }
     }

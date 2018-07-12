@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询容器列表
+    ///  查询容器列表
     /// </summary>
     public class DescribeContainersResponse : JdcloudResponse<DescribeContainersResult>
     {

@@ -32,41 +32,41 @@ namespace JDCloudSDK.Vpc.Model
 {
 
     /// <summary>
-    /// vpc
+    ///  vpc
     /// </summary>
     public class Vpc
     {
 
         ///<summary>
-        ///Vpc的Id
+        /// Vpc的Id
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        ///如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
+        /// 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
         ///</summary>
         public string AddressPrefix{ get; set; }
         ///<summary>
-        ///VPC 描述，取值范围：1~120个字符
+        /// VPC 描述，取值范围：1~120个字符
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
+        /// 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
-        ///AclIds
+        /// AclIds
         ///</summary>
         public List<string> AclIds{ get; set; }
         ///<summary>
-        ///RouteTableIds
+        /// RouteTableIds
         ///</summary>
         public List<string> RouteTableIds{ get; set; }
         ///<summary>
-        ///私有网络包含的子网列表
+        /// 私有网络包含的子网列表
         ///</summary>
         public List<Subnet> Subnets{ get; set; }
         ///<summary>
-        ///vpc创建时间
+        /// vpc创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
     }

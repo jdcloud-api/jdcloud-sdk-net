@@ -33,19 +33,19 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// resource
+    ///  resource
     /// </summary>
     public class Resource
     {
 
         ///<summary>
-        ///资源id集合，传*表示对所有id生效
+        /// 资源id集合，传*表示对所有id生效
         ///Required:true
         ///</summary>
         [Required]
         public List<string> Ids{ get; set; }
         ///<summary>
-        ///资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
+        /// 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
         ///Required:true
         ///</summary>
         [Required]

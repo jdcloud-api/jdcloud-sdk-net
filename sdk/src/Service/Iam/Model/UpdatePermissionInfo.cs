@@ -33,23 +33,23 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// updatePermissionInfo
+    ///  updatePermissionInfo
     /// </summary>
     public class UpdatePermissionInfo
     {
 
         ///<summary>
-        ///权限名称，1~32位数字、字符、中文、中划线、下划线
+        /// 权限名称，1~32位数字、字符、中文、中划线、下划线
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///描述，0~256个字符
+        /// 描述，0~256个字符
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///权限详细信息
+        /// 权限详细信息
         ///Required:true
         ///</summary>
         [Required]

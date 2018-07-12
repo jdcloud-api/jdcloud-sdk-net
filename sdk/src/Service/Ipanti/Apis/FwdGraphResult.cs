@@ -33,22 +33,22 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 转发流量报表
+    ///  转发流量报表
     /// </summary>
     public class FwdGraphResult : JdcloudResult
     {
         ///<summary>
-        ///ForwardRecord
+        /// ForwardRecord
         ///</summary>
         public List<float?> ForwardRecord{ get; set; }
 
         ///<summary>
-        ///Time
+        /// Time
         ///</summary>
         public List<long?> Time{ get; set; }
 
         ///<summary>
-        ///单位
+        /// 单位
         ///</summary>
         public   string Unit{ get; set; }
     }

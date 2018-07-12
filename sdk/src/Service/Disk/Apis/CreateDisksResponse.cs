@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 创建一块或多块云硬盘
+    ///  创建一块或多块云硬盘
     /// </summary>
     public class CreateDisksResponse : JdcloudResponse<CreateDisksResult>
     {

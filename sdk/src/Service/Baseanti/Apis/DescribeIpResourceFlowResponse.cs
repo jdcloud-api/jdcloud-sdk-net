@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询公网Ip的监控流量
+    ///  查询公网Ip的监控流量
     /// </summary>
     public class DescribeIpResourceFlowResponse : JdcloudResponse<DescribeIpResourceFlowResult>
     {

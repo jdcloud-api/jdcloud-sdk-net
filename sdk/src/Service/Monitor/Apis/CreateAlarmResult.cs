@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+    ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
     /// </summary>
     public class CreateAlarmResult : JdcloudResult
     {
         ///<summary>
-        ///AlarmIdList
+        /// AlarmIdList
         ///</summary>
         public List<string> AlarmIdList{ get; set; }
 

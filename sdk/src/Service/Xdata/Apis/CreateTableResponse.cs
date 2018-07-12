@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 创建数据表
+    ///  创建数据表
     /// </summary>
     public class CreateTableResponse : JdcloudResponse<CreateTableResult>
     {

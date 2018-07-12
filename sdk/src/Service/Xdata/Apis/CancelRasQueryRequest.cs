@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 终止查询
+    ///  终止查询
     /// </summary>
     public class CancelRasQueryRequest : JdcloudRequest
     {
         ///<summary>
-        ///用户名称
+        /// 用户名称
         ///Required:true
         ///</summary>
         [Required]
         public   string UserName{ get; set; }
         ///<summary>
-        ///查询id
+        /// 查询id
         ///Required:true
         ///</summary>
         [Required]
         public   string QueryId{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

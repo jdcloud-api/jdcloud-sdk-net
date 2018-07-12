@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// ddos防护报表
+    ///  ddos防护报表
     /// </summary>
     public class DdosGraphResponse : JdcloudResponse<DdosGraphResult>
     {

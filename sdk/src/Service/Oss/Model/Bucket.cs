@@ -33,19 +33,19 @@ namespace JDCloudSDK.Oss.Model
 {
 
     /// <summary>
-    /// bucket
+    ///  bucket
     /// </summary>
     public class Bucket
     {
 
         ///<summary>
-        ///Name
+        /// Name
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        ///CreationDate
+        /// CreationDate
         ///</summary>
         public string CreationDate{ get; set; }
     }

@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 创建实例
+    ///  创建实例
     /// </summary>
     public class CreateInstanceResult : JdcloudResult
     {
         ///<summary>
-        ///InstanceId
+        /// InstanceId
         ///</summary>
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///OrderId
+        /// OrderId
         ///</summary>
         public   string OrderId{ get; set; }
     }

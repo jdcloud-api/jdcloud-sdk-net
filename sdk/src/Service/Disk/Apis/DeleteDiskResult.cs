@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 删除单个云硬盘
+    ///  删除单个云硬盘
     /// </summary>
     public class DeleteDiskResult : JdcloudResult
     {

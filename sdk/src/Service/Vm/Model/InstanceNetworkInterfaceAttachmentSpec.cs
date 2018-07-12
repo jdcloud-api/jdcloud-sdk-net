@@ -33,17 +33,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceNetworkInterfaceAttachmentSpec
+    ///  instanceNetworkInterfaceAttachmentSpec
     /// </summary>
     public class InstanceNetworkInterfaceAttachmentSpec
     {
 
         ///<summary>
-        ///设备Index，主网卡只能是1
+        /// 设备Index，主网卡只能是1
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        ///网卡接口规范
+        /// 网卡接口规范
         ///</summary>
         public NetworkInterfaceSpec NetworkInterface{ get; set; }
     }

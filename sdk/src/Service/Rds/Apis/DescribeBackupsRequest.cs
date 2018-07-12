@@ -34,50 +34,50 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 获取备份信息
+    ///  获取备份信息
     /// </summary>
     public class DescribeBackupsRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///查询备份类型，0为手动备份，1为自动备份，不传表示全部. - 测试参数，后续可能被其他参数取代
+        /// 查询备份类型，0为手动备份，1为自动备份，不传表示全部. - 测试参数，后续可能被其他参数取代
         ///</summary>
         public   int? Auto{ get; set; }
         ///<summary>
-        ///返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份- 测试参数，后续可能被其他参数取代
+        /// 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份- 测试参数，后续可能被其他参数取代
         ///</summary>
         public   string BackupTypeFilter{ get; set; }
         ///<summary>
-        ///返回dbName等于指定值的备份列表，不传或为空返回全部- 测试参数，后续可能被其他参数取代
+        /// 返回dbName等于指定值的备份列表，不传或为空返回全部- 测试参数，后续可能被其他参数取代
         ///</summary>
         public   string DbNameFilter{ get; set; }
         ///<summary>
-        ///返回备份开始时间大于该时间的备份列表- 测试参数，后续可能被其他参数取代
+        /// 返回备份开始时间大于该时间的备份列表- 测试参数，后续可能被其他参数取代
         ///</summary>
         public   string BackupTimeRangeStartFilter{ get; set; }
         ///<summary>
-        ///返回备份开始时间小于等于该时间的备份列表- 测试参数，后续可能被其他参数取代
+        /// 返回备份开始时间小于等于该时间的备份列表- 测试参数，后续可能被其他参数取代
         ///</summary>
         public   string BackupTimeRangeEndFilter{ get; set; }
         ///<summary>
-        ///显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+        /// 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
         ///Required:true
         ///</summary>
         [Required]
         public   int PageNumber{ get; set; }
         ///<summary>
-        ///每页显示的数据条数，取值范围：10/20/30/50/100
+        /// 每页显示的数据条数，取值范围：10/20/30/50/100
         ///Required:true
         ///</summary>
         [Required]
         public   int PageSize{ get; set; }
         ///<summary>
-        ///地域代码
+        /// 地域代码
         ///Required:true
         ///</summary>
         [Required]

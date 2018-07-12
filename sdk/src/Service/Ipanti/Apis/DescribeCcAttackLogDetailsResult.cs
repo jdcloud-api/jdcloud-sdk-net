@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询cc攻击日志详情
+    ///  查询cc攻击日志详情
     /// </summary>
     public class DescribeCcAttackLogDetailsResult : JdcloudResult
     {
         ///<summary>
-        ///DataList
+        /// DataList
         ///</summary>
         public List<CCAttackLogDetail> DataList{ get; set; }
 
         ///<summary>
-        ///TotalCount
+        /// TotalCount
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

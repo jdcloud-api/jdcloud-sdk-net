@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 为指定云硬盘创建快照,新生成的快照的状态为creating
+    ///  为指定云硬盘创建快照,新生成的快照的状态为creating
     /// </summary>
     public class CreateSnapshotResult : JdcloudResult
     {
         ///<summary>
-        ///创建的快照ID
+        /// 创建的快照ID
         ///</summary>
         public   string SnapshotId{ get; set; }
     }

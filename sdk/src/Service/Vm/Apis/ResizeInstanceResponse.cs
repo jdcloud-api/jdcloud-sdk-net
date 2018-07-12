@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// &quot;云主机变更实例规格，需要关机操作&quot;
-        ///        ///&quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-        ///        ///&quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-        ///        ///&quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
-        ///        ///&quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
-        ///        ///
+    ///  &quot;云主机变更实例规格，需要关机操作&quot;
+        ///         /// &quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
+        ///         /// &quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
+        ///         /// &quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
+        ///         /// &quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
+        ///         /// 
     /// </summary>
     public class ResizeInstanceResponse : JdcloudResponse<ResizeInstanceResult>
     {

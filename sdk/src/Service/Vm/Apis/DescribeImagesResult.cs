@@ -34,17 +34,17 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像资源信息列表
+    ///  查询镜像资源信息列表
     /// </summary>
     public class DescribeImagesResult : JdcloudResult
     {
         ///<summary>
-        ///Images
+        /// Images
         ///</summary>
         public List<Image> Images{ get; set; }
 
         ///<summary>
-        ///总数量
+        /// 总数量
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

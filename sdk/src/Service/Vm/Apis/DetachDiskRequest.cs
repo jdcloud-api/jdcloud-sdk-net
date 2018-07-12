@@ -34,28 +34,28 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+    ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
     /// </summary>
     public class DetachDiskRequest : JdcloudRequest
     {
         ///<summary>
-        ///云硬盘ID
+        /// 云硬盘ID
         ///Required:true
         ///</summary>
         [Required]
         public   string DiskId{ get; set; }
         ///<summary>
-        ///强制缷载，默认False
+        /// 强制缷载，默认False
         ///</summary>
         public   bool Force{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

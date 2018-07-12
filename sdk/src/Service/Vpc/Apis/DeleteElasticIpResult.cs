@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 删除弹性Ip
+    ///  删除弹性Ip
     /// </summary>
     public class DeleteElasticIpResult : JdcloudResult
     {

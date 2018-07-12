@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 查看备份
+    ///  查看备份
     /// </summary>
     public class DescribeBackupsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查看备份接口的Http 请求方法
+        ///  查看备份接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 查看备份接口的Http资源请求路径
+        ///  查看备份接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

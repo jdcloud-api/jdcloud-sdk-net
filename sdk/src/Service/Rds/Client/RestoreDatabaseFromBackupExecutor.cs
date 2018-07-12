@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    /// 从云数据库SQL Server备份中恢复单个数据库
+    ///  从云数据库SQL Server备份中恢复单个数据库
     /// </summary>
     public class RestoreDatabaseFromBackupExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 从云数据库SQL Server备份中恢复单个数据库接口的Http 请求方法
+        ///  从云数据库SQL Server备份中恢复单个数据库接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        /// 从云数据库SQL Server备份中恢复单个数据库接口的Http资源请求路径
+        ///  从云数据库SQL Server备份中恢复单个数据库接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

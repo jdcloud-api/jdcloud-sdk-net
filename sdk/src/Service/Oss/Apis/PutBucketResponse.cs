@@ -33,8 +33,8 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 创建bucket
-        ///        ///
+    ///  创建bucket
+        ///         /// 
     /// </summary>
     public class PutBucketResponse : JdcloudResponse<PutBucketResult>
     {

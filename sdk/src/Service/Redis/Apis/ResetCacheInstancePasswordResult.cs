@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 重置缓存Redis实例密码
+    ///  重置缓存Redis实例密码
     /// </summary>
     public class ResetCacheInstancePasswordResult : JdcloudResult
     {

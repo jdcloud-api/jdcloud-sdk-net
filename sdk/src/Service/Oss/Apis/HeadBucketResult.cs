@@ -33,8 +33,8 @@ namespace  JDCloudSDK.Oss.Apis
 {
 
     /// <summary>
-    /// 查询bucket是否存在
-        ///        ///
+    ///  查询bucket是否存在
+        ///         /// 
     /// </summary>
     public class HeadBucketResult : JdcloudResult
     {

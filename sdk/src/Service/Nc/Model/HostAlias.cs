@@ -33,19 +33,19 @@ namespace JDCloudSDK.Nc.Model
 {
 
     /// <summary>
-    /// 域名和IP映射的信息
+    ///  域名和IP映射的信息
     /// </summary>
     public class HostAlias
     {
 
         ///<summary>
-        ///域名列表
+        /// 域名列表
         ///Required:true
         ///</summary>
         [Required]
         public List<string> Hostnames{ get; set; }
         ///<summary>
-        ///IP地址
+        /// IP地址
         ///Required:true
         ///</summary>
         [Required]

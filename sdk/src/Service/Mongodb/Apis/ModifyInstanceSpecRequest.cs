@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 变更实例规格
+    ///  变更实例规格
     /// </summary>
     public class ModifyInstanceSpecRequest : JdcloudRequest
     {
         ///<summary>
-        ///实例规格，包年包月不允许小于当前规格。
+        /// 实例规格，包年包月不允许小于当前规格。
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceClass{ get; set; }
         ///<summary>
-        ///存储空间，包年包月不允许小于当前规格。
+        /// 存储空间，包年包月不允许小于当前规格。
         ///Required:true
         ///</summary>
         [Required]
         public   int InstanceStorageGB{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Instance ID
+        /// Instance ID
         ///Required:true
         ///</summary>
         [Required]

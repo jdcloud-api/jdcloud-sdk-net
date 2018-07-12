@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 获取备份策略
+    ///  获取备份策略
     /// </summary>
     public class DescribeBackupPolicyExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 获取备份策略接口的Http 请求方法
+        ///  获取备份策略接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 获取备份策略接口的Http资源请求路径
+        ///  获取备份策略接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

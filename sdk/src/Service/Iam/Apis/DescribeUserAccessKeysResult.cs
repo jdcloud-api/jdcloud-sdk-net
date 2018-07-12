@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 查询AccessKey列表
+    ///  查询AccessKey列表
     /// </summary>
     public class DescribeUserAccessKeysResult : JdcloudResult
     {
         ///<summary>
-        ///UserAccessKeys
+        /// UserAccessKeys
         ///</summary>
         public List<UserAccessKey> UserAccessKeys{ get; set; }
 

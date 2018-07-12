@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 删除AccessKey
+    ///  删除AccessKey
     /// </summary>
     public class DeleteUserAccessKeyRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///accessKey
+        /// accessKey
         ///Required:true
         ///</summary>
         [Required]

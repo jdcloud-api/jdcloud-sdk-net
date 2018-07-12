@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    /// 为子用户绑定策略
+    ///  为子用户绑定策略
     /// </summary>
     public class AddPermissionsToSubUserResponse : JdcloudResponse<AddPermissionsToSubUserResult>
     {

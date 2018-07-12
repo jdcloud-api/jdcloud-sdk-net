@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 查看备份
+    ///  查看备份
     /// </summary>
     public class DescribeBackupsResponse : JdcloudResponse<DescribeBackupsResult>
     {

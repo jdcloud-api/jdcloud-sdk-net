@@ -33,19 +33,19 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    /// createAlarmBody
+    ///  createAlarmBody
     /// </summary>
     public class CreateAlarmBody
     {
 
         ///<summary>
-        ///幂等性校验参数，最长32位，值不变则返回值不会变
+        /// 幂等性校验参数，最长32位，值不变则返回值不会变
         ///Required:true
         ///</summary>
         [Required]
         public string ClientToken{ get; set; }
         ///<summary>
-        ///CreateAlarmSpec
+        /// CreateAlarmSpec
         ///Required:true
         ///</summary>
         [Required]

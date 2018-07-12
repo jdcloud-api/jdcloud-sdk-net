@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 非网站类规则切换成回源状态
+    ///  非网站类规则切换成回源状态
     /// </summary>
     public class SwitchForwardRuleOriginRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///转发规则id
+        /// 转发规则id
         ///Required:true
         ///</summary>
         [Required]

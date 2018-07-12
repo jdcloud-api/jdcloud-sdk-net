@@ -313,13 +313,13 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "restore": {
-      "projectUniqueName": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
+      "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
       "projectName": "JDCloudSDK.Core",
-      "projectPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
+      "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
       "packagesPath": "C:\\Users\\lishijun1\\.nuget\\packages\\",
-      "outputPath": "D:\\charp-sdk-github\\jdcloud-sdk-net\\sdk\\src\\Core\\obj\\",
+      "outputPath": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

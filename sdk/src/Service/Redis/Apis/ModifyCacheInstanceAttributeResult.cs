@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 修改缓存Redis实例的资源名称、描述，二者至少选一
+    ///  修改缓存Redis实例的资源名称、描述，二者至少选一
     /// </summary>
     public class ModifyCacheInstanceAttributeResult : JdcloudResult
     {

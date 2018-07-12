@@ -33,12 +33,12 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    /// 创建一台或多台指定配置的实例
+    ///  创建一台或多台指定配置的实例
     /// </summary>
     public class CreateContainersExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建一台或多台指定配置的实例接口的Http 请求方法
+        ///  创建一台或多台指定配置的实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        /// 创建一台或多台指定配置的实例接口的Http资源请求路径
+        ///  创建一台或多台指定配置的实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

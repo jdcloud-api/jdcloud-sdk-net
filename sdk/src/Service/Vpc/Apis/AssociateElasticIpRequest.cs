@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡绑定弹性Ip接口
+    ///  给网卡绑定弹性Ip接口
     /// </summary>
     public class AssociateElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        ///绑定的弹性Ip Id
+        /// 绑定的弹性Ip Id
         ///</summary>
         public   string ElasticIpId{ get; set; }
         ///<summary>
-        ///绑定弹性Ip到指定的privateIp
+        /// 绑定弹性Ip到指定的privateIp
         ///</summary>
         public   string PrivateIpAddress{ get; set; }
         ///<summary>
-        ///绑定的弹性Ip地址
+        /// 绑定的弹性Ip地址
         ///</summary>
         public   string ElasticIpAddress{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///networkInterface ID
+        /// networkInterface ID
         ///Required:true
         ///</summary>
         [Required]

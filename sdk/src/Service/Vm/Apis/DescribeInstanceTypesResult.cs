@@ -34,22 +34,22 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询实例类型资源信息列表
+    ///  查询实例类型资源信息列表
     /// </summary>
     public class DescribeInstanceTypesResult : JdcloudResult
     {
         ///<summary>
-        ///InstanceTypes
+        /// InstanceTypes
         ///</summary>
         public List<InstanceType> InstanceTypes{ get; set; }
 
         ///<summary>
-        ///SpecificInstanceTypes
+        /// SpecificInstanceTypes
         ///</summary>
         public List<InstanceType> SpecificInstanceTypes{ get; set; }
 
         ///<summary>
-        ///总数量
+        /// 总数量
         ///</summary>
         public   int? TotalCount{ get; set; }
     }

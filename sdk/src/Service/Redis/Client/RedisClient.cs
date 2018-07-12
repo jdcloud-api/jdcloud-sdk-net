@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Redis.Client
 {
     /// <summary>
-    /// 京东云缓存Redis接口
-    /// 缓存Redis相关接口
-    /// Redis Api 客户端
+    ///  京东云缓存Redis接口
+    ///  缓存Redis相关接口
+    ///  Redis Api 客户端
     ///</summary>
     public class RedisClient : JdcloudClient
     {
@@ -138,45 +138,7 @@ namespace JDCloudSDK.Redis.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 修改账户配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyUserQuotaResponse ModifyUserQuota(ModifyUserQuotaRequest request) {
-            return  new ModifyUserQuotaExecutor().Client(this).Execute<ModifyUserQuotaResponse, ModifyUserQuotaResult, ModifyUserQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改账户配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyUserQuotaResponse> ModifyUserQuota(ModifyUserQuotaRequest request) {
-            return await new ModifyUserQuotaExecutor().Client(this).Execute<ModifyUserQuotaResponse, ModifyUserQuotaResult, ModifyUserQuotaRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询订单状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOrderStatusResponse DescribeOrderStatus(DescribeOrderStatusRequest request) {
-            return  new DescribeOrderStatusExecutor().Client(this).Execute<DescribeOrderStatusResponse, DescribeOrderStatusResult, DescribeOrderStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 查询订单状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOrderStatusResponse> DescribeOrderStatus(DescribeOrderStatusRequest request) {
-            return await new DescribeOrderStatusExecutor().Client(this).Execute<DescribeOrderStatusResponse, DescribeOrderStatusResult, DescribeOrderStatusRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 查询缓存Redis实例详情
+        ///  查询缓存Redis实例详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +147,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 查询缓存Redis实例详情
+        ///  查询缓存Redis实例详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +157,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询缓存Redis实例列表
+        ///  查询缓存Redis实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +166,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 查询缓存Redis实例列表
+        ///  查询缓存Redis实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +176,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询某区域下的实例规格列表
+        ///  查询某区域下的实例规格列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +185,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 查询某区域下的实例规格列表
+        ///  查询某区域下的实例规格列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +195,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改缓存Redis实例的资源名称、描述，二者至少选一
+        ///  修改缓存Redis实例的资源名称、描述，二者至少选一
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +204,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 修改缓存Redis实例的资源名称、描述，二者至少选一
+        ///  修改缓存Redis实例的资源名称、描述，二者至少选一
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +214,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询账户配额信息
+        ///  查询账户配额信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +223,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 查询账户配额信息
+        ///  查询账户配额信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +233,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 重置缓存Redis实例密码
+        ///  重置缓存Redis实例密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +242,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 重置缓存Redis实例密码
+        ///  重置缓存Redis实例密码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,26 +252,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 修改规格
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceClassResponse ModifyInstanceClass(ModifyInstanceClassRequest request) {
-            return  new ModifyInstanceClassExecutor().Client(this).Execute<ModifyInstanceClassResponse, ModifyInstanceClassResult, ModifyInstanceClassRequest>(request);
-        }
-#else
-        /// <summary>
-        /// 修改规格
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceClassResponse> ModifyInstanceClass(ModifyInstanceClassRequest request) {
-            return await new ModifyInstanceClassExecutor().Client(this).Execute<ModifyInstanceClassResponse, ModifyInstanceClassResult, ModifyInstanceClassRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        /// 删除单个缓存Redis实例
+        ///  删除单个缓存Redis实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +261,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 删除单个缓存Redis实例
+        ///  删除单个缓存Redis实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +271,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建一个指定配置的缓存Redis实例
+        ///  创建一个指定配置的缓存Redis实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +280,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 创建一个指定配置的缓存Redis实例
+        ///  创建一个指定配置的缓存Redis实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +290,7 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 变更缓存Redis实例配置
+        ///  变更缓存Redis实例配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +299,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        /// 变更缓存Redis实例配置
+        ///  变更缓存Redis实例配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +347,7 @@ namespace JDCloudSDK.Redis.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// RedisClient service client
+                ///  RedisClient service client
                 /// </summary>
                 private  RedisClient redisClient;
 

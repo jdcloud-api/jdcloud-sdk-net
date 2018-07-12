@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 查询某个实例下的非网站转发配置
+    ///  查询某个实例下的非网站转发配置
     /// </summary>
     public class DescribeForwardRulesRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1
+        /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]

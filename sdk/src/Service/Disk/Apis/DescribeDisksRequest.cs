@@ -36,37 +36,37 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 查询云硬盘列表
+    ///  查询云硬盘列表
     /// </summary>
     public class DescribeDisksRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码, 默认为1, 取值范围：[1,∞)
+        /// 页码, 默认为1, 取值范围：[1,∞)
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///Tag筛选条件
+        /// Tag筛选条件
         ///</summary>
         public List<TagFilter> Tags{ get; set; }
 
         ///<summary>
-        ///diskId - 云硬盘ID，精确匹配，支持多个
-        ///diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd 或 premium-hdd
-        ///instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
-        ///instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
-        ///status - 可用区，精确匹配，支持多个
-        ///az - 云硬盘状态，精确匹配，支持多个
-        ///name - 云硬盘名称，模糊匹配，支持单个
-        ///
+        /// diskId - 云硬盘ID，精确匹配，支持多个
+        /// diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd 或 premium-hdd
+        /// instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
+        /// instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
+        /// status - 可用区，精确匹配，支持多个
+        /// az - 云硬盘状态，精确匹配，支持多个
+        /// name - 云硬盘名称，模糊匹配，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

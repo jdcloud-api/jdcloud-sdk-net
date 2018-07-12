@@ -32,13 +32,13 @@ namespace JDCloudSDK.Common.Model
 {
 
     /// <summary>
-    /// simpleResponses
+    ///  simpleResponses
     /// </summary>
     public class SimpleResponses
     {
 
         ///<summary>
-        ///Request ID
+        /// Request ID
         ///</summary>
         public string RequestId{ get; set; }
     }

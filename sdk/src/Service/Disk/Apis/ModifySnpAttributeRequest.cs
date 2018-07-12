@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 修改快照的名字或描述信息
+    ///  修改快照的名字或描述信息
     /// </summary>
     public class ModifySnpAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        ///快照名称
+        /// 快照名称
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        ///快照描述，name和description必须要指定一个
+        /// 快照描述，name和description必须要指定一个
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///快照ID
+        /// 快照ID
         ///Required:true
         ///</summary>
         [Required]

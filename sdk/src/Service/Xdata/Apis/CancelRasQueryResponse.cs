@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 终止查询
+    ///  终止查询
     /// </summary>
     public class CancelRasQueryResponse : JdcloudResponse<CancelRasQueryResult>
     {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 从已有快照恢复一块云硬盘
+    ///  从已有快照恢复一块云硬盘
     /// </summary>
     public class RestoreDiskResult : JdcloudResult
     {

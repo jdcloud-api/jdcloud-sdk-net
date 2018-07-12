@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 删除 secret
+    ///  删除 secret
     /// </summary>
     public class DeleteSecretRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Secret Name
+        /// Secret Name
         ///Required:true
         ///</summary>
         [Required]

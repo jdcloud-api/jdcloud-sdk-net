@@ -33,21 +33,21 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    /// instanceTemplateNetworkInterfaceAttachmentSpec
+    ///  instanceTemplateNetworkInterfaceAttachmentSpec
     /// </summary>
     public class InstanceTemplateNetworkInterfaceAttachmentSpec
     {
 
         ///<summary>
-        ///设备Index；主网卡的index必须为1；当前仅支持主网卡
+        /// 设备Index；主网卡的index必须为1；当前仅支持主网卡
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        ///指明删除实例时是否删除网卡，默认true；当前只能是true
+        /// 指明删除实例时是否删除网卡，默认true；当前只能是true
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        ///网卡接口规范；此字段当前必填
+        /// 网卡接口规范；此字段当前必填
         ///Required:true
         ///</summary>
         [Required]

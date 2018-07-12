@@ -32,45 +32,45 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    /// instanceSpec
+    ///  instanceSpec
     /// </summary>
     public class InstanceSpec
     {
 
         ///<summary>
-        ///实例名称
+        /// 实例名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///购买类型：1新购 3升级
+        /// 购买类型：1新购 3升级
         ///</summary>
         public int? BuyType{ get; set; }
         ///<summary>
-        ///购买时长单位：3月 4年
+        /// 购买时长单位：3月 4年
         ///</summary>
         public int? TimeUnit{ get; set; }
         ///<summary>
-        ///购买时长跨度
+        /// 购买时长跨度
         ///</summary>
         public int? TimeSpan{ get; set; }
         ///<summary>
-        ///线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
+        /// 线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
         ///</summary>
         public string Carrier{ get; set; }
         ///<summary>
-        ///保底带宽：单位Gbps
+        /// 保底带宽：单位Gbps
         ///</summary>
         public int? Bp{ get; set; }
         ///<summary>
-        ///弹性带宽：单位Gbps
+        /// 弹性带宽：单位Gbps
         ///</summary>
         public int? Ep{ get; set; }
         ///<summary>
-        ///业务带宽：单位Mbps
+        /// 业务带宽：单位Mbps
         ///</summary>
         public int? Bw{ get; set; }
         ///<summary>
-        ///支付成功后跳转的页面，控制台交互模式传该字段
+        /// 支付成功后跳转的页面，控制台交互模式传该字段
         ///</summary>
         public string ReturnUrl{ get; set; }
     }

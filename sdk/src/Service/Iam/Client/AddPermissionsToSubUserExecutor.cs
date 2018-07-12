@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 为子用户绑定策略
+    ///  为子用户绑定策略
     /// </summary>
     public class AddPermissionsToSubUserExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 为子用户绑定策略接口的Http 请求方法
+        ///  为子用户绑定策略接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 为子用户绑定策略接口的Http资源请求路径
+        ///  为子用户绑定策略接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

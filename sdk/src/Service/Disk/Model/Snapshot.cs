@@ -32,37 +32,37 @@ namespace JDCloudSDK.Disk.Model
 {
 
     /// <summary>
-    /// 快照信息详情
+    ///  快照信息详情
     /// </summary>
     public class Snapshot
     {
 
         ///<summary>
-        ///云硬盘快照ID
+        /// 云硬盘快照ID
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        ///创建快照的云硬盘ID
+        /// 创建快照的云硬盘ID
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
-        ///快照大小，单位为GiB
+        /// 快照大小，单位为GiB
         ///</summary>
         public int? SnapshotSizeGB{ get; set; }
         ///<summary>
-        ///快照名称
+        /// 快照名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///快照描述
+        /// 快照描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        ///快照状态，取值为 creating、available、in-use、deleting、error_create、error_delete 之一
+        /// 快照状态，取值为 creating、available、in-use、deleting、error_create、error_delete 之一
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        ///创建时间
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
     }

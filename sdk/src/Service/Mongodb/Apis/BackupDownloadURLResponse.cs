@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Mongodb.Apis
 {
 
     /// <summary>
-    /// 获取备份下载链接
+    ///  获取备份下载链接
     /// </summary>
     public class BackupDownloadURLResponse : JdcloudResponse<BackupDownloadURLResult>
     {

@@ -39,9 +39,9 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Mps.Client
 {
     /// <summary>
-    /// 媒体处理 API
-    /// 媒体处理相关接口
-    /// Mps Api 客户端
+    ///  媒体处理 API
+    ///  媒体处理相关接口
+    ///  Mps Api 客户端
     ///</summary>
     public class MpsClient : JdcloudClient
     {
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Mps.Client
 
 #if NET40||NET35
         /// <summary>
-        /// 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
+        ///  设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        /// 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
+        ///  设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取截图通知
+        ///  获取截图通知
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        /// 获取截图通知
+        ///  获取截图通知
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 创建截图任务
+        ///  创建截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        /// 创建截图任务
+        ///  创建截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 获取截图任务
+        ///  获取截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        /// 获取截图任务
+        ///  获取截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        /// 查询截图任务
+        ///  查询截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        /// 查询截图任务
+        ///  查询截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Mps.Client
             public class DefaultBuilder : Builder
             {
                 /// <summary>
-                /// MpsClient service client
+                ///  MpsClient service client
                 /// </summary>
                 private  MpsClient mpsClient;
 

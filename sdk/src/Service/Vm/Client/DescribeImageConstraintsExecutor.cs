@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    /// 查询镜像限制
+    ///  查询镜像限制
     /// </summary>
     public class DescribeImageConstraintsExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询镜像限制接口的Http 请求方法
+        ///  查询镜像限制接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        /// 查询镜像限制接口的Http资源请求路径
+        ///  查询镜像限制接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

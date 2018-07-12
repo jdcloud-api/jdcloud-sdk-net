@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 从用户上传的备份文件中恢复SQL Server数据库
+    ///  从用户上传的备份文件中恢复SQL Server数据库
     /// </summary>
     public class RestoreDatabaseFromFileResponse : JdcloudResponse<RestoreDatabaseFromFileResult>
     {

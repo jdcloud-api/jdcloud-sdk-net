@@ -33,12 +33,12 @@ namespace JDCloudSDK.Streambus.Client
 {
 
     /// <summary>
-    /// 创建topic
+    ///  创建topic
     /// </summary>
     public class AddTopicExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建topic接口的Http 请求方法
+        ///  创建topic接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Streambus.Client
             }
         }
         /// <summary>
-        /// 创建topic接口的Http资源请求路径
+        ///  创建topic接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

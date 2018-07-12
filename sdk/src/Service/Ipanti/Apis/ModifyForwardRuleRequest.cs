@@ -35,30 +35,30 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 更新某条非网站类规则
+    ///  更新某条非网站类规则
     /// </summary>
     public class ModifyForwardRuleRequest : JdcloudRequest
     {
         ///<summary>
-        ///非网站类规则参数
+        /// 非网站类规则参数
         ///Required:true
         ///</summary>
         [Required]
         public   ForwardRuleSpec ForwardRuleSpec{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例id
+        /// 实例id
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///转发规则id
+        /// 转发规则id
         ///Required:true
         ///</summary>
         [Required]

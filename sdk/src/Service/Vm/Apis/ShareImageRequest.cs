@@ -34,27 +34,27 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// &quot;共享镜像，最多可共享给20个帐户&quot;
-        ///        ///&quot;打包镜像暂不支持共享&quot;
-        ///        ///&quot;不能操作非私有镜像&quot;
-        ///        ///&quot;不能共享给自己&quot;
-        ///        ///
+    ///  &quot;共享镜像，最多可共享给20个帐户&quot;
+        ///         /// &quot;打包镜像暂不支持共享&quot;
+        ///         /// &quot;不能操作非私有镜像&quot;
+        ///         /// &quot;不能共享给自己&quot;
+        ///         /// 
     /// </summary>
     public class ShareImageRequest : JdcloudRequest
     {
         ///<summary>
-        ///需要共享的帐户
+        /// 需要共享的帐户
         ///</summary>
         public List<string> Pins{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Image ID
+        /// Image ID
         ///Required:true
         ///</summary>
         [Required]

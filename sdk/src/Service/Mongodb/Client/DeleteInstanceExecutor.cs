@@ -33,12 +33,12 @@ namespace JDCloudSDK.Mongodb.Client
 {
 
     /// <summary>
-    /// 删除实例
+    ///  删除实例
     /// </summary>
     public class DeleteInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 删除实例接口的Http 请求方法
+        ///  删除实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mongodb.Client
             }
         }
         /// <summary>
-        /// 删除实例接口的Http资源请求路径
+        ///  删除实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

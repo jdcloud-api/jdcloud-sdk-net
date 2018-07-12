@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 关闭实例CC防护
+    ///  关闭实例CC防护
     /// </summary>
     public class DisableInstanceCCResponse : JdcloudResponse<DisableInstanceCCResult>
     {

@@ -34,22 +34,22 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 查询公网Ip的监控流量
+    ///  查询公网Ip的监控流量
     /// </summary>
     public class DescribeIpResourceFlowRequest : JdcloudRequest
     {
         ///<summary>
-        ///查询的结束时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 查询的结束时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///公网ip
+        /// 公网ip
         ///Required:true
         ///</summary>
         [Required]

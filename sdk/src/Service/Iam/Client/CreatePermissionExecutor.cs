@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    /// 创建策略
+    ///  创建策略
     /// </summary>
     public class CreatePermissionExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 创建策略接口的Http 请求方法
+        ///  创建策略接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        /// 创建策略接口的Http资源请求路径
+        ///  创建策略接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

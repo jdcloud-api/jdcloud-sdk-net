@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+    ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
     /// </summary>
     public class DisableAlarmExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。接口的Http 请求方法
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。接口的Http资源请求路径
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

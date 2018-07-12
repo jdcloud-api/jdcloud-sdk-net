@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 为指定云硬盘创建快照,新生成的快照的状态为creating
+    ///  为指定云硬盘创建快照,新生成的快照的状态为creating
     /// </summary>
     public class CreateSnapshotExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 为指定云硬盘创建快照,新生成的快照的状态为creating接口的Http 请求方法
+        ///  为指定云硬盘创建快照,新生成的快照的状态为creating接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 为指定云硬盘创建快照,新生成的快照的状态为creating接口的Http资源请求路径
+        ///  为指定云硬盘创建快照,新生成的快照的状态为creating接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

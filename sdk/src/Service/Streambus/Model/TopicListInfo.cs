@@ -32,65 +32,65 @@ namespace JDCloudSDK.Streambus.Model
 {
 
     /// <summary>
-    /// topicListInfo
+    ///  topicListInfo
     /// </summary>
     public class TopicListInfo
     {
 
         ///<summary>
-        ///是否归档（0：未归档，1：已归档）
+        /// 是否归档（0：未归档，1：已归档）
         ///</summary>
         public int? Archived{ get; set; }
         ///<summary>
-        ///创建topic的时间戳
+        /// 创建topic的时间戳
         ///</summary>
         public int? CreatedTime{ get; set; }
         ///<summary>
-        ///topic是否已删除（0：未删除，1：删除）
+        /// topic是否已删除（0：未删除，1：删除）
         ///</summary>
         public int? Deleted{ get; set; }
         ///<summary>
-        ///topic的id值
+        /// topic的id值
         ///</summary>
         public int? Id{ get; set; }
         ///<summary>
-        ///数据写入后的保留时间
+        /// 数据写入后的保留时间
         ///</summary>
         public int? Lifecycle{ get; set; }
         ///<summary>
-        ///流数据总线中topic的名字
+        /// 流数据总线中topic的名字
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        ///对应kafka中的分区数
+        /// 对应kafka中的分区数
         ///</summary>
         public string PartitionNum{ get; set; }
         ///<summary>
-        ///备注
+        /// 备注
         ///</summary>
         public string Remark{ get; set; }
         ///<summary>
-        ///流数据总线shard的数量
+        /// 流数据总线shard的数量
         ///</summary>
         public string ShardNum{ get; set; }
         ///<summary>
-        ///0: 已创建, 1: 创建中
+        /// 0: 已创建, 1: 创建中
         ///</summary>
         public int? Status{ get; set; }
         ///<summary>
-        ///对应kafka中的topic名字
+        /// 对应kafka中的topic名字
         ///</summary>
         public string TopicName{ get; set; }
         ///<summary>
-        ///对应kafka中的uid
+        /// 对应kafka中的uid
         ///</summary>
         public string Uid{ get; set; }
         ///<summary>
-        ///更新topic的时间戳
+        /// 更新topic的时间戳
         ///</summary>
         public int? UpdatedTime{ get; set; }
         ///<summary>
-        ///用户的userPin
+        /// 用户的userPin
         ///</summary>
         public string UserPin{ get; set; }
     }

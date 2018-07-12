@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 停止单个实例
+    ///  停止单个实例
     /// </summary>
     public class StopContainerRequest : JdcloudRequest
     {
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///Container ID
+        /// Container ID
         ///Required:true
         ///</summary>
         [Required]

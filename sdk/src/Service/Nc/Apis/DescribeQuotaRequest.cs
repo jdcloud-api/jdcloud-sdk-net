@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 查询资源的配额
+    ///  查询资源的配额
     /// </summary>
     public class DescribeQuotaRequest : JdcloudRequest
     {
         ///<summary>
-        ///资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
+        /// 资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
         ///Required:true
         ///</summary>
         [Required]
         public   string ResourceType{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]

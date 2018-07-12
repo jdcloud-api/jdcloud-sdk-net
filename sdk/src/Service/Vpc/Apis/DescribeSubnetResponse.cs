@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 查询子网信息详情
+    ///  查询子网信息详情
     /// </summary>
     public class DescribeSubnetResponse : JdcloudResponse<DescribeSubnetResult>
     {

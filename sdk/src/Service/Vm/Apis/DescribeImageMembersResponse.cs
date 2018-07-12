@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 查询镜像共享帐户列表，不能操作非私有镜像
+    ///  查询镜像共享帐户列表，不能操作非私有镜像
     /// </summary>
     public class DescribeImageMembersResponse : JdcloudResponse<DescribeImageMembersResult>
     {

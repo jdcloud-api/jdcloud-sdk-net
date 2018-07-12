@@ -34,23 +34,23 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    /// 给网卡删除secondaryIp接口
+    ///  给网卡删除secondaryIp接口
     /// </summary>
     public class UnassignSecondaryIpsRequest : JdcloudRequest
     {
         ///<summary>
-        ///指定删除的secondaryIp地址
+        /// 指定删除的secondaryIp地址
         ///</summary>
         public List<string> SecondaryIps{ get; set; }
 
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///networkInterface ID
+        /// networkInterface ID
         ///Required:true
         ///</summary>
         [Required]

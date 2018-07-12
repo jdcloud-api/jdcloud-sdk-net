@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    /// 重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
+    ///  重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
     /// </summary>
     public class RebootInstanceResult : JdcloudResult
     {

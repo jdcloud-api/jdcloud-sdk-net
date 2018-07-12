@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    /// 创建topic
+    ///  创建topic
     /// </summary>
     public class AddTopicResponse : JdcloudResponse<AddTopicResult>
     {

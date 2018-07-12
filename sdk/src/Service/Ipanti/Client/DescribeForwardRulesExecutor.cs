@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    /// 查询某个实例下的非网站转发配置
+    ///  查询某个实例下的非网站转发配置
     /// </summary>
     public class DescribeForwardRulesExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询某个实例下的非网站转发配置接口的Http 请求方法
+        ///  查询某个实例下的非网站转发配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        /// 查询某个实例下的非网站转发配置接口的Http资源请求路径
+        ///  查询某个实例下的非网站转发配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

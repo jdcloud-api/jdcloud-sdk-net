@@ -33,12 +33,12 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    /// 查看某资源的监控数据
+    ///  查看某资源的监控数据
     /// </summary>
     public class DescribeMetricDataExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查看某资源的监控数据接口的Http 请求方法
+        ///  查看某资源的监控数据接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        /// 查看某资源的监控数据接口的Http资源请求路径
+        ///  查看某资源的监控数据接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

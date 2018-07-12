@@ -28,31 +28,31 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Monitor.Model;
 using JDCloudSDK.Core.Annotation;
+using JDCloudSDK.Monitor.Model;
 
 namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+    ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
     /// </summary>
     public class CreateAlarmRequest : JdcloudRequest
     {
         ///<summary>
-        ///幂等性校验参数，最长32位，值不变则返回值不会变
+        /// 幂等性校验参数，最长32位，值不变则返回值不会变
         ///Required:true
         ///</summary>
         [Required]
         public   string ClientToken{ get; set; }
         ///<summary>
-        ///CreateAlarmSpec
+        /// CreateAlarmSpec
         ///Required:true
         ///</summary>
         [Required]
         public   CreateAlarmSpec CreateAlarmSpec{ get; set; }
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]

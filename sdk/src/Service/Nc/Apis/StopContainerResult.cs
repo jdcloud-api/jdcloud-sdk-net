@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    /// 停止单个实例
+    ///  停止单个实例
     /// </summary>
     public class StopContainerResult : JdcloudResult
     {

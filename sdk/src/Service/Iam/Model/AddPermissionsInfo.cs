@@ -33,13 +33,13 @@ namespace JDCloudSDK.Iam.Model
 {
 
     /// <summary>
-    /// addPermissionsInfo
+    ///  addPermissionsInfo
     /// </summary>
     public class AddPermissionsInfo
     {
 
         ///<summary>
-        ///权限id集合
+        /// 权限id集合
         ///Required:true
         ///</summary>
         [Required]

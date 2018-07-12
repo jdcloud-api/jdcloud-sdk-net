@@ -34,34 +34,34 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    /// 从用户上传的备份文件中恢复SQL Server数据库
+    ///  从用户上传的备份文件中恢复SQL Server数据库
     /// </summary>
     public class RestoreDatabaseFromFileRequest : JdcloudRequest
     {
         ///<summary>
-        ///共享文件的全局ID，可从上传文件查询接口describeImportFiles获取；如果该文件不是共享文件，则全局ID为空
+        /// 共享文件的全局ID，可从上传文件查询接口describeImportFiles获取；如果该文件不是共享文件，则全局ID为空
         ///</summary>
         public   string SharedFileGid{ get; set; }
         ///<summary>
-        ///用户在单库上云中上传的文件名称
+        /// 用户在单库上云中上传的文件名称
         ///Required:true
         ///</summary>
         [Required]
         public   string FileName{ get; set; }
         ///<summary>
-        ///区域代码
+        /// 区域代码
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///实例ID
+        /// 实例ID
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        ///库名称
+        /// 库名称
         ///Required:true
         ///</summary>
         [Required]

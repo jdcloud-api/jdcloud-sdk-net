@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vpc.Client
 {
 
     /// <summary>
-    /// ElasticIp资源信息详情
+    ///  ElasticIp资源信息详情
     /// </summary>
     public class DescribeElasticIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// ElasticIp资源信息详情接口的Http 请求方法
+        ///  ElasticIp资源信息详情接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vpc.Client
             }
         }
         /// <summary>
-        /// ElasticIp资源信息详情接口的Http资源请求路径
+        ///  ElasticIp资源信息详情接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -32,17 +32,17 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    /// 缓存Redis实例所在区域可用区ID信息
+    ///  缓存Redis实例所在区域可用区ID信息
     /// </summary>
     public class AzId
     {
 
         ///<summary>
-        ///缓存Redis主实例所在区域可用区ID
+        /// 缓存Redis主实例所在区域可用区ID
         ///</summary>
         public string Master{ get; set; }
         ///<summary>
-        ///缓存Redis从实例所在区域可用区ID
+        /// 缓存Redis从实例所在区域可用区ID
         ///</summary>
         public string Slave{ get; set; }
     }

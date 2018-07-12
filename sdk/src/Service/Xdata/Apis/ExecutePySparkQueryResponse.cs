@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    /// 执行PySpark脚本
+    ///  执行PySpark脚本
     /// </summary>
     public class ExecutePySparkQueryResponse : JdcloudResponse<ExecutePySparkQueryResult>
     {

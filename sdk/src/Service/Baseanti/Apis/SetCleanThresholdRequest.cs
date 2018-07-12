@@ -35,24 +35,24 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    /// 设置公网Ip的清洗阈值
+    ///  设置公网Ip的清洗阈值
     /// </summary>
     public class SetCleanThresholdRequest : JdcloudRequest
     {
         ///<summary>
-        ///cc参数
+        /// cc参数
         ///Required:true
         ///</summary>
         [Required]
         public   CleanThresholdSpec CleanThresholdSpec{ get; set; }
         ///<summary>
-        ///Region ID
+        /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///公网ip
+        /// 公网ip
         ///Required:true
         ///</summary>
         [Required]

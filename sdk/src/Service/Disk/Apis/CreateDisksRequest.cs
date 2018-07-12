@@ -35,30 +35,30 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    /// 创建一块或多块云硬盘
+    ///  创建一块或多块云硬盘
     /// </summary>
     public class CreateDisksRequest : JdcloudRequest
     {
         ///<summary>
-        ///创建云硬盘规格
+        /// 创建云硬盘规格
         ///Required:true
         ///</summary>
         [Required]
         public   DiskSpec DiskSpec{ get; set; }
         ///<summary>
-        ///购买实例数量；取值范围：[1,100]
+        /// 购买实例数量；取值范围：[1,100]
         ///Required:true
         ///</summary>
         [Required]
         public   int MaxCount{ get; set; }
         ///<summary>
-        ///幂等性校验参数
+        /// 幂等性校验参数
         ///Required:true
         ///</summary>
         [Required]
         public   string ClientToken{ get; set; }
         ///<summary>
-        ///地域ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

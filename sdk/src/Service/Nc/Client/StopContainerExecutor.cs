@@ -33,12 +33,12 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    /// 停止单个实例
+    ///  停止单个实例
     /// </summary>
     public class StopContainerExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 停止单个实例接口的Http 请求方法
+        ///  停止单个实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        /// 停止单个实例接口的Http资源请求路径
+        ///  停止单个实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -35,34 +35,34 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    /// 查询缓存Redis实例列表
+    ///  查询缓存Redis实例列表
     /// </summary>
     public class DescribeCacheInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        ///页码；默认为1
+        /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        ///分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        ///cacheInstanceId -实例Id，精确匹配，支持多个
-        ///cacheInstanceName - 实例名称，模糊匹配，支持单个
-        ///cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
-        ///
+        /// cacheInstanceId -实例Id，精确匹配，支持多个
+        /// cacheInstanceName - 实例名称，模糊匹配，支持单个
+        /// cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        ///createTime - 创建时间(asc：正序，desc：倒序)
-        ///
+        /// createTime - 创建时间(asc：正序，desc：倒序)
+        /// 
         ///</summary>
         public List<Sort> Sorts{ get; set; }
 
         ///<summary>
-        ///缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+        /// 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
         ///Required:true
         ///</summary>
         [Required]

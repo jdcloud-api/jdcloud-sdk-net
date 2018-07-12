@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    /// 查询实例列表
+    ///  查询实例列表
     /// </summary>
     public class ListInstanceInfoExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询实例列表接口的Http 请求方法
+        ///  查询实例列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        /// 查询实例列表接口的Http资源请求路径
+        ///  查询实例列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

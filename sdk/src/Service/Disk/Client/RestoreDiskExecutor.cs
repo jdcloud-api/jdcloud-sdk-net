@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    /// 从已有快照恢复一块云硬盘
+    ///  从已有快照恢复一块云硬盘
     /// </summary>
     public class RestoreDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 从已有快照恢复一块云硬盘接口的Http 请求方法
+        ///  从已有快照恢复一块云硬盘接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        /// 从已有快照恢复一块云硬盘接口的Http资源请求路径
+        ///  从已有快照恢复一块云硬盘接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

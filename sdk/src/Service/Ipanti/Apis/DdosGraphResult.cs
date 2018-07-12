@@ -33,27 +33,27 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// ddos防护报表
+    ///  ddos防护报表
     /// </summary>
     public class DdosGraphResult : JdcloudResult
     {
         ///<summary>
-        ///PostProtect
+        /// PostProtect
         ///</summary>
         public List<float?> PostProtect{ get; set; }
 
         ///<summary>
-        ///PreProtect
+        /// PreProtect
         ///</summary>
         public List<float?> PreProtect{ get; set; }
 
         ///<summary>
-        ///Time
+        /// Time
         ///</summary>
         public List<long?> Time{ get; set; }
 
         ///<summary>
-        ///单位
+        /// 单位
         ///</summary>
         public   string Unit{ get; set; }
     }

@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+    ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
     /// </summary>
     public class DisableAlarmRequest : JdcloudRequest
     {
         ///<summary>
-        ///地域 Id
+        /// 地域 Id
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        ///规则id
+        /// 规则id
         ///Required:true
         ///</summary>
         [Required]

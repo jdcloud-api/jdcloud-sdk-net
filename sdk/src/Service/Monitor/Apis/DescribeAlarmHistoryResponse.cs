@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    /// 查询报警历史
+    ///  查询报警历史
     /// </summary>
     public class DescribeAlarmHistoryResponse : JdcloudResponse<DescribeAlarmHistoryResult>
     {

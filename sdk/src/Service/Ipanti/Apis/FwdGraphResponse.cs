@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    /// 转发流量报表
+    ///  转发流量报表
     /// </summary>
     public class FwdGraphResponse : JdcloudResponse<FwdGraphResult>
     {

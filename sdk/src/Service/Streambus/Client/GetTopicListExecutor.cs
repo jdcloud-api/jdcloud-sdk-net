@@ -33,12 +33,12 @@ namespace JDCloudSDK.Streambus.Client
 {
 
     /// <summary>
-    /// 查询topic
+    ///  查询topic
     /// </summary>
     public class GetTopicListExecutor : JdcloudExecutor
     {
         /// <summary>
-        /// 查询topic接口的Http 请求方法
+        ///  查询topic接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Streambus.Client
             }
         }
         /// <summary>
-        /// 查询topic接口的Http资源请求路径
+        ///  查询topic接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
