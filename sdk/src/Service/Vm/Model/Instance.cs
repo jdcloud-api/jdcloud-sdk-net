@@ -72,7 +72,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        /// 实例状态
+        /// 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
         ///</summary>
         public string Status{ get; set; }
         ///<summary>

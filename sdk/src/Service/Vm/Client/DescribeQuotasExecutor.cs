@@ -52,7 +52,7 @@ namespace JDCloudSDK.Vm.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/regions/{regionId}/quotas";
+            return "/regions/{regionId}/quotas";
             }
         }
     }

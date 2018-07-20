@@ -61,6 +61,7 @@ namespace  JDCloudSDK.Vm.Apis
         /// status - 云主机状态，精确匹配，支持多个
         /// name - 实例名称，模糊匹配，支持单个
         /// imageId - 镜像ID，模糊匹配，支持单个
+        /// networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
         /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }

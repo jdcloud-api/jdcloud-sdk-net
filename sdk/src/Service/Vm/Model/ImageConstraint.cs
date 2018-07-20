@@ -38,6 +38,10 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
+        /// 镜像ID
+        ///</summary>
+        public string ImageId{ get; set; }
+        ///<summary>
         /// 镜像实例类型限制
         ///</summary>
         public ImageInstanceTypeConstraint ImageInstanceTypeConstraint{ get; set; }
