@@ -50,31 +50,31 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 备份状态，COMPLETED：备份完成，FAILED：备份失败，BUILDING：备份中，DELETING：删除中
+        /// 备份状态 &lt;/br&gt; COMPLETED：备份完成&lt;/br&gt;FAILED：备份失败&lt;/br&gt;BUILDING：备份中&lt;/br&gt;DELETING：删除中
         ///</summary>
         public string BackupStatus{ get; set; }
         ///<summary>
-        /// 备份开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 备份开始时间，格式为：YYYY-MM-DD HH:mm:ss
         ///</summary>
         public string BackupStartTime{ get; set; }
         ///<summary>
-        /// 备份结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
         ///</summary>
         public string BackupEndTime{ get; set; }
         ///<summary>
-        /// 备份类型，全量备份或增量备份，full：全量，diff：增量
+        /// 备份类型，全量备份或增量备份&lt;/br&gt;full：全量&lt;/br&gt;diff：增量
         ///</summary>
         public string BackupType{ get; set; }
         ///<summary>
-        /// 备份模式，系统自动备份或手动备份，Automated：自动备份  Manual：手工备份
+        /// 备份模式，系统自动备份或手动备份&lt;/br&gt;Automated：自动备份&lt;/br&gt;Manual：手工备份
         ///</summary>
         public string BackupMode{ get; set; }
         ///<summary>
-        /// 备份粒度，实例备份或者多库备份，instance：实例备份 ，dbs：数据库备份
+        /// 备份粒度，实例备份或者多库备份&lt;/br&gt;instance：实例备份&lt;/br&gt;dbs：数据库备份
         ///</summary>
         public string BackupUnit{ get; set; }
         ///<summary>
-        /// 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:全备:数据库名+.bak; 增量:数据库名+.diff
+        /// 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
         ///</summary>
         public List<string> BackupFiles{ get; set; }
         ///<summary>

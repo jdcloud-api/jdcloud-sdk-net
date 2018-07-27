@@ -44,7 +44,7 @@ namespace JDCloudSDK.Streambus.Model
         ///<summary>
         /// 创建topic的时间戳
         ///</summary>
-        public int? CreatedTime{ get; set; }
+        public string CreatedTime{ get; set; }
         ///<summary>
         /// topic是否已删除（0：未删除，1：删除）
         ///</summary>
@@ -88,10 +88,14 @@ namespace JDCloudSDK.Streambus.Model
         ///<summary>
         /// 更新topic的时间戳
         ///</summary>
-        public int? UpdatedTime{ get; set; }
+        public string UpdatedTime{ get; set; }
         ///<summary>
         /// 用户的userPin
         ///</summary>
         public string UserPin{ get; set; }
+        ///<summary>
+        /// DataSize
+        ///</summary>
+        public string DataSize{ get; set; }
     }
 }

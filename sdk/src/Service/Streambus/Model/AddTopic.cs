@@ -40,14 +40,14 @@ namespace JDCloudSDK.Streambus.Model
         ///<summary>
         /// Topic
         ///</summary>
-        public Object Topic{ get; set; }
+        public Topic Topic{ get; set; }
         ///<summary>
         /// Target
         ///</summary>
-        public Object Target{ get; set; }
+        public Target Target{ get; set; }
         ///<summary>
         /// 归档相关的具体参数
         ///</summary>
-        public List<Object> ParameterList{ get; set; }
+        public List<ParameterList> ParameterList{ get; set; }
     }
 }

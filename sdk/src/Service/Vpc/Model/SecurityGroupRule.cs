@@ -54,7 +54,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public string AddressPrefix{ get; set; }
         ///<summary>
-        /// 匹配地址协议版本。4：IPv4；6：IPv6
+        /// 匹配地址协议版本。4：IPv4
         ///</summary>
         public double? IpVersion{ get; set; }
         ///<summary>
@@ -69,5 +69,9 @@ namespace JDCloudSDK.Vpc.Model
         /// 安全组规则创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+        ///</summary>
+        public string Description{ get; set; }
     }
 }

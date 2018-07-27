@@ -138,6 +138,44 @@ namespace JDCloudSDK.Streambus.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查看指定主题的所有消费组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetConsumerGroupListResponse GetConsumerGroupList(GetConsumerGroupListRequest request) {
+            return  new GetConsumerGroupListExecutor().Client(this).Execute<GetConsumerGroupListResponse, GetConsumerGroupListResult, GetConsumerGroupListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看指定主题的所有消费组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetConsumerGroupListResponse> GetConsumerGroupList(GetConsumerGroupListRequest request) {
+            return await new GetConsumerGroupListExecutor().Client(this).Execute<GetConsumerGroupListResponse, GetConsumerGroupListResult, GetConsumerGroupListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建consumerGroupName
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest request) {
+            return  new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建consumerGroupName
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest request) {
+            return await new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -153,6 +191,63 @@ namespace JDCloudSDK.Streambus.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddTopicResponse> AddTopic(AddTopicRequest request) {
             return await new AddTopicExecutor().Client(this).Execute<AddTopicResponse, AddTopicResult, AddTopicRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除consumerGroupName
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
+            return  new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除consumerGroupName
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
+            return await new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看指定主题
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTopicResponse DescribeTopic(DescribeTopicRequest request) {
+            return  new DescribeTopicExecutor().Client(this).Execute<DescribeTopicResponse, DescribeTopicResult, DescribeTopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看指定主题
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTopicResponse> DescribeTopic(DescribeTopicRequest request) {
+            return await new DescribeTopicExecutor().Client(this).Execute<DescribeTopicResponse, DescribeTopicResult, DescribeTopicRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除topic
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTopicResponse DeleteTopic(DeleteTopicRequest request) {
+            return  new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除topic
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request) {
+            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
         }
 #endif
 #if NET40||NET35

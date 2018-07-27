@@ -73,7 +73,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public int? SanityCheck{ get; set; }
         ///<summary>
-        /// 描述，允许输入UTF-8编码下的全部字符，不超过256字符
+        /// 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
         ///</summary>
         public string Description{ get; set; }
     }

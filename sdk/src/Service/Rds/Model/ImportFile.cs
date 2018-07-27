@@ -38,7 +38,7 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 文件名称
+        /// 上传的备份文件名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
@@ -46,11 +46,11 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string SharedFileGid{ get; set; }
         ///<summary>
-        /// 文件大小
+        /// 文件大小，单位Byte
         ///</summary>
         public int? SizeByte{ get; set; }
         ///<summary>
-        /// 文件上传完成时间
+        /// 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
         ///</summary>
         public string UploadTime{ get; set; }
         ///<summary>

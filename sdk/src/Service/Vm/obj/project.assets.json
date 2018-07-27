@@ -68,7 +68,7 @@
           "bin/placeholder/JDCloudSDK.Disk.dll": {}
         }
       },
-      "JDCloudSDK.Vpc/0.2.0.1": {
+      "JDCloudSDK.Vpc/0.3.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v3.5",
         "dependencies": {
@@ -152,7 +152,7 @@
           "bin/placeholder/JDCloudSDK.Disk.dll": {}
         }
       },
-      "JDCloudSDK.Vpc/0.2.0.1": {
+      "JDCloudSDK.Vpc/0.3.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.0",
         "dependencies": {
@@ -249,7 +249,7 @@
           "bin/placeholder/JDCloudSDK.Disk.dll": {}
         }
       },
-      "JDCloudSDK.Vpc/0.2.0.1": {
+      "JDCloudSDK.Vpc/0.3.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
         "dependencies": {
@@ -357,7 +357,7 @@
           "bin/placeholder/JDCloudSDK.Disk.dll": {}
         }
       },
-      "JDCloudSDK.Vpc/0.2.0.1": {
+      "JDCloudSDK.Vpc/0.3.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -604,7 +604,7 @@
       "path": "../Disk/JDCloudSDK.Disk.csproj",
       "msbuildProject": "../Disk/JDCloudSDK.Disk.csproj"
     },
-    "JDCloudSDK.Vpc/0.2.0.1": {
+    "JDCloudSDK.Vpc/0.3.0.1": {
       "type": "project",
       "path": "../Vpc/JDCloudSDK.Vpc.csproj",
       "msbuildProject": "../Vpc/JDCloudSDK.Vpc.csproj"
@@ -616,7 +616,7 @@
       "JDCloudSDK.Common >= 0.2.0.1",
       "JDCloudSDK.Core >= 0.2.0",
       "JDCloudSDK.Disk >= 0.6.0.1",
-      "JDCloudSDK.Vpc >= 0.2.0.1",
+      "JDCloudSDK.Vpc >= 0.3.0.1",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETFramework,Version=v4.0": [
@@ -624,7 +624,7 @@
       "JDCloudSDK.Common >= 0.2.0.1",
       "JDCloudSDK.Core >= 0.2.0",
       "JDCloudSDK.Disk >= 0.6.0.1",
-      "JDCloudSDK.Vpc >= 0.2.0.1",
+      "JDCloudSDK.Vpc >= 0.3.0.1",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETFramework,Version=v4.5": [
@@ -632,7 +632,7 @@
       "JDCloudSDK.Common >= 0.2.0.1",
       "JDCloudSDK.Core >= 0.2.0",
       "JDCloudSDK.Disk >= 0.6.0.1",
-      "JDCloudSDK.Vpc >= 0.2.0.1",
+      "JDCloudSDK.Vpc >= 0.3.0.1",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETStandard,Version=v2.0": [
@@ -640,7 +640,7 @@
       "JDCloudSDK.Common >= 0.2.0.1",
       "JDCloudSDK.Core >= 0.2.0",
       "JDCloudSDK.Disk >= 0.6.0.1",
-      "JDCloudSDK.Vpc >= 0.2.0.1",
+      "JDCloudSDK.Vpc >= 0.3.0.1",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 11.0.2"
     ]

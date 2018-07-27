@@ -374,7 +374,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.2.4.1",
+    "version": "1.0.0.1",
     "restore": {
       "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Streambus\\JDCloudSDK.Streambus.csproj",
       "projectName": "JDCloudSDK.Streambus",
