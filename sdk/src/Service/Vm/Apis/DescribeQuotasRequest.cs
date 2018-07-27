@@ -35,7 +35,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询（虚机、镜像、密钥、模板）配额
+    ///  查询配额，支持：云主机、镜像、密钥、模板
+        ///         /// 
     /// </summary>
     public class DescribeQuotasRequest : JdcloudRequest
     {
@@ -46,7 +47,7 @@ namespace  JDCloudSDK.Vm.Apis
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

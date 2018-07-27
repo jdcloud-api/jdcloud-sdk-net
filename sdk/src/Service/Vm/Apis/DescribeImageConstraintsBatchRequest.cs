@@ -34,7 +34,9 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  批量查询镜像限制
+    ///  批量查询镜像的规格类型限制。&lt;br&gt;
+        ///         /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///         /// 
     /// </summary>
     public class DescribeImageConstraintsBatchRequest : JdcloudRequest
     {
@@ -44,7 +46,7 @@ namespace  JDCloudSDK.Vm.Apis
         public List<string> Ids{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -34,26 +34,27 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  修改主机信息
+    ///  修改云主机部分信息，包括名称、描述。
+        ///         /// 
     /// </summary>
     public class ModifyInstanceAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        /// 名称；名称和描述必传其中一个；不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，长度不超过32字符
+        /// 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 描述；名称和描述必传其中一个；长度不超过256个字符
+        /// 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// 云主机ID
         ///Required:true
         ///</summary>
         [Required]

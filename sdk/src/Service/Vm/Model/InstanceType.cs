@@ -43,7 +43,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Family{ get; set; }
         ///<summary>
-        /// 实例类型，比如g.b1.2xlarge
+        /// 规格类型，比如g.b1.2xlarge
         ///</summary>
         [JsonProperty("instanceType")]
         public string InstanceTypeValue{ get; set; }
@@ -52,15 +52,19 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public int? Cpu{ get; set; }
         ///<summary>
-        /// 内存
+        /// 内存大小
         ///</summary>
         public int? MemoryMB{ get; set; }
+        ///<summary>
+        /// 支持弹性网卡的数量
+        ///</summary>
+        public int? NicLimit{ get; set; }
         ///<summary>
         /// 描述
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
-        /// 状态
+        /// 规格状态
         ///</summary>
         public List<InstanceTypeState> State{ get; set; }
     }

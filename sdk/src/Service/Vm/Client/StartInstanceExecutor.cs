@@ -33,12 +33,16 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+    ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+        /// 只能启动正常计费状态的云主机。
+        /// 
     /// </summary>
     public class StartInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动接口的Http 请求方法
+        ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+        /// 只能启动正常计费状态的云主机。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动接口的Http资源请求路径
+        ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+        /// 只能启动正常计费状态的云主机。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

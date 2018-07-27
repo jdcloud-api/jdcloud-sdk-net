@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+    ///  云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        /// 
     /// </summary>
     public class DetachDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载接口的Http 请求方法
+        ///  云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载接口的Http资源请求路径
+        ///  云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询镜像信息
+    ///  查询镜像详情。
+        /// 
     /// </summary>
     public class DescribeImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询镜像信息接口的Http 请求方法
+        ///  查询镜像详情。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询镜像信息接口的Http资源请求路径
+        ///  查询镜像详情。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

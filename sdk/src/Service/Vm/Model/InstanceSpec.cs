@@ -41,42 +41,37 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 实例所属的可用区
-        ///Required:true
+        /// 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
         ///</summary>
-        [Required]
+        public string AgId{ get; set; }
+        ///<summary>
+        /// 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+        ///</summary>
+        public string InstanceTemplateId{ get; set; }
+        ///<summary>
+        /// 云主机所属的可用区。
+        ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        /// 实例类型
-        ///Required:true
+        /// 规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
         ///</summary>
-        [Required]
         public string InstanceType{ get; set; }
         ///<summary>
-        /// 镜像ID
-        ///Required:true
+        /// 镜像ID。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
         ///</summary>
-        [Required]
         public string ImageId{ get; set; }
         ///<summary>
-        /// 主机名称，不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，不超过32字符
+        /// 云主机名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// &quot;密码，长度8-30个字符&quot;
-        /// &quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-        /// &quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-        /// &quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-        /// &quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-        /// &quot;e)密码中不能出现自己的用户名&quot;
-        /// &quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-        /// 
+        /// 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public string Password{ get; set; }
         ///<summary>
-        /// 密钥对名称
+        /// 密钥对名称，当前只支持传入一个。
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>
@@ -85,26 +80,26 @@ namespace JDCloudSDK.Vm.Model
         public ElasticIpSpec ElasticIp{ get; set; }
         ///<summary>
         /// 主网卡配置信息
-        ///Required:true
         ///</summary>
-        [Required]
         public InstanceNetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
         ///<summary>
         /// 系统盘配置信息
-        ///Required:true
         ///</summary>
-        [Required]
         public InstanceDiskAttachmentSpec SystemDisk{ get; set; }
         ///<summary>
-        /// 数据盘配置信息
+        /// 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
         ///</summary>
         public List<InstanceDiskAttachmentSpec> DataDisks{ get; set; }
         ///<summary>
         /// 计费配置
+        /// 云主机不支持按用量方式计费，默认为按配置计费。
+        /// 打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
+        /// 打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
+        /// 
         ///</summary>
         public ChargeSpec Charge{ get; set; }
         ///<summary>
-        /// 主机描述，长度不超过256字符
+        /// 主机描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public string Description{ get; set; }
     }

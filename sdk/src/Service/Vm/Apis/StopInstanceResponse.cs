@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止
+    ///  停止单个云主机，只能停止&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可停止
+        ///         /// 
     /// </summary>
     public class StopInstanceResponse : JdcloudResponse<StopInstanceResult>
     {

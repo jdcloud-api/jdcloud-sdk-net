@@ -33,12 +33,16 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询云主机列表
+    ///  批量查询云主机的详细信息&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
     /// </summary>
     public class DescribeInstancesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云主机列表接口的Http 请求方法
+        ///  批量查询云主机的详细信息&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询云主机列表接口的Http资源请求路径
+        ///  批量查询云主机的详细信息&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

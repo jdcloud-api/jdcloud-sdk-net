@@ -39,7 +39,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 设备Index，主网卡只能是1
+        /// 网卡设备Index，主网卡只能是1
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>

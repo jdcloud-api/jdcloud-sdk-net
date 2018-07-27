@@ -34,18 +34,19 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像共享帐户列表，不能操作非私有镜像
+    ///  查询镜像共享帐户列表，只允许操作您的个人私有镜像。
+        ///         /// 
     /// </summary>
     public class DescribeImageMembersRequest : JdcloudRequest
     {
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Image ID
+        /// 镜像ID
         ///Required:true
         ///</summary>
         [Required]

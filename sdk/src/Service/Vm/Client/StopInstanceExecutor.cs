@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止
+    ///  停止单个云主机，只能停止&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可停止
+        /// 
     /// </summary>
     public class StopInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止接口的Http 请求方法
+        ///  停止单个云主机，只能停止&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可停止
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  停止单个实例，只能停止running状态的实例，主机没有未完成的任务才可停止接口的Http资源请求路径
+        ///  停止单个云主机，只能停止&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可停止
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

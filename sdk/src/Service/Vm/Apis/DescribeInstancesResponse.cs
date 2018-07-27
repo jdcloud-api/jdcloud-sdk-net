@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询云主机列表
+    ///  批量查询云主机的详细信息&lt;br&gt;
+        ///         /// 此接口支持分页查询，默认每页20条。
+        ///         /// 
     /// </summary>
     public class DescribeInstancesResponse : JdcloudResponse<DescribeInstancesResult>
     {

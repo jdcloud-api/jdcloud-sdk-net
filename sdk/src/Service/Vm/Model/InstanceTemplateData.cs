@@ -38,7 +38,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 实例类型
+        /// 规格类型
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 密码不会返回，true：为包含密码，false：为不包含密码
+        /// 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
         ///</summary>
         public bool IncludePassword{ get; set; }
         ///<summary>
@@ -58,13 +58,13 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public InstanceTemplateDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        /// 数据盘信息
+        /// 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
         ///</summary>
         public List<InstanceTemplateDiskAttachment> DataDisks{ get; set; }
         ///<summary>
         /// 主网卡信息
         ///</summary>
-        public InstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
+        public InstanceTemplateNetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
         ///<summary>
         /// 主网卡主IP关联的弹性IP规格
         ///</summary>

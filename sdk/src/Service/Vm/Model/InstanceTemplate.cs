@@ -50,11 +50,11 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 模板的数据
+        /// 启动模板的数据
         ///</summary>
         public InstanceTemplateData InstanceTemplateData{ get; set; }
         ///<summary>
-        /// ag信息
+        /// 关联的高可用组(ag)信息
         ///</summary>
         public List<Ag> Ags{ get; set; }
         ///<summary>

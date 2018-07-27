@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+    ///  云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        ///         /// 
     /// </summary>
     public class DetachDiskRequest : JdcloudRequest
     {
@@ -45,17 +46,17 @@ namespace  JDCloudSDK.Vm.Apis
         [Required]
         public   string DiskId{ get; set; }
         ///<summary>
-        /// 强制缷载，默认False
+        /// 强制缷载，默认False。如果此参数传值为True，代表数据盘的IO会被强制断掉。
         ///</summary>
         public   bool Force{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// 云主机ID
         ///Required:true
         ///</summary>
         [Required]

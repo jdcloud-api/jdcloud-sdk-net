@@ -34,16 +34,19 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像资源信息列表
+    ///  查询镜像信息列表。&lt;br&gt;
+        ///         /// 通过此接口可以查询到京东云官方镜像、第三方镜像、私有镜像、或其他用户共享给您的镜像。&lt;br&gt;
+        ///         /// 此接口支持分页查询，默认每页20条。
+        ///         /// 
     /// </summary>
     public class DescribeImagesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
+        /// 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
         ///</summary>
         public   string ImageSource{ get; set; }
         ///<summary>
-        /// 操作系统平台: Windows Server、CentOS、Ubuntu
+        /// 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
         ///</summary>
         public   string Platform{ get; set; }
         ///<summary>
@@ -52,7 +55,23 @@ namespace  JDCloudSDK.Vm.Apis
         public List<string> Ids{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 镜像支持的系统盘类型，[localDisk,cloudDisk]
+        ///</summary>
+        public   string RootDeviceType{ get; set; }
+        ///<summary>
+        /// &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+        ///</summary>
+        public   string Status{ get; set; }
+        ///<summary>
+        /// 页码；默认为1
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 分页大小；默认为20；取值范围[10, 100]
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

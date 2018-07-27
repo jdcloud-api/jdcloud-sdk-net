@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  修改主机信息
+    ///  修改云主机部分信息，包括名称、描述。
+        ///         /// 
     /// </summary>
     public class ModifyInstanceAttributeResponse : JdcloudResponse<ModifyInstanceAttributeResult>
     {

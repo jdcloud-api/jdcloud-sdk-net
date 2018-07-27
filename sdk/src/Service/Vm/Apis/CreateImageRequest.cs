@@ -35,39 +35,39 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  &quot;虚机创建私有镜像&quot;
-        ///         /// &quot;虚机状态必须为stopped&quot;
-        ///         /// &quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-        ///         /// &quot;主机没有未完成的任务才可制作镜像&quot;
+    ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
+        ///         /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
+        ///         /// 如果云主机中挂载了数据盘，默认会将数据盘创建快照，生成打包镜像。&lt;br&gt;
+        ///         /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
         ///         /// 
     /// </summary>
     public class CreateImageRequest : JdcloudRequest
     {
         ///<summary>
-        /// 名称
+        /// 镜像名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///Required:true
         ///</summary>
         [Required]
         public   string Name{ get; set; }
         ///<summary>
-        /// 描述
+        /// 镜像描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///Required:true
         ///</summary>
         [Required]
         public   string Description{ get; set; }
         ///<summary>
-        /// 数据盘列表，如果指定，则随镜像一起打包创建快照，实际最多不能超过4个
+        /// 数据盘列表，可以在打包镜像的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
         ///</summary>
         public List<InstanceDiskAttachmentSpec> DataDisks{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// 云主机ID
         ///Required:true
         ///</summary>
         [Required]

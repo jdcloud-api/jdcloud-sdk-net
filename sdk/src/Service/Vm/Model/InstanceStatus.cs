@@ -42,7 +42,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 云主机状态
+        /// &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
         ///</summary>
         public string Status{ get; set; }
     }

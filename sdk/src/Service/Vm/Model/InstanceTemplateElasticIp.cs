@@ -49,7 +49,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>
-        /// 计费类型，bandwith，flow
+        /// 计费类型，支持按带宽计费(bandwith)，按流量计费(flow)
         ///Required:true
         ///</summary>
         [Required]

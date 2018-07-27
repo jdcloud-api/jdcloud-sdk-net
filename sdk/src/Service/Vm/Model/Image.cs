@@ -70,7 +70,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string OsType{ get; set; }
         ///<summary>
-        /// 镜像状态, [pending, ready, deleting, error]
+        /// &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
@@ -86,8 +86,24 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
+        /// 系统盘配置
+        ///</summary>
+        public InstanceDiskAttachment SystemDisk{ get; set; }
+        ///<summary>
         /// 打包镜像数据盘映射信息
         ///</summary>
         public List<InstanceDiskAttachment> DataDisks{ get; set; }
+        ///<summary>
+        /// 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+        ///</summary>
+        public string SnapshotId{ get; set; }
+        ///<summary>
+        /// 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+        ///</summary>
+        public string RootDeviceType{ get; set; }
+        ///<summary>
+        /// 镜像复制时的进度，单位为百分比，例如：80
+        ///</summary>
+        public string Progress{ get; set; }
     }
 }

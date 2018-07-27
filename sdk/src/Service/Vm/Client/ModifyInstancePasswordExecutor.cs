@@ -33,12 +33,16 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  修改主机密码，主机没有未完成的任务时才可操作
+    ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+        /// 修改密码后，需要重启云主机后生效。
+        /// 
     /// </summary>
     public class ModifyInstancePasswordExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改主机密码，主机没有未完成的任务时才可操作接口的Http 请求方法
+        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+        /// 修改密码后，需要重启云主机后生效。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  修改主机密码，主机没有未完成的任务时才可操作接口的Http资源请求路径
+        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+        /// 修改密码后，需要重启云主机后生效。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

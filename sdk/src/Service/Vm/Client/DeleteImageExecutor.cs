@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  删除私有镜像
+    ///  删除一个私有镜像，只允许操作您的个人私有镜像。
+        /// 
     /// </summary>
     public class DeleteImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除私有镜像接口的Http 请求方法
+        ///  删除一个私有镜像，只允许操作您的个人私有镜像。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  删除私有镜像接口的Http资源请求路径
+        ///  删除一个私有镜像，只允许操作您的个人私有镜像。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

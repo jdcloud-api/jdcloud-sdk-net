@@ -34,18 +34,19 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询云主机详情
+    ///  查询一台云主机的详细信息
+        ///         /// 
     /// </summary>
     public class DescribeInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// 云主机ID
         ///Required:true
         ///</summary>
         [Required]

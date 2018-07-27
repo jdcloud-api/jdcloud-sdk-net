@@ -42,7 +42,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        /// true:可用、false:已售罄不可用
+        /// 可售卖情况，true:可售卖、false:已售罄不可用
         ///</summary>
         public bool InStock{ get; set; }
     }

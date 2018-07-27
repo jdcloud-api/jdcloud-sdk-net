@@ -39,23 +39,23 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 实例类型
+        /// 规格类型，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
         ///Required:true
         ///</summary>
         [Required]
         public string InstanceType{ get; set; }
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
         ///Required:true
         ///</summary>
         [Required]
         public string ImageId{ get; set; }
         ///<summary>
-        /// 密码
+        /// 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public string Password{ get; set; }
         ///<summary>
-        /// 密钥对名称
+        /// 密钥对名称；当前只支持一个
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>

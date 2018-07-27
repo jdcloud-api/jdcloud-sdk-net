@@ -38,7 +38,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 资源类型[instance，keypair，image]
+        /// 资源类型[instance，keypair，image，instanceTemplate]
         ///</summary>
         public string ResourceType{ get; set; }
         ///<summary>

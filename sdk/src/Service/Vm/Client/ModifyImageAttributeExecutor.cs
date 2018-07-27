@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  修改镜像信息
+    ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+        /// 
     /// </summary>
     public class ModifyImageAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改镜像信息接口的Http 请求方法
+        ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  修改镜像信息接口的Http资源请求路径
+        ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

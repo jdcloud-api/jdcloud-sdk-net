@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  删除私有镜像
+    ///  删除一个私有镜像，只允许操作您的个人私有镜像。
+        ///         /// 
     /// </summary>
     public class DeleteImageResult : JdcloudResult
     {

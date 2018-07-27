@@ -34,24 +34,25 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  云主机解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+    ///  云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
+        ///         /// 
     /// </summary>
     public class DisassociateElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        /// 弹性IP ID
+        /// 弹性公网IP的ID
         ///Required:true
         ///</summary>
         [Required]
         public   string ElasticIpId{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// 云主机ID
         ///Required:true
         ///</summary>
         [Required]

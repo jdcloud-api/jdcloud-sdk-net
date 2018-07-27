@@ -40,15 +40,15 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 实例ID
+        /// 云主机ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 实例名称
+        /// 云主机名称
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        /// 实例类型
+        /// 云主机类型
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
@@ -72,11 +72,11 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        /// 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
+        /// 云主机状态，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// 实例描述
+        /// 云主机描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
@@ -84,23 +84,27 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 系统盘信息
+        /// 系统盘配置
         ///</summary>
         public InstanceDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        /// 数据盘信息
+        /// 数据盘配置
         ///</summary>
         public List<InstanceDiskAttachment> DataDisks{ get; set; }
         ///<summary>
-        /// 主网卡信息
+        /// 主网卡配置
         ///</summary>
         public InstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
+        ///<summary>
+        /// 辅助网卡配置
+        ///</summary>
+        public List<InstanceNetworkInterfaceAttachment> SecondaryNetworkInterfaces{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>
         public string LaunchTime{ get; set; }
         ///<summary>
-        /// 可用区
+        /// 云主机所在可用区
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
@@ -111,6 +115,14 @@ namespace JDCloudSDK.Vm.Model
         /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
+        ///<summary>
+        /// 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
+        ///</summary>
+        public Ag Ag{ get; set; }
+        ///<summary>
+        /// 高可用组中的错误域
+        ///</summary>
+        public string FaultDomain{ get; set; }
         ///<summary>
         /// Tag信息
         ///</summary>

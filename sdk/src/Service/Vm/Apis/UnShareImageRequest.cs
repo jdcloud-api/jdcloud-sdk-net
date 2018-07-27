@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  取消共享镜像，不能操作非私有镜像
+    ///  取消共享镜像，只允许操作您的个人私有镜像。
+        ///         /// 
     /// </summary>
     public class UnShareImageRequest : JdcloudRequest
     {
@@ -44,13 +45,13 @@ namespace  JDCloudSDK.Vm.Apis
         public List<string> Pins{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Image ID
+        /// 镜像ID
         ///Required:true
         ///</summary>
         [Required]

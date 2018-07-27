@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询云主机详情
+    ///  查询一台云主机的详细信息
+        /// 
     /// </summary>
     public class DescribeInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云主机详情接口的Http 请求方法
+        ///  查询一台云主机的详细信息
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询云主机详情接口的Http资源请求路径
+        ///  查询一台云主机的详细信息
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

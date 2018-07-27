@@ -39,23 +39,29 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 磁盘分类，取值范围{local, cloud}
+        /// 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
+        /// 系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
+        /// 数据盘仅支持云硬盘(cloud)。
+        /// 
         ///</summary>
         public string DiskCategory{ get; set; }
         ///<summary>
-        /// 自动删除，删除主机时自动删除此磁盘，默认为true
+        /// 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
+        /// 如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
+        /// 如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+        /// 
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        /// 本地磁盘
+        /// 本地磁盘配置
         ///</summary>
         public LocalDisk LocalDisk{ get; set; }
         ///<summary>
-        /// 云硬盘
+        /// 云硬盘配置
         ///</summary>
         public JDCloudSDK.Disk.Model.Disk CloudDisk{ get; set; }
         ///<summary>
-        /// 数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
+        /// 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
         ///</summary>
         public string DeviceName{ get; set; }
     }

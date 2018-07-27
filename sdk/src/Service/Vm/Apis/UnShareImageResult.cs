@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  取消共享镜像，不能操作非私有镜像
+    ///  取消共享镜像，只允许操作您的个人私有镜像。
+        ///         /// 
     /// </summary>
     public class UnShareImageResult : JdcloudResult
     {
