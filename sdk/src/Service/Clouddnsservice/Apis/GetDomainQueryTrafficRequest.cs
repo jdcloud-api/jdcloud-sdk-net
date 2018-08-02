@@ -36,14 +36,8 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     /// <summary>
     ///  查看域名的查询流量
     /// </summary>
-    public class GetDomainStatisticsRequest : JdcloudRequest
+    public class GetDomainQueryTrafficRequest : JdcloudRequest
     {
-        ///<summary>
-        /// 查询动作，&quot;query&quot;查询流量，&quot;resolve&quot;解析流量
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string Action{ get; set; }
         ///<summary>
         /// 域名
         ///Required:true

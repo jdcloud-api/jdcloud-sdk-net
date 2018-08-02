@@ -138,7 +138,7 @@ namespace JDCloudSDK.Rds.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  获取某个审计文件的下载链接，目前仅支持SQL Server
+        ///  获取某个审计文件的下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  获取某个审计文件的下载链接，目前仅支持SQL Server
+        ///  获取某个审计文件的下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  RDS实例主备切换，目前仅支持SQL Server
+        ///  RDS实例主备切换&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  RDS实例主备切换，目前仅支持SQL Server
+        ///  RDS实例主备切换&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据库集群实例，以及目前支持删除Mysql只读实例
+        ///  删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 敏感操作，可开启MFA操作保护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除数据库集群实例，以及目前支持删除Mysql只读实例
+        ///  删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 敏感操作，可开启MFA操作保护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  清除/关闭 数据库审计，目前仅支持SQL Server
+        ///  清除/关闭 数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  清除/关闭 数据库审计，目前仅支持SQL Server
+        ///  清除/关闭 数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启数据库审计，目前仅支持SQL Server
+        ///  开启数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  开启数据库审计，目前仅支持SQL Server
+        ///  开启数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改RDS实例名称，目前仅支持SQL Server
+        ///  修改RDS实例名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  修改RDS实例名称，目前仅支持SQL Server
+        ///  修改RDS实例名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询RDS实例列表
+        ///  查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查询RDS实例列表
+        ///  查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -385,7 +385,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询性能统计，目前仅支持SQL Server
+        ///  查询性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -394,7 +394,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查询性能统计，目前仅支持SQL Server
+        ///  查询性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +404,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看审计文件列表，目前仅支持SQL Server
+        ///  查看审计文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -413,7 +413,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查看审计文件列表，目前仅支持SQL Server
+        ///  查看审计文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +442,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据库
+        ///  删除数据库 敏感操作，可开启MFA操作保护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +451,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除数据库
+        ///  删除数据库 敏感操作，可开启MFA操作保护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -461,7 +461,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取SQL Server 错误日志及下载信息，目前仅SQL Server支持
+        ///  获取SQL Server 错误日志及下载信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -470,7 +470,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  获取SQL Server 错误日志及下载信息，目前仅SQL Server支持
+        ///  获取SQL Server 错误日志及下载信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -518,7 +518,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看开启的审计选项，目前仅支持SQL Server
+        ///  查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -527,7 +527,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查看开启的审计选项，目前仅支持SQL Server
+        ///  查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -537,7 +537,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取审计所有选项及推荐的选项，目前仅支持SQL Server
+        ///  获取审计所有选项及推荐的选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -546,7 +546,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  获取审计所有选项及推荐的选项，目前仅支持SQL Server
+        ///  获取审计所有选项及推荐的选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -594,7 +594,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  索引性能统计，目前仅支持SQL Server
+        ///  索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -603,7 +603,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  索引性能统计，目前仅支持SQL Server
+        ///  索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -689,7 +689,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建数据库集群实例
+        ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -698,7 +698,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  创建数据库集群实例
+        ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -727,7 +727,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改当前审计选项，目前仅支持SQL Server
+        ///  修改当前审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -736,7 +736,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  修改当前审计选项，目前仅支持SQL Server
+        ///  修改当前审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -746,7 +746,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  重启RDS实例，目前仅支持SQL Server
+        ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -755,7 +755,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  重启RDS实例，目前仅支持SQL Server
+        ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -765,7 +765,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询RDS实例详细信息
+        ///  查询RDS实例详细信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -774,7 +774,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查询RDS实例详细信息
+        ///  查询RDS实例详细信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

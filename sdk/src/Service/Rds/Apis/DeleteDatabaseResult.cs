@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除数据库
+    ///  删除数据库 敏感操作，可开启MFA操作保护
     /// </summary>
     public class DeleteDatabaseResult : JdcloudResult
     {

@@ -66,7 +66,7 @@ namespace  JDCloudSDK.Monitor.Apis
         ///<summary>
         /// 自定义标签
         ///</summary>
-        public List<Tags> Tags{ get; set; }
+        public List<TagFilter> Tags{ get; set; }
 
         ///<summary>
         /// 地域 Id

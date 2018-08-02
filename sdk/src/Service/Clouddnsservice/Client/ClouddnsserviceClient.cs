@@ -271,6 +271,25 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查看域名的查询流量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainQueryTrafficResponse GetDomainQueryTraffic(GetDomainQueryTrafficRequest request) {
+            return  new GetDomainQueryTrafficExecutor().Client(this).Execute<GetDomainQueryTrafficResponse, GetDomainQueryTrafficResult, GetDomainQueryTrafficRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看域名的查询流量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainQueryTrafficResponse> GetDomainQueryTraffic(GetDomainQueryTrafficRequest request) {
+            return await new GetDomainQueryTrafficExecutor().Client(this).Execute<GetDomainQueryTrafficResponse, GetDomainQueryTrafficResult, GetDomainQueryTrafficRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询子域名的可用监控对象
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -290,21 +309,21 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询DNS所有解析线路
+        ///  查看域名的解析次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetViewTreeResponse GetViewTree(GetViewTreeRequest request) {
-            return  new GetViewTreeExecutor().Client(this).Execute<GetViewTreeResponse, GetViewTreeResult, GetViewTreeRequest>(request);
+        public GetDomainQueryCountResponse GetDomainQueryCount(GetDomainQueryCountRequest request) {
+            return  new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询DNS所有解析线路
+        ///  查看域名的解析次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetViewTreeResponse> GetViewTree(GetViewTreeRequest request) {
-            return await new GetViewTreeExecutor().Client(this).Execute<GetViewTreeResponse, GetViewTreeResult, GetViewTreeRequest>(request);
+        public async Task<GetDomainQueryCountResponse> GetDomainQueryCount(GetDomainQueryCountRequest request) {
+            return await new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -324,6 +343,25 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddMonitorResponse> AddMonitor(AddMonitorRequest request) {
             return await new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询DNS所有解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetViewTreeResponse GetViewTree(GetViewTreeRequest request) {
+            return  new GetViewTreeExecutor().Client(this).Execute<GetViewTreeResponse, GetViewTreeResult, GetViewTreeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询DNS所有解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetViewTreeResponse> GetViewTree(GetViewTreeRequest request) {
+            return await new GetViewTreeExecutor().Client(this).Execute<GetViewTreeResponse, GetViewTreeResult, GetViewTreeRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -400,25 +438,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateDomainResponse> UpdateDomain(UpdateDomainRequest request) {
             return await new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看域名的查询流量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetDomainStatisticsResponse GetDomainStatistics(GetDomainStatisticsRequest request) {
-            return  new GetDomainStatisticsExecutor().Client(this).Execute<GetDomainStatisticsResponse, GetDomainStatisticsResult, GetDomainStatisticsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看域名的查询流量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetDomainStatisticsResponse> GetDomainStatistics(GetDomainStatisticsRequest request) {
-            return await new GetDomainStatisticsExecutor().Client(this).Execute<GetDomainStatisticsResponse, GetDomainStatisticsResult, GetDomainStatisticsRequest>(request);
         }
 #endif
 #if NET40||NET35

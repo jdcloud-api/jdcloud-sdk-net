@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  清除/关闭 数据库审计，目前仅支持SQL Server
+    ///  清除/关闭 数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class DeleteAuditResult : JdcloudResult
     {

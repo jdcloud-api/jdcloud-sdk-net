@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云监控
- * 云监控相关接口
+ * 云监控相关接口，主要包含监控规则的增删改查，以及监控项数据的查询
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Monitor.Client
 {
     /// <summary>
     ///  云监控
-    ///  云监控相关接口
+    ///  云监控相关接口，主要包含监控规则的增删改查，以及监控项数据的查询
     ///  Monitor Api 客户端
     ///</summary>
     public class MonitorClient : JdcloudClient
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Monitor.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  批量删除规则
+        ///  批量删除已创建的报警规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        ///  批量删除规则
+        ///  批量删除已创建的报警规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -172,6 +172,25 @@ namespace JDCloudSDK.Monitor.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMetricDataResponse> DescribeMetricData(DescribeMetricDataRequest request) {
             return await new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  自定义监控数据上报接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutMetricDataResponse PutMetricData(PutMetricDataRequest request) {
+            return  new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  自定义监控数据上报接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutMetricDataResponse> PutMetricData(PutMetricDataRequest request) {
+            return await new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
         }
 #endif
 #if NET40||NET35

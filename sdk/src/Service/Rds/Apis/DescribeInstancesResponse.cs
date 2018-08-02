@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查询RDS实例列表
+    ///  查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
     /// </summary>
     public class DescribeInstancesResponse : JdcloudResponse<DescribeInstancesResult>
     {

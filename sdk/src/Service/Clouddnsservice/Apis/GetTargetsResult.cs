@@ -37,5 +37,10 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     /// </summary>
     public class GetTargetsResult : JdcloudResult
     {
+        ///<summary>
+        /// Data
+        ///</summary>
+        public List<string> Data{ get; set; }
+
     }
 }

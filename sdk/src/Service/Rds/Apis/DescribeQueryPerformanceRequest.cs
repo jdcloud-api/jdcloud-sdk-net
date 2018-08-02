@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查询性能统计，目前仅支持SQL Server
+    ///  查询性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class DescribeQueryPerformanceRequest : JdcloudRequest
     {

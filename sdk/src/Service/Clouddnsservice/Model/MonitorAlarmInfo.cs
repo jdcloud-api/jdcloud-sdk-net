@@ -38,7 +38,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
     {
 
         ///<summary>
-        /// 域名ID?
+        /// 域名ID
         ///</summary>
         public int? DomainId{ get; set; }
         ///<summary>

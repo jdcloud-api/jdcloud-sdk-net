@@ -59,11 +59,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   int? Enabled{ get; set; }
         ///<summary>
-        /// 当前所在页，默认为1
+        /// 页码, 默认为1, 取值范围：[1,∞)
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// ，默认为20；取值范围[1, 100]
+        /// 分页大小，默认为20，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

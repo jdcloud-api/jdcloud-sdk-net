@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  修改RDS实例名称，目前仅支持SQL Server
+    ///  修改RDS实例名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class SetInstanceNameResult : JdcloudResult
     {

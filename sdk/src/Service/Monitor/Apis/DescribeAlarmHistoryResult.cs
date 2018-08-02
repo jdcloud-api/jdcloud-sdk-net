@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Monitor.Apis
         public List<AlarmHistory> AlarmHistoryList{ get; set; }
 
         ///<summary>
-        /// 当前页码
+        /// 页码
         ///</summary>
         public   double? PageNumber{ get; set; }
         ///<summary>

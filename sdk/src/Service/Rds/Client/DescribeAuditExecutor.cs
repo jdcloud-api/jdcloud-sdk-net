@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  查看开启的审计选项，目前仅支持SQL Server
+    ///  查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class DescribeAuditExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查看开启的审计选项，目前仅支持SQL Server接口的Http 请求方法
+        ///  查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  查看开启的审计选项，目前仅支持SQL Server接口的Http资源请求路径
+        ///  查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

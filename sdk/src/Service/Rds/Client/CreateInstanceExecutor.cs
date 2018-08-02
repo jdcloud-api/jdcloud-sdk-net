@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  创建数据库集群实例
+    ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
     /// </summary>
     public class CreateInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建数据库集群实例接口的Http 请求方法
+        ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  创建数据库集群实例接口的Http资源请求路径
+        ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

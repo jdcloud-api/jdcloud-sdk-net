@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 域名
- * 云解析OpenAPI域名接口
+ * 监控项自定义监控相关接口
+ * 自定义监控项相关接口，提供自定义监控数据上报功能
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -23,19 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-
-namespace  JDCloudSDK.Clouddnsservice.Apis
+namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    ///  查看域名的查询流量
+    ///  自定义监控数据上报接口
     /// </summary>
-    public class GetDomainStatisticsResponse : JdcloudResponse<GetDomainStatisticsResult>
+    public class PutMetricDataExecutor : JdcloudExecutor
     {
+        /// <summary>
+        ///  自定义监控数据上报接口接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "POST";
+            }
+        }
+        /// <summary>
+        ///  自定义监控数据上报接口接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/customMetrics";
+            }
+        }
     }
 }

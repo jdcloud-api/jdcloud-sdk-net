@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * 域名
+ * 云解析OpenAPI域名接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -23,33 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Rds.Model;
-using JDCloudSDK.Core.Annotation;
-
-namespace  JDCloudSDK.Rds.Apis
+namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  查看域名的解析次数
     /// </summary>
-    public class CreateInstanceRequest : JdcloudRequest
+    public class GetDomainQueryCountExecutor : JdcloudExecutor
     {
-        ///<summary>
-        /// 新建实例规格
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   DBInstanceSpec InstanceSpec{ get; set; }
-        ///<summary>
-        /// Region ID
-        ///Required:true
-        ///</summary>
-        [Required]
-        public override  string RegionId{ get; set; }
+        /// <summary>
+        ///  查看域名的解析次数接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "GET";
+            }
+        }
+        /// <summary>
+        ///  查看域名的解析次数接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/regions/{regionId}/domain/{domainId}/queryCount";
+            }
+        }
     }
 }

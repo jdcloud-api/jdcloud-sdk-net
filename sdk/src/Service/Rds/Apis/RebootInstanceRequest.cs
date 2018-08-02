@@ -34,16 +34,16 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  重启RDS实例，目前仅支持SQL Server
+    ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class RebootInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        /// 是否重启主节点。 - 仅SQL Server 支持该参数
+        /// 是否重启主节点。&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         ///</summary>
         public   bool RebootMaster{ get; set; }
         ///<summary>
-        /// 是否重启从节点。 - 仅SQL Server 支持该参数
+        /// 是否重启从节点。&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         ///</summary>
         public   bool RebootSlave{ get; set; }
         ///<summary>

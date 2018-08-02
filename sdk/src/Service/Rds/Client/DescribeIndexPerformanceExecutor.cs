@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  索引性能统计，目前仅支持SQL Server
+    ///  索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class DescribeIndexPerformanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  索引性能统计，目前仅支持SQL Server接口的Http 请求方法
+        ///  索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  索引性能统计，目前仅支持SQL Server接口的Http资源请求路径
+        ///  索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

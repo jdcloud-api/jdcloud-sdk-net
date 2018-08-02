@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  创建数据库集群实例
+    ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
     /// </summary>
     public class CreateInstanceResult : JdcloudResult
     {

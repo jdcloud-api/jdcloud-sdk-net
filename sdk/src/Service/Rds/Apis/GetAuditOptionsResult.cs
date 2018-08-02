@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取审计所有选项及推荐的选项，目前仅支持SQL Server
+    ///  获取审计所有选项及推荐的选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class GetAuditOptionsResult : JdcloudResult
     {

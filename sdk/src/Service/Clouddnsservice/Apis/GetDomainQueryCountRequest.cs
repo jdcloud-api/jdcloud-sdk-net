@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * 域名
+ * 云解析OpenAPI域名接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,28 +28,45 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Rds.Model;
 using JDCloudSDK.Core.Annotation;
 
-namespace  JDCloudSDK.Rds.Apis
+namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  查看域名的解析次数
     /// </summary>
-    public class CreateInstanceRequest : JdcloudRequest
+    public class GetDomainQueryCountRequest : JdcloudRequest
     {
         ///<summary>
-        /// 新建实例规格
+        /// 域名
         ///Required:true
         ///</summary>
         [Required]
-        public   DBInstanceSpec InstanceSpec{ get; set; }
+        public   string DomainName{ get; set; }
+        ///<summary>
+        /// 起始时间, UTC时间例如2017-11-10T23:00:00Z
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string Start{ get; set; }
+        ///<summary>
+        /// 终止时间, UTC时间例如2017-11-10T23:00:00Z
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string End{ get; set; }
         ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
+        ///<summary>
+        /// 域名ID
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string DomainId{ get; set; }
     }
 }

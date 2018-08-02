@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    ///  批量删除规则
+    ///  批量删除已创建的报警规则
     /// </summary>
     public class DeleteAlarmsRequest : JdcloudRequest
     {

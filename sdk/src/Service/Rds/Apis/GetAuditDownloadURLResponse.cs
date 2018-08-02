@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取某个审计文件的下载链接，目前仅支持SQL Server
+    ///  获取某个审计文件的下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
     /// </summary>
     public class GetAuditDownloadURLResponse : JdcloudResponse<GetAuditDownloadURLResult>
     {
