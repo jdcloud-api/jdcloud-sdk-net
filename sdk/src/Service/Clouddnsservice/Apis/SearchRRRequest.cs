@@ -39,6 +39,14 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class SearchRRRequest : JdcloudRequest
     {
         ///<summary>
+        /// 当前页数，起始值为1，默认为1
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 分页查询时设置的每页行数, 默认为10
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>
