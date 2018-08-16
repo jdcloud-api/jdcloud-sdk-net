@@ -176,6 +176,25 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  给路由表解绑子网接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisassociateRouteTableResponse DisassociateRouteTable(DisassociateRouteTableRequest request) {
+            return  new DisassociateRouteTableExecutor().Client(this).Execute<DisassociateRouteTableResponse, DisassociateRouteTableResult, DisassociateRouteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给路由表解绑子网接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisassociateRouteTableResponse> DisassociateRouteTable(DisassociateRouteTableRequest request) {
+            return await new DisassociateRouteTableExecutor().Client(this).Execute<DisassociateRouteTableResponse, DisassociateRouteTableResult, DisassociateRouteTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  给网卡解绑弹性Ip接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -191,6 +210,25 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
             return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVpcResponse CreateVpc(CreateVpcRequest request) {
+            return  new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
+            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -476,6 +514,25 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<UnassignSecondaryIpsResponse> UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
             return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcResponse DeleteVpc(DeleteVpcRequest request) {
+            return  new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest request) {
+            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
         }
 #endif
 #if NET40||NET35

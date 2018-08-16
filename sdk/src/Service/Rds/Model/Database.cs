@@ -42,7 +42,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string DbName{ get; set; }
         ///<summary>
-        /// 数据库状态 building：创建中， running：运行中
+        /// 数据库状态 building：创建中， running：运行中&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         ///</summary>
         public string DbStatus{ get; set; }
         ///<summary>

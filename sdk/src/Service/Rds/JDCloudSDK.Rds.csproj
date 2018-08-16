@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net40;net45;net35</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.2.5.2</Version>
+        <Version>0.2.7.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>目前RDS OpenAPI支持云数据库SQL Server，可以通过OpenAPI实现数据库管理，账号管理，备份管理，单库上云等功能，后续将支持云数据库MySQL</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

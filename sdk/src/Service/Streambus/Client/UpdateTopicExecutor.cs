@@ -33,12 +33,12 @@ namespace JDCloudSDK.Streambus.Client
 {
 
     /// <summary>
-    ///  更新topic
+    ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
     /// </summary>
     public class UpdateTopicExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  更新topic接口的Http 请求方法
+        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Streambus.Client
             }
         }
         /// <summary>
-        ///  更新topic接口的Http资源请求路径
+        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

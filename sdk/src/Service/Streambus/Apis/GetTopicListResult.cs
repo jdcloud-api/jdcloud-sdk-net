@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  查询topic
+    ///  查询topic列表，返回topic的集合
     /// </summary>
     public class GetTopicListResult : JdcloudResult
     {

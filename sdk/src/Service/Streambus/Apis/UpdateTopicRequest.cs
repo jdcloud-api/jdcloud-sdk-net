@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  更新topic
+    ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
     /// </summary>
     public class UpdateTopicRequest : JdcloudRequest
     {
         ///<summary>
-        /// TopicModel
+        /// 当更新主题时只需要修改topicModel中的topic中的属性即可；创建归档需要指定target以及归档的目的地(mysql,京东云 Elasticsearch,对象存储,数据计算服务)参数
         ///Required:true
         ///</summary>
         [Required]
-        public   AddTopic TopicModel{ get; set; }
+        public   TopicModel TopicModel{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JDCLOUD流计算API
- * 提供流计算job操作的相关接口。
+ * 提供流计算操作的相关接口。
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Streamcomputer.Client
 {
     /// <summary>
     ///  JDCLOUD流计算API
-    ///  提供流计算job操作的相关接口。
+    ///  提供流计算操作的相关接口。
     ///  Streamcomputer Api 客户端
     ///</summary>
     public class StreamcomputerClient : JdcloudClient
@@ -95,7 +95,7 @@ namespace JDCloudSDK.Streamcomputer.Client
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
-        private const string defaultEndpoint = "streamcomputeapi.jdcloud.com";
+        private const string defaultEndpoint = "streamcompute.jdcloud-api.com";
         private const string serviceName = "streamcomputer";
         private const string userAgent = userAgentPrefix + "/" + ClientVersion + " " + serviceName + "/" + apiVersion;
 
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Streamcomputer.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  删除namespace
+        ///  删除namespace,如果旗下关联有其他资源，不允许删除
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         }
 #else
         /// <summary>
-        ///  删除namespace
+        ///  删除namespace,如果旗下关联有其他资源，不允许删除
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -385,7 +385,7 @@ namespace JDCloudSDK.Streamcomputer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除job
+        ///  删除作业
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -394,7 +394,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         }
 #else
         /// <summary>
-        ///  删除job
+        ///  删除作业
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

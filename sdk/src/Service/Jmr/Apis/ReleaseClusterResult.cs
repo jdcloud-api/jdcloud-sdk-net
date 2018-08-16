@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Jmr.Apis
         ///<summary>
         /// Status
         ///</summary>
-        public   bool Status{ get; set; }
+        public   string Status{ get; set; }
         ///<summary>
         /// Message
         ///</summary>

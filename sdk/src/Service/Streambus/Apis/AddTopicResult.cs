@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  创建topic
+    ///  创建topic时，topicModel中只需要传topic参数，另外两个参数可为空
     /// </summary>
     public class AddTopicResult : JdcloudResult
     {

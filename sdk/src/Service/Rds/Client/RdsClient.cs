@@ -176,7 +176,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 敏感操作，可开启MFA操作保护
+        ///  删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 敏感操作，可开启MFA操作保护
+        ///  删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,6 +233,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
+            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  开启数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -252,7 +271,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +280,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,6 +328,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableInternetAccessResponse EnableInternetAccess(EnableInternetAccessRequest request) {
+            return  new EnableInternetAccessExecutor().Client(this).Execute<EnableInternetAccessResponse, EnableInternetAccessResult, EnableInternetAccessRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableInternetAccessResponse> EnableInternetAccess(EnableInternetAccessRequest request) {
+            return await new EnableInternetAccessExecutor().Client(this).Execute<EnableInternetAccessResponse, EnableInternetAccessResult, EnableInternetAccessRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -328,7 +366,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,12 +375,31 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request) {
             return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看RDS实例备份策略&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBackupPolicyResponse GetBackupPolicy(GetBackupPolicyRequest request) {
+            return  new GetBackupPolicyExecutor().Client(this).Execute<GetBackupPolicyResponse, GetBackupPolicyResult, GetBackupPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看RDS实例备份策略&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBackupPolicyResponse> GetBackupPolicy(GetBackupPolicyRequest request) {
+            return await new GetBackupPolicyExecutor().Client(this).Execute<GetBackupPolicyResponse, GetBackupPolicyResult, GetBackupPolicyRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -423,7 +480,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +489,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +499,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据库 敏感操作，可开启MFA操作保护
+        ///  删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +508,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除数据库 敏感操作，可开启MFA操作保护
+        ///  删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -480,6 +537,44 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查看RDS实例当前白名单&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWhiteListResponse DescribeWhiteList(DescribeWhiteListRequest request) {
+            return  new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看RDS实例当前白名单&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWhiteListResponse> DescribeWhiteList(DescribeWhiteListRequest request) {
+            return await new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭RDS实例的外网访问，用户无法通过Internet访问RDS，但可以通过内网域名访问&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableInternetAccessResponse DisableInternetAccess(DisableInternetAccessRequest request) {
+            return  new DisableInternetAccessExecutor().Client(this).Execute<DisableInternetAccessResponse, DisableInternetAccessResult, DisableInternetAccessRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭RDS实例的外网访问，用户无法通过Internet访问RDS，但可以通过内网域名访问&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableInternetAccessResponse> DisableInternetAccess(DisableInternetAccessRequest request) {
+            return await new DisableInternetAccessExecutor().Client(this).Execute<DisableInternetAccessResponse, DisableInternetAccessResult, DisableInternetAccessRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -499,7 +594,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -508,7 +603,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -613,7 +708,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -622,7 +717,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -651,7 +746,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -660,7 +755,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -670,7 +765,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -679,7 +774,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -746,7 +841,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -755,7 +850,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

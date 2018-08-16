@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  删除数据库 敏感操作，可开启MFA操作保护
+    ///  删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
     /// </summary>
     public class DeleteDatabaseExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除数据库 敏感操作，可开启MFA操作保护接口的Http 请求方法
+        ///  删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  删除数据库 敏感操作，可开启MFA操作保护接口的Http资源请求路径
+        ///  删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

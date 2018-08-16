@@ -89,5 +89,13 @@ namespace JDCloudSDK.Streamcomputer.Model
         /// UserName
         ///</summary>
         public string UserName{ get; set; }
+        ///<summary>
+        /// SqlStatement
+        ///</summary>
+        public string SqlStatement{ get; set; }
+        ///<summary>
+        /// JobType
+        ///</summary>
+        public string JobType{ get; set; }
     }
 }

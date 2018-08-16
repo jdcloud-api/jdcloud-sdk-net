@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NameSpace相关 API
- * 流数据总线NameSpace相关信息接口
+ * 流计算NameSpace相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Streamcomputer.Client
 {
 
     /// <summary>
-    ///  删除namespace
+    ///  删除namespace,如果旗下关联有其他资源，不允许删除
     /// </summary>
     public class DeleteNamespaceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除namespace接口的Http 请求方法
+        ///  删除namespace,如果旗下关联有其他资源，不允许删除接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Streamcomputer.Client
             }
         }
         /// <summary>
-        ///  删除namespace接口的Http资源请求路径
+        ///  删除namespace,如果旗下关联有其他资源，不允许删除接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

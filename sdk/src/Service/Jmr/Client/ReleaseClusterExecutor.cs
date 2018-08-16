@@ -52,7 +52,7 @@ namespace JDCloudSDK.Jmr.Client
         public override string Url
         {
             get {
-            return "/v1/regions/{regionId}/release";
+            return "/regions/{regionId}/cluster/{id}:release";
             }
         }
     }

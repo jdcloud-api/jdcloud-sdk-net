@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Streambus.Apis
         [Required]
         public   string Name{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

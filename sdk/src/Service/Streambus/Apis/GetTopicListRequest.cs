@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  查询topic
+    ///  查询topic列表，返回topic的集合
     /// </summary>
     public class GetTopicListRequest : JdcloudRequest
     {
@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Streambus.Apis
         ///</summary>
         public   string Keyword{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

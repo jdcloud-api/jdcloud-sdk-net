@@ -38,6 +38,10 @@ namespace JDCloudSDK.Streambus.Model
     {
 
         ///<summary>
+        /// 主题id
+        ///</summary>
+        public int? Id{ get; set; }
+        ///<summary>
         /// 是否归档（0：未归档，1：已归档）
         ///</summary>
         public int? Archived{ get; set; }
@@ -45,6 +49,10 @@ namespace JDCloudSDK.Streambus.Model
         /// 数据写入后的保留时间
         ///</summary>
         public int? Lifecycle{ get; set; }
+        ///<summary>
+        /// 分区
+        ///</summary>
+        public int? PartitionNum{ get; set; }
         ///<summary>
         /// 流数据总线中topic的名字
         ///</summary>

@@ -176,7 +176,7 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建topic
+        ///  创建topic时，topicModel中只需要传topic参数，另外两个参数可为空
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        ///  创建topic
+        ///  创建topic时，topicModel中只需要传topic参数，另外两个参数可为空
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看指定主题
+        ///  查询指定主题,如果已归档会返回归档信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        ///  查看指定主题
+        ///  查询指定主题,如果已归档会返回归档信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  更新topic
+        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        ///  更新topic
+        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询topic
+        ///  查询topic列表，返回topic的集合
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Streambus.Client
         }
 #else
         /// <summary>
-        ///  查询topic
+        ///  查询topic列表，返回topic的集合
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

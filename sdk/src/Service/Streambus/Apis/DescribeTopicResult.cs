@@ -34,13 +34,13 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  查看指定主题
+    ///  查询指定主题,如果已归档会返回归档信息
     /// </summary>
     public class DescribeTopicResult : JdcloudResult
     {
         ///<summary>
         /// Topic
         ///</summary>
-        public   AddTopic Topic{ get; set; }
+        public   TopicModel Topic{ get; set; }
     }
 }

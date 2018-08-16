@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  查看指定主题
+    ///  查询指定主题,如果已归档会返回归档信息
     /// </summary>
     public class DescribeTopicResponse : JdcloudResponse<DescribeTopicResult>
     {

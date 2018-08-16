@@ -54,7 +54,7 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        /// StorageType
+        /// 这个参数有input和ouput两个可选值，取决于创建输入还是输出
         ///</summary>
         public string StorageType{ get; set; }
         ///<summary>
@@ -78,7 +78,7 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///</summary>
         public string Deleted{ get; set; }
         ///<summary>
-        /// StorageParameterList
+        /// Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
         ///</summary>
         public List<StorageParameter> StorageParameterList{ get; set; }
     }

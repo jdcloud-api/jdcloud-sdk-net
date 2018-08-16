@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * TOPIC相关API
- * 流数据总线topic相关信息接口
+ * JOB相关API
+ * 流计算作业相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Streamcomputer.Client
 {
 
     /// <summary>
-    ///  删除job
+    ///  删除作业
     /// </summary>
     public class DeleteJobExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除job接口的Http 请求方法
+        ///  删除作业接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Streamcomputer.Client
             }
         }
         /// <summary>
-        ///  删除job接口的Http资源请求路径
+        ///  删除作业接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

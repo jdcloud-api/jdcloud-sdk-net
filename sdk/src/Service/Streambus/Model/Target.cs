@@ -38,7 +38,7 @@ namespace JDCloudSDK.Streambus.Model
     {
 
         ///<summary>
-        /// 需要归档的目的
+        /// 需要归档的目的地
         ///</summary>
         public string Name{ get; set; }
         ///<summary>

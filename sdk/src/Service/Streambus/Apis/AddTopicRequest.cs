@@ -35,18 +35,18 @@ namespace  JDCloudSDK.Streambus.Apis
 {
 
     /// <summary>
-    ///  创建topic
+    ///  创建topic时，topicModel中只需要传topic参数，另外两个参数可为空
     /// </summary>
     public class AddTopicRequest : JdcloudRequest
     {
         ///<summary>
-        /// TopicModel
+        /// 示例：{&quot;topicModel&quot;:{&quot;topic&quot;:{&quot;archived&quot;:0,&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;create&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;shardNum&quot;:1,&quot;partitionNum&quot;:2,&quot;lifecycle&quot;:3}}}
         ///Required:true
         ///</summary>
         [Required]
-        public   AddTopic TopicModel{ get; set; }
+        public   TopicModel TopicModel{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除数据库 敏感操作，可开启MFA操作保护
+    ///  删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
     /// </summary>
     public class DeleteDatabaseRequest : JdcloudRequest
     {
