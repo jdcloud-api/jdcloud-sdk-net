@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;net40;net45;net35</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Configurations>Debug;Release;</Configurations>
-    <Version>0.2.0</Version>
+    <Version>0.1.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>京东云SDK C# core</Description>
     <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
@@ -14,19 +14,18 @@
     <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>京东云SDK C# core</PackageReleaseNotes>
-	<PackageOutputPath>..\..\Release\nuget</PackageOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard2.0\JDCloudSDK.Core.xml</DocumentationFile>
-  </PropertyGroup> 
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net40'"> 
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
     <Reference Include="System.Web" />
   </ItemGroup>
-   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <PackageReference Include="System.Net.Http" Version="4.3.3" />
     <Reference Include="System.Web" />
   </ItemGroup>
