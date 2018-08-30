@@ -33,12 +33,12 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+    ///  监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
     /// </summary>
     public class OperateMonitorExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换接口的Http 请求方法
+        ///  监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换接口的Http资源请求路径
+        ///  监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

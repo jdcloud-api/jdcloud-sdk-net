@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * table
  * API related to XDATA-DW table
  *
  * OpenAPI spec version: v1
@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    ///  创建数据表
+    ///  创建用户实例的数据表
     /// </summary>
     public class CreateTableRequest : JdcloudRequest
     {
@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Xdata.Apis
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        /// 数据表描述
+        /// 数据表描述信息
         ///Required:true
         ///</summary>
         [Required]

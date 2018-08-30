@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * table
  * API related to XDATA-DW table
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    ///  删除数据表
+    ///  删除用户实例的指定数据表
     /// </summary>
     public class DeleteTableRequest : JdcloudRequest
     {

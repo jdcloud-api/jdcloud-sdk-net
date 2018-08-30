@@ -39,15 +39,15 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class GetMonitorAlarmInfoResult : JdcloudResult
     {
         ///<summary>
-        /// CurrentCount
+        /// 当前页面报警信息的个数
         ///</summary>
         public   int? CurrentCount{ get; set; }
         ///<summary>
-        /// TotalCount
+        /// 所有报警信息的个数
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// TotalPage
+        /// 所有报警信息的页数
         ///</summary>
         public   int? TotalPage{ get; set; }
         ///<summary>

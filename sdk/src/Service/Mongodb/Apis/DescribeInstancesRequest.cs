@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * instance相关接口
+ * 实例管理
  * API related to MONGODB instances
  *
  * OpenAPI spec version: v1
@@ -51,6 +51,7 @@ namespace  JDCloudSDK.Mongodb.Apis
         /// instanceId - 实例ID, 精确匹配
         /// instanceName - 实例名称, 模糊匹配
         /// instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+        /// chargeMode - 计费类型，精确匹配
         /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }

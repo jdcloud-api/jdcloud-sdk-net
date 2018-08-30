@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Baseanti.Apis
     public class DescribeIpResourcesRequest : JdcloudRequest
     {
         ///<summary>
+        /// IP模糊匹配
+        ///</summary>
+        public   string Ip{ get; set; }
+        ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>

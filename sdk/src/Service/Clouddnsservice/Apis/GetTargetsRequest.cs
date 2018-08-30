@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public   string SubDomainName{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询DNS所有解析线路
+    ///  查询云解析所有的基础解析线路
     /// </summary>
     public class GetViewTreeResponse : JdcloudResponse<GetViewTreeResult>
     {

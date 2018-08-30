@@ -54,7 +54,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public int? ExpirationDate{ get; set; }
         ///<summary>
-        /// 套餐类型，0-免费 1-企业版 2-高级版
+        /// 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;高级版
         ///</summary>
         public int? PackId{ get; set; }
     }

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  添加子域名的监控项，采用默认配置
+    ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
     /// </summary>
     public class AddMonitorExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加子域名的监控项，采用默认配置接口的Http 请求方法
+        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  添加子域名的监控项，采用默认配置接口的Http资源请求路径
+        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

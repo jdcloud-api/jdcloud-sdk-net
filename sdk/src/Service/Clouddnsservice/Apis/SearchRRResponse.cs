@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询某个主域名的解析记录
+    ///  查询主域名的解析记录
     /// </summary>
     public class SearchRRResponse : JdcloudResponse<SearchRRResult>
     {

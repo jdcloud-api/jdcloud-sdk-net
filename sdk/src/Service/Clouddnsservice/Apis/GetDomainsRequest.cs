@@ -39,23 +39,23 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class GetDomainsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 当前页数，起始值为1，默认为1
+        /// 分页查询时查询的每页的序号，起始值为1，默认为1
         ///Required:true
         ///</summary>
         [Required]
         public   int PageNumber{ get; set; }
         ///<summary>
-        /// 分页查询时设置的每页行数
+        /// 分页查询时设置的每页行数，默认为10
         ///Required:true
         ///</summary>
         [Required]
         public   int PageSize{ get; set; }
         ///<summary>
-        /// 关键字，按照”%domainName%”模式搜索主域名
+        /// 关键字，按照”%domainName%”模式匹配主域名
         ///</summary>
         public   string DomainName{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

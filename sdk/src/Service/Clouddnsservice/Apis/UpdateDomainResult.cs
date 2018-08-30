@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class UpdateDomainResult : JdcloudResult
     {
         ///<summary>
-        /// UpdateDomain
+        /// 修改后的域名结构
         ///</summary>
         public   Domain UpdateDomain{ get; set; }
     }

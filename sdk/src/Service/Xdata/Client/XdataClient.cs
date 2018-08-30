@@ -89,9 +89,9 @@ namespace JDCloudSDK.Xdata.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Xdata.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  执行PySpark脚本
+        ///  执行用户编写的PySpark脚本
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  执行PySpark脚本
+        ///  执行用户编写的PySpark脚本
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询指定数据库下所有数据表
+        ///  查询用户实例指定数据库下的所有数据表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  查询指定数据库下所有数据表
+        ///  查询用户实例指定数据库下的所有数据表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询数据库列表
+        ///  查询用户实例的所有数据库信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  查询数据库列表
+        ///  查询用户实例的所有数据库信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据库
+        ///  删除用户实例的指定数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +204,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  删除数据库
+        ///  删除用户实例的指定数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +214,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建数据库
+        ///  创建属于用户实例的数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  创建数据库
+        ///  创建属于用户实例的数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,7 +233,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取PySpark执行的结果
+        ///  获取用户PySpark脚本的执行结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  获取PySpark执行的结果
+        ///  获取用户PySpark脚本的执行结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -252,7 +252,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询实例列表
+        ///  查询用户所属的实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  查询实例列表
+        ///  查询用户所属的实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,7 +271,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取查询日志
+        ///  获取用户Spark SQL脚本的查询日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  获取查询日志
+        ///  获取用户Spark SQL脚本的查询日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  执行Spark SQL
+        ///  执行用户编写的Spark SQL脚本
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  执行Spark SQL
+        ///  执行用户编写的Spark SQL脚本
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询数据表信息
+        ///  查询用户实例的指定数据表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  查询数据表信息
+        ///  查询用户实例的指定数据表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除数据表
+        ///  删除用户实例的指定数据表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  删除数据表
+        ///  删除用户实例的指定数据表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取查询的结果
+        ///  获取用户Spark SQL脚本的查询结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  获取查询的结果
+        ///  获取用户Spark SQL脚本的查询结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +366,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  终止PySpark任务
+        ///  终止用户PySpark脚本任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +375,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  终止PySpark任务
+        ///  终止用户PySpark脚本任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -385,7 +385,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  终止查询
+        ///  终止用户Spark SQL脚本查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -394,7 +394,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  终止查询
+        ///  终止用户Spark SQL脚本查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +404,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取PySpark脚本的执行状态
+        ///  获取用户PySpark脚本的执行状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -413,7 +413,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  获取PySpark脚本的执行状态
+        ///  获取用户PySpark脚本的执行状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -423,7 +423,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询数据库详情
+        ///  查询用户实例的指定数据库信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +432,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  查询数据库详情
+        ///  查询用户实例的指定数据库信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +442,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建数据表
+        ///  创建用户实例的数据表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +451,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  创建数据表
+        ///  创建用户实例的数据表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -461,7 +461,7 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取查询状态
+        ///  获取用户Spark SQL脚本的查询状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -470,7 +470,7 @@ namespace JDCloudSDK.Xdata.Client
         }
 #else
         /// <summary>
-        ///  获取查询状态
+        ///  获取用户Spark SQL脚本的查询状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

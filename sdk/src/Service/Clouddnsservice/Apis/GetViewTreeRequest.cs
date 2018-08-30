@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询DNS所有解析线路
+    ///  查询云解析所有的基础解析线路
     /// </summary>
     public class GetViewTreeRequest : JdcloudRequest
     {
@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public   int ViewId{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -44,12 +44,16 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         public List<Domain> DataList{ get; set; }
 
         ///<summary>
-        /// CurrentCount
+        /// 当前页的域名列表里域名的个数
         ///</summary>
         public   int? CurrentCount{ get; set; }
         ///<summary>
-        /// TotalCount
+        /// 所有匹配的域名列表的个数
         ///</summary>
         public   int? TotalCount{ get; set; }
+        ///<summary>
+        /// 所有匹配的域名列表按照分页参数一共的页数
+        ///</summary>
+        public   int? TotalPage{ get; set; }
     }
 }

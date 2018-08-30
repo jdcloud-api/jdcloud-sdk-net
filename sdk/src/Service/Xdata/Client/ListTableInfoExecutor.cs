@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * table
  * API related to XDATA-DW table
  *
  * OpenAPI spec version: v1
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Xdata.Client
 {
 
     /// <summary>
-    ///  查询指定数据库下所有数据表
+    ///  查询用户实例指定数据库下的所有数据表信息
     /// </summary>
     public class ListTableInfoExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询指定数据库下所有数据表接口的Http 请求方法
+        ///  查询用户实例指定数据库下的所有数据表信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Xdata.Client
             }
         }
         /// <summary>
-        ///  查询指定数据库下所有数据表接口的Http资源请求路径
+        ///  查询用户实例指定数据库下的所有数据表信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

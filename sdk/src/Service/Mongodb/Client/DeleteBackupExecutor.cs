@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * backup相关接口
+ * 备份管理
  * API related to Relational MONGODB Service
  *
  * OpenAPI spec version: v1

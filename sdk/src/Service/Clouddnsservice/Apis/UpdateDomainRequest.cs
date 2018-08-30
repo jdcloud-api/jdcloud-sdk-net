@@ -39,19 +39,19 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class UpdateDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 域名
+        /// 需要修改的域名
         ///Required:true
         ///</summary>
         [Required]
         public   string DomainName{ get; set; }
         ///<summary>
-        /// 域名ID
+        /// 需要修改的域名ID
         ///Required:true
         ///</summary>
         [Required]
         public   int Id{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

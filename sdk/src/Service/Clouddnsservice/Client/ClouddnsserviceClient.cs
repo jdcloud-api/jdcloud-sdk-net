@@ -89,9 +89,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加域名解析
+        ///  添加域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  添加域名解析
+        ///  添加域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -328,7 +328,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加子域名的监控项，采用默认配置
+        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  添加子域名的监控项，采用默认配置
+        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询DNS所有解析线路
+        ///  查询云解析所有的基础解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +356,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询DNS所有解析线路
+        ///  查询云解析所有的基础解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -404,7 +404,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+        ///  监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -413,7 +413,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+        ///  监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +442,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询某个主域名的解析记录
+        ///  查询主域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +451,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询某个主域名的解析记录
+        ///  查询主域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

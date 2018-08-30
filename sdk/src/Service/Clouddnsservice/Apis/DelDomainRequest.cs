@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class DelDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 域名ID
+        /// 需要删除的域名ID
         ///Required:true
         ///</summary>
         [Required]
         public   int DomainId{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

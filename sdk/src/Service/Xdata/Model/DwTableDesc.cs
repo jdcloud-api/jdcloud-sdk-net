@@ -60,7 +60,7 @@ namespace JDCloudSDK.Xdata.Model
         ///<summary>
         /// 其他serde属性
         ///</summary>
-        public Object OtherSerdeProperties{ get; set; }
+        public object OtherSerdeProperties{ get; set; }
         ///<summary>
         /// 创建时间（自动生成）
         ///</summary>
@@ -80,7 +80,7 @@ namespace JDCloudSDK.Xdata.Model
         ///<summary>
         /// 参数
         ///</summary>
-        public Object Parameters{ get; set; }
+        public object Parameters{ get; set; }
         ///<summary>
         /// 列信息
         ///</summary>

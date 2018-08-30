@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询某个主域名的解析记录
+    ///  查询主域名的解析记录
     /// </summary>
     public class SearchRRResult : JdcloudResult
     {
@@ -44,15 +44,15 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         public List<RR> DataList{ get; set; }
 
         ///<summary>
-        /// TotalCount
+        /// 所有解析记录的个数
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// TotalPage
+        /// 所有解析记录的页数
         ///</summary>
         public   int? TotalPage{ get; set; }
         ///<summary>
-        /// CurrentCount
+        /// 当前页解析记录的个数
         ///</summary>
         public   int? CurrentCount{ get; set; }
     }

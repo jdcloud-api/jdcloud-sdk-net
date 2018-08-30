@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * database相关接口
+ * database
  * API related to XDATA-DW database
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    ///  创建数据库
+    ///  创建属于用户实例的数据库
     /// </summary>
     public class CreateDatabaseRequest : JdcloudRequest
     {
@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Xdata.Apis
         [Required]
         public   string InstanceName{ get; set; }
         ///<summary>
-        /// 描述信息
+        /// 数据库描述信息
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>

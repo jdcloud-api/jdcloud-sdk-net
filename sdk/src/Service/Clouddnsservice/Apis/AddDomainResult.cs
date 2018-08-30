@@ -39,11 +39,11 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class AddDomainResult : JdcloudResult
     {
         ///<summary>
-        /// Data
+        /// 新添加的的域名结构
         ///</summary>
         public   Domain Data{ get; set; }
         ///<summary>
-        /// 收费版的订单号
+        /// 添加收费版域名的订单号
         ///</summary>
         public   string Order{ get; set; }
     }

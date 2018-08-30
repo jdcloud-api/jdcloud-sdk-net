@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///</summary>
         public   string SearchValue{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

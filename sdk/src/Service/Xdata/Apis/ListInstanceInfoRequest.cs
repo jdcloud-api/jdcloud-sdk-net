@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * instance相关接口
+ * instance
  * API related to XDATA-DW instances
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    ///  查询实例列表
+    ///  查询用户所属的实例信息
     /// </summary>
     public class ListInstanceInfoRequest : JdcloudRequest
     {

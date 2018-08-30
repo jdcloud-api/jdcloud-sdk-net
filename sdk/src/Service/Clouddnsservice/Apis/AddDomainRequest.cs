@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class AddDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 套餐类型, 0免费 ,1企业版, 2高级版
+        /// 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
         ///Required:true
         ///</summary>
         [Required]
         public   int PackId{ get; set; }
         ///<summary>
-        /// 域名
+        /// 要添加的域名
         ///Required:true
         ///</summary>
         [Required]
@@ -55,23 +55,23 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///</summary>
         public   int? DomainId{ get; set; }
         ///<summary>
-        /// 1新购买、2升级，高级版必填
+        /// 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
         ///</summary>
         public   int? BuyType{ get; set; }
         ///<summary>
-        /// 1-3 ，时长，高级版必填
+        /// 1，2，3 ，时长，收费套餐的域名必填
         ///</summary>
         public   int? TimeSpan{ get; set; }
         ///<summary>
-        /// 时间单位，高级版必填
+        /// 时间单位，收费套餐的域名必填
         ///</summary>
         public   int? TimeUnit{ get; set; }
         ///<summary>
-        /// 计费类型，高级版必填
+        /// 计费类型，收费套餐的域名必填
         ///</summary>
         public   int? BillingType{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

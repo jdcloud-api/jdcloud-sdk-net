@@ -100,6 +100,6 @@ namespace JDCloudSDK.Xdata.Model
         ///<summary>
         /// 参数
         ///</summary>
-        public Object Parameters{ get; set; }
+        public object Parameters{ get; set; }
     }
 }

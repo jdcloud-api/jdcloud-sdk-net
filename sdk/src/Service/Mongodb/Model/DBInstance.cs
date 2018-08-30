@@ -126,5 +126,9 @@ namespace JDCloudSDK.Mongodb.Model
         /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
+        ///<summary>
+        /// 是否设置白名单，true：已设置，false：未设置
+        ///</summary>
+        public bool IsSetSecurityIps{ get; set; }
     }
 }

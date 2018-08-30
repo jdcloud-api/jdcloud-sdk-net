@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * instance相关接口
+ * 实例管理
  * API related to MONGODB instances
  *
  * OpenAPI spec version: v1

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  添加域名解析
+    ///  添加域名的解析记录
     /// </summary>
     public class AddRRExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加域名解析接口的Http 请求方法
+        ///  添加域名的解析记录接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  添加域名解析接口的Http资源请求路径
+        ///  添加域名的解析记录接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

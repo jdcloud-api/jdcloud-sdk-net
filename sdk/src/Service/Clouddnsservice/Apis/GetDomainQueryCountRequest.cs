@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class GetDomainQueryCountRequest : JdcloudRequest
     {
         ///<summary>
-        /// 域名
+        /// 查询的域名
         ///Required:true
         ///</summary>
         [Required]
@@ -57,7 +57,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public   string End{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

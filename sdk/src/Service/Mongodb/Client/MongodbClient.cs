@@ -89,9 +89,9 @@ namespace JDCloudSDK.Mongodb.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Mongodb.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询实例访问白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSecurityIpsResponse DescribeSecurityIps(DescribeSecurityIpsRequest request) {
+            return  new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例访问白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSecurityIpsResponse> DescribeSecurityIps(DescribeSecurityIpsRequest request) {
+            return await new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -153,6 +172,25 @@ namespace JDCloudSDK.Mongodb.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
             return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改实例访问白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request) {
+            return  new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例访问白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifySecurityIpsResponse> ModifySecurityIps(ModifySecurityIpsRequest request) {
+            return await new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -229,6 +267,25 @@ namespace JDCloudSDK.Mongodb.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
             return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取规格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeFlavorsResponse DescribeFlavors(DescribeFlavorsRequest request) {
+            return  new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取规格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeFlavorsResponse> DescribeFlavors(DescribeFlavorsRequest request) {
+            return await new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -381,6 +438,25 @@ namespace JDCloudSDK.Mongodb.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
             return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取可用区
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAvailableZonesResponse DescribeAvailableZones(DescribeAvailableZonesRequest request) {
+            return  new DescribeAvailableZonesExecutor().Client(this).Execute<DescribeAvailableZonesResponse, DescribeAvailableZonesResult, DescribeAvailableZonesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取可用区
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAvailableZonesResponse> DescribeAvailableZones(DescribeAvailableZonesRequest request) {
+            return await new DescribeAvailableZonesExecutor().Client(this).Execute<DescribeAvailableZonesResponse, DescribeAvailableZonesResult, DescribeAvailableZonesRequest>(request);
         }
 #endif
 

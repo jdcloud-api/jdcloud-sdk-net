@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  添加域名解析
+    ///  添加域名的解析记录
     /// </summary>
     public class AddRRResult : JdcloudResult
     {
         ///<summary>
-        /// DataList
+        /// 添加成功后的解析记录结果
         ///</summary>
         public   RR DataList{ get; set; }
     }

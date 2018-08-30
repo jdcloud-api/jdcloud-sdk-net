@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+    ///  监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
     /// </summary>
     public class OperateMonitorRequest : JdcloudRequest
     {
@@ -56,7 +56,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///</summary>
         public   string SwitchTarget{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

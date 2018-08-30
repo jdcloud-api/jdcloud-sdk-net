@@ -46,13 +46,13 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         public List<int?> Ids{ get; set; }
 
         ///<summary>
-        /// 操作类型，on/off/del，分别是启用、停用、删除解析记录
+        /// 操作类型，on-&gt;启用 off-&gt;停用 del-&gt;删除
         ///Required:true
         ///</summary>
         [Required]
         public   string Action{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

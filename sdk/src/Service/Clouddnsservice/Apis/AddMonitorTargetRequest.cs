@@ -50,7 +50,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         public List<string> Targets{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

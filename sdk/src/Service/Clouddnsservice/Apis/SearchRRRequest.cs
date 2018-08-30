@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询某个主域名的解析记录
+    ///  查询主域名的解析记录
     /// </summary>
     public class SearchRRRequest : JdcloudRequest
     {
@@ -47,7 +47,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

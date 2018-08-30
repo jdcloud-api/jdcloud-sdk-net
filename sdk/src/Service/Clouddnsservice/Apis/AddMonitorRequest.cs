@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  添加子域名的监控项，采用默认配置
+    ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
     /// </summary>
     public class AddMonitorRequest : JdcloudRequest
     {
@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public   string SubDomainName{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * query
  * API related to XDATA-DW query
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Xdata.Apis
 {
 
     /// <summary>
-    ///  终止查询
+    ///  终止用户Spark SQL脚本查询
     /// </summary>
     public class CancelRasQueryRequest : JdcloudRequest
     {
