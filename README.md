@@ -28,13 +28,13 @@
 在visual studio Nuget包浏览器查找JDCloudSDK 或者使用包管理控制台输入命令
 
 ```powershell
-Install-Package JDCloudSDK.Vm -Version 0.7.4.1
+Install-Package JDCloudSDK.Vm -Version 1.0.0.1
 ```
 
 或者使用 .NET CLI 安装
 
 ```powershell
-dotnet add package JDCloudSDK.Vm --version 0.7.4.1
+dotnet add package JDCloudSDK.Vm --version 1.0.0.1
 ```
 
 请选择自己需要使用的模块安装。
