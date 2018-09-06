@@ -33,21 +33,25 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查看RDS实例备份策略&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    ///  查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
     /// </summary>
     public class GetBackupPolicyResult : JdcloudResult
     {
         ///<summary>
-        /// 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+        /// 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
         ///</summary>
         public   string StartWindow{ get; set; }
         ///<summary>
-        /// 自动备份保留周期，单位天,范围7-730
+        /// 自动备份保留周期，单位天,缺省为7天，范围7-730
         ///</summary>
         public   int? RetentionPeriod{ get; set; }
         ///<summary>
-        /// 自动备份循环模式&lt;br/&gt;1:表示每天都是全量备份&lt;br/&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推
+        /// 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
         ///</summary>
         public   int? CycleMode{ get; set; }
+        ///<summary>
+        /// 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **SQL Server不支持**&lt;br&gt;- **MySQL支持**
+        ///</summary>
+        public   string BackupBinlog{ get; set; }
     }
 }

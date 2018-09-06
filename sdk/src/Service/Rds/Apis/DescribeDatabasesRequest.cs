@@ -34,22 +34,22 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  获取当前实例的所有数据库详细信息的列表
     /// </summary>
     public class DescribeDatabasesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
         ///</summary>
         public   string DbName{ get; set; }
         ///<summary>
-        /// 区域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

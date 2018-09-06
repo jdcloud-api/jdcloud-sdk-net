@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查看审计文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    ///  获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
     /// </summary>
     public class GetAuditFilesRequest : JdcloudRequest
     {
         ///<summary>
-        /// Region ID
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

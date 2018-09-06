@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
     /// </summary>
     public class CreateDatabaseRequest : JdcloudRequest
     {
         ///<summary>
-        /// 数据库名称
+        /// 数据库名，数据库名称的限制请参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///Required:true
         ///</summary>
         [Required]
         public   string DbName{ get; set; }
         ///<summary>
-        /// 字符集名称&lt;/br&gt;&lt;strong&gt;mysql字符集支持：&lt;/strong&gt;&lt;/br&gt;- utf8；&lt;/br&gt;&lt;strong&gt;SQL Server字符集支持：&lt;/strong&gt;&lt;/br&gt;- Chinese_PRC_CI_AS&lt;/br&gt;- Chinese_PRC_CS_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CI_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CS_AS&lt;/br&gt;- Chinese_PRC_BIN
+        /// 数据库的字符集名，当前支持的字符集请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///Required:true
         ///</summary>
         [Required]
         public   string CharacterSetName{ get; set; }
         ///<summary>
-        /// 区域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

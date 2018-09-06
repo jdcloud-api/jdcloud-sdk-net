@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持
+    ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class RestoreInstanceRequest : JdcloudRequest
     {
@@ -43,13 +43,13 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   string BackupId{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

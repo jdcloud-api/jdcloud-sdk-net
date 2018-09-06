@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例
     /// </summary>
     public class DeleteAccountExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http 请求方法
+        ///  删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http资源请求路径
+        ///  删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

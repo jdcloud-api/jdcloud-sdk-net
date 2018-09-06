@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取上传导入文件的需要的Key&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    ///  获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云&lt;br&gt;- 仅支持SQL Server
     /// </summary>
     public class GetUploadKeyResult : JdcloudResult
     {
         ///<summary>
-        /// Key
+        /// 上传文件需要用到的Key
         ///</summary>
         public   string Key{ get; set; }
     }

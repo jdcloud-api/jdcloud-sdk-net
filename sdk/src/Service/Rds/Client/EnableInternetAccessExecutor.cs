@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例
     /// </summary>
     public class EnableInternetAccessExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http 请求方法
+        ///  开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http资源请求路径
+        ///  开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

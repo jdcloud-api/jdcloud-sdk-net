@@ -34,20 +34,20 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
     /// </summary>
     public class DescribeInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+        /// 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 每页显示的数据条数，取值范围：10/20/30/50/100
+        /// 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]

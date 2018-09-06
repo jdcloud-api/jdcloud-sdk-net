@@ -39,35 +39,35 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 数据库实例ID
+        /// 实例ID
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 数据库实例名称
+        /// 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        /// 实例类别，目前仅支持主实例，对应值为master
+        /// 实例类别，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        /// 数据库类型 MySQL|SQL Server
+        /// 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string Engine{ get; set; }
         ///<summary>
-        /// 数据库版本 MySQL支持5.6、5.7  SQL Server支持2008 R2、2012 EE、2014 EE、2016 EE
+        /// 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string EngineVersion{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
         public string RegionId{ get; set; }
         ///<summary>
-        /// 可用区ID， 第一个ID必须为主实例所在的可用区
+        /// 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
         public List<string> AzId{ get; set; }
         ///<summary>
-        /// 实例状态
+        /// 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string InstanceStatus{ get; set; }
         ///<summary>

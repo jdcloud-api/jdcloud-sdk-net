@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  关闭RDS实例的外网访问，用户无法通过Internet访问RDS，但可以通过内网域名访问&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  关闭RDS实例的外网访问功能。关闭后，用户无法通过Internet访问RDS，但可以在京东云内网通过内网域名访问
     /// </summary>
     public class DisableInternetAccessRequest : JdcloudRequest
     {
         ///<summary>
-        /// Region ID
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

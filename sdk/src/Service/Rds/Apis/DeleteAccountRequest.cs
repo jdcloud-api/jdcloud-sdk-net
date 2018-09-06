@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例
     /// </summary>
     public class DeleteAccountRequest : JdcloudRequest
     {
         ///<summary>
-        /// 地域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        /// 账户名
+        /// 账号名，在同一个实例中账号名不能重复
         ///Required:true
         ///</summary>
         [Required]

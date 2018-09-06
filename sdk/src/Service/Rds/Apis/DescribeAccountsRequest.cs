@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
     /// </summary>
     public class DescribeAccountsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 地域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
     /// </summary>
     public class DeleteBackupRequest : JdcloudRequest
     {
         ///<summary>
-        /// 地域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]

@@ -42,7 +42,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string BackupId{ get; set; }
         ///<summary>
-        /// 备份名称
+        /// 备份名称，最长支持64个英文字符或等长的中文字符
         ///</summary>
         public string BackupName{ get; set; }
         ///<summary>
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 备份状态 &lt;/br&gt; COMPLETED：备份完成&lt;/br&gt;FAILED：备份失败&lt;/br&gt;BUILDING：备份中&lt;/br&gt;DELETING：删除中
+        /// 备份状态，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string BackupStatus{ get; set; }
         ///<summary>
@@ -58,23 +58,23 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string BackupStartTime{ get; set; }
         ///<summary>
-        /// 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
+        /// 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
         ///</summary>
         public string BackupEndTime{ get; set; }
         ///<summary>
-        /// 备份类型，全量备份或增量备份&lt;/br&gt;full：全量&lt;/br&gt;diff：增量
+        /// 备份类型，全量备份或增量备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
         ///</summary>
         public string BackupType{ get; set; }
         ///<summary>
-        /// 备份模式，系统自动备份或手动备份&lt;/br&gt;Automated：自动备份&lt;/br&gt;Manual：手工备份
+        /// 备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string BackupMode{ get; set; }
         ///<summary>
-        /// 备份粒度，实例备份或者多库备份&lt;/br&gt;instance：实例备份&lt;/br&gt;dbs：数据库备份
+        /// 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
         ///</summary>
         public string BackupUnit{ get; set; }
         ///<summary>
-        /// 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
+        /// 备份文件列表&lt;br&gt;- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:&lt;br&gt;（1）全备：数据库名+.bak&lt;br&gt;（2）增量：数据库名+.diff&lt;br&gt;- **MySQL不支持**
         ///</summary>
         public List<string> BackupFiles{ get; set; }
         ///<summary>

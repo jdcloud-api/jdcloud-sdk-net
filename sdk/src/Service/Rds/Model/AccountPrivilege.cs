@@ -38,11 +38,11 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 数据库名称
+        /// 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string DbName{ get; set; }
         ///<summary>
-        /// 对数据库具有的权限&lt;/br&gt;ro:只读&lt;/br&gt;rw:读写
+        /// 账号对数据库所具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string Privilege{ get; set; }
     }

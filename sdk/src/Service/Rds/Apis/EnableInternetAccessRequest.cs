@@ -34,18 +34,18 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例
     /// </summary>
     public class EnableInternetAccessRequest : JdcloudRequest
     {
         ///<summary>
-        /// Region ID
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

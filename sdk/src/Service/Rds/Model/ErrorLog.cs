@@ -38,11 +38,11 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 错误日志名称
+        /// 错误日志文件名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 错误日志大小，单位Byte
+        /// 错误日志文件大小，单位Byte
         ///</summary>
         public long? SizeByte{ get; set; }
         ///<summary>

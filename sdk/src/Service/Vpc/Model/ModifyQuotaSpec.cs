@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vpc.Model
 {
@@ -39,7 +40,9 @@ namespace JDCloudSDK.Vpc.Model
 
         ///<summary>
         /// 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+        ///Required:true
         ///</summary>
+        [Required]
         public string Type{ get; set; }
         ///<summary>
         /// type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
@@ -47,7 +50,9 @@ namespace JDCloudSDK.Vpc.Model
         public string ParentResourceId{ get; set; }
         ///<summary>
         /// 配额大小
+        ///Required:true
         ///</summary>
-        public int? MaxLimit{ get; set; }
+        [Required]
+        public int MaxLimit{ get; set; }
     }
 }

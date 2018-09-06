@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
     /// </summary>
     public class DeleteBackupExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http 请求方法
+        ///  删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http资源请求路径
+        ///  删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

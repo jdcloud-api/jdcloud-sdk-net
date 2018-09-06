@@ -34,26 +34,26 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
     /// </summary>
     public class RebootInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        /// 是否重启主节点。&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 是否重启主节点。&lt;br&gt; - 仅SQL Server 支持该参数
         ///</summary>
         public   bool RebootMaster{ get; set; }
         ///<summary>
-        /// 是否重启从节点。&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+        /// 是否重启备节点。&lt;br&gt; - 仅SQL Server 支持该参数
         ///</summary>
         public   bool RebootSlave{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// Instance ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

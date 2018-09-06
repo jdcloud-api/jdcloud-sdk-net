@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例
     /// </summary>
     public class EnableInternetAccessResult : JdcloudResult
     {

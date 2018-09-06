@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  获取当前实例的所有数据库详细信息的列表
     /// </summary>
     public class DescribeDatabasesResult : JdcloudResult
     {

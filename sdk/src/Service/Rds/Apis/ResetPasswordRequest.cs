@@ -34,30 +34,30 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  重置数据库账号密码。如果用户忘记账号的密码，可以使用该接口重置指定账号密码。密码重置后，以前的密码将无法使用，必须使用重置后的新密码登录或连接数据库实例。
     /// </summary>
     public class ResetPasswordRequest : JdcloudRequest
     {
         ///<summary>
-        /// 新密码
+        /// 新密码，密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///Required:true
         ///</summary>
         [Required]
         public   string AccountPassword{ get; set; }
         ///<summary>
-        /// 地域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        /// 账户名
+        /// 账号名，在同一个实例中账号名不能重复
         ///Required:true
         ///</summary>
         [Required]

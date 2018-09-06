@@ -42,7 +42,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string AccountName{ get; set; }
         ///<summary>
-        /// 对数据库具有的权限,ro:只读  rw:读写
+        /// 该账号对数据库具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string Privilege{ get; set; }
     }

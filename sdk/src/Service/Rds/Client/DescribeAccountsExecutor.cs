@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+    ///  查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
     /// </summary>
     public class DescribeAccountsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http 请求方法
+        ///  查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持接口的Http资源请求路径
+        ///  查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

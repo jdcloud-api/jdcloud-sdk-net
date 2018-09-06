@@ -46,7 +46,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string Table{ get; set; }
         ///<summary>
-        /// 构成相等谓词的列的逗号分隔列表，谓词的形式如下：table.column &#x3D;constant_value
+        /// 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
         ///</summary>
         public string EqualityColumns{ get; set; }
         ///<summary>
@@ -54,7 +54,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InequalityColumns{ get; set; }
         ///<summary>
-        /// 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：table.column &gt; constant_value“&#x3D;”之外的任何比较运算符都表示不相等。
+        /// 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
         ///</summary>
         public string IncludedColumns{ get; set; }
         ///<summary>

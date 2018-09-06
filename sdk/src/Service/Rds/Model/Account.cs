@@ -38,15 +38,15 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 账号名称
+        /// 账号名，账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string AccountName{ get; set; }
         ///<summary>
-        /// 账号状态，building：创建中，running：运行中
+        /// 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
         ///</summary>
         public string AccountStatus{ get; set; }
         ///<summary>
-        /// 账户权限列表
+        /// 具有的权限
         ///</summary>
         public List<AccountPrivilege> AccountPrivileges{ get; set; }
     }

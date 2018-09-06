@@ -89,9 +89,9 @@ namespace JDCloudSDK.Vpc.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,21 +157,21 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询VpcPeering资源详情
+        ///  创建networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeVpcPeeringResponse DescribeVpcPeering(DescribeVpcPeeringRequest request) {
-            return  new DescribeVpcPeeringExecutor().Client(this).Execute<DescribeVpcPeeringResponse, DescribeVpcPeeringResult, DescribeVpcPeeringRequest>(request);
+        public CreateNetworkAclResponse CreateNetworkAcl(CreateNetworkAclRequest request) {
+            return  new CreateNetworkAclExecutor().Client(this).Execute<CreateNetworkAclResponse, CreateNetworkAclResult, CreateNetworkAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询VpcPeering资源详情
+        ///  创建networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeVpcPeeringResponse> DescribeVpcPeering(DescribeVpcPeeringRequest request) {
-            return await new DescribeVpcPeeringExecutor().Client(this).Execute<DescribeVpcPeeringResponse, DescribeVpcPeeringResult, DescribeVpcPeeringRequest>(request);
+        public async Task<CreateNetworkAclResponse> CreateNetworkAcl(CreateNetworkAclRequest request) {
+            return await new CreateNetworkAclExecutor().Client(this).Execute<CreateNetworkAclResponse, CreateNetworkAclResult, CreateNetworkAclRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -191,6 +191,576 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateRouteTableResponse> DisassociateRouteTable(DisassociateRouteTableRequest request) {
             return await new DisassociateRouteTableExecutor().Client(this).Execute<DisassociateRouteTableResponse, DisassociateRouteTableResult, DisassociateRouteTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询Acl列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkAclsResponse DescribeNetworkAcls(DescribeNetworkAclsRequest request) {
+            return  new DescribeNetworkAclsExecutor().Client(this).Execute<DescribeNetworkAclsResponse, DescribeNetworkAclsResult, DescribeNetworkAclsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询Acl列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkAclsResponse> DescribeNetworkAcls(DescribeNetworkAclsRequest request) {
+            return await new DescribeNetworkAclsExecutor().Client(this).Execute<DescribeNetworkAclsResponse, DescribeNetworkAclsResult, DescribeNetworkAclsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除networkAcl接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteNetworkAclResponse DeleteNetworkAcl(DeleteNetworkAclRequest request) {
+            return  new DeleteNetworkAclExecutor().Client(this).Execute<DeleteNetworkAclResponse, DeleteNetworkAclResult, DeleteNetworkAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除networkAcl接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteNetworkAclResponse> DeleteNetworkAcl(DeleteNetworkAclRequest request) {
+            return await new DeleteNetworkAclExecutor().Client(this).Execute<DeleteNetworkAclResponse, DeleteNetworkAclResult, DeleteNetworkAclRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除路由表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRouteTableResponse DeleteRouteTable(DeleteRouteTableRequest request) {
+            return  new DeleteRouteTableExecutor().Client(this).Execute<DeleteRouteTableResponse, DeleteRouteTableResult, DeleteRouteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除路由表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRouteTableResponse> DeleteRouteTable(DeleteRouteTableRequest request) {
+            return await new DeleteRouteTableExecutor().Client(this).Execute<DeleteRouteTableResponse, DeleteRouteTableResult, DeleteRouteTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改子网接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifySubnetResponse ModifySubnet(ModifySubnetRequest request) {
+            return  new ModifySubnetExecutor().Client(this).Execute<ModifySubnetResponse, ModifySubnetResult, ModifySubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改子网接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifySubnetResponse> ModifySubnet(ModifySubnetRequest request) {
+            return await new ModifySubnetExecutor().Client(this).Execute<ModifySubnetResponse, ModifySubnetResult, ModifySubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询路由表列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest request) {
+            return  new DescribeRouteTablesExecutor().Client(this).Execute<DescribeRouteTablesResponse, DescribeRouteTablesResult, DescribeRouteTablesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询路由表列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRouteTablesResponse> DescribeRouteTables(DescribeRouteTablesRequest request) {
+            return await new DescribeRouteTablesExecutor().Client(this).Execute<DescribeRouteTablesResponse, DescribeRouteTablesResult, DescribeRouteTablesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给网卡绑定弹性Ip接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
+            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给网卡绑定弹性Ip接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给子网解绑NetworkAcl接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisassociateNetworkAclResponse DisassociateNetworkAcl(DisassociateNetworkAclRequest request) {
+            return  new DisassociateNetworkAclExecutor().Client(this).Execute<DisassociateNetworkAclResponse, DisassociateNetworkAclResult, DisassociateNetworkAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给子网解绑NetworkAcl接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisassociateNetworkAclResponse> DisassociateNetworkAcl(DisassociateNetworkAclRequest request) {
+            return await new DisassociateNetworkAclExecutor().Client(this).Execute<DisassociateNetworkAclResponse, DisassociateNetworkAclResult, DisassociateNetworkAclRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改networkAcl接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyNetworkAclResponse ModifyNetworkAcl(ModifyNetworkAclRequest request) {
+            return  new ModifyNetworkAclExecutor().Client(this).Execute<ModifyNetworkAclResponse, ModifyNetworkAclResult, ModifyNetworkAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改networkAcl接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyNetworkAclResponse> ModifyNetworkAcl(ModifyNetworkAclRequest request) {
+            return await new ModifyNetworkAclExecutor().Client(this).Execute<ModifyNetworkAclResponse, ModifyNetworkAclResult, ModifyNetworkAclRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除安全组规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveNetworkSecurityGroupRulesResponse RemoveNetworkSecurityGroupRules(RemoveNetworkSecurityGroupRulesRequest request) {
+            return  new RemoveNetworkSecurityGroupRulesExecutor().Client(this).Execute<RemoveNetworkSecurityGroupRulesResponse, RemoveNetworkSecurityGroupRulesResult, RemoveNetworkSecurityGroupRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除安全组规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveNetworkSecurityGroupRulesResponse> RemoveNetworkSecurityGroupRules(RemoveNetworkSecurityGroupRulesRequest request) {
+            return await new RemoveNetworkSecurityGroupRulesExecutor().Client(this).Execute<RemoveNetworkSecurityGroupRulesResponse, RemoveNetworkSecurityGroupRulesResult, RemoveNetworkSecurityGroupRulesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  ElasticIp资源信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpResponse DescribeElasticIp(DescribeElasticIpRequest request) {
+            return  new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  ElasticIp资源信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
+            return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除networkAcl规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveNetworkAclRulesResponse RemoveNetworkAclRules(RemoveNetworkAclRulesRequest request) {
+            return  new RemoveNetworkAclRulesExecutor().Client(this).Execute<RemoveNetworkAclRulesResponse, RemoveNetworkAclRulesResult, RemoveNetworkAclRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除networkAcl规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveNetworkAclRulesResponse> RemoveNetworkAclRules(RemoveNetworkAclRulesRequest request) {
+            return await new RemoveNetworkAclRulesExecutor().Client(this).Execute<RemoveNetworkAclRulesResponse, RemoveNetworkAclRulesResult, RemoveNetworkAclRulesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除子网
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSubnetResponse DeleteSubnet(DeleteSubnetRequest request) {
+            return  new DeleteSubnetExecutor().Client(this).Execute<DeleteSubnetResponse, DeleteSubnetResult, DeleteSubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除子网
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSubnetResponse> DeleteSubnet(DeleteSubnetRequest request) {
+            return await new DeleteSubnetExecutor().Client(this).Execute<DeleteSubnetResponse, DeleteSubnetResult, DeleteSubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加networkAcl规则接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddNetworkAclRulesResponse AddNetworkAclRules(AddNetworkAclRulesRequest request) {
+            return  new AddNetworkAclRulesExecutor().Client(this).Execute<AddNetworkAclRulesResponse, AddNetworkAclRulesResult, AddNetworkAclRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加networkAcl规则接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddNetworkAclRulesResponse> AddNetworkAclRules(AddNetworkAclRulesRequest request) {
+            return await new AddNetworkAclRulesExecutor().Client(this).Execute<AddNetworkAclRulesResponse, AddNetworkAclRulesResult, AddNetworkAclRulesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建路由表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRouteTableResponse CreateRouteTable(CreateRouteTableRequest request) {
+            return  new CreateRouteTableExecutor().Client(this).Execute<CreateRouteTableResponse, CreateRouteTableResult, CreateRouteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建路由表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRouteTableResponse> CreateRouteTable(CreateRouteTableRequest request) {
+            return await new CreateRouteTableExecutor().Client(this).Execute<CreateRouteTableResponse, CreateRouteTableResult, CreateRouteTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建网卡接口，只能创建辅助网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateNetworkInterfaceResponse CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
+            return  new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建网卡接口，只能创建辅助网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateNetworkInterfaceResponse> CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
+            return await new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加路由表规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddRouteTableRulesResponse AddRouteTableRules(AddRouteTableRulesRequest request) {
+            return  new AddRouteTableRulesExecutor().Client(this).Execute<AddRouteTableRulesResponse, AddRouteTableRulesResult, AddRouteTableRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加路由表规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddRouteTableRulesResponse> AddRouteTableRules(AddRouteTableRulesRequest request) {
+            return await new AddRouteTableRulesExecutor().Client(this).Execute<AddRouteTableRulesResponse, AddRouteTableRulesResult, AddRouteTableRulesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个或者多个弹性Ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateElasticIpsResponse CreateElasticIps(CreateElasticIpsRequest request) {
+            return  new CreateElasticIpsExecutor().Client(this).Execute<CreateElasticIpsResponse, CreateElasticIpsResult, CreateElasticIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个或者多个弹性Ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateElasticIpsResponse> CreateElasticIps(CreateElasticIpsRequest request) {
+            return await new CreateElasticIpsExecutor().Client(this).Execute<CreateElasticIpsResponse, CreateElasticIpsResult, CreateElasticIpsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除路由表规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveRouteTableRulesResponse RemoveRouteTableRules(RemoveRouteTableRulesRequest request) {
+            return  new RemoveRouteTableRulesExecutor().Client(this).Execute<RemoveRouteTableRulesResponse, RemoveRouteTableRulesResult, RemoveRouteTableRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除路由表规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveRouteTableRulesResponse> RemoveRouteTableRules(RemoveRouteTableRulesRequest request) {
+            return await new RemoveRouteTableRulesExecutor().Client(this).Execute<RemoveRouteTableRulesResponse, RemoveRouteTableRulesResult, RemoveRouteTableRulesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给网卡删除secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UnassignSecondaryIpsResponse UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
+            return  new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给网卡删除secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UnassignSecondaryIpsResponse> UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
+            return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcResponse DeleteVpc(DeleteVpcRequest request) {
+            return  new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest request) {
+            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改安全组属性
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyNetworkSecurityGroupResponse ModifyNetworkSecurityGroup(ModifyNetworkSecurityGroupRequest request) {
+            return  new ModifyNetworkSecurityGroupExecutor().Client(this).Execute<ModifyNetworkSecurityGroupResponse, ModifyNetworkSecurityGroupResult, ModifyNetworkSecurityGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改安全组属性
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyNetworkSecurityGroupResponse> ModifyNetworkSecurityGroup(ModifyNetworkSecurityGroupRequest request) {
+            return await new ModifyNetworkSecurityGroupExecutor().Client(this).Execute<ModifyNetworkSecurityGroupResponse, ModifyNetworkSecurityGroupResult, ModifyNetworkSecurityGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子网信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
+            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子网信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改路由表属性
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyRouteTableResponse ModifyRouteTable(ModifyRouteTableRequest request) {
+            return  new ModifyRouteTableExecutor().Client(this).Execute<ModifyRouteTableResponse, ModifyRouteTableResult, ModifyRouteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改路由表属性
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyRouteTableResponse> ModifyRouteTable(ModifyRouteTableRequest request) {
+            return await new ModifyRouteTableExecutor().Client(this).Execute<ModifyRouteTableResponse, ModifyRouteTableResult, ModifyRouteTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询安全组信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkSecurityGroupResponse DescribeNetworkSecurityGroup(DescribeNetworkSecurityGroupRequest request) {
+            return  new DescribeNetworkSecurityGroupExecutor().Client(this).Execute<DescribeNetworkSecurityGroupResponse, DescribeNetworkSecurityGroupResult, DescribeNetworkSecurityGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询安全组信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkSecurityGroupResponse> DescribeNetworkSecurityGroup(DescribeNetworkSecurityGroupRequest request) {
+            return await new DescribeNetworkSecurityGroupExecutor().Client(this).Execute<DescribeNetworkSecurityGroupResponse, DescribeNetworkSecurityGroupResult, DescribeNetworkSecurityGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除VpcPeering接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcPeeringResponse DeleteVpcPeering(DeleteVpcPeeringRequest request) {
+            return  new DeleteVpcPeeringExecutor().Client(this).Execute<DeleteVpcPeeringResponse, DeleteVpcPeeringResult, DeleteVpcPeeringRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除VpcPeering接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcPeeringResponse> DeleteVpcPeering(DeleteVpcPeeringRequest request) {
+            return await new DeleteVpcPeeringExecutor().Client(this).Execute<DeleteVpcPeeringResponse, DeleteVpcPeeringResult, DeleteVpcPeeringRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询networkAcl资源详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkAclResponse DescribeNetworkAcl(DescribeNetworkAclRequest request) {
+            return  new DescribeNetworkAclExecutor().Client(this).Execute<DescribeNetworkAclResponse, DescribeNetworkAclResult, DescribeNetworkAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询networkAcl资源详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkAclResponse> DescribeNetworkAcl(DescribeNetworkAclRequest request) {
+            return await new DescribeNetworkAclExecutor().Client(this).Execute<DescribeNetworkAclResponse, DescribeNetworkAclResult, DescribeNetworkAclRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询弹性网卡列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
+            return  new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性网卡列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
+            return await new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询私有网络列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeVpcsResponse DescribeVpcs(DescribeVpcsRequest request) {
+            return  new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询私有网络列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeVpcsResponse> DescribeVpcs(DescribeVpcsRequest request) {
+            return await new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询VpcPeering资源详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeVpcPeeringResponse DescribeVpcPeering(DescribeVpcPeeringRequest request) {
+            return  new DescribeVpcPeeringExecutor().Client(this).Execute<DescribeVpcPeeringResponse, DescribeVpcPeeringResult, DescribeVpcPeeringRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询VpcPeering资源详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeVpcPeeringResponse> DescribeVpcPeering(DescribeVpcPeeringRequest request) {
+            return await new DescribeVpcPeeringExecutor().Client(this).Execute<DescribeVpcPeeringResponse, DescribeVpcPeeringResult, DescribeVpcPeeringRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询配额信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeQuotaResponse DescribeQuota(DescribeQuotaRequest request) {
+            return  new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询配额信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
+            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -252,59 +822,59 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  给网卡绑定弹性Ip接口
+        ///  修改私有网络接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
-            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        public ModifyVpcResponse ModifyVpc(ModifyVpcRequest request) {
+            return  new ModifyVpcExecutor().Client(this).Execute<ModifyVpcResponse, ModifyVpcResult, ModifyVpcRequest>(request);
         }
 #else
         /// <summary>
-        ///  给网卡绑定弹性Ip接口
+        ///  修改私有网络接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        public async Task<ModifyVpcResponse> ModifyVpc(ModifyVpcRequest request) {
+            return await new ModifyVpcExecutor().Client(this).Execute<ModifyVpcResponse, ModifyVpcResult, ModifyVpcRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  移除安全组规则
+        ///  查询路由表信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public RemoveNetworkSecurityGroupRulesResponse RemoveNetworkSecurityGroupRules(RemoveNetworkSecurityGroupRulesRequest request) {
-            return  new RemoveNetworkSecurityGroupRulesExecutor().Client(this).Execute<RemoveNetworkSecurityGroupRulesResponse, RemoveNetworkSecurityGroupRulesResult, RemoveNetworkSecurityGroupRulesRequest>(request);
+        public DescribeRouteTableResponse DescribeRouteTable(DescribeRouteTableRequest request) {
+            return  new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request);
         }
 #else
         /// <summary>
-        ///  移除安全组规则
+        ///  查询路由表信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<RemoveNetworkSecurityGroupRulesResponse> RemoveNetworkSecurityGroupRules(RemoveNetworkSecurityGroupRulesRequest request) {
-            return await new RemoveNetworkSecurityGroupRulesExecutor().Client(this).Execute<RemoveNetworkSecurityGroupRulesResponse, RemoveNetworkSecurityGroupRulesResult, RemoveNetworkSecurityGroupRulesRequest>(request);
+        public async Task<DescribeRouteTableResponse> DescribeRouteTable(DescribeRouteTableRequest request) {
+            return await new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  ElasticIp资源信息详情
+        ///  修改networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeElasticIpResponse DescribeElasticIp(DescribeElasticIpRequest request) {
-            return  new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+        public ModifyNetworkAclRulesResponse ModifyNetworkAclRules(ModifyNetworkAclRulesRequest request) {
+            return  new ModifyNetworkAclRulesExecutor().Client(this).Execute<ModifyNetworkAclRulesResponse, ModifyNetworkAclRulesResult, ModifyNetworkAclRulesRequest>(request);
         }
 #else
         /// <summary>
-        ///  ElasticIp资源信息详情
+        ///  修改networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
-            return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+        public async Task<ModifyNetworkAclRulesResponse> ModifyNetworkAclRules(ModifyNetworkAclRulesRequest request) {
+            return await new ModifyNetworkAclRulesExecutor().Client(this).Execute<ModifyNetworkAclRulesResponse, ModifyNetworkAclRulesResult, ModifyNetworkAclRulesRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -385,6 +955,25 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  路由表绑定子网接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateRouteTableResponse AssociateRouteTable(AssociateRouteTableRequest request) {
+            return  new AssociateRouteTableExecutor().Client(this).Execute<AssociateRouteTableResponse, AssociateRouteTableResult, AssociateRouteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  路由表绑定子网接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateRouteTableResponse> AssociateRouteTable(AssociateRouteTableRequest request) {
+            return await new AssociateRouteTableExecutor().Client(this).Execute<AssociateRouteTableResponse, AssociateRouteTableResult, AssociateRouteTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建安全组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -423,21 +1012,40 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建网卡接口，只能创建辅助网卡
+        ///  创建子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateNetworkInterfaceResponse CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
-            return  new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
+        public CreateSubnetResponse CreateSubnet(CreateSubnetRequest request) {
+            return  new CreateSubnetExecutor().Client(this).Execute<CreateSubnetResponse, CreateSubnetResult, CreateSubnetRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建网卡接口，只能创建辅助网卡
+        ///  创建子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateNetworkInterfaceResponse> CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
-            return await new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
+        public async Task<CreateSubnetResponse> CreateSubnet(CreateSubnetRequest request) {
+            return await new CreateSubnetExecutor().Client(this).Execute<CreateSubnetResponse, CreateSubnetResult, CreateSubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改路由表规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyRouteTableRulesResponse ModifyRouteTableRules(ModifyRouteTableRulesRequest request) {
+            return  new ModifyRouteTableRulesExecutor().Client(this).Execute<ModifyRouteTableRulesResponse, ModifyRouteTableRulesResult, ModifyRouteTableRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改路由表规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyRouteTableRulesResponse> ModifyRouteTableRules(ModifyRouteTableRulesRequest request) {
+            return await new ModifyRouteTableRulesExecutor().Client(this).Execute<ModifyRouteTableRulesResponse, ModifyRouteTableRulesResult, ModifyRouteTableRulesRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -461,21 +1069,21 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建一个或者多个弹性Ip
+        ///  给子网绑定networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateElasticIpsResponse CreateElasticIps(CreateElasticIpsRequest request) {
-            return  new CreateElasticIpsExecutor().Client(this).Execute<CreateElasticIpsResponse, CreateElasticIpsResult, CreateElasticIpsRequest>(request);
+        public AssociateNetworkAclResponse AssociateNetworkAcl(AssociateNetworkAclRequest request) {
+            return  new AssociateNetworkAclExecutor().Client(this).Execute<AssociateNetworkAclResponse, AssociateNetworkAclResult, AssociateNetworkAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建一个或者多个弹性Ip
+        ///  给子网绑定networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateElasticIpsResponse> CreateElasticIps(CreateElasticIpsRequest request) {
-            return await new CreateElasticIpsExecutor().Client(this).Execute<CreateElasticIpsResponse, CreateElasticIpsResult, CreateElasticIpsRequest>(request);
+        public async Task<AssociateNetworkAclResponse> AssociateNetworkAcl(AssociateNetworkAclRequest request) {
+            return await new AssociateNetworkAclExecutor().Client(this).Execute<AssociateNetworkAclResponse, AssociateNetworkAclResult, AssociateNetworkAclRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -495,44 +1103,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkInterfaceResponse> DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
             return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  给网卡删除secondaryIp接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UnassignSecondaryIpsResponse UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
-            return  new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  给网卡删除secondaryIp接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UnassignSecondaryIpsResponse> UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
-            return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除私有网络
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcResponse DeleteVpc(DeleteVpcRequest request) {
-            return  new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除私有网络
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest request) {
-            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -575,25 +1145,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改安全组属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyNetworkSecurityGroupResponse ModifyNetworkSecurityGroup(ModifyNetworkSecurityGroupRequest request) {
-            return  new ModifyNetworkSecurityGroupExecutor().Client(this).Execute<ModifyNetworkSecurityGroupResponse, ModifyNetworkSecurityGroupResult, ModifyNetworkSecurityGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改安全组属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyNetworkSecurityGroupResponse> ModifyNetworkSecurityGroup(ModifyNetworkSecurityGroupRequest request) {
-            return await new ModifyNetworkSecurityGroupExecutor().Client(this).Execute<ModifyNetworkSecurityGroupResponse, ModifyNetworkSecurityGroupResult, ModifyNetworkSecurityGroupRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询安全组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -632,25 +1183,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询子网信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
-            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询子网信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
-            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -670,25 +1202,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询安全组信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNetworkSecurityGroupResponse DescribeNetworkSecurityGroup(DescribeNetworkSecurityGroupRequest request) {
-            return  new DescribeNetworkSecurityGroupExecutor().Client(this).Execute<DescribeNetworkSecurityGroupResponse, DescribeNetworkSecurityGroupResult, DescribeNetworkSecurityGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询安全组信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNetworkSecurityGroupResponse> DescribeNetworkSecurityGroup(DescribeNetworkSecurityGroupRequest request) {
-            return await new DescribeNetworkSecurityGroupExecutor().Client(this).Execute<DescribeNetworkSecurityGroupResponse, DescribeNetworkSecurityGroupResult, DescribeNetworkSecurityGroupRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改VpcPeering接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -704,63 +1217,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyVpcPeeringResponse> ModifyVpcPeering(ModifyVpcPeeringRequest request) {
             return await new ModifyVpcPeeringExecutor().Client(this).Execute<ModifyVpcPeeringResponse, ModifyVpcPeeringResult, ModifyVpcPeeringRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除VpcPeering接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcPeeringResponse DeleteVpcPeering(DeleteVpcPeeringRequest request) {
-            return  new DeleteVpcPeeringExecutor().Client(this).Execute<DeleteVpcPeeringResponse, DeleteVpcPeeringResult, DeleteVpcPeeringRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除VpcPeering接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcPeeringResponse> DeleteVpcPeering(DeleteVpcPeeringRequest request) {
-            return await new DeleteVpcPeeringExecutor().Client(this).Execute<DeleteVpcPeeringResponse, DeleteVpcPeeringResult, DeleteVpcPeeringRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询弹性网卡列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
-            return  new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询弹性网卡列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
-            return await new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询私有网络列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeVpcsResponse DescribeVpcs(DescribeVpcsRequest request) {
-            return  new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询私有网络列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeVpcsResponse> DescribeVpcs(DescribeVpcsRequest request) {
-            return await new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request);
         }
 #endif
 

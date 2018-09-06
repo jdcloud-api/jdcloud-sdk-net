@@ -43,6 +43,6 @@ namespace JDCloudSDK.Vpc.Model
         ///Required:true
         ///</summary>
         [Required]
-        public List<AddNetworkAclRuleSpec> NetworkAclRuleSpec{ get; set; }
+        public List<AddNetworkAclRuleSpec> NetworkAclRuleSpecs{ get; set; }
     }
 }

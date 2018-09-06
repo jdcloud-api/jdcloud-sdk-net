@@ -49,7 +49,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public double? Priority{ get; set; }
         ///<summary>
-        /// 下一跳类型, 取值范围:instance:虚机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+        /// 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
         ///</summary>
         public string NextHopType{ get; set; }
         ///<summary>

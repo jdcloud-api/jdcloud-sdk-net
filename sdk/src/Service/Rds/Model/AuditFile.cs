@@ -38,19 +38,19 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 审计日志名称
+        /// 审计日志文件名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 审计日志大小，单位Byte
+        /// 审计日志文件大小，单位Byte
         ///</summary>
         public long? SizeByte{ get; set; }
         ///<summary>
-        /// 审计日志最后更新时间
+        /// 审计日志文件最后更新时间
         ///</summary>
         public string LastUpdateTime{ get; set; }
         ///<summary>
-        /// 审计日志上传时间
+        /// 审计日志文件上传时间
         ///</summary>
         public string UploadTime{ get; set; }
     }

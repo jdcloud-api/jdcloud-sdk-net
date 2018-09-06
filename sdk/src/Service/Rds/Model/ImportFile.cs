@@ -38,11 +38,11 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 上传的备份文件名称
+        /// 文件名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
+        /// 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
         ///</summary>
         public string SharedFileGid{ get; set; }
         ///<summary>
@@ -54,7 +54,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string UploadTime{ get; set; }
         ///<summary>
-        /// 是否所属当前实例. “true”或者“false”
+        /// 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
         ///</summary>
         public string IsLocal{ get; set; }
     }

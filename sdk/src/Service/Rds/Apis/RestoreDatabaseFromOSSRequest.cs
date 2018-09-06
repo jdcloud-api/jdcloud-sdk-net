@@ -34,24 +34,24 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  从OSS恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    ///  从上传到OSS的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
     /// </summary>
     public class RestoreDatabaseFromOSSRequest : JdcloudRequest
     {
         ///<summary>
-        /// 用户在单库上云中上传的文件地址
+        /// 用户上传到对象存储OSS上的备份文件的内链
         ///Required:true
         ///</summary>
         [Required]
         public   string OssURL{ get; set; }
         ///<summary>
-        /// 区域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例ID
+        /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true
         ///</summary>
         [Required]

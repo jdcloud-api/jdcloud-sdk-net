@@ -40,23 +40,23 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 数据库实例名，如不填则缺省为instanceId
+        /// 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        /// 数据库类型 MySQL|SQL Server
+        /// 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///Required:true
         ///</summary>
         [Required]
         public string Engine{ get; set; }
         ///<summary>
-        /// 数据库版本 MySQL支持5.6、5.7  SQL Server支持2008 R2、2012 EE、2014 EE、2016 EE
+        /// 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///Required:true
         ///</summary>
         [Required]
         public string EngineVersion{ get; set; }
         ///<summary>
-        /// 实例规格代码
+        /// 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
         ///Required:true
         ///</summary>
         [Required]
@@ -86,7 +86,7 @@ namespace JDCloudSDK.Rds.Model
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 计费配置
+        /// 计费规格，包括计费类型，计费周期等
         ///Required:true
         ///</summary>
         [Required]

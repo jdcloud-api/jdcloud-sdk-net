@@ -35,12 +35,12 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+    ///  创建一个RDS实例全量备份，可以对整个实例或者部分数据库（仅SQL Server支持）进行全量备份。同一时间点，只能有一个正在运行的备份任务
     /// </summary>
     public class CreateBackupRequest : JdcloudRequest
     {
         ///<summary>
-        /// 集群ID
+        /// RDS实例ID，唯一标识一个实例
         ///</summary>
         public   string InstanceId{ get; set; }
         ///<summary>
@@ -48,7 +48,7 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   BackupSpec BackupSpec{ get; set; }
         ///<summary>
-        /// 地域代码
+        /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]

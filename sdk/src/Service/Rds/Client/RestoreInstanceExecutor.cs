@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持
+    ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class RestoreInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持接口的Http 请求方法
+        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持接口的Http资源请求路径
+        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
