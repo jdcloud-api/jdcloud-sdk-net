@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云主机
- * 云主机实例、镜像、规格类型、实例模板、配额相关的接口
+ * 云主机实例、镜像、实例规格、实例模板、配额相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Vm.Client
 {
     /// <summary>
     ///  云主机
-    ///  云主机实例、镜像、规格类型、实例模板、配额相关的接口
+    ///  云主机实例、镜像、实例规格、实例模板、配额相关的接口
     ///  Vm Api 客户端
     ///</summary>
     public class VmClient : JdcloudClient
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Vm.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -205,11 +205,11 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  云主机使用指定镜像重置云主机镜像&lt;br&gt;
+        ///  云主机使用指定镜像重置云主机系统&lt;br&gt;
         /// 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
         /// 若当前云主机的系统盘类型为local类型，那么更换的镜像必须为localDisk类型的镜像；同理若当前云主机的系统盘为cloud类型，那么更换的镜像必须为cloudDisk类型的镜像。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
         /// 若不指定镜像ID，默认使用当前主机的原镜像重置系统。&lt;br&gt;
-        /// 指定的镜像必须能够支持当前主机的规格类型(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。
+        /// 指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像支持的系统盘类型信息。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -219,11 +219,11 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  云主机使用指定镜像重置云主机镜像&lt;br&gt;
+        ///  云主机使用指定镜像重置云主机系统&lt;br&gt;
         /// 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
         /// 若当前云主机的系统盘类型为local类型，那么更换的镜像必须为localDisk类型的镜像；同理若当前云主机的系统盘为cloud类型，那么更换的镜像必须为cloudDisk类型的镜像。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
         /// 若不指定镜像ID，默认使用当前主机的原镜像重置系统。&lt;br&gt;
-        /// 指定的镜像必须能够支持当前主机的规格类型(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。
+        /// 指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像支持的系统盘类型信息。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -256,7 +256,7 @@ namespace JDCloudSDK.Vm.Client
 #if NET40||NET35
         /// <summary>
         ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-        /// 打包镜像目前不支持共享。
+        /// 整机镜像目前不支持共享。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -267,13 +267,32 @@ namespace JDCloudSDK.Vm.Client
 #else
         /// <summary>
         ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-        /// 打包镜像目前不支持共享。
+        /// 整机镜像目前不支持共享。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ShareImageResponse> ShareImage(ShareImageRequest request) {
             return await new ShareImageExecutor().Client(this).Execute<ShareImageResponse, ShareImageResult, ShareImageRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstancePrivateIpAddressResponse DescribeInstancePrivateIpAddress(DescribeInstancePrivateIpAddressRequest request) {
+            return  new DescribeInstancePrivateIpAddressExecutor().Client(this).Execute<DescribeInstancePrivateIpAddressResponse, DescribeInstancePrivateIpAddressResult, DescribeInstancePrivateIpAddressRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstancePrivateIpAddressResponse> DescribeInstancePrivateIpAddress(DescribeInstancePrivateIpAddressRequest request) {
+            return await new DescribeInstancePrivateIpAddressExecutor().Client(this).Execute<DescribeInstancePrivateIpAddressResponse, DescribeInstancePrivateIpAddressResult, DescribeInstancePrivateIpAddressRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -306,7 +325,7 @@ namespace JDCloudSDK.Vm.Client
         ///  云主机挂载一块弹性网卡。&lt;br&gt;
         /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
         /// 弹性网卡上如果绑定了公网IP，那么公网IP所在az需要与云主机的az保持一致，或者公网IP属于全可用区，才可挂载。&lt;br&gt;
-        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。&lt;br&gt;
+        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
         /// 弹性网卡与云主机必须在相同vpc下。
         /// 
         /// </summary>
@@ -320,7 +339,7 @@ namespace JDCloudSDK.Vm.Client
         ///  云主机挂载一块弹性网卡。&lt;br&gt;
         /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
         /// 弹性网卡上如果绑定了公网IP，那么公网IP所在az需要与云主机的az保持一致，或者公网IP属于全可用区，才可挂载。&lt;br&gt;
-        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。&lt;br&gt;
+        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
         /// 弹性网卡与云主机必须在相同vpc下。
         /// 
         /// </summary>
@@ -374,8 +393,8 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///  批量查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -385,8 +404,8 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  批量查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///  批量查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -439,7 +458,8 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除一个私有镜像，只允许操作您的个人私有镜像。
+        ///  删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
+        /// 若镜像已共享给其他用户，需先取消共享才可删除。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -449,7 +469,8 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  删除一个私有镜像，只允许操作您的个人私有镜像。
+        ///  删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
+        /// 若镜像已共享给其他用户，需先取消共享才可删除。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -504,15 +525,15 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  云主机变更规格类型&lt;br&gt;
+        ///  云主机变更实例规格&lt;br&gt;
         /// 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 16年创建的云硬盘做系统盘的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
-        /// 使用高可用组(Ag)创建的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
-        /// 云硬盘(cloud类型)做系统盘的主机，一代与二代规格类型允许相互调整。&lt;br&gt;
-        /// 如果当前主机中的弹性网卡数量，大于规格类型允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。&lt;br&gt;
-        /// 当前主机所使用的镜像，需要支持要变更的目标规格类型，否则返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。&lt;br&gt;
-        /// 云主机欠费时，无法更改规格类型。
+        /// 16年创建的云硬盘做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
+        /// 本地盘(local类型)做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
+        /// 使用高可用组(Ag)创建的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
+        /// 云硬盘(cloud类型)做系统盘的主机，一代与二代实例规格允许相互调整。&lt;br&gt;
+        /// 如果当前主机中的弹性网卡数量，大于新实例规格允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域及可用区下的实例规格信息。&lt;br&gt;
+        /// 当前主机所使用的镜像，需要支持要变更的目标实例规格，否则返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
+        /// 云主机欠费或到期时，无法更改实例规格。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -522,15 +543,15 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  云主机变更规格类型&lt;br&gt;
+        ///  云主机变更实例规格&lt;br&gt;
         /// 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 16年创建的云硬盘做系统盘的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
-        /// 使用高可用组(Ag)创建的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
-        /// 云硬盘(cloud类型)做系统盘的主机，一代与二代规格类型允许相互调整。&lt;br&gt;
-        /// 如果当前主机中的弹性网卡数量，大于规格类型允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。&lt;br&gt;
-        /// 当前主机所使用的镜像，需要支持要变更的目标规格类型，否则返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。&lt;br&gt;
-        /// 云主机欠费时，无法更改规格类型。
+        /// 16年创建的云硬盘做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
+        /// 本地盘(local类型)做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
+        /// 使用高可用组(Ag)创建的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
+        /// 云硬盘(cloud类型)做系统盘的主机，一代与二代实例规格允许相互调整。&lt;br&gt;
+        /// 如果当前主机中的弹性网卡数量，大于新实例规格允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域及可用区下的实例规格信息。&lt;br&gt;
+        /// 当前主机所使用的镜像，需要支持要变更的目标实例规格，否则返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
+        /// 云主机欠费或到期时，无法更改实例规格。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -585,7 +606,7 @@ namespace JDCloudSDK.Vm.Client
         /// <summary>
         ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
         /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-        /// 如果云主机中挂载了数据盘，默认会将数据盘创建快照，生成打包镜像。&lt;br&gt;
+        /// 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
         /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
         /// 
         /// </summary>
@@ -598,7 +619,7 @@ namespace JDCloudSDK.Vm.Client
         /// <summary>
         ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
         /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-        /// 如果云主机中挂载了数据盘，默认会将数据盘创建快照，生成打包镜像。&lt;br&gt;
+        /// 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
         /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
         /// 
         /// </summary>
@@ -633,16 +654,16 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建一台或多台指定配置的云主机&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
+        ///  创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
         /// - 创建云主机需要通过实名认证
-        /// - 规格类型
+        /// - 实例规格
         ///     - 可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
         ///     - 不能使用已下线、或已售馨的规格ID
         /// - 镜像
         ///     - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
         ///     - Windows Server所有镜像CPU不可选超过64核CPU。
         ///     - 可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
-        ///     - 选择的镜像必须支持选择的规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。&lt;br&gt;
+        ///     - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
         /// - 网络配置
         ///     - 指定主网卡配置信息
         ///         - 必须指定subnetId
@@ -691,16 +712,16 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  创建一台或多台指定配置的云主机&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
+        ///  创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
         /// - 创建云主机需要通过实名认证
-        /// - 规格类型
+        /// - 实例规格
         ///     - 可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
         ///     - 不能使用已下线、或已售馨的规格ID
         /// - 镜像
         ///     - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
         ///     - Windows Server所有镜像CPU不可选超过64核CPU。
         ///     - 可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
-        ///     - 选择的镜像必须支持选择的规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。&lt;br&gt;
+        ///     - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
         /// - 网络配置
         ///     - 指定主网卡配置信息
         ///         - 必须指定subnetId
@@ -837,7 +858,7 @@ namespace JDCloudSDK.Vm.Client
 #if NET40||NET35
         /// <summary>
         ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-        /// 只支持cloudDisk云盘系统盘类型的镜像。
+        /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -848,7 +869,7 @@ namespace JDCloudSDK.Vm.Client
 #else
         /// <summary>
         ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-        /// 只支持cloudDisk云盘系统盘类型的镜像。
+        /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -884,8 +905,8 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///  查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -895,8 +916,8 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///  查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -932,9 +953,9 @@ namespace JDCloudSDK.Vm.Client
         /// <summary>
         ///  删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
         /// 云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-        /// 包年包月未到期的云主机不能删除。白名单用户不能删除包年包月已到期的云主机。&lt;br&gt;
+        /// 包年包月未到期的云主机不能删除。&lt;br&gt;
         /// 如果主机中挂载的数据盘为按配置计费的云硬盘，并且不是共享型云硬盘，并且AutoDelete属性为true，那么数据盘会随主机一起删除。
-        ///  敏感操作，可开启MFA操作保护
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -945,9 +966,9 @@ namespace JDCloudSDK.Vm.Client
         /// <summary>
         ///  删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
         /// 云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-        /// 包年包月未到期的云主机不能删除。白名单用户不能删除包年包月已到期的云主机。&lt;br&gt;
+        /// 包年包月未到期的云主机不能删除。&lt;br&gt;
         /// 如果主机中挂载的数据盘为按配置计费的云硬盘，并且不是共享型云硬盘，并且AutoDelete属性为true，那么数据盘会随主机一起删除。
-        ///  敏感操作，可开启MFA操作保护
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -957,9 +978,8 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  云主机绑定弹性公网IP，绑定的是主网卡、内网主IP对应的弹性公网IP。&lt;br&gt;
+        ///  为云主机主网卡下的主内网IP绑定弹性公网IP。&lt;br&gt;
         /// 一台云主机只能绑定一个弹性公网IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        /// 如果是黑名单中的用户，会返回错误。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -969,9 +989,8 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  云主机绑定弹性公网IP，绑定的是主网卡、内网主IP对应的弹性公网IP。&lt;br&gt;
+        ///  为云主机主网卡下的主内网IP绑定弹性公网IP。&lt;br&gt;
         /// 一台云主机只能绑定一个弹性公网IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        /// 如果是黑名单中的用户，会返回错误。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1003,7 +1022,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询规格类型信息列表
+        ///  查询实例规格信息列表
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1013,7 +1032,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  查询规格类型信息列表
+        ///  查询实例规格信息列表
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>

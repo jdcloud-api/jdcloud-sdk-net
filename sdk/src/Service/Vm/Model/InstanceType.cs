@@ -39,11 +39,11 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 实例族
+        /// 实例规格类型
         ///</summary>
         public string Family{ get; set; }
         ///<summary>
-        /// 规格类型，比如g.b1.2xlarge
+        /// 实例规格，比如g.b1.2xlarge
         ///</summary>
         [JsonProperty("instanceType")]
         public string InstanceTypeValue{ get; set; }

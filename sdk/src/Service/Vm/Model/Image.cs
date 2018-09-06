@@ -46,15 +46,15 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 操作系统发行版，[suse, debian, ubuntu, centos, windows-server]
+        /// 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
         ///</summary>
         public string Platform{ get; set; }
         ///<summary>
-        /// 操作系统版本号
+        /// 镜像的操作系统版本。
         ///</summary>
         public string OsVersion{ get; set; }
         ///<summary>
-        /// 镜像架构 i386, x86_64
+        /// 镜像架构。取值：i386,x86_64
         ///</summary>
         public string Architecture{ get; set; }
         ///<summary>
@@ -62,11 +62,11 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public int? SystemDiskSizeGB{ get; set; }
         ///<summary>
-        /// 镜像来源 jcloud：官方镜像 marketplace：镜像市场镜像 self：用户自己的镜像 shared：其他用户分享的镜像
+        /// 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
         ///</summary>
         public string ImageSource{ get; set; }
         ///<summary>
-        /// 镜像的操作系统类型，[windows, linux]
+        /// 镜像的操作系统类型。取值：windows,linux
         ///</summary>
         public string OsType{ get; set; }
         ///<summary>
@@ -76,9 +76,9 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 创建时间
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// 镜像本身大小
+        /// 镜像文件实际大小
         ///</summary>
         public int? SizeMB{ get; set; }
         ///<summary>
@@ -86,23 +86,23 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
-        /// 系统盘配置
+        /// 镜像系统盘配置
         ///</summary>
         public InstanceDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        /// 打包镜像数据盘映射信息
+        /// 镜像数据盘映射信息
         ///</summary>
         public List<InstanceDiskAttachment> DataDisks{ get; set; }
         ///<summary>
-        /// 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+        /// 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        /// 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+        /// 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
         ///</summary>
         public string RootDeviceType{ get; set; }
         ///<summary>
-        /// 镜像复制时的进度，单位为百分比，例如：80
+        /// 镜像复制和转换时的进度，仅显示数值，单位为百分比
         ///</summary>
         public string Progress{ get; set; }
     }

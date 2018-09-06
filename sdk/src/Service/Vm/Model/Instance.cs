@@ -48,7 +48,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        /// 云主机类型
+        /// 实例规格
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
@@ -102,7 +102,7 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 创建时间
         ///</summary>
-        public string LaunchTime{ get; set; }
+        public DateTime? LaunchTime{ get; set; }
         ///<summary>
         /// 云主机所在可用区
         ///</summary>

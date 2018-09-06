@@ -33,15 +33,15 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+    ///  查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 
     /// </summary>
     public class DescribeImageConstraintsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///  查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -51,8 +51,8 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询镜像的规格类型限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+        ///  查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

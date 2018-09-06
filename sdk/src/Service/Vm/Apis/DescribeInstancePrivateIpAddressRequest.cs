@@ -35,11 +35,9 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  批量查询云主机的详细信息&lt;br&gt;
-        ///         /// 此接口支持分页查询，默认每页20条。
-        ///         /// 
+    ///  批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。
     /// </summary>
-    public class DescribeInstancesRequest : JdcloudRequest
+    public class DescribeInstancePrivateIpAddressRequest : JdcloudRequest
     {
         ///<summary>
         /// 页码；默认为1
@@ -52,15 +50,12 @@ namespace  JDCloudSDK.Vm.Apis
         ///<summary>
         /// instanceId - 云主机ID，精确匹配，支持多个
         /// privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-        /// az - 可用区，精确匹配，支持多个
         /// vpcId - 私有网络ID，精确匹配，支持多个
         /// status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
         /// name - 云主机名称，模糊匹配，支持单个
         /// imageId - 镜像ID，精确匹配，支持多个
         /// networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
         /// subnetId - 子网ID，精确匹配，支持多个
-        /// agId - 使用可用组id，支持单个
-        /// faultDomain - 错误域，支持多个
         /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }

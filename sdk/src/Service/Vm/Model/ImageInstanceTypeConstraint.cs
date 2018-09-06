@@ -38,11 +38,11 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 受限制的规格类型。excludes：排除指定的实例类型；includes：只包含指定的实例类型，暂不支持includes
+        /// 限制类型。取值：excludes：不支持的实例类型；includes：支持的实例类型。
         ///</summary>
         public string ConstraintsType{ get; set; }
         ///<summary>
-        /// 规格类型列表
+        /// 实例规格列表
         ///</summary>
         public List<string> InstanceTypes{ get; set; }
     }

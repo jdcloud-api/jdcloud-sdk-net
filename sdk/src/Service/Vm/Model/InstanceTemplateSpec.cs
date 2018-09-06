@@ -39,7 +39,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 规格类型，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+        /// 实例规格，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
         ///Required:true
         ///</summary>
         [Required]

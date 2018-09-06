@@ -38,7 +38,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 规格类型
+        /// 实例规格
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 规格类型
- * 与规格类型操作相关的接口
+ * 实例规格
+ * 与实例规格操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,13 +35,13 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询规格类型信息列表
+    ///  查询实例规格信息列表
         ///         /// 
     /// </summary>
     public class DescribeInstanceTypesRequest : JdcloudRequest
     {
         ///<summary>
-        /// instanceTypes - 规格类型，精确匹配，支持多个
+        /// instanceTypes - 实例规格，精确匹配，支持多个
         /// az - 可用区，精确匹配，支持多个
         /// 
         ///</summary>

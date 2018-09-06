@@ -60,6 +60,6 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 创建时间
         ///</summary>
-        public string CreatedTime{ get; set; }
+        public DateTime? CreatedTime{ get; set; }
     }
 }

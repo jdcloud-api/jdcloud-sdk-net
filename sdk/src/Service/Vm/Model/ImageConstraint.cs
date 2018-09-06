@@ -42,7 +42,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 镜像规格类型限制
+        /// 使用镜像创建实例的规格限制
         ///</summary>
         public ImageInstanceTypeConstraint ImageInstanceTypeConstraint{ get; set; }
     }

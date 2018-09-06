@@ -34,14 +34,14 @@ namespace JDCloudSDK.Vm.Client
 
     /// <summary>
     ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-        /// 打包镜像目前不支持共享。
+        /// 整机镜像目前不支持共享。
         /// 
     /// </summary>
     public class ShareImageExecutor : JdcloudExecutor
     {
         /// <summary>
         ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-        /// 打包镜像目前不支持共享。
+        /// 整机镜像目前不支持共享。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -52,7 +52,7 @@ namespace JDCloudSDK.Vm.Client
         }
         /// <summary>
         ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-        /// 打包镜像目前不支持共享。
+        /// 整机镜像目前不支持共享。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

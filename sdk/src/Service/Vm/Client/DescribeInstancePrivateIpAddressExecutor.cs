@@ -23,21 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-
-namespace  JDCloudSDK.Vm.Apis
+namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  为云主机主网卡下的主内网IP绑定弹性公网IP。&lt;br&gt;
-        ///         /// 一台云主机只能绑定一个弹性公网IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        ///         /// 
+    ///  批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。
     /// </summary>
-    public class AssociateElasticIpResponse : JdcloudResponse<AssociateElasticIpResult>
+    public class DescribeInstancePrivateIpAddressExecutor : JdcloudExecutor
     {
+        /// <summary>
+        ///  批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "GET";
+            }
+        }
+        /// <summary>
+        ///  批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/regions/{regionId}/instancePrivateIpAddress";
+            }
+        }
     }
 }
