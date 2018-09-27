@@ -217,8 +217,10 @@ namespace JDCloudSDK.Core.Client
                 {
                     continue;
                 }
-                string value = item.Value;
-                if (item.Key.ToLower().StartsWith("x-jdcloud"))
+                string value = item.Value; 
+                if ("x-jdcloud-pin" == item.Key.ToLower().Trim()
+                    || "x-jdcloud-erp" == item.Key.ToLower().Trim()
+                    || "x-jdcloud-security-token" == item.Key.ToLower().Trim())
                 {
                     value = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(value));
                 }
