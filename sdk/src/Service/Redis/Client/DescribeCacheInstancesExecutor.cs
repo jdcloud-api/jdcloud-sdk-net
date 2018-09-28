@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  查询缓存Redis实例列表
+    ///  查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件
     /// </summary>
     public class DescribeCacheInstancesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询缓存Redis实例列表接口的Http 请求方法
+        ///  查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  查询缓存Redis实例列表接口的Http资源请求路径
+        ///  查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

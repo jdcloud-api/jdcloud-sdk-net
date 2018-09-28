@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  查询缓存Redis实例详情
+    ///  查询单个缓存Redis实例详情
     /// </summary>
     public class DescribeCacheInstanceRequest : JdcloudRequest
     {
@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Redis.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 缓存Redis实例ID
+        /// 缓存Redis实例ID，是访问实例的唯一标识。
         ///Required:true
         ///</summary>
         [Required]

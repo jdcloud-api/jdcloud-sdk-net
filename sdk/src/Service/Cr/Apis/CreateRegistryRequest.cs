@@ -43,7 +43,9 @@ namespace  JDCloudSDK.Cr.Apis
         /// 用户定义的registry名称。&lt;br&gt; DNS兼容registry名称规则如下：
         ///  &lt;br&gt; 不可为空，且不能超过32字符 &lt;br&gt; 以小写字母开始和结尾，支持使用小写字母、数字、中划线(-)
         /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public   string RegistryName{ get; set; }
         ///<summary>
         /// 注册表描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。

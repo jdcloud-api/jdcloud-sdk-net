@@ -64,5 +64,9 @@ namespace JDCloudSDK.Vm.Model
         /// 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
         ///</summary>
         public string DeviceName{ get; set; }
+        ///<summary>
+        /// 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+        ///</summary>
+        public string Status{ get; set; }
     }
 }

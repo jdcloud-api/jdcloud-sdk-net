@@ -35,17 +35,21 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询配额，支持：云主机、镜像、密钥、模板
+    ///  查询配额，支持：云主机、镜像、密钥、模板、镜像共享
         ///         /// 
     /// </summary>
     public class DescribeQuotasRequest : JdcloudRequest
     {
         ///<summary>
-        /// resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+        /// resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
         /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 
+        ///<summary>
+        /// 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+        ///</summary>
+        public   string ImageId{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

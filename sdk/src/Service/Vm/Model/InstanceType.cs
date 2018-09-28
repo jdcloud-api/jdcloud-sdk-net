@@ -67,5 +67,13 @@ namespace JDCloudSDK.Vm.Model
         /// 规格状态
         ///</summary>
         public List<InstanceTypeState> State{ get; set; }
+        ///<summary>
+        /// Gpu配置
+        ///</summary>
+        public Gpu Gpu{ get; set; }
+        ///<summary>
+        /// 本地缓存盘配置，目前只有Gpu规格上才有
+        ///</summary>
+        public List<LocalDisk> LocalDisks{ get; set; }
     }
 }

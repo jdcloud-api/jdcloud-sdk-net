@@ -70,7 +70,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string OsType{ get; set; }
         ///<summary>
-        /// &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+        /// &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
         ///</summary>
         public string Status{ get; set; }
         ///<summary>

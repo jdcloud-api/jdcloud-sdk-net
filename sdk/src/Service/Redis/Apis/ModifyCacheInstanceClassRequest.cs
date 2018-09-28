@@ -34,12 +34,14 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  变更缓存Redis实例配置
+    ///  变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+        ///         /// 预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+        ///         /// 
     /// </summary>
     public class ModifyCacheInstanceClassRequest : JdcloudRequest
     {
         ///<summary>
-        /// 变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+        /// 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
         ///Required:true
         ///</summary>
         [Required]
@@ -51,7 +53,7 @@ namespace  JDCloudSDK.Redis.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 缓存Redis实例ID
+        /// 缓存Redis实例ID，是访问实例的唯一标识。
         ///Required:true
         ///</summary>
         [Required]

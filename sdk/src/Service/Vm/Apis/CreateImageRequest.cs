@@ -44,13 +44,13 @@ namespace  JDCloudSDK.Vm.Apis
     public class CreateImageRequest : JdcloudRequest
     {
         ///<summary>
-        /// 镜像名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 镜像名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///Required:true
         ///</summary>
         [Required]
         public   string Name{ get; set; }
         ///<summary>
-        /// 镜像描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///Required:true
         ///</summary>
         [Required]

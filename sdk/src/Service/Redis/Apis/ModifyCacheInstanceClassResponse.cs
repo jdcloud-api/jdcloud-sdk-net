@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  变更缓存Redis实例配置
+    ///  变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+        ///         /// 预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+        ///         /// 
     /// </summary>
     public class ModifyCacheInstanceClassResponse : JdcloudResponse<ModifyCacheInstanceClassResult>
     {

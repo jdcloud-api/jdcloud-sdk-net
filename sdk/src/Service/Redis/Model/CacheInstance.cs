@@ -57,7 +57,7 @@ namespace JDCloudSDK.Redis.Model
         ///<summary>
         /// 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
         ///</summary>
-        public string CacheInstancStatus{ get; set; }
+        public string CacheInstanceStatus{ get; set; }
         ///<summary>
         /// 实例描述
         ///</summary>
@@ -65,7 +65,7 @@ namespace JDCloudSDK.Redis.Model
         ///<summary>
         /// 创建时间
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// az信息
         ///</summary>
@@ -90,5 +90,13 @@ namespace JDCloudSDK.Redis.Model
         /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
+        ///<summary>
+        /// 实例版本
+        ///</summary>
+        public string InstanceVersion{ get; set; }
+        ///<summary>
+        /// 是否免密
+        ///</summary>
+        public bool Auth{ get; set; }
     }
 }

@@ -33,13 +33,13 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询配额，支持：云主机、镜像、密钥、模板
+    ///  查询配额，支持：云主机、镜像、密钥、模板、镜像共享
         /// 
     /// </summary>
     public class DescribeQuotasExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询配额，支持：云主机、镜像、密钥、模板
+        ///  查询配额，支持：云主机、镜像、密钥、模板、镜像共享
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询配额，支持：云主机、镜像、密钥、模板
+        ///  查询配额，支持：云主机、镜像、密钥、模板、镜像共享
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

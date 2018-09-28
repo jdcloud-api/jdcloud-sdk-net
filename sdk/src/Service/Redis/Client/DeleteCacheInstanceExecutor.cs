@@ -33,12 +33,18 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  删除单个缓存Redis实例
+    ///  删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
+        /// 只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
+        /// 白名单用户不能删除包年包月已到期的云主机
+        /// 
     /// </summary>
     public class DeleteCacheInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除单个缓存Redis实例接口的Http 请求方法
+        ///  删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
+        /// 只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
+        /// 白名单用户不能删除包年包月已到期的云主机
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  删除单个缓存Redis实例接口的Http资源请求路径
+        ///  删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
+        /// 只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
+        /// 白名单用户不能删除包年包月已到期的云主机
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

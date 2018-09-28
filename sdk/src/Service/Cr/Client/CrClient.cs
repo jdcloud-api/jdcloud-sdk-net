@@ -138,6 +138,27 @@ namespace JDCloudSDK.Cr.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询指定注册表名称是否已经存在以及是否符合命名规范。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckRegistryNameResponse CheckRegistryName(CheckRegistryNameRequest request) {
+            return  new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询指定注册表名称是否已经存在以及是否符合命名规范。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckRegistryNameResponse> CheckRegistryName(CheckRegistryNameRequest request) {
+            return await new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
         /// &lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
         /// 可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;

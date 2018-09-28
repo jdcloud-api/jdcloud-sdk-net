@@ -39,34 +39,32 @@ namespace JDCloudSDK.Redis.Model
     {
 
         ///<summary>
-        /// 所属VPC的ID
+        /// 缓存redis实例所属的私有网络ID
         ///Required:true
         ///</summary>
         [Required]
         public string VpcId{ get; set; }
         ///<summary>
-        /// 所属子网的ID
+        /// 缓存redis实例在私有网络下所属的子网ID
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
+        /// 缓存redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
         ///Required:true
         ///</summary>
         [Required]
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 实例规格代码，参见实例规格代码表。
+        /// 缓存redis实例规格代码，参见实例规格代码表&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;。
         ///Required:true
         ///</summary>
         [Required]
         public string CacheInstanceClass{ get; set; }
         ///<summary>
-        /// 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
-        ///Required:true
+        /// 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
         ///</summary>
-        [Required]
         public string Password{ get; set; }
         ///<summary>
         /// 缓存Redis实例所在区域可用区ID信息
@@ -75,7 +73,7 @@ namespace JDCloudSDK.Redis.Model
         [Required]
         public AzIdSpec AzId{ get; set; }
         ///<summary>
-        /// 缓存Redis实例描述
+        /// 缓存Redis实例描述，不能超过256个字符
         ///</summary>
         public string CacheInstanceDescription{ get; set; }
     }

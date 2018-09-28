@@ -40,11 +40,11 @@ namespace  JDCloudSDK.Vm.Apis
     public class ModifyImageAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        /// 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>

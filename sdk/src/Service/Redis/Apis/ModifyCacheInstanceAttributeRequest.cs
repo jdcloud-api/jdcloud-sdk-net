@@ -39,11 +39,11 @@ namespace  JDCloudSDK.Redis.Apis
     public class ModifyCacheInstanceAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        /// 缓存Redis实例资源名称
+        /// 缓存Redis实例资源名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
         ///</summary>
         public   string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 缓存Redis实例资源描述
+        /// 缓存Redis实例资源描述，不能超过256个字符
         ///</summary>
         public   string CacheInstanceDescription{ get; set; }
         ///<summary>
@@ -53,7 +53,7 @@ namespace  JDCloudSDK.Redis.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 缓存Redis实例ID
+        /// 缓存Redis实例ID，是访问实例的唯一标识。
         ///Required:true
         ///</summary>
         [Required]

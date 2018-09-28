@@ -45,7 +45,9 @@ namespace  JDCloudSDK.Cr.Apis
         /// 镜像仓库名称。
         /// 可以专有模式如默认命名空间nginx-web-app；或者和命名空间一起将多个仓库聚集在一起如 project-a/nginx-web-app。
         /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public   string RepositoryName{ get; set; }
         ///<summary>
         /// 注册表描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
