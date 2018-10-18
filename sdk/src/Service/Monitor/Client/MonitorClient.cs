@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控
- * 云监控相关接口，主要包含监控规则的增删改查，以及监控项数据的查询
+ * JCLOUD MONITOR API
+ * monitor API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -39,8 +39,8 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Monitor.Client
 {
     /// <summary>
-    ///  云监控
-    ///  云监控相关接口，主要包含监控规则的增删改查，以及监控项数据的查询
+    ///  JCLOUD MONITOR API
+    ///  monitor API
     ///  Monitor Api 客户端
     ///</summary>
     public class MonitorClient : JdcloudClient
@@ -89,13 +89,13 @@ namespace JDCloudSDK.Monitor.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
-        private const string defaultEndpoint = "monitor.jdcloud-api.com";
+        private const string defaultEndpoint = "monitor.jcloud.com";
         private const string serviceName = "monitor";
         private const string userAgent = userAgentPrefix + "/" + ClientVersion + " " + serviceName + "/" + apiVersion;
 
@@ -138,25 +138,6 @@ namespace JDCloudSDK.Monitor.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  批量删除已创建的报警规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteAlarmsResponse DeleteAlarms(DeleteAlarmsRequest request) {
-            return  new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量删除已创建的报警规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteAlarmsResponse> DeleteAlarms(DeleteAlarmsRequest request) {
-            return await new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查看某资源的监控数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -176,21 +157,40 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  自定义监控数据上报接口
+        ///  查看某资源的最后一个点
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public PutMetricDataResponse PutMetricData(PutMetricDataRequest request) {
-            return  new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
+        public LastDownsampleResponse LastDownsample(LastDownsampleRequest request) {
+            return  new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
         }
 #else
         /// <summary>
-        ///  自定义监控数据上报接口
+        ///  查看某资源的最后一个点
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<PutMetricDataResponse> PutMetricData(PutMetricDataRequest request) {
-            return await new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
+        public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
+            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量删除规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDeleteAlarmsResponse BatchDeleteAlarms(BatchDeleteAlarmsRequest request) {
+            return  new BatchDeleteAlarmsExecutor().Client(this).Execute<BatchDeleteAlarmsResponse, BatchDeleteAlarmsResult, BatchDeleteAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDeleteAlarmsResponse> BatchDeleteAlarms(BatchDeleteAlarmsRequest request) {
+            return await new BatchDeleteAlarmsExecutor().Client(this).Execute<BatchDeleteAlarmsResponse, BatchDeleteAlarmsResult, BatchDeleteAlarmsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -215,6 +215,12 @@ namespace JDCloudSDK.Monitor.Client
 #if NET40||NET35
         /// <summary>
         ///  查询报警历史
+        /// 检索条件组合优先级从高到低为
+        /// 1. serviceCode
+        /// 1.1 serviceCode + resourceId
+        /// 1.2 serviceCode + resourceIds
+        /// 2. serviceCodes
+        /// 3. 用户所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -224,11 +230,36 @@ namespace JDCloudSDK.Monitor.Client
 #else
         /// <summary>
         ///  查询报警历史
+        /// 检索条件组合优先级从高到低为
+        /// 1. serviceCode
+        /// 1.1 serviceCode + resourceId
+        /// 1.2 serviceCode + resourceIds
+        /// 2. serviceCodes
+        /// 3. 用户所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmHistoryResponse> DescribeAlarmHistory(DescribeAlarmHistoryRequest request) {
             return await new DescribeAlarmHistoryExecutor().Client(this).Execute<DescribeAlarmHistoryResponse, DescribeAlarmHistoryResult, DescribeAlarmHistoryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量创建报警规则，可以为多个实例创建多个报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchCreateAlarmsResponse BatchCreateAlarms(BatchCreateAlarmsRequest request) {
+            return  new BatchCreateAlarmsExecutor().Client(this).Execute<BatchCreateAlarmsResponse, BatchCreateAlarmsResult, BatchCreateAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量创建报警规则，可以为多个实例创建多个报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchCreateAlarmsResponse> BatchCreateAlarms(BatchCreateAlarmsRequest request) {
+            return await new BatchCreateAlarmsExecutor().Client(this).Execute<BatchCreateAlarmsResponse, BatchCreateAlarmsResult, BatchCreateAlarmsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -252,25 +283,6 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableAlarmResponse DisableAlarm(DisableAlarmRequest request) {
-            return  new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableAlarmResponse> DisableAlarm(DisableAlarmRequest request) {
-            return await new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -290,7 +302,145 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询监控规则
+        ///  查看某资源多个监控项数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDescribeMetricDataResponse BatchDescribeMetricData(BatchDescribeMetricDataRequest request) {
+            return  new BatchDescribeMetricDataExecutor().Client(this).Execute<BatchDescribeMetricDataResponse, BatchDescribeMetricDataResult, BatchDescribeMetricDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看某资源多个监控项数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDescribeMetricDataResponse> BatchDescribeMetricData(BatchDescribeMetricDataRequest request) {
+            return await new BatchDescribeMetricDataExecutor().Client(this).Execute<BatchDescribeMetricDataResponse, BatchDescribeMetricDataResult, BatchDescribeMetricDataRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可用创建监控规则的指标列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricsForCreateAlarmResponse DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
+            return  new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用创建监控规则的指标列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricsForCreateAlarmResponse> DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
+            return await new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询规则的报警联系人
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmContactsResponse DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
+            return  new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询规则的报警联系人
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmContactsResponse> DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
+            return await new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量启用规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchEnableAlarmsResponse BatchEnableAlarms(BatchEnableAlarmsRequest request) {
+            return  new BatchEnableAlarmsExecutor().Client(this).Execute<BatchEnableAlarmsResponse, BatchEnableAlarmsResult, BatchEnableAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量启用规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchEnableAlarmsResponse> BatchEnableAlarms(BatchEnableAlarmsRequest request) {
+            return await new BatchEnableAlarmsExecutor().Client(this).Execute<BatchEnableAlarmsResponse, BatchEnableAlarmsResult, BatchEnableAlarmsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  该接口为自定义监控数据上报的接口，方便您将自己采集的时序数据上报到云监控。可上报原始数据和已聚合的统计数据。支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutMetricDataResponse PutMetricData(PutMetricDataRequest request) {
+            return  new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  该接口为自定义监控数据上报的接口，方便您将自己采集的时序数据上报到云监控。可上报原始数据和已聚合的统计数据。支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutMetricDataResponse> PutMetricData(PutMetricDataRequest request) {
+            return await new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量禁用规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDisableAlarmsResponse BatchDisableAlarms(BatchDisableAlarmsRequest request) {
+            return  new BatchDisableAlarmsExecutor().Client(this).Execute<BatchDisableAlarmsResponse, BatchDisableAlarmsResult, BatchDisableAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量禁用规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDisableAlarmsResponse> BatchDisableAlarms(BatchDisableAlarmsRequest request) {
+            return await new BatchDisableAlarmsExecutor().Client(this).Execute<BatchDisableAlarmsResponse, BatchDisableAlarmsResult, BatchDisableAlarmsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableAlarmResponse DisableAlarm(DisableAlarmRequest request) {
+            return  new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableAlarmResponse> DisableAlarm(DisableAlarmRequest request) {
+            return await new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +449,12 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        ///  查询监控规则
+        ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -324,25 +479,6 @@ namespace JDCloudSDK.Monitor.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmsByIDResponse> DescribeAlarmsByID(DescribeAlarmsByIDRequest request) {
             return await new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询可用创建监控规则的指标列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeMetricsForCreateAlarmResponse DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
-            return  new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询可用创建监控规则的指标列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeMetricsForCreateAlarmResponse> DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
-            return await new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
         }
 #endif
 #if NET40||NET35

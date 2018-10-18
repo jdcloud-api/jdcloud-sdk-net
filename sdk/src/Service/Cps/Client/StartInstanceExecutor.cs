@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  启动单个云物理服务器，只能启动stopped状态的服务器
+    ///  对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
     /// </summary>
     public class StartInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  启动单个云物理服务器，只能启动stopped状态的服务器接口的Http 请求方法
+        ///  对单个云物理服务器执行开机操作，只能启动stopped状态的服务器接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  启动单个云物理服务器，只能启动stopped状态的服务器接口的Http资源请求路径
+        ///  对单个云物理服务器执行开机操作，只能启动stopped状态的服务器接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

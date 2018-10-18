@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Cps.Apis
     public class DescribeSubnetRequest : JdcloudRequest
     {
         ///<summary>
-        /// 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器支持的可用区
+        /// 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
         ///Required:true
         ///</summary>
         [Required]
         public   string Az{ get; set; }
         ///<summary>
-        /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的区域
+        /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]

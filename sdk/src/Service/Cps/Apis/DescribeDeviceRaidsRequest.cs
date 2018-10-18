@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询云物理服务器支持的raid类型
+    ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
     /// </summary>
     public class DescribeDeviceRaidsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 云物理服务器类型，可查询describeDeviceTypes接口获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+        /// 实例类型，可调用（describeDeviceTypes）接口获取指定地域的实例类型，例如：cps.c.normal
         ///Required:true
         ///</summary>
         [Required]

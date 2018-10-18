@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  查询单个云物理服务器监控信息
+    ///  查询单个云物理服务器硬件监控信息
     /// </summary>
     public class DescribeInstanceStatusExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询单个云物理服务器监控信息接口的Http 请求方法
+        ///  查询单个云物理服务器硬件监控信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  查询单个云物理服务器监控信息接口的Http资源请求路径
+        ///  查询单个云物理服务器硬件监控信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

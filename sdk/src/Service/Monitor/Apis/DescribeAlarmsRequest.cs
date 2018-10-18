@@ -28,44 +28,65 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Monitor.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    ///  查询监控规则
+    ///  查询规则, 查询参数组合及优先级从高到低为：
+        ///         /// 1：serviceCode不为空
+        ///         /// 1.1：serviceCode + resourceId
+        ///         /// 1.2: serviceCode + resourceIds
+        ///         /// 2：serviceCodes不为空
+        ///         /// 3: 所有规则
     /// </summary>
     public class DescribeAlarmsRequest : JdcloudRequest
     {
+        ///<summary>
+        /// 当前所在页，默认为1
+        ///</summary>
+        public   long? PageNumber{ get; set; }
+        ///<summary>
+        /// 页面大小，默认为20；取值范围[1, 100]
+        ///</summary>
+        public   long? PageSize{ get; set; }
         ///<summary>
         /// 产品名称
         ///</summary>
         public   string ServiceCode{ get; set; }
         ///<summary>
-        /// 资源Id
+        /// 资源ID
         ///</summary>
-        public   string ResourceId{ get; set; }
+        public   string ResourceID{ get; set; }
+        ///<summary>
+        /// 规则类型, 1表示资源监控，6表示站点监控
+        ///</summary>
+        public   long? RuleType{ get; set; }
         ///<summary>
         /// 规则报警状态, 1：正常, 2：报警，4：数据不足
         ///</summary>
-        public   int? Status{ get; set; }
-        ///<summary>
-        /// 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
-        ///</summary>
-        public   int? IsAlarming{ get; set; }
+        public   long? Status{ get; set; }
         ///<summary>
         /// 规则状态：1为启用，0为禁用
         ///</summary>
-        public   int? Enabled{ get; set; }
+        public   long? Enabled{ get; set; }
         ///<summary>
-        /// 页码, 默认为1, 取值范围：[1,∞)
+        /// 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
         ///</summary>
-        public   int? PageNumber{ get; set; }
+        public   long? IsAlarming{ get; set; }
         ///<summary>
-        /// 分页大小，默认为20，取值范围：[10,100]
+        /// 规则的id
         ///</summary>
-        public   int? PageSize{ get; set; }
+        public   string AlarmId{ get; set; }
+        ///<summary>
+        /// 服务码或资源Id列表
+        /// filter name 为serviceCodes表示查询多个产品线的规则
+        /// filter name 为resourceIds表示查询多个资源的规则
+        ///</summary>
+        public List<Filter> Filters{ get; set; }
+
         ///<summary>
         /// 地域 Id
         ///Required:true

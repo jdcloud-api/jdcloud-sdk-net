@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Vm.Model;
 
 namespace  JDCloudSDK.Vm.Apis
 {
@@ -42,7 +41,7 @@ namespace  JDCloudSDK.Vm.Apis
         ///<summary>
         /// Quotas
         ///</summary>
-        public List<Quota> Quotas{ get; set; }
+        public List<JDCloudSDK.Vm.Model.Quota> Quotas{ get; set; }
 
     }
 }

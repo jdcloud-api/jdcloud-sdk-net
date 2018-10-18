@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Mongodb.Apis
@@ -54,13 +53,13 @@ namespace  JDCloudSDK.Mongodb.Apis
         /// chargeMode - 计费类型，精确匹配
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// createTime - 创建时间,asc（正序），desc（倒序）
         /// 
         ///</summary>
-        public List<Sort> Sorts{ get; set; }
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
 
         ///<summary>
         /// Region ID

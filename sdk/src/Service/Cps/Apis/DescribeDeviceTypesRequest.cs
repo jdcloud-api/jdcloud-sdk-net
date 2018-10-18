@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询云物理服务器类型
+    ///  查询云物理服务器实例类型
     /// </summary>
     public class DescribeDeviceTypesRequest : JdcloudRequest
     {

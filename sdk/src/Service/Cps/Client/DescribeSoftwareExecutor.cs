@@ -34,14 +34,14 @@ namespace JDCloudSDK.Cps.Client
 
     /// <summary>
     ///  查询物理服务器可预装的软件列表&lt;br/&gt;
-        /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
+        /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表，根据不同的操作系统类型得到支持的可预装的软件列表&lt;br/&gt;
         /// 
     /// </summary>
     public class DescribeSoftwareExecutor : JdcloudExecutor
     {
         /// <summary>
         ///  查询物理服务器可预装的软件列表&lt;br/&gt;
-        /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
+        /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表，根据不同的操作系统类型得到支持的可预装的软件列表&lt;br/&gt;
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -52,7 +52,7 @@ namespace JDCloudSDK.Cps.Client
         }
         /// <summary>
         ///  查询物理服务器可预装的软件列表&lt;br/&gt;
-        /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
+        /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表，根据不同的操作系统类型得到支持的可预装的软件列表&lt;br/&gt;
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

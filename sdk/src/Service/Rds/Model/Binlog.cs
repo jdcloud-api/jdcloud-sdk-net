@@ -48,7 +48,7 @@ namespace JDCloudSDK.Rds.Model
         ///<summary>
         /// binlog日志大小，单位KB
         ///</summary>
-        public int? BinlogSizeKB{ get; set; }
+        public long? BinlogSizeKB{ get; set; }
         ///<summary>
         /// binlog开始时间,格式为：YYYY-MM-DD HH:mm:ss
         ///</summary>

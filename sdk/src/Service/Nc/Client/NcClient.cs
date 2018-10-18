@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 容器服务
- * 容器服务相关接口
+ * 原生容器
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -39,8 +39,8 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Nc.Client
 {
     /// <summary>
-    ///  容器服务
-    ///  容器服务相关接口
+    ///  原生容器
+    ///  原生容器相关接口
     ///  Nc Api 客户端
     ///</summary>
     public class NcClient : JdcloudClient
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Nc.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.1
+        ///  版本号 1.0.6
         ///</summary>
-        public const string ClientVersion = "1.0.1";
+        public const string ClientVersion = "1.0.6";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";

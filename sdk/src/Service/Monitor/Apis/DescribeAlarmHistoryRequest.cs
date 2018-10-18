@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Monitor.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Monitor.Apis
@@ -35,15 +36,25 @@ namespace  JDCloudSDK.Monitor.Apis
 
     /// <summary>
     ///  查询报警历史
+        ///         /// 检索条件组合优先级从高到低为
+        ///         /// 1. serviceCode
+        ///         /// 1.1 serviceCode + resourceId
+        ///         /// 1.2 serviceCode + resourceIds
+        ///         /// 2. serviceCodes
+        ///         /// 3. 用户所有规则
     /// </summary>
     public class DescribeAlarmHistoryRequest : JdcloudRequest
     {
         ///<summary>
-        /// 报警规则的Id
+        /// 当前所在页，默认为1
         ///</summary>
-        public   string Id{ get; set; }
+        public   long? PageNumber{ get; set; }
         ///<summary>
-        /// 产品名称
+        /// 页面大小，默认为20；取值范围[1, 100]
+        ///</summary>
+        public   long? PageSize{ get; set; }
+        ///<summary>
+        /// 产品线
         ///</summary>
         public   string ServiceCode{ get; set; }
         ///<summary>
@@ -51,25 +62,28 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string ResourceId{ get; set; }
         ///<summary>
-        /// 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
-        ///Required:true
+        /// 规则Id
         ///</summary>
-        [Required]
+        public   string AlarmId{ get; set; }
+        ///<summary>
+        /// 正在报警, 取值为1
+        ///</summary>
+        public   long? Alarming{ get; set; }
+        ///<summary>
+        /// 开始时间
+        ///</summary>
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
-        ///Required:true
+        /// 结束时间
         ///</summary>
-        [Required]
         public   string EndTime{ get; set; }
         ///<summary>
-        /// 页码, 默认为1, 取值范围：[1,∞)
+        /// 服务码或资源Id列表
+        /// filter name 为serviceCodes表示查询多个产品线的规则
+        /// filter name 为resourceIds表示查询多个资源的规则
         ///</summary>
-        public   int? PageNumber{ get; set; }
-        ///<summary>
-        /// 分页大小，默认为20，取值范围：[10,100]
-        ///</summary>
-        public   int? PageSize{ get; set; }
+        public List<Filter> Filters{ get; set; }
+
         ///<summary>
         /// 地域 Id
         ///Required:true

@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Cr.Apis
@@ -43,7 +42,7 @@ namespace  JDCloudSDK.Cr.Apis
         /// resourceTypes - 资源类型，暂时只支持 [registry, repository]，支持同时查询两种配额。
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

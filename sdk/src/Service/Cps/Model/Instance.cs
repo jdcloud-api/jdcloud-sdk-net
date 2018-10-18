@@ -51,7 +51,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        /// 设备类型, 如 cps.c.normal
+        /// 实例类型, 如 cps.c.normal
         ///</summary>
         public string DeviceType{ get; set; }
         ///<summary>
@@ -95,19 +95,19 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string OsVersion{ get; set; }
         ///<summary>
-        /// 系统盘raid类型Id
+        /// 系统盘RAID类型ID
         ///</summary>
         public string SysRaidTypeId{ get; set; }
         ///<summary>
-        /// 系统盘raid类型, 如 NORAID, RAID0, RAID1
+        /// 系统盘RAID类型, 如 NORAID, RAID0, RAID1
         ///</summary>
         public string SysRaidType{ get; set; }
         ///<summary>
-        /// 数据盘raid类型Id
+        /// 数据盘RAID类型ID
         ///</summary>
         public string DataRaidTypeId{ get; set; }
         ///<summary>
-        /// 数据盘raid类型, 如 NORAID, RAID0, RAID1
+        /// 数据盘RAID类型, 如 NORAID, RAID0, RAID1
         ///</summary>
         public string DataRaidType{ get; set; }
         ///<summary>

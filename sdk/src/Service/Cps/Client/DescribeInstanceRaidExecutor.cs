@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  查询单个云物理服务器raid信息
+    ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
     /// </summary>
     public class DescribeInstanceRaidExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询单个云物理服务器raid信息接口的Http 请求方法
+        ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  查询单个云物理服务器raid信息接口的Http资源请求路径
+        ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

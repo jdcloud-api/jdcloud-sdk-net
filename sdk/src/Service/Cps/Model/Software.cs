@@ -46,7 +46,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Version{ get; set; }
         ///<summary>
-        /// OS类型ID
+        /// 操作系统系统类型ID
         ///</summary>
         public string OsTypeId{ get; set; }
         ///<summary>

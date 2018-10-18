@@ -60,14 +60,14 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// Deleted
         ///</summary>
-        public string Deleted{ get; set; }
+        public byte Deleted{ get; set; }
         ///<summary>
         /// CreateTime
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// UpdateTime
         ///</summary>
-        public string UpdateTime{ get; set; }
+        public DateTime? UpdateTime{ get; set; }
     }
 }

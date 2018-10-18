@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  停止单个云物理服务器，只能停止running状态的服务器
+    ///  对单个云物理服务器执行关机操作，只能停止running状态的服务器
     /// </summary>
     public class StopInstanceResult : JdcloudResult
     {
         ///<summary>
-        /// 停止操作是否成功
+        /// 关机操作是否成功
         ///</summary>
         public   bool Success{ get; set; }
     }

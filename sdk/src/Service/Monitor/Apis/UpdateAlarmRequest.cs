@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Monitor.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Monitor.Apis
@@ -39,65 +40,32 @@ namespace  JDCloudSDK.Monitor.Apis
     public class UpdateAlarmRequest : JdcloudRequest
     {
         ///<summary>
-        /// 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
-        ///Required:true
+        /// 通知联系人
         ///</summary>
-        [Required]
-        public   string Calculation{ get; set; }
-        ///<summary>
-        /// 通知的联系组，如 [“联系组1”,”联系组2”]
-        ///</summary>
-        public List<string> ContactGroups{ get; set; }
+        public List<BaseContact> Contacts{ get; set; }
 
         ///<summary>
-        /// 通知的联系人，如 [“联系人1”,”联系人2”]
-        ///</summary>
-        public List<string> ContactPersons{ get; set; }
-
-        ///<summary>
-        /// 取样频次
-        ///</summary>
-        public   string DownSample{ get; set; }
-        ///<summary>
-        /// 根据产品线查询可用监控项列表 接口 返回的Metric字段
+        /// Rule
         ///Required:true
         ///</summary>
         [Required]
-        public   string Metric{ get; set; }
+        public   BaseRule Rule{ get; set; }
         ///<summary>
-        /// 通知周期 单位：小时
+        /// 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
         ///</summary>
-        public   int? NoticePeriod{ get; set; }
+        public   string WebHookContent{ get; set; }
         ///<summary>
-        /// &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
-        ///Required:true
+        /// webHook协议
         ///</summary>
-        [Required]
-        public   string Operation{ get; set; }
+        public   string WebHookProtocol{ get; set; }
         ///<summary>
-        /// 统计周期（单位：分钟），可选值：2,5,15,30,60
-        ///Required:true
+        /// 回调secret，用户请求签名，防伪造
         ///</summary>
-        [Required]
-        public   int Period{ get; set; }
+        public   string WebHookSecret{ get; set; }
         ///<summary>
-        /// 产品名称
-        ///Required:true
+        /// 回调url
         ///</summary>
-        [Required]
-        public   string ServiceCode{ get; set; }
-        ///<summary>
-        /// 阈值
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   double Threshold{ get; set; }
-        ///<summary>
-        /// 连续多少次后报警，可选值:1,2,3,5
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   int Times{ get; set; }
+        public   string WebHookUrl{ get; set; }
         ///<summary>
         /// 地域 Id
         ///Required:true

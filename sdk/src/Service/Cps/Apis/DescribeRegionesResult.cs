@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云物理服务器
- * 云物理服务器区域操作相关的接口
+ * 云物理服务器地域操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询云物理服务器区域列表
+    ///  查询云物理服务器地域列表
     /// </summary>
     public class DescribeRegionesResult : JdcloudResult
     {

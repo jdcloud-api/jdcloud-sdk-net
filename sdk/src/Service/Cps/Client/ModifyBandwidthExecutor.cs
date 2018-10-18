@@ -33,7 +33,7 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br&gt;
+    ///  升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
         /// - 不支持未启用外网的服务器升级带宽
         /// - 外网带宽不支持降级
         /// 
@@ -41,7 +41,7 @@ namespace JDCloudSDK.Cps.Client
     public class ModifyBandwidthExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br&gt;
+        ///  升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
         /// - 不支持未启用外网的服务器升级带宽
         /// - 外网带宽不支持降级
         /// 接口的Http 请求方法
@@ -53,7 +53,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br&gt;
+        ///  升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
         /// - 不支持未启用外网的服务器升级带宽
         /// - 外网带宽不支持降级
         /// 接口的Http资源请求路径

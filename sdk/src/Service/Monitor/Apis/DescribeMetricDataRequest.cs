@@ -69,6 +69,10 @@ namespace  JDCloudSDK.Monitor.Apis
         public List<TagFilter> Tags{ get; set; }
 
         ///<summary>
+        /// 是否对查询的tags分组
+        ///</summary>
+        public   bool GroupBy{ get; set; }
+        ///<summary>
         /// 地域 Id
         ///Required:true
         ///</summary>

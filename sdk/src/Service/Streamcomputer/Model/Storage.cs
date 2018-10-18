@@ -64,11 +64,11 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// CreateTime
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// UpdateTime
         ///</summary>
-        public string UpdateTime{ get; set; }
+        public DateTime? UpdateTime{ get; set; }
         ///<summary>
         /// NamespaceId
         ///</summary>
@@ -76,7 +76,7 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// Deleted
         ///</summary>
-        public string Deleted{ get; set; }
+        public byte Deleted{ get; set; }
         ///<summary>
         /// Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
         ///</summary>

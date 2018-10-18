@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Cps.Apis
     public class DescribeOSRequest : JdcloudRequest
     {
         ///<summary>
-        /// 云物理服务器类型，可调用接口（describeDeviceTypes）获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+        /// 实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal
         ///Required:true
         ///</summary>
         [Required]

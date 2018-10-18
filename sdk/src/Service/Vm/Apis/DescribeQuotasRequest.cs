@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vm.Apis
@@ -44,7 +43,7 @@ namespace  JDCloudSDK.Vm.Apis
         /// resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传

@@ -46,7 +46,7 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string Az{ get; set; }
         ///<summary>
-        /// 设备类型, 如 cps.c.normal
+        /// 实例类型, 如 cps.c.normal
         ///Required:true
         ///</summary>
         [Required]
@@ -64,13 +64,13 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string OsTypeId{ get; set; }
         ///<summary>
-        /// 系统盘raid类型Id
+        /// 系统盘RAID类型ID
         ///Required:true
         ///</summary>
         [Required]
         public string SysRaidTypeId{ get; set; }
         ///<summary>
-        /// 数据盘raid类型Id
+        /// 数据盘RAID类型ID
         ///Required:true
         ///</summary>
         [Required]

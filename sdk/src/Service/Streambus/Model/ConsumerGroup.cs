@@ -48,11 +48,11 @@ namespace JDCloudSDK.Streambus.Model
         ///<summary>
         /// CreatedTime
         ///</summary>
-        public string CreatedTime{ get; set; }
+        public DateTime? CreatedTime{ get; set; }
         ///<summary>
         /// Delete
         ///</summary>
-        public string Delete{ get; set; }
+        public byte Delete{ get; set; }
         ///<summary>
         /// TopicId
         ///</summary>

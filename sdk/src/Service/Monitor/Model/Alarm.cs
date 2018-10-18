@@ -42,21 +42,21 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Calculation{ get; set; }
         ///<summary>
-        /// 通知的联系组，如 [“联系组1”,”联系组2”]
+        /// ContactGroups
         ///</summary>
         public List<string> ContactGroups{ get; set; }
         ///<summary>
-        /// 通知的联系人，如 [“联系人1”,”联系人2”]
+        /// ContactPersons
         ///</summary>
         public List<string> ContactPersons{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// CreateTime
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// 启用禁用 1启用，0禁用
         ///</summary>
-        public int? Enabled{ get; set; }
+        public long? Enabled{ get; set; }
         ///<summary>
         /// 规则id
         ///</summary>
@@ -72,19 +72,19 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 通知周期 单位：小时
         ///</summary>
-        public int? NoticePeriod{ get; set; }
+        public long? NoticePeriod{ get; set; }
         ///<summary>
-        /// 报警的时间  , 查询正在报警规则时该字段有效
+        /// NoticeTime
         ///</summary>
-        public string NoticeTime{ get; set; }
+        public DateTime? NoticeTime{ get; set; }
         ///<summary>
-        /// &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
+        /// &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
         ///</summary>
         public string Operation{ get; set; }
         ///<summary>
         /// 统计周期（单位：分钟）
         ///</summary>
-        public int? Period{ get; set; }
+        public long? Period{ get; set; }
         ///<summary>
         /// 地域信息
         ///</summary>
@@ -100,7 +100,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 监控项状态:1正常，2告警，4数据不足
         ///</summary>
-        public int? Status{ get; set; }
+        public long? Status{ get; set; }
         ///<summary>
         /// 监控项附属信息
         ///</summary>
@@ -112,9 +112,9 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 连续多少次后报警
         ///</summary>
-        public int? Times{ get; set; }
+        public long? Times{ get; set; }
         ///<summary>
-        /// 报警值 , 查询正在报警规则时该字段有效
+        /// 报警值
         ///</summary>
         public double? Value{ get; set; }
     }

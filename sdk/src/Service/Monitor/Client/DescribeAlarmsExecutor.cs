@@ -33,12 +33,22 @@ namespace JDCloudSDK.Monitor.Client
 {
 
     /// <summary>
-    ///  查询监控规则
+    ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则
     /// </summary>
     public class DescribeAlarmsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询监控规则接口的Http 请求方法
+        ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +57,12 @@ namespace JDCloudSDK.Monitor.Client
             }
         }
         /// <summary>
-        ///  查询监控规则接口的Http资源请求路径
+        ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

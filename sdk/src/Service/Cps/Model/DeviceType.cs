@@ -38,19 +38,19 @@ namespace JDCloudSDK.Cps.Model
     {
 
         ///<summary>
-        /// 服务器类型英文名称, 如 cps.c.normal
+        /// 实例类型英文名称, 如 cps.c.normal
         ///</summary>
         public string NameEN{ get; set; }
         ///<summary>
-        /// 服务器类型中文名称, 如 计算型
+        /// 实例类型中文名称, 如 计算型
         ///</summary>
         public string NameZH{ get; set; }
         ///<summary>
-        /// 使用场景类型英文描述, 如 standard
+        /// 镜像类型英文描述, 如 standard
         ///</summary>
         public string UseTypeEN{ get; set; }
         ///<summary>
-        /// 使用场景类型中文描述, 如 标准型
+        /// 镜像类型中文描述, 如 标准型
         ///</summary>
         public string UseTypeZH{ get; set; }
         ///<summary>
@@ -90,11 +90,11 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string SystemDiskDetail{ get; set; }
         ///<summary>
-        /// 系统磁盘概要信息
+        /// 数据磁盘概要信息
         ///</summary>
         public string DataDiskConcise{ get; set; }
         ///<summary>
-        /// 系统磁盘详细信息
+        /// 数据磁盘详细信息
         ///</summary>
         public string DataDiskDetail{ get; set; }
         ///<summary>

@@ -33,7 +33,12 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    ///  查询监控规则
+    ///  查询规则, 查询参数组合及优先级从高到低为：
+        ///         /// 1：serviceCode不为空
+        ///         /// 1.1：serviceCode + resourceId
+        ///         /// 1.2: serviceCode + resourceIds
+        ///         /// 2：serviceCodes不为空
+        ///         /// 3: 所有规则
     /// </summary>
     public class DescribeAlarmsResponse : JdcloudResponse<DescribeAlarmsResult>
     {

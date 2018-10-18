@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Cps.Apis
 
     /// <summary>
     ///  查询物理服务器可预装的软件列表&lt;br/&gt;
-        ///         /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
+        ///         /// 可调用接口（describeOS）获取云物理服务器支持的操作系统列表，根据不同的操作系统类型得到支持的可预装的软件列表&lt;br/&gt;
         ///         /// 
     /// </summary>
     public class DescribeSoftwareRequest : JdcloudRequest

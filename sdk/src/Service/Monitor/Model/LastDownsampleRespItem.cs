@@ -48,6 +48,6 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// Value
         ///</summary>
-        public Object Value{ get; set; }
+        public object Value{ get; set; }
     }
 }

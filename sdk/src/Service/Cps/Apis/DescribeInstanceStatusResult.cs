@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询单个云物理服务器监控信息
+    ///  查询单个云物理服务器硬件监控信息
     /// </summary>
     public class DescribeInstanceStatusResult : JdcloudResult
     {

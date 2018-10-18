@@ -138,40 +138,21 @@ namespace JDCloudSDK.Rds.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  获取某个审计文件的下载链接，同时支持内链和外链，链接的有效时间为24小时&lt;br&gt;- 仅支持SQL Server
+        ///  查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetAuditDownloadURLResponse GetAuditDownloadURL(GetAuditDownloadURLRequest request) {
-            return  new GetAuditDownloadURLExecutor().Client(this).Execute<GetAuditDownloadURLResponse, GetAuditDownloadURLResult, GetAuditDownloadURLRequest>(request);
+        public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
+            return  new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取某个审计文件的下载链接，同时支持内链和外链，链接的有效时间为24小时&lt;br&gt;- 仅支持SQL Server
+        ///  查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetAuditDownloadURLResponse> GetAuditDownloadURL(GetAuditDownloadURLRequest request) {
-            return await new GetAuditDownloadURLExecutor().Client(this).Execute<GetAuditDownloadURLResponse, GetAuditDownloadURLResult, GetAuditDownloadURLRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  对RDS实例进行主备切换。&lt;br&gt;注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public FailoverInstanceResponse FailoverInstance(FailoverInstanceRequest request) {
-            return  new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  对RDS实例进行主备切换。&lt;br&gt;注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<FailoverInstanceResponse> FailoverInstance(FailoverInstanceRequest request) {
-            return await new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request);
+        public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
+            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -195,21 +176,21 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云&lt;br&gt;- 仅支持SQL Server
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetUploadKeyResponse GetUploadKey(GetUploadKeyRequest request) {
-            return  new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
+        public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest request) {
+            return  new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云&lt;br&gt;- 仅支持SQL Server
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetUploadKeyResponse> GetUploadKey(GetUploadKeyRequest request) {
-            return await new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
+        public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
+            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -233,40 +214,21 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。&lt;br&gt;例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持MySQL
+        ///  获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateInstanceByTimeResponse CreateInstanceByTime(CreateInstanceByTimeRequest request) {
-            return  new CreateInstanceByTimeExecutor().Client(this).Execute<CreateInstanceByTimeResponse, CreateInstanceByTimeResult, CreateInstanceByTimeRequest>(request);
+        public DescribeAuditFilesResponse DescribeAuditFiles(DescribeAuditFilesRequest request) {
+            return  new DescribeAuditFilesExecutor().Client(this).Execute<DescribeAuditFilesResponse, DescribeAuditFilesResult, DescribeAuditFilesRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。&lt;br&gt;例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持MySQL
+        ///  获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceByTimeResponse> CreateInstanceByTime(CreateInstanceByTimeRequest request) {
-            return await new CreateInstanceByTimeExecutor().Client(this).Execute<CreateInstanceByTimeResponse, CreateInstanceByTimeResult, CreateInstanceByTimeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
-            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
-            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        public async Task<DescribeAuditFilesResponse> DescribeAuditFiles(DescribeAuditFilesRequest request) {
+            return await new DescribeAuditFilesExecutor().Client(this).Execute<DescribeAuditFilesResponse, DescribeAuditFilesResult, DescribeAuditFilesRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -309,26 +271,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetInstanceNameResponse SetInstanceName(SetInstanceNameRequest request) {
-            return  new SetInstanceNameExecutor().Client(this).Execute<SetInstanceNameResponse, SetInstanceNameResult, SetInstanceNameRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetInstanceNameResponse> SetInstanceName(SetInstanceNameRequest request) {
-            return await new SetInstanceNameExecutor().Client(this).Execute<SetInstanceNameResponse, SetInstanceNameResult, SetInstanceNameRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取整个备份或备份中单个文件的下载链接。&lt;br&gt;- 当输入参数中有文件名时，获取该文件的下载链接。&lt;br&gt;- 输入参数中无文件名时，获取整个备份的下载链接。&lt;br&gt;由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。&lt;br&gt;MySQL可下载整个备份集，但不支持单个文件的下载。&lt;br&gt;- 仅支持SQL Server
+        ///  获取整个备份或备份中单个文件的下载链接。&lt;br&gt;- 当输入参数中有文件名时，获取该文件的下载链接。&lt;br&gt;- 输入参数中无文件名时，获取整个备份的下载链接。&lt;br&gt;由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。&lt;br&gt;MySQL可下载整个备份集，但不支持单个文件的下载。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +280,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  获取整个备份或备份中单个文件的下载链接。&lt;br&gt;- 当输入参数中有文件名时，获取该文件的下载链接。&lt;br&gt;- 输入参数中无文件名时，获取整个备份的下载链接。&lt;br&gt;由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。&lt;br&gt;MySQL可下载整个备份集，但不支持单个文件的下载。&lt;br&gt;- 仅支持SQL Server
+        ///  获取整个备份或备份中单个文件的下载链接。&lt;br&gt;- 当输入参数中有文件名时，获取该文件的下载链接。&lt;br&gt;- 输入参数中无文件名时，获取整个备份的下载链接。&lt;br&gt;由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。&lt;br&gt;MySQL可下载整个备份集，但不支持单个文件的下载。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,25 +309,6 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
-            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -400,44 +324,6 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request) {
             return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。&lt;br&gt;例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致&lt;br&gt;- 仅支持MySQL
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateInstanceFromBackupResponse CreateInstanceFromBackup(CreateInstanceFromBackupRequest request) {
-            return  new CreateInstanceFromBackupExecutor().Client(this).Execute<CreateInstanceFromBackupResponse, CreateInstanceFromBackupResult, CreateInstanceFromBackupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。&lt;br&gt;例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致&lt;br&gt;- 仅支持MySQL
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceFromBackupResponse> CreateInstanceFromBackup(CreateInstanceFromBackupRequest request) {
-            return await new CreateInstanceFromBackupExecutor().Client(this).Execute<CreateInstanceFromBackupResponse, CreateInstanceFromBackupResult, CreateInstanceFromBackupRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetBackupPolicyResponse GetBackupPolicy(GetBackupPolicyRequest request) {
-            return  new GetBackupPolicyExecutor().Client(this).Execute<GetBackupPolicyResponse, GetBackupPolicyResult, GetBackupPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetBackupPolicyResponse> GetBackupPolicy(GetBackupPolicyRequest request) {
-            return await new GetBackupPolicyExecutor().Client(this).Execute<GetBackupPolicyResponse, GetBackupPolicyResult, GetBackupPolicyRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -461,6 +347,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。&lt;br&gt;例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstanceFromBackupResponse CreateInstanceFromBackup(CreateInstanceFromBackupRequest request) {
+            return  new CreateInstanceFromBackupExecutor().Client(this).Execute<CreateInstanceFromBackupResponse, CreateInstanceFromBackupResult, CreateInstanceFromBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。&lt;br&gt;例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstanceFromBackupResponse> CreateInstanceFromBackup(CreateInstanceFromBackupRequest request) {
+            return await new CreateInstanceFromBackupExecutor().Client(this).Execute<CreateInstanceFromBackupResponse, CreateInstanceFromBackupResult, CreateInstanceFromBackupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建一个RDS实例全量备份，可以对整个实例或者部分数据库（仅SQL Server支持）进行全量备份。同一时间点，只能有一个正在运行的备份任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -476,63 +381,6 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
             return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeQueryPerformanceResponse DescribeQueryPerformance(DescribeQueryPerformanceRequest request) {
-            return  new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeQueryPerformanceResponse> DescribeQueryPerformance(DescribeQueryPerformanceRequest request) {
-            return await new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAuditFilesResponse GetAuditFiles(GetAuditFilesRequest request) {
-            return  new GetAuditFilesExecutor().Client(this).Execute<GetAuditFilesResponse, GetAuditFilesResult, GetAuditFilesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAuditFilesResponse> GetAuditFiles(GetAuditFilesRequest request) {
-            return await new GetAuditFilesExecutor().Client(this).Execute<GetAuditFilesResponse, GetAuditFilesResult, GetAuditFilesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重置数据库账号密码。如果用户忘记账号的密码，可以使用该接口重置指定账号密码。密码重置后，以前的密码将无法使用，必须使用重置后的新密码登录或连接数据库实例。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
-            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置数据库账号密码。如果用户忘记账号的密码，可以使用该接口重置指定账号密码。密码重置后，以前的密码将无法使用，必须使用重置后的新密码登录或连接数据库实例。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -556,40 +404,59 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
+        ///  根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeErrorLogsResponse DescribeErrorLogs(DescribeErrorLogsRequest request) {
-            return  new DescribeErrorLogsExecutor().Client(this).Execute<DescribeErrorLogsResponse, DescribeErrorLogsResult, DescribeErrorLogsRequest>(request);
+        public DescribeQueryPerformanceResponse DescribeQueryPerformance(DescribeQueryPerformanceRequest request) {
+            return  new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
+        ///  根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeErrorLogsResponse> DescribeErrorLogs(DescribeErrorLogsRequest request) {
-            return await new DescribeErrorLogsExecutor().Client(this).Execute<DescribeErrorLogsResponse, DescribeErrorLogsResult, DescribeErrorLogsRequest>(request);
+        public async Task<DescribeQueryPerformanceResponse> DescribeQueryPerformance(DescribeQueryPerformanceRequest request) {
+            return await new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        ///  获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeWhiteListResponse DescribeWhiteList(DescribeWhiteListRequest request) {
-            return  new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        public DescribeBinlogsResponse DescribeBinlogs(DescribeBinlogsRequest request) {
+            return  new DescribeBinlogsExecutor().Client(this).Execute<DescribeBinlogsResponse, DescribeBinlogsResult, DescribeBinlogsRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        ///  获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeWhiteListResponse> DescribeWhiteList(DescribeWhiteListRequest request) {
-            return await new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        public async Task<DescribeBinlogsResponse> DescribeBinlogs(DescribeBinlogsRequest request) {
+            return await new DescribeBinlogsExecutor().Client(this).Execute<DescribeBinlogsResponse, DescribeBinlogsResult, DescribeBinlogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改MySQL实例的连接模式：标准模式(standard) 和高安全模式(security).&lt;br&gt;- **标准模式**：响应时间短，但没有 SQL 审计和拦截的能力。&lt;br&gt;- **高安全模式**：具备一定的 SQL注入拦截能力（通过分析表达式、关键系统函数等来实现防御 SQL 注入攻击），并可开启 SQL 审计，但会增加一定的响应时间。&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyConnectionModeResponse ModifyConnectionMode(ModifyConnectionModeRequest request) {
+            return  new ModifyConnectionModeExecutor().Client(this).Execute<ModifyConnectionModeResponse, ModifyConnectionModeResult, ModifyConnectionModeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改MySQL实例的连接模式：标准模式(standard) 和高安全模式(security).&lt;br&gt;- **标准模式**：响应时间短，但没有 SQL 审计和拦截的能力。&lt;br&gt;- **高安全模式**：具备一定的 SQL注入拦截能力（通过分析表达式、关键系统函数等来实现防御 SQL 注入攻击），并可开启 SQL 审计，但会增加一定的响应时间。&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyConnectionModeResponse> ModifyConnectionMode(ModifyConnectionModeRequest request) {
+            return await new ModifyConnectionModeExecutor().Client(this).Execute<ModifyConnectionModeResponse, ModifyConnectionModeResult, ModifyConnectionModeRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -628,63 +495,6 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<GrantPrivilegeResponse> GrantPrivilege(GrantPrivilegeRequest request) {
             return await new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取当前实例的所有数据库详细信息的列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest request) {
-            return  new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取当前实例的所有数据库详细信息的列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest request) {
-            return await new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAuditResponse DescribeAudit(DescribeAuditRequest request) {
-            return  new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest request) {
-            return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAuditOptionsResponse GetAuditOptions(GetAuditOptionsRequest request) {
-            return  new GetAuditOptionsExecutor().Client(this).Execute<GetAuditOptionsResponse, GetAuditOptionsResult, GetAuditOptionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAuditOptionsResponse> GetAuditOptions(GetAuditOptionsRequest request) {
-            return await new GetAuditOptionsExecutor().Client(this).Execute<GetAuditOptionsResponse, GetAuditOptionsResult, GetAuditOptionsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -761,6 +571,386 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest request) {
             return await new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBinlogDownloadURLResponse DescribeBinlogDownloadURL(DescribeBinlogDownloadURLRequest request) {
+            return  new DescribeBinlogDownloadURLExecutor().Client(this).Execute<DescribeBinlogDownloadURLResponse, DescribeBinlogDownloadURLResult, DescribeBinlogDownloadURLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBinlogDownloadURLResponse> DescribeBinlogDownloadURL(DescribeBinlogDownloadURLRequest request) {
+            return await new DescribeBinlogDownloadURLExecutor().Client(this).Execute<DescribeBinlogDownloadURLResponse, DescribeBinlogDownloadURLResult, DescribeBinlogDownloadURLRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
+            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
+            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
+            return  new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
+            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RebootInstanceResponse RebootInstance(RebootInstanceRequest request) {
+            return  new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
+            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RevokePrivilegeResponse RevokePrivilege(RevokePrivilegeRequest request) {
+            return  new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RevokePrivilegeResponse> RevokePrivilege(RevokePrivilegeRequest request) {
+            return await new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  从上传到OSS的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreDatabaseFromOSSResponse RestoreDatabaseFromOSS(RestoreDatabaseFromOSSRequest request) {
+            return  new RestoreDatabaseFromOSSExecutor().Client(this).Execute<RestoreDatabaseFromOSSResponse, RestoreDatabaseFromOSSResult, RestoreDatabaseFromOSSRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  从上传到OSS的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreDatabaseFromOSSResponse> RestoreDatabaseFromOSS(RestoreDatabaseFromOSSRequest request) {
+            return await new RestoreDatabaseFromOSSExecutor().Client(this).Execute<RestoreDatabaseFromOSSResponse, RestoreDatabaseFromOSSResult, RestoreDatabaseFromOSSRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  对RDS实例进行主备切换。&lt;br&gt;注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public FailoverInstanceResponse FailoverInstance(FailoverInstanceRequest request) {
+            return  new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对RDS实例进行主备切换。&lt;br&gt;注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<FailoverInstanceResponse> FailoverInstance(FailoverInstanceRequest request) {
+            return await new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetUploadKeyResponse GetUploadKey(GetUploadKeyRequest request) {
+            return  new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetUploadKeyResponse> GetUploadKey(GetUploadKeyRequest request) {
+            return await new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。&lt;br&gt;例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstanceByTimeResponse CreateInstanceByTime(CreateInstanceByTimeRequest request) {
+            return  new CreateInstanceByTimeExecutor().Client(this).Execute<CreateInstanceByTimeResponse, CreateInstanceByTimeResult, CreateInstanceByTimeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。&lt;br&gt;例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstanceByTimeResponse> CreateInstanceByTime(CreateInstanceByTimeRequest request) {
+            return await new CreateInstanceByTimeExecutor().Client(this).Execute<CreateInstanceByTimeResponse, CreateInstanceByTimeResult, CreateInstanceByTimeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
+            return  new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
+            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
+            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
+            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重置数据库账号密码。如果用户忘记账号的密码，可以使用该接口重置指定账号密码。密码重置后，以前的密码将无法使用，必须使用重置后的新密码登录或连接数据库实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
+            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置数据库账号密码。如果用户忘记账号的密码，可以使用该接口重置指定账号密码。密码重置后，以前的密码将无法使用，必须使用重置后的新密码登录或连接数据库实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeErrorLogsResponse DescribeErrorLogs(DescribeErrorLogsRequest request) {
+            return  new DescribeErrorLogsExecutor().Client(this).Execute<DescribeErrorLogsResponse, DescribeErrorLogsResult, DescribeErrorLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeErrorLogsResponse> DescribeErrorLogs(DescribeErrorLogsRequest request) {
+            return await new DescribeErrorLogsExecutor().Client(this).Execute<DescribeErrorLogsResponse, DescribeErrorLogsResult, DescribeErrorLogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWhiteListResponse DescribeWhiteList(DescribeWhiteListRequest request) {
+            return  new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWhiteListResponse> DescribeWhiteList(DescribeWhiteListRequest request) {
+            return await new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAuditOptionsResponse DescribeAuditOptions(DescribeAuditOptionsRequest request) {
+            return  new DescribeAuditOptionsExecutor().Client(this).Execute<DescribeAuditOptionsResponse, DescribeAuditOptionsResult, DescribeAuditOptionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAuditOptionsResponse> DescribeAuditOptions(DescribeAuditOptionsRequest request) {
+            return await new DescribeAuditOptionsExecutor().Client(this).Execute<DescribeAuditOptionsResponse, DescribeAuditOptionsResult, DescribeAuditOptionsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取某个审计文件的下载链接，同时支持内链和外链，链接的有效时间为24小时&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAuditDownloadURLResponse DescribeAuditDownloadURL(DescribeAuditDownloadURLRequest request) {
+            return  new DescribeAuditDownloadURLExecutor().Client(this).Execute<DescribeAuditDownloadURLResponse, DescribeAuditDownloadURLResult, DescribeAuditDownloadURLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取某个审计文件的下载链接，同时支持内链和外链，链接的有效时间为24小时&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAuditDownloadURLResponse> DescribeAuditDownloadURL(DescribeAuditDownloadURLRequest request) {
+            return await new DescribeAuditDownloadURLExecutor().Client(this).Execute<DescribeAuditDownloadURLResponse, DescribeAuditDownloadURLResult, DescribeAuditDownloadURLRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取当前实例的所有数据库详细信息的列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest request) {
+            return  new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前实例的所有数据库详细信息的列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest request) {
+            return await new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAuditResponse DescribeAudit(DescribeAuditRequest request) {
+            return  new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest request) {
+            return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest request) {
+            return  new DescribeSlowLogsExecutor().Client(this).Execute<DescribeSlowLogsResponse, DescribeSlowLogsResult, DescribeSlowLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest request) {
+            return await new DescribeSlowLogsExecutor().Client(this).Execute<DescribeSlowLogsResponse, DescribeSlowLogsResult, DescribeSlowLogsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -860,40 +1050,21 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+        ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
-            return  new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+        public DescribeSlowLogAttributesResponse DescribeSlowLogAttributes(DescribeSlowLogAttributesRequest request) {
+            return  new DescribeSlowLogAttributesExecutor().Client(this).Execute<DescribeSlowLogAttributesResponse, DescribeSlowLogAttributesResult, DescribeSlowLogAttributesRequest>(request);
         }
 #else
         /// <summary>
-        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+        ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
-            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
-            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
-            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        public async Task<DescribeSlowLogAttributesResponse> DescribeSlowLogAttributes(DescribeSlowLogAttributesRequest request) {
+            return await new DescribeSlowLogAttributesExecutor().Client(this).Execute<DescribeSlowLogAttributesResponse, DescribeSlowLogAttributesResult, DescribeSlowLogAttributesRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -917,44 +1088,6 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RebootInstanceResponse RebootInstance(RebootInstanceRequest request) {
-            return  new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
-            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetBackupPolicyResponse SetBackupPolicy(SetBackupPolicyRequest request) {
-            return  new SetBackupPolicyExecutor().Client(this).Execute<SetBackupPolicyResponse, SetBackupPolicyResult, SetBackupPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetBackupPolicyResponse> SetBackupPolicy(SetBackupPolicyRequest request) {
-            return await new SetBackupPolicyExecutor().Client(this).Execute<SetBackupPolicyResponse, SetBackupPolicyResult, SetBackupPolicyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -970,44 +1103,6 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceAttributesResponse> DescribeInstanceAttributes(DescribeInstanceAttributesRequest request) {
             return await new DescribeInstanceAttributesExecutor().Client(this).Execute<DescribeInstanceAttributesResponse, DescribeInstanceAttributesResult, DescribeInstanceAttributesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RevokePrivilegeResponse RevokePrivilege(RevokePrivilegeRequest request) {
-            return  new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RevokePrivilegeResponse> RevokePrivilege(RevokePrivilegeRequest request) {
-            return await new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  从上传到OSS的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RestoreDatabaseFromOSSResponse RestoreDatabaseFromOSS(RestoreDatabaseFromOSSRequest request) {
-            return  new RestoreDatabaseFromOSSExecutor().Client(this).Execute<RestoreDatabaseFromOSSResponse, RestoreDatabaseFromOSSResult, RestoreDatabaseFromOSSRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  从上传到OSS的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RestoreDatabaseFromOSSResponse> RestoreDatabaseFromOSS(RestoreDatabaseFromOSSRequest request) {
-            return await new RestoreDatabaseFromOSSExecutor().Client(this).Execute<RestoreDatabaseFromOSSResponse, RestoreDatabaseFromOSSResult, RestoreDatabaseFromOSSRequest>(request);
         }
 #endif
 

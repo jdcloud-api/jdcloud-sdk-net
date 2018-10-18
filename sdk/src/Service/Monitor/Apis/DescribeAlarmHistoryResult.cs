@@ -35,29 +35,23 @@ namespace  JDCloudSDK.Monitor.Apis
 
     /// <summary>
     ///  查询报警历史
+        ///         /// 检索条件组合优先级从高到低为
+        ///         /// 1. serviceCode
+        ///         /// 1.1 serviceCode + resourceId
+        ///         /// 1.2 serviceCode + resourceIds
+        ///         /// 2. serviceCodes
+        ///         /// 3. 用户所有规则
     /// </summary>
     public class DescribeAlarmHistoryResult : JdcloudResult
     {
         ///<summary>
         /// AlarmHistoryList
         ///</summary>
-        public List<AlarmHistory> AlarmHistoryList{ get; set; }
+        public List<DescribedAlarmHistory> AlarmHistoryList{ get; set; }
 
         ///<summary>
-        /// 页码
+        /// 总数
         ///</summary>
-        public   double? PageNumber{ get; set; }
-        ///<summary>
-        /// 总页数
-        ///</summary>
-        public   double? NumberPages{ get; set; }
-        ///<summary>
-        /// 总记录数
-        ///</summary>
-        public   double? NumberRecords{ get; set; }
-        ///<summary>
-        /// 分页大小
-        ///</summary>
-        public   double? PageSize{ get; set; }
+        public   long? Total{ get; set; }
     }
 }

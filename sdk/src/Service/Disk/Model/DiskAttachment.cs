@@ -60,6 +60,6 @@ namespace JDCloudSDK.Disk.Model
         ///<summary>
         /// 挂载时间
         ///</summary>
-        public string AttachTime{ get; set; }
+        public DateTime? AttachTime{ get; set; }
     }
 }

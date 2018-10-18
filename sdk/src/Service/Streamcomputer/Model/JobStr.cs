@@ -64,7 +64,7 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// Status
         ///</summary>
-        public string Status{ get; set; }
+        public byte Status{ get; set; }
         ///<summary>
         /// Duration
         ///</summary>
@@ -76,15 +76,15 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// Deleted
         ///</summary>
-        public string Deleted{ get; set; }
+        public byte Deleted{ get; set; }
         ///<summary>
         /// CreateTime
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// UpdateTime
         ///</summary>
-        public string UpdateTime{ get; set; }
+        public DateTime? UpdateTime{ get; set; }
         ///<summary>
         /// UserName
         ///</summary>

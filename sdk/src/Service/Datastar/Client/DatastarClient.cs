@@ -138,25 +138,6 @@ namespace JDCloudSDK.Datastar.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  根据deviceId查询对应用户的画像信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetProfileResponse GetProfile(GetProfileRequest request) {
-            return  new GetProfileExecutor().Client(this).Execute<GetProfileResponse, GetProfileResult, GetProfileRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据deviceId查询对应用户的画像信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetProfileResponse> GetProfile(GetProfileRequest request) {
-            return await new GetProfileExecutor().Client(this).Execute<GetProfileResponse, GetProfileResult, GetProfileRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  根据设备ID查询人群包ID
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,6 +153,25 @@ namespace JDCloudSDK.Datastar.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetPackageIdResponse> GetPackageId(GetPackageIdRequest request) {
             return await new GetPackageIdExecutor().Client(this).Execute<GetPackageIdResponse, GetPackageIdResult, GetPackageIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据区域、行业、一级指标、二级指标、起始时间等条件查询数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetLargeScreenDataResponse GetLargeScreenData(GetLargeScreenDataRequest request) {
+            return  new GetLargeScreenDataExecutor().Client(this).Execute<GetLargeScreenDataResponse, GetLargeScreenDataResult, GetLargeScreenDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据区域、行业、一级指标、二级指标、起始时间等条件查询数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetLargeScreenDataResponse> GetLargeScreenData(GetLargeScreenDataRequest request) {
+            return await new GetLargeScreenDataExecutor().Client(this).Execute<GetLargeScreenDataResponse, GetLargeScreenDataResult, GetLargeScreenDataRequest>(request);
         }
 #endif
 

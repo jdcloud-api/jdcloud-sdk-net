@@ -55,7 +55,7 @@ namespace JDCloudSDK.Monitor.Model
         ///Required:true
         ///</summary>
         [Required]
-        public Object Dimensions{ get; set; }
+        public Dictionary<string,string> Dimensions{ get; set; }
         ///<summary>
         /// 上报数据点的时间戳,只支持10位，秒级时间戳，不能写入过去30天的时间
         ///Required:true
@@ -73,6 +73,6 @@ namespace JDCloudSDK.Monitor.Model
         ///Required:true
         ///</summary>
         [Required]
-        public Object Values{ get; set; }
+        public Dictionary<string,string> Values{ get; set; }
     }
 }

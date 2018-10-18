@@ -38,19 +38,19 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 指标的计算单位，比如bit/s、%、k等
+        /// 指标的计算单位，比如bit/s、%、byte等
         ///</summary>
         public string CalculateUnit{ get; set; }
         ///<summary>
-        /// 监控项英文标识
+        /// 监控指标英文标识
         ///</summary>
         public string Metric{ get; set; }
         ///<summary>
-        /// 监控项名称
+        /// 监控指标名称
         ///</summary>
         public string MetricName{ get; set; }
         ///<summary>
-        /// 产品线标识
+        /// 资源类型标识
         ///</summary>
         public string ServiceCode{ get; set; }
         ///<summary>

@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Redis.Apis
@@ -53,13 +52,13 @@ namespace  JDCloudSDK.Redis.Apis
         /// cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// createTime - 创建时间(asc：正序，desc：倒序)
         /// 
         ///</summary>
-        public List<Sort> Sorts{ get; set; }
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
 
         ///<summary>
         /// 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2

@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Monitor.Apis
     /// </summary>
     public class UpdateAlarmResult : JdcloudResult
     {
-        ///<summary>
-        /// 规则id
-        ///</summary>
-        public   string AlarmId{ get; set; }
     }
 }

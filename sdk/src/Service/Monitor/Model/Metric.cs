@@ -39,17 +39,25 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 指标的计算单位，比如bit/s、%、k等
+        /// Aggregator
+        ///</summary>
+        public string Aggregator{ get; set; }
+        ///<summary>
+        /// CalculateUnit
         ///</summary>
         public string CalculateUnit{ get; set; }
         ///<summary>
-        /// 监控项英文标识
+        /// MetricValue
         ///</summary>
         [JsonProperty("metric")]
         public string MetricValue{ get; set; }
         ///<summary>
-        /// 监控项名称
+        /// MetricName
         ///</summary>
         public string MetricName{ get; set; }
+        ///<summary>
+        /// Period
+        ///</summary>
+        public string Period{ get; set; }
     }
 }

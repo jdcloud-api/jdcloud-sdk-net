@@ -64,6 +64,6 @@ namespace JDCloudSDK.Disk.Model
         ///<summary>
         /// 创建时间
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
     }
 }

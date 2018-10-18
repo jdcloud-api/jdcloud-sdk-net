@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  查询云物理服务器类型
+    ///  查询云物理服务器实例类型
     /// </summary>
     public class DescribeDeviceTypesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云物理服务器类型接口的Http 请求方法
+        ///  查询云物理服务器实例类型接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  查询云物理服务器类型接口的Http资源请求路径
+        ///  查询云物理服务器实例类型接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

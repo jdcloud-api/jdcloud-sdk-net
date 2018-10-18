@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询单个云物理服务器raid信息
+    ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
     /// </summary>
     public class DescribeInstanceRaidResponse : JdcloudResponse<DescribeInstanceRaidResult>
     {

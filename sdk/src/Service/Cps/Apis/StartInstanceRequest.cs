@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  启动单个云物理服务器，只能启动stopped状态的服务器
+    ///  对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
     /// </summary>
     public class StartInstanceRequest : JdcloudRequest
     {

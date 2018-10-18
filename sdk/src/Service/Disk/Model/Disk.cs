@@ -77,7 +77,7 @@ namespace JDCloudSDK.Disk.Model
         ///<summary>
         /// 创建云硬盘时间
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// 云硬盘计费配置信息
         ///</summary>

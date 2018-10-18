@@ -38,12 +38,12 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 时间戳
+        /// Timestamp
         ///</summary>
         public long? Timestamp{ get; set; }
         ///<summary>
-        /// 值
+        /// Value
         ///</summary>
-        public string Value{ get; set; }
+        public object Value{ get; set; }
     }
 }

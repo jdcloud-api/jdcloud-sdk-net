@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
@@ -40,15 +39,11 @@ namespace JDCloudSDK.Monitor.Model
 
         ///<summary>
         /// Tag键
-        ///Required:true
         ///</summary>
-        [Required]
         public string Key{ get; set; }
         ///<summary>
         /// Tag值
-        ///Required:true
         ///</summary>
-        [Required]
         public List<string> Values{ get; set; }
     }
 }

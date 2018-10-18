@@ -51,13 +51,13 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string ImageType{ get; set; }
         ///<summary>
-        /// OS类型Id
+        /// 操作系统类型ID
         ///Required:true
         ///</summary>
         [Required]
         public string OsTypeId{ get; set; }
         ///<summary>
-        /// 系统盘raid类型Id
+        /// 系统盘RAID类型ID
         ///Required:true
         ///</summary>
         [Required]
@@ -69,7 +69,7 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string KeepData{ get; set; }
         ///<summary>
-        /// 数据盘raid类型Id
+        /// 数据盘RAID类型ID
         ///Required:true
         ///</summary>
         [Required]

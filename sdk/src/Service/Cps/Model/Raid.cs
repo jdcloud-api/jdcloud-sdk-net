@@ -46,11 +46,11 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string VolumeDetail{ get; set; }
         ///<summary>
-        /// Raid类型Id
+        /// RAID类型ID
         ///</summary>
         public string RaidTypeId{ get; set; }
         ///<summary>
-        /// Raid类型, 如 NORAID, RAID0, RAID1
+        /// RAID类型, 如 NORAID, RAID0, RAID1
         ///</summary>
         public string RaidType{ get; set; }
         ///<summary>
@@ -58,7 +58,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string DeviceType{ get; set; }
         ///<summary>
-        /// raid类型描述
+        /// RAID类型描述
         ///</summary>
         public string Description{ get; set; }
     }

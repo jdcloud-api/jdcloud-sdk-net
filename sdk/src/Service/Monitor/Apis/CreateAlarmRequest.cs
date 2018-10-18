@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Monitor.Apis
     public class CreateAlarmRequest : JdcloudRequest
     {
         ///<summary>
-        /// 幂等性校验参数，最长32位，值不变则返回值不会变
+        /// 幂等性校验参数,最长36位
         ///Required:true
         ///</summary>
         [Required]

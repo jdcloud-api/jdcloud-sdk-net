@@ -52,7 +52,7 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// Type
         ///</summary>
-        public string Type{ get; set; }
+        public byte Type{ get; set; }
         ///<summary>
         /// TypeValue
         ///</summary>
@@ -64,11 +64,11 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// CreateTime
         ///</summary>
-        public string CreateTime{ get; set; }
+        public DateTime? CreateTime{ get; set; }
         ///<summary>
         /// UpdateTime
         ///</summary>
-        public string UpdateTime{ get; set; }
+        public DateTime? UpdateTime{ get; set; }
         ///<summary>
         /// UserName
         ///</summary>
@@ -88,6 +88,6 @@ namespace JDCloudSDK.Streamcomputer.Model
         ///<summary>
         /// PodsUpdateTime
         ///</summary>
-        public string PodsUpdateTime{ get; set; }
+        public DateTime? PodsUpdateTime{ get; set; }
     }
 }

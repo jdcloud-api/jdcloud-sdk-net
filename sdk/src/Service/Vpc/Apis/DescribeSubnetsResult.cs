@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Vpc.Model;
 
 namespace  JDCloudSDK.Vpc.Apis
 {
@@ -41,7 +40,7 @@ namespace  JDCloudSDK.Vpc.Apis
         ///<summary>
         /// Subnets
         ///</summary>
-        public List<Subnet> Subnets{ get; set; }
+        public List<JDCloudSDK.Vpc.Model.Subnet> Subnets{ get; set; }
 
         ///<summary>
         /// 总数量

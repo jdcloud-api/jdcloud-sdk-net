@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  查询云物理服务器支持的raid类型
+    ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
     /// </summary>
     public class DescribeDeviceRaidsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云物理服务器支持的raid类型接口的Http 请求方法
+        ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  查询云物理服务器支持的raid类型接口的Http资源请求路径
+        ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

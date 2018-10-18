@@ -45,5 +45,9 @@ namespace JDCloudSDK.Monitor.Model
         /// Metric
         ///</summary>
         public Metric Metric{ get; set; }
+        ///<summary>
+        /// Tags
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

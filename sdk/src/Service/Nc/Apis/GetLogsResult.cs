@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 容器服务
- * 关于容器服务相前接口
+ * 原生容器
+ * 关于原生容器相前接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,6 +40,6 @@ namespace  JDCloudSDK.Nc.Apis
         ///<summary>
         /// Logs
         ///</summary>
-        public   Object Logs{ get; set; }
+        public   object Logs{ get; set; }
     }
 }
