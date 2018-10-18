@@ -50,14 +50,17 @@ dotnet add package JDCloudSDK.Vm --version 1.0.4.1
 以下是查询单个云主机实例详情的调用示例
 
 ```csharp
+using System;
+
+using Newtonsoft.Json;
+
 using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Client;
 using JDCloudSDK.Core.Http;
-using Newtonsoft.Json;
-using System;
 using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Vm.Apis;
 using JDCloudSDK.Vm.Client;
+
 namespace JDCloudSDK.ConsoleTest
 {
     class Program
@@ -68,6 +71,7 @@ namespace JDCloudSDK.ConsoleTest
             string accessKeyId = "{accessKey}";
             string secretAccessKey = "{secretKey}";
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
+            
             //2. 创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                      .CredentialsProvider(credentialsProvider)
@@ -78,6 +82,7 @@ namespace JDCloudSDK.ConsoleTest
             DescribeInstanceRequest request = new DescribeInstanceRequest();
             request.RegionId="cn-north-1";
             request.InstanceId="i-c0se9uju";
+            
             //4. 执行请求
             var response = vmClient.DescribeInstance(request).Result;
             Console.WriteLine(JsonConvert.SerializeObject(response))
