@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  修改容器属性
+    ///  修改容器的 名称 和 描述。
+        ///         /// 
     /// </summary>
     public class ModifyContainerAttributeRequest : JdcloudRequest
     {

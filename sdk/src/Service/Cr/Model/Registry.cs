@@ -52,7 +52,7 @@ namespace JDCloudSDK.Cr.Model
         ///<summary>
         /// regsitry 使用的总存储空间 单位 (MB)
         ///</summary>
-        public int? TotalSpaceUsedMB{ get; set; }
+        public double? TotalSpaceUsedMB{ get; set; }
         ///<summary>
         /// registry 的创建时间
         ///</summary>

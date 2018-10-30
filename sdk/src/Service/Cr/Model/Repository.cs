@@ -60,7 +60,7 @@ namespace JDCloudSDK.Cr.Model
         ///<summary>
         /// 镜像仓库大小。
         ///</summary>
-        public int? TotalSpaceUsedMB{ get; set; }
+        public double? TotalSpaceUsedMB{ get; set; }
         ///<summary>
         /// 镜像仓库描述。
         ///</summary>

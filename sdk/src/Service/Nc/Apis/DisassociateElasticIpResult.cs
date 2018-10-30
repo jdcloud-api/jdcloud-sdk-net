@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+    ///  容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
+        ///         /// 
     /// </summary>
     public class DisassociateElasticIpResult : JdcloudResult
     {

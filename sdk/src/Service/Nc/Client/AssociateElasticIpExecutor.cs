@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,18 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+    ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 
     /// </summary>
     public class AssociateElasticIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP接口的Http 请求方法
+        ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP接口的Http资源请求路径
+        ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

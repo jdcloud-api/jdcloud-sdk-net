@@ -50,11 +50,11 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public bool JcloudRes{ get; set; }
         ///<summary>
-        /// 优先级，只存在于某些解析记录类型
+        /// 优先级，只存在于MX, SRV解析记录类型
         ///</summary>
         public int? MxPriority{ get; set; }
         ///<summary>
-        /// 端口，只存在于某些解析记录类型
+        /// 端口，只存在于SRV解析记录类型
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>

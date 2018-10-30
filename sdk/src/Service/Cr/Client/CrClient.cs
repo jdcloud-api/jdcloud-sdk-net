@@ -138,69 +138,54 @@ namespace JDCloudSDK.Cr.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询指定注册表名称是否已经存在以及是否符合命名规范。
+        ///  删除镜像
+        /// imageDigest imageTag imageTagStatus 三者只能且必须传一个。
+        /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
+        /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
+        /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CheckRegistryNameResponse CheckRegistryName(CheckRegistryNameRequest request) {
-            return  new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+        public DeleteImageResponse DeleteImage(DeleteImageRequest request) {
+            return  new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询指定注册表名称是否已经存在以及是否符合命名规范。
+        ///  删除镜像
+        /// imageDigest imageTag imageTagStatus 三者只能且必须传一个。
+        /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
+        /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
+        /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CheckRegistryNameResponse> CheckRegistryName(CheckRegistryNameRequest request) {
-            return await new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+        public async Task<DeleteImageResponse> DeleteImage(DeleteImageRequest request) {
+            return await new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
-        /// &lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
-        /// 可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;
+        ///  批量查询指定用户下所有 registry 详情。
+        /// 暂不支持 filter.
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetAuthorizationTokenResponse GetAuthorizationToken(GetAuthorizationTokenRequest request) {
-            return  new GetAuthorizationTokenExecutor().Client(this).Execute<GetAuthorizationTokenResponse, GetAuthorizationTokenResult, GetAuthorizationTokenRequest>(request);
+        public DescribeRegistriesResponse DescribeRegistries(DescribeRegistriesRequest request) {
+            return  new DescribeRegistriesExecutor().Client(this).Execute<DescribeRegistriesResponse, DescribeRegistriesResult, DescribeRegistriesRequest>(request);
         }
 #else
         /// <summary>
-        ///  &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
-        /// &lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
-        /// 可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;
+        ///  批量查询指定用户下所有 registry 详情。
+        /// 暂不支持 filter.
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetAuthorizationTokenResponse> GetAuthorizationToken(GetAuthorizationTokenRequest request) {
-            return await new GetAuthorizationTokenExecutor().Client(this).Execute<GetAuthorizationTokenResponse, GetAuthorizationTokenResult, GetAuthorizationTokenRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  返回指定repository中images的元数据，包括image size, image tags和creation date。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeImagesResponse DescribeImages(DescribeImagesRequest request) {
-            return  new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  返回指定repository中images的元数据，包括image size, image tags和creation date。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
-            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+        public async Task<DescribeRegistriesResponse> DescribeRegistries(DescribeRegistriesRequest request) {
+            return await new DescribeRegistriesExecutor().Client(this).Execute<DescribeRegistriesResponse, DescribeRegistriesResult, DescribeRegistriesRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -222,6 +207,90 @@ namespace JDCloudSDK.Cr.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateRegistryResponse> CreateRegistry(CreateRegistryRequest request) {
             return await new CreateRegistryExecutor().Client(this).Execute<CreateRegistryResponse, CreateRegistryResult, CreateRegistryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定用户下某个镜像仓库.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRepositoryResponse DeleteRepository(DeleteRepositoryRequest request) {
+            return  new DeleteRepositoryExecutor().Client(this).Execute<DeleteRepositoryResponse, DeleteRepositoryResult, DeleteRepositoryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定用户下某个镜像仓库.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRepositoryResponse> DeleteRepository(DeleteRepositoryRequest request) {
+            return await new DeleteRepositoryExecutor().Client(this).Execute<DeleteRepositoryResponse, DeleteRepositoryResult, DeleteRepositoryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  描述用户指定 registry 下的 repository.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRepositoriesResponse DescribeRepositories(DescribeRepositoriesRequest request) {
+            return  new DescribeRepositoriesExecutor().Client(this).Execute<DescribeRepositoriesResponse, DescribeRepositoriesResult, DescribeRepositoriesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  描述用户指定 registry 下的 repository.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRepositoriesResponse> DescribeRepositories(DescribeRepositoriesRequest request) {
+            return await new DescribeRepositoriesExecutor().Client(this).Execute<DescribeRepositoriesResponse, DescribeRepositoriesResult, DescribeRepositoriesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询指定镜像仓库名称是否已经存在以及是否符合命名规范。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckRepositoryNameResponse CheckRepositoryName(CheckRepositoryNameRequest request) {
+            return  new CheckRepositoryNameExecutor().Client(this).Execute<CheckRepositoryNameResponse, CheckRepositoryNameResult, CheckRepositoryNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询指定镜像仓库名称是否已经存在以及是否符合命名规范。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckRepositoryNameResponse> CheckRepositoryName(CheckRepositoryNameRequest request) {
+            return await new CheckRepositoryNameExecutor().Client(this).Execute<CheckRepositoryNameResponse, CheckRepositoryNameResult, CheckRepositoryNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  释放用户 registry 的 token。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ReleaseAuthorizationTokenResponse ReleaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) {
+            return  new ReleaseAuthorizationTokenExecutor().Client(this).Execute<ReleaseAuthorizationTokenResponse, ReleaseAuthorizationTokenResult, ReleaseAuthorizationTokenRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  释放用户 registry 的 token。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ReleaseAuthorizationTokenResponse> ReleaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) {
+            return await new ReleaseAuthorizationTokenExecutor().Client(this).Execute<ReleaseAuthorizationTokenResponse, ReleaseAuthorizationTokenResult, ReleaseAuthorizationTokenRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -266,6 +335,138 @@ namespace JDCloudSDK.Cr.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateRepositoryResponse> CreateRepository(CreateRepositoryRequest request) {
             return await new CreateRepositoryExecutor().Client(this).Execute<CreateRepositoryResponse, CreateRepositoryResult, CreateRepositoryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
+        /// &lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
+        /// 可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetAuthorizationTokenResponse GetAuthorizationToken(GetAuthorizationTokenRequest request) {
+            return  new GetAuthorizationTokenExecutor().Client(this).Execute<GetAuthorizationTokenResponse, GetAuthorizationTokenResult, GetAuthorizationTokenRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
+        /// &lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
+        /// 可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetAuthorizationTokenResponse> GetAuthorizationToken(GetAuthorizationTokenRequest request) {
+            return await new GetAuthorizationTokenExecutor().Client(this).Execute<GetAuthorizationTokenResponse, GetAuthorizationTokenResult, GetAuthorizationTokenRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询指定注册表名称是否已经存在以及是否符合命名规范。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckRegistryNameResponse CheckRegistryName(CheckRegistryNameRequest request) {
+            return  new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询指定注册表名称是否已经存在以及是否符合命名规范。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckRegistryNameResponse> CheckRegistryName(CheckRegistryNameRequest request) {
+            return await new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  &lt;p&gt;批量查询令牌。&lt;/p&gt; 
+        /// &lt;p&gt;暂时不支持分页和过滤条件。&lt;/p&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAuthorizationTokensResponse DescribeAuthorizationTokens(DescribeAuthorizationTokensRequest request) {
+            return  new DescribeAuthorizationTokensExecutor().Client(this).Execute<DescribeAuthorizationTokensResponse, DescribeAuthorizationTokensResult, DescribeAuthorizationTokensRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  &lt;p&gt;批量查询令牌。&lt;/p&gt; 
+        /// &lt;p&gt;暂时不支持分页和过滤条件。&lt;/p&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAuthorizationTokensResponse> DescribeAuthorizationTokens(DescribeAuthorizationTokensRequest request) {
+            return await new DescribeAuthorizationTokensExecutor().Client(this).Execute<DescribeAuthorizationTokensResponse, DescribeAuthorizationTokensResult, DescribeAuthorizationTokensRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  返回指定repository中images的元数据，包括image size, image tags和creation date。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeImagesResponse DescribeImages(DescribeImagesRequest request) {
+            return  new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  返回指定repository中images的元数据，包括image size, image tags和creation date。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
+            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询指定用户下某个 registry 详情。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRegistryResponse DescribeRegistry(DescribeRegistryRequest request) {
+            return  new DescribeRegistryExecutor().Client(this).Execute<DescribeRegistryResponse, DescribeRegistryResult, DescribeRegistryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询指定用户下某个 registry 详情。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRegistryResponse> DescribeRegistry(DescribeRegistryRequest request) {
+            return await new DescribeRegistryExecutor().Client(this).Execute<DescribeRegistryResponse, DescribeRegistryResult, DescribeRegistryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定用户下某个 registry.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRegistryResponse DeleteRegistry(DeleteRegistryRequest request) {
+            return  new DeleteRegistryExecutor().Client(this).Execute<DeleteRegistryResponse, DeleteRegistryResult, DeleteRegistryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定用户下某个 registry.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRegistryResponse> DeleteRegistry(DeleteRegistryRequest request) {
+            return await new DeleteRegistryExecutor().Client(this).Execute<DeleteRegistryResponse, DeleteRegistryResult, DeleteRegistryRequest>(request);
         }
 #endif
 

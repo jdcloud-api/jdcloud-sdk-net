@@ -62,7 +62,7 @@ namespace JDCloudSDK.Cr.Model
         /// docker image命令显示的是解压后的镜像大小，因此会比DescribeImages接口返回的镜像大小会大很多。      
         /// 
         ///</summary>
-        public int? ImageSizeMB{ get; set; }
+        public double? ImageSizeMB{ get; set; }
         ///<summary>
         /// 镜像关联的所有Tag
         ///</summary>

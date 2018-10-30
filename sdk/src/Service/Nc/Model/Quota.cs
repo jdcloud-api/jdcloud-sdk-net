@@ -38,6 +38,10 @@ namespace JDCloudSDK.Nc.Model
     {
 
         ///<summary>
+        /// 类型
+        ///</summary>
+        public string ResourceType{ get; set; }
+        ///<summary>
         /// 配额
         ///</summary>
         public int? Limit{ get; set; }

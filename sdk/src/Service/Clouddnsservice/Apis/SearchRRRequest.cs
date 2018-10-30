@@ -34,7 +34,9 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询主域名的解析记录
+    ///  查询主域名的解析记录。&lt;br&gt;
+        ///         /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+        ///         /// 
     /// </summary>
     public class SearchRRRequest : JdcloudRequest
     {
@@ -53,7 +55,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 域名ID
+        /// 域名ID，请使用getDomains接口获取。
         ///Required:true
         ///</summary>
         [Required]

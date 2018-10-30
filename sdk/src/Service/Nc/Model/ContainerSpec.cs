@@ -79,7 +79,9 @@ namespace JDCloudSDK.Nc.Model
         public List<EnvVar> Envs{ get; set; }
         ///<summary>
         /// 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+        ///Required:true
         ///</summary>
+        [Required]
         public string Image{ get; set; }
         ///<summary>
         /// secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret

@@ -176,6 +176,44 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DelUserViewIPResponse DelUserViewIP(DelUserViewIPRequest request) {
+            return  new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DelUserViewIPResponse> DelUserViewIP(DelUserViewIPRequest request) {
+            return await new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看用户在云解析服务下的操作记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetActionLogResponse GetActionLog(GetActionLogRequest request) {
+            return  new GetActionLogExecutor().Client(this).Execute<GetActionLogResponse, GetActionLogResult, GetActionLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看用户在云解析服务下的操作记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetActionLogResponse> GetActionLog(GetActionLogRequest request) {
+            return await new GetActionLogExecutor().Client(this).Execute<GetActionLogResponse, GetActionLogResult, GetActionLogRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  添加域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -195,7 +233,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户名下的主域名列表
+        ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +244,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询用户名下的主域名列表
+        ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -271,6 +313,44 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetUserViewIPResponse GetUserViewIP(GetUserViewIPRequest request) {
+            return  new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetUserViewIPResponse> GetUserViewIP(GetUserViewIPRequest request) {
+            return await new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddUserViewResponse AddUserView(AddUserViewRequest request) {
+            return  new AddUserViewExecutor().Client(this).Execute<AddUserViewResponse, AddUserViewResult, AddUserViewRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddUserViewResponse> AddUserView(AddUserViewRequest request) {
+            return await new AddUserViewExecutor().Client(this).Execute<AddUserViewResponse, AddUserViewResult, AddUserViewRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看域名的查询流量
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -309,6 +389,44 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetUserViewResponse GetUserView(GetUserViewRequest request) {
+            return  new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetUserViewResponse> GetUserView(GetUserViewRequest request) {
+            return await new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddUserViewIPResponse AddUserViewIP(AddUserViewIPRequest request) {
+            return  new AddUserViewIPExecutor().Client(this).Execute<AddUserViewIPResponse, AddUserViewIPResult, AddUserViewIPRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddUserViewIPResponse> AddUserViewIP(AddUserViewIPRequest request) {
+            return await new AddUserViewIPExecutor().Client(this).Execute<AddUserViewIPResponse, AddUserViewIPResult, AddUserViewIPRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看域名的解析次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -324,6 +442,25 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainQueryCountResponse> GetDomainQueryCount(GetDomainQueryCountRequest request) {
             return await new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DelUserViewResponse DelUserView(DelUserViewRequest request) {
+            return  new DelUserViewExecutor().Client(this).Execute<DelUserViewResponse, DelUserViewResult, DelUserViewRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DelUserViewResponse> DelUserView(DelUserViewRequest request) {
+            return await new DelUserViewExecutor().Client(this).Execute<DelUserViewResponse, DelUserViewResult, DelUserViewRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -347,7 +484,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询云解析所有的基础解析线路
+        ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +495,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询云解析所有的基础解析线路
+        ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +583,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询主域名的解析记录
+        ///  查询主域名的解析记录。&lt;br&gt;
+        /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +594,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询主域名的解析记录
+        ///  查询主域名的解析记录。&lt;br&gt;
+        /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

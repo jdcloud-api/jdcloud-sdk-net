@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,14 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  查询容器日志
+    ///  查询单个容器日志
+        /// 
     /// </summary>
     public class GetLogsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询容器日志接口的Http 请求方法
+        ///  查询单个容器日志
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  查询容器日志接口的Http资源请求路径
+        ///  查询单个容器日志
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

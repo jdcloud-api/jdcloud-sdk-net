@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,20 +34,24 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  查询容器日志
+    ///  查询单个容器日志
+        ///         /// 
     /// </summary>
     public class GetLogsRequest : JdcloudRequest
     {
         ///<summary>
-        /// TailLines
+        /// 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
+        /// 
         ///</summary>
         public   int? TailLines{ get; set; }
         ///<summary>
-        /// SinceSeconds
+        /// 返回相对于当前时间之前sinceSeconds之内的日志。
+        /// 
         ///</summary>
         public   int? SinceSeconds{ get; set; }
         ///<summary>
-        /// LimitBytes
+        /// 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
+        /// 
         ///</summary>
         public   int? LimitBytes{ get; set; }
         ///<summary>

@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  查询资源的配额
+    ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        ///         /// 
     /// </summary>
     public class DescribeQuotaResult : JdcloudResult
     {

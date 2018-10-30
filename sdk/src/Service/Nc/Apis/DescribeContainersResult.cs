@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,7 +34,9 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  查询容器列表
+    ///  批量查询原生容器的详细信息&lt;br&gt;
+        ///         /// 此接口支持分页查询，默认每页20条。
+        ///         /// 
     /// </summary>
     public class DescribeContainersResult : JdcloudResult
     {

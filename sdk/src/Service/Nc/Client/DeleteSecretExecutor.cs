@@ -33,12 +33,14 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  删除 secret
+    ///  删除单个 secret
+        /// 
     /// </summary>
     public class DeleteSecretExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除 secret接口的Http 请求方法
+        ///  删除单个 secret
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  删除 secret接口的Http资源请求路径
+        ///  删除单个 secret
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  创建 secret
+    ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        ///         /// 
     /// </summary>
     public class CreateSecretResponse : JdcloudResponse<CreateSecretResult>
     {

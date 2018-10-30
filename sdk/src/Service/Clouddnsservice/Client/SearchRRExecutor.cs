@@ -33,12 +33,16 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  查询主域名的解析记录
+    ///  查询主域名的解析记录。&lt;br&gt;
+        /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+        /// 
     /// </summary>
     public class SearchRRExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询主域名的解析记录接口的Http 请求方法
+        ///  查询主域名的解析记录。&lt;br&gt;
+        /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  查询主域名的解析记录接口的Http资源请求路径
+        ///  查询主域名的解析记录。&lt;br&gt;
+        /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

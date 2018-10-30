@@ -34,12 +34,14 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  查询资源的配额
+    ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        ///         /// 
     /// </summary>
     public class DescribeQuotaRequest : JdcloudRequest
     {
         ///<summary>
-        /// 资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
+        /// resourceType - 资源类型，支持 [container, pod, secret]
+        /// 
         ///Required:true
         ///</summary>
         [Required]

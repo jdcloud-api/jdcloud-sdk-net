@@ -34,16 +34,18 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询云解析所有的基础解析线路
+    ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        ///         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
+        ///         /// 
     /// </summary>
     public class GetViewTreeRequest : JdcloudRequest
     {
         ///<summary>
-        /// 展示方式
+        /// 展示方式，暂时不使用
         ///</summary>
         public   int? LoadMode{ get; set; }
         ///<summary>
-        /// 套餐ID
+        /// 套餐ID，0-&gt;免费版 1-&gt;企业版 2-&gt;企业高级版
         ///Required:true
         ///</summary>
         [Required]
@@ -61,7 +63,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 域名ID
+        /// 域名ID，请使用getDomains接口获取。
         ///Required:true
         ///</summary>
         [Required]

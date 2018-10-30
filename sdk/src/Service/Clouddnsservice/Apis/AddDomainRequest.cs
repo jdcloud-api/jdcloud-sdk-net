@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///</summary>
         public   int? DomainId{ get; set; }
         ///<summary>
-        /// 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
+        /// 1-&gt;新购买、3-&gt;升级，收费套餐的域名必填
         ///</summary>
         public   int? BuyType{ get; set; }
         ///<summary>

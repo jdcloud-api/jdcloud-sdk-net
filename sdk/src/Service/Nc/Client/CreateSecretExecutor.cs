@@ -33,12 +33,14 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  创建 secret
+    ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        /// 
     /// </summary>
     public class CreateSecretExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建 secret接口的Http 请求方法
+        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  创建 secret接口的Http资源请求路径
+        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

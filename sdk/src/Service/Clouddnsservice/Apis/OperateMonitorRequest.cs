@@ -62,7 +62,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 域名ID
+        /// 域名ID，请使用getDomains接口获取。
         ///Required:true
         ///</summary>
         [Required]

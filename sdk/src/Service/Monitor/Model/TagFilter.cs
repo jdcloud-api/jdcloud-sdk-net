@@ -38,7 +38,7 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// Tag键
+        /// Key
         ///</summary>
         public string Key{ get; set; }
         ///<summary>

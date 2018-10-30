@@ -34,7 +34,9 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  查询secret列表
+    ///  查询 secret 列表。&lt;br&gt; 
+        ///         /// 此接口支持分页查询，默认每页20条。
+        ///         /// 
     /// </summary>
     public class DescribeSecretsResult : JdcloudResult
     {

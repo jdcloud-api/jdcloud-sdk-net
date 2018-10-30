@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,16 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  启动单个实例
+    ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 
     /// </summary>
     public class StartContainerExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  启动单个实例接口的Http 请求方法
+        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  启动单个实例接口的Http资源请求路径
+        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

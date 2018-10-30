@@ -577,7 +577,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.2.3.1",
+    "version": "0.2.5.1",
     "restore": {
       "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Service\\Nc\\JDCloudSDK.Nc.csproj",
       "projectName": "JDCloudSDK.Nc",

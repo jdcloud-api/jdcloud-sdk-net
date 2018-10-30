@@ -33,12 +33,16 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  查询用户名下的主域名列表
+    ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 
     /// </summary>
     public class GetDomainsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询用户名下的主域名列表接口的Http 请求方法
+        ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  查询用户名下的主域名列表接口的Http资源请求路径
+        ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

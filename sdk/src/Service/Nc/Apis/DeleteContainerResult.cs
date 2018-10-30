@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,10 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  删除单个实例
+    ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        ///         /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        ///         /// 只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        ///         /// 
     /// </summary>
     public class DeleteContainerResult : JdcloudResult
     {

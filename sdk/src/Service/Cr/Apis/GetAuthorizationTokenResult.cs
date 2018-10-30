@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
+ * Authentication
  * 用户认证相关接口
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Cr.Model;
 
 namespace  JDCloudSDK.Cr.Apis
 {
@@ -42,8 +41,16 @@ namespace  JDCloudSDK.Cr.Apis
     public class GetAuthorizationTokenResult : JdcloudResult
     {
         ///<summary>
-        /// AuthorizationData
+        /// AuthorizationToken
         ///</summary>
-        public   AuthorizationData AuthorizationData{ get; set; }
+        public   string AuthorizationToken{ get; set; }
+        ///<summary>
+        /// LoginCmdLine
+        ///</summary>
+        public   string LoginCmdLine{ get; set; }
+        ///<summary>
+        /// ExpiresAt
+        ///</summary>
+        public   string ExpiresAt{ get; set; }
     }
 }

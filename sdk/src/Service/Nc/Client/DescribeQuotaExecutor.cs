@@ -33,12 +33,14 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  查询资源的配额
+    ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        /// 
     /// </summary>
     public class DescribeQuotaExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询资源的配额接口的Http 请求方法
+        ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  查询资源的配额接口的Http资源请求路径
+        ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

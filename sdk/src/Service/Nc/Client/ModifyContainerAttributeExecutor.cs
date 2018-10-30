@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,14 @@ namespace JDCloudSDK.Nc.Client
 {
 
     /// <summary>
-    ///  修改容器属性
+    ///  修改容器的 名称 和 描述。
+        /// 
     /// </summary>
     public class ModifyContainerAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改容器属性接口的Http 请求方法
+        ///  修改容器的 名称 和 描述。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Nc.Client
             }
         }
         /// <summary>
-        ///  修改容器属性接口的Http资源请求路径
+        ///  修改容器的 名称 和 描述。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

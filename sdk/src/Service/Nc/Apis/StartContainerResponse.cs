@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 原生容器
- * 关于原生容器相前接口
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  启动单个实例
+    ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        ///         /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        ///         /// 
     /// </summary>
     public class StartContainerResponse : JdcloudResponse<StartContainerResult>
     {

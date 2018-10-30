@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         public List<int?> Time{ get; set; }
 
         ///<summary>
-        /// 数据的单位
+        /// 数据序列的单位
         ///</summary>
         public   string Unit{ get; set; }
         ///<summary>

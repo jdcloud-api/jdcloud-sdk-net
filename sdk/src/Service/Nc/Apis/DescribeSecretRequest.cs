@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Nc.Apis
 {
 
     /// <summary>
-    ///  查询 secret 详情
+    ///  查询单个 secret 详情
+        ///         /// 
     /// </summary>
     public class DescribeSecretRequest : JdcloudRequest
     {
