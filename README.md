@@ -97,3 +97,5 @@ namespace JDCloudSDK.ConsoleTest
 ```csharp
 vmClient.SetCustomHeader("x-jdcloud-security-token","xxx");
 ```
+
+<em>如果需要使用 `x-jdcloud-security-token` 等 Header认证方式请手动将 `JDCloudSDK.Core` 更新到`0.2.1`及以上版本</em>
