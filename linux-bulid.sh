@@ -1,8 +1,7 @@
 #!/bin/bash
 path=`pwd`
 dotnet --version
-if [ $? -ne 0 ]; then
-    echo "success"      
+if [ $? -ne 0 ]; then    
     export PATH=$PATH:$HOME/dotnet
     dotnet --version
     if [ $? -ne 0 ]; then
