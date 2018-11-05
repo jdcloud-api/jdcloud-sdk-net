@@ -131,6 +131,29 @@ namespace JDCloudSDK.Core.Utils
              
         }
 #else
+        /// <summary>
+        /// 全局公共HttpClient
+        /// </summary>
+        private static  HttpClient _httpClient ;
+
+        /// <summary>
+        /// 获取http client 客户端
+        /// </summary>
+        /// <param name="httpClientHandler">客户端配置信息</param>
+        /// <returns></returns>
+        public static HttpClient HttpClient(HttpClientHandler httpClientHandler)
+        {
+            if (httpClientHandler == null)
+            {
+                _httpClient = new HttpClient();
+                return _httpClient;
+            }
+            else {
+                _httpClient = new HttpClient(httpClientHandler);
+                return _httpClient;
+            }
+           
+        }
 
         /// <summary>
         /// Http 请求客户端
@@ -147,6 +170,7 @@ namespace JDCloudSDK.Core.Utils
         /// </returns>
         public async static Task<JDCloudSdkResult> ExecuteHttpRequest(HttpClient httpClient, string url, byte[] bodyContent, Dictionary<string, string> headers, string httpMethod)
         {
+            
             string result = null;
             try
             { 

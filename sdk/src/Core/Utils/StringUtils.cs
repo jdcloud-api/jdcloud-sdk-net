@@ -19,35 +19,7 @@ namespace JDCloudSDK.Core.Utils
         private const char CHAR_CARRIAGE_RETURN = '\r';
         private const char CHAR_FORM_FEED = '\f';
 
-        /// <summary>
-        /// 首字母转换为大写
-        /// </summary>
-        /// <param name="str">需要进行转换的字符串</param>
-        /// <returns>首字母转换为大写的结果</returns>
-        public static string StringFirstCharToUpper(this string str)
-        {
-#if NET35
-            if (string.IsNullOrEmpty(str)||string.IsNullOrEmpty(str.Trim()))
-
-#else
-            if (string.IsNullOrWhiteSpace(str))
-#endif
-            {
-                return null;
-            }
-            else if (str.Length == 1)
-            {
-                return str.ToUpper();
-            }
-            else
-            {
-                var firstChar = str[0];
-
-                str = $"{firstChar.ToString().ToUpper()}{str.Substring(1)}";
-                return str;
-            }
-
-        }
+       
 
         /// <summary>
         /// bytes 转换为 16进制字符串

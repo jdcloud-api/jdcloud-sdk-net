@@ -10,7 +10,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
+#if NET35
+using JDCloudSDK.Core.Utils;
+#else
 using System.Threading.Tasks;
+#endif
 
 namespace JDCloudSDK.Core.Client
 {
@@ -233,7 +237,7 @@ namespace JDCloudSDK.Core.Client
                 throw new ArgumentNullException("JdcloudClient not set.");
             }
 #if NET35
-            if (string.IsNullOrEmpty(v) || string.IsNullOrEmpty(v.Trim()))
+            if (v.IsNullOrWhiteSpace())
 #else
             if (string.IsNullOrWhiteSpace(v))
 #endif
@@ -241,7 +245,7 @@ namespace JDCloudSDK.Core.Client
                 v = JdcloudClient.Version;
             }
 #if NET35
-            if (string.IsNullOrEmpty(v) || string.IsNullOrEmpty(v.Trim()))
+            if (v.IsNullOrWhiteSpace())
 #else
             if (string.IsNullOrWhiteSpace(v))
 #endif
@@ -249,7 +253,7 @@ namespace JDCloudSDK.Core.Client
                 throw new ArgumentNullException("Version not set.");
             }
 #if NET35
-            if (string.IsNullOrEmpty(JdcloudClient.Endpoint) || string.IsNullOrEmpty(JdcloudClient.Endpoint.Trim()))
+            if (JdcloudClient.SDKEnvironment.Endpoint.IsNullOrWhiteSpace)
 #else
             if (string.IsNullOrWhiteSpace(JdcloudClient.SDKEnvironment.Endpoint))
 #endif
@@ -257,7 +261,7 @@ namespace JDCloudSDK.Core.Client
                 throw new ArgumentNullException("endpoint not set.");
             }
 #if NET35
-            if (string.IsNullOrEmpty(JdcloudClient.ServiceName) || string.IsNullOrEmpty(JdcloudClient.ServiceName.Trim()))
+            if (JdcloudClient.ServiceName.IsNullOrWhiteSpace())
 #else
             if (string.IsNullOrWhiteSpace(JdcloudClient.ServiceName))
 #endif
@@ -330,15 +334,7 @@ namespace JDCloudSDK.Core.Client
                 contentStr = contentStr.Replace(System.Environment.NewLine, "").Replace(" ", "");
             }
             return contentStr;
-        }
-
-        public static bool IsNullOrWhiteSpace(this string value)
-        {
-            if (value == null) return true;
-            return string.IsNullOrEmpty(value.Trim());
-        }
-
-
+        } 
         /// <summary>
         /// 获取 url 连接串参数
         /// </summary>

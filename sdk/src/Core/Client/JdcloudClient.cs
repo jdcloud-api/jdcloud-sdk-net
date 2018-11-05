@@ -1,6 +1,7 @@
 ﻿using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Common.Profile;
 using JDCloudSDK.Core.Http;
+using JDCloudSDK.Core.Utils;
 using System;
 using System.Collections.Generic;
 #if NET40 || NET35
@@ -47,12 +48,7 @@ namespace JDCloudSDK.Core.Client
         /// <summary>
         /// 客户端认证信息
         /// </summary>
-        public virtual   Credential Credential { get; set; }
-
-        /// <summary>
-        /// http请求头
-        /// </summary>
-        private readonly Dictionary<String, String> customHeader = new Dictionary<string, string>();
+        public virtual Credential Credential { get; set; }
 
 
         /// <summary>
@@ -63,9 +59,47 @@ namespace JDCloudSDK.Core.Client
 #if NET40 || NET35
 #else
         /// <summary>
+        /// 默认构造函数
+        /// </summary>
+        public JdcloudClient()
+        {
+            if (ClientProfile == null || ClientProfile.HttpProfile == null || !String.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy ) )
+            {
+                _httpClient = HttpClientUtil.HttpClient(null);
+            }
+            else
+            {
+                HttpClientHandler httpClientHandler = new HttpClientHandler();
+                httpClientHandler.UseProxy = true;
+                httpClientHandler.Proxy = new WebProxy(ClientProfile.HttpProfile.WebProxy);
+                _httpClient = HttpClientUtil.HttpClient(httpClientHandler);
+            }
+            
+        }
+
+        /// <summary>
+        /// 默认构造函数
+        /// </summary>
+        /// <param name="httpClientHandler">http客户端配置信息</param>
+        public JdcloudClient(HttpClientHandler httpClientHandler)
+        {
+            _httpClient = HttpClientUtil.HttpClient(httpClientHandler);
+        }
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="httpClient">http client 客户端</param>
+        public JdcloudClient(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+
+        
+        /// <summary>
         /// Api 请求 使用的HttpClient
         /// </summary>
-        private readonly static HttpClient _httpClient = new HttpClient();
+        private static HttpClient _httpClient;
 
         /// <summary>
         /// 获取调用客户端
@@ -78,7 +112,7 @@ namespace JDCloudSDK.Core.Client
                 {
                     _httpClient.Timeout = TimeSpan.FromSeconds(this.ClientProfile.HttpProfile.Timeout);
                     _httpClient.DefaultRequestHeaders.Connection.Add("keep-alive");
-                }
+                } 
                 return _httpClient;
             }
         }
@@ -92,17 +126,14 @@ namespace JDCloudSDK.Core.Client
         /// <param name="value">值</param>
         public void SetCustomHeader(String key, String value)
         {
-            this.customHeader.Add(key, value);
+            this.CustomHeader.Add(key, value);
         }
 
         /// <summary>
         /// 获取用户自定义头信息
         /// </summary>
         /// <returns>获取用户自定义的头信息</returns>
-        public Dictionary<String, String> CustomHeader
-        {
-            get { return this.customHeader; } 
-        }
+        public Dictionary<String, String> CustomHeader { get; } = new Dictionary<string, string>();
 
 
     }
