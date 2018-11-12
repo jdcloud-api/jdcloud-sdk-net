@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;net40;net45;net35</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Configurations>Debug;Release;</Configurations>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>京东云SDK C# core</Description>
     <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

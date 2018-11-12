@@ -15,7 +15,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v3.5",
         "dependencies": {
-          "JDCloudSDK.Core": "0.2.1",
+          "JDCloudSDK.Core": "0.2.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -25,7 +25,7 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.2.1": {
+      "JDCloudSDK.Core/0.2.2": {
         "type": "project",
         "framework": ".NETFramework,Version=v3.5",
         "dependencies": {
@@ -53,7 +53,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.0",
         "dependencies": {
-          "JDCloudSDK.Core": "0.2.1",
+          "JDCloudSDK.Core": "0.2.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -63,7 +63,7 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.2.1": {
+      "JDCloudSDK.Core/0.2.2": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.0",
         "dependencies": {
@@ -103,7 +103,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
         "dependencies": {
-          "JDCloudSDK.Core": "0.2.1",
+          "JDCloudSDK.Core": "0.2.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -113,7 +113,7 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.2.1": {
+      "JDCloudSDK.Core/0.2.2": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
         "dependencies": {
@@ -166,7 +166,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "JDCloudSDK.Core": "0.2.1",
+          "JDCloudSDK.Core": "0.2.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -176,7 +176,7 @@
           "bin/placeholder/JDCloudSDK.Charge.dll": {}
         }
       },
-      "JDCloudSDK.Core/0.2.1": {
+      "JDCloudSDK.Core/0.2.2": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -405,7 +405,7 @@
       "path": "../Charge/JDCloudSDK.Charge.csproj",
       "msbuildProject": "../Charge/JDCloudSDK.Charge.csproj"
     },
-    "JDCloudSDK.Core/0.2.1": {
+    "JDCloudSDK.Core/0.2.2": {
       "type": "project",
       "path": "../../Core/JDCloudSDK.Core.csproj",
       "msbuildProject": "../../Core/JDCloudSDK.Core.csproj"
@@ -414,22 +414,22 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v3.5": [
       "JDCloudSDK.Charge >= 0.3.0.1",
-      "JDCloudSDK.Core >= 0.2.1",
+      "JDCloudSDK.Core >= 0.2.2",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETFramework,Version=v4.0": [
       "JDCloudSDK.Charge >= 0.3.0.1",
-      "JDCloudSDK.Core >= 0.2.1",
+      "JDCloudSDK.Core >= 0.2.2",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETFramework,Version=v4.5": [
       "JDCloudSDK.Charge >= 0.3.0.1",
-      "JDCloudSDK.Core >= 0.2.1",
+      "JDCloudSDK.Core >= 0.2.2",
       "Newtonsoft.Json >= 11.0.2"
     ],
     ".NETStandard,Version=v2.0": [
       "JDCloudSDK.Charge >= 0.3.0.1",
-      "JDCloudSDK.Core >= 0.2.1",
+      "JDCloudSDK.Core >= 0.2.2",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 11.0.2"
     ]
