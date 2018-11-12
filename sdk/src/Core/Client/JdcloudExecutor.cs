@@ -459,7 +459,10 @@ namespace JDCloudSDK.Core.Client
                     StringBuilder paramStrBuilder = new StringBuilder();
                     foreach (var item in paramDicOrder)
                     {
-                        paramStrBuilder.Append("&").Append(item.Key).Append("=").Append(item.Value);
+                        string value = System.Web.HttpUtility.UrlEncode(item.Value, Encoding.GetEncoding(charset));
+                        Regex reg = new Regex(@"%[a-f0-9]{2}");
+                        value = reg.Replace(value, m => m.Value.ToUpperInvariant());
+                        paramStrBuilder.Append("&").Append(item.Key).Append("=").Append(value);
                     }
                     paramsStr = paramStrBuilder.ToString();
                 } 
