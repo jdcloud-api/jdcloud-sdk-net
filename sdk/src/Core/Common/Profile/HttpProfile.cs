@@ -1,5 +1,4 @@
-﻿using JDCloudSDK.Core.Http;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -26,7 +25,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// </summary>
         /// <param name="protocol">请求协议</param>
         /// <param name="WebProxy">代理服务器</param>
-        public HttpProfile(Protocol protocol,  string WebProxy = null)
+        public HttpProfile(string protocol,  string WebProxy = null)
         {
             this.Protocol = protocol;
             this.WebProxy = WebProxy;
@@ -66,7 +65,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// <param name="httpMethod">请求方法</param>
         /// <param name="contentType">请求body类型</param>
         /// <param name="webProxy">代理服务器</param>
-        public HttpProfile(Protocol protocol, int timeout, HttpMethod httpMethod, string contentType, string webProxy)
+        public HttpProfile(string protocol, int timeout, HttpMethod httpMethod, string contentType, string webProxy)
         {
             Protocol = protocol;
             Timeout = timeout;
@@ -78,7 +77,20 @@ namespace JDCloudSDK.Core.Common.Profile
         /// <summary>
         /// 请求协议
         /// </summary>
-        public Protocol Protocol { get; set; } = Protocol.HTTPS;
+        public string Protocol {
+            get {
+                switch (Protocol.ToUpper())
+                {
+                    case "HTTP":
+                        return "HTTP";
+                    default:
+                        return "HTTPS";
+                }
+            }
+            set {
+                Protocol = value;
+            }
+        }  
 
         /// <summary>
         /// 请求超时时间

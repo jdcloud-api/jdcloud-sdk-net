@@ -9,9 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Text.RegularExpressions;
-#if NET35
-using JDCloudSDK.Core.Utils;
+using System.Text.RegularExpressions; 
+#if NET35 
 #else
 using System.Threading.Tasks;
 #endif
@@ -37,6 +36,8 @@ namespace JDCloudSDK.Core.Client
         /// 进行正则匹配的 pattern
         /// </summary>
         private static string PATTERN = "\\{([a-zA-Z0-9-_]+)}";
+
+        private static string URL_ENCODE_PATTERN = @"%[a-f0-9]{2}";
 
         /// <summary>
         /// JdcloudClient 对象信息
@@ -99,20 +100,11 @@ namespace JDCloudSDK.Core.Client
                 StringBuilder host = new StringBuilder()
                   .Append(protocol)
                   .Append("://")
-                  .Append(endPoint);
-
-                //生成请求url 
-#if NET35
-                StringBuilder signingHost = new StringBuilder()
-                 .Append(protocol)
-                 .Append("://")
-                 .Append(string.IsNullOrEmpty(realEndPoint)|| string.IsNullOrEmpty(realEndPoint.Trim())? endPoint : realEndPoint);
-#else
+                  .Append(endPoint); 
                 StringBuilder signingHost = new StringBuilder()
                .Append(protocol)
                .Append("://")
-               .Append(string.IsNullOrWhiteSpace(realEndPoint) ? endPoint : realEndPoint);
-#endif
+               .Append(realEndPoint.IsNullOrWhiteSpace()? endPoint : realEndPoint); 
                 StringBuilder path = new StringBuilder()
                 .Append("/")
                 .Append(version)
@@ -125,13 +117,11 @@ namespace JDCloudSDK.Core.Client
                 byte[] bodyContent = null;
                 string contentStr = GetContent(request);
 
-#if NET35
-                if (!string.IsNullOrEmpty(contentStr)&& !string.IsNullOrEmpty(contentStr))
-#else
-                if (!string.IsNullOrWhiteSpace(contentStr))
-#endif
+ 
+                if (!contentStr.IsNullOrWhiteSpace())
+ 
                 {
-                    bodyContent = System.Text.Encoding.UTF8.GetBytes(contentStr);
+                    bodyContent = Encoding.UTF8.GetBytes(contentStr);
                 }
                 string url = host.ToString() + path.ToString() + paramsStr;
                 // 生成请求header
@@ -153,11 +143,9 @@ namespace JDCloudSDK.Core.Client
             /// <returns>替换后的url 信息</returns>
             public string ReplaceUrl(string httpUrl, JdcloudRequest request)
         {
-#if NET35
-            if (string.IsNullOrEmpty(httpUrl)||string.IsNullOrEmpty(httpUrl.Trim()))
-#else
-            if (string.IsNullOrWhiteSpace(httpUrl))
-#endif
+ 
+            if (httpUrl.IsNullOrWhiteSpace())
+ 
             {
                 return string.Empty;
             }
@@ -236,35 +224,25 @@ namespace JDCloudSDK.Core.Client
             {
                 throw new ArgumentNullException("JdcloudClient not set.");
             }
-#if NET35
+
             if (v.IsNullOrWhiteSpace())
-#else
-            if (string.IsNullOrWhiteSpace(v))
-#endif
             {
                 v = JdcloudClient.Version;
             }
-#if NET35
+
             if (v.IsNullOrWhiteSpace())
-#else
-            if (string.IsNullOrWhiteSpace(v))
-#endif
             {
                 throw new ArgumentNullException("Version not set.");
             }
-#if NET35
-            if (JdcloudClient.SDKEnvironment.Endpoint.IsNullOrWhiteSpace)
-#else
-            if (string.IsNullOrWhiteSpace(JdcloudClient.SDKEnvironment.Endpoint))
-#endif
+ 
+            if (JdcloudClient.SDKEnvironment.Endpoint.IsNullOrWhiteSpace())
+ 
             {
                 throw new ArgumentNullException("endpoint not set.");
             }
-#if NET35
+
             if (JdcloudClient.ServiceName.IsNullOrWhiteSpace())
-#else
-            if (string.IsNullOrWhiteSpace(JdcloudClient.ServiceName))
-#endif
+
             {
                 throw new ArgumentNullException("serviceName not set.");
             }
@@ -291,12 +269,9 @@ namespace JDCloudSDK.Core.Client
             if (propertyInfo == null)
             {
                 throw new Exception($"can not get the propertyInfo of {propertyName},please check.");
-            }
-#if NET40 || NET35
-            object value = propertyInfo.GetValue(request,null);
-#else
-            object value = propertyInfo.GetValue(request);
-#endif
+            } 
+            object value = CommonUtils.GetPropertyInfoValue(propertyInfo,request);
+ 
             if (value == null)
             {
                 throw new Exception($"field {propertyName} not set.");
@@ -325,16 +300,14 @@ namespace JDCloudSDK.Core.Client
                 return null;
             }
             string contentStr = JsonUtil.ObjectToJson(request);
-#if NET35
-            if (!string.IsNullOrEmpty(contentStr) && !string.IsNullOrEmpty(contentStr.Trim()))
-#else
-            if (!string.IsNullOrWhiteSpace(contentStr))
-#endif
+            if (!contentStr.IsNullOrWhiteSpace())
+
             {
-                contentStr = contentStr.Replace(System.Environment.NewLine, "").Replace(" ", "");
+                contentStr = contentStr.Replace(Environment.NewLine, "").Replace(" ", "");
             }
             return contentStr;
         } 
+
         /// <summary>
         /// 获取 url 连接串参数
         /// </summary>
@@ -365,15 +338,16 @@ namespace JDCloudSDK.Core.Client
                     StringBuilder paramStrBuilder = new StringBuilder();
                     foreach (var item in paramDicOrder)
                     {
+                        string value = System.Web.HttpUtility.UrlEncode(item.Value, Encoding.GetEncoding(CHARSET));
+                        Regex reg = new Regex(URL_ENCODE_PATTERN);
+                        value = reg.Replace(value, m => m.Value.ToUpperInvariant());
                         paramStrBuilder.Append("&").Append(item.Key).Append("=").Append(item.Value);
                     }
                     paramsStr = paramStrBuilder.ToString();
                 }
-#if NET35
-                if (!string.IsNullOrEmpty(paramsStr)&& !string.IsNullOrEmpty(paramsStr.Trim()))
-#else
-                if (!string.IsNullOrWhiteSpace(paramsStr))
-#endif
+ 
+                if (!paramsStr.IsNullOrWhiteSpace())
+ 
                 {
                     return "?" + paramsStr.Substring(1);
                 }
@@ -393,8 +367,7 @@ namespace JDCloudSDK.Core.Client
         /// <returns>query string</returns>
         private Dictionary<string, string> CreateParam(JToken jObject, string superName = "")
         {
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            // StringBuilder builder = new StringBuilder();
+            Dictionary<string, string> dic = new Dictionary<string, string>(); 
             if (jObject.GetType() == typeof(JArray))
             {
                 var arrayParamDic = ArrayParam(jObject, superName);
@@ -404,8 +377,7 @@ namespace JDCloudSDK.Core.Client
                     {
                         dic.Add(item.Key, item.Value);
                     }
-                }
-
+                } 
             }
             else
             {
@@ -488,15 +460,9 @@ namespace JDCloudSDK.Core.Client
                 string pname = CreateParamKey(superName, name);
                 if (valueJObject.GetType() == typeof(JValue))
                 {
-#if NET35
-                    if (!string.IsNullOrEmpty(valueJObject.ToString())&& !string.IsNullOrEmpty(valueJObject.ToString().Trim()))
-#else
-                    if (!string.IsNullOrWhiteSpace(valueJObject.ToString()))
-#endif
+                    if (valueJObject!=null && !valueJObject.ToString().IsNullOrWhiteSpace())
                     {
-
-                        // pname 
-
+                        
                         string encodeStr = Regex.Replace(valueJObject.ToString(), "^\"|\"$", "");
                         string value = System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(CHARSET));
                         dic.Add(pname, value);
@@ -525,20 +491,11 @@ namespace JDCloudSDK.Core.Client
         /// <param name="name">当前字段名称</param>
         /// <returns>query param 的 key值</returns>
         private string CreateParamKey(string superName, string name)
-        {
-
-#if NET35
-            if (string.IsNullOrEmpty(superName)|| string.IsNullOrEmpty(superName.Trim()))
+        { 
+            if (superName.IsNullOrWhiteSpace())
             {
                 return name;
-            }
-#else
-
-            if (string.IsNullOrWhiteSpace(superName))
-            {
-                return name;
-            }
-#endif
+            } 
             return $"{superName}.{name}";
         }
     }

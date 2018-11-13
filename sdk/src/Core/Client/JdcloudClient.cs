@@ -56,64 +56,58 @@ namespace JDCloudSDK.Core.Client
         /// </summary>
         public virtual SDKEnvironment SDKEnvironment { get; set; }
 
-#if NET40 || NET35
-#else
-        /// <summary>
-        /// 默认构造函数
-        /// </summary>
-        public JdcloudClient()
-        {
-            if (ClientProfile == null || ClientProfile.HttpProfile == null || !String.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy ) )
-            {
-                _httpClient = HttpClientUtil.HttpClient(null);
-            }
-            else
-            {
-                HttpClientHandler httpClientHandler = new HttpClientHandler();
-                httpClientHandler.UseProxy = true;
-                httpClientHandler.Proxy = new WebProxy(ClientProfile.HttpProfile.WebProxy);
-                _httpClient = HttpClientUtil.HttpClient(httpClientHandler);
-            }
-            
-        }
-
-        /// <summary>
-        /// 默认构造函数
-        /// </summary>
-        /// <param name="httpClientHandler">http客户端配置信息</param>
-        public JdcloudClient(HttpClientHandler httpClientHandler)
-        {
-            _httpClient = HttpClientUtil.HttpClient(httpClientHandler);
-        }
-
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="httpClient">http client 客户端</param>
-        public JdcloudClient(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
-
         
+#if NET40 || NET35
+#else 
         /// <summary>
         /// Api 请求 使用的HttpClient
         /// </summary>
-        private static HttpClient _httpClient;
+        public  HttpClient HttpClient;
+
+        /// <summary>
+        /// http客户端配置信息
+        /// </summary>
+        public HttpClientHandler httpClientHandler;
 
         /// <summary>
         /// 获取调用客户端
         /// </summary>
-        public HttpClient HttpClient
+        public HttpClient RequestHttpClient
         {
             get
             {
-                if (_httpClient.Timeout == null)
+                if (this.HttpClient == null)
                 {
-                    _httpClient.Timeout = TimeSpan.FromSeconds(this.ClientProfile.HttpProfile.Timeout);
-                    _httpClient.DefaultRequestHeaders.Connection.Add("keep-alive");
+                    if (httpClientHandler == null)
+                    {
+                        if (ClientProfile == null || ClientProfile.HttpProfile == null || !String.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy))
+                        {
+                            this.HttpClient = HttpClientUtil.HttpClient(null);
+                        }
+                        else
+                        {
+                            HttpClientHandler httpClientHandler = new HttpClientHandler();
+                            httpClientHandler.UseProxy = true;
+                            httpClientHandler.Proxy = new WebProxy(ClientProfile.HttpProfile.WebProxy);
+                            this.HttpClient = HttpClientUtil.HttpClient(httpClientHandler);
+                        }
+                    }
+                    else
+                    {
+                        this.HttpClient = HttpClientUtil.HttpClient(httpClientHandler);
+                    }
+
+                }
+                else
+                {
+                    this.SDKEnvironment.Endpoint = this.HttpClient.BaseAddress.ToString();
+                }
+                if (this.HttpClient.Timeout == null)
+                {
+                    this.HttpClient.Timeout = TimeSpan.FromSeconds(this.ClientProfile.HttpProfile.Timeout);
+                    this.HttpClient.DefaultRequestHeaders.Connection.Add("keep-alive");
                 } 
-                return _httpClient;
+                return this.HttpClient;
             }
         }
 

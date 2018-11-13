@@ -10,7 +10,7 @@ namespace JDCloudSDK.Core.Utils
     public static class StringExtensions
     {
 
-#if NET35
+
         /// <summary>
         /// .net 3.5 IsNullOrWhiteSpace method
         /// </summary>
@@ -18,14 +18,17 @@ namespace JDCloudSDK.Core.Utils
         /// <returns></returns>
         public static bool IsNullOrWhiteSpace(this string value)
         {
+#if NET35
             if (value == null)
             {
                 return true;
             }
 
             return string.IsNullOrEmpty(value.Trim());
-        }
 #endif
+            return string.IsNullOrWhiteSpace(value);
+        }
+
 
 
         /// <summary>

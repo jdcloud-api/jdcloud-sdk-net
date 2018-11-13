@@ -12,8 +12,8 @@ namespace JDCloudSDK.Core.Common.Profile
         /// <summary>
         /// 构造函数
         /// </summary>
-        public ClientProfile()
-        {
+        public ClientProfile():this(SIGN_SHA256,new HttpProfile())
+        { 
         }
 
         /// <summary>
