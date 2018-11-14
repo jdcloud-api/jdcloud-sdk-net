@@ -8,12 +8,12 @@ namespace JDCloudSDK.Core.Client
     /// <summary>
     /// 构造最后请求的详细信息
     /// </summary>
-    public class SDKFullHttpRequest
+    public class RequestModel
     {
         /// <summary>
         /// 请求头信息
         /// </summary>
-        public Dictionary<String, List<String>> Header { get; set; } = new Dictionary<string, List<string>>();
+        public Dictionary<string, List<string>> Header { get; set; } = new Dictionary<string, List<string>>();
 
         /// <summary>
         /// 资源路径
