@@ -38,6 +38,39 @@ namespace JDCloudSDK.Core.Client
 
 
         /// <summary>
+        /// 请求body 类型
+        /// </summary>
+        public string ContentType { get; set; }
+
+        /// <summary>
+        /// 重写 请求日期
+        /// </summary>
+        public DateTime? OverrddenDate { get; set; }
+
+        /// <summary>
+        /// 请求url
+        /// </summary>
+        public Uri Uri { get; set; }
+
+        /// <summary>
+        /// 签名方法
+        /// </summary>
+        public string SignType { get; set; }
+
+
+        /// <summary>
+        /// 请求服务名称
+        /// </summary>
+        public string ServiceName { get; set; }
+
+        /// <summary>
+        /// 请求区域名称
+        /// </summary>
+        public string RegionName { get; set; }
+
+
+
+        /// <summary>
         /// 添加请求头
         /// </summary>
         /// <param name="key">请求头的key</param>

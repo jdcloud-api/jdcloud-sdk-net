@@ -1,4 +1,5 @@
 ﻿using JDCloudSDK.Core.Annotation;
+using JDCloudSDK.Core.Common;
 using JDCloudSDK.Core.ServiceModel;
 using JDCloudSDK.Core.Utils;
 using Newtonsoft.Json;
@@ -22,22 +23,7 @@ namespace JDCloudSDK.Core.Client
     /// </summary>
     public abstract class JdcloudExecutor
     {
-        /// <summary>
-        /// 时间格式化字符串信息
-        /// </summary>
-        private const string DATA_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
-
-        /// <summary>
-        /// 默认的字符编码类型  "UTF-8"
-        /// </summary>
-        private static string CHARSET = "UTF-8";
-
-        /// <summary>
-        /// 进行正则匹配的 pattern
-        /// </summary>
-        private static string PATTERN = "\\{([a-zA-Z0-9-_]+)}";
-
-        private static string URL_ENCODE_PATTERN = @"%[a-f0-9]{2}";
+        
 
         /// <summary>
         /// JdcloudClient 对象信息
@@ -153,7 +139,7 @@ namespace JDCloudSDK.Core.Client
             {
                 return httpUrl;
             }
-            var matchs = Regex.Matches(httpUrl, PATTERN);
+            var matchs = Regex.Matches(httpUrl, ParameterConstant.PATTERN);
             if (matchs != null && matchs.Count > 0)
             {
                 int i = 1;
@@ -338,9 +324,7 @@ namespace JDCloudSDK.Core.Client
                     StringBuilder paramStrBuilder = new StringBuilder();
                     foreach (var item in paramDicOrder)
                     {
-                        string value = System.Web.HttpUtility.UrlEncode(item.Value, Encoding.GetEncoding(CHARSET));
-                        Regex reg = new Regex(URL_ENCODE_PATTERN);
-                        value = reg.Replace(value, m => m.Value.ToUpperInvariant());
+                        string value = HttpClientUtil.UrlEncode(item.Value,false); 
                         paramStrBuilder.Append("&").Append(item.Key).Append("=").Append(item.Value);
                     }
                     paramsStr = paramStrBuilder.ToString();
@@ -420,7 +404,7 @@ namespace JDCloudSDK.Core.Client
                         stringBuilder.Append(".");
                         stringBuilder.Append(i + 1);
                         string encodeStr = Regex.Replace(jArrayObject[i].ToString(), "^\"|\"$", "");
-                        string value = System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(CHARSET));
+                        string value = HttpClientUtil.UrlEncode(encodeStr,false);
                         dic.Add(stringBuilder.ToString(), value);
                     }
                     else
@@ -464,7 +448,7 @@ namespace JDCloudSDK.Core.Client
                     {
                         
                         string encodeStr = Regex.Replace(valueJObject.ToString(), "^\"|\"$", "");
-                        string value = System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(CHARSET));
+                        string value = HttpClientUtil.UrlEncode(encodeStr, false);
                         dic.Add(pname, value);
                     }
                 }

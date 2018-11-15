@@ -12,7 +12,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// <summary>
         /// 构造函数
         /// </summary>
-        public ClientProfile():this(SIGN_SHA256,new HttpProfile())
+        public ClientProfile():this(ParameterConstant.SIGN_SHA256,new HttpProfile())
         { 
         }
 
@@ -31,7 +31,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// 构造方法
         /// </summary>
         /// <param name="httpProfile"></param>
-        public ClientProfile(HttpProfile httpProfile) : this(SIGN_SHA256, httpProfile)
+        public ClientProfile(HttpProfile httpProfile) : this(ParameterConstant.SIGN_SHA256, httpProfile)
         {
         }
 
@@ -53,16 +53,8 @@ namespace JDCloudSDK.Core.Common.Profile
         /// <summary>
         /// 签名方法 目前仅支持 HmacSHA256
         /// </summary>
-        public string SignMethod { get; set; } = SIGN_SHA256;
+        public string SignMethod { get; set; } = ParameterConstant.SIGN_SHA256;
 
-        /// <summary>
-        /// HmacSHA1签名方法
-        /// </summary>
-        public const string SIGN_SHA1 = "HmacSHA1";
-
-        /// <summary>
-        /// HmacSHA256签名方法
-        /// </summary>
-        public static string SIGN_SHA256 = "HmacSHA256";
+       
     }
 }

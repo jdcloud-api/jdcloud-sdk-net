@@ -1,6 +1,5 @@
 ﻿using JDCloudSDK.Core.Auth;
-using JDCloudSDK.Core.Common.Profile;
-using JDCloudSDK.Core.Http;
+using JDCloudSDK.Core.Common.Profile; 
 using JDCloudSDK.Core.Utils;
 using System;
 using System.Collections.Generic;
@@ -35,10 +34,7 @@ namespace JDCloudSDK.Core.Client
         public abstract string Version { get; }
 
 
-        /// <summary>
-        /// Api 请求 content type 定义
-        /// </summary>
-        public const string MIME_JSON = "application/json";
+
 
         /// <summary>
         /// 客户端配置
