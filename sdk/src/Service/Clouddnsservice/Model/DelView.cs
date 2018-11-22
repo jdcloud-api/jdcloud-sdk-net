@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Clouddnsservice.Model
 {
@@ -39,19 +40,27 @@ namespace JDCloudSDK.Clouddnsservice.Model
 
         ///<summary>
         /// 域名ID
+        ///Required:true
         ///</summary>
-        public int? DomainId{ get; set; }
+        [Required]
+        public int DomainId{ get; set; }
         ///<summary>
         /// 主域名
+        ///Required:true
         ///</summary>
+        [Required]
         public string DomainName{ get; set; }
         ///<summary>
         /// 自定义线路名称, 最多64个字符
+        ///Required:true
         ///</summary>
+        [Required]
         public string ViewName{ get; set; }
         ///<summary>
         /// 自定义线路ID
+        ///Required:true
         ///</summary>
+        [Required]
         public string ViewId{ get; set; }
     }
 }

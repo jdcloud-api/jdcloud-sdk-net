@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云数据库RDS
- * 目前RDS OpenAPI支持云数据库SQL Server，可以通过OpenAPI实现数据库管理，账号管理，备份管理，单库上云等功能，后续将支持云数据库MySQL
+ * 目前RDS OpenAPI支持云数据库SQL Server、MySQL、PostgreSQL
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Rds.Client
 {
     /// <summary>
     ///  云数据库RDS
-    ///  目前RDS OpenAPI支持云数据库SQL Server，可以通过OpenAPI实现数据库管理，账号管理，备份管理，单库上云等功能，后续将支持云数据库MySQL
+    ///  目前RDS OpenAPI支持云数据库SQL Server、MySQL、PostgreSQL
     ///  Rds Api 客户端
     ///</summary>
     public class RdsClient : JdcloudClient
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Rds.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.6
+        ///  版本号 1.0.7
         ///</summary>
-        public const string ClientVersion = "1.0.6";
+        public const string ClientVersion = "1.0.7";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -385,25 +385,6 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request) {
-            return  new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
-            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -419,6 +400,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQueryPerformanceResponse> DescribeQueryPerformance(DescribeQueryPerformanceRequest request) {
             return await new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request) {
+            return  new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
+            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -575,6 +575,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建一个跨地域备份同步服务。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateBackupSynchronicityResponse CreateBackupSynchronicity(CreateBackupSynchronicityRequest request) {
+            return  new CreateBackupSynchronicityExecutor().Client(this).Execute<CreateBackupSynchronicityResponse, CreateBackupSynchronicityResult, CreateBackupSynchronicityRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个跨地域备份同步服务。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateBackupSynchronicityResponse> CreateBackupSynchronicity(CreateBackupSynchronicityRequest request) {
+            return await new CreateBackupSynchronicityExecutor().Client(this).Execute<CreateBackupSynchronicityResponse, CreateBackupSynchronicityResult, CreateBackupSynchronicityRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -594,25 +613,6 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
-            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
-            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -628,6 +628,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
             return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
+            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看该RDS实例下所有备份的详细信息，返回的备份列表按照备份开始时间（backupStartTime）降序排列。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
+            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -689,6 +708,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询跨地域备份同步服务列表。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupSynchronicitiesResponse DescribeBackupSynchronicities(DescribeBackupSynchronicitiesRequest request) {
+            return  new DescribeBackupSynchronicitiesExecutor().Client(this).Execute<DescribeBackupSynchronicitiesResponse, DescribeBackupSynchronicitiesResult, DescribeBackupSynchronicitiesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询跨地域备份同步服务列表。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupSynchronicitiesResponse> DescribeBackupSynchronicities(DescribeBackupSynchronicitiesRequest request) {
+            return await new DescribeBackupSynchronicitiesExecutor().Client(this).Execute<DescribeBackupSynchronicitiesResponse, DescribeBackupSynchronicitiesResult, DescribeBackupSynchronicitiesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  对RDS实例进行主备切换。&lt;br&gt;注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -704,6 +742,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<FailoverInstanceResponse> FailoverInstance(FailoverInstanceRequest request) {
             return await new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除一个跨地域备份同步服务。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBackupSynchronicityResponse DeleteBackupSynchronicity(DeleteBackupSynchronicityRequest request) {
+            return  new DeleteBackupSynchronicityExecutor().Client(this).Execute<DeleteBackupSynchronicityResponse, DeleteBackupSynchronicityResult, DeleteBackupSynchronicityRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除一个跨地域备份同步服务。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBackupSynchronicityResponse> DeleteBackupSynchronicity(DeleteBackupSynchronicityRequest request) {
+            return await new DeleteBackupSynchronicityExecutor().Client(this).Execute<DeleteBackupSynchronicityResponse, DeleteBackupSynchronicityResult, DeleteBackupSynchronicityRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -799,6 +856,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
             return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  仅支持MySQL实例开启数据库审计
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableAuditResponse EnableAudit(EnableAuditRequest request) {
+            return  new EnableAuditExecutor().Client(this).Execute<EnableAuditResponse, EnableAuditResult, EnableAuditRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  仅支持MySQL实例开启数据库审计
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableAuditResponse> EnableAudit(EnableAuditRequest request) {
+            return await new EnableAuditExecutor().Client(this).Execute<EnableAuditResponse, EnableAuditResult, EnableAuditRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -955,6 +1031,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  仅支持MySQL实例关闭数据库审计
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableAuditResponse DisableAudit(DisableAuditRequest request) {
+            return  new DisableAuditExecutor().Client(this).Execute<DisableAuditResponse, DisableAuditResult, DisableAuditRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  仅支持MySQL实例关闭数据库审计
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableAuditResponse> DisableAudit(DisableAuditRequest request) {
+            return await new DisableAuditExecutor().Client(this).Execute<DisableAuditResponse, DisableAuditResult, DisableAuditRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  从备份中恢复单个数据库，支持从其他实例（但必须是同一个账号下的实例）备份中恢复。例如可以从生产环境的数据库实例的备份恢复到测试环境的数据库中。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1008,6 +1103,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest request) {
             return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  仅支持查看MySQL实例的审计内容
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAuditResultResponse DescribeAuditResult(DescribeAuditResultRequest request) {
+            return  new DescribeAuditResultExecutor().Client(this).Execute<DescribeAuditResultResponse, DescribeAuditResultResult, DescribeAuditResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  仅支持查看MySQL实例的审计内容
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAuditResultResponse> DescribeAuditResult(DescribeAuditResultRequest request) {
+            return await new DescribeAuditResultExecutor().Client(this).Execute<DescribeAuditResultResponse, DescribeAuditResultResult, DescribeAuditResultRequest>(request);
         }
 #endif
 #if NET40||NET35

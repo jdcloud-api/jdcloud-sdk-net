@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ias.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.6
+        ///  版本号 1.0.7
         ///</summary>
-        public const string ClientVersion = "1.0.6";
+        public const string ClientVersion = "1.0.7";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Ias.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  创建app
+        ///  创建应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Ias.Client
         }
 #else
         /// <summary>
-        ///  创建app
+        ///  创建应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,26 @@ namespace JDCloudSDK.Ias.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  更新app
+        ///  运营后台获取应用详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AppDetailResponse AppDetail(AppDetailRequest request) {
+            return  new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  运营后台获取应用详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AppDetailResponse> AppDetail(AppDetailRequest request) {
+            return await new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新应用（只传需要变更的参数，不传的参数不会更新）
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +185,7 @@ namespace JDCloudSDK.Ias.Client
         }
 #else
         /// <summary>
-        ///  更新app
+        ///  更新应用（只传需要变更的参数，不传的参数不会更新）
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +195,7 @@ namespace JDCloudSDK.Ias.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取主账号下所有应用
+        ///  获取账户下所有应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,12 +204,50 @@ namespace JDCloudSDK.Ias.Client
         }
 #else
         /// <summary>
-        ///  获取主账号下所有应用
+        ///  获取账户下所有应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAppsResponse> GetApps(GetAppsRequest request) {
             return await new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  运营后台查询app
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AppsResponse Apps(AppsRequest request) {
+            return  new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  运营后台查询app
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AppsResponse> Apps(AppsRequest request) {
+            return await new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  运营后台获取应用状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StateResponse State(StateRequest request) {
+            return  new StateExecutor().Client(this).Execute<StateResponse, StateResult, StateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  运营后台获取应用状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StateResponse> State(StateRequest request) {
+            return await new StateExecutor().Client(this).Execute<StateResponse, StateResult, StateRequest>(request);
         }
 #endif
 #if NET40||NET35

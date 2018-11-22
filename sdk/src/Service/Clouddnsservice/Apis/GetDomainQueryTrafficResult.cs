@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///<summary>
         /// Time
         ///</summary>
-        public List<int?> Time{ get; set; }
+        public List<long?> Time{ get; set; }
 
         ///<summary>
         /// 数据序列的单位

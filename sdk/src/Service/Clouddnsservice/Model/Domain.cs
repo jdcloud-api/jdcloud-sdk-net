@@ -46,13 +46,13 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public string DomainName{ get; set; }
         ///<summary>
-        /// 创建时间，格式Unix timestamp
+        /// 创建时间，格式Unix timestamp，时间单位：毫秒
         ///</summary>
-        public int? CreateTime{ get; set; }
+        public long? CreateTime{ get; set; }
         ///<summary>
-        /// 过期时间，格式Unix timestamp
+        /// 过期时间，格式Unix timestamp，时间单位：毫秒
         ///</summary>
-        public int? ExpirationDate{ get; set; }
+        public long? ExpirationDate{ get; set; }
         ///<summary>
         /// 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
         ///</summary>

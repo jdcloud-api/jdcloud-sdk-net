@@ -122,5 +122,13 @@ namespace JDCloudSDK.Rds.Model
         /// 计费配置
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
+        ///<summary>
+        /// 高可用集群中主节点的信息&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public DBInstanceNode PrimaryNode{ get; set; }
+        ///<summary>
+        /// 高可用集群中从节点的信息&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public DBInstanceNode SecondaryNode{ get; set; }
     }
 }

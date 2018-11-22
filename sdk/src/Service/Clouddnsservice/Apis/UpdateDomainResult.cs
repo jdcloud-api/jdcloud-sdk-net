@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Clouddnsservice.Model;
 
 namespace  JDCloudSDK.Clouddnsservice.Apis
 {
@@ -38,9 +37,5 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     /// </summary>
     public class UpdateDomainResult : JdcloudResult
     {
-        ///<summary>
-        /// 修改后的域名结构
-        ///</summary>
-        public   Domain UpdateDomain{ get; set; }
     }
 }

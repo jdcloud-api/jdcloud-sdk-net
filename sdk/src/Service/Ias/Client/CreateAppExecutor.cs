@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ias.Client
 {
 
     /// <summary>
-    ///  创建app
+    ///  创建应用
     /// </summary>
     public class CreateAppExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建app接口的Http 请求方法
+        ///  创建应用接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ias.Client
             }
         }
         /// <summary>
-        ///  创建app接口的Http资源请求路径
+        ///  创建应用接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

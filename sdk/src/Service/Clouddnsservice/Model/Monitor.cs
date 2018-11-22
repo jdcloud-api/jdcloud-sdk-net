@@ -110,7 +110,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public int? MonitorEnable{ get; set; }
         ///<summary>
-        /// 监控频率，单位s
+        /// 监控频率，单位秒
         ///</summary>
         public int? MonitorFreq{ get; set; }
         ///<summary>

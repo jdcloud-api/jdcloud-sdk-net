@@ -50,6 +50,10 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string CharacterSetName{ get; set; }
         ///<summary>
+        /// 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public string CreateTime{ get; set; }
+        ///<summary>
         /// 该数据库相关账户权限列表
         ///</summary>
         public List<DBAccessPrivilege> AccessPrivilege{ get; set; }

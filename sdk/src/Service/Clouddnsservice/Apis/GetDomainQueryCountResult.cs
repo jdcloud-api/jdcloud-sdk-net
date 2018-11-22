@@ -40,12 +40,12 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///<summary>
         /// Time
         ///</summary>
-        public List<int?> Time{ get; set; }
+        public List<long?> Time{ get; set; }
 
         ///<summary>
         /// Traffic
         ///</summary>
-        public List<int?> Traffic{ get; set; }
+        public List<long?> Traffic{ get; set; }
 
     }
 }

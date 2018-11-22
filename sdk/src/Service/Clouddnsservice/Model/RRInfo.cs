@@ -92,6 +92,6 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///<summary>
         /// 解析记录更新的时间
         ///</summary>
-        public int? UpdateTime{ get; set; }
+        public long? UpdateTime{ get; set; }
     }
 }

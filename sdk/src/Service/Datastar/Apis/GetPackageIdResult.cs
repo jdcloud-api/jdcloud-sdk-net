@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Datastar.Apis
 {
 
     /// <summary>
-    ///  根据设备ID查询人群包ID
+    ///  根据设备ID获取是否有匹配的人群包
     /// </summary>
     public class GetPackageIdResult : JdcloudResult
     {
@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Datastar.Apis
         ///</summary>
         public   string Message{ get; set; }
         ///<summary>
-        /// Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
+        /// Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为品牌编码，表示匹配上，没在返回结果中的设备id，表示没有匹配上
         ///</summary>
         public   string Data{ get; set; }
     }

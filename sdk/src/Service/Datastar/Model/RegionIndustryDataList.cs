@@ -38,7 +38,7 @@ namespace JDCloudSDK.Datastar.Model
     {
 
         ///<summary>
-        /// 区域
+        /// 查询结果的数组类型
         ///</summary>
         public List<RegionIndustryData> DataList{ get; set; }
     }

@@ -86,6 +86,10 @@ namespace JDCloudSDK.Rds.Model
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
+        /// 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
+        ///</summary>
+        public string ParameterGroup{ get; set; }
+        ///<summary>
         /// 计费规格，包括计费类型，计费周期等
         ///Required:true
         ///</summary>

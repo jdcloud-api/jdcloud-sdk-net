@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ias.Client
 {
 
     /// <summary>
-    ///  获取主账号下所有应用
+    ///  获取账户下所有应用
     /// </summary>
     public class GetAppsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  获取主账号下所有应用接口的Http 请求方法
+        ///  获取账户下所有应用接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ias.Client
             }
         }
         /// <summary>
-        ///  获取主账号下所有应用接口的Http资源请求路径
+        ///  获取账户下所有应用接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

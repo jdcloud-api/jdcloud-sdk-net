@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ias.Apis
 {
 
     /// <summary>
-    ///  获取主账号下所有应用
+    ///  获取账户下所有应用
     /// </summary>
     public class GetAppsResponse : JdcloudResponse<GetAppsResult>
     {

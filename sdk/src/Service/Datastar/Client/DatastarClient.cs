@@ -89,9 +89,9 @@ namespace JDCloudSDK.Datastar.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.6
+        ///  版本号 1.0.7
         ///</summary>
-        public const string ClientVersion = "1.0.6";
+        public const string ClientVersion = "1.0.7";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,7 +138,45 @@ namespace JDCloudSDK.Datastar.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  根据设备ID查询人群包ID
+        ///  创建多级筛选
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateResponse Create(CreateRequest request) {
+            return  new CreateExecutor().Client(this).Execute<CreateResponse, CreateResult, CreateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建多级筛选
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateResponse> Create(CreateRequest request) {
+            return await new CreateExecutor().Client(this).Execute<CreateResponse, CreateResult, CreateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  多级筛选结果查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetResultResponse GetResult(GetResultRequest request) {
+            return  new GetResultExecutor().Client(this).Execute<GetResultResponse, GetResultResult, GetResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  多级筛选结果查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetResultResponse> GetResult(GetResultRequest request) {
+            return await new GetResultExecutor().Client(this).Execute<GetResultResponse, GetResultResult, GetResultRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据设备ID获取是否有匹配的人群包
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +185,7 @@ namespace JDCloudSDK.Datastar.Client
         }
 #else
         /// <summary>
-        ///  根据设备ID查询人群包ID
+        ///  根据设备ID获取是否有匹配的人群包
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

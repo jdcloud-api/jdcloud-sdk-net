@@ -33,100 +33,100 @@ namespace  JDCloudSDK.Ias.Apis
 {
 
     /// <summary>
-    ///  创建app
+    ///  创建应用
     /// </summary>
     public class CreateAppResult : JdcloudResult
     {
         ///<summary>
-        /// 应用
+        /// 应用ID，由京东云分配的16位数字ID
         ///</summary>
         public   string ClientId{ get; set; }
         ///<summary>
-        /// 应用名
+        /// clientName参数值
         ///</summary>
         public   string ClientName{ get; set; }
         ///<summary>
-        /// tokenEndpointAuthMethod
+        /// tokenEndpointAuthMethod参数值
         ///</summary>
         public   string TokenEndpointAuthMethod{ get; set; }
         ///<summary>
-        /// grantTypes
+        /// grantTypes参数值
         ///</summary>
         public   string GrantTypes{ get; set; }
         ///<summary>
-        /// responseTypes
+        /// 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
         ///</summary>
         public   string ResponseTypes{ get; set; }
         ///<summary>
-        /// redirectUris
+        /// redirectUris参数值
         ///</summary>
         public   string RedirectUris{ get; set; }
         ///<summary>
-        /// clientUri
+        /// clientUri参数值
         ///</summary>
         public   string ClientUri{ get; set; }
         ///<summary>
-        /// logoUri
+        /// logoUri参数值
         ///</summary>
         public   string LogoUri{ get; set; }
         ///<summary>
-        /// tosUri
+        /// tosUri参数值
         ///</summary>
         public   string TosUri{ get; set; }
         ///<summary>
-        /// policyUri
+        /// policyUri参数值
         ///</summary>
         public   string PolicyUri{ get; set; }
         ///<summary>
-        /// scope
+        /// scope参数值
         ///</summary>
         public   string Scope{ get; set; }
         ///<summary>
-        /// jwksUri
+        /// jwksUri参数值
         ///</summary>
         public   string JwksUri{ get; set; }
         ///<summary>
-        /// jwks
+        /// jwks参数值
         ///</summary>
         public   string Jwks{ get; set; }
         ///<summary>
-        /// contacts
+        /// contacts参数值
         ///</summary>
         public   string Contacts{ get; set; }
         ///<summary>
-        /// extension
+        /// extension参数值
         ///</summary>
         public   string Extension{ get; set; }
         ///<summary>
-        /// accessTokenValiditySeconds
+        /// accessTokenValiditySeconds参数值
         ///</summary>
         public   int? AccessTokenValiditySeconds{ get; set; }
         ///<summary>
-        /// refreshTokenValiditySeconds
+        /// refreshTokenValiditySeconds参数值
         ///</summary>
         public   int? RefreshTokenValiditySeconds{ get; set; }
         ///<summary>
-        /// multiTenant
+        /// multiTenant参数值
         ///</summary>
         public   bool MultiTenant{ get; set; }
         ///<summary>
-        /// secretUpdateTime
+        /// secretUpdateTime参数值
         ///</summary>
         public   long? SecretUpdateTime{ get; set; }
         ///<summary>
-        /// updateTime
+        /// updateTime参数值
         ///</summary>
         public   long? UpdateTime{ get; set; }
         ///<summary>
-        /// createTime
+        /// createTime参数值
         ///</summary>
         public   long? CreateTime{ get; set; }
         ///<summary>
-        /// account
+        /// 创建应用的账户用户名
         ///</summary>
         public   string Account{ get; set; }
         ///<summary>
-        /// userType
+        /// userType参数值
         ///</summary>
         public   string UserType{ get; set; }
     }

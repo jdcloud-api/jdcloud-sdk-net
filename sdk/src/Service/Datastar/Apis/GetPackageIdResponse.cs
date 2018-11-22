@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Datastar.Apis
 {
 
     /// <summary>
-    ///  根据设备ID查询人群包ID
+    ///  根据设备ID获取是否有匹配的人群包
     /// </summary>
     public class GetPackageIdResponse : JdcloudResponse<GetPackageIdResult>
     {

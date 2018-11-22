@@ -54,8 +54,12 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public int? Id{ get; set; }
         ///<summary>
-        /// 故障开始时间
+        /// 故障开始时间，格式Unix timestamp，时间单位：毫秒
         ///</summary>
-        public int? StartTime{ get; set; }
+        public long? StartTime{ get; set; }
+        ///<summary>
+        /// 故障结束时间，格式Unix timestamp，时间单位：毫秒
+        ///</summary>
+        public long? EndTime{ get; set; }
     }
 }

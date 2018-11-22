@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ias.Client
 {
 
     /// <summary>
-    ///  更新app
+    ///  更新应用（只传需要变更的参数，不传的参数不会更新）
     /// </summary>
     public class UpdateAppExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  更新app接口的Http 请求方法
+        ///  更新应用（只传需要变更的参数，不传的参数不会更新）接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ias.Client
             }
         }
         /// <summary>
-        ///  更新app接口的Http资源请求路径
+        ///  更新应用（只传需要变更的参数，不传的参数不会更新）接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

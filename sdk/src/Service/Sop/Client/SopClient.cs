@@ -89,9 +89,9 @@ namespace JDCloudSDK.Sop.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.6
+        ///  版本号 1.0.7
         ///</summary>
-        public const string ClientVersion = "1.0.6";
+        public const string ClientVersion = "1.0.7";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";

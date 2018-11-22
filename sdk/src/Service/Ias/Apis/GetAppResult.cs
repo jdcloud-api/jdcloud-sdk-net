@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Ias.Apis
     public class GetAppResult : JdcloudResult
     {
         ///<summary>
-        /// 应用
+        /// 应用ID，由京东云分配的16位数字ID
         ///</summary>
         public   string ClientId{ get; set; }
         ///<summary>
@@ -46,87 +46,87 @@ namespace  JDCloudSDK.Ias.Apis
         ///</summary>
         public   string ClientName{ get; set; }
         ///<summary>
-        /// tokenEndpointAuthMethod
+        /// 客户端认证方式
         ///</summary>
         public   string TokenEndpointAuthMethod{ get; set; }
         ///<summary>
-        /// grantTypes
+        /// 支持的OAuth类型
         ///</summary>
         public   string GrantTypes{ get; set; }
         ///<summary>
-        /// responseTypes
+        /// 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
         ///</summary>
         public   string ResponseTypes{ get; set; }
         ///<summary>
-        /// redirectUris
+        /// 回调地址
         ///</summary>
         public   string RedirectUris{ get; set; }
         ///<summary>
-        /// clientUri
+        /// 应用介绍地址
         ///</summary>
         public   string ClientUri{ get; set; }
         ///<summary>
-        /// logoUri
+        /// 应用logo地址
         ///</summary>
         public   string LogoUri{ get; set; }
         ///<summary>
-        /// tosUri
+        /// 应用服务协议地址
         ///</summary>
         public   string TosUri{ get; set; }
         ///<summary>
-        /// policyUri
+        /// 应用隐私条款地址
         ///</summary>
         public   string PolicyUri{ get; set; }
         ///<summary>
-        /// scope
+        /// OAuth scope授权范围
         ///</summary>
         public   string Scope{ get; set; }
         ///<summary>
-        /// jwksUri
+        /// JWKS地址
         ///</summary>
         public   string JwksUri{ get; set; }
         ///<summary>
-        /// jwks
+        /// JWKS
         ///</summary>
         public   string Jwks{ get; set; }
         ///<summary>
-        /// contacts
+        /// 应用联系信息
         ///</summary>
         public   string Contacts{ get; set; }
         ///<summary>
-        /// extension
+        /// 应用扩展信息
         ///</summary>
         public   string Extension{ get; set; }
         ///<summary>
-        /// accessTokenValiditySeconds
+        /// 访问令牌有效期
         ///</summary>
         public   int? AccessTokenValiditySeconds{ get; set; }
         ///<summary>
-        /// refreshTokenValiditySeconds
+        /// 刷新令牌有效期
         ///</summary>
         public   int? RefreshTokenValiditySeconds{ get; set; }
         ///<summary>
-        /// multiTenant
+        /// 是否为多租户应用
         ///</summary>
         public   bool MultiTenant{ get; set; }
         ///<summary>
-        /// secretUpdateTime
+        /// 应用密码更新时间
         ///</summary>
         public   long? SecretUpdateTime{ get; set; }
         ///<summary>
-        /// updateTime
+        /// 应用更新时间
         ///</summary>
         public   long? UpdateTime{ get; set; }
         ///<summary>
-        /// createTime
+        /// 应用创建时间
         ///</summary>
         public   long? CreateTime{ get; set; }
         ///<summary>
-        /// account
+        /// 创建应用的账户用户名
         ///</summary>
         public   string Account{ get; set; }
         ///<summary>
-        /// userType
+        /// 允许登录应用的账号类型
         ///</summary>
         public   string UserType{ get; set; }
     }

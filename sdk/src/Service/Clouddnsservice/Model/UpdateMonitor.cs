@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Clouddnsservice.Model
 {
@@ -39,63 +40,91 @@ namespace JDCloudSDK.Clouddnsservice.Model
 
         ///<summary>
         /// 连续几次触发报警
+        ///Required:true
         ///</summary>
-        public int? AlarmLimit{ get; set; }
+        [Required]
+        public int AlarmLimit{ get; set; }
         ///<summary>
         /// 监控项ID
+        ///Required:true
         ///</summary>
-        public int? Id{ get; set; }
+        [Required]
+        public int Id{ get; set; }
         ///<summary>
         /// 备用地址1
+        ///Required:true
         ///</summary>
+        [Required]
         public string IpBackup01{ get; set; }
         ///<summary>
         /// 备用地址2
+        ///Required:true
         ///</summary>
+        [Required]
         public string IpBackup02{ get; set; }
         ///<summary>
         /// 监控状况 开启监控 2，暂停监控 4
+        ///Required:true
         ///</summary>
-        public int? MonitorEnable{ get; set; }
+        [Required]
+        public int MonitorEnable{ get; set; }
         ///<summary>
         /// 监控频率，单位秒
+        ///Required:true
         ///</summary>
-        public int? MonitorFreq{ get; set; }
+        [Required]
+        public int MonitorFreq{ get; set; }
         ///<summary>
         /// 监控端口
+        ///Required:true
         ///</summary>
-        public int? MonitorPort{ get; set; }
+        [Required]
+        public int MonitorPort{ get; set; }
         ///<summary>
         /// 不做任何修改0，强制暂停解析记录1，自动切换到备用地址2
+        ///Required:true
         ///</summary>
-        public int? MonitorRule{ get; set; }
+        [Required]
+        public int MonitorRule{ get; set; }
         ///<summary>
         /// 监控路径
+        ///Required:true
         ///</summary>
+        [Required]
         public string MonitorUri{ get; set; }
         ///<summary>
         /// 不发送邮件0， 发送邮件1
+        ///Required:true
         ///</summary>
-        public int? NotifyEmailEnable{ get; set; }
+        [Required]
+        public int NotifyEmailEnable{ get; set; }
         ///<summary>
         /// 不发送通知栏 0， 发送通知栏 1
+        ///Required:true
         ///</summary>
-        public int? NotifyMsgBarEnable{ get; set; }
+        [Required]
+        public int NotifyMsgBarEnable{ get; set; }
         ///<summary>
         /// 不发送短信 0， 发送短信 1
         ///</summary>
         public int? NotifySmsEnable{ get; set; }
         ///<summary>
         /// https 0，https 1
+        ///Required:true
         ///</summary>
-        public int? Protocol{ get; set; }
+        [Required]
+        public int Protocol{ get; set; }
         ///<summary>
         /// 0自动恢复 1手动恢复
+        ///Required:true
         ///</summary>
-        public int? StopRecoverRule{ get; set; }
+        [Required]
+        public int StopRecoverRule{ get; set; }
         ///<summary>
         /// 0自动恢复至主host 1手动恢复至主host
+        ///Required:true
         ///</summary>
-        public int? SwitchRecoverRule{ get; set; }
+        [Required]
+        public int SwitchRecoverRule{ get; set; }
     }
 }

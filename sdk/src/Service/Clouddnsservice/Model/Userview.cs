@@ -62,7 +62,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public string Creator{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 创建时间，格式Unix timestamp，时间单位：秒
         ///</summary>
         public int? CreateTime{ get; set; }
         ///<summary>
@@ -70,7 +70,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public string Updator{ get; set; }
         ///<summary>
-        /// 更新时间
+        /// 更新时间，格式Unix timestamp，时间单位：秒
         ///</summary>
         public int? UpdateTime{ get; set; }
     }

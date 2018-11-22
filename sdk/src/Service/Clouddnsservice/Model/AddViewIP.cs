@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Clouddnsservice.Model
 {
@@ -39,21 +40,29 @@ namespace JDCloudSDK.Clouddnsservice.Model
 
         ///<summary>
         /// 域名ID
+        ///Required:true
         ///</summary>
-        public int? DomainId{ get; set; }
+        [Required]
+        public int DomainId{ get; set; }
         ///<summary>
         /// 自定义线路ID
+        ///Required:true
         ///</summary>
-        public int? ViewId{ get; set; }
+        [Required]
+        public int ViewId{ get; set; }
         ///<summary>
         /// 自定义线路名称, 最多64个字符
+        ///Required:true
         ///</summary>
+        [Required]
         public string ViewName{ get; set; }
         ///<summary>
         /// 此线路需要添加的ip段。&lt;br&gt;
         /// ip段支持1.2.3.4-5.6.7.8和1.2.3.4/16两种格式。
         /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public List<string> IpRanges{ get; set; }
     }
 }

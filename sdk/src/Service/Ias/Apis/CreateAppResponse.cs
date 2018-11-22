@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ias.Apis
 {
 
     /// <summary>
-    ///  创建app
+    ///  创建应用
     /// </summary>
     public class CreateAppResponse : JdcloudResponse<CreateAppResult>
     {

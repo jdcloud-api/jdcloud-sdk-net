@@ -33,13 +33,13 @@ namespace JDCloudSDK.Ias.Model
 {
 
     /// <summary>
-    ///  applicationRes
+    ///  应用组
     /// </summary>
     public class ApplicationRes
     {
 
         ///<summary>
-        /// 应用
+        /// 应用ID，由京东云分配的16位数字ID
         ///Required:true
         ///</summary>
         [Required]
@@ -51,127 +51,127 @@ namespace JDCloudSDK.Ias.Model
         [Required]
         public string ClientName{ get; set; }
         ///<summary>
-        /// tokenEndpointAuthMethod
+        /// 客户端认证方式
         ///Required:true
         ///</summary>
         [Required]
         public string TokenEndpointAuthMethod{ get; set; }
         ///<summary>
-        /// grantTypes
+        /// 支持的OAuth类型
         ///Required:true
         ///</summary>
         [Required]
         public string GrantTypes{ get; set; }
         ///<summary>
-        /// responseTypes
+        /// 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
         ///Required:true
         ///</summary>
         [Required]
         public string ResponseTypes{ get; set; }
         ///<summary>
-        /// redirectUris
+        /// 回调地址
         ///Required:true
         ///</summary>
         [Required]
         public string RedirectUris{ get; set; }
         ///<summary>
-        /// clientUri
+        /// 应用介绍地址
         ///Required:true
         ///</summary>
         [Required]
         public string ClientUri{ get; set; }
         ///<summary>
-        /// logoUri
+        /// 应用logo地址
         ///Required:true
         ///</summary>
         [Required]
         public string LogoUri{ get; set; }
         ///<summary>
-        /// tosUri
+        /// 应用服务协议地址
         ///Required:true
         ///</summary>
         [Required]
         public string TosUri{ get; set; }
         ///<summary>
-        /// policyUri
+        /// 应用隐私条款地址
         ///Required:true
         ///</summary>
         [Required]
         public string PolicyUri{ get; set; }
         ///<summary>
-        /// scope
+        /// OAuth scope授权范围
         ///Required:true
         ///</summary>
         [Required]
         public string Scope{ get; set; }
         ///<summary>
-        /// jwksUri
+        /// JWKS地址
         ///Required:true
         ///</summary>
         [Required]
         public string JwksUri{ get; set; }
         ///<summary>
-        /// jwks
+        /// JWKS
         ///Required:true
         ///</summary>
         [Required]
         public string Jwks{ get; set; }
         ///<summary>
-        /// contacts
+        /// 应用联系信息
         ///Required:true
         ///</summary>
         [Required]
         public string Contacts{ get; set; }
         ///<summary>
-        /// extension
+        /// 应用扩展信息
         ///Required:true
         ///</summary>
         [Required]
         public string Extension{ get; set; }
         ///<summary>
-        /// accessTokenValiditySeconds
+        /// 访问令牌有效期
         ///Required:true
         ///</summary>
         [Required]
         public int AccessTokenValiditySeconds{ get; set; }
         ///<summary>
-        /// refreshTokenValiditySeconds
+        /// 刷新令牌有效期
         ///Required:true
         ///</summary>
         [Required]
         public int RefreshTokenValiditySeconds{ get; set; }
         ///<summary>
-        /// multiTenant
+        /// 是否为多租户应用
         ///Required:true
         ///</summary>
         [Required]
         public bool MultiTenant{ get; set; }
         ///<summary>
-        /// secretUpdateTime
+        /// 应用密码更新时间
         ///Required:true
         ///</summary>
         [Required]
         public long SecretUpdateTime{ get; set; }
         ///<summary>
-        /// updateTime
+        /// 应用更新时间
         ///Required:true
         ///</summary>
         [Required]
         public long UpdateTime{ get; set; }
         ///<summary>
-        /// createTime
+        /// 应用创建时间
         ///Required:true
         ///</summary>
         [Required]
         public long CreateTime{ get; set; }
         ///<summary>
-        /// account
+        /// 创建应用的账户用户名
         ///Required:true
         ///</summary>
         [Required]
         public string Account{ get; set; }
         ///<summary>
-        /// userType
+        /// 允许登录应用的账号类型
         ///Required:true
         ///</summary>
         [Required]

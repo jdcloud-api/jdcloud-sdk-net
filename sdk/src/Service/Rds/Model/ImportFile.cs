@@ -57,5 +57,13 @@ namespace JDCloudSDK.Rds.Model
         /// 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
         ///</summary>
         public string IsLocal{ get; set; }
+        ///<summary>
+        /// 文件状态&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public string Status{ get; set; }
+        ///<summary>
+        /// 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public string ImportTime{ get; set; }
     }
 }

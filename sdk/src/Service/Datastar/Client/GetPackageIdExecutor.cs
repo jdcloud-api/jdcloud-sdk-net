@@ -33,12 +33,12 @@ namespace JDCloudSDK.Datastar.Client
 {
 
     /// <summary>
-    ///  根据设备ID查询人群包ID
+    ///  根据设备ID获取是否有匹配的人群包
     /// </summary>
     public class GetPackageIdExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  根据设备ID查询人群包ID接口的Http 请求方法
+        ///  根据设备ID获取是否有匹配的人群包接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Datastar.Client
             }
         }
         /// <summary>
-        ///  根据设备ID查询人群包ID接口的Http资源请求路径
+        ///  根据设备ID获取是否有匹配的人群包接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Clouddnsservice.Model
 {
@@ -39,11 +40,15 @@ namespace JDCloudSDK.Clouddnsservice.Model
 
         ///<summary>
         /// 主机记录
+        ///Required:true
         ///</summary>
+        [Required]
         public string HostRecord{ get; set; }
         ///<summary>
         /// 解析记录的值
+        ///Required:true
         ///</summary>
+        [Required]
         public string HostValue{ get; set; }
         ///<summary>
         /// 是否是京东云资源
@@ -59,11 +64,15 @@ namespace JDCloudSDK.Clouddnsservice.Model
         public int? Port{ get; set; }
         ///<summary>
         /// 解析记录的生存时间
+        ///Required:true
         ///</summary>
-        public int? Ttl{ get; set; }
+        [Required]
+        public int Ttl{ get; set; }
         ///<summary>
         /// 解析的类型
+        ///Required:true
         ///</summary>
+        [Required]
         public string Type{ get; set; }
         ///<summary>
         /// 解析记录的权重
@@ -71,7 +80,9 @@ namespace JDCloudSDK.Clouddnsservice.Model
         public int? Weight{ get; set; }
         ///<summary>
         /// 解析线路的ID
+        ///Required:true
         ///</summary>
-        public int? ViewValue{ get; set; }
+        [Required]
+        public int ViewValue{ get; set; }
     }
 }

@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Ias.Apis
     public class GetAppRequest : JdcloudRequest
     {
         ///<summary>
-        /// RegionId
+        /// 地域编码，参考OpenAPI公共说明
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// ClientId
+        /// 应用ID，应用创建时由京东云分配的16位数字ID
         ///Required:true
         ///</summary>
         [Required]
