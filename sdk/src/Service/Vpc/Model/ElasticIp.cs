@@ -78,5 +78,9 @@ namespace JDCloudSDK.Vpc.Model
         /// 弹性ip创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 弹性ip可用区属性，如果为空，表示全可用区
+        ///</summary>
+        public string Az{ get; set; }
     }
 }

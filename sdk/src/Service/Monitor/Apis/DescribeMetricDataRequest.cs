@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    ///  查看某资源的监控数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+    ///  查看某资源多个监控项数据，metric介绍1：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
     /// </summary>
     public class DescribeMetricDataRequest : JdcloudRequest
     {
@@ -51,6 +51,10 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         [Required]
         public   string ResourceId{ get; set; }
+        ///<summary>
+        /// 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+        ///</summary>
+        public   string AggrType{ get; set; }
         ///<summary>
         /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
         ///</summary>

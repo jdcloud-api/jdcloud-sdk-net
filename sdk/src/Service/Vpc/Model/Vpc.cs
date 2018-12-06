@@ -54,7 +54,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
-        /// AclIds
+        /// 同一vpc下的acl id 列表
         ///</summary>
         public List<string> AclIds{ get; set; }
         ///<summary>

@@ -74,5 +74,9 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         [Required]
         public Dictionary<string,string> Values{ get; set; }
+        ///<summary>
+        /// 数据的单位，长度不超过64字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+        ///</summary>
+        public string Unit{ get; set; }
     }
 }

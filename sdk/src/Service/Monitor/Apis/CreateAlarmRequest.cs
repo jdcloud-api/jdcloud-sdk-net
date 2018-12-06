@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using JDCloudSDK.Monitor.Model;
 
 namespace  JDCloudSDK.Monitor.Apis
 {
@@ -39,52 +40,17 @@ namespace  JDCloudSDK.Monitor.Apis
     public class CreateAlarmRequest : JdcloudRequest
     {
         ///<summary>
-        /// 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-        ///</summary>
-        public List<string> ContactGroups{ get; set; }
-
-        ///<summary>
-        /// 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-        ///</summary>
-        public List<string> ContactPersons{ get; set; }
-
-        ///<summary>
-        /// 取样频次
-        ///</summary>
-        public   string DownSample{ get; set; }
-        ///<summary>
-        /// 根据产品线查询可用监控项列表 接口 返回的Metric字段
+        /// 幂等性校验参数,最长36位
         ///Required:true
         ///</summary>
         [Required]
-        public   string Metric{ get; set; }
+        public   string ClientToken{ get; set; }
         ///<summary>
-        /// 通知周期 单位：小时
-        ///</summary>
-        public   long? NoticePeriod{ get; set; }
-        ///<summary>
-        /// 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-        ///</summary>
-        public List<string> ResourceIds{ get; set; }
-
-        ///<summary>
-        /// 产品名称
+        /// CreateAlarmSpec
         ///Required:true
         ///</summary>
         [Required]
-        public   string ServiceCode{ get; set; }
-        ///<summary>
-        /// 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   double Threshold{ get; set; }
-        ///<summary>
-        /// 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   long Times{ get; set; }
+        public   CreateAlarmParam CreateAlarmSpec{ get; set; }
         ///<summary>
         /// 地域 Id
         ///Required:true

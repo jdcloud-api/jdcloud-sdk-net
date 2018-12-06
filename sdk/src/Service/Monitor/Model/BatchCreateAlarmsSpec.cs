@@ -53,6 +53,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Datacenter{ get; set; }
         ///<summary>
+        /// 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+        ///</summary>
+        public long? Enabled{ get; set; }
+        ///<summary>
         /// 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
         ///Required:true
         ///</summary>

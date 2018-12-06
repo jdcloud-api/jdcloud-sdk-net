@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class AssociateNetworkAclRequest : JdcloudRequest
     {
         ///<summary>
-        /// 修改networkAcl属性
+        /// networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
         ///</summary>
         public List<string> SubnetIds{ get; set; }
 

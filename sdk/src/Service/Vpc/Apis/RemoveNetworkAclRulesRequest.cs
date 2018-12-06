@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class RemoveNetworkAclRulesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 修改networkAcl属性
+        /// networkAcl规则ID列表
         ///</summary>
         public List<string> RuleIds{ get; set; }
 

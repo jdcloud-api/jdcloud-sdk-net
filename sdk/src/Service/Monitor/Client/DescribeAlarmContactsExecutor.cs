@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -52,7 +52,7 @@ namespace JDCloudSDK.Monitor.Client
         public override string Url
         {
             get {
-            return "/regions/:regionId/alarms/:alarmId/contacts";
+            return "/regions/{regionId}/alarms/{alarmId}/contacts";
             }
         }
     }

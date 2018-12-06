@@ -95,7 +95,7 @@ namespace JDCloudSDK.Monitor.Client
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
-        private const string defaultEndpoint = "monitor.jcloud.com";
+        private const string defaultEndpoint = "monitor.jdcloud-api.com";
         private const string serviceName = "monitor";
         private const string userAgent = userAgentPrefix + "/" + ClientVersion + " " + serviceName + "/" + apiVersion;
 
@@ -138,40 +138,297 @@ namespace JDCloudSDK.Monitor.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查看某资源的监控数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        ///  查询报警模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeMetricDataResponse DescribeMetricData(DescribeMetricDataRequest request) {
-            return  new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request);
+        public DescribeTemplatesResponse DescribeTemplates(DescribeTemplatesRequest request) {
+            return  new DescribeTemplatesExecutor().Client(this).Execute<DescribeTemplatesResponse, DescribeTemplatesResult, DescribeTemplatesRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看某资源的监控数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        ///  查询报警模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeMetricDataResponse> DescribeMetricData(DescribeMetricDataRequest request) {
-            return await new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request);
+        public async Task<DescribeTemplatesResponse> DescribeTemplates(DescribeTemplatesRequest request) {
+            return await new DescribeTemplatesExecutor().Client(this).Execute<DescribeTemplatesResponse, DescribeTemplatesResult, DescribeTemplatesRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看某资源的最后一个点
+        ///  查询obj
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public LastDownsampleResponse LastDownsample(LastDownsampleRequest request) {
-            return  new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
+        public DescribeObjResponse DescribeObj(DescribeObjRequest request) {
+            return  new DescribeObjExecutor().Client(this).Execute<DescribeObjResponse, DescribeObjResult, DescribeObjRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看某资源的最后一个点
+        ///  查询obj
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
-            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
+        public async Task<DescribeObjResponse> DescribeObj(DescribeObjRequest request) {
+            return await new DescribeObjExecutor().Client(this).Execute<DescribeObjResponse, DescribeObjResult, DescribeObjRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateProbeTaskResponse CreateProbeTask(CreateProbeTaskRequest request) {
+            return  new CreateProbeTaskExecutor().Client(this).Execute<CreateProbeTaskResponse, CreateProbeTaskResult, CreateProbeTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateProbeTaskResponse> CreateProbeTask(CreateProbeTaskRequest request) {
+            return await new CreateProbeTaskExecutor().Client(this).Execute<CreateProbeTaskResponse, CreateProbeTaskResult, CreateProbeTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAlarmResponse CreateAlarm(CreateAlarmRequest request) {
+            return  new CreateAlarmExecutor().Client(this).Execute<CreateAlarmResponse, CreateAlarmResult, CreateAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAlarmResponse> CreateAlarm(CreateAlarmRequest request) {
+            return await new CreateAlarmExecutor().Client(this).Execute<CreateAlarmResponse, CreateAlarmResult, CreateAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控的metric列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricsCmResponse DescribeMetricsCm(DescribeMetricsCmRequest request) {
+            return  new DescribeMetricsCmExecutor().Client(this).Execute<DescribeMetricsCmResponse, DescribeMetricsCmResult, DescribeMetricsCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控的metric列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricsCmResponse> DescribeMetricsCm(DescribeMetricsCmRequest request) {
+            return await new DescribeMetricsCmExecutor().Client(this).Execute<DescribeMetricsCmResponse, DescribeMetricsCmResult, DescribeMetricsCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAlarmCmResponse CreateAlarmCm(CreateAlarmCmRequest request) {
+            return  new CreateAlarmCmExecutor().Client(this).Execute<CreateAlarmCmResponse, CreateAlarmCmResult, CreateAlarmCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAlarmCmResponse> CreateAlarmCm(CreateAlarmCmRequest request) {
+            return await new CreateAlarmCmExecutor().Client(this).Execute<CreateAlarmCmResponse, CreateAlarmCmResult, CreateAlarmCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateAlarmCmResponse UpdateAlarmCm(UpdateAlarmCmRequest request) {
+            return  new UpdateAlarmCmExecutor().Client(this).Execute<UpdateAlarmCmResponse, UpdateAlarmCmResult, UpdateAlarmCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateAlarmCmResponse> UpdateAlarmCm(UpdateAlarmCmRequest request) {
+            return await new UpdateAlarmCmExecutor().Client(this).Execute<UpdateAlarmCmResponse, UpdateAlarmCmResult, UpdateAlarmCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询obj列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeObjsByNsUIDResponse DescribeObjsByNsUID(DescribeObjsByNsUIDRequest request) {
+            return  new DescribeObjsByNsUIDExecutor().Client(this).Execute<DescribeObjsByNsUIDResponse, DescribeObjsByNsUIDResult, DescribeObjsByNsUIDRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询obj列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeObjsByNsUIDResponse> DescribeObjsByNsUID(DescribeObjsByNsUIDRequest request) {
+            return await new DescribeObjsByNsUIDExecutor().Client(this).Execute<DescribeObjsByNsUIDResponse, DescribeObjsByNsUIDResult, DescribeObjsByNsUIDRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateProbeTaskResponse UpdateProbeTask(UpdateProbeTaskRequest request) {
+            return  new UpdateProbeTaskExecutor().Client(this).Execute<UpdateProbeTaskResponse, UpdateProbeTaskResult, UpdateProbeTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateProbeTaskResponse> UpdateProbeTask(UpdateProbeTaskRequest request) {
+            return await new UpdateProbeTaskExecutor().Client(this).Execute<UpdateProbeTaskResponse, UpdateProbeTaskResult, UpdateProbeTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可用性监控任务列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProbeTasksResponse DescribeProbeTasks(DescribeProbeTasksRequest request) {
+            return  new DescribeProbeTasksExecutor().Client(this).Execute<DescribeProbeTasksResponse, DescribeProbeTasksResult, DescribeProbeTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用性监控任务列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProbeTasksResponse> DescribeProbeTasks(DescribeProbeTasksRequest request) {
+            return await new DescribeProbeTasksExecutor().Client(this).Execute<DescribeProbeTasksResponse, DescribeProbeTasksResult, DescribeProbeTasksRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteProbeTaskResponse DeleteProbeTask(DeleteProbeTaskRequest request) {
+            return  new DeleteProbeTaskExecutor().Client(this).Execute<DeleteProbeTaskResponse, DeleteProbeTaskResult, DeleteProbeTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteProbeTaskResponse> DeleteProbeTask(DeleteProbeTaskRequest request) {
+            return await new DeleteProbeTaskExecutor().Client(this).Execute<DeleteProbeTaskResponse, DeleteProbeTaskResult, DeleteProbeTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmsResponse DescribeAlarms(DescribeAlarmsRequest request) {
+            return  new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询规则, 查询参数组合及优先级从高到低为：
+        /// 1：serviceCode不为空
+        /// 1.1：serviceCode + resourceId
+        /// 1.2: serviceCode + resourceIds
+        /// 2：serviceCodes不为空
+        /// 3: 所有规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmsResponse> DescribeAlarms(DescribeAlarmsRequest request) {
+            return await new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableAlarmResponse EnableAlarm(EnableAlarmRequest request) {
+            return  new EnableAlarmExecutor().Client(this).Execute<EnableAlarmResponse, EnableAlarmResult, EnableAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableAlarmResponse> EnableAlarm(EnableAlarmRequest request) {
+            return await new EnableAlarmExecutor().Client(this).Execute<EnableAlarmResponse, EnableAlarmResult, EnableAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控的metric数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricDataCmResponse DescribeMetricDataCm(DescribeMetricDataCmRequest request) {
+            return  new DescribeMetricDataCmExecutor().Client(this).Execute<DescribeMetricDataCmResponse, DescribeMetricDataCmResult, DescribeMetricDataCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控的metric数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricDataCmResponse> DescribeMetricDataCm(DescribeMetricDataCmRequest request) {
+            return await new DescribeMetricDataCmExecutor().Client(this).Execute<DescribeMetricDataCmResponse, DescribeMetricDataCmResult, DescribeMetricDataCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除自定义监控命名空间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest request) {
+            return  new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除自定义监控命名空间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest request) {
+            return await new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -191,6 +448,519 @@ namespace JDCloudSDK.Monitor.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateAlarmResponse> UpdateAlarm(UpdateAlarmRequest request) {
             return await new UpdateAlarmExecutor().Client(this).Execute<UpdateAlarmResponse, UpdateAlarmResult, UpdateAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询是否是新用户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIsUserNewResponse DescribeIsUserNew(DescribeIsUserNewRequest request) {
+            return  new DescribeIsUserNewExecutor().Client(this).Execute<DescribeIsUserNewResponse, DescribeIsUserNewResult, DescribeIsUserNewRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询是否是新用户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIsUserNewResponse> DescribeIsUserNew(DescribeIsUserNewRequest request) {
+            return await new DescribeIsUserNewExecutor().Client(this).Execute<DescribeIsUserNewResponse, DescribeIsUserNewResult, DescribeIsUserNewRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询规则的报警联系人
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmContactsResponse DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
+            return  new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询规则的报警联系人
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmContactsResponse> DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
+            return await new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 可用性监控任务的探测源列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DiscribeProbesResponse DiscribeProbes(DiscribeProbesRequest request) {
+            return  new DiscribeProbesExecutor().Client(this).Execute<DiscribeProbesResponse, DiscribeProbesResult, DiscribeProbesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 可用性监控任务的探测源列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DiscribeProbesResponse> DiscribeProbes(DiscribeProbesRequest request) {
+            return await new DiscribeProbesExecutor().Client(this).Execute<DiscribeProbesResponse, DiscribeProbesResult, DiscribeProbesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控项数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCmMetricDataByTagSpecResponse DescribeCmMetricDataByTagSpec(DescribeCmMetricDataByTagSpecRequest request) {
+            return  new DescribeCmMetricDataByTagSpecExecutor().Client(this).Execute<DescribeCmMetricDataByTagSpecResponse, DescribeCmMetricDataByTagSpecResult, DescribeCmMetricDataByTagSpecRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控项数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCmMetricDataByTagSpecResponse> DescribeCmMetricDataByTagSpec(DescribeCmMetricDataByTagSpecRequest request) {
+            return await new DescribeCmMetricDataByTagSpecExecutor().Client(this).Execute<DescribeCmMetricDataByTagSpecResponse, DescribeCmMetricDataByTagSpecResult, DescribeCmMetricDataByTagSpecRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新自定义报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateTemplateResponse UpdateTemplate(UpdateTemplateRequest request) {
+            return  new UpdateTemplateExecutor().Client(this).Execute<UpdateTemplateResponse, UpdateTemplateResult, UpdateTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新自定义报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateTemplateResponse> UpdateTemplate(UpdateTemplateRequest request) {
+            return await new UpdateTemplateExecutor().Client(this).Execute<UpdateTemplateResponse, UpdateTemplateResult, UpdateTemplateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用、禁用可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ProbeTaskEnableResponse ProbeTaskEnable(ProbeTaskEnableRequest request) {
+            return  new ProbeTaskEnableExecutor().Client(this).Execute<ProbeTaskEnableResponse, ProbeTaskEnableResult, ProbeTaskEnableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用、禁用可用性监控任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ProbeTaskEnableResponse> ProbeTaskEnable(ProbeTaskEnableRequest request) {
+            return await new ProbeTaskEnableExecutor().Client(this).Execute<ProbeTaskEnableResponse, ProbeTaskEnableResult, ProbeTaskEnableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询所有region的自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAllRegionAlarmsCmResponse DescribeAllRegionAlarmsCm(DescribeAllRegionAlarmsCmRequest request) {
+            return  new DescribeAllRegionAlarmsCmExecutor().Client(this).Execute<DescribeAllRegionAlarmsCmResponse, DescribeAllRegionAlarmsCmResult, DescribeAllRegionAlarmsCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询所有region的自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAllRegionAlarmsCmResponse> DescribeAllRegionAlarmsCm(DescribeAllRegionAlarmsCmRequest request) {
+            return await new DescribeAllRegionAlarmsCmExecutor().Client(this).Execute<DescribeAllRegionAlarmsCmResponse, DescribeAllRegionAlarmsCmResult, DescribeAllRegionAlarmsCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看sqlserver数据库某资源一段时间内的topN慢sql数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTopNSlowSqlResponse DescribeTopNSlowSql(DescribeTopNSlowSqlRequest request) {
+            return  new DescribeTopNSlowSqlExecutor().Client(this).Execute<DescribeTopNSlowSqlResponse, DescribeTopNSlowSqlResult, DescribeTopNSlowSqlRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看sqlserver数据库某资源一段时间内的topN慢sql数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTopNSlowSqlResponse> DescribeTopNSlowSql(DescribeTopNSlowSqlRequest request) {
+            return await new DescribeTopNSlowSqlExecutor().Client(this).Execute<DescribeTopNSlowSqlResponse, DescribeTopNSlowSqlResult, DescribeTopNSlowSqlRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看某资源的最后一个点,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public LastDownsampleResponse LastDownsample(LastDownsampleRequest request) {
+            return  new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看某资源的最后一个点,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
+            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量创建报警规则，可以为多个实例创建多个报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchCreateAlarmsResponse BatchCreateAlarms(BatchCreateAlarmsRequest request) {
+            return  new BatchCreateAlarmsExecutor().Client(this).Execute<BatchCreateAlarmsResponse, BatchCreateAlarmsResult, BatchCreateAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量创建报警规则，可以为多个实例创建多个报警规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchCreateAlarmsResponse> BatchCreateAlarms(BatchCreateAlarmsRequest request) {
+            return await new BatchCreateAlarmsExecutor().Client(this).Execute<BatchCreateAlarmsResponse, BatchCreateAlarmsResult, BatchCreateAlarmsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建自定义报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTemplateResponse CreateTemplate(CreateTemplateRequest request) {
+            return  new CreateTemplateExecutor().Client(this).Execute<CreateTemplateResponse, CreateTemplateResult, CreateTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建自定义报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTemplateResponse> CreateTemplate(CreateTemplateRequest request) {
+            return await new CreateTemplateExecutor().Client(this).Execute<CreateTemplateResponse, CreateTemplateResult, CreateTemplateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据模板ID查询报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTemplatesByTemplateIDResponse DescribeTemplatesByTemplateID(DescribeTemplatesByTemplateIDRequest request) {
+            return  new DescribeTemplatesByTemplateIDExecutor().Client(this).Execute<DescribeTemplatesByTemplateIDResponse, DescribeTemplatesByTemplateIDResult, DescribeTemplatesByTemplateIDRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据模板ID查询报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTemplatesByTemplateIDResponse> DescribeTemplatesByTemplateID(DescribeTemplatesByTemplateIDRequest request) {
+            return await new DescribeTemplatesByTemplateIDExecutor().Client(this).Execute<DescribeTemplatesByTemplateIDResponse, DescribeTemplatesByTemplateIDResult, DescribeTemplatesByTemplateIDRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可用创建监控规则的指标列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricsForCreateAlarmResponse DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
+            return  new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用创建监控规则的指标列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricsForCreateAlarmResponse> DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
+            return await new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控命名空间列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNamespacesResponse DescribeNamespaces(DescribeNamespacesRequest request) {
+            return  new DescribeNamespacesExecutor().Client(this).Execute<DescribeNamespacesResponse, DescribeNamespacesResult, DescribeNamespacesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控命名空间列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNamespacesResponse> DescribeNamespaces(DescribeNamespacesRequest request) {
+            return await new DescribeNamespacesExecutor().Client(this).Execute<DescribeNamespacesResponse, DescribeNamespacesResult, DescribeNamespacesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除obj
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteObjResponse DeleteObj(DeleteObjRequest request) {
+            return  new DeleteObjExecutor().Client(this).Execute<DeleteObjResponse, DeleteObjResult, DeleteObjRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除obj
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteObjResponse> DeleteObj(DeleteObjRequest request) {
+            return await new DeleteObjExecutor().Client(this).Execute<DeleteObjResponse, DeleteObjResult, DeleteObjRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据产品线查询查询可以创建模板的metric
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricsForCreateTemplateResponse DescribeMetricsForCreateTemplate(DescribeMetricsForCreateTemplateRequest request) {
+            return  new DescribeMetricsForCreateTemplateExecutor().Client(this).Execute<DescribeMetricsForCreateTemplateResponse, DescribeMetricsForCreateTemplateResult, DescribeMetricsForCreateTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据产品线查询查询可以创建模板的metric
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricsForCreateTemplateResponse> DescribeMetricsForCreateTemplate(DescribeMetricsForCreateTemplateRequest request) {
+            return await new DescribeMetricsForCreateTemplateExecutor().Client(this).Execute<DescribeMetricsForCreateTemplateResponse, DescribeMetricsForCreateTemplateResult, DescribeMetricsForCreateTemplateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可用性监控任务的指定探测源的异常探测历史
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProbeHistoryResponse DescribeProbeHistory(DescribeProbeHistoryRequest request) {
+            return  new DescribeProbeHistoryExecutor().Client(this).Execute<DescribeProbeHistoryResponse, DescribeProbeHistoryResult, DescribeProbeHistoryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用性监控任务的指定探测源的异常探测历史
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProbeHistoryResponse> DescribeProbeHistory(DescribeProbeHistoryRequest request) {
+            return await new DescribeProbeHistoryExecutor().Client(this).Execute<DescribeProbeHistoryResponse, DescribeProbeHistoryResult, DescribeProbeHistoryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量启用规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchEnableAlarmsResponse BatchEnableAlarms(BatchEnableAlarmsRequest request) {
+            return  new BatchEnableAlarmsExecutor().Client(this).Execute<BatchEnableAlarmsResponse, BatchEnableAlarmsResult, BatchEnableAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量启用规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchEnableAlarmsResponse> BatchEnableAlarms(BatchEnableAlarmsRequest request) {
+            return await new BatchEnableAlarmsExecutor().Client(this).Execute<BatchEnableAlarmsResponse, BatchEnableAlarmsResult, BatchEnableAlarmsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看某资源的监控数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricDataAmResponse DescribeMetricDataAm(DescribeMetricDataAmRequest request) {
+            return  new DescribeMetricDataAmExecutor().Client(this).Execute<DescribeMetricDataAmResponse, DescribeMetricDataAmResult, DescribeMetricDataAmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看某资源的监控数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricDataAmResponse> DescribeMetricDataAm(DescribeMetricDataAmRequest request) {
+            return await new DescribeMetricDataAmExecutor().Client(this).Execute<DescribeMetricDataAmResponse, DescribeMetricDataAmResult, DescribeMetricDataAmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableAlarmResponse DisableAlarm(DisableAlarmRequest request) {
+            return  new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableAlarmResponse> DisableAlarm(DisableAlarmRequest request) {
+            return await new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmsByIDResponse DescribeAlarmsByID(DescribeAlarmsByIDRequest request) {
+            return  new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmsByIDResponse> DescribeAlarmsByID(DescribeAlarmsByIDRequest request) {
+            return await new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控所有region规则告警历史
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmHistoryAllRegionCmResponse DescribeAlarmHistoryAllRegionCm(DescribeAlarmHistoryAllRegionCmRequest request) {
+            return  new DescribeAlarmHistoryAllRegionCmExecutor().Client(this).Execute<DescribeAlarmHistoryAllRegionCmResponse, DescribeAlarmHistoryAllRegionCmResult, DescribeAlarmHistoryAllRegionCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控所有region规则告警历史
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmHistoryAllRegionCmResponse> DescribeAlarmHistoryAllRegionCm(DescribeAlarmHistoryAllRegionCmRequest request) {
+            return await new DescribeAlarmHistoryAllRegionCmExecutor().Client(this).Execute<DescribeAlarmHistoryAllRegionCmResponse, DescribeAlarmHistoryAllRegionCmResult, DescribeAlarmHistoryAllRegionCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmsCmResponse DescribeAlarmsCm(DescribeAlarmsCmRequest request) {
+            return  new DescribeAlarmsCmExecutor().Client(this).Execute<DescribeAlarmsCmResponse, DescribeAlarmsCmResult, DescribeAlarmsCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmsCmResponse> DescribeAlarmsCm(DescribeAlarmsCmRequest request) {
+            return await new DescribeAlarmsCmExecutor().Client(this).Execute<DescribeAlarmsCmResponse, DescribeAlarmsCmResult, DescribeAlarmsCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义监控规则告警历史
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmHistoryCmResponse DescribeAlarmHistoryCm(DescribeAlarmHistoryCmRequest request) {
+            return  new DescribeAlarmHistoryCmExecutor().Client(this).Execute<DescribeAlarmHistoryCmResponse, DescribeAlarmHistoryCmResult, DescribeAlarmHistoryCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义监控规则告警历史
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmHistoryCmResponse> DescribeAlarmHistoryCm(DescribeAlarmHistoryCmRequest request) {
+            return await new DescribeAlarmHistoryCmExecutor().Client(this).Execute<DescribeAlarmHistoryCmResponse, DescribeAlarmHistoryCmResult, DescribeAlarmHistoryCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看某资源多个监控项数据，metric介绍1：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricDataResponse DescribeMetricData(DescribeMetricDataRequest request) {
+            return  new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看某资源多个监控项数据，metric介绍1：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricDataResponse> DescribeMetricData(DescribeMetricDataRequest request) {
+            return await new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  概览页规则统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRuleCountingResponse DescribeRuleCounting(DescribeRuleCountingRequest request) {
+            return  new DescribeRuleCountingExecutor().Client(this).Execute<DescribeRuleCountingResponse, DescribeRuleCountingResult, DescribeRuleCountingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  概览页规则统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRuleCountingResponse> DescribeRuleCounting(DescribeRuleCountingRequest request) {
+            return await new DescribeRuleCountingExecutor().Client(this).Execute<DescribeRuleCountingResponse, DescribeRuleCountingResult, DescribeRuleCountingRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量删除规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDeleteAlarmsResponse BatchDeleteAlarms(BatchDeleteAlarmsRequest request) {
+            return  new BatchDeleteAlarmsExecutor().Client(this).Execute<BatchDeleteAlarmsResponse, BatchDeleteAlarmsResult, BatchDeleteAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDeleteAlarmsResponse> BatchDeleteAlarms(BatchDeleteAlarmsRequest request) {
+            return await new BatchDeleteAlarmsExecutor().Client(this).Execute<BatchDeleteAlarmsResponse, BatchDeleteAlarmsResult, BatchDeleteAlarmsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -245,59 +1015,135 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+        ///  查询可用性监控任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateAlarmResponse CreateAlarm(CreateAlarmRequest request) {
-            return  new CreateAlarmExecutor().Client(this).Execute<CreateAlarmResponse, CreateAlarmResult, CreateAlarmRequest>(request);
+        public DescribeProbeTaskResponse DescribeProbeTask(DescribeProbeTaskRequest request) {
+            return  new DescribeProbeTaskExecutor().Client(this).Execute<DescribeProbeTaskResponse, DescribeProbeTaskResult, DescribeProbeTaskRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+        ///  查询可用性监控任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateAlarmResponse> CreateAlarm(CreateAlarmRequest request) {
-            return await new CreateAlarmExecutor().Client(this).Execute<CreateAlarmResponse, CreateAlarmResult, CreateAlarmRequest>(request);
+        public async Task<DescribeProbeTaskResponse> DescribeProbeTask(DescribeProbeTaskRequest request) {
+            return await new DescribeProbeTaskExecutor().Client(this).Execute<DescribeProbeTaskResponse, DescribeProbeTaskResult, DescribeProbeTaskRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询规则的报警联系人
+        ///  查看某资源多个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeAlarmContactsResponse DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
-            return  new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+        public BatchDescribeMetricDataResponse BatchDescribeMetricData(BatchDescribeMetricDataRequest request) {
+            return  new BatchDescribeMetricDataExecutor().Client(this).Execute<BatchDescribeMetricDataResponse, BatchDescribeMetricDataResult, BatchDescribeMetricDataRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询规则的报警联系人
+        ///  查看某资源多个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeAlarmContactsResponse> DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
-            return await new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+        public async Task<BatchDescribeMetricDataResponse> BatchDescribeMetricData(BatchDescribeMetricDataRequest request) {
+            return await new BatchDescribeMetricDataExecutor().Client(this).Execute<BatchDescribeMetricDataResponse, BatchDescribeMetricDataResult, BatchDescribeMetricDataRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询可用创建监控规则的指标列表
+        ///  应用报警模板到资源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeMetricsForCreateAlarmResponse DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
-            return  new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+        public ApplyTemplateResponse ApplyTemplate(ApplyTemplateRequest request) {
+            return  new ApplyTemplateExecutor().Client(this).Execute<ApplyTemplateResponse, ApplyTemplateResult, ApplyTemplateRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询可用创建监控规则的指标列表
+        ///  应用报警模板到资源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeMetricsForCreateAlarmResponse> DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
-            return await new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+        public async Task<ApplyTemplateResponse> ApplyTemplate(ApplyTemplateRequest request) {
+            return await new ApplyTemplateExecutor().Client(this).Execute<ApplyTemplateResponse, ApplyTemplateResult, ApplyTemplateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量删除自定义报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTemplatesResponse DeleteTemplates(DeleteTemplatesRequest request) {
+            return  new DeleteTemplatesExecutor().Client(this).Execute<DeleteTemplatesResponse, DeleteTemplatesResult, DeleteTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除自定义报警模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTemplatesResponse> DeleteTemplates(DeleteTemplatesRequest request) {
+            return await new DeleteTemplatesExecutor().Client(this).Execute<DeleteTemplatesResponse, DeleteTemplatesResult, DeleteTemplatesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  尚未恢复的告警查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmingRulesResponse DescribeAlarmingRules(DescribeAlarmingRulesRequest request) {
+            return  new DescribeAlarmingRulesExecutor().Client(this).Execute<DescribeAlarmingRulesResponse, DescribeAlarmingRulesResult, DescribeAlarmingRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  尚未恢复的告警查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmingRulesResponse> DescribeAlarmingRules(DescribeAlarmingRulesRequest request) {
+            return await new DescribeAlarmingRulesExecutor().Client(this).Execute<DescribeAlarmingRulesResponse, DescribeAlarmingRulesResult, DescribeAlarmingRulesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteAlarmsCmResponse DeleteAlarmsCm(DeleteAlarmsCmRequest request) {
+            return  new DeleteAlarmsCmExecutor().Client(this).Execute<DeleteAlarmsCmResponse, DeleteAlarmsCmResult, DeleteAlarmsCmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除自定义监控规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteAlarmsCmResponse> DeleteAlarmsCm(DeleteAlarmsCmRequest request) {
+            return await new DeleteAlarmsCmExecutor().Client(this).Execute<DeleteAlarmsCmResponse, DeleteAlarmsCmResult, DeleteAlarmsCmRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为阻塞进程数提供的特殊接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSqlserverBlockProcessResponse DescribeSqlserverBlockProcess(DescribeSqlserverBlockProcessRequest request) {
+            return  new DescribeSqlserverBlockProcessExecutor().Client(this).Execute<DescribeSqlserverBlockProcessResponse, DescribeSqlserverBlockProcessResult, DescribeSqlserverBlockProcessRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为阻塞进程数提供的特殊接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSqlserverBlockProcessResponse> DescribeSqlserverBlockProcess(DescribeSqlserverBlockProcessRequest request) {
+            return await new DescribeSqlserverBlockProcessExecutor().Client(this).Execute<DescribeSqlserverBlockProcessResponse, DescribeSqlserverBlockProcessResult, DescribeSqlserverBlockProcessRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -321,88 +1167,52 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        ///  批量禁用规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableAlarmResponse DisableAlarm(DisableAlarmRequest request) {
-            return  new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+        public BatchDisableAlarmsResponse BatchDisableAlarms(BatchDisableAlarmsRequest request) {
+            return  new BatchDisableAlarmsExecutor().Client(this).Execute<BatchDisableAlarmsResponse, BatchDisableAlarmsResult, BatchDisableAlarmsRequest>(request);
         }
 #else
         /// <summary>
-        ///  禁用报警规则。报警规则禁用后，将停止探测实例的监控项数据。
+        ///  批量禁用规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableAlarmResponse> DisableAlarm(DisableAlarmRequest request) {
-            return await new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+        public async Task<BatchDisableAlarmsResponse> BatchDisableAlarms(BatchDisableAlarmsRequest request) {
+            return await new BatchDisableAlarmsExecutor().Client(this).Execute<BatchDisableAlarmsResponse, BatchDisableAlarmsResult, BatchDisableAlarmsRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询规则, 查询参数组合及优先级从高到低为：
-        /// 1：serviceCode不为空
-        /// 1.1：serviceCode + resourceId
-        /// 1.2: serviceCode + resourceIds
-        /// 2：serviceCodes不为空
-        /// 3: 所有规则
+        ///  查询报警历史
+        /// 检索条件组合优先级从高到低为
+        /// 1. serviceCode
+        /// 1.1 serviceCode + resourceId
+        /// 1.2 serviceCode + resourceIds
+        /// 2. serviceCodes
+        /// 3. 用户所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeAlarmsResponse DescribeAlarms(DescribeAlarmsRequest request) {
-            return  new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request);
+        public DescribeAlarmHistoryAllRegionResponse DescribeAlarmHistoryAllRegion(DescribeAlarmHistoryAllRegionRequest request) {
+            return  new DescribeAlarmHistoryAllRegionExecutor().Client(this).Execute<DescribeAlarmHistoryAllRegionResponse, DescribeAlarmHistoryAllRegionResult, DescribeAlarmHistoryAllRegionRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询规则, 查询参数组合及优先级从高到低为：
-        /// 1：serviceCode不为空
-        /// 1.1：serviceCode + resourceId
-        /// 1.2: serviceCode + resourceIds
-        /// 2：serviceCodes不为空
-        /// 3: 所有规则
+        ///  查询报警历史
+        /// 检索条件组合优先级从高到低为
+        /// 1. serviceCode
+        /// 1.1 serviceCode + resourceId
+        /// 1.2 serviceCode + resourceIds
+        /// 2. serviceCodes
+        /// 3. 用户所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeAlarmsResponse> DescribeAlarms(DescribeAlarmsRequest request) {
-            return await new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询规则详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAlarmsByIDResponse DescribeAlarmsByID(DescribeAlarmsByIDRequest request) {
-            return  new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询规则详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAlarmsByIDResponse> DescribeAlarmsByID(DescribeAlarmsByIDRequest request) {
-            return await new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableAlarmResponse EnableAlarm(EnableAlarmRequest request) {
-            return  new EnableAlarmExecutor().Client(this).Execute<EnableAlarmResponse, EnableAlarmResult, EnableAlarmRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableAlarmResponse> EnableAlarm(EnableAlarmRequest request) {
-            return await new EnableAlarmExecutor().Client(this).Execute<EnableAlarmResponse, EnableAlarmResult, EnableAlarmRequest>(request);
+        public async Task<DescribeAlarmHistoryAllRegionResponse> DescribeAlarmHistoryAllRegion(DescribeAlarmHistoryAllRegionRequest request) {
+            return await new DescribeAlarmHistoryAllRegionExecutor().Client(this).Execute<DescribeAlarmHistoryAllRegionResponse, DescribeAlarmHistoryAllRegionResult, DescribeAlarmHistoryAllRegionRequest>(request);
         }
 #endif
 

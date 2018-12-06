@@ -993,6 +993,25 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改弹性IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyElasticIpResponse ModifyElasticIp(ModifyElasticIpRequest request) {
+            return  new ModifyElasticIpExecutor().Client(this).Execute<ModifyElasticIpResponse, ModifyElasticIpResult, ModifyElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改弹性IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyElasticIpResponse> ModifyElasticIp(ModifyElasticIpRequest request) {
+            return await new ModifyElasticIpExecutor().Client(this).Execute<ModifyElasticIpResponse, ModifyElasticIpResult, ModifyElasticIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除安全组
         /// </summary>
         /// <param name="request">请求参数信息</param>
