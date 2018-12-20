@@ -73,5 +73,9 @@ namespace JDCloudSDK.Clouddnsservice.Model
         /// 是否是京东云资源
         ///</summary>
         public bool JcloudNs{ get; set; }
+        ///<summary>
+        /// 域名的锁定状态，0:未锁定， 1:已锁定
+        ///</summary>
+        public int? LockStatus{ get; set; }
     }
 }

@@ -49,5 +49,9 @@ namespace JDCloudSDK.Clouddnsservice.Model
         /// 解析记录的权重
         ///</summary>
         public int? Weight{ get; set; }
+        ///<summary>
+        /// 此条记录在总均衡中的比率的100倍
+        ///</summary>
+        public double? Rate{ get; set; }
     }
 }

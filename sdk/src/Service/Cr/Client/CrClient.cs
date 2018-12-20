@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * cr
+ * 容器镜像仓库
  * 容器镜像仓库服务
  *
  * OpenAPI spec version: v1
@@ -39,7 +39,7 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Cr.Client
 {
     /// <summary>
-    ///  cr
+    ///  容器镜像仓库
     ///  容器镜像仓库服务
     ///  Cr Api 客户端
     ///</summary>

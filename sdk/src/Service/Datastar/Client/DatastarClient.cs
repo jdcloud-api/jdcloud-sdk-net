@@ -138,63 +138,6 @@ namespace JDCloudSDK.Datastar.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  创建多级筛选
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateResponse Create(CreateRequest request) {
-            return  new CreateExecutor().Client(this).Execute<CreateResponse, CreateResult, CreateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建多级筛选
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateResponse> Create(CreateRequest request) {
-            return await new CreateExecutor().Client(this).Execute<CreateResponse, CreateResult, CreateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  多级筛选结果查询接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetResultResponse GetResult(GetResultRequest request) {
-            return  new GetResultExecutor().Client(this).Execute<GetResultResponse, GetResultResult, GetResultRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  多级筛选结果查询接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetResultResponse> GetResult(GetResultRequest request) {
-            return await new GetResultExecutor().Client(this).Execute<GetResultResponse, GetResultResult, GetResultRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据设备ID获取是否有匹配的人群包
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetPackageIdResponse GetPackageId(GetPackageIdRequest request) {
-            return  new GetPackageIdExecutor().Client(this).Execute<GetPackageIdResponse, GetPackageIdResult, GetPackageIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据设备ID获取是否有匹配的人群包
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetPackageIdResponse> GetPackageId(GetPackageIdRequest request) {
-            return await new GetPackageIdExecutor().Client(this).Execute<GetPackageIdResponse, GetPackageIdResult, GetPackageIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  根据区域、行业、一级指标、二级指标、起始时间等条件查询数据
         /// </summary>
         /// <param name="request">请求参数信息</param>

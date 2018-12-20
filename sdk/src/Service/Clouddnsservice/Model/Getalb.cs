@@ -43,7 +43,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         /// false: 均等负载
         /// 
         ///</summary>
-        public bool Balance{ get; set; }
+        public bool IsBalance{ get; set; }
         ///<summary>
         /// 主机记录
         ///</summary>

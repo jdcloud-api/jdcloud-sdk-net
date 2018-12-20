@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///<summary>
         /// 新添加的的域名结构
         ///</summary>
-        public   Domain Data{ get; set; }
+        public   DomainAdded Data{ get; set; }
         ///<summary>
         /// 添加收费版域名的订单号
         ///</summary>

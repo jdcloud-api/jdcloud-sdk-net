@@ -157,44 +157,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  域名的监控项修改
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateMonitorResponse UpdateMonitor(UpdateMonitorRequest request) {
-            return  new UpdateMonitorExecutor().Client(this).Execute<UpdateMonitorResponse, UpdateMonitorResult, UpdateMonitorRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  域名的监控项修改
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateMonitorResponse> UpdateMonitor(UpdateMonitorRequest request) {
-            return await new UpdateMonitorExecutor().Client(this).Execute<UpdateMonitorResponse, UpdateMonitorResult, UpdateMonitorRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除域名的自定义解析线路的IP段
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelUserViewIPResponse DelUserViewIP(DelUserViewIPRequest request) {
-            return  new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除域名的自定义解析线路的IP段
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelUserViewIPResponse> DelUserViewIP(DelUserViewIPRequest request) {
-            return await new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查看用户在云解析服务下的操作记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -229,29 +191,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddRRResponse> AddRR(AddRRRequest request) {
             return await new AddRRExecutor().Client(this).Execute<AddRRResponse, AddRRResult, AddRRRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户名下的主域名列表。&lt;br&gt;    
-        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetDomainsResponse GetDomains(GetDomainsRequest request) {
-            return  new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户名下的主域名列表。&lt;br&gt;    
-        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetDomainsResponse> GetDomains(GetDomainsRequest request) {
-            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -313,25 +252,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询域名的自定义解析线路的IP段
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetUserViewIPResponse GetUserViewIP(GetUserViewIPRequest request) {
-            return  new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询域名的自定义解析线路的IP段
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetUserViewIPResponse> GetUserViewIP(GetUserViewIPRequest request) {
-            return await new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  添加域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -347,6 +267,25 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddUserViewResponse> AddUserView(AddUserViewRequest request) {
             return await new AddUserViewExecutor().Client(this).Execute<AddUserViewResponse, AddUserViewResult, AddUserViewRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetUserViewIPResponse GetUserViewIP(GetUserViewIPRequest request) {
+            return  new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetUserViewIPResponse> GetUserViewIP(GetUserViewIPRequest request) {
+            return await new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -370,44 +309,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询子域名的可用监控对象
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetTargetsResponse GetTargets(GetTargetsRequest request) {
-            return  new GetTargetsExecutor().Client(this).Execute<GetTargetsResponse, GetTargetsResult, GetTargetsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询子域名的可用监控对象
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetTargetsResponse> GetTargets(GetTargetsRequest request) {
-            return await new GetTargetsExecutor().Client(this).Execute<GetTargetsResponse, GetTargetsResult, GetTargetsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询域名的自定义解析线路
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetUserViewResponse GetUserView(GetUserViewRequest request) {
-            return  new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询域名的自定义解析线路
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetUserViewResponse> GetUserView(GetUserViewRequest request) {
-            return await new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  添加域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -427,25 +328,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看域名的解析次数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetDomainQueryCountResponse GetDomainQueryCount(GetDomainQueryCountRequest request) {
-            return  new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看域名的解析次数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetDomainQueryCountResponse> GetDomainQueryCount(GetDomainQueryCountRequest request) {
-            return await new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -461,25 +343,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<DelUserViewResponse> DelUserView(DelUserViewRequest request) {
             return await new DelUserViewExecutor().Client(this).Execute<DelUserViewResponse, DelUserViewResult, DelUserViewRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddMonitorResponse AddMonitor(AddMonitorRequest request) {
-            return  new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddMonitorResponse> AddMonitor(AddMonitorRequest request) {
-            return await new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -564,6 +427,227 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  启用、停用、删除主域名下的解析记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateRRResponse OperateRR(OperateRRRequest request) {
+            return  new OperateRRExecutor().Client(this).Execute<OperateRRResponse, OperateRRResult, OperateRRRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用、停用、删除主域名下的解析记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateRRResponse> OperateRR(OperateRRRequest request) {
+            return await new OperateRRExecutor().Client(this).Execute<OperateRRResponse, OperateRRResult, OperateRRRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  域名的监控项修改
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateMonitorResponse UpdateMonitor(UpdateMonitorRequest request) {
+            return  new UpdateMonitorExecutor().Client(this).Execute<UpdateMonitorResponse, UpdateMonitorResult, UpdateMonitorRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  域名的监控项修改
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateMonitorResponse> UpdateMonitor(UpdateMonitorRequest request) {
+            return await new UpdateMonitorExecutor().Client(this).Execute<UpdateMonitorResponse, UpdateMonitorResult, UpdateMonitorRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DelUserViewIPResponse DelUserViewIP(DelUserViewIPRequest request) {
+            return  new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名的自定义解析线路的IP段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DelUserViewIPResponse> DelUserViewIP(DelUserViewIPRequest request) {
+            return await new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainsResponse GetDomains(GetDomainsRequest request) {
+            return  new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户名下的主域名列表。&lt;br&gt;    
+        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainsResponse> GetDomains(GetDomainsRequest request) {
+            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看当前域名所有的有负载均衡的解析记录&lt;br&gt;
+        /// 这些解析记录分页展示的列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetLBResponse GetLB(GetLBRequest request) {
+            return  new GetLBExecutor().Client(this).Execute<GetLBResponse, GetLBResult, GetLBRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看当前域名所有的有负载均衡的解析记录&lt;br&gt;
+        /// 这些解析记录分页展示的列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetLBResponse> GetLB(GetLBRequest request) {
+            return await new GetLBExecutor().Client(this).Execute<GetLBResponse, GetLBResult, GetLBRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子域名的可用监控对象
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTargetsResponse GetTargets(GetTargetsRequest request) {
+            return  new GetTargetsExecutor().Client(this).Execute<GetTargetsResponse, GetTargetsResult, GetTargetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子域名的可用监控对象
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTargetsResponse> GetTargets(GetTargetsRequest request) {
+            return await new GetTargetsExecutor().Client(this).Execute<GetTargetsResponse, GetTargetsResult, GetTargetsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetUserViewResponse GetUserView(GetUserViewRequest request) {
+            return  new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名的自定义解析线路
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetUserViewResponse> GetUserView(GetUserViewRequest request) {
+            return await new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看域名的解析次数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainQueryCountResponse GetDomainQueryCount(GetDomainQueryCountRequest request) {
+            return  new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看域名的解析次数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainQueryCountResponse> GetDomainQueryCount(GetDomainQueryCountRequest request) {
+            return await new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置域名解析记录的负载均衡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLBResponse SetLB(SetLBRequest request) {
+            return  new SetLBExecutor().Client(this).Execute<SetLBResponse, SetLBResult, SetLBRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置域名解析记录的负载均衡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLBResponse> SetLB(SetLBRequest request) {
+            return await new SetLBExecutor().Client(this).Execute<SetLBResponse, SetLBResult, SetLBRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  同一个主域名下，批量新增、更新导入解析记录&lt;br&gt;
+        /// 如果解析记录的ID为0，是新增解析记录，如果不为0，则是更新解析记录。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchSetDnsResolveResponse BatchSetDnsResolve(BatchSetDnsResolveRequest request) {
+            return  new BatchSetDnsResolveExecutor().Client(this).Execute<BatchSetDnsResolveResponse, BatchSetDnsResolveResult, BatchSetDnsResolveRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  同一个主域名下，批量新增、更新导入解析记录&lt;br&gt;
+        /// 如果解析记录的ID为0，是新增解析记录，如果不为0，则是更新解析记录。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchSetDnsResolveResponse> BatchSetDnsResolve(BatchSetDnsResolveRequest request) {
+            return await new BatchSetDnsResolveExecutor().Client(this).Execute<BatchSetDnsResolveResponse, BatchSetDnsResolveResult, BatchSetDnsResolveRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddMonitorResponse AddMonitor(AddMonitorRequest request) {
+            return  new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加子域名的监控项，默认把子域名的所有监控项都添加上监控
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddMonitorResponse> AddMonitor(AddMonitorRequest request) {
+            return await new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改主域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -602,25 +686,6 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <returns>请求结果信息</returns>
         public async Task<SearchRRResponse> SearchRR(SearchRRRequest request) {
             return await new SearchRRExecutor().Client(this).Execute<SearchRRResponse, SearchRRResult, SearchRRRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用、停用、删除主域名下的解析记录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public OperateRRResponse OperateRR(OperateRRRequest request) {
-            return  new OperateRRExecutor().Client(this).Execute<OperateRRResponse, OperateRRResult, OperateRRRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用、停用、删除主域名下的解析记录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<OperateRRResponse> OperateRR(OperateRRRequest request) {
-            return await new OperateRRExecutor().Client(this).Execute<OperateRRResponse, OperateRRResult, OperateRRRequest>(request);
         }
 #endif
 

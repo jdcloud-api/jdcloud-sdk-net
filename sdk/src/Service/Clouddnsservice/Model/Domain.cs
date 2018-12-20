@@ -57,5 +57,9 @@ namespace JDCloudSDK.Clouddnsservice.Model
         /// 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
         ///</summary>
         public int? PackId{ get; set; }
+        ///<summary>
+        /// 域名的锁定状态，0:未锁定， 1:已锁定
+        ///</summary>
+        public int? LockStatus{ get; set; }
     }
 }
