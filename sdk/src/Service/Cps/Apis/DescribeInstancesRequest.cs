@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Cps.Apis
@@ -72,7 +73,7 @@ namespace  JDCloudSDK.Cps.Apis
         /// instanceId - 云物理服务器ID，精确匹配，支持多个
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域

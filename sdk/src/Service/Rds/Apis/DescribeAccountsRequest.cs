@@ -39,6 +39,14 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeAccountsRequest : JdcloudRequest
     {
         ///<summary>
+        /// 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>

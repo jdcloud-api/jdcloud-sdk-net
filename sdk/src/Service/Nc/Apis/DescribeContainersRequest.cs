@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Nc.Apis
@@ -58,7 +59,7 @@ namespace  JDCloudSDK.Nc.Apis
         /// subnetId - 镜像ID，模糊匹配，支持单个
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vpc.Apis
@@ -52,7 +53,7 @@ namespace  JDCloudSDK.Vpc.Apis
         /// chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

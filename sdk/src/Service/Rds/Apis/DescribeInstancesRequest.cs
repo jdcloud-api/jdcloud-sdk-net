@@ -47,6 +47,24 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 过滤参数，多个过滤参数之间的关系为“与”(and)
+        /// 支持以下属性的过滤：
+        /// instanceId, 支持operator选项：eq
+        /// instanceName, 支持operator选项：eq
+        /// engine, 支持operator选项：eq
+        /// engineVersion, 支持operator选项：eq
+        /// instanceStatus, 支持operator选项：eq
+        /// chargeMode, 支持operator选项：eq
+        /// 
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
+        ///<summary>
+        /// 资源标签
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.TagFilter> TagFilters{ get; set; }
+
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>

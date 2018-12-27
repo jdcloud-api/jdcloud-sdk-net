@@ -43,5 +43,9 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public List<Account> Accounts{ get; set; }
 
+        ///<summary>
+        /// TotalCount
+        ///</summary>
+        public   int? TotalCount{ get; set; }
     }
 }

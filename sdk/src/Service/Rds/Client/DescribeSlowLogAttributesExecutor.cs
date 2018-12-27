@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server
+    ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class DescribeSlowLogAttributesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server接口的Http 请求方法
+        ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server接口的Http资源请求路径
+        ///  查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

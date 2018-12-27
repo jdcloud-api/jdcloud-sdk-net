@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+    ///  查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class DescribeSlowLogsResponse : JdcloudResponse<DescribeSlowLogsResult>
     {

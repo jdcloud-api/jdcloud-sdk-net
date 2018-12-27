@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Nc.Apis
@@ -52,7 +53,7 @@ namespace  JDCloudSDK.Nc.Apis
         /// name - secret名称，支持模糊搜索
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

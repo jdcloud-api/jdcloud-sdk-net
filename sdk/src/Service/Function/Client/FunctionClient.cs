@@ -138,6 +138,25 @@ namespace JDCloudSDK.Function.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询函数列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListFunctionResponse ListFunction(ListFunctionRequest request) {
+            return  new ListFunctionExecutor().Client(this).Execute<ListFunctionResponse, ListFunctionResult, ListFunctionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询函数列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListFunctionResponse> ListFunction(ListFunctionRequest request) {
+            return await new ListFunctionExecutor().Client(this).Execute<ListFunctionResponse, ListFunctionResult, ListFunctionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询触发器列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -157,6 +176,215 @@ namespace JDCloudSDK.Function.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVersionResponse DeleteVersion(DeleteVersionRequest request) {
+            return  new DeleteVersionExecutor().Client(this).Execute<DeleteVersionResponse, DeleteVersionResult, DeleteVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVersionResponse> DeleteVersion(DeleteVersionRequest request) {
+            return await new DeleteVersionExecutor().Client(this).Execute<DeleteVersionResponse, DeleteVersionResult, DeleteVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取版本详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVersionResponse GetVersion(GetVersionRequest request) {
+            return  new GetVersionExecutor().Client(this).Execute<GetVersionResponse, GetVersionResult, GetVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取版本详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVersionResponse> GetVersion(GetVersionRequest request) {
+            return await new GetVersionExecutor().Client(this).Execute<GetVersionResponse, GetVersionResult, GetVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除别名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteAliasResponse DeleteAlias(DeleteAliasRequest request) {
+            return  new DeleteAliasExecutor().Client(this).Execute<DeleteAliasResponse, DeleteAliasResult, DeleteAliasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除别名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteAliasResponse> DeleteAlias(DeleteAliasRequest request) {
+            return await new DeleteAliasExecutor().Client(this).Execute<DeleteAliasResponse, DeleteAliasResult, DeleteAliasRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询版本列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListVersionResponse ListVersion(ListVersionRequest request) {
+            return  new ListVersionExecutor().Client(this).Execute<ListVersionResponse, ListVersionResult, ListVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询版本列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListVersionResponse> ListVersion(ListVersionRequest request) {
+            return await new ListVersionExecutor().Client(this).Execute<ListVersionResponse, ListVersionResult, ListVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询函数详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetFunctionResponse GetFunction(GetFunctionRequest request) {
+            return  new GetFunctionExecutor().Client(this).Execute<GetFunctionResponse, GetFunctionResult, GetFunctionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询函数详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetFunctionResponse> GetFunction(GetFunctionRequest request) {
+            return await new GetFunctionExecutor().Client(this).Execute<GetFunctionResponse, GetFunctionResult, GetFunctionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateFunctionResponse CreateFunction(CreateFunctionRequest request) {
+            return  new CreateFunctionExecutor().Client(this).Execute<CreateFunctionResponse, CreateFunctionResult, CreateFunctionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest request) {
+            return await new CreateFunctionExecutor().Client(this).Execute<CreateFunctionResponse, CreateFunctionResult, CreateFunctionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新别名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateAliasResponse UpdateAlias(UpdateAliasRequest request) {
+            return  new UpdateAliasExecutor().Client(this).Execute<UpdateAliasResponse, UpdateAliasResult, UpdateAliasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新别名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateAliasResponse> UpdateAlias(UpdateAliasRequest request) {
+            return await new UpdateAliasExecutor().Client(this).Execute<UpdateAliasResponse, UpdateAliasResult, UpdateAliasRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询别名详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetAliasResponse GetAlias(GetAliasRequest request) {
+            return  new GetAliasExecutor().Client(this).Execute<GetAliasResponse, GetAliasResult, GetAliasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询别名详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetAliasResponse> GetAlias(GetAliasRequest request) {
+            return await new GetAliasExecutor().Client(this).Execute<GetAliasResponse, GetAliasResult, GetAliasRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest request) {
+            return  new DeleteFunctionExecutor().Client(this).Execute<DeleteFunctionResponse, DeleteFunctionResult, DeleteFunctionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteFunctionResponse> DeleteFunction(DeleteFunctionRequest request) {
+            return await new DeleteFunctionExecutor().Client(this).Execute<DeleteFunctionResponse, DeleteFunctionResult, DeleteFunctionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVersionResponse CreateVersion(CreateVersionRequest request) {
+            return  new CreateVersionExecutor().Client(this).Execute<CreateVersionResponse, CreateVersionResult, CreateVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVersionResponse> CreateVersion(CreateVersionRequest request) {
+            return await new CreateVersionExecutor().Client(this).Execute<CreateVersionResponse, CreateVersionResult, CreateVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建别名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAliasResponse CreateAlias(CreateAliasRequest request) {
+            return  new CreateAliasExecutor().Client(this).Execute<CreateAliasResponse, CreateAliasResult, CreateAliasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建别名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAliasResponse> CreateAlias(CreateAliasRequest request) {
+            return await new CreateAliasExecutor().Client(this).Execute<CreateAliasResponse, CreateAliasResult, CreateAliasRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取触发器详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,6 +400,63 @@ namespace JDCloudSDK.Function.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetTriggerResponse> GetTrigger(GetTriggerRequest request) {
             return await new GetTriggerExecutor().Client(this).Execute<GetTriggerResponse, GetTriggerResult, GetTriggerRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateFunctionResponse UpdateFunction(UpdateFunctionRequest request) {
+            return  new UpdateFunctionExecutor().Client(this).Execute<UpdateFunctionResponse, UpdateFunctionResult, UpdateFunctionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateFunctionResponse> UpdateFunction(UpdateFunctionRequest request) {
+            return await new UpdateFunctionExecutor().Client(this).Execute<UpdateFunctionResponse, UpdateFunctionResult, UpdateFunctionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  控制台测试执行函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public TestInvokeResponse TestInvoke(TestInvokeRequest request) {
+            return  new TestInvokeExecutor().Client(this).Execute<TestInvokeResponse, TestInvokeResult, TestInvokeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  控制台测试执行函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<TestInvokeResponse> TestInvoke(TestInvokeRequest request) {
+            return await new TestInvokeExecutor().Client(this).Execute<TestInvokeResponse, TestInvokeResult, TestInvokeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询别名列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListAliasResponse ListAlias(ListAliasRequest request) {
+            return  new ListAliasExecutor().Client(this).Execute<ListAliasResponse, ListAliasResult, ListAliasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询别名列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListAliasResponse> ListAlias(ListAliasRequest request) {
+            return await new ListAliasExecutor().Client(this).Execute<ListAliasResponse, ListAliasResult, ListAliasRequest>(request);
         }
 #endif
 

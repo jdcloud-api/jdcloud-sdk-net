@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cdn.Model;
 
 namespace  JDCloudSDK.Cdn.Apis
 {
@@ -37,6 +38,51 @@ namespace  JDCloudSDK.Cdn.Apis
     /// </summary>
     public class GetDomainDetailResult : JdcloudResult
     {
+        ///<summary>
+        /// AllStatus
+        ///</summary>
+        public   string AllStatus{ get; set; }
+        ///<summary>
+        /// AllowNoReferHeader
+        ///</summary>
+        public   string AllowNoReferHeader{ get; set; }
+        ///<summary>
+        /// AllowNullReferHeader
+        ///</summary>
+        public   string AllowNullReferHeader{ get; set; }
+        ///<summary>
+        /// DailyBandWidth
+        ///</summary>
+        public   int? DailyBandWidth{ get; set; }
+        ///<summary>
+        /// ForbiddenType
+        ///</summary>
+        public   string ForbiddenType{ get; set; }
+        ///<summary>
+        /// MaxFileSize
+        ///</summary>
+        public   long? MaxFileSize{ get; set; }
+        ///<summary>
+        /// MinFileSize
+        ///</summary>
+        public   long? MinFileSize{ get; set; }
+        ///<summary>
+        /// SumFileSize
+        ///</summary>
+        public   long? SumFileSize{ get; set; }
+        ///<summary>
+        /// AvgFileSize
+        ///</summary>
+        public   long? AvgFileSize{ get; set; }
+        ///<summary>
+        /// ReferList
+        ///</summary>
+        public List<string> ReferList{ get; set; }
+
+        ///<summary>
+        /// ReferType
+        ///</summary>
+        public   string ReferType{ get; set; }
         ///<summary>
         /// Domain
         ///</summary>
@@ -72,11 +118,15 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// Source
         ///</summary>
-        public   string Source{ get; set; }
+        public   BackSourceInfo Source{ get; set; }
         ///<summary>
         /// SourceType
         ///</summary>
         public   string SourceType{ get; set; }
+        ///<summary>
+        /// 默认的回源host
+        ///</summary>
+        public   string DefaultSourceHost{ get; set; }
         ///<summary>
         /// BackSourceType
         ///</summary>

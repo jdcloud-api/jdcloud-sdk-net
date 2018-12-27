@@ -78,5 +78,9 @@ namespace JDCloudSDK.Rds.Model
         /// 计费配置
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
+        ///<summary>
+        /// 标签信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

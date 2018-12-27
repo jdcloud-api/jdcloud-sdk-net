@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class RestoreDatabaseFromOSSRequest : JdcloudRequest
     {
         ///<summary>
-        /// 用户上传到对象存储OSS上的备份文件的内链
+        /// 用户上传到对象存储OSS上的备份文件的路径。&lt;br&gt;例如用户备份上传的bucket为db_backup，文件为test_server/db1.bak，那么ossULR为db_backup/test_server/db1.bak。&lt;br&gt;**授权说明**：需要授予账户ID：785455908940，对这个bucket的读取权限，具体步骤可以查看[文档](https://docs.jdcloud.com/cn/object-storage-service/set-bucket-policy-2)。
         ///Required:true
         ///</summary>
         [Required]

@@ -138,59 +138,78 @@ namespace JDCloudSDK.Cdn.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  分地区及运营商查询统计数据
+        ///  设置userAgent信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryStatisticsDataGroupByAreaResponse QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
-            return  new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
+        public SetUserAgentConfigResponse SetUserAgentConfig(SetUserAgentConfigRequest request) {
+            return  new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  分地区及运营商查询统计数据
+        ///  设置userAgent信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsDataGroupByAreaResponse> QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
-            return await new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
+        public async Task<SetUserAgentConfigResponse> SetUserAgentConfig(SetUserAgentConfigRequest request) {
+            return await new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  停止加速域名
+        ///  创建域名组
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public StopDomainResponse StopDomain(StopDomainRequest request) {
-            return  new StopDomainExecutor().Client(this).Execute<StopDomainResponse, StopDomainResult, StopDomainRequest>(request);
+        public CreateDomainGroupResponse CreateDomainGroup(CreateDomainGroupRequest request) {
+            return  new CreateDomainGroupExecutor().Client(this).Execute<CreateDomainGroupResponse, CreateDomainGroupResult, CreateDomainGroupRequest>(request);
         }
 #else
         /// <summary>
-        ///  停止加速域名
+        ///  创建域名组
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<StopDomainResponse> StopDomain(StopDomainRequest request) {
-            return await new StopDomainExecutor().Client(this).Execute<StopDomainResponse, StopDomainResult, StopDomainRequest>(request);
+        public async Task<CreateDomainGroupResponse> CreateDomainGroup(CreateDomainGroupRequest request) {
+            return await new CreateDomainGroupExecutor().Client(this).Execute<CreateDomainGroupResponse, CreateDomainGroupResult, CreateDomainGroupRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询TOP IP
+        ///  创建点播加速域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryStatisticsTopIpResponse QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
-            return  new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
+        public BatchCreateResponse BatchCreate(BatchCreateRequest request) {
+            return  new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询TOP IP
+        ///  创建点播加速域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsTopIpResponse> QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
-            return await new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
+        public async Task<BatchCreateResponse> BatchCreate(BatchCreateRequest request) {
+            return await new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  泛域名共享缓存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateShareCacheResponse OperateShareCache(OperateShareCacheRequest request) {
+            return  new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  泛域名共享缓存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateShareCacheResponse> OperateShareCache(OperateShareCacheRequest request) {
+            return await new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -214,6 +233,177 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置http协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHttpTypeResponse SetHttpType(SetHttpTypeRequest request) {
+            return  new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置http协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
+            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetIpBlackListResponse SetIpBlackList(SetIpBlackListRequest request) {
+            return  new SetIpBlackListExecutor().Client(this).Execute<SetIpBlackListResponse, SetIpBlackListResult, SetIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetIpBlackListResponse> SetIpBlackList(SetIpBlackListRequest request) {
+            return await new SetIpBlackListExecutor().Client(this).Execute<SetIpBlackListResponse, SetIpBlackListResult, SetIpBlackListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置源站信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetSourceResponse SetSource(SetSourceRequest request) {
+            return  new SetSourceExecutor().Client(this).Execute<SetSourceResponse, SetSourceResult, SetSourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置源站信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetSourceResponse> SetSource(SetSourceRequest request) {
+            return await new SetSourceExecutor().Client(this).Execute<SetSourceResponse, SetSourceResult, SetSourceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置URL鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainAccessKeyResponse SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
+            return  new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置URL鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainAccessKeyResponse> SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
+            return await new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  预览证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PreviewCertificateResponse PreviewCertificate(PreviewCertificateRequest request) {
+            return  new PreviewCertificateExecutor().Client(this).Execute<PreviewCertificateResponse, PreviewCertificateResult, PreviewCertificateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  预览证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PreviewCertificateResponse> PreviewCertificate(PreviewCertificateRequest request) {
+            return await new PreviewCertificateExecutor().Client(this).Execute<PreviewCertificateResponse, PreviewCertificateResult, PreviewCertificateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名组接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainGroupListResponse QueryDomainGroupList(QueryDomainGroupListRequest request) {
+            return  new QueryDomainGroupListExecutor().Client(this).Execute<QueryDomainGroupListResponse, QueryDomainGroupListResult, QueryDomainGroupListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名组接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainGroupListResponse> QueryDomainGroupList(QueryDomainGroupListRequest request) {
+            return await new QueryDomainGroupListExecutor().Client(this).Execute<QueryDomainGroupListResponse, QueryDomainGroupListResult, QueryDomainGroupListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsDataGroupByAreaResponse QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
+            return  new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsDataGroupByAreaResponse> QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
+            return await new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询未分组域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainsNotInGroupResponse QueryDomainsNotInGroup(QueryDomainsNotInGroupRequest request) {
+            return  new QueryDomainsNotInGroupExecutor().Client(this).Execute<QueryDomainsNotInGroupResponse, QueryDomainsNotInGroupResult, QueryDomainsNotInGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询未分组域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainsNotInGroupResponse> QueryDomainsNotInGroup(QueryDomainsNotInGroupRequest request) {
+            return await new QueryDomainsNotInGroupExecutor().Client(this).Execute<QueryDomainsNotInGroupResponse, QueryDomainsNotInGroupResult, QueryDomainsNotInGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建直播域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLiveDomainResponse CreateLiveDomain(CreateLiveDomainRequest request) {
+            return  new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建直播域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLiveDomainResponse> CreateLiveDomain(CreateLiveDomainRequest request) {
+            return await new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -233,21 +423,268 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询TOP Url
+        ///  添加缓存规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryStatisticsTopUrlResponse QueryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) {
-            return  new QueryStatisticsTopUrlExecutor().Client(this).Execute<QueryStatisticsTopUrlResponse, QueryStatisticsTopUrlResult, QueryStatisticsTopUrlRequest>(request);
+        public CreateCacheRuleResponse CreateCacheRule(CreateCacheRuleRequest request) {
+            return  new CreateCacheRuleExecutor().Client(this).Execute<CreateCacheRuleResponse, CreateCacheRuleResult, CreateCacheRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询TOP Url
+        ///  添加缓存规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsTopUrlResponse> QueryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) {
-            return await new QueryStatisticsTopUrlExecutor().Client(this).Execute<QueryStatisticsTopUrlResponse, QueryStatisticsTopUrlResult, QueryStatisticsTopUrlRequest>(request);
+        public async Task<CreateCacheRuleResponse> CreateCacheRule(CreateCacheRuleRequest request) {
+            return await new CreateCacheRuleExecutor().Client(this).Execute<CreateCacheRuleResponse, CreateCacheRuleResult, CreateCacheRuleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置转协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetProtocolConvertResponse SetProtocolConvert(SetProtocolConvertRequest request) {
+            return  new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置转协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetProtocolConvertResponse> SetProtocolConvert(SetProtocolConvertRequest request) {
+            return await new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopDomainResponse StopDomain(StopDomainRequest request) {
+            return  new StopDomainExecutor().Client(this).Execute<StopDomainResponse, StopDomainResult, StopDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopDomainResponse> StopDomain(StopDomainRequest request) {
+            return await new StopDomainExecutor().Client(this).Execute<StopDomainResponse, StopDomainResult, StopDomainRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置视频拖拽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetVideoDraftResponse SetVideoDraft(SetVideoDraftRequest request) {
+            return  new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置视频拖拽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetVideoDraftResponse> SetVideoDraft(SetVideoDraftRequest request) {
+            return await new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置range参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetRangeResponse SetRange(SetRangeRequest request) {
+            return  new SetRangeExecutor().Client(this).Execute<SetRangeResponse, SetRangeResult, SetRangeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置range参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetRangeResponse> SetRange(SetRangeRequest request) {
+            return await new SetRangeExecutor().Client(this).Execute<SetRangeResponse, SetRangeResult, SetRangeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置域名refer防盗链
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainReferResponse SetLiveDomainRefer(SetLiveDomainReferRequest request) {
+            return  new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置域名refer防盗链
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainReferResponse> SetLiveDomainRefer(SetLiveDomainReferRequest request) {
+            return await new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询源站监控信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryMonitorResponse QueryMonitor(QueryMonitorRequest request) {
+            return  new QueryMonitorExecutor().Client(this).Execute<QueryMonitorResponse, QueryMonitorResult, QueryMonitorRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询源站监控信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryMonitorResponse> QueryMonitor(QueryMonitorRequest request) {
+            return await new QueryMonitorExecutor().Client(this).Execute<QueryMonitorResponse, QueryMonitorResult, QueryMonitorRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量删除域名组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDeleteDomainGroupResponse BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
+            return  new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除域名组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDeleteDomainGroupResponse> BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
+            return await new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建点播加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDomainResponse CreateDomain(CreateDomainRequest request) {
+            return  new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建点播加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest request) {
+            return await new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartDomainResponse StartDomain(StartDomainRequest request) {
+            return  new StartDomainExecutor().Client(this).Execute<StartDomainResponse, StartDomainResult, StartDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartDomainResponse> StartDomain(StartDomainRequest request) {
+            return await new StartDomainExecutor().Client(this).Execute<StartDomainResponse, StartDomainResult, StartDomainRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询默认http header头部参数列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDefaultHttpHeaderKeyResponse QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
+            return  new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询默认http header头部参数列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDefaultHttpHeaderKeyResponse> QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
+            return await new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止源站监控
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopMonitorResponse StopMonitor(StopMonitorRequest request) {
+            return  new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止源站监控
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopMonitorResponse> StopMonitor(StopMonitorRequest request) {
+            return await new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置ip黑名单状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateIpBlackListResponse OperateIpBlackList(OperateIpBlackListRequest request) {
+            return  new OperateIpBlackListExecutor().Client(this).Execute<OperateIpBlackListResponse, OperateIpBlackListResult, OperateIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置ip黑名单状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateIpBlackListResponse> OperateIpBlackList(OperateIpBlackListRequest request) {
+            return await new OperateIpBlackListExecutor().Client(this).Execute<OperateIpBlackListResponse, OperateIpBlackListResult, OperateIpBlackListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新域名组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateDomainGroupResponse UpdateDomainGroup(UpdateDomainGroupRequest request) {
+            return  new UpdateDomainGroupExecutor().Client(this).Execute<UpdateDomainGroupResponse, UpdateDomainGroupResult, UpdateDomainGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新域名组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateDomainGroupResponse> UpdateDomainGroup(UpdateDomainGroupRequest request) {
+            return await new UpdateDomainGroupExecutor().Client(this).Execute<UpdateDomainGroupResponse, UpdateDomainGroupResult, UpdateDomainGroupRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -271,21 +708,40 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询加速域名接口
+        ///  设置直播域名回源host
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetDomainListResponse GetDomainList(GetDomainListRequest request) {
-            return  new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
+        public SetLiveDomainBackSourceHostResponse SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
+            return  new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询加速域名接口
+        ///  设置直播域名回源host
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetDomainListResponse> GetDomainList(GetDomainListRequest request) {
-            return await new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
+        public async Task<SetLiveDomainBackSourceHostResponse> SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
+            return await new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名组详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainGroupDetailResponse QueryDomainGroupDetail(QueryDomainGroupDetailRequest request) {
+            return  new QueryDomainGroupDetailExecutor().Client(this).Execute<QueryDomainGroupDetailResponse, QueryDomainGroupDetailResult, QueryDomainGroupDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名组详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainGroupDetailResponse> QueryDomainGroupDetail(QueryDomainGroupDetailRequest request) {
+            return await new QueryDomainGroupDetailExecutor().Client(this).Execute<QueryDomainGroupDetailResponse, QueryDomainGroupDetailResult, QueryDomainGroupDetailRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -309,21 +765,401 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  启动加速域名
+        ///  查询域名配置信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public StartDomainResponse StartDomain(StartDomainRequest request) {
-            return  new StartDomainExecutor().Client(this).Execute<StartDomainResponse, StartDomainResult, StartDomainRequest>(request);
+        public QueryDomainConfigResponse QueryDomainConfig(QueryDomainConfigRequest request) {
+            return  new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  启动加速域名
+        ///  查询域名配置信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<StartDomainResponse> StartDomain(StartDomainRequest request) {
-            return await new StartDomainExecutor().Client(this).Execute<StartDomainResponse, StartDomainResult, StartDomainRequest>(request);
+        public async Task<QueryDomainConfigResponse> QueryDomainConfig(QueryDomainConfigRequest request) {
+            return await new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询url鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryAccesskeyConfigResponse QueryAccesskeyConfig(QueryAccesskeyConfigRequest request) {
+            return  new QueryAccesskeyConfigExecutor().Client(this).Execute<QueryAccesskeyConfigResponse, QueryAccesskeyConfigResult, QueryAccesskeyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询url鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryAccesskeyConfigResponse> QueryAccesskeyConfig(QueryAccesskeyConfigRequest request) {
+            return await new QueryAccesskeyConfigExecutor().Client(this).Execute<QueryAccesskeyConfigResponse, QueryAccesskeyConfigResult, QueryAccesskeyConfigRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播域名ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainIpBlackListResponse SetLiveDomainIpBlackList(SetLiveDomainIpBlackListRequest request) {
+            return  new SetLiveDomainIpBlackListExecutor().Client(this).Execute<SetLiveDomainIpBlackListResponse, SetLiveDomainIpBlackListResult, SetLiveDomainIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播域名ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainIpBlackListResponse> SetLiveDomainIpBlackList(SetLiveDomainIpBlackListRequest request) {
+            return await new SetLiveDomainIpBlackListExecutor().Client(this).Execute<SetLiveDomainIpBlackListResponse, SetLiveDomainIpBlackListResult, SetLiveDomainIpBlackListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加httpHeader
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHttpHeaderResponse SetHttpHeader(SetHttpHeaderRequest request) {
+            return  new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加httpHeader
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHttpHeaderResponse> SetHttpHeader(SetHttpHeaderRequest request) {
+            return await new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置userAgent信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryUserAgentResponse QueryUserAgent(QueryUserAgentRequest request) {
+            return  new QueryUserAgentExecutor().Client(this).Execute<QueryUserAgentResponse, QueryUserAgentResult, QueryUserAgentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置userAgent信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryUserAgentResponse> QueryUserAgent(QueryUserAgentRequest request) {
+            return await new QueryUserAgentExecutor().Client(this).Execute<QueryUserAgentResponse, QueryUserAgentResult, QueryUserAgentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播域名回源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainBackSourceResponse SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
+            return  new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播域名回源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainBackSourceResponse> SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
+            return await new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询oss存储域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryOssBucketsResponse QueryOssBuckets(QueryOssBucketsRequest request) {
+            return  new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询oss存储域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryOssBucketsResponse> QueryOssBuckets(QueryOssBucketsRequest request) {
+            return await new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询加速域名接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainListResponse GetDomainList(GetDomainListRequest request) {
+            return  new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询加速域名接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainListResponse> GetDomainList(GetDomainListRequest request) {
+            return await new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除缓存规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCacheRuleResponse DeleteCacheRule(DeleteCacheRuleRequest request) {
+            return  new DeleteCacheRuleExecutor().Client(this).Execute<DeleteCacheRuleResponse, DeleteCacheRuleResult, DeleteCacheRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除缓存规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCacheRuleResponse> DeleteCacheRule(DeleteCacheRuleRequest request) {
+            return await new DeleteCacheRuleExecutor().Client(this).Execute<DeleteCacheRuleResponse, DeleteCacheRuleResult, DeleteCacheRuleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询TOP IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsTopIpResponse QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
+            return  new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询TOP IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsTopIpResponse> QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
+            return await new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置忽略参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetIgnoreQueryStringResponse SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
+            return  new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置忽略参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetIgnoreQueryStringResponse> SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
+            return await new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播域名详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveDomainDetailResponse QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
+            return  new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播域名详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveDomainDetailResponse> QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
+            return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询TOP Url
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsTopUrlResponse QueryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) {
+            return  new QueryStatisticsTopUrlExecutor().Client(this).Execute<QueryStatisticsTopUrlResponse, QueryStatisticsTopUrlResult, QueryStatisticsTopUrlRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询TOP Url
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsTopUrlResponse> QueryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) {
+            return await new QueryStatisticsTopUrlExecutor().Client(this).Execute<QueryStatisticsTopUrlResponse, QueryStatisticsTopUrlResult, QueryStatisticsTopUrlRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询http header头
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryHttpHeaderResponse QueryHttpHeader(QueryHttpHeaderRequest request) {
+            return  new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询http header头
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryHttpHeaderResponse> QueryHttpHeader(QueryHttpHeaderRequest request) {
+            return await new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置url鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetAccesskeyConfigResponse SetAccesskeyConfig(SetAccesskeyConfigRequest request) {
+            return  new SetAccesskeyConfigExecutor().Client(this).Execute<SetAccesskeyConfigResponse, SetAccesskeyConfigResult, SetAccesskeyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置url鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetAccesskeyConfigResponse> SetAccesskeyConfig(SetAccesskeyConfigRequest request) {
+            return await new SetAccesskeyConfigExecutor().Client(this).Execute<SetAccesskeyConfigResponse, SetAccesskeyConfigResult, SetAccesskeyConfigRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除httpHeader
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteHttpHeaderResponse DeleteHttpHeader(DeleteHttpHeaderRequest request) {
+            return  new DeleteHttpHeaderExecutor().Client(this).Execute<DeleteHttpHeaderResponse, DeleteHttpHeaderResult, DeleteHttpHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除httpHeader
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteHttpHeaderResponse> DeleteHttpHeader(DeleteHttpHeaderRequest request) {
+            return await new DeleteHttpHeaderExecutor().Client(this).Execute<DeleteHttpHeaderResponse, DeleteHttpHeaderResult, DeleteHttpHeaderRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryIpBlackListResponse QueryIpBlackList(QueryIpBlackListRequest request) {
+            return  new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryIpBlackListResponse> QueryIpBlackList(QueryIpBlackListRequest request) {
+            return await new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启或关闭ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateLiveDomainIpBlackListResponse OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
+            return  new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启或关闭ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateLiveDomainIpBlackListResponse> OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
+            return await new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置源站监控信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetMonitorResponse SetMonitor(SetMonitorRequest request) {
+            return  new SetMonitorExecutor().Client(this).Execute<SetMonitorResponse, SetMonitorResult, SetMonitorRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置源站监控信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetMonitorResponse> SetMonitor(SetMonitorRequest request) {
+            return await new SetMonitorExecutor().Client(this).Execute<SetMonitorResponse, SetMonitorResult, SetMonitorRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置域名refer
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetReferResponse SetRefer(SetReferRequest request) {
+            return  new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置域名refer
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetReferResponse> SetRefer(SetReferRequest request) {
+            return await new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改缓存规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCacheRuleResponse UpdateCacheRule(UpdateCacheRuleRequest request) {
+            return  new UpdateCacheRuleExecutor().Client(this).Execute<UpdateCacheRuleResponse, UpdateCacheRuleResult, UpdateCacheRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改缓存规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCacheRuleResponse> UpdateCacheRule(UpdateCacheRuleRequest request) {
+            return await new UpdateCacheRuleExecutor().Client(this).Execute<UpdateCacheRuleResponse, UpdateCacheRuleResult, UpdateCacheRuleRequest>(request);
         }
 #endif
 

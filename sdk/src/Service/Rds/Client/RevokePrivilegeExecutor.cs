@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL
+    ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限
     /// </summary>
     public class RevokePrivilegeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vpc.Apis
@@ -54,7 +55,7 @@ namespace  JDCloudSDK.Vpc.Apis
         /// role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡），支持单个
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

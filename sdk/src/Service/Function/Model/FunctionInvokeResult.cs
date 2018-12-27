@@ -48,7 +48,7 @@ namespace JDCloudSDK.Function.Model
         ///<summary>
         /// 函数执行时间
         ///</summary>
-        public double? InvokeTime{ get; set; }
+        public float? InvokeTime{ get; set; }
         ///<summary>
         /// 函数收费时间
         ///</summary>
@@ -60,7 +60,7 @@ namespace JDCloudSDK.Function.Model
         ///<summary>
         /// 函数实际使用内存大小
         ///</summary>
-        public double? RealMem{ get; set; }
+        public float? RealMem{ get; set; }
         ///<summary>
         /// 函数执行日志
         ///</summary>

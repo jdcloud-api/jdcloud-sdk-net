@@ -95,7 +95,7 @@ namespace JDCloudSDK.Cr.Client
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
-        private const string defaultEndpoint = "openapi.cr.jdcloud.com";
+        private const string defaultEndpoint = "cr.jdcloud-api.com";
         private const string serviceName = "cr";
         private const string userAgent = userAgentPrefix + "/" + ClientVersion + " " + serviceName + "/" + apiVersion;
 

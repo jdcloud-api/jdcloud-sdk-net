@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Disk.Model;
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Disk.Apis
@@ -50,7 +50,7 @@ namespace  JDCloudSDK.Disk.Apis
         ///<summary>
         /// Tag筛选条件
         ///</summary>
-        public List<TagFilter> Tags{ get; set; }
+        public List<JDCloudSDK.Disk.Model.TagFilter> Tags{ get; set; }
 
         ///<summary>
         /// diskId - 云硬盘ID，精确匹配，支持多个
@@ -62,7 +62,7 @@ namespace  JDCloudSDK.Disk.Apis
         /// name - 云硬盘名称，模糊匹配，支持单个
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID

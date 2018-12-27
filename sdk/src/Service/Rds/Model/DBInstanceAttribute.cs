@@ -130,5 +130,9 @@ namespace JDCloudSDK.Rds.Model
         /// 高可用集群中从节点的信息&lt;br&gt;- 仅支持SQL Server
         ///</summary>
         public DBInstanceNode SecondaryNode{ get; set; }
+        ///<summary>
+        /// 标签信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

@@ -130,5 +130,9 @@ namespace JDCloudSDK.Mongodb.Model
         /// 是否设置白名单，true：已设置，false：未设置
         ///</summary>
         public bool IsSetSecurityIps{ get; set; }
+        ///<summary>
+        /// 标签
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

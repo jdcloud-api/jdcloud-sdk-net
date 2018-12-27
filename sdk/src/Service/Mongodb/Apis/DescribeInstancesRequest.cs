@@ -56,6 +56,11 @@ namespace  JDCloudSDK.Mongodb.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
+        /// Tag筛选条件
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.TagFilter> TagFilters{ get; set; }
+
+        ///<summary>
         /// createTime - 创建时间,asc（正序），desc（倒序）
         /// 
         ///</summary>
