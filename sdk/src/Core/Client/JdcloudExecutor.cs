@@ -459,7 +459,7 @@ namespace JDCloudSDK.Core.Client
                     StringBuilder paramStrBuilder = new StringBuilder();
                     foreach (var item in paramDicOrder)
                     {
-                        string value = System.Web.HttpUtility.UrlEncode(item.Value, Encoding.GetEncoding(charset));
+                        string value = item.Value; // System.Web.HttpUtility.UrlEncode(item.Value, Encoding.GetEncoding(charset));
                         Regex reg = new Regex(@"%[a-f0-9]{2}");
                         value = reg.Replace(value, m => m.Value.ToUpperInvariant());
                         paramStrBuilder.Append("&").Append(item.Key).Append("=").Append(value);
@@ -545,7 +545,13 @@ namespace JDCloudSDK.Core.Client
                         stringBuilder.Append(".");
                         stringBuilder.Append(i+1); 
                         string encodeStr = Regex.Replace(jArrayObject[i].ToString(), "^\"|\"$", "");
-                        string value =   System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(charset));
+#if NET35 || NET40
+                        string value = System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(charset));
+                        
+#else
+                        string value = System.Net.WebUtility.UrlEncode(encodeStr);
+
+#endif
                         dic.Add(stringBuilder.ToString(), value);
                     }
                     else
@@ -591,11 +597,15 @@ namespace JDCloudSDK.Core.Client
                     if (!string.IsNullOrWhiteSpace(valueJObject.ToString()))
 #endif
                     {
-                      
-                        // pname 
-                         
+                       
                         string encodeStr = Regex.Replace(valueJObject.ToString(), "^\"|\"$", "");
-                        string value =  System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(charset));
+#if NET35 || NET40
+                        string value = System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(charset));
+                        
+#else
+                        string value = System.Net.WebUtility.UrlEncode(encodeStr);
+
+#endif
                         dic.Add(pname,value);
                     } 
                 }

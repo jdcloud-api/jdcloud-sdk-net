@@ -1,4 +1,5 @@
 ﻿using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Client;
 using JDCloudSDK.Core.Http;
@@ -130,6 +131,15 @@ namespace JDCloudSDK.Test.Standard2
             describeInstancesRequest.RegionId = "cn-north-1";
             describeInstancesRequest.PageSize = 20;
             describeInstancesRequest.PageNumber = 1;
+            List<Filter> filters = new List<Filter>();
+
+            Filter filter = new Filter();
+            filter.Name = "name";
+            List<string> filterValues = new List<string>();
+            filterValues.Add("河北新明2");
+            filter.Values = filterValues;
+            filters.Add(filter);
+            describeInstancesRequest.Filters = filters;
             var response = vmClient.DescribeInstances(describeInstancesRequest).Result;
             _output.WriteLine(JsonConvert.SerializeObject(response));
         }
@@ -149,15 +159,13 @@ namespace JDCloudSDK.Test.Standard2
         public VmClient GetVmClient()
         {
             //1. 设置accessKey和secretKey
-            string accessKeyId = " ";
-            string secretAccessKey = " ";
-           
+            string accessKeyId = "";
+            string secretAccessKey = "";
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
            //2. 创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                     .CredentialsProvider(credentialsProvider)
-                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50))
-        
+                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50)) 
                     .Build();
             return vmClient;
         }
