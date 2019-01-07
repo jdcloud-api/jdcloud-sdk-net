@@ -39,9 +39,10 @@ dotnet add package JDCloudSDK.Vm --version 1.0.4.1
 
 请选择自己需要使用的模块安装。
 
-<em>注意：</em> 请使用包管理器将 JDCloudSDK.Core  的版本更新到0.2.2,因为以前版本在调用某些接口会出现鉴权失败的问题
+<em> 注意：</em> 请使用包管理器将 JDCloudSDK.Core  的版本更新到0.2.3,因为以前版本在调用某些接口会出现鉴权失败的问题
+
 ```powershell
-Install-Package JDCloudSDK.Core -Version 0.2.2
+Install-Package JDCloudSDK.Core -Version 0.2.3
 ```
 
 # 调用SDK
