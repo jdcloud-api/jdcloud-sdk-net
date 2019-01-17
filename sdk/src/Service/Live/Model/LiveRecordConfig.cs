@@ -42,12 +42,16 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// 录制模板配置
-        ///</summary>
-        public string RecordConfig{ get; set; }
-        ///<summary>
         /// 推流域名
         ///</summary>
-        public List<RecordApp> App{ get; set; }
+        public string AppName{ get; set; }
+        ///<summary>
+        /// 直播流名称
+        ///</summary>
+        public string StreamName{ get; set; }
+        ///<summary>
+        /// RecordConfig
+        ///</summary>
+        public string RecordConfig{ get; set; }
     }
 }

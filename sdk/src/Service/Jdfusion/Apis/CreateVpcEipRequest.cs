@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   AllocateEipAddressReq Body{ get; set; }
+        public   AllocateEipAddress Allocate{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateLoadBalancerHTTPListenerReq Body{ get; set; }
+        public   CreateLoadBalancerHTTPListener HttpListener{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

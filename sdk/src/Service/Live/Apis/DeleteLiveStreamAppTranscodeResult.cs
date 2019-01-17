@@ -33,13 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除app转码配置
+    ///  删除APP转码配置
     /// </summary>
     public class DeleteLiveStreamAppTranscodeResult : JdcloudResult
     {
-        ///<summary>
-        /// 直播的推流域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

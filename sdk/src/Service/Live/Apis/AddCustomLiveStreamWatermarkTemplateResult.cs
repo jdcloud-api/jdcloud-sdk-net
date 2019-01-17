@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Live.Apis
     /// </summary>
     public class AddCustomLiveStreamWatermarkTemplateResult : JdcloudResult
     {
-        ///<summary>
-        /// 返回结果
-        ///</summary>
-        public   bool Feedback{ get; set; }
     }
 }

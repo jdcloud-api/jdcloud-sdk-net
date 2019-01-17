@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询域名下的app列表
+    ///  查询域名下的APP列表
     /// </summary>
     public class DescribeLiveAppResult : JdcloudResult
     {
@@ -51,9 +51,9 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   double? TotalCount{ get; set; }
         ///<summary>
-        /// AppList
+        /// Apps
         ///</summary>
-        public List<AppList> AppList{ get; set; }
+        public List<App> Apps{ get; set; }
 
     }
 }

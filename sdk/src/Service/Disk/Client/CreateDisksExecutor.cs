@@ -33,12 +33,26 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    ///  创建一块或多块云硬盘
+    ///  -   创建一块或多块按配置或者按使用时长付费的云硬盘。
+        /// -   云硬盘类型包括高效云盘(premium-hdd)、SSD云盘(ssd)、通用型SSD(ssd.gp1)、性能型SSD(ssd.io1)、容量型HDD(hdd.std1)。
+        /// -   计费方式默认为按配置付费。
+        /// -   创建完成后，云硬盘状态为 available。
+        /// -   可选参数快照 ID用于从快照创建新盘。
+        /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
+        /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        /// 
     /// </summary>
     public class CreateDisksExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建一块或多块云硬盘接口的Http 请求方法
+        ///  -   创建一块或多块按配置或者按使用时长付费的云硬盘。
+        /// -   云硬盘类型包括高效云盘(premium-hdd)、SSD云盘(ssd)、通用型SSD(ssd.gp1)、性能型SSD(ssd.io1)、容量型HDD(hdd.std1)。
+        /// -   计费方式默认为按配置付费。
+        /// -   创建完成后，云硬盘状态为 available。
+        /// -   可选参数快照 ID用于从快照创建新盘。
+        /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
+        /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +61,14 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        ///  创建一块或多块云硬盘接口的Http资源请求路径
+        ///  -   创建一块或多块按配置或者按使用时长付费的云硬盘。
+        /// -   云硬盘类型包括高效云盘(premium-hdd)、SSD云盘(ssd)、通用型SSD(ssd.gp1)、性能型SSD(ssd.io1)、容量型HDD(hdd.std1)。
+        /// -   计费方式默认为按配置付费。
+        /// -   创建完成后，云硬盘状态为 available。
+        /// -   可选参数快照 ID用于从快照创建新盘。
+        /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
+        /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

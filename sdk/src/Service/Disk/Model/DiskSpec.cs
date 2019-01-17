@@ -56,7 +56,7 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 云硬盘类型，取值为ssd、premium-hdd之一
+        /// 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
         ///Required:true
         ///</summary>
         [Required]
@@ -75,5 +75,13 @@ namespace JDCloudSDK.Disk.Model
         /// 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
         ///</summary>
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
+        ///</summary>
+        public bool MultiAttachable{ get; set; }
+        ///<summary>
+        /// 云硬盘是否加密，默认为false（不加密）
+        ///</summary>
+        public bool Encrypt{ get; set; }
     }
 }

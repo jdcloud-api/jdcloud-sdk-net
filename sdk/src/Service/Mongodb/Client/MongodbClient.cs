@@ -89,9 +89,9 @@ namespace JDCloudSDK.Mongodb.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,116 +138,40 @@ namespace JDCloudSDK.Mongodb.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询实例访问白名单
+        ///  变更实例规格
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeSecurityIpsResponse DescribeSecurityIps(DescribeSecurityIpsRequest request) {
-            return  new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
+        public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
+            return  new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询实例访问白名单
+        ///  变更实例规格
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeSecurityIpsResponse> DescribeSecurityIps(DescribeSecurityIpsRequest request) {
-            return await new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
+        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
+            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改实例名称
+        ///  创建实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest request) {
-            return  new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
+        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
+            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改实例名称
+        ///  创建实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
-            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改实例访问白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request) {
-            return  new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改实例访问白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifySecurityIpsResponse> ModifySecurityIps(ModifySecurityIpsRequest request) {
-            return await new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  数据恢复
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
-            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  数据恢复
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
-            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重置密码
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
-            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置密码
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除实例
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request) {
-            return  new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除实例
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
-            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
+            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -271,21 +195,21 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取规格
+        ///  查询实例访问白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeFlavorsResponse DescribeFlavors(DescribeFlavorsRequest request) {
-            return  new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
+        public DescribeSecurityIpsResponse DescribeSecurityIps(DescribeSecurityIpsRequest request) {
+            return  new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取规格
+        ///  查询实例访问白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeFlavorsResponse> DescribeFlavors(DescribeFlavorsRequest request) {
-            return await new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
+        public async Task<DescribeSecurityIpsResponse> DescribeSecurityIps(DescribeSecurityIpsRequest request) {
+            return await new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -309,25 +233,6 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看备份
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
-            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看备份
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
-            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -347,21 +252,78 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  变更实例规格
+        ///  删除实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
-            return  new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+        public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request) {
+            return  new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  变更实例规格
+        ///  删除实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
-            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
+            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  数据恢复
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
+            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  数据恢复
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取规格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeFlavorsResponse DescribeFlavors(DescribeFlavorsRequest request) {
+            return  new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取规格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeFlavorsResponse> DescribeFlavors(DescribeFlavorsRequest request) {
+            return await new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重置密码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
+            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置密码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -404,40 +366,21 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建实例
+        ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
-            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+        public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest request) {
+            return  new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建实例
+        ///  修改实例名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
-            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除备份
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteBackupResponse DeleteBackup(DeleteBackupRequest request) {
-            return  new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除备份
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
-            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+        public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
+            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -457,6 +400,63 @@ namespace JDCloudSDK.Mongodb.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAvailableZonesResponse> DescribeAvailableZones(DescribeAvailableZonesRequest request) {
             return await new DescribeAvailableZonesExecutor().Client(this).Execute<DescribeAvailableZonesResponse, DescribeAvailableZonesResult, DescribeAvailableZonesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改实例访问白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request) {
+            return  new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例访问白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifySecurityIpsResponse> ModifySecurityIps(ModifySecurityIpsRequest request) {
+            return await new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
+            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
+            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBackupResponse DeleteBackup(DeleteBackupRequest request) {
+            return  new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
+            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
         }
 #endif
 

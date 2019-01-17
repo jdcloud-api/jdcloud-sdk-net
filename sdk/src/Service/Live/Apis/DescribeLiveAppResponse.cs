@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询域名下的app列表
+    ///  查询域名下的APP列表
     /// </summary>
     public class DescribeLiveAppResponse : JdcloudResponse<DescribeLiveAppResult>
     {

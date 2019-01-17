@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateSlbReq Body{ get; set; }
+        public   SlbInfo Slb{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

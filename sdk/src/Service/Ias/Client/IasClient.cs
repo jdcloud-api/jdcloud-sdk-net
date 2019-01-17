@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ias.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,97 +138,21 @@ namespace JDCloudSDK.Ias.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  创建应用
+        ///  获取应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateAppResponse CreateApp(CreateAppRequest request) {
-            return  new CreateAppExecutor().Client(this).Execute<CreateAppResponse, CreateAppResult, CreateAppRequest>(request);
+        public GetAppResponse GetApp(GetAppRequest request) {
+            return  new GetAppExecutor().Client(this).Execute<GetAppResponse, GetAppResult, GetAppRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建应用
+        ///  获取应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateAppResponse> CreateApp(CreateAppRequest request) {
-            return await new CreateAppExecutor().Client(this).Execute<CreateAppResponse, CreateAppResult, CreateAppRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台获取应用详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AppDetailResponse AppDetail(AppDetailRequest request) {
-            return  new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台获取应用详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AppDetailResponse> AppDetail(AppDetailRequest request) {
-            return await new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新应用（只传需要变更的参数，不传的参数不会更新）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateAppResponse UpdateApp(UpdateAppRequest request) {
-            return  new UpdateAppExecutor().Client(this).Execute<UpdateAppResponse, UpdateAppResult, UpdateAppRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新应用（只传需要变更的参数，不传的参数不会更新）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateAppResponse> UpdateApp(UpdateAppRequest request) {
-            return await new UpdateAppExecutor().Client(this).Execute<UpdateAppResponse, UpdateAppResult, UpdateAppRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取账户下所有应用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAppsResponse GetApps(GetAppsRequest request) {
-            return  new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取账户下所有应用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAppsResponse> GetApps(GetAppsRequest request) {
-            return await new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台查询app
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AppsResponse Apps(AppsRequest request) {
-            return  new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台查询app
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AppsResponse> Apps(AppsRequest request) {
-            return await new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
+        public async Task<GetAppResponse> GetApp(GetAppRequest request) {
+            return await new GetAppExecutor().Client(this).Execute<GetAppResponse, GetAppResult, GetAppRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -252,6 +176,82 @@ namespace JDCloudSDK.Ias.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建应用
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAppResponse CreateApp(CreateAppRequest request) {
+            return  new CreateAppExecutor().Client(this).Execute<CreateAppResponse, CreateAppResult, CreateAppRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建应用
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAppResponse> CreateApp(CreateAppRequest request) {
+            return await new CreateAppExecutor().Client(this).Execute<CreateAppResponse, CreateAppResult, CreateAppRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取账户下所有应用
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetAppsResponse GetApps(GetAppsRequest request) {
+            return  new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取账户下所有应用
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetAppsResponse> GetApps(GetAppsRequest request) {
+            return await new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新应用（只传需要变更的参数，不传的参数不会更新）
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateAppResponse UpdateApp(UpdateAppRequest request) {
+            return  new UpdateAppExecutor().Client(this).Execute<UpdateAppResponse, UpdateAppResult, UpdateAppRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新应用（只传需要变更的参数，不传的参数不会更新）
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateAppResponse> UpdateApp(UpdateAppRequest request) {
+            return await new UpdateAppExecutor().Client(this).Execute<UpdateAppResponse, UpdateAppResult, UpdateAppRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  运营后台获取应用详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AppDetailResponse AppDetail(AppDetailRequest request) {
+            return  new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  运营后台获取应用详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AppDetailResponse> AppDetail(AppDetailRequest request) {
+            return await new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除应用
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -271,21 +271,21 @@ namespace JDCloudSDK.Ias.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取应用
+        ///  运营后台查询app
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetAppResponse GetApp(GetAppRequest request) {
-            return  new GetAppExecutor().Client(this).Execute<GetAppResponse, GetAppResult, GetAppRequest>(request);
+        public AppsResponse Apps(AppsRequest request) {
+            return  new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取应用
+        ///  运营后台查询app
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetAppResponse> GetApp(GetAppRequest request) {
-            return await new GetAppExecutor().Client(this).Execute<GetAppResponse, GetAppResult, GetAppRequest>(request);
+        public async Task<AppsResponse> Apps(AppsRequest request) {
+            return await new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
         }
 #endif
 

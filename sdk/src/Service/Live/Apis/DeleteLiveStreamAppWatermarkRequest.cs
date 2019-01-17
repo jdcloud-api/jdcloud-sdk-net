@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除app水印配置
+    ///  删除APP水印配置
     /// </summary>
     public class DeleteLiveStreamAppWatermarkRequest : JdcloudRequest
     {

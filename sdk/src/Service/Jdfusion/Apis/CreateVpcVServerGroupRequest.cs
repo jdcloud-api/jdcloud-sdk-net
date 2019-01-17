@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateVserverGroupReq Body{ get; set; }
+        public   CreateVserverGroup VserverGroup{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

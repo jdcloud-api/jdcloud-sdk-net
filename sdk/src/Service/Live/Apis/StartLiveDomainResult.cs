@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Live.Apis
     /// </summary>
     public class StartLiveDomainResult : JdcloudResult
     {
-        ///<summary>
-        /// 要启动的域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

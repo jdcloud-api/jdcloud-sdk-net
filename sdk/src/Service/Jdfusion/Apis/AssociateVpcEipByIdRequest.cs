@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   AssociateEipAddressReq Body{ get; set; }
+        public   AssociateEipAddress Associate{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

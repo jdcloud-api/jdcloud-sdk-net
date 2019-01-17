@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeCustomLiveStreamSnapshotConfigRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码；默认为1；取值范围[1, 100000]
         ///</summary>
         public   int? PageNum{ get; set; }
         ///<summary>

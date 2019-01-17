@@ -33,13 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除直播水印模板
+    ///  删除用户自定义水印模板
     /// </summary>
     public class DeleteCustomLiveStreamWatermarkTemplateResult : JdcloudResult
     {
-        ///<summary>
-        /// 录制模板自定义名称
-        ///</summary>
-        public   string Template{ get; set; }
     }
 }

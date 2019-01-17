@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询域名下的app列表
+    ///  查询域名下的APP列表
     /// </summary>
     public class DescribeLiveAppRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码；默认为1；取值范围[1, 100000]
         ///</summary>
         public   int? PageNum{ get; set; }
         ///<summary>

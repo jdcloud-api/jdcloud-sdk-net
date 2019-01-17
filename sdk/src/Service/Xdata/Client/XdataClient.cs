@@ -89,9 +89,9 @@ namespace JDCloudSDK.Xdata.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,82 +138,6 @@ namespace JDCloudSDK.Xdata.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  执行用户编写的PySpark脚本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExecutePySparkQueryResponse ExecutePySparkQuery(ExecutePySparkQueryRequest request) {
-            return  new ExecutePySparkQueryExecutor().Client(this).Execute<ExecutePySparkQueryResponse, ExecutePySparkQueryResult, ExecutePySparkQueryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  执行用户编写的PySpark脚本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExecutePySparkQueryResponse> ExecutePySparkQuery(ExecutePySparkQueryRequest request) {
-            return await new ExecutePySparkQueryExecutor().Client(this).Execute<ExecutePySparkQueryResponse, ExecutePySparkQueryResult, ExecutePySparkQueryRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户实例指定数据库下的所有数据表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListTableInfoResponse ListTableInfo(ListTableInfoRequest request) {
-            return  new ListTableInfoExecutor().Client(this).Execute<ListTableInfoResponse, ListTableInfoResult, ListTableInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户实例指定数据库下的所有数据表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListTableInfoResponse> ListTableInfo(ListTableInfoRequest request) {
-            return await new ListTableInfoExecutor().Client(this).Execute<ListTableInfoResponse, ListTableInfoResult, ListTableInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户实例的所有数据库信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListDatabaseInfoResponse ListDatabaseInfo(ListDatabaseInfoRequest request) {
-            return  new ListDatabaseInfoExecutor().Client(this).Execute<ListDatabaseInfoResponse, ListDatabaseInfoResult, ListDatabaseInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户实例的所有数据库信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListDatabaseInfoResponse> ListDatabaseInfo(ListDatabaseInfoRequest request) {
-            return await new ListDatabaseInfoExecutor().Client(this).Execute<ListDatabaseInfoResponse, ListDatabaseInfoResult, ListDatabaseInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除用户实例的指定数据库
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request) {
-            return  new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除用户实例的指定数据库
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
-            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建属于用户实例的数据库
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -233,158 +157,6 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取用户PySpark脚本的执行结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetPySparkExecuteResultResponse GetPySparkExecuteResult(GetPySparkExecuteResultRequest request) {
-            return  new GetPySparkExecuteResultExecutor().Client(this).Execute<GetPySparkExecuteResultResponse, GetPySparkExecuteResultResult, GetPySparkExecuteResultRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取用户PySpark脚本的执行结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetPySparkExecuteResultResponse> GetPySparkExecuteResult(GetPySparkExecuteResultRequest request) {
-            return await new GetPySparkExecuteResultExecutor().Client(this).Execute<GetPySparkExecuteResultResponse, GetPySparkExecuteResultResult, GetPySparkExecuteResultRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户所属的实例信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListInstanceInfoResponse ListInstanceInfo(ListInstanceInfoRequest request) {
-            return  new ListInstanceInfoExecutor().Client(this).Execute<ListInstanceInfoResponse, ListInstanceInfoResult, ListInstanceInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户所属的实例信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListInstanceInfoResponse> ListInstanceInfo(ListInstanceInfoRequest request) {
-            return await new ListInstanceInfoExecutor().Client(this).Execute<ListInstanceInfoResponse, ListInstanceInfoResult, ListInstanceInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取用户Spark SQL脚本的查询日志
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetRasQueryLogResponse GetRasQueryLog(GetRasQueryLogRequest request) {
-            return  new GetRasQueryLogExecutor().Client(this).Execute<GetRasQueryLogResponse, GetRasQueryLogResult, GetRasQueryLogRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取用户Spark SQL脚本的查询日志
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetRasQueryLogResponse> GetRasQueryLog(GetRasQueryLogRequest request) {
-            return await new GetRasQueryLogExecutor().Client(this).Execute<GetRasQueryLogResponse, GetRasQueryLogResult, GetRasQueryLogRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  执行用户编写的Spark SQL脚本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExecuteRasQueryResponse ExecuteRasQuery(ExecuteRasQueryRequest request) {
-            return  new ExecuteRasQueryExecutor().Client(this).Execute<ExecuteRasQueryResponse, ExecuteRasQueryResult, ExecuteRasQueryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  执行用户编写的Spark SQL脚本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExecuteRasQueryResponse> ExecuteRasQuery(ExecuteRasQueryRequest request) {
-            return await new ExecuteRasQueryExecutor().Client(this).Execute<ExecuteRasQueryResponse, ExecuteRasQueryResult, ExecuteRasQueryRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户实例的指定数据表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetTableInfoResponse GetTableInfo(GetTableInfoRequest request) {
-            return  new GetTableInfoExecutor().Client(this).Execute<GetTableInfoResponse, GetTableInfoResult, GetTableInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户实例的指定数据表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetTableInfoResponse> GetTableInfo(GetTableInfoRequest request) {
-            return await new GetTableInfoExecutor().Client(this).Execute<GetTableInfoResponse, GetTableInfoResult, GetTableInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除用户实例的指定数据表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteTableResponse DeleteTable(DeleteTableRequest request) {
-            return  new DeleteTableExecutor().Client(this).Execute<DeleteTableResponse, DeleteTableResult, DeleteTableRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除用户实例的指定数据表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteTableResponse> DeleteTable(DeleteTableRequest request) {
-            return await new DeleteTableExecutor().Client(this).Execute<DeleteTableResponse, DeleteTableResult, DeleteTableRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取用户Spark SQL脚本的查询结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetRasQueryResultResponse GetRasQueryResult(GetRasQueryResultRequest request) {
-            return  new GetRasQueryResultExecutor().Client(this).Execute<GetRasQueryResultResponse, GetRasQueryResultResult, GetRasQueryResultRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取用户Spark SQL脚本的查询结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetRasQueryResultResponse> GetRasQueryResult(GetRasQueryResultRequest request) {
-            return await new GetRasQueryResultExecutor().Client(this).Execute<GetRasQueryResultResponse, GetRasQueryResultResult, GetRasQueryResultRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  终止用户PySpark脚本任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CancelPySparkJobResponse CancelPySparkJob(CancelPySparkJobRequest request) {
-            return  new CancelPySparkJobExecutor().Client(this).Execute<CancelPySparkJobResponse, CancelPySparkJobResult, CancelPySparkJobRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  终止用户PySpark脚本任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CancelPySparkJobResponse> CancelPySparkJob(CancelPySparkJobRequest request) {
-            return await new CancelPySparkJobExecutor().Client(this).Execute<CancelPySparkJobResponse, CancelPySparkJobResult, CancelPySparkJobRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  终止用户Spark SQL脚本查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -400,6 +172,25 @@ namespace JDCloudSDK.Xdata.Client
         /// <returns>请求结果信息</returns>
         public async Task<CancelRasQueryResponse> CancelRasQuery(CancelRasQueryRequest request) {
             return await new CancelRasQueryExecutor().Client(this).Execute<CancelRasQueryResponse, CancelRasQueryResult, CancelRasQueryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户实例的所有数据库信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListDatabaseInfoResponse ListDatabaseInfo(ListDatabaseInfoRequest request) {
+            return  new ListDatabaseInfoExecutor().Client(this).Execute<ListDatabaseInfoResponse, ListDatabaseInfoResult, ListDatabaseInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户实例的所有数据库信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListDatabaseInfoResponse> ListDatabaseInfo(ListDatabaseInfoRequest request) {
+            return await new ListDatabaseInfoExecutor().Client(this).Execute<ListDatabaseInfoResponse, ListDatabaseInfoResult, ListDatabaseInfoRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -442,21 +233,21 @@ namespace JDCloudSDK.Xdata.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建用户实例的数据表
+        ///  查询用户实例指定数据库下的所有数据表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateTableResponse CreateTable(CreateTableRequest request) {
-            return  new CreateTableExecutor().Client(this).Execute<CreateTableResponse, CreateTableResult, CreateTableRequest>(request);
+        public ListTableInfoResponse ListTableInfo(ListTableInfoRequest request) {
+            return  new ListTableInfoExecutor().Client(this).Execute<ListTableInfoResponse, ListTableInfoResult, ListTableInfoRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建用户实例的数据表
+        ///  查询用户实例指定数据库下的所有数据表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateTableResponse> CreateTable(CreateTableRequest request) {
-            return await new CreateTableExecutor().Client(this).Execute<CreateTableResponse, CreateTableResult, CreateTableRequest>(request);
+        public async Task<ListTableInfoResponse> ListTableInfo(ListTableInfoRequest request) {
+            return await new ListTableInfoExecutor().Client(this).Execute<ListTableInfoResponse, ListTableInfoResult, ListTableInfoRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -476,6 +267,215 @@ namespace JDCloudSDK.Xdata.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetRasQueryStateResponse> GetRasQueryState(GetRasQueryStateRequest request) {
             return await new GetRasQueryStateExecutor().Client(this).Execute<GetRasQueryStateResponse, GetRasQueryStateResult, GetRasQueryStateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  执行用户编写的Spark SQL脚本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExecuteRasQueryResponse ExecuteRasQuery(ExecuteRasQueryRequest request) {
+            return  new ExecuteRasQueryExecutor().Client(this).Execute<ExecuteRasQueryResponse, ExecuteRasQueryResult, ExecuteRasQueryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  执行用户编写的Spark SQL脚本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExecuteRasQueryResponse> ExecuteRasQuery(ExecuteRasQueryRequest request) {
+            return await new ExecuteRasQueryExecutor().Client(this).Execute<ExecuteRasQueryResponse, ExecuteRasQueryResult, ExecuteRasQueryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  终止用户PySpark脚本任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CancelPySparkJobResponse CancelPySparkJob(CancelPySparkJobRequest request) {
+            return  new CancelPySparkJobExecutor().Client(this).Execute<CancelPySparkJobResponse, CancelPySparkJobResult, CancelPySparkJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  终止用户PySpark脚本任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CancelPySparkJobResponse> CancelPySparkJob(CancelPySparkJobRequest request) {
+            return await new CancelPySparkJobExecutor().Client(this).Execute<CancelPySparkJobResponse, CancelPySparkJobResult, CancelPySparkJobRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取用户PySpark脚本的执行结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetPySparkExecuteResultResponse GetPySparkExecuteResult(GetPySparkExecuteResultRequest request) {
+            return  new GetPySparkExecuteResultExecutor().Client(this).Execute<GetPySparkExecuteResultResponse, GetPySparkExecuteResultResult, GetPySparkExecuteResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取用户PySpark脚本的执行结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetPySparkExecuteResultResponse> GetPySparkExecuteResult(GetPySparkExecuteResultRequest request) {
+            return await new GetPySparkExecuteResultExecutor().Client(this).Execute<GetPySparkExecuteResultResponse, GetPySparkExecuteResultResult, GetPySparkExecuteResultRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户所属的实例信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListInstanceInfoResponse ListInstanceInfo(ListInstanceInfoRequest request) {
+            return  new ListInstanceInfoExecutor().Client(this).Execute<ListInstanceInfoResponse, ListInstanceInfoResult, ListInstanceInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户所属的实例信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListInstanceInfoResponse> ListInstanceInfo(ListInstanceInfoRequest request) {
+            return await new ListInstanceInfoExecutor().Client(this).Execute<ListInstanceInfoResponse, ListInstanceInfoResult, ListInstanceInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除用户实例的指定数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request) {
+            return  new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除用户实例的指定数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
+            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户实例的指定数据表信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTableInfoResponse GetTableInfo(GetTableInfoRequest request) {
+            return  new GetTableInfoExecutor().Client(this).Execute<GetTableInfoResponse, GetTableInfoResult, GetTableInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户实例的指定数据表信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTableInfoResponse> GetTableInfo(GetTableInfoRequest request) {
+            return await new GetTableInfoExecutor().Client(this).Execute<GetTableInfoResponse, GetTableInfoResult, GetTableInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  执行用户编写的PySpark脚本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExecutePySparkQueryResponse ExecutePySparkQuery(ExecutePySparkQueryRequest request) {
+            return  new ExecutePySparkQueryExecutor().Client(this).Execute<ExecutePySparkQueryResponse, ExecutePySparkQueryResult, ExecutePySparkQueryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  执行用户编写的PySpark脚本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExecutePySparkQueryResponse> ExecutePySparkQuery(ExecutePySparkQueryRequest request) {
+            return await new ExecutePySparkQueryExecutor().Client(this).Execute<ExecutePySparkQueryResponse, ExecutePySparkQueryResult, ExecutePySparkQueryRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取用户Spark SQL脚本的查询结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRasQueryResultResponse GetRasQueryResult(GetRasQueryResultRequest request) {
+            return  new GetRasQueryResultExecutor().Client(this).Execute<GetRasQueryResultResponse, GetRasQueryResultResult, GetRasQueryResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取用户Spark SQL脚本的查询结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRasQueryResultResponse> GetRasQueryResult(GetRasQueryResultRequest request) {
+            return await new GetRasQueryResultExecutor().Client(this).Execute<GetRasQueryResultResponse, GetRasQueryResultResult, GetRasQueryResultRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建用户实例的数据表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTableResponse CreateTable(CreateTableRequest request) {
+            return  new CreateTableExecutor().Client(this).Execute<CreateTableResponse, CreateTableResult, CreateTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建用户实例的数据表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTableResponse> CreateTable(CreateTableRequest request) {
+            return await new CreateTableExecutor().Client(this).Execute<CreateTableResponse, CreateTableResult, CreateTableRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取用户Spark SQL脚本的查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRasQueryLogResponse GetRasQueryLog(GetRasQueryLogRequest request) {
+            return  new GetRasQueryLogExecutor().Client(this).Execute<GetRasQueryLogResponse, GetRasQueryLogResult, GetRasQueryLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取用户Spark SQL脚本的查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRasQueryLogResponse> GetRasQueryLog(GetRasQueryLogRequest request) {
+            return await new GetRasQueryLogExecutor().Client(this).Execute<GetRasQueryLogResponse, GetRasQueryLogResult, GetRasQueryLogRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除用户实例的指定数据表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTableResponse DeleteTable(DeleteTableRequest request) {
+            return  new DeleteTableExecutor().Client(this).Execute<DeleteTableResponse, DeleteTableResult, DeleteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除用户实例的指定数据表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTableResponse> DeleteTable(DeleteTableRequest request) {
+            return await new DeleteTableExecutor().Client(this).Execute<DeleteTableResponse, DeleteTableResult, DeleteTableRequest>(request);
         }
 #endif
 

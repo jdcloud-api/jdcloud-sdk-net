@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JD Fusion
+ * JDFusion
  * 云主机、网卡、云硬盘、网络与相关、关系型数据库、对象存储等相关的接口
  *
  * OpenAPI spec version: v1
@@ -39,7 +39,7 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Jdfusion.Client
 {
     /// <summary>
-    ///  JD Fusion
+    ///  JDFusion
     ///  云主机、网卡、云硬盘、网络与相关、关系型数据库、对象存储等相关的接口
     ///  Jdfusion Api 客户端
     ///</summary>
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Jdfusion.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,21 +138,78 @@ namespace JDCloudSDK.Jdfusion.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  虚拟机规格列表
+        ///  启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVmInstanceTypesResponse GetVmInstanceTypes(GetVmInstanceTypesRequest request) {
-            return  new GetVmInstanceTypesExecutor().Client(this).Execute<GetVmInstanceTypesResponse, GetVmInstanceTypesResult, GetVmInstanceTypesRequest>(request);
+        public StartVmInstanceByIdResponse StartVmInstanceById(StartVmInstanceByIdRequest request) {
+            return  new StartVmInstanceByIdExecutor().Client(this).Execute<StartVmInstanceByIdResponse, StartVmInstanceByIdResult, StartVmInstanceByIdRequest>(request);
         }
 #else
         /// <summary>
-        ///  虚拟机规格列表
+        ///  启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVmInstanceTypesResponse> GetVmInstanceTypes(GetVmInstanceTypesRequest request) {
-            return await new GetVmInstanceTypesExecutor().Client(this).Execute<GetVmInstanceTypesResponse, GetVmInstanceTypesResult, GetVmInstanceTypesRequest>(request);
+        public async Task<StartVmInstanceByIdResponse> StartVmInstanceById(StartVmInstanceByIdRequest request) {
+            return await new StartVmInstanceByIdExecutor().Client(this).Execute<StartVmInstanceByIdResponse, StartVmInstanceByIdResult, StartVmInstanceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定RDS实例上，指定用户名的账号信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRdsAccountResponse DeleteRdsAccount(DeleteRdsAccountRequest request) {
+            return  new DeleteRdsAccountExecutor().Client(this).Execute<DeleteRdsAccountResponse, DeleteRdsAccountResult, DeleteRdsAccountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定RDS实例上，指定用户名的账号信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRdsAccountResponse> DeleteRdsAccount(DeleteRdsAccountRequest request) {
+            return await new DeleteRdsAccountExecutor().Client(this).Execute<DeleteRdsAccountResponse, DeleteRdsAccountResult, DeleteRdsAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDeploymentResponse CreateDeployment(CreateDeploymentRequest request) {
+            return  new CreateDeploymentExecutor().Client(this).Execute<CreateDeploymentResponse, CreateDeploymentResult, CreateDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDeploymentResponse> CreateDeployment(CreateDeploymentRequest request) {
+            return await new CreateDeploymentExecutor().Client(this).Execute<CreateDeploymentResponse, CreateDeploymentResult, CreateDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的OSS存储桶信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBucketByNameResponse GetBucketByName(GetBucketByNameRequest request) {
+            return  new GetBucketByNameExecutor().Client(this).Execute<GetBucketByNameResponse, GetBucketByNameResult, GetBucketByNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的OSS存储桶信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBucketByNameResponse> GetBucketByName(GetBucketByNameRequest request) {
+            return await new GetBucketByNameExecutor().Client(this).Execute<GetBucketByNameResponse, GetBucketByNameResult, GetBucketByNameRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -176,591 +233,78 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的网卡资源信息
+        ///  根据云提供商查询对应的虚拟机资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVpcNetworkInterfacesResponse GetVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) {
-            return  new GetVpcNetworkInterfacesExecutor().Client(this).Execute<GetVpcNetworkInterfacesResponse, GetVpcNetworkInterfacesResult, GetVpcNetworkInterfacesRequest>(request);
+        public GetVmInstancesResponse GetVmInstances(GetVmInstancesRequest request) {
+            return  new GetVmInstancesExecutor().Client(this).Execute<GetVmInstancesResponse, GetVmInstancesResult, GetVmInstancesRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的网卡资源信息
+        ///  根据云提供商查询对应的虚拟机资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVpcNetworkInterfacesResponse> GetVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) {
-            return await new GetVpcNetworkInterfacesExecutor().Client(this).Execute<GetVpcNetworkInterfacesResponse, GetVpcNetworkInterfacesResult, GetVpcNetworkInterfacesRequest>(request);
+        public async Task<GetVmInstancesResponse> GetVmInstances(GetVmInstancesRequest request) {
+            return await new GetVmInstancesExecutor().Client(this).Execute<GetVmInstancesResponse, GetVmInstancesResult, GetVmInstancesRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的负载均衡资源信息
+        ///  应用部署回滚
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVpcSlbsResponse GetVpcSlbs(GetVpcSlbsRequest request) {
-            return  new GetVpcSlbsExecutor().Client(this).Execute<GetVpcSlbsResponse, GetVpcSlbsResult, GetVpcSlbsRequest>(request);
+        public RollbackDeploymentsVersionResponse RollbackDeploymentsVersion(RollbackDeploymentsVersionRequest request) {
+            return  new RollbackDeploymentsVersionExecutor().Client(this).Execute<RollbackDeploymentsVersionResponse, RollbackDeploymentsVersionResult, RollbackDeploymentsVersionRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的负载均衡资源信息
+        ///  应用部署回滚
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVpcSlbsResponse> GetVpcSlbs(GetVpcSlbsRequest request) {
-            return await new GetVpcSlbsExecutor().Client(this).Execute<GetVpcSlbsResponse, GetVpcSlbsResult, GetVpcSlbsRequest>(request);
+        public async Task<RollbackDeploymentsVersionResponse> RollbackDeploymentsVersion(RollbackDeploymentsVersionRequest request) {
+            return await new RollbackDeploymentsVersionExecutor().Client(this).Execute<RollbackDeploymentsVersionResponse, RollbackDeploymentsVersionResult, RollbackDeploymentsVersionRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  网卡挂载虚拟机
+        ///  根据过滤条件，取得指定RDS实例上的数据库信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AttachVpcNetworkInterfaceByIdResponse AttachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) {
-            return  new AttachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<AttachVpcNetworkInterfaceByIdResponse, AttachVpcNetworkInterfaceByIdResult, AttachVpcNetworkInterfaceByIdRequest>(request);
+        public GetRdsDatabaseByInstIdAndDbNameResponse GetRdsDatabaseByInstIdAndDbName(GetRdsDatabaseByInstIdAndDbNameRequest request) {
+            return  new GetRdsDatabaseByInstIdAndDbNameExecutor().Client(this).Execute<GetRdsDatabaseByInstIdAndDbNameResponse, GetRdsDatabaseByInstIdAndDbNameResult, GetRdsDatabaseByInstIdAndDbNameRequest>(request);
         }
 #else
         /// <summary>
-        ///  网卡挂载虚拟机
+        ///  根据过滤条件，取得指定RDS实例上的数据库信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AttachVpcNetworkInterfaceByIdResponse> AttachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) {
-            return await new AttachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<AttachVpcNetworkInterfaceByIdResponse, AttachVpcNetworkInterfaceByIdResult, AttachVpcNetworkInterfaceByIdRequest>(request);
+        public async Task<GetRdsDatabaseByInstIdAndDbNameResponse> GetRdsDatabaseByInstIdAndDbName(GetRdsDatabaseByInstIdAndDbNameRequest request) {
+            return await new GetRdsDatabaseByInstIdAndDbNameExecutor().Client(this).Execute<GetRdsDatabaseByInstIdAndDbNameResponse, GetRdsDatabaseByInstIdAndDbNameResult, GetRdsDatabaseByInstIdAndDbNameRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商创建云硬盘
+        ///  查询应用记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateDiskResponse CreateDisk(CreateDiskRequest request) {
-            return  new CreateDiskExecutor().Client(this).Execute<CreateDiskResponse, CreateDiskResult, CreateDiskRequest>(request);
+        public GetDeploymentVersionsResponse GetDeploymentVersions(GetDeploymentVersionsRequest request) {
+            return  new GetDeploymentVersionsExecutor().Client(this).Execute<GetDeploymentVersionsResponse, GetDeploymentVersionsResult, GetDeploymentVersionsRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商创建云硬盘
+        ///  查询应用记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateDiskResponse> CreateDisk(CreateDiskRequest request) {
-            return await new CreateDiskExecutor().Client(this).Execute<CreateDiskResponse, CreateDiskResult, CreateDiskRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商创建网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateVpcNetworkInterfaceResponse CreateVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) {
-            return  new CreateVpcNetworkInterfaceExecutor().Client(this).Execute<CreateVpcNetworkInterfaceResponse, CreateVpcNetworkInterfaceResult, CreateVpcNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商创建网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateVpcNetworkInterfaceResponse> CreateVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) {
-            return await new CreateVpcNetworkInterfaceExecutor().Client(this).Execute<CreateVpcNetworkInterfaceResponse, CreateVpcNetworkInterfaceResult, CreateVpcNetworkInterfaceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  只能重启状态为 运行中（Running）的实例。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RebootVmInstanceByIdResponse RebootVmInstanceById(RebootVmInstanceByIdRequest request) {
-            return  new RebootVmInstanceByIdExecutor().Client(this).Execute<RebootVmInstanceByIdResponse, RebootVmInstanceByIdResult, RebootVmInstanceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  只能重启状态为 运行中（Running）的实例。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RebootVmInstanceByIdResponse> RebootVmInstanceById(RebootVmInstanceByIdRequest request) {
-            return await new RebootVmInstanceByIdExecutor().Client(this).Execute<RebootVmInstanceByIdResponse, RebootVmInstanceByIdResult, RebootVmInstanceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商查询对应的云硬盘资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetDiskByIdResponse GetDiskById(GetDiskByIdRequest request) {
-            return  new GetDiskByIdExecutor().Client(this).Execute<GetDiskByIdResponse, GetDiskByIdResult, GetDiskByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商查询对应的云硬盘资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetDiskByIdResponse> GetDiskById(GetDiskByIdRequest request) {
-            return await new GetDiskByIdExecutor().Client(this).Execute<GetDiskByIdResponse, GetDiskByIdResult, GetDiskByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商查询对应的VM资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetVmInstancesByIdResponse GetVmInstancesById(GetVmInstancesByIdRequest request) {
-            return  new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商查询对应的VM资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetVmInstancesByIdResponse> GetVmInstancesById(GetVmInstancesByIdRequest request) {
-            return await new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商创建私有网络
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateVpcResponse CreateVpc(CreateVpcRequest request) {
-            return  new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商创建私有网络
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
-            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商查询对应的网卡资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetVpcNetworkInterfaceByIdResponse GetVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) {
-            return  new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商查询对应的网卡资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetVpcNetworkInterfaceByIdResponse> GetVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) {
-            return await new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商查询对应的SLB资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetVpcSlbByIdResponse GetVpcSlbById(GetVpcSlbByIdRequest request) {
-            return  new GetVpcSlbByIdExecutor().Client(this).Execute<GetVpcSlbByIdResponse, GetVpcSlbByIdResult, GetVpcSlbByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商查询对应的SLB资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetVpcSlbByIdResponse> GetVpcSlbById(GetVpcSlbByIdRequest request) {
-            return await new GetVpcSlbByIdExecutor().Client(this).Execute<GetVpcSlbByIdResponse, GetVpcSlbByIdResult, GetVpcSlbByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商创建子网
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateVpcSubnetResponse CreateVpcSubnet(CreateVpcSubnetRequest request) {
-            return  new CreateVpcSubnetExecutor().Client(this).Execute<CreateVpcSubnetResponse, CreateVpcSubnetResult, CreateVpcSubnetRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商创建子网
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateVpcSubnetResponse> CreateVpcSubnet(CreateVpcSubnetRequest request) {
-            return await new CreateVpcSubnetExecutor().Client(this).Execute<CreateVpcSubnetResponse, CreateVpcSubnetResult, CreateVpcSubnetRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除弹性网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcNetworkInterfaceByIdResponse DeleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) {
-            return  new DeleteVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DeleteVpcNetworkInterfaceByIdResponse, DeleteVpcNetworkInterfaceByIdResult, DeleteVpcNetworkInterfaceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除弹性网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcNetworkInterfaceByIdResponse> DeleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) {
-            return await new DeleteVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DeleteVpcNetworkInterfaceByIdResponse, DeleteVpcNetworkInterfaceByIdResult, DeleteVpcNetworkInterfaceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  卸载网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DetachVpcNetworkInterfaceByIdResponse DetachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) {
-            return  new DetachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DetachVpcNetworkInterfaceByIdResponse, DetachVpcNetworkInterfaceByIdResult, DetachVpcNetworkInterfaceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  卸载网卡
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DetachVpcNetworkInterfaceByIdResponse> DetachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) {
-            return await new DetachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DetachVpcNetworkInterfaceByIdResponse, DetachVpcNetworkInterfaceByIdResult, DetachVpcNetworkInterfaceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  为指定用户关联云
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RegistCloudInfoResponse RegistCloudInfo(RegistCloudInfoRequest request) {
-            return  new RegistCloudInfoExecutor().Client(this).Execute<RegistCloudInfoResponse, RegistCloudInfoResult, RegistCloudInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为指定用户关联云
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RegistCloudInfoResponse> RegistCloudInfo(RegistCloudInfoRequest request) {
-            return await new RegistCloudInfoExecutor().Client(this).Execute<RegistCloudInfoResponse, RegistCloudInfoResult, RegistCloudInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商查询对应的公网IP资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetVpcEipByIdResponse GetVpcEipById(GetVpcEipByIdRequest request) {
-            return  new GetVpcEipByIdExecutor().Client(this).Execute<GetVpcEipByIdResponse, GetVpcEipByIdResult, GetVpcEipByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商查询对应的公网IP资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetVpcEipByIdResponse> GetVpcEipById(GetVpcEipByIdRequest request) {
-            return await new GetVpcEipByIdExecutor().Client(this).Execute<GetVpcEipByIdResponse, GetVpcEipByIdResult, GetVpcEipByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除安全组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcSecurityGroupByIdResponse DeleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) {
-            return  new DeleteVpcSecurityGroupByIdExecutor().Client(this).Execute<DeleteVpcSecurityGroupByIdResponse, DeleteVpcSecurityGroupByIdResult, DeleteVpcSecurityGroupByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除安全组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcSecurityGroupByIdResponse> DeleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) {
-            return await new DeleteVpcSecurityGroupByIdExecutor().Client(this).Execute<DeleteVpcSecurityGroupByIdResponse, DeleteVpcSecurityGroupByIdResult, DeleteVpcSecurityGroupByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除云硬盘
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RemoveDiskByIdResponse RemoveDiskById(RemoveDiskByIdRequest request) {
-            return  new RemoveDiskByIdExecutor().Client(this).Execute<RemoveDiskByIdResponse, RemoveDiskByIdResult, RemoveDiskByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除云硬盘
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RemoveDiskByIdResponse> RemoveDiskById(RemoveDiskByIdRequest request) {
-            return await new RemoveDiskByIdExecutor().Client(this).Execute<RemoveDiskByIdResponse, RemoveDiskByIdResult, RemoveDiskByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商分配公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateVpcEipResponse CreateVpcEip(CreateVpcEipRequest request) {
-            return  new CreateVpcEipExecutor().Client(this).Execute<CreateVpcEipResponse, CreateVpcEipResult, CreateVpcEipRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商分配公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateVpcEipResponse> CreateVpcEip(CreateVpcEipRequest request) {
-            return await new CreateVpcEipExecutor().Client(this).Execute<CreateVpcEipResponse, CreateVpcEipResult, CreateVpcEipRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  弹性公网IP绑定到虚拟机
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AssociateVpcEipByIdResponse AssociateVpcEipById(AssociateVpcEipByIdRequest request) {
-            return  new AssociateVpcEipByIdExecutor().Client(this).Execute<AssociateVpcEipByIdResponse, AssociateVpcEipByIdResult, AssociateVpcEipByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  弹性公网IP绑定到虚拟机
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AssociateVpcEipByIdResponse> AssociateVpcEipById(AssociateVpcEipByIdRequest request) {
-            return await new AssociateVpcEipByIdExecutor().Client(this).Execute<AssociateVpcEipByIdResponse, AssociateVpcEipByIdResult, AssociateVpcEipByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商创建虚拟机
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateVmInstanceResponse CreateVmInstance(CreateVmInstanceRequest request) {
-            return  new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商创建虚拟机
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateVmInstanceResponse> CreateVmInstance(CreateVmInstanceRequest request) {
-            return await new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取指定云信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UnregistCloudInfoResponse UnregistCloudInfo(UnregistCloudInfoRequest request) {
-            return  new UnregistCloudInfoExecutor().Client(this).Execute<UnregistCloudInfoResponse, UnregistCloudInfoResult, UnregistCloudInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取指定云信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UnregistCloudInfoResponse> UnregistCloudInfo(UnregistCloudInfoRequest request) {
-            return await new UnregistCloudInfoExecutor().Client(this).Execute<UnregistCloudInfoResponse, UnregistCloudInfoResult, UnregistCloudInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  解绑公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisassociateVpcEipByIdResponse DisassociateVpcEipById(DisassociateVpcEipByIdRequest request) {
-            return  new DisassociateVpcEipByIdExecutor().Client(this).Execute<DisassociateVpcEipByIdResponse, DisassociateVpcEipByIdResult, DisassociateVpcEipByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  解绑公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisassociateVpcEipByIdResponse> DisassociateVpcEipById(DisassociateVpcEipByIdRequest request) {
-            return await new DisassociateVpcEipByIdExecutor().Client(this).Execute<DisassociateVpcEipByIdResponse, DisassociateVpcEipByIdResult, DisassociateVpcEipByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetVpcSecurityGroupByIdResponse GetVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) {
-            return  new GetVpcSecurityGroupByIdExecutor().Client(this).Execute<GetVpcSecurityGroupByIdResponse, GetVpcSecurityGroupByIdResult, GetVpcSecurityGroupByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetVpcSecurityGroupByIdResponse> GetVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) {
-            return await new GetVpcSecurityGroupByIdExecutor().Client(this).Execute<GetVpcSecurityGroupByIdResponse, GetVpcSecurityGroupByIdResult, GetVpcSecurityGroupByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除VPC
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcByIdResponse DeleteVpcById(DeleteVpcByIdRequest request) {
-            return  new DeleteVpcByIdExecutor().Client(this).Execute<DeleteVpcByIdResponse, DeleteVpcByIdResult, DeleteVpcByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除VPC
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcByIdResponse> DeleteVpcById(DeleteVpcByIdRequest request) {
-            return await new DeleteVpcByIdExecutor().Client(this).Execute<DeleteVpcByIdResponse, DeleteVpcByIdResult, DeleteVpcByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartVmInstanceByIdResponse StartVmInstanceById(StartVmInstanceByIdRequest request) {
-            return  new StartVmInstanceByIdExecutor().Client(this).Execute<StartVmInstanceByIdResponse, StartVmInstanceByIdResult, StartVmInstanceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartVmInstanceByIdResponse> StartVmInstanceById(StartVmInstanceByIdRequest request) {
-            return await new StartVmInstanceByIdExecutor().Client(this).Execute<StartVmInstanceByIdResponse, StartVmInstanceByIdResult, StartVmInstanceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取指定云信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetCloudInfoByIdResponse GetCloudInfoById(GetCloudInfoByIdRequest request) {
-            return  new GetCloudInfoByIdExecutor().Client(this).Execute<GetCloudInfoByIdResponse, GetCloudInfoByIdResult, GetCloudInfoByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取指定云信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetCloudInfoByIdResponse> GetCloudInfoById(GetCloudInfoByIdRequest request) {
-            return await new GetCloudInfoByIdExecutor().Client(this).Execute<GetCloudInfoByIdResponse, GetCloudInfoByIdResult, GetCloudInfoByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopVmInstanceByIdResponse StopVmInstanceById(StopVmInstanceByIdRequest request) {
-            return  new StopVmInstanceByIdExecutor().Client(this).Execute<StopVmInstanceByIdResponse, StopVmInstanceByIdResult, StopVmInstanceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopVmInstanceByIdResponse> StopVmInstanceById(StopVmInstanceByIdRequest request) {
-            return await new StopVmInstanceByIdExecutor().Client(this).Execute<StopVmInstanceByIdResponse, StopVmInstanceByIdResult, StopVmInstanceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  通过虚拟机id删除虚拟机
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVmInstanceByIdResponse DeleteVmInstanceById(DeleteVmInstanceByIdRequest request) {
-            return  new DeleteVmInstanceByIdExecutor().Client(this).Execute<DeleteVmInstanceByIdResponse, DeleteVmInstanceByIdResult, DeleteVmInstanceByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  通过虚拟机id删除虚拟机
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVmInstanceByIdResponse> DeleteVmInstanceById(DeleteVmInstanceByIdRequest request) {
-            return await new DeleteVmInstanceByIdExecutor().Client(this).Execute<DeleteVmInstanceByIdResponse, DeleteVmInstanceByIdResult, DeleteVmInstanceByIdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除密钥对
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVmKeypairByNameResponse DeleteVmKeypairByName(DeleteVmKeypairByNameRequest request) {
-            return  new DeleteVmKeypairByNameExecutor().Client(this).Execute<DeleteVmKeypairByNameResponse, DeleteVmKeypairByNameResult, DeleteVmKeypairByNameRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除密钥对
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVmKeypairByNameResponse> DeleteVmKeypairByName(DeleteVmKeypairByNameRequest request) {
-            return await new DeleteVmKeypairByNameExecutor().Client(this).Execute<DeleteVmKeypairByNameResponse, DeleteVmKeypairByNameResult, DeleteVmKeypairByNameRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除子网
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcSubnetByIdResponse DeleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) {
-            return  new DeleteVpcSubnetByIdExecutor().Client(this).Execute<DeleteVpcSubnetByIdResponse, DeleteVpcSubnetByIdResult, DeleteVpcSubnetByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除子网
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcSubnetByIdResponse> DeleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) {
-            return await new DeleteVpcSubnetByIdExecutor().Client(this).Execute<DeleteVpcSubnetByIdResponse, DeleteVpcSubnetByIdResult, DeleteVpcSubnetByIdRequest>(request);
+        public async Task<GetDeploymentVersionsResponse> GetDeploymentVersions(GetDeploymentVersionsRequest request) {
+            return await new GetDeploymentVersionsExecutor().Client(this).Execute<GetDeploymentVersionsResponse, GetDeploymentVersionsResult, GetDeploymentVersionsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -784,40 +328,268 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的虚拟机资源信息
+        ///  根据过滤条件，取得指定RDS实例上的账号信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVmInstancesResponse GetVmInstances(GetVmInstancesRequest request) {
-            return  new GetVmInstancesExecutor().Client(this).Execute<GetVmInstancesResponse, GetVmInstancesResult, GetVmInstancesRequest>(request);
+        public GetRdsAccountsByInstIdAndAccountNameResponse GetRdsAccountsByInstIdAndAccountName(GetRdsAccountsByInstIdAndAccountNameRequest request) {
+            return  new GetRdsAccountsByInstIdAndAccountNameExecutor().Client(this).Execute<GetRdsAccountsByInstIdAndAccountNameResponse, GetRdsAccountsByInstIdAndAccountNameResult, GetRdsAccountsByInstIdAndAccountNameRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的虚拟机资源信息
+        ///  根据过滤条件，取得指定RDS实例上的账号信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVmInstancesResponse> GetVmInstances(GetVmInstancesRequest request) {
-            return await new GetVmInstancesExecutor().Client(this).Execute<GetVmInstancesResponse, GetVmInstancesResult, GetVmInstancesRequest>(request);
+        public async Task<GetRdsAccountsByInstIdAndAccountNameResponse> GetRdsAccountsByInstIdAndAccountName(GetRdsAccountsByInstIdAndAccountNameRequest request) {
+            return await new GetRdsAccountsByInstIdAndAccountNameExecutor().Client(this).Execute<GetRdsAccountsByInstIdAndAccountNameResponse, GetRdsAccountsByInstIdAndAccountNameResult, GetRdsAccountsByInstIdAndAccountNameRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的subnet资源信息
+        ///  根据云提供商查询对应的网卡资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVpcSubnetByIdResponse GetVpcSubnetById(GetVpcSubnetByIdRequest request) {
-            return  new GetVpcSubnetByIdExecutor().Client(this).Execute<GetVpcSubnetByIdResponse, GetVpcSubnetByIdResult, GetVpcSubnetByIdRequest>(request);
+        public GetVpcNetworkInterfaceByIdResponse GetVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) {
+            return  new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的subnet资源信息
+        ///  根据云提供商查询对应的网卡资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVpcSubnetByIdResponse> GetVpcSubnetById(GetVpcSubnetByIdRequest request) {
-            return await new GetVpcSubnetByIdExecutor().Client(this).Execute<GetVpcSubnetByIdResponse, GetVpcSubnetByIdResult, GetVpcSubnetByIdRequest>(request);
+        public async Task<GetVpcNetworkInterfaceByIdResponse> GetVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) {
+            return await new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询执行结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDeploymentResultResponse GetDeploymentResult(GetDeploymentResultRequest request) {
+            return  new GetDeploymentResultExecutor().Client(this).Execute<GetDeploymentResultResponse, GetDeploymentResultResult, GetDeploymentResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询执行结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDeploymentResultResponse> GetDeploymentResult(GetDeploymentResultRequest request) {
+            return await new GetDeploymentResultExecutor().Client(this).Execute<GetDeploymentResultResponse, GetDeploymentResultResult, GetDeploymentResultRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的OSS存储桶列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBucketsResponse GetBuckets(GetBucketsRequest request) {
+            return  new GetBucketsExecutor().Client(this).Execute<GetBucketsResponse, GetBucketsResult, GetBucketsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的OSS存储桶列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBucketsResponse> GetBuckets(GetBucketsRequest request) {
+            return await new GetBucketsExecutor().Client(this).Execute<GetBucketsResponse, GetBucketsResult, GetBucketsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据指定ID修改任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EditTransferTaskResponse EditTransferTask(EditTransferTaskRequest request) {
+            return  new EditTransferTaskExecutor().Client(this).Execute<EditTransferTaskResponse, EditTransferTaskResult, EditTransferTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据指定ID修改任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EditTransferTaskResponse> EditTransferTask(EditTransferTaskRequest request) {
+            return await new EditTransferTaskExecutor().Client(this).Execute<EditTransferTaskResponse, EditTransferTaskResult, EditTransferTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  只能重启状态为 运行中（Running）的实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RebootVmInstanceByIdResponse RebootVmInstanceById(RebootVmInstanceByIdRequest request) {
+            return  new RebootVmInstanceByIdExecutor().Client(this).Execute<RebootVmInstanceByIdResponse, RebootVmInstanceByIdResult, RebootVmInstanceByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  只能重启状态为 运行中（Running）的实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RebootVmInstanceByIdResponse> RebootVmInstanceById(RebootVmInstanceByIdRequest request) {
+            return await new RebootVmInstanceByIdExecutor().Client(this).Execute<RebootVmInstanceByIdResponse, RebootVmInstanceByIdResult, RebootVmInstanceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据指定ID启动任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartTransferTaskResponse StartTransferTask(StartTransferTaskRequest request) {
+            return  new StartTransferTaskExecutor().Client(this).Execute<StartTransferTaskResponse, StartTransferTaskResult, StartTransferTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据指定ID启动任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartTransferTaskResponse> StartTransferTask(StartTransferTaskRequest request) {
+            return await new StartTransferTaskExecutor().Client(this).Execute<StartTransferTaskResponse, StartTransferTaskResult, StartTransferTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给RDS账号分配数据库权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GrantRdsAccountResponse GrantRdsAccount(GrantRdsAccountRequest request) {
+            return  new GrantRdsAccountExecutor().Client(this).Execute<GrantRdsAccountResponse, GrantRdsAccountResult, GrantRdsAccountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给RDS账号分配数据库权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GrantRdsAccountResponse> GrantRdsAccount(GrantRdsAccountRequest request) {
+            return await new GrantRdsAccountExecutor().Client(this).Execute<GrantRdsAccountResponse, GrantRdsAccountResult, GrantRdsAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商创建网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVpcNetworkInterfaceResponse CreateVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) {
+            return  new CreateVpcNetworkInterfaceExecutor().Client(this).Execute<CreateVpcNetworkInterfaceResponse, CreateVpcNetworkInterfaceResult, CreateVpcNetworkInterfaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商创建网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVpcNetworkInterfaceResponse> CreateVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) {
+            return await new CreateVpcNetworkInterfaceExecutor().Client(this).Execute<CreateVpcNetworkInterfaceResponse, CreateVpcNetworkInterfaceResult, CreateVpcNetworkInterfaceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据给定的信息，创建指定RDS实例的数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRdsDatabaseResponse CreateRdsDatabase(CreateRdsDatabaseRequest request) {
+            return  new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据给定的信息，创建指定RDS实例的数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRdsDatabaseResponse> CreateRdsDatabase(CreateRdsDatabaseRequest request) {
+            return await new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDeploymentsByIdResponse GetDeploymentsById(GetDeploymentsByIdRequest request) {
+            return  new GetDeploymentsByIdExecutor().Client(this).Execute<GetDeploymentsByIdResponse, GetDeploymentsByIdResult, GetDeploymentsByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDeploymentsByIdResponse> GetDeploymentsById(GetDeploymentsByIdRequest request) {
+            return await new GetDeploymentsByIdExecutor().Client(this).Execute<GetDeploymentsByIdResponse, GetDeploymentsByIdResult, GetDeploymentsByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询部署信息列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDeploymentsResponse GetDeployments(GetDeploymentsRequest request) {
+            return  new GetDeploymentsExecutor().Client(this).Execute<GetDeploymentsResponse, GetDeploymentsResult, GetDeploymentsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询部署信息列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDeploymentsResponse> GetDeployments(GetDeploymentsRequest request) {
+            return await new GetDeploymentsExecutor().Client(this).Execute<GetDeploymentsResponse, GetDeploymentsResult, GetDeploymentsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动数据同步
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartChannelResponse StartChannel(StartChannelRequest request) {
+            return  new StartChannelExecutor().Client(this).Execute<StartChannelResponse, StartChannelResult, StartChannelRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动数据同步
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartChannelResponse> StartChannel(StartChannelRequest request) {
+            return await new StartChannelExecutor().Client(this).Execute<StartChannelResponse, StartChannelResult, StartChannelRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建数据同步通道
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateChannelResponse CreateChannel(CreateChannelRequest request) {
+            return  new CreateChannelExecutor().Client(this).Execute<CreateChannelResponse, CreateChannelResult, CreateChannelRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建数据同步通道
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateChannelResponse> CreateChannel(CreateChannelRequest request) {
+            return await new CreateChannelExecutor().Client(this).Execute<CreateChannelResponse, CreateChannelResult, CreateChannelRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -841,6 +613,405 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据云提供商查询对应的密钥对资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVmKeypairsByNameResponse GetVmKeypairsByName(GetVmKeypairsByNameRequest request) {
+            return  new GetVmKeypairsByNameExecutor().Client(this).Execute<GetVmKeypairsByNameResponse, GetVmKeypairsByNameResult, GetVmKeypairsByNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的密钥对资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVmKeypairsByNameResponse> GetVmKeypairsByName(GetVmKeypairsByNameRequest request) {
+            return await new GetVmKeypairsByNameExecutor().Client(this).Execute<GetVmKeypairsByNameResponse, GetVmKeypairsByNameResult, GetVmKeypairsByNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  释放公网IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcEipByIdResponse DeleteVpcEipById(DeleteVpcEipByIdRequest request) {
+            return  new DeleteVpcEipByIdExecutor().Client(this).Execute<DeleteVpcEipByIdResponse, DeleteVpcEipByIdResult, DeleteVpcEipByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  释放公网IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcEipByIdResponse> DeleteVpcEipById(DeleteVpcEipByIdRequest request) {
+            return await new DeleteVpcEipByIdExecutor().Client(this).Execute<DeleteVpcEipByIdResponse, DeleteVpcEipByIdResult, DeleteVpcEipByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据已有资源反向生成deployment
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ReverseDeploymentResponse ReverseDeployment(ReverseDeploymentRequest request) {
+            return  new ReverseDeploymentExecutor().Client(this).Execute<ReverseDeploymentResponse, ReverseDeploymentResult, ReverseDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据已有资源反向生成deployment
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ReverseDeploymentResponse> ReverseDeployment(ReverseDeploymentRequest request) {
+            return await new ReverseDeploymentExecutor().Client(this).Execute<ReverseDeploymentResponse, ReverseDeploymentResult, ReverseDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据指定ID获取任务信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTransferTaskByIdResponse GetTransferTaskById(GetTransferTaskByIdRequest request) {
+            return  new GetTransferTaskByIdExecutor().Client(this).Execute<GetTransferTaskByIdResponse, GetTransferTaskByIdResult, GetTransferTaskByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据指定ID获取任务信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTransferTaskByIdResponse> GetTransferTaskById(GetTransferTaskByIdRequest request) {
+            return await new GetTransferTaskByIdExecutor().Client(this).Execute<GetTransferTaskByIdResponse, GetTransferTaskByIdResult, GetTransferTaskByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的subnet资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcSubnetsResponse GetVpcSubnets(GetVpcSubnetsRequest request) {
+            return  new GetVpcSubnetsExecutor().Client(this).Execute<GetVpcSubnetsResponse, GetVpcSubnetsResult, GetVpcSubnetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的subnet资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcSubnetsResponse> GetVpcSubnets(GetVpcSubnetsRequest request) {
+            return await new GetVpcSubnetsExecutor().Client(this).Execute<GetVpcSubnetsResponse, GetVpcSubnetsResult, GetVpcSubnetsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建HTTP监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVpcLBHttpListenerResponse CreateVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) {
+            return  new CreateVpcLBHttpListenerExecutor().Client(this).Execute<CreateVpcLBHttpListenerResponse, CreateVpcLBHttpListenerResult, CreateVpcLBHttpListenerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建HTTP监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVpcLBHttpListenerResponse> CreateVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) {
+            return await new CreateVpcLBHttpListenerExecutor().Client(this).Execute<CreateVpcLBHttpListenerResponse, CreateVpcLBHttpListenerResult, CreateVpcLBHttpListenerRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据指定ID停止任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopTransferTaskResponse StopTransferTask(StopTransferTaskRequest request) {
+            return  new StopTransferTaskExecutor().Client(this).Execute<StopTransferTaskResponse, StopTransferTaskResult, StopTransferTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据指定ID停止任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopTransferTaskResponse> StopTransferTask(StopTransferTaskRequest request) {
+            return await new StopTransferTaskExecutor().Client(this).Execute<StopTransferTaskResponse, StopTransferTaskResult, StopTransferTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除子网
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcSubnetByIdResponse DeleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) {
+            return  new DeleteVpcSubnetByIdExecutor().Client(this).Execute<DeleteVpcSubnetByIdResponse, DeleteVpcSubnetByIdResult, DeleteVpcSubnetByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除子网
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcSubnetByIdResponse> DeleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) {
+            return await new DeleteVpcSubnetByIdExecutor().Client(this).Execute<DeleteVpcSubnetByIdResponse, DeleteVpcSubnetByIdResult, DeleteVpcSubnetByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商分配公网IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVpcEipResponse CreateVpcEip(CreateVpcEipRequest request) {
+            return  new CreateVpcEipExecutor().Client(this).Execute<CreateVpcEipResponse, CreateVpcEipResult, CreateVpcEipRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商分配公网IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVpcEipResponse> CreateVpcEip(CreateVpcEipRequest request) {
+            return await new CreateVpcEipExecutor().Client(this).Execute<CreateVpcEipResponse, CreateVpcEipResult, CreateVpcEipRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除安全组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcSecurityGroupByIdResponse DeleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) {
+            return  new DeleteVpcSecurityGroupByIdExecutor().Client(this).Execute<DeleteVpcSecurityGroupByIdResponse, DeleteVpcSecurityGroupByIdResult, DeleteVpcSecurityGroupByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除安全组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcSecurityGroupByIdResponse> DeleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) {
+            return await new DeleteVpcSecurityGroupByIdExecutor().Client(this).Execute<DeleteVpcSecurityGroupByIdResponse, DeleteVpcSecurityGroupByIdResult, DeleteVpcSecurityGroupByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除channel
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteChannelResponse DeleteChannel(DeleteChannelRequest request) {
+            return  new DeleteChannelExecutor().Client(this).Execute<DeleteChannelResponse, DeleteChannelResult, DeleteChannelRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除channel
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteChannelResponse> DeleteChannel(DeleteChannelRequest request) {
+            return await new DeleteChannelExecutor().Client(this).Execute<DeleteChannelResponse, DeleteChannelResult, DeleteChannelRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定ID的OSS存储桶信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBucketResponse DeleteBucket(DeleteBucketRequest request) {
+            return  new DeleteBucketExecutor().Client(this).Execute<DeleteBucketResponse, DeleteBucketResult, DeleteBucketRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定ID的OSS存储桶信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBucketResponse> DeleteBucket(DeleteBucketRequest request) {
+            return await new DeleteBucketExecutor().Client(this).Execute<DeleteBucketResponse, DeleteBucketResult, DeleteBucketRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取当前用户的云注册信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetCloudInfosResponse GetCloudInfos(GetCloudInfosRequest request) {
+            return  new GetCloudInfosExecutor().Client(this).Execute<GetCloudInfosResponse, GetCloudInfosResult, GetCloudInfosRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前用户的云注册信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetCloudInfosResponse> GetCloudInfos(GetCloudInfosRequest request) {
+            return await new GetCloudInfosExecutor().Client(this).Execute<GetCloudInfosResponse, GetCloudInfosResult, GetCloudInfosRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的网卡资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcNetworkInterfacesResponse GetVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) {
+            return  new GetVpcNetworkInterfacesExecutor().Client(this).Execute<GetVpcNetworkInterfacesResponse, GetVpcNetworkInterfacesResult, GetVpcNetworkInterfacesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的网卡资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcNetworkInterfacesResponse> GetVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) {
+            return await new GetVpcNetworkInterfacesExecutor().Client(this).Execute<GetVpcNetworkInterfacesResponse, GetVpcNetworkInterfacesResult, GetVpcNetworkInterfacesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  弹性公网IP绑定到虚拟机
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateVpcEipByIdResponse AssociateVpcEipById(AssociateVpcEipByIdRequest request) {
+            return  new AssociateVpcEipByIdExecutor().Client(this).Execute<AssociateVpcEipByIdResponse, AssociateVpcEipByIdResult, AssociateVpcEipByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  弹性公网IP绑定到虚拟机
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateVpcEipByIdResponse> AssociateVpcEipById(AssociateVpcEipByIdRequest request) {
+            return await new AssociateVpcEipByIdExecutor().Client(this).Execute<AssociateVpcEipByIdResponse, AssociateVpcEipByIdResult, AssociateVpcEipByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据过滤条件，取得指定RDS实例上的数据库信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRdsDatabasesByInstIdResponse GetRdsDatabasesByInstId(GetRdsDatabasesByInstIdRequest request) {
+            return  new GetRdsDatabasesByInstIdExecutor().Client(this).Execute<GetRdsDatabasesByInstIdResponse, GetRdsDatabasesByInstIdResult, GetRdsDatabasesByInstIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据过滤条件，取得指定RDS实例上的数据库信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRdsDatabasesByInstIdResponse> GetRdsDatabasesByInstId(GetRdsDatabasesByInstIdRequest request) {
+            return await new GetRdsDatabasesByInstIdExecutor().Client(this).Execute<GetRdsDatabasesByInstIdResponse, GetRdsDatabasesByInstIdResult, GetRdsDatabasesByInstIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的公网IP资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcEipByIdResponse GetVpcEipById(GetVpcEipByIdRequest request) {
+            return  new GetVpcEipByIdExecutor().Client(this).Execute<GetVpcEipByIdResponse, GetVpcEipByIdResult, GetVpcEipByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的公网IP资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcEipByIdResponse> GetVpcEipById(GetVpcEipByIdRequest request) {
+            return await new GetVpcEipByIdExecutor().Client(this).Execute<GetVpcEipByIdResponse, GetVpcEipByIdResult, GetVpcEipByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询应用记录详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDeploymentsVersionResponse GetDeploymentsVersion(GetDeploymentsVersionRequest request) {
+            return  new GetDeploymentsVersionExecutor().Client(this).Execute<GetDeploymentsVersionResponse, GetDeploymentsVersionResult, GetDeploymentsVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询应用记录详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDeploymentsVersionResponse> GetDeploymentsVersion(GetDeploymentsVersionRequest request) {
+            return await new GetDeploymentsVersionExecutor().Client(this).Execute<GetDeploymentsVersionResponse, GetDeploymentsVersionResult, GetDeploymentsVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询数据源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDatasourcesResponse GetDatasources(GetDatasourcesRequest request) {
+            return  new GetDatasourcesExecutor().Client(this).Execute<GetDatasourcesResponse, GetDatasourcesResult, GetDatasourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询数据源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDatasourcesResponse> GetDatasources(GetDatasourcesRequest request) {
+            return await new GetDatasourcesExecutor().Client(this).Execute<GetDatasourcesResponse, GetDatasourcesResult, GetDatasourcesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定RDS实例上，指定数据库名的数据库信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRdsDatabaseResponse DeleteRdsDatabase(DeleteRdsDatabaseRequest request) {
+            return  new DeleteRdsDatabaseExecutor().Client(this).Execute<DeleteRdsDatabaseResponse, DeleteRdsDatabaseResult, DeleteRdsDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定RDS实例上，指定数据库名的数据库信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRdsDatabaseResponse> DeleteRdsDatabase(DeleteRdsDatabaseRequest request) {
+            return await new DeleteRdsDatabaseExecutor().Client(this).Execute<DeleteRdsDatabaseResponse, DeleteRdsDatabaseResult, DeleteRdsDatabaseRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询数据同步通道信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetChannelsResponse GetChannels(GetChannelsRequest request) {
+            return  new GetChannelsExecutor().Client(this).Execute<GetChannelsResponse, GetChannelsResult, GetChannelsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询数据同步通道信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetChannelsResponse> GetChannels(GetChannelsRequest request) {
+            return await new GetChannelsExecutor().Client(this).Execute<GetChannelsResponse, GetChannelsResult, GetChannelsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  根据云提供商查询对应的公网IP资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -856,6 +1027,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcEipsResponse> GetVpcEips(GetVpcEipsRequest request) {
             return await new GetVpcEipsExecutor().Client(this).Execute<GetVpcEipsResponse, GetVpcEipsResult, GetVpcEipsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为指定用户关联云
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RegistCloudInfoResponse RegistCloudInfo(RegistCloudInfoRequest request) {
+            return  new RegistCloudInfoExecutor().Client(this).Execute<RegistCloudInfoResponse, RegistCloudInfoResult, RegistCloudInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为指定用户关联云
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RegistCloudInfoResponse> RegistCloudInfo(RegistCloudInfoRequest request) {
+            return await new RegistCloudInfoExecutor().Client(this).Execute<RegistCloudInfoResponse, RegistCloudInfoResult, RegistCloudInfoRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -879,40 +1069,40 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息
+        ///  根据云提供商查询对应的RDS实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVpcSecurityGroupsResponse GetVpcSecurityGroups(GetVpcSecurityGroupsRequest request) {
-            return  new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request);
+        public GetRdsByInstIdResponse GetRdsByInstId(GetRdsByInstIdRequest request) {
+            return  new GetRdsByInstIdExecutor().Client(this).Execute<GetRdsByInstIdResponse, GetRdsByInstIdResult, GetRdsByInstIdRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息
+        ///  根据云提供商查询对应的RDS实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVpcSecurityGroupsResponse> GetVpcSecurityGroups(GetVpcSecurityGroupsRequest request) {
-            return await new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request);
+        public async Task<GetRdsByInstIdResponse> GetRdsByInstId(GetRdsByInstIdRequest request) {
+            return await new GetRdsByInstIdExecutor().Client(this).Execute<GetRdsByInstIdResponse, GetRdsByInstIdResult, GetRdsByInstIdRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的密钥对资源信息
+        ///  获取指定云信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVmKeypairsByNameResponse GetVmKeypairsByName(GetVmKeypairsByNameRequest request) {
-            return  new GetVmKeypairsByNameExecutor().Client(this).Execute<GetVmKeypairsByNameResponse, GetVmKeypairsByNameResult, GetVmKeypairsByNameRequest>(request);
+        public UnregistCloudInfoResponse UnregistCloudInfo(UnregistCloudInfoRequest request) {
+            return  new UnregistCloudInfoExecutor().Client(this).Execute<UnregistCloudInfoResponse, UnregistCloudInfoResult, UnregistCloudInfoRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的密钥对资源信息
+        ///  获取指定云信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVmKeypairsByNameResponse> GetVmKeypairsByName(GetVmKeypairsByNameRequest request) {
-            return await new GetVmKeypairsByNameExecutor().Client(this).Execute<GetVmKeypairsByNameResponse, GetVmKeypairsByNameResult, GetVmKeypairsByNameRequest>(request);
+        public async Task<UnregistCloudInfoResponse> UnregistCloudInfo(UnregistCloudInfoRequest request) {
+            return await new UnregistCloudInfoExecutor().Client(this).Execute<UnregistCloudInfoResponse, UnregistCloudInfoResult, UnregistCloudInfoRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -936,21 +1126,477 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  释放公网IP
+        ///  网卡挂载虚拟机
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteVpcEipByIdResponse DeleteVpcEipById(DeleteVpcEipByIdRequest request) {
-            return  new DeleteVpcEipByIdExecutor().Client(this).Execute<DeleteVpcEipByIdResponse, DeleteVpcEipByIdResult, DeleteVpcEipByIdRequest>(request);
+        public AttachVpcNetworkInterfaceByIdResponse AttachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) {
+            return  new AttachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<AttachVpcNetworkInterfaceByIdResponse, AttachVpcNetworkInterfaceByIdResult, AttachVpcNetworkInterfaceByIdRequest>(request);
         }
 #else
         /// <summary>
-        ///  释放公网IP
+        ///  网卡挂载虚拟机
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcEipByIdResponse> DeleteVpcEipById(DeleteVpcEipByIdRequest request) {
-            return await new DeleteVpcEipByIdExecutor().Client(this).Execute<DeleteVpcEipByIdResponse, DeleteVpcEipByIdResult, DeleteVpcEipByIdRequest>(request);
+        public async Task<AttachVpcNetworkInterfaceByIdResponse> AttachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) {
+            return await new AttachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<AttachVpcNetworkInterfaceByIdResponse, AttachVpcNetworkInterfaceByIdResult, AttachVpcNetworkInterfaceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  预部署
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DryrunDeploymentResponse DryrunDeployment(DryrunDeploymentRequest request) {
+            return  new DryrunDeploymentExecutor().Client(this).Execute<DryrunDeploymentResponse, DryrunDeploymentResult, DryrunDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  预部署
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DryrunDeploymentResponse> DryrunDeployment(DryrunDeploymentRequest request) {
+            return await new DryrunDeploymentExecutor().Client(this).Execute<DryrunDeploymentResponse, DryrunDeploymentResult, DryrunDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建数据源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDatasourceResponse CreateDatasource(CreateDatasourceRequest request) {
+            return  new CreateDatasourceExecutor().Client(this).Execute<CreateDatasourceResponse, CreateDatasourceResult, CreateDatasourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建数据源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDatasourceResponse> CreateDatasource(CreateDatasourceRequest request) {
+            return await new CreateDatasourceExecutor().Client(this).Execute<CreateDatasourceResponse, CreateDatasourceResult, CreateDatasourceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  从虚拟机卸载云硬盘
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DetachDiskToVmInstanceByDiskIdResponse DetachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) {
+            return  new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  从虚拟机卸载云硬盘
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DetachDiskToVmInstanceByDiskIdResponse> DetachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) {
+            return await new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取任务列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTransferTasksResponse GetTransferTasks(GetTransferTasksRequest request) {
+            return  new GetTransferTasksExecutor().Client(this).Execute<GetTransferTasksResponse, GetTransferTasksResult, GetTransferTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取任务列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTransferTasksResponse> GetTransferTasks(GetTransferTasksRequest request) {
+            return await new GetTransferTasksExecutor().Client(this).Execute<GetTransferTasksResponse, GetTransferTasksResult, GetTransferTasksRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除云硬盘
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveDiskByIdResponse RemoveDiskById(RemoveDiskByIdRequest request) {
+            return  new RemoveDiskByIdExecutor().Client(this).Execute<RemoveDiskByIdResponse, RemoveDiskByIdResult, RemoveDiskByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除云硬盘
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveDiskByIdResponse> RemoveDiskById(RemoveDiskByIdRequest request) {
+            return await new RemoveDiskByIdExecutor().Client(this).Execute<RemoveDiskByIdResponse, RemoveDiskByIdResult, RemoveDiskByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据给定的信息，创建RDS实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRdsInstanceResponse CreateRdsInstance(CreateRdsInstanceRequest request) {
+            return  new CreateRdsInstanceExecutor().Client(this).Execute<CreateRdsInstanceResponse, CreateRdsInstanceResult, CreateRdsInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据给定的信息，创建RDS实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRdsInstanceResponse> CreateRdsInstance(CreateRdsInstanceRequest request) {
+            return await new CreateRdsInstanceExecutor().Client(this).Execute<CreateRdsInstanceResponse, CreateRdsInstanceResult, CreateRdsInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的安全组资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcSecurityGroupByIdResponse GetVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) {
+            return  new GetVpcSecurityGroupByIdExecutor().Client(this).Execute<GetVpcSecurityGroupByIdResponse, GetVpcSecurityGroupByIdResult, GetVpcSecurityGroupByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的安全组资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcSecurityGroupByIdResponse> GetVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) {
+            return await new GetVpcSecurityGroupByIdExecutor().Client(this).Execute<GetVpcSecurityGroupByIdResponse, GetVpcSecurityGroupByIdResult, GetVpcSecurityGroupByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据过滤条件，取得指定OSS存储桶上的文件列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBucketFilesResponse GetBucketFiles(GetBucketFilesRequest request) {
+            return  new GetBucketFilesExecutor().Client(this).Execute<GetBucketFilesResponse, GetBucketFilesResult, GetBucketFilesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据过滤条件，取得指定OSS存储桶上的文件列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBucketFilesResponse> GetBucketFiles(GetBucketFilesRequest request) {
+            return await new GetBucketFilesExecutor().Client(this).Execute<GetBucketFilesResponse, GetBucketFilesResult, GetBucketFilesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的RDS实例信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRdsInstancesResponse GetRdsInstances(GetRdsInstancesRequest request) {
+            return  new GetRdsInstancesExecutor().Client(this).Execute<GetRdsInstancesResponse, GetRdsInstancesResult, GetRdsInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的RDS实例信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRdsInstancesResponse> GetRdsInstances(GetRdsInstancesRequest request) {
+            return await new GetRdsInstancesExecutor().Client(this).Execute<GetRdsInstancesResponse, GetRdsInstancesResult, GetRdsInstancesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除弹性网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcNetworkInterfaceByIdResponse DeleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) {
+            return  new DeleteVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DeleteVpcNetworkInterfaceByIdResponse, DeleteVpcNetworkInterfaceByIdResult, DeleteVpcNetworkInterfaceByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除弹性网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcNetworkInterfaceByIdResponse> DeleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) {
+            return await new DeleteVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DeleteVpcNetworkInterfaceByIdResponse, DeleteVpcNetworkInterfaceByIdResult, DeleteVpcNetworkInterfaceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据过滤条件，取得指定RDS实例上的账号信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRdsAccountsByInstIdResponse GetRdsAccountsByInstId(GetRdsAccountsByInstIdRequest request) {
+            return  new GetRdsAccountsByInstIdExecutor().Client(this).Execute<GetRdsAccountsByInstIdResponse, GetRdsAccountsByInstIdResult, GetRdsAccountsByInstIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据过滤条件，取得指定RDS实例上的账号信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRdsAccountsByInstIdResponse> GetRdsAccountsByInstId(GetRdsAccountsByInstIdRequest request) {
+            return await new GetRdsAccountsByInstIdExecutor().Client(this).Execute<GetRdsAccountsByInstIdResponse, GetRdsAccountsByInstIdResult, GetRdsAccountsByInstIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的安全组资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcSecurityGroupsResponse GetVpcSecurityGroups(GetVpcSecurityGroupsRequest request) {
+            return  new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的安全组资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcSecurityGroupsResponse> GetVpcSecurityGroups(GetVpcSecurityGroupsRequest request) {
+            return await new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  应用部署
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ApplyDeploymentResponse ApplyDeployment(ApplyDeploymentRequest request) {
+            return  new ApplyDeploymentExecutor().Client(this).Execute<ApplyDeploymentResponse, ApplyDeploymentResult, ApplyDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  应用部署
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ApplyDeploymentResponse> ApplyDeployment(ApplyDeploymentRequest request) {
+            return await new ApplyDeploymentExecutor().Client(this).Execute<ApplyDeploymentResponse, ApplyDeploymentResult, ApplyDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的密钥对资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVmKeypairsResponse GetVmKeypairs(GetVmKeypairsRequest request) {
+            return  new GetVmKeypairsExecutor().Client(this).Execute<GetVmKeypairsResponse, GetVmKeypairsResult, GetVmKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的密钥对资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVmKeypairsResponse> GetVmKeypairs(GetVmKeypairsRequest request) {
+            return await new GetVmKeypairsExecutor().Client(this).Execute<GetVmKeypairsResponse, GetVmKeypairsResult, GetVmKeypairsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的SLB资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcSlbByIdResponse GetVpcSlbById(GetVpcSlbByIdRequest request) {
+            return  new GetVpcSlbByIdExecutor().Client(this).Execute<GetVpcSlbByIdResponse, GetVpcSlbByIdResult, GetVpcSlbByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的SLB资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcSlbByIdResponse> GetVpcSlbById(GetVpcSlbByIdRequest request) {
+            return await new GetVpcSlbByIdExecutor().Client(this).Execute<GetVpcSlbByIdResponse, GetVpcSlbByIdResult, GetVpcSlbByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDeploymentResponse DeleteDeployment(DeleteDeploymentRequest request) {
+            return  new DeleteDeploymentExecutor().Client(this).Execute<DeleteDeploymentResponse, DeleteDeploymentResult, DeleteDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDeploymentResponse> DeleteDeployment(DeleteDeploymentRequest request) {
+            return await new DeleteDeploymentExecutor().Client(this).Execute<DeleteDeploymentResponse, DeleteDeploymentResult, DeleteDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商创建子网
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVpcSubnetResponse CreateVpcSubnet(CreateVpcSubnetRequest request) {
+            return  new CreateVpcSubnetExecutor().Client(this).Execute<CreateVpcSubnetResponse, CreateVpcSubnetResult, CreateVpcSubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商创建子网
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVpcSubnetResponse> CreateVpcSubnet(CreateVpcSubnetRequest request) {
+            return await new CreateVpcSubnetExecutor().Client(this).Execute<CreateVpcSubnetResponse, CreateVpcSubnetResult, CreateVpcSubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTransferTaskResponse CreateTransferTask(CreateTransferTaskRequest request) {
+            return  new CreateTransferTaskExecutor().Client(this).Execute<CreateTransferTaskResponse, CreateTransferTaskResult, CreateTransferTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTransferTaskResponse> CreateTransferTask(CreateTransferTaskRequest request) {
+            return await new CreateTransferTaskExecutor().Client(this).Execute<CreateTransferTaskResponse, CreateTransferTaskResult, CreateTransferTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定ID的RDS实例信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRdsByInstIdResponse DeleteRdsByInstId(DeleteRdsByInstIdRequest request) {
+            return  new DeleteRdsByInstIdExecutor().Client(this).Execute<DeleteRdsByInstIdResponse, DeleteRdsByInstIdResult, DeleteRdsByInstIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定ID的RDS实例信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRdsByInstIdResponse> DeleteRdsByInstId(DeleteRdsByInstIdRequest request) {
+            return await new DeleteRdsByInstIdExecutor().Client(this).Execute<DeleteRdsByInstIdResponse, DeleteRdsByInstIdResult, DeleteRdsByInstIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的负载均衡资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVpcSlbsResponse GetVpcSlbs(GetVpcSlbsRequest request) {
+            return  new GetVpcSlbsExecutor().Client(this).Execute<GetVpcSlbsResponse, GetVpcSlbsResult, GetVpcSlbsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的负载均衡资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVpcSlbsResponse> GetVpcSlbs(GetVpcSlbsRequest request) {
+            return await new GetVpcSlbsExecutor().Client(this).Execute<GetVpcSlbsResponse, GetVpcSlbsResult, GetVpcSlbsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  克隆部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CloneDeploymentResponse CloneDeployment(CloneDeploymentRequest request) {
+            return  new CloneDeploymentExecutor().Client(this).Execute<CloneDeploymentResponse, CloneDeploymentResult, CloneDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  克隆部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CloneDeploymentResponse> CloneDeployment(CloneDeploymentRequest request) {
+            return await new CloneDeploymentExecutor().Client(this).Execute<CloneDeploymentResponse, CloneDeploymentResult, CloneDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除VPC
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcByIdResponse DeleteVpcById(DeleteVpcByIdRequest request) {
+            return  new DeleteVpcByIdExecutor().Client(this).Execute<DeleteVpcByIdResponse, DeleteVpcByIdResult, DeleteVpcByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除VPC
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcByIdResponse> DeleteVpcById(DeleteVpcByIdRequest request) {
+            return await new DeleteVpcByIdExecutor().Client(this).Execute<DeleteVpcByIdResponse, DeleteVpcByIdResult, DeleteVpcByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商创建私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVpcResponse CreateVpc(CreateVpcRequest request) {
+            return  new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商创建私有网络
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
+            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  解绑公网IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisassociateVpcEipByIdResponse DisassociateVpcEipById(DisassociateVpcEipByIdRequest request) {
+            return  new DisassociateVpcEipByIdExecutor().Client(this).Execute<DisassociateVpcEipByIdResponse, DisassociateVpcEipByIdResult, DisassociateVpcEipByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  解绑公网IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisassociateVpcEipByIdResponse> DisassociateVpcEipById(DisassociateVpcEipByIdRequest request) {
+            return await new DisassociateVpcEipByIdExecutor().Client(this).Execute<DisassociateVpcEipByIdResponse, DisassociateVpcEipByIdResult, DisassociateVpcEipByIdRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -978,8 +1624,8 @@ namespace JDCloudSDK.Jdfusion.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVpcSubnetsResponse GetVpcSubnets(GetVpcSubnetsRequest request) {
-            return  new GetVpcSubnetsExecutor().Client(this).Execute<GetVpcSubnetsResponse, GetVpcSubnetsResult, GetVpcSubnetsRequest>(request);
+        public GetVpcSubnetByIdResponse GetVpcSubnetById(GetVpcSubnetByIdRequest request) {
+            return  new GetVpcSubnetByIdExecutor().Client(this).Execute<GetVpcSubnetByIdResponse, GetVpcSubnetByIdResult, GetVpcSubnetByIdRequest>(request);
         }
 #else
         /// <summary>
@@ -987,27 +1633,27 @@ namespace JDCloudSDK.Jdfusion.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVpcSubnetsResponse> GetVpcSubnets(GetVpcSubnetsRequest request) {
-            return await new GetVpcSubnetsExecutor().Client(this).Execute<GetVpcSubnetsResponse, GetVpcSubnetsResult, GetVpcSubnetsRequest>(request);
+        public async Task<GetVpcSubnetByIdResponse> GetVpcSubnetById(GetVpcSubnetByIdRequest request) {
+            return await new GetVpcSubnetByIdExecutor().Client(this).Execute<GetVpcSubnetByIdResponse, GetVpcSubnetByIdResult, GetVpcSubnetByIdRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据过滤条件，取得服务器组的信息
+        ///  停止数据同步
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVpcVServerGroupsResponse GetVpcVServerGroups(GetVpcVServerGroupsRequest request) {
-            return  new GetVpcVServerGroupsExecutor().Client(this).Execute<GetVpcVServerGroupsResponse, GetVpcVServerGroupsResult, GetVpcVServerGroupsRequest>(request);
+        public StopChannelResponse StopChannel(StopChannelRequest request) {
+            return  new StopChannelExecutor().Client(this).Execute<StopChannelResponse, StopChannelResult, StopChannelRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据过滤条件，取得服务器组的信息
+        ///  停止数据同步
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVpcVServerGroupsResponse> GetVpcVServerGroups(GetVpcVServerGroupsRequest request) {
-            return await new GetVpcVServerGroupsExecutor().Client(this).Execute<GetVpcVServerGroupsResponse, GetVpcVServerGroupsResult, GetVpcVServerGroupsRequest>(request);
+        public async Task<StopChannelResponse> StopChannel(StopChannelRequest request) {
+            return await new StopChannelExecutor().Client(this).Execute<StopChannelResponse, StopChannelResult, StopChannelRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -1031,97 +1677,116 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  读取指定ID的运行结果和运行状态
+        ///  根据云提供商查询对应的VM资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetTaskInfoByIdResponse GetTaskInfoById(GetTaskInfoByIdRequest request) {
-            return  new GetTaskInfoByIdExecutor().Client(this).Execute<GetTaskInfoByIdResponse, GetTaskInfoByIdResult, GetTaskInfoByIdRequest>(request);
+        public GetVmInstancesByIdResponse GetVmInstancesById(GetVmInstancesByIdRequest request) {
+            return  new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request);
         }
 #else
         /// <summary>
-        ///  读取指定ID的运行结果和运行状态
+        ///  根据云提供商查询对应的VM资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetTaskInfoByIdResponse> GetTaskInfoById(GetTaskInfoByIdRequest request) {
-            return await new GetTaskInfoByIdExecutor().Client(this).Execute<GetTaskInfoByIdResponse, GetTaskInfoByIdResult, GetTaskInfoByIdRequest>(request);
+        public async Task<GetVmInstancesByIdResponse> GetVmInstancesById(GetVmInstancesByIdRequest request) {
+            return await new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取当前用户的云注册信息
+        ///  根据指定任务id查询迁移进度
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetCloudInfosResponse GetCloudInfos(GetCloudInfosRequest request) {
-            return  new GetCloudInfosExecutor().Client(this).Execute<GetCloudInfosResponse, GetCloudInfosResult, GetCloudInfosRequest>(request);
+        public GetTransferTaskProgressResponse GetTransferTaskProgress(GetTransferTaskProgressRequest request) {
+            return  new GetTransferTaskProgressExecutor().Client(this).Execute<GetTransferTaskProgressResponse, GetTransferTaskProgressResult, GetTransferTaskProgressRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取当前用户的云注册信息
+        ///  根据指定任务id查询迁移进度
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetCloudInfosResponse> GetCloudInfos(GetCloudInfosRequest request) {
-            return await new GetCloudInfosExecutor().Client(this).Execute<GetCloudInfosResponse, GetCloudInfosResult, GetCloudInfosRequest>(request);
+        public async Task<GetTransferTaskProgressResponse> GetTransferTaskProgress(GetTransferTaskProgressRequest request) {
+            return await new GetTransferTaskProgressExecutor().Client(this).Execute<GetTransferTaskProgressResponse, GetTransferTaskProgressResult, GetTransferTaskProgressRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的密钥对资源信息
+        ///  根据过滤条件，取得服务器组的信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVmKeypairsResponse GetVmKeypairs(GetVmKeypairsRequest request) {
-            return  new GetVmKeypairsExecutor().Client(this).Execute<GetVmKeypairsResponse, GetVmKeypairsResult, GetVmKeypairsRequest>(request);
+        public GetVpcVServerGroupsResponse GetVpcVServerGroups(GetVpcVServerGroupsRequest request) {
+            return  new GetVpcVServerGroupsExecutor().Client(this).Execute<GetVpcVServerGroupsResponse, GetVpcVServerGroupsResult, GetVpcVServerGroupsRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的密钥对资源信息
+        ///  根据过滤条件，取得服务器组的信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVmKeypairsResponse> GetVmKeypairs(GetVmKeypairsRequest request) {
-            return await new GetVmKeypairsExecutor().Client(this).Execute<GetVmKeypairsResponse, GetVmKeypairsResult, GetVmKeypairsRequest>(request);
+        public async Task<GetVpcVServerGroupsResponse> GetVpcVServerGroups(GetVpcVServerGroupsRequest request) {
+            return await new GetVpcVServerGroupsExecutor().Client(this).Execute<GetVpcVServerGroupsResponse, GetVpcVServerGroupsResult, GetVpcVServerGroupsRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据过滤条件，取得镜像资源的信息
+        ///  根据指定ID删除任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVmImagesResponse GetVmImages(GetVmImagesRequest request) {
-            return  new GetVmImagesExecutor().Client(this).Execute<GetVmImagesResponse, GetVmImagesResult, GetVmImagesRequest>(request);
+        public DeleteTransferTaskResponse DeleteTransferTask(DeleteTransferTaskRequest request) {
+            return  new DeleteTransferTaskExecutor().Client(this).Execute<DeleteTransferTaskResponse, DeleteTransferTaskResult, DeleteTransferTaskRequest>(request);
         }
 #else
         /// <summary>
-        ///  根据过滤条件，取得镜像资源的信息
+        ///  根据指定ID删除任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVmImagesResponse> GetVmImages(GetVmImagesRequest request) {
-            return await new GetVmImagesExecutor().Client(this).Execute<GetVmImagesResponse, GetVmImagesResult, GetVmImagesRequest>(request);
+        public async Task<DeleteTransferTaskResponse> DeleteTransferTask(DeleteTransferTaskRequest request) {
+            return await new DeleteTransferTaskExecutor().Client(this).Execute<DeleteTransferTaskResponse, DeleteTransferTaskResult, DeleteTransferTaskRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除SLB
+        ///  根据指定任务id查询迁移失败文件列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteVpcSlbByIdResponse DeleteVpcSlbById(DeleteVpcSlbByIdRequest request) {
-            return  new DeleteVpcSlbByIdExecutor().Client(this).Execute<DeleteVpcSlbByIdResponse, DeleteVpcSlbByIdResult, DeleteVpcSlbByIdRequest>(request);
+        public GetTransferTaskFailedFilesResponse GetTransferTaskFailedFiles(GetTransferTaskFailedFilesRequest request) {
+            return  new GetTransferTaskFailedFilesExecutor().Client(this).Execute<GetTransferTaskFailedFilesResponse, GetTransferTaskFailedFilesResult, GetTransferTaskFailedFilesRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除SLB
+        ///  根据指定任务id查询迁移失败文件列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcSlbByIdResponse> DeleteVpcSlbById(DeleteVpcSlbByIdRequest request) {
-            return await new DeleteVpcSlbByIdExecutor().Client(this).Execute<DeleteVpcSlbByIdResponse, DeleteVpcSlbByIdResult, DeleteVpcSlbByIdRequest>(request);
+        public async Task<GetTransferTaskFailedFilesResponse> GetTransferTaskFailedFiles(GetTransferTaskFailedFilesRequest request) {
+            return await new GetTransferTaskFailedFilesExecutor().Client(this).Execute<GetTransferTaskFailedFilesResponse, GetTransferTaskFailedFilesResult, GetTransferTaskFailedFilesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据给定的信息，创建指定RDS实例的账户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRdsAccountsResponse CreateRdsAccounts(CreateRdsAccountsRequest request) {
+            return  new CreateRdsAccountsExecutor().Client(this).Execute<CreateRdsAccountsResponse, CreateRdsAccountsResult, CreateRdsAccountsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据给定的信息，创建指定RDS实例的账户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRdsAccountsResponse> CreateRdsAccounts(CreateRdsAccountsRequest request) {
+            return await new CreateRdsAccountsExecutor().Client(this).Execute<CreateRdsAccountsResponse, CreateRdsAccountsResult, CreateRdsAccountsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -1145,6 +1810,44 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据云提供商创建云硬盘
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDiskResponse CreateDisk(CreateDiskRequest request) {
+            return  new CreateDiskExecutor().Client(this).Execute<CreateDiskResponse, CreateDiskResult, CreateDiskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商创建云硬盘
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDiskResponse> CreateDisk(CreateDiskRequest request) {
+            return await new CreateDiskExecutor().Client(this).Execute<CreateDiskResponse, CreateDiskResult, CreateDiskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  读取指定ID的运行结果和运行状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTaskInfoByIdResponse GetTaskInfoById(GetTaskInfoByIdRequest request) {
+            return  new GetTaskInfoByIdExecutor().Client(this).Execute<GetTaskInfoByIdResponse, GetTaskInfoByIdResult, GetTaskInfoByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  读取指定ID的运行结果和运行状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTaskInfoByIdResponse> GetTaskInfoById(GetTaskInfoByIdRequest request) {
+            return await new GetTaskInfoByIdExecutor().Client(this).Execute<GetTaskInfoByIdResponse, GetTaskInfoByIdResult, GetTaskInfoByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  根据云提供商查询对应的云硬盘资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1164,40 +1867,268 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  从虚拟机卸载云硬盘
+        ///  卸载网卡
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DetachDiskToVmInstanceByDiskIdResponse DetachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) {
-            return  new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request);
+        public DetachVpcNetworkInterfaceByIdResponse DetachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) {
+            return  new DetachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DetachVpcNetworkInterfaceByIdResponse, DetachVpcNetworkInterfaceByIdResult, DetachVpcNetworkInterfaceByIdRequest>(request);
         }
 #else
         /// <summary>
-        ///  从虚拟机卸载云硬盘
+        ///  卸载网卡
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DetachDiskToVmInstanceByDiskIdResponse> DetachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) {
-            return await new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request);
+        public async Task<DetachVpcNetworkInterfaceByIdResponse> DetachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) {
+            return await new DetachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DetachVpcNetworkInterfaceByIdResponse, DetachVpcNetworkInterfaceByIdResult, DetachVpcNetworkInterfaceByIdRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建HTTP监听器
+        ///  根据云提供商创建虚拟机
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateVpcLBHttpListenerResponse CreateVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) {
-            return  new CreateVpcLBHttpListenerExecutor().Client(this).Execute<CreateVpcLBHttpListenerResponse, CreateVpcLBHttpListenerResult, CreateVpcLBHttpListenerRequest>(request);
+        public CreateVmInstanceResponse CreateVmInstance(CreateVmInstanceRequest request) {
+            return  new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建HTTP监听器
+        ///  根据云提供商创建虚拟机
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateVpcLBHttpListenerResponse> CreateVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) {
-            return await new CreateVpcLBHttpListenerExecutor().Client(this).Execute<CreateVpcLBHttpListenerResponse, CreateVpcLBHttpListenerResult, CreateVpcLBHttpListenerRequest>(request);
+        public async Task<CreateVmInstanceResponse> CreateVmInstance(CreateVmInstanceRequest request) {
+            return await new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取指定云信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetCloudInfoByIdResponse GetCloudInfoById(GetCloudInfoByIdRequest request) {
+            return  new GetCloudInfoByIdExecutor().Client(this).Execute<GetCloudInfoByIdResponse, GetCloudInfoByIdResult, GetCloudInfoByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取指定云信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetCloudInfoByIdResponse> GetCloudInfoById(GetCloudInfoByIdRequest request) {
+            return await new GetCloudInfoByIdExecutor().Client(this).Execute<GetCloudInfoByIdResponse, GetCloudInfoByIdResult, GetCloudInfoByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVmKeypairByNameResponse DeleteVmKeypairByName(DeleteVmKeypairByNameRequest request) {
+            return  new DeleteVmKeypairByNameExecutor().Client(this).Execute<DeleteVmKeypairByNameResponse, DeleteVmKeypairByNameResult, DeleteVmKeypairByNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVmKeypairByNameResponse> DeleteVmKeypairByName(DeleteVmKeypairByNameRequest request) {
+            return await new DeleteVmKeypairByNameExecutor().Client(this).Execute<DeleteVmKeypairByNameResponse, DeleteVmKeypairByNameResult, DeleteVmKeypairByNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给RDS账号分配数据库权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RevokeRdsAccountResponse RevokeRdsAccount(RevokeRdsAccountRequest request) {
+            return  new RevokeRdsAccountExecutor().Client(this).Execute<RevokeRdsAccountResponse, RevokeRdsAccountResult, RevokeRdsAccountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给RDS账号分配数据库权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RevokeRdsAccountResponse> RevokeRdsAccount(RevokeRdsAccountRequest request) {
+            return await new RevokeRdsAccountExecutor().Client(this).Execute<RevokeRdsAccountResponse, RevokeRdsAccountResult, RevokeRdsAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopVmInstanceByIdResponse StopVmInstanceById(StopVmInstanceByIdRequest request) {
+            return  new StopVmInstanceByIdExecutor().Client(this).Execute<StopVmInstanceByIdResponse, StopVmInstanceByIdResult, StopVmInstanceByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopVmInstanceByIdResponse> StopVmInstanceById(StopVmInstanceByIdRequest request) {
+            return await new StopVmInstanceByIdExecutor().Client(this).Execute<StopVmInstanceByIdResponse, StopVmInstanceByIdResult, StopVmInstanceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据云提供商查询对应的云硬盘资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDiskByIdResponse GetDiskById(GetDiskByIdRequest request) {
+            return  new GetDiskByIdExecutor().Client(this).Execute<GetDiskByIdResponse, GetDiskByIdResult, GetDiskByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据云提供商查询对应的云硬盘资源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDiskByIdResponse> GetDiskById(GetDiskByIdRequest request) {
+            return await new GetDiskByIdExecutor().Client(this).Execute<GetDiskByIdResponse, GetDiskByIdResult, GetDiskByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据过滤条件，取得镜像资源的信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVmImagesResponse GetVmImages(GetVmImagesRequest request) {
+            return  new GetVmImagesExecutor().Client(this).Execute<GetVmImagesResponse, GetVmImagesResult, GetVmImagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据过滤条件，取得镜像资源的信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVmImagesResponse> GetVmImages(GetVmImagesRequest request) {
+            return await new GetVmImagesExecutor().Client(this).Execute<GetVmImagesResponse, GetVmImagesResult, GetVmImagesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EditDeploymentResponse EditDeployment(EditDeploymentRequest request) {
+            return  new EditDeploymentExecutor().Client(this).Execute<EditDeploymentResponse, EditDeploymentResult, EditDeploymentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改部署信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EditDeploymentResponse> EditDeployment(EditDeploymentRequest request) {
+            return await new EditDeploymentExecutor().Client(this).Execute<EditDeploymentResponse, EditDeploymentResult, EditDeploymentRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除数据源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDatasourceResponse DeleteDatasource(DeleteDatasourceRequest request) {
+            return  new DeleteDatasourceExecutor().Client(this).Execute<DeleteDatasourceResponse, DeleteDatasourceResult, DeleteDatasourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除数据源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDatasourceResponse> DeleteDatasource(DeleteDatasourceRequest request) {
+            return await new DeleteDatasourceExecutor().Client(this).Execute<DeleteDatasourceResponse, DeleteDatasourceResult, DeleteDatasourceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除SLB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcSlbByIdResponse DeleteVpcSlbById(DeleteVpcSlbByIdRequest request) {
+            return  new DeleteVpcSlbByIdExecutor().Client(this).Execute<DeleteVpcSlbByIdResponse, DeleteVpcSlbByIdResult, DeleteVpcSlbByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除SLB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcSlbByIdResponse> DeleteVpcSlbById(DeleteVpcSlbByIdRequest request) {
+            return await new DeleteVpcSlbByIdExecutor().Client(this).Execute<DeleteVpcSlbByIdResponse, DeleteVpcSlbByIdResult, DeleteVpcSlbByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  通过虚拟机id删除虚拟机
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVmInstanceByIdResponse DeleteVmInstanceById(DeleteVmInstanceByIdRequest request) {
+            return  new DeleteVmInstanceByIdExecutor().Client(this).Execute<DeleteVmInstanceByIdResponse, DeleteVmInstanceByIdResult, DeleteVmInstanceByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  通过虚拟机id删除虚拟机
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVmInstanceByIdResponse> DeleteVmInstanceById(DeleteVmInstanceByIdRequest request) {
+            return await new DeleteVmInstanceByIdExecutor().Client(this).Execute<DeleteVmInstanceByIdResponse, DeleteVmInstanceByIdResult, DeleteVmInstanceByIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  虚拟机规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVmInstanceTypesResponse GetVmInstanceTypes(GetVmInstanceTypesRequest request) {
+            return  new GetVmInstanceTypesExecutor().Client(this).Execute<GetVmInstanceTypesResponse, GetVmInstanceTypesResult, GetVmInstanceTypesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  虚拟机规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVmInstanceTypesResponse> GetVmInstanceTypes(GetVmInstanceTypesRequest request) {
+            return await new GetVmInstanceTypesExecutor().Client(this).Execute<GetVmInstanceTypesResponse, GetVmInstanceTypesResult, GetVmInstanceTypesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据给定的信息，创建OSS存储桶
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateBucketResponse CreateBucket(CreateBucketRequest request) {
+            return  new CreateBucketExecutor().Client(this).Execute<CreateBucketResponse, CreateBucketResult, CreateBucketRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据给定的信息，创建OSS存储桶
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateBucketResponse> CreateBucket(CreateBucketRequest request) {
+            return await new CreateBucketExecutor().Client(this).Execute<CreateBucketResponse, CreateBucketResult, CreateBucketRequest>(request);
         }
 #endif
 

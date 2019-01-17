@@ -33,13 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除录制模板
+    ///  删除用户自定义录制模板
     /// </summary>
     public class DeleteCustomLiveStreamRecordTemplateResult : JdcloudResult
     {
-        ///<summary>
-        /// 录制模板自定义名称
-        ///</summary>
-        public   string Template{ get; set; }
     }
 }

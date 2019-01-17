@@ -89,9 +89,9 @@ namespace JDCloudSDK.Baseanti.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,25 +138,6 @@ namespace JDCloudSDK.Baseanti.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询公网Ip的防护明细
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeIpResourceProtectInfoResponse DescribeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) {
-            return  new DescribeIpResourceProtectInfoExecutor().Client(this).Execute<DescribeIpResourceProtectInfoResponse, DescribeIpResourceProtectInfoResult, DescribeIpResourceProtectInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询公网Ip的防护明细
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeIpResourceProtectInfoResponse> DescribeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) {
-            return await new DescribeIpResourceProtectInfoExecutor().Client(this).Execute<DescribeIpResourceProtectInfoResponse, DescribeIpResourceProtectInfoResult, DescribeIpResourceProtectInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  设置公网Ip的清洗阈值
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,25 +153,6 @@ namespace JDCloudSDK.Baseanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetCleanThresholdResponse> SetCleanThreshold(SetCleanThresholdRequest request) {
             return await new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询公网Ip基本信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeIpResourceInfoResponse DescribeIpResourceInfo(DescribeIpResourceInfoRequest request) {
-            return  new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询公网Ip基本信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeIpResourceInfoResponse> DescribeIpResourceInfo(DescribeIpResourceInfoRequest request) {
-            return await new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -229,6 +191,44 @@ namespace JDCloudSDK.Baseanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourceFlowResponse> DescribeIpResourceFlow(DescribeIpResourceFlowRequest request) {
             return await new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网Ip的防护明细
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpResourceProtectInfoResponse DescribeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) {
+            return  new DescribeIpResourceProtectInfoExecutor().Client(this).Execute<DescribeIpResourceProtectInfoResponse, DescribeIpResourceProtectInfoResult, DescribeIpResourceProtectInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询公网Ip的防护明细
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpResourceProtectInfoResponse> DescribeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) {
+            return await new DescribeIpResourceProtectInfoExecutor().Client(this).Execute<DescribeIpResourceProtectInfoResponse, DescribeIpResourceProtectInfoResult, DescribeIpResourceProtectInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网Ip基本信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpResourceInfoResponse DescribeIpResourceInfo(DescribeIpResourceInfoRequest request) {
+            return  new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询公网Ip基本信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpResourceInfoResponse> DescribeIpResourceInfo(DescribeIpResourceInfoRequest request) {
+            return await new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request);
         }
 #endif
 

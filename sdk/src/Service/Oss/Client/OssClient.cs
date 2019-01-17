@@ -89,9 +89,9 @@ namespace JDCloudSDK.Oss.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,23 +138,23 @@ namespace JDCloudSDK.Oss.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  创建bucket
+        ///  列出当前用户的所有bucket
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public PutBucketResponse PutBucket(PutBucketRequest request) {
-            return  new PutBucketExecutor().Client(this).Execute<PutBucketResponse, PutBucketResult, PutBucketRequest>(request);
+        public ListBucketsResponse ListBuckets(ListBucketsRequest request) {
+            return  new ListBucketsExecutor().Client(this).Execute<ListBucketsResponse, ListBucketsResult, ListBucketsRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建bucket
+        ///  列出当前用户的所有bucket
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<PutBucketResponse> PutBucket(PutBucketRequest request) {
-            return await new PutBucketExecutor().Client(this).Execute<PutBucketResponse, PutBucketResult, PutBucketRequest>(request);
+        public async Task<ListBucketsResponse> ListBuckets(ListBucketsRequest request) {
+            return await new ListBucketsExecutor().Client(this).Execute<ListBucketsResponse, ListBucketsResult, ListBucketsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -201,23 +201,23 @@ namespace JDCloudSDK.Oss.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  列出当前用户的所有bucket
+        ///  创建bucket
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ListBucketsResponse ListBuckets(ListBucketsRequest request) {
-            return  new ListBucketsExecutor().Client(this).Execute<ListBucketsResponse, ListBucketsResult, ListBucketsRequest>(request);
+        public PutBucketResponse PutBucket(PutBucketRequest request) {
+            return  new PutBucketExecutor().Client(this).Execute<PutBucketResponse, PutBucketResult, PutBucketRequest>(request);
         }
 #else
         /// <summary>
-        ///  列出当前用户的所有bucket
+        ///  创建bucket
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ListBucketsResponse> ListBuckets(ListBucketsRequest request) {
-            return await new ListBucketsExecutor().Client(this).Execute<ListBucketsResponse, ListBucketsResult, ListBucketsRequest>(request);
+        public async Task<PutBucketResponse> PutBucket(PutBucketRequest request) {
+            return await new PutBucketExecutor().Client(this).Execute<PutBucketResponse, PutBucketResult, PutBucketRequest>(request);
         }
 #endif
 

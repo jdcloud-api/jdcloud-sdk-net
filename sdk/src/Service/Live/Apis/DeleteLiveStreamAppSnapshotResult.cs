@@ -33,13 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除app直播截图配置
+    ///  删除APP截图配置
     /// </summary>
     public class DeleteLiveStreamAppSnapshotResult : JdcloudResult
     {
-        ///<summary>
-        /// 返回结果
-        ///</summary>
-        public   bool Feedback{ get; set; }
     }
 }

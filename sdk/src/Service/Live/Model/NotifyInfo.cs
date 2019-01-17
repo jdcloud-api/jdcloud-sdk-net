@@ -40,7 +40,7 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// 您的加速域名
         ///</summary>
-        public string PublishDoamin{ get; set; }
+        public string PublishDomain{ get; set; }
         ///<summary>
         /// 回调地址
         ///</summary>

@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateSecurityGroupReq Body{ get; set; }
+        public   CreateSecurityGroup SecurityGroup{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

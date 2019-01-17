@@ -89,9 +89,9 @@ namespace JDCloudSDK.Streambus.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Streambus.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateTopicResponse UpdateTopic(UpdateTopicRequest request) {
+            return  new UpdateTopicExecutor().Client(this).Execute<UpdateTopicResponse, UpdateTopicResult, UpdateTopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateTopicResponse> UpdateTopic(UpdateTopicRequest request) {
+            return await new UpdateTopicExecutor().Client(this).Execute<UpdateTopicResponse, UpdateTopicResult, UpdateTopicRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看指定主题的所有消费组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -157,21 +176,40 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建consumerGroupName
+        ///  查询topic列表，返回topic的集合
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest request) {
-            return  new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
+        public GetTopicListResponse GetTopicList(GetTopicListRequest request) {
+            return  new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建consumerGroupName
+        ///  查询topic列表，返回topic的集合
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest request) {
-            return await new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
+        public async Task<GetTopicListResponse> GetTopicList(GetTopicListRequest request) {
+            return await new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除consumerGroupName
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
+            return  new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除consumerGroupName
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
+            return await new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -195,21 +233,21 @@ namespace JDCloudSDK.Streambus.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除consumerGroupName
+        ///  创建consumerGroupName
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
-            return  new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
+        public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest request) {
+            return  new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除consumerGroupName
+        ///  创建consumerGroupName
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
-            return await new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
+        public async Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest request) {
+            return await new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -248,44 +286,6 @@ namespace JDCloudSDK.Streambus.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request) {
             return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateTopicResponse UpdateTopic(UpdateTopicRequest request) {
-            return  new UpdateTopicExecutor().Client(this).Execute<UpdateTopicResponse, UpdateTopicResult, UpdateTopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateTopicResponse> UpdateTopic(UpdateTopicRequest request) {
-            return await new UpdateTopicExecutor().Client(this).Execute<UpdateTopicResponse, UpdateTopicResult, UpdateTopicRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询topic列表，返回topic的集合
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetTopicListResponse GetTopicList(GetTopicListRequest request) {
-            return  new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询topic列表，返回topic的集合
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetTopicListResponse> GetTopicList(GetTopicListRequest request) {
-            return await new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request);
         }
 #endif
 

@@ -39,11 +39,11 @@ namespace JDCloudSDK.Clouddnsservice.Model
 
         ///<summary>
         /// 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-        /// true: 按权重分配负载&lt;br&gt;
-        /// false: 均等负载
+        /// true: 均等负载&lt;br&gt;
+        /// false: 按权重分配负载
         /// 
         ///</summary>
-        public bool IsBalance{ get; set; }
+        public bool Balance{ get; set; }
         ///<summary>
         /// 主机记录
         ///</summary>

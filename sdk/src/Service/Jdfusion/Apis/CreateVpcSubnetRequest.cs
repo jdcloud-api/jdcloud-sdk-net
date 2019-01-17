@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateSubnetReq Body{ get; set; }
+        public   CreateSubnet Subnet{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

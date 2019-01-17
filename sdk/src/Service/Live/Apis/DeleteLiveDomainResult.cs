@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Live.Apis
     /// </summary>
     public class DeleteLiveDomainResult : JdcloudResult
     {
-        ///<summary>
-        /// 要删除的域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

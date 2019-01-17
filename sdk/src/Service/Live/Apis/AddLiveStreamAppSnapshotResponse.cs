@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加app直播截图配置
+    ///  添加APP直播截图配置
     /// </summary>
     public class AddLiveStreamAppSnapshotResponse : JdcloudResponse<AddLiveStreamAppSnapshotResult>
     {

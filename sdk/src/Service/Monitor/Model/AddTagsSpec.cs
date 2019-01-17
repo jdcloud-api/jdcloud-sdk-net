@@ -39,7 +39,7 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 校验码。调用此API前需找云监控提供
+        /// 应用码。调用此API前需找云监控提供
         ///Required:true
         ///</summary>
         [Required]
@@ -51,11 +51,17 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string GroupCode{ get; set; }
         ///<summary>
-        /// 资源列表。总资源数不能超过上限500
+        /// 资源列表。总资源不能超过100个
         ///Required:true
         ///</summary>
         [Required]
         public List<string> ResourceIds{ get; set; }
+        ///<summary>
+        /// 资源的产品线
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string ServiceCode{ get; set; }
         ///<summary>
         /// 标签名称。调用此API前需要与云监控确认可以使用的标签名称
         ///Required:true

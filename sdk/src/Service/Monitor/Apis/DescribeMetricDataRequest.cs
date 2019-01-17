@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Monitor.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Monitor.Apis
 {
@@ -39,6 +39,39 @@ namespace  JDCloudSDK.Monitor.Apis
     /// </summary>
     public class DescribeMetricDataRequest : JdcloudRequest
     {
+        ///<summary>
+        /// 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+        ///</summary>
+        public   string AggrType{ get; set; }
+        ///<summary>
+        /// 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+        ///</summary>
+        public   string DownSampleType{ get; set; }
+        ///<summary>
+        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        ///</summary>
+        public   string StartTime{ get; set; }
+        ///<summary>
+        /// 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+        ///</summary>
+        public   string EndTime{ get; set; }
+        ///<summary>
+        /// 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+        ///</summary>
+        public   string TimeInterval{ get; set; }
+        ///<summary>
+        /// 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+        ///</summary>
+        public List<TagFilter> Tags{ get; set; }
+
+        ///<summary>
+        /// 是否对查询的tags分组
+        ///</summary>
+        public   bool GroupBy{ get; set; }
+        ///<summary>
+        /// 是否求速率
+        ///</summary>
+        public   bool Rate{ get; set; }
         ///<summary>
         /// 资源的类型，取值vm, lb, ip, database 等
         ///Required:true
@@ -51,31 +84,6 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         [Required]
         public   string ResourceId{ get; set; }
-        ///<summary>
-        /// 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
-        ///</summary>
-        public   string AggrType{ get; set; }
-        ///<summary>
-        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
-        ///</summary>
-        public   string StartTime{ get; set; }
-        ///<summary>
-        /// 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
-        ///</summary>
-        public   string EndTime{ get; set; }
-        ///<summary>
-        /// 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
-        ///</summary>
-        public   string TimeInterval{ get; set; }
-        ///<summary>
-        /// 自定义标签
-        ///</summary>
-        public List<TagFilter> Tags{ get; set; }
-
-        ///<summary>
-        /// 是否对查询的tags分组
-        ///</summary>
-        public   bool GroupBy{ get; set; }
         ///<summary>
         /// 地域 Id
         ///Required:true

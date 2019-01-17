@@ -89,9 +89,9 @@ namespace JDCloudSDK.Redis.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,21 +138,44 @@ namespace JDCloudSDK.Redis.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询单个缓存Redis实例详情
+        ///  查询账户配额信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCacheInstanceResponse DescribeCacheInstance(DescribeCacheInstanceRequest request) {
-            return  new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
+        public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest request) {
+            return  new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询单个缓存Redis实例详情
+        ///  查询账户配额信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCacheInstanceResponse> DescribeCacheInstance(DescribeCacheInstanceRequest request) {
-            return await new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
+        public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
+            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+        /// 预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyCacheInstanceClassResponse ModifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) {
+            return  new ModifyCacheInstanceClassExecutor().Client(this).Execute<ModifyCacheInstanceClassResponse, ModifyCacheInstanceClassResult, ModifyCacheInstanceClassRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+        /// 预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyCacheInstanceClassResponse> ModifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) {
+            return await new ModifyCacheInstanceClassExecutor().Client(this).Execute<ModifyCacheInstanceClassResponse, ModifyCacheInstanceClassResult, ModifyCacheInstanceClassRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -176,25 +199,6 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询某区域下的实例规格列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceClassResponse DescribeInstanceClass(DescribeInstanceClassRequest request) {
-            return  new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询某区域下的实例规格列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceClassResponse> DescribeInstanceClass(DescribeInstanceClassRequest request) {
-            return await new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改缓存Redis实例的资源名称、描述，二者至少选一
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -214,40 +218,21 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询账户配额信息
+        ///  查询单个缓存Redis实例详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest request) {
-            return  new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
+        public DescribeCacheInstanceResponse DescribeCacheInstance(DescribeCacheInstanceRequest request) {
+            return  new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询账户配额信息
+        ///  查询单个缓存Redis实例详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
-            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重置缓存Redis实例密码，支持免密操作
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetCacheInstancePasswordResponse ResetCacheInstancePassword(ResetCacheInstancePasswordRequest request) {
-            return  new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置缓存Redis实例密码，支持免密操作
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetCacheInstancePasswordResponse> ResetCacheInstancePassword(ResetCacheInstancePasswordRequest request) {
-            return await new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request);
+        public async Task<DescribeCacheInstanceResponse> DescribeCacheInstance(DescribeCacheInstanceRequest request) {
+            return await new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -277,6 +262,44 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  重置缓存Redis实例密码，支持免密操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResetCacheInstancePasswordResponse ResetCacheInstancePassword(ResetCacheInstancePasswordRequest request) {
+            return  new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置缓存Redis实例密码，支持免密操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResetCacheInstancePasswordResponse> ResetCacheInstancePassword(ResetCacheInstancePasswordRequest request) {
+            return await new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询某区域下的实例规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceClassResponse DescribeInstanceClass(DescribeInstanceClassRequest request) {
+            return  new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询某区域下的实例规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceClassResponse> DescribeInstanceClass(DescribeInstanceClassRequest request) {
+            return await new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建一个指定配置的缓存Redis实例
         /// 规格性能：创建缓存Redis实例的规格，分为主从版和集群版两种规格。每种规格都有最大连接数，内网带宽上限，CPU处理能力，规格代码等信息，具体可查看：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
         /// 可用区：可用区是指在同一地域下，电力、网络等基础设施互相独立的物理区域。一个地域包含一个或多个可用区，同一地域下的多个可用区可以彼此连通。地域可用区详细信息可查询：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2222/isCatalog/1&quot;&gt;地域可用区详情&lt;/a&gt;
@@ -302,29 +325,6 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateCacheInstanceResponse> CreateCacheInstance(CreateCacheInstanceRequest request) {
             return await new CreateCacheInstanceExecutor().Client(this).Execute<CreateCacheInstanceResponse, CreateCacheInstanceResult, CreateCacheInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
-        /// 预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyCacheInstanceClassResponse ModifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) {
-            return  new ModifyCacheInstanceClassExecutor().Client(this).Execute<ModifyCacheInstanceClassResponse, ModifyCacheInstanceClassResult, ModifyCacheInstanceClassRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
-        /// 预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyCacheInstanceClassResponse> ModifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) {
-            return await new ModifyCacheInstanceClassExecutor().Client(this).Execute<ModifyCacheInstanceClassResponse, ModifyCacheInstanceClassResult, ModifyCacheInstanceClassRequest>(request);
         }
 #endif
 

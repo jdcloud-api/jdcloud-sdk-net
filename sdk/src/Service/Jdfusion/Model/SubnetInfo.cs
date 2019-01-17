@@ -52,7 +52,7 @@ namespace JDCloudSDK.Jdfusion.Model
         ///<summary>
         /// 子网网段
         ///</summary>
-        public string AddressPrefix{ get; set; }
+        public string CidrBlock{ get; set; }
         ///<summary>
         /// 子网可用ip数量
         ///</summary>

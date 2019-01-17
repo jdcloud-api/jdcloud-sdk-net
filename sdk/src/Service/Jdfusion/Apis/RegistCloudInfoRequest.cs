@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateCloudInfoReq Body{ get; set; }
+        public   CloudInfo Cloud{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

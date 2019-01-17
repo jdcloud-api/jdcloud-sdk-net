@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   AttachNetInterfaceReq Body{ get; set; }
+        public   AttachNetInterface Attach{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

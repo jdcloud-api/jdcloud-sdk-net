@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除app
+    ///  删除APP
     /// </summary>
     public class DeleteLiveAppRequest : JdcloudRequest
     {

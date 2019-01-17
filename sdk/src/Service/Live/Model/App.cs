@@ -38,12 +38,20 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 推流域名
+        /// 应用名
         ///</summary>
-        public string PublishDomain{ get; set; }
+        public string AppName{ get; set; }
         ///<summary>
-        /// config
+        /// 应用状态
         ///</summary>
-        public List<Config> TranscodeConfig{ get; set; }
+        public string AppStatus{ get; set; }
+        ///<summary>
+        /// 创建时间
+        ///</summary>
+        public string CreateTime{ get; set; }
+        ///<summary>
+        /// 更新时间
+        ///</summary>
+        public string UpdateTime{ get; set; }
     }
 }

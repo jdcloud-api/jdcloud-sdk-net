@@ -89,9 +89,9 @@ namespace JDCloudSDK.Billing.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,6 +157,82 @@ namespace JDCloudSDK.Billing.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询用户是否欠费
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public IsArrearResponse IsArrear(IsArrearRequest request) {
+            return  new IsArrearExecutor().Client(this).Execute<IsArrearResponse, IsArrearResult, IsArrearRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户是否欠费
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<IsArrearResponse> IsArrear(IsArrearRequest request) {
+            return await new IsArrearExecutor().Client(this).Execute<IsArrearResponse, IsArrearResult, IsArrearRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询消费统计信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AdminQueryBillStatisticsInfoResponse AdminQueryBillStatisticsInfo(AdminQueryBillStatisticsInfoRequest request) {
+            return  new AdminQueryBillStatisticsInfoExecutor().Client(this).Execute<AdminQueryBillStatisticsInfoResponse, AdminQueryBillStatisticsInfoResult, AdminQueryBillStatisticsInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询消费统计信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AdminQueryBillStatisticsInfoResponse> AdminQueryBillStatisticsInfo(AdminQueryBillStatisticsInfoRequest request) {
+            return await new AdminQueryBillStatisticsInfoExecutor().Client(this).Execute<AdminQueryBillStatisticsInfoResponse, AdminQueryBillStatisticsInfoResult, AdminQueryBillStatisticsInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SendResourceOrderStatusMessageResponse SendResourceOrderStatusMessage(SendResourceOrderStatusMessageRequest request) {
+            return  new SendResourceOrderStatusMessageExecutor().Client(this).Execute<SendResourceOrderStatusMessageResponse, SendResourceOrderStatusMessageResult, SendResourceOrderStatusMessageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SendResourceOrderStatusMessageResponse> SendResourceOrderStatusMessage(SendResourceOrderStatusMessageRequest request) {
+            return await new SendResourceOrderStatusMessageExecutor().Client(this).Execute<SendResourceOrderStatusMessageResponse, SendResourceOrderStatusMessageResult, SendResourceOrderStatusMessageRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询消费记录详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBillDetailResponse GetBillDetail(GetBillDetailRequest request) {
+            return  new GetBillDetailExecutor().Client(this).Execute<GetBillDetailResponse, GetBillDetailResult, GetBillDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询消费记录详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBillDetailResponse> GetBillDetail(GetBillDetailRequest request) {
+            return await new GetBillDetailExecutor().Client(this).Execute<GetBillDetailResponse, GetBillDetailResult, GetBillDetailRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询资源账单列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -176,21 +252,21 @@ namespace JDCloudSDK.Billing.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询资源单列表接口，不含已删除资源
+        ///  查询计费价格信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetExpiringOrdersResponse GetExpiringOrders(GetExpiringOrdersRequest request) {
-            return  new GetExpiringOrdersExecutor().Client(this).Execute<GetExpiringOrdersResponse, GetExpiringOrdersResult, GetExpiringOrdersRequest>(request);
+        public CalculateTotalPriceResponse CalculateTotalPrice(CalculateTotalPriceRequest request) {
+            return  new CalculateTotalPriceExecutor().Client(this).Execute<CalculateTotalPriceResponse, CalculateTotalPriceResult, CalculateTotalPriceRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询资源单列表接口，不含已删除资源
+        ///  查询计费价格信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetExpiringOrdersResponse> GetExpiringOrders(GetExpiringOrdersRequest request) {
-            return await new GetExpiringOrdersExecutor().Client(this).Execute<GetExpiringOrdersResponse, GetExpiringOrdersResult, GetExpiringOrdersRequest>(request);
+        public async Task<CalculateTotalPriceResponse> CalculateTotalPrice(CalculateTotalPriceRequest request) {
+            return await new CalculateTotalPriceExecutor().Client(this).Execute<CalculateTotalPriceResponse, CalculateTotalPriceResult, CalculateTotalPriceRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -233,6 +309,44 @@ namespace JDCloudSDK.Billing.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询资源单列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryPageByConditionResponse QueryPageByCondition(QueryPageByConditionRequest request) {
+            return  new QueryPageByConditionExecutor().Client(this).Execute<QueryPageByConditionResponse, QueryPageByConditionResult, QueryPageByConditionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询资源单列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryPageByConditionResponse> QueryPageByCondition(QueryPageByConditionRequest request) {
+            return await new QueryPageByConditionExecutor().Client(this).Execute<QueryPageByConditionResponse, QueryPageByConditionResult, QueryPageByConditionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用于在账单展示的资源名称信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetResourceNameResponse GetResourceName(GetResourceNameRequest request) {
+            return  new GetResourceNameExecutor().Client(this).Execute<GetResourceNameResponse, GetResourceNameResult, GetResourceNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用于在账单展示的资源名称信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetResourceNameResponse> GetResourceName(GetResourceNameRequest request) {
+            return await new GetResourceNameExecutor().Client(this).Execute<GetResourceNameResponse, GetResourceNameResult, GetResourceNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询消费记录列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -271,135 +385,21 @@ namespace JDCloudSDK.Billing.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询消费统计信息
+        ///  查询资源单列表接口，不含已删除资源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AdminQueryBillStatisticsInfoResponse AdminQueryBillStatisticsInfo(AdminQueryBillStatisticsInfoRequest request) {
-            return  new AdminQueryBillStatisticsInfoExecutor().Client(this).Execute<AdminQueryBillStatisticsInfoResponse, AdminQueryBillStatisticsInfoResult, AdminQueryBillStatisticsInfoRequest>(request);
+        public GetExpiringOrdersResponse GetExpiringOrders(GetExpiringOrdersRequest request) {
+            return  new GetExpiringOrdersExecutor().Client(this).Execute<GetExpiringOrdersResponse, GetExpiringOrdersResult, GetExpiringOrdersRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询消费统计信息
+        ///  查询资源单列表接口，不含已删除资源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AdminQueryBillStatisticsInfoResponse> AdminQueryBillStatisticsInfo(AdminQueryBillStatisticsInfoRequest request) {
-            return await new AdminQueryBillStatisticsInfoExecutor().Client(this).Execute<AdminQueryBillStatisticsInfoResponse, AdminQueryBillStatisticsInfoResult, AdminQueryBillStatisticsInfoRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询计费价格信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CalculateTotalPriceResponse CalculateTotalPrice(CalculateTotalPriceRequest request) {
-            return  new CalculateTotalPriceExecutor().Client(this).Execute<CalculateTotalPriceResponse, CalculateTotalPriceResult, CalculateTotalPriceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询计费价格信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CalculateTotalPriceResponse> CalculateTotalPrice(CalculateTotalPriceRequest request) {
-            return await new CalculateTotalPriceExecutor().Client(this).Execute<CalculateTotalPriceResponse, CalculateTotalPriceResult, CalculateTotalPriceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询消费记录详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetBillDetailResponse GetBillDetail(GetBillDetailRequest request) {
-            return  new GetBillDetailExecutor().Client(this).Execute<GetBillDetailResponse, GetBillDetailResult, GetBillDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询消费记录详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetBillDetailResponse> GetBillDetail(GetBillDetailRequest request) {
-            return await new GetBillDetailExecutor().Client(this).Execute<GetBillDetailResponse, GetBillDetailResult, GetBillDetailRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询资源单列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryPageByConditionResponse QueryPageByCondition(QueryPageByConditionRequest request) {
-            return  new QueryPageByConditionExecutor().Client(this).Execute<QueryPageByConditionResponse, QueryPageByConditionResult, QueryPageByConditionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询资源单列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryPageByConditionResponse> QueryPageByCondition(QueryPageByConditionRequest request) {
-            return await new QueryPageByConditionExecutor().Client(this).Execute<QueryPageByConditionResponse, QueryPageByConditionResult, QueryPageByConditionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户是否欠费
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public IsArrearResponse IsArrear(IsArrearRequest request) {
-            return  new IsArrearExecutor().Client(this).Execute<IsArrearResponse, IsArrearResult, IsArrearRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户是否欠费
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<IsArrearResponse> IsArrear(IsArrearRequest request) {
-            return await new IsArrearExecutor().Client(this).Execute<IsArrearResponse, IsArrearResult, IsArrearRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用于在账单展示的资源名称信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetResourceNameResponse GetResourceName(GetResourceNameRequest request) {
-            return  new GetResourceNameExecutor().Client(this).Execute<GetResourceNameResponse, GetResourceNameResult, GetResourceNameRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用于在账单展示的资源名称信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetResourceNameResponse> GetResourceName(GetResourceNameRequest request) {
-            return await new GetResourceNameExecutor().Client(this).Execute<GetResourceNameResponse, GetResourceNameResult, GetResourceNameRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除资源
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SendResourceOrderStatusMessageResponse SendResourceOrderStatusMessage(SendResourceOrderStatusMessageRequest request) {
-            return  new SendResourceOrderStatusMessageExecutor().Client(this).Execute<SendResourceOrderStatusMessageResponse, SendResourceOrderStatusMessageResult, SendResourceOrderStatusMessageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除资源
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SendResourceOrderStatusMessageResponse> SendResourceOrderStatusMessage(SendResourceOrderStatusMessageRequest request) {
-            return await new SendResourceOrderStatusMessageExecutor().Client(this).Execute<SendResourceOrderStatusMessageResponse, SendResourceOrderStatusMessageResult, SendResourceOrderStatusMessageRequest>(request);
+        public async Task<GetExpiringOrdersResponse> GetExpiringOrders(GetExpiringOrdersRequest request) {
+            return await new GetExpiringOrdersExecutor().Client(this).Execute<GetExpiringOrdersResponse, GetExpiringOrdersResult, GetExpiringOrdersRequest>(request);
         }
 #endif
 

@@ -39,9 +39,13 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+        /// 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
         ///</summary>
         public string AggrType{ get; set; }
+        ///<summary>
+        /// 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+        ///</summary>
+        public string DownSampleType{ get; set; }
         ///<summary>
         /// 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
         /// in: query
@@ -52,6 +56,11 @@ namespace JDCloudSDK.Monitor.Model
         /// in: query
         ///</summary>
         public bool GroupBy{ get; set; }
+        ///<summary>
+        /// 是否求速率
+        /// in: query
+        ///</summary>
+        public bool Rate{ get; set; }
         ///<summary>
         /// 资源的uuid
         ///Required:true
@@ -65,17 +74,17 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
-        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         /// in: query
         ///</summary>
         public string StartTime{ get; set; }
         ///<summary>
-        /// 自定义标签
+        /// 自定义标签/tag；至少要传一个tag，且tag.Values不为空
         /// in: query
         ///</summary>
         public List<TagFilter> Tags{ get; set; }
         ///<summary>
-        /// 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+        /// 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
         /// in: query
         ///</summary>
         public string TimeInterval{ get; set; }

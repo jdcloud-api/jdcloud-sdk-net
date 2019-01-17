@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  停止域名
+    ///  停用域名
     /// </summary>
     public class StopLiveDomainResponse : JdcloudResponse<StopLiveDomainResult>
     {

@@ -48,7 +48,7 @@ namespace JDCloudSDK.Jdfusion.Model
         ///<summary>
         /// 地址范围
         ///</summary>
-        public string AddressPrefix{ get; set; }
+        public string CidrBlock{ get; set; }
         ///<summary>
         /// VPC 描述
         ///</summary>

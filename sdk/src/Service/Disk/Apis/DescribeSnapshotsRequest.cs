@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    ///  查询云硬盘快照列表
+    ///  查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
     /// </summary>
     public class DescribeSnapshotsRequest : JdcloudRequest
     {
@@ -48,9 +48,13 @@ namespace  JDCloudSDK.Disk.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 查找快照的类型，可以为private，others，shared，默认为private
+        ///</summary>
+        public   string SnapshotSource{ get; set; }
+        ///<summary>
         /// snapshotId - 云硬盘快照ID，支持多个
         /// diskId - 生成快照的云硬盘ID，支持多个
-        /// status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+        /// status - 快照状态，精确匹配，支持多个,取值为 creating、available、copying、deleting、error_create、error_delete
         /// name - 快照名称，模糊匹配，支持单个
         /// 
         ///</summary>

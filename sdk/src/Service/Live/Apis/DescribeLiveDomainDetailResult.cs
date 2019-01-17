@@ -39,14 +39,14 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLiveDomainDetailResult : JdcloudResult
     {
         ///<summary>
-        /// PublishDomain
+        /// PublishDomains
         ///</summary>
-        public List<PublishDomain> PublishDomain{ get; set; }
+        public List<PublishDomain> PublishDomains{ get; set; }
 
         ///<summary>
-        /// PlayDomain
+        /// PlayDomains
         ///</summary>
-        public List<PlayDomain> PlayDomain{ get; set; }
+        public List<PlayDomain> PlayDomains{ get; set; }
 
     }
 }

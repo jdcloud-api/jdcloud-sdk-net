@@ -89,9 +89,9 @@ namespace JDCloudSDK.Httpdns.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,44 +157,6 @@ namespace JDCloudSDK.Httpdns.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建httpdns账户
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateAccountResponse CreateAccount(CreateAccountRequest request) {
-            return  new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建httpdns账户
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest request) {
-            return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询使用httpdns服务的域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetDomainsResponse GetDomains(GetDomainsRequest request) {
-            return  new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询使用httpdns服务的域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetDomainsResponse> GetDomains(GetDomainsRequest request) {
-            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  添加域名。&lt;br&gt;
         /// 可以添加顶级域名除外的多级域名。
         /// 
@@ -237,21 +199,21 @@ namespace JDCloudSDK.Httpdns.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建，启用，禁用httpdns服务密钥
+        ///  创建httpdns账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public OperateKeyResponse OperateKey(OperateKeyRequest request) {
-            return  new OperateKeyExecutor().Client(this).Execute<OperateKeyResponse, OperateKeyResult, OperateKeyRequest>(request);
+        public CreateAccountResponse CreateAccount(CreateAccountRequest request) {
+            return  new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建，启用，禁用httpdns服务密钥
+        ///  创建httpdns账户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<OperateKeyResponse> OperateKey(OperateKeyRequest request) {
-            return await new OperateKeyExecutor().Client(this).Execute<OperateKeyResponse, OperateKeyResult, OperateKeyRequest>(request);
+        public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest request) {
+            return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -271,6 +233,44 @@ namespace JDCloudSDK.Httpdns.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetAccountIdResponse> GetAccountId(GetAccountIdRequest request) {
             return await new GetAccountIdExecutor().Client(this).Execute<GetAccountIdResponse, GetAccountIdResult, GetAccountIdRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询使用httpdns服务的域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainsResponse GetDomains(GetDomainsRequest request) {
+            return  new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询使用httpdns服务的域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainsResponse> GetDomains(GetDomainsRequest request) {
+            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建，启用，禁用httpdns服务密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateKeyResponse OperateKey(OperateKeyRequest request) {
+            return  new OperateKeyExecutor().Client(this).Execute<OperateKeyResponse, OperateKeyResult, OperateKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建，启用，禁用httpdns服务密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateKeyResponse> OperateKey(OperateKeyRequest request) {
+            return await new OperateKeyExecutor().Client(this).Execute<OperateKeyResponse, OperateKeyResult, OperateKeyRequest>(request);
         }
 #endif
 

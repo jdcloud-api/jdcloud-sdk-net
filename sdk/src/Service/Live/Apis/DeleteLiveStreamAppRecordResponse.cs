@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除app录制配置
+    ///  删除APP录制配置
     /// </summary>
     public class DeleteLiveStreamAppRecordResponse : JdcloudResponse<DeleteLiveStreamAppRecordResult>
     {

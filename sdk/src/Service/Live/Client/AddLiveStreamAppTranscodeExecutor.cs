@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加app转码配置
+    ///  添加APP转码配置
     /// </summary>
     public class AddLiveStreamAppTranscodeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加app转码配置接口的Http 请求方法
+        ///  添加APP转码配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加app转码配置接口的Http资源请求路径
+        ///  添加APP转码配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除域名直播截图配置
+    ///  删除域名截图配置
     /// </summary>
     public class DeleteLiveStreamDomainSnapshotResult : JdcloudResult
     {

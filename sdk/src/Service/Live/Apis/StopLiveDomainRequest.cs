@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  停止域名
+    ///  停用域名
     /// </summary>
     public class StopLiveDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 要启动的域名
+        /// 要停用的域名
         ///Required:true
         ///</summary>
         [Required]

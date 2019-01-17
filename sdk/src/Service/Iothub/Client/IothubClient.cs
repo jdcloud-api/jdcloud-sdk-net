@@ -89,9 +89,9 @@ namespace JDCloudSDK.Iothub.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,48 +138,6 @@ namespace JDCloudSDK.Iothub.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  客户用该接口可以登记模块
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModuleEnrollResponse ModuleEnroll(ModuleEnrollRequest request) {
-            return  new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  客户用该接口可以登记模块
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModuleEnrollResponse> ModuleEnroll(ModuleEnrollRequest request) {
-            return await new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  客户用该接口可以修改模块预期状态
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModuleStateResponse ModuleState(ModuleStateRequest request) {
-            return  new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  客户用该接口可以修改模块预期状态
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModuleStateResponse> ModuleState(ModuleStateRequest request) {
-            return await new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  客户用该接口可以批量登记设备
         /// 
         /// </summary>
@@ -197,27 +155,6 @@ namespace JDCloudSDK.Iothub.Client
         /// <returns>请求结果信息</returns>
         public async Task<DevicesEnrollResponse> DevicesEnroll(DevicesEnrollRequest request) {
             return await new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  客户用该接口可以修改设备预期状态
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeviceStateResponse DeviceState(DeviceStateRequest request) {
-            return  new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  客户用该接口可以修改设备预期状态
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeviceStateResponse> DeviceState(DeviceStateRequest request) {
-            return await new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -243,6 +180,27 @@ namespace JDCloudSDK.Iothub.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  物模型注册接口
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OmEnrollResponse OmEnroll(OmEnrollRequest request) {
+            return  new OmEnrollExecutor().Client(this).Execute<OmEnrollResponse, OmEnrollResult, OmEnrollRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  物模型注册接口
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OmEnrollResponse> OmEnroll(OmEnrollRequest request) {
+            return await new OmEnrollExecutor().Client(this).Execute<OmEnrollResponse, OmEnrollResult, OmEnrollRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  激活一个设备，包括Edge、Dragon和普通设备
         /// 
         /// </summary>
@@ -264,23 +222,65 @@ namespace JDCloudSDK.Iothub.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  物模型注册接口
+        ///  客户用该接口可以修改模块预期状态
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public OmEnrollResponse OmEnroll(OmEnrollRequest request) {
-            return  new OmEnrollExecutor().Client(this).Execute<OmEnrollResponse, OmEnrollResult, OmEnrollRequest>(request);
+        public ModuleStateResponse ModuleState(ModuleStateRequest request) {
+            return  new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
         }
 #else
         /// <summary>
-        ///  物模型注册接口
+        ///  客户用该接口可以修改模块预期状态
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<OmEnrollResponse> OmEnroll(OmEnrollRequest request) {
-            return await new OmEnrollExecutor().Client(this).Execute<OmEnrollResponse, OmEnrollResult, OmEnrollRequest>(request);
+        public async Task<ModuleStateResponse> ModuleState(ModuleStateRequest request) {
+            return await new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以登记模块
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModuleEnrollResponse ModuleEnroll(ModuleEnrollRequest request) {
+            return  new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以登记模块
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModuleEnrollResponse> ModuleEnroll(ModuleEnrollRequest request) {
+            return await new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以修改设备预期状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeviceStateResponse DeviceState(DeviceStateRequest request) {
+            return  new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以修改设备预期状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeviceStateResponse> DeviceState(DeviceStateRequest request) {
+            return await new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request);
         }
 #endif
 

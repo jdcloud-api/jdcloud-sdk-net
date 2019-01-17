@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Monitor.Apis
         [Required]
         public   string ServiceCode{ get; set; }
         ///<summary>
-        /// 资源的uuid，支持多个resourceId批量查询，每个id用|分隔。 如：id1|id2|id3|id4
+        /// 资源的uuid，支持多个resourceId批量查询，每个id用竖线&#39;|&#39;分隔。 如：id1|id2|id3|id4
         ///Required:true
         ///</summary>
         [Required]

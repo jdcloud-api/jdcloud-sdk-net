@@ -35,22 +35,24 @@ namespace JDCloudSDK.Monitor.Client
     /// <summary>
     ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. serviceCode
-        /// 1.1 serviceCode + resourceId
-        /// 1.2 serviceCode + resourceIds
-        /// 2. serviceCodes
-        /// 3. 用户所有规则
+        /// 1. alarmId
+        /// 2. serviceCode
+        /// 2.1 serviceCode + resourceId
+        /// 2.2 serviceCode + resourceIds
+        /// 3. serviceCodes
+        /// 4. 用户所有规则
     /// </summary>
     public class DescribeAlarmHistoryAllRegionExecutor : JdcloudExecutor
     {
         /// <summary>
         ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. serviceCode
-        /// 1.1 serviceCode + resourceId
-        /// 1.2 serviceCode + resourceIds
-        /// 2. serviceCodes
-        /// 3. 用户所有规则接口的Http 请求方法
+        /// 1. alarmId
+        /// 2. serviceCode
+        /// 2.1 serviceCode + resourceId
+        /// 2.2 serviceCode + resourceIds
+        /// 3. serviceCodes
+        /// 4. 用户所有规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -61,16 +63,17 @@ namespace JDCloudSDK.Monitor.Client
         /// <summary>
         ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. serviceCode
-        /// 1.1 serviceCode + resourceId
-        /// 1.2 serviceCode + resourceIds
-        /// 2. serviceCodes
-        /// 3. 用户所有规则接口的Http资源请求路径
+        /// 1. alarmId
+        /// 2. serviceCode
+        /// 2.1 serviceCode + resourceId
+        /// 2.2 serviceCode + resourceIds
+        /// 3. serviceCodes
+        /// 4. 用户所有规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/rule/queryNotice";
+            return "/ruleNoticeHistory";
             }
         }
     }

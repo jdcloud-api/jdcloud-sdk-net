@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加 app 模板
+    ///  添加直播APP
     /// </summary>
     public class AddLiveAppExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加 app 模板接口的Http 请求方法
+        ///  添加直播APP接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加 app 模板接口的Http资源请求路径
+        ///  添加直播APP接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

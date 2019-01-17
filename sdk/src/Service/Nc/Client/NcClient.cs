@@ -89,9 +89,9 @@ namespace JDCloudSDK.Nc.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,205 @@ namespace JDCloudSDK.Nc.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
+            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个 secret 详情
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSecretResponse DescribeSecret(DescribeSecretRequest request) {
+            return  new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个 secret 详情
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSecretResponse> DescribeSecret(DescribeSecretRequest request) {
+            return await new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSecretResponse CreateSecret(CreateSecretRequest request) {
+            return  new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
+            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改容器的 名称 和 描述。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyContainerAttributeResponse ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
+            return  new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改容器的 名称 和 描述。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyContainerAttributeResponse> ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
+            return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除单个 secret
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSecretResponse DeleteSecret(DeleteSecretRequest request) {
+            return  new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除单个 secret
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
+            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisassociateElasticIpResponse DisassociateElasticIp(DisassociateElasticIpRequest request) {
+            return  new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
+            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        /// 只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteContainerResponse DeleteContainer(DeleteContainerRequest request) {
+            return  new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        /// 只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteContainerResponse> DeleteContainer(DeleteContainerRequest request) {
+            return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询一台原生容器的详细信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeContainerResponse DescribeContainer(DescribeContainerRequest request) {
+            return  new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询一台原生容器的详细信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeContainerResponse> DescribeContainer(DescribeContainerRequest request) {
+            return await new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartContainerResponse StartContainer(StartContainerRequest request) {
+            return  new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartContainerResponse> StartContainer(StartContainerRequest request) {
+            return await new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  批量查询原生容器的详细信息&lt;br&gt;
         /// 此接口支持分页查询，默认每页20条。
         /// 
@@ -157,6 +356,48 @@ namespace JDCloudSDK.Nc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeContainersResponse> DescribeContainers(DescribeContainersRequest request) {
             return await new DescribeContainersExecutor().Client(this).Execute<DescribeContainersResponse, DescribeContainersResult, DescribeContainersRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个容器日志
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetLogsResponse GetLogs(GetLogsRequest request) {
+            return  new GetLogsExecutor().Client(this).Execute<GetLogsResponse, GetLogsResult, GetLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个容器日志
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetLogsResponse> GetLogs(GetLogsRequest request) {
+            return await new GetLogsExecutor().Client(this).Execute<GetLogsResponse, GetLogsResult, GetLogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeQuotaResponse DescribeQuota(DescribeQuotaRequest request) {
+            return  new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询资源的配额，支持：原生容器 pod 和 secret.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
+            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -286,94 +527,6 @@ namespace JDCloudSDK.Nc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询单个容器日志
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetLogsResponse GetLogs(GetLogsRequest request) {
-            return  new GetLogsExecutor().Client(this).Execute<GetLogsResponse, GetLogsResult, GetLogsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个容器日志
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetLogsResponse> GetLogs(GetLogsRequest request) {
-            return await new GetLogsExecutor().Client(this).Execute<GetLogsResponse, GetLogsResult, GetLogsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个 secret 详情
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSecretResponse DescribeSecret(DescribeSecretRequest request) {
-            return  new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个 secret 详情
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSecretResponse> DescribeSecret(DescribeSecretRequest request) {
-            return await new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改容器的 名称 和 描述。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyContainerAttributeResponse ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
-            return  new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改容器的 名称 和 描述。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyContainerAttributeResponse> ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
-            return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-        /// 只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteContainerResponse DeleteContainer(DeleteContainerRequest request) {
-            return  new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-        /// 只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteContainerResponse> DeleteContainer(DeleteContainerRequest request) {
-            return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  停止处于运行状态的单个实例，处于任务执行中的容器无法启动。
         /// 
         /// </summary>
@@ -391,50 +544,6 @@ namespace JDCloudSDK.Nc.Client
         /// <returns>请求结果信息</returns>
         public async Task<StopContainerResponse> StopContainer(StopContainerRequest request) {
             return await new StopContainerExecutor().Client(this).Execute<StopContainerResponse, StopContainerResult, StopContainerRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
-        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartContainerResponse StartContainer(StartContainerRequest request) {
-            return  new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
-        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartContainerResponse> StartContainer(StartContainerRequest request) {
-            return await new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisassociateElasticIpResponse DisassociateElasticIp(DisassociateElasticIpRequest request) {
-            return  new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
-            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -458,115 +567,6 @@ namespace JDCloudSDK.Nc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretsResponse> DescribeSecrets(DescribeSecretsRequest request) {
             return await new DescribeSecretsExecutor().Client(this).Execute<DescribeSecretsResponse, DescribeSecretsResult, DescribeSecretsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeQuotaResponse DescribeQuota(DescribeQuotaRequest request) {
-            return  new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
-            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询一台原生容器的详细信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeContainerResponse DescribeContainer(DescribeContainerRequest request) {
-            return  new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询一台原生容器的详细信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeContainerResponse> DescribeContainer(DescribeContainerRequest request) {
-            return await new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除单个 secret
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteSecretResponse DeleteSecret(DeleteSecretRequest request) {
-            return  new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除单个 secret
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
-            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateSecretResponse CreateSecret(CreateSecretRequest request) {
-            return  new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
-            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
-        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        /// 如果是黑名单中的用户，会返回错误。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
-            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
-        /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        /// 如果是黑名单中的用户，会返回错误。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
         }
 #endif
 

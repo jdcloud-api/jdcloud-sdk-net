@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
@@ -40,7 +41,9 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 模板类型，区分默认模板和用户自定义模板：1表示默认模板，2表示用户自定义模板
         /// in: query
+        ///Required:true
         ///</summary>
-        public long? TemplateType{ get; set; }
+        [Required]
+        public long TemplateType{ get; set; }
     }
 }

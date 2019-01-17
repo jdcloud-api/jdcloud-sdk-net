@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cps.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,21 +138,97 @@ namespace JDCloudSDK.Cps.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询云物理服务器地域列表
+        ///  查询子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeRegionesResponse DescribeRegiones(DescribeRegionesRequest request) {
-            return  new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request);
+        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
+            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询云物理服务器地域列表
+        ///  查询子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeRegionesResponse> DescribeRegiones(DescribeRegionesRequest request) {
-            return await new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request);
+        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询云物理服务器实例类型
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDeviceTypesResponse DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
+            return  new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询云物理服务器实例类型
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDeviceTypesResponse> DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
+            return await new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  对单个云物理服务器执行关机操作，只能停止running状态的服务器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopInstanceResponse StopInstance(StopInstanceRequest request) {
+            return  new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对单个云物理服务器执行关机操作，只能停止running状态的服务器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
+            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重启单个云物理服务器，只能重启running状态的服务器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestartInstanceResponse RestartInstance(RestartInstanceRequest request) {
+            return  new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重启单个云物理服务器，只能重启running状态的服务器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest request) {
+            return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个云物理服务器硬件监控信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceStatusResponse DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
+            return  new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个云物理服务器硬件监控信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
+            return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -182,59 +258,40 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询云物理服务器实例类型
+        ///  查询云物理服务器支持的操作系统
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeDeviceTypesResponse DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
-            return  new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
+        public DescribeOSResponse DescribeOS(DescribeOSRequest request) {
+            return  new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询云物理服务器实例类型
+        ///  查询云物理服务器支持的操作系统
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDeviceTypesResponse> DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
-            return await new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
+        public async Task<DescribeOSResponse> DescribeOS(DescribeOSRequest request) {
+            return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询子网
+        ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
-            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        public DescribeDeviceRaidsResponse DescribeDeviceRaids(DescribeDeviceRaidsRequest request) {
+            return  new DescribeDeviceRaidsExecutor().Client(this).Execute<DescribeDeviceRaidsResponse, DescribeDeviceRaidsResult, DescribeDeviceRaidsRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询子网
+        ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
-            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceRaidResponse DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
-            return  new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceRaidResponse> DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
-            return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
+        public async Task<DescribeDeviceRaidsResponse> DescribeDeviceRaids(DescribeDeviceRaidsRequest request) {
+            return await new DescribeDeviceRaidsExecutor().Client(this).Execute<DescribeDeviceRaidsResponse, DescribeDeviceRaidsResult, DescribeDeviceRaidsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -262,86 +319,6 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        /// 支持分页查询，默认每页10条&lt;br/&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
-            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        /// 支持分页查询，默认每页10条&lt;br/&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个云物理服务器硬件监控信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceStatusResponse DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
-            return  new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个云物理服务器硬件监控信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
-            return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改云物理服务器部分信息，包括名称、描述
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest request) {
-            return  new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改云物理服务器部分信息，包括名称、描述
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest request) {
-            return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDeviceRaidsResponse DescribeDeviceRaids(DescribeDeviceRaidsRequest request) {
-            return  new DescribeDeviceRaidsExecutor().Client(this).Execute<DescribeDeviceRaidsResponse, DescribeDeviceRaidsResult, DescribeDeviceRaidsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDeviceRaidsResponse> DescribeDeviceRaids(DescribeDeviceRaidsRequest request) {
-            return await new DescribeDeviceRaidsExecutor().Client(this).Execute<DescribeDeviceRaidsResponse, DescribeDeviceRaidsResult, DescribeDeviceRaidsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询云物理服务器名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -357,6 +334,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceNameResponse> DescribeInstanceName(DescribeInstanceNameRequest request) {
             return await new DescribeInstanceNameExecutor().Client(this).Execute<DescribeInstanceNameResponse, DescribeInstanceNameResult, DescribeInstanceNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceRaidResponse DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
+            return  new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceRaidResponse> DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
+            return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -405,6 +401,48 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量查询云物理服务器详细信息&lt;br/&gt;
+        /// 支持分页查询，默认每页10条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
+            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询云物理服务器详细信息&lt;br/&gt;
+        /// 支持分页查询，默认每页10条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询云物理服务器地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRegionesResponse DescribeRegiones(DescribeRegionesRequest request) {
+            return  new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询云物理服务器地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRegionesResponse> DescribeRegiones(DescribeRegionesRequest request) {
+            return await new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -420,25 +458,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
             return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重启单个云物理服务器，只能重启running状态的服务器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RestartInstanceResponse RestartInstance(RestartInstanceRequest request) {
-            return  new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重启单个云物理服务器，只能重启running状态的服务器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest request) {
-            return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -498,40 +517,21 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询云物理服务器支持的操作系统
+        ///  修改云物理服务器部分信息，包括名称、描述
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeOSResponse DescribeOS(DescribeOSRequest request) {
-            return  new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
+        public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest request) {
+            return  new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询云物理服务器支持的操作系统
+        ///  修改云物理服务器部分信息，包括名称、描述
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeOSResponse> DescribeOS(DescribeOSRequest request) {
-            return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  对单个云物理服务器执行关机操作，只能停止running状态的服务器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopInstanceResponse StopInstance(StopInstanceRequest request) {
-            return  new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  对单个云物理服务器执行关机操作，只能停止running状态的服务器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
-            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
+        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest request) {
+            return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
         }
 #endif
 

@@ -27,12 +27,12 @@
         <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
     </ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\Charge\JDCloudSDK.Charge.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Disk\JDCloudSDK.Disk.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
 	</ItemGroup>
 </Project>

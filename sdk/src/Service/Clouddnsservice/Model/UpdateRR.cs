@@ -91,7 +91,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public int? Weight{ get; set; }
         ///<summary>
-        /// 解析线路的ID
+        /// 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
         ///Required:true
         ///</summary>
         [Required]

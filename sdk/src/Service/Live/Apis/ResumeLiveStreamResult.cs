@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Live.Apis
     /// </summary>
     public class ResumeLiveStreamResult : JdcloudResult
     {
-        ///<summary>
-        /// 您的加速域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

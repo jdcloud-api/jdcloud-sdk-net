@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    ///  查询云硬盘快照列表
+    ///  查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
     /// </summary>
     public class DescribeSnapshotsResult : JdcloudResult
     {

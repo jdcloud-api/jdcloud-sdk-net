@@ -74,13 +74,9 @@ namespace JDCloudSDK.Jdfusion.Model
         ///</summary>
         public string NetworkType{ get; set; }
         ///<summary>
-        /// 实例的主可用区ID。
+        /// 可用区域。
         ///</summary>
-        public string MasterAz{ get; set; }
-        ///<summary>
-        /// 实例的备可用区ID。
-        ///</summary>
-        public string SlaveAz{ get; set; }
+        public List<string> Azs{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>

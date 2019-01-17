@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   AttachDataDiskReq Body{ get; set; }
+        public   AttachDataDisk Attach{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

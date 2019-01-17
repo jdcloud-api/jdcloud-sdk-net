@@ -89,9 +89,9 @@ namespace JDCloudSDK.Streamcomputer.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,21 +138,21 @@ namespace JDCloudSDK.Streamcomputer.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  删除namespace,如果旗下关联有其他资源，不允许删除
+        ///  查询某个应用详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest request) {
-            return  new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
+        public QueryNamespaceDetailResponse QueryNamespaceDetail(QueryNamespaceDetailRequest request) {
+            return  new QueryNamespaceDetailExecutor().Client(this).Execute<QueryNamespaceDetailResponse, QueryNamespaceDetailResult, QueryNamespaceDetailRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除namespace,如果旗下关联有其他资源，不允许删除
+        ///  查询某个应用详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest request) {
-            return await new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
+        public async Task<QueryNamespaceDetailResponse> QueryNamespaceDetail(QueryNamespaceDetailRequest request) {
+            return await new QueryNamespaceDetailExecutor().Client(this).Execute<QueryNamespaceDetailResponse, QueryNamespaceDetailResult, QueryNamespaceDetailRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -176,21 +176,59 @@ namespace JDCloudSDK.Streamcomputer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  停止作业运行job
+        ///  查询指定输入
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public StopJobResponse StopJob(StopJobRequest request) {
-            return  new StopJobExecutor().Client(this).Execute<StopJobResponse, StopJobResult, StopJobRequest>(request);
+        public DescribeStorageResponse DescribeStorage(DescribeStorageRequest request) {
+            return  new DescribeStorageExecutor().Client(this).Execute<DescribeStorageResponse, DescribeStorageResult, DescribeStorageRequest>(request);
         }
 #else
         /// <summary>
-        ///  停止作业运行job
+        ///  查询指定输入
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<StopJobResponse> StopJob(StopJobRequest request) {
-            return await new StopJobExecutor().Client(this).Execute<StopJobResponse, StopJobResult, StopJobRequest>(request);
+        public async Task<DescribeStorageResponse> DescribeStorage(DescribeStorageRequest request) {
+            return await new DescribeStorageExecutor().Client(this).Execute<DescribeStorageResponse, DescribeStorageResult, DescribeStorageRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteJobResponse DeleteJob(DeleteJobRequest request) {
+            return  new DeleteJobExecutor().Client(this).Execute<DeleteJobResponse, DeleteJobResult, DeleteJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteJobResponse> DeleteJob(DeleteJobRequest request) {
+            return await new DeleteJobExecutor().Client(this).Execute<DeleteJobResponse, DeleteJobResult, DeleteJobRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加或者更新job
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddOrUpdateJobResponse AddOrUpdateJob(AddOrUpdateJobRequest request) {
+            return  new AddOrUpdateJobExecutor().Client(this).Execute<AddOrUpdateJobResponse, AddOrUpdateJobResult, AddOrUpdateJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加或者更新job
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddOrUpdateJobResponse> AddOrUpdateJob(AddOrUpdateJobRequest request) {
+            return await new AddOrUpdateJobExecutor().Client(this).Execute<AddOrUpdateJobResponse, AddOrUpdateJobResult, AddOrUpdateJobRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -210,44 +248,6 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryNamespacesResponse> QueryNamespaces(QueryNamespacesRequest request) {
             return await new QueryNamespacesExecutor().Client(this).Execute<QueryNamespacesResponse, QueryNamespacesResult, QueryNamespacesRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询指定应用下的所有job
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetJobListResponse GetJobList(GetJobListRequest request) {
-            return  new GetJobListExecutor().Client(this).Execute<GetJobListResponse, GetJobListResult, GetJobListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询指定应用下的所有job
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetJobListResponse> GetJobList(GetJobListRequest request) {
-            return await new GetJobListExecutor().Client(this).Execute<GetJobListResponse, GetJobListResult, GetJobListRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除指定输入
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteStorageResponse DeleteStorage(DeleteStorageRequest request) {
-            return  new DeleteStorageExecutor().Client(this).Execute<DeleteStorageResponse, DeleteStorageResult, DeleteStorageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除指定输入
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteStorageResponse> DeleteStorage(DeleteStorageRequest request) {
-            return await new DeleteStorageExecutor().Client(this).Execute<DeleteStorageResponse, DeleteStorageResult, DeleteStorageRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -275,8 +275,8 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetStorageListResponse GetStorageList(GetStorageListRequest request) {
-            return  new GetStorageListExecutor().Client(this).Execute<GetStorageListResponse, GetStorageListResult, GetStorageListRequest>(request);
+        public AddOrUpdateStorageResponse AddOrUpdateStorage(AddOrUpdateStorageRequest request) {
+            return  new AddOrUpdateStorageExecutor().Client(this).Execute<AddOrUpdateStorageResponse, AddOrUpdateStorageResult, AddOrUpdateStorageRequest>(request);
         }
 #else
         /// <summary>
@@ -284,8 +284,65 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetStorageListResponse> GetStorageList(GetStorageListRequest request) {
-            return await new GetStorageListExecutor().Client(this).Execute<GetStorageListResponse, GetStorageListResult, GetStorageListRequest>(request);
+        public async Task<AddOrUpdateStorageResponse> AddOrUpdateStorage(AddOrUpdateStorageRequest request) {
+            return await new AddOrUpdateStorageExecutor().Client(this).Execute<AddOrUpdateStorageResponse, AddOrUpdateStorageResult, AddOrUpdateStorageRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询指定应用下的所有job
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetJobListResponse GetJobList(GetJobListRequest request) {
+            return  new GetJobListExecutor().Client(this).Execute<GetJobListResponse, GetJobListResult, GetJobListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询指定应用下的所有job
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetJobListResponse> GetJobList(GetJobListRequest request) {
+            return await new GetJobListExecutor().Client(this).Execute<GetJobListResponse, GetJobListResult, GetJobListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除namespace,如果旗下关联有其他资源，不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest request) {
+            return  new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除namespace,如果旗下关联有其他资源，不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest request) {
+            return await new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止作业运行job
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopJobResponse StopJob(StopJobRequest request) {
+            return  new StopJobExecutor().Client(this).Execute<StopJobResponse, StopJobResult, StopJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止作业运行job
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopJobResponse> StopJob(StopJobRequest request) {
+            return await new StopJobExecutor().Client(this).Execute<StopJobResponse, StopJobResult, StopJobRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -313,8 +370,8 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AddOrUpdateStorageResponse AddOrUpdateStorage(AddOrUpdateStorageRequest request) {
-            return  new AddOrUpdateStorageExecutor().Client(this).Execute<AddOrUpdateStorageResponse, AddOrUpdateStorageResult, AddOrUpdateStorageRequest>(request);
+        public GetStorageListResponse GetStorageList(GetStorageListRequest request) {
+            return  new GetStorageListExecutor().Client(this).Execute<GetStorageListResponse, GetStorageListResult, GetStorageListRequest>(request);
         }
 #else
         /// <summary>
@@ -322,46 +379,8 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AddOrUpdateStorageResponse> AddOrUpdateStorage(AddOrUpdateStorageRequest request) {
-            return await new AddOrUpdateStorageExecutor().Client(this).Execute<AddOrUpdateStorageResponse, AddOrUpdateStorageResult, AddOrUpdateStorageRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加或者更新job
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddOrUpdateJobResponse AddOrUpdateJob(AddOrUpdateJobRequest request) {
-            return  new AddOrUpdateJobExecutor().Client(this).Execute<AddOrUpdateJobResponse, AddOrUpdateJobResult, AddOrUpdateJobRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加或者更新job
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddOrUpdateJobResponse> AddOrUpdateJob(AddOrUpdateJobRequest request) {
-            return await new AddOrUpdateJobExecutor().Client(this).Execute<AddOrUpdateJobResponse, AddOrUpdateJobResult, AddOrUpdateJobRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询某个应用详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryNamespaceDetailResponse QueryNamespaceDetail(QueryNamespaceDetailRequest request) {
-            return  new QueryNamespaceDetailExecutor().Client(this).Execute<QueryNamespaceDetailResponse, QueryNamespaceDetailResult, QueryNamespaceDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询某个应用详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryNamespaceDetailResponse> QueryNamespaceDetail(QueryNamespaceDetailRequest request) {
-            return await new QueryNamespaceDetailExecutor().Client(this).Execute<QueryNamespaceDetailResponse, QueryNamespaceDetailResult, QueryNamespaceDetailRequest>(request);
+        public async Task<GetStorageListResponse> GetStorageList(GetStorageListRequest request) {
+            return await new GetStorageListExecutor().Client(this).Execute<GetStorageListResponse, GetStorageListResult, GetStorageListRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -385,40 +404,21 @@ namespace JDCloudSDK.Streamcomputer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除作业
+        ///  删除指定输入
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteJobResponse DeleteJob(DeleteJobRequest request) {
-            return  new DeleteJobExecutor().Client(this).Execute<DeleteJobResponse, DeleteJobResult, DeleteJobRequest>(request);
+        public DeleteStorageResponse DeleteStorage(DeleteStorageRequest request) {
+            return  new DeleteStorageExecutor().Client(this).Execute<DeleteStorageResponse, DeleteStorageResult, DeleteStorageRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除作业
+        ///  删除指定输入
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteJobResponse> DeleteJob(DeleteJobRequest request) {
-            return await new DeleteJobExecutor().Client(this).Execute<DeleteJobResponse, DeleteJobResult, DeleteJobRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询指定输入
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeStorageResponse DescribeStorage(DescribeStorageRequest request) {
-            return  new DescribeStorageExecutor().Client(this).Execute<DescribeStorageResponse, DescribeStorageResult, DescribeStorageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询指定输入
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeStorageResponse> DescribeStorage(DescribeStorageRequest request) {
-            return await new DescribeStorageExecutor().Client(this).Execute<DescribeStorageResponse, DescribeStorageResult, DescribeStorageRequest>(request);
+        public async Task<DeleteStorageResponse> DeleteStorage(DeleteStorageRequest request) {
+            return await new DeleteStorageExecutor().Client(this).Execute<DeleteStorageResponse, DeleteStorageResult, DeleteStorageRequest>(request);
         }
 #endif
 

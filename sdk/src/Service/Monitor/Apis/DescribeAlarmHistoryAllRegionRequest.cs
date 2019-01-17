@@ -36,11 +36,12 @@ namespace  JDCloudSDK.Monitor.Apis
     /// <summary>
     ///  查询报警历史
         ///         /// 检索条件组合优先级从高到低为
-        ///         /// 1. serviceCode
-        ///         /// 1.1 serviceCode + resourceId
-        ///         /// 1.2 serviceCode + resourceIds
-        ///         /// 2. serviceCodes
-        ///         /// 3. 用户所有规则
+        ///         /// 1. alarmId
+        ///         /// 2. serviceCode
+        ///         /// 2.1 serviceCode + resourceId
+        ///         /// 2.2 serviceCode + resourceIds
+        ///         /// 3. serviceCodes
+        ///         /// 4. 用户所有规则
     /// </summary>
     public class DescribeAlarmHistoryAllRegionRequest : JdcloudRequest
     {
@@ -61,6 +62,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string ResourceId{ get; set; }
         ///<summary>
+        /// resourceId列表
+        ///</summary>
+        public List<string> ResourceIdList{ get; set; }
+
+        ///<summary>
         /// 规则Id
         ///</summary>
         public   string AlarmId{ get; set; }
@@ -69,6 +75,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   long? Alarming{ get; set; }
         ///<summary>
+        /// 产品线列表
+        ///</summary>
+        public List<string> ServiceCodeList{ get; set; }
+
+        ///<summary>
         /// 开始时间
         ///</summary>
         public   string StartTime{ get; set; }
@@ -76,6 +87,10 @@ namespace  JDCloudSDK.Monitor.Apis
         /// 结束时间
         ///</summary>
         public   string EndTime{ get; set; }
+        ///<summary>
+        /// 规则类型,默认查询1， 1表示资源监控，6表示站点监控,7表示可用性监控
+        ///</summary>
+        public   long? RuleType{ get; set; }
         ///<summary>
         /// 服务码或资源Id列表
         /// filter name 为serviceCodes表示查询多个产品线的规则

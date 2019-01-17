@@ -50,11 +50,5 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         [Required]
         public   string PlayDomain{ get; set; }
-        ///<summary>
-        /// 区域ID
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string Region{ get; set; }
     }
 }

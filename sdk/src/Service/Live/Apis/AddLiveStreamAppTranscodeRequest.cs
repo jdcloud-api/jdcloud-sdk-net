@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加app转码配置
+    ///  添加APP转码配置
     /// </summary>
     public class AddLiveStreamAppTranscodeRequest : JdcloudRequest
     {

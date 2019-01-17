@@ -58,9 +58,17 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public long? Deleted{ get; set; }
         ///<summary>
+        /// downSample
+        ///</summary>
+        public string DownSample{ get; set; }
+        ///<summary>
         /// 规则ID
         ///</summary>
         public long? Id{ get; set; }
+        ///<summary>
+        /// 监控项
+        ///</summary>
+        public string Metric{ get; set; }
         ///<summary>
         /// 监控项ID
         ///</summary>

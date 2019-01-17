@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  删除app水印配置
+    ///  删除APP水印配置
     /// </summary>
     public class DeleteLiveStreamAppWatermarkExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除app水印配置接口的Http 请求方法
+        ///  删除APP水印配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除app水印配置接口的Http资源请求路径
+        ///  删除APP水印配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

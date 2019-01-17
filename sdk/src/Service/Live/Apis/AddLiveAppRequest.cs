@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加 app 模板
+    ///  添加直播APP
     /// </summary>
     public class AddLiveAppRequest : JdcloudRequest
     {

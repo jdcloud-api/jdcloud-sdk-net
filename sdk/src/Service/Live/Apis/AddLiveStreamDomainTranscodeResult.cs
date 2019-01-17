@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Live.Apis
     /// </summary>
     public class AddLiveStreamDomainTranscodeResult : JdcloudResult
     {
-        ///<summary>
-        /// 直播的推流域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

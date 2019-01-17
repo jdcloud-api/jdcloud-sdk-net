@@ -89,9 +89,9 @@ namespace JDCloudSDK.Mps.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,21 +138,40 @@ namespace JDCloudSDK.Mps.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
+        ///  创建截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetNotificationResponse SetNotification(SetNotificationRequest request) {
-            return  new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request);
+        public CreateThumbnailTaskResponse CreateThumbnailTask(CreateThumbnailTaskRequest request) {
+            return  new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
+        ///  创建截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetNotificationResponse> SetNotification(SetNotificationRequest request) {
-            return await new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request);
+        public async Task<CreateThumbnailTaskResponse> CreateThumbnailTask(CreateThumbnailTaskRequest request) {
+            return await new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询截图任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListThumbnailTaskResponse ListThumbnailTask(ListThumbnailTaskRequest request) {
+            return  new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询截图任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListThumbnailTaskResponse> ListThumbnailTask(ListThumbnailTaskRequest request) {
+            return await new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -176,25 +195,6 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建截图任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateThumbnailTaskResponse CreateThumbnailTask(CreateThumbnailTaskRequest request) {
-            return  new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建截图任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateThumbnailTaskResponse> CreateThumbnailTask(CreateThumbnailTaskRequest request) {
-            return await new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  获取截图任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -214,21 +214,21 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询截图任务
+        ///  设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ListThumbnailTaskResponse ListThumbnailTask(ListThumbnailTaskRequest request) {
-            return  new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
+        public SetNotificationResponse SetNotification(SetNotificationRequest request) {
+            return  new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询截图任务
+        ///  设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ListThumbnailTaskResponse> ListThumbnailTask(ListThumbnailTaskRequest request) {
-            return await new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
+        public async Task<SetNotificationResponse> SetNotification(SetNotificationRequest request) {
+            return await new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request);
         }
 #endif
 

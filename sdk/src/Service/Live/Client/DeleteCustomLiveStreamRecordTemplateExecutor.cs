@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  删除录制模板
+    ///  删除用户自定义录制模板
     /// </summary>
     public class DeleteCustomLiveStreamRecordTemplateExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除录制模板接口的Http 请求方法
+        ///  删除用户自定义录制模板接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除录制模板接口的Http资源请求路径
+        ///  删除用户自定义录制模板接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

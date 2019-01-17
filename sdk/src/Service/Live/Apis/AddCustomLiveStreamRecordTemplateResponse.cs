@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加录制模板
+    ///  添加直播录制模板
     /// </summary>
     public class AddCustomLiveStreamRecordTemplateResponse : JdcloudResponse<AddCustomLiveStreamRecordTemplateResult>
     {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查询域名下的app列表
+    ///  查询域名下的APP列表
     /// </summary>
     public class DescribeLiveAppExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询域名下的app列表接口的Http 请求方法
+        ///  查询域名下的APP列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查询域名下的app列表接口的Http资源请求路径
+        ///  查询域名下的APP列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

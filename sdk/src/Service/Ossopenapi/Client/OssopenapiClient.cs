@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ossopenapi.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Ossopenapi.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  获取回源配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBackSourceConfigurationResponse GetBackSourceConfiguration(GetBackSourceConfigurationRequest request) {
+            return  new GetBackSourceConfigurationExecutor().Client(this).Execute<GetBackSourceConfigurationResponse, GetBackSourceConfigurationResult, GetBackSourceConfigurationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取回源配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBackSourceConfigurationResponse> GetBackSourceConfiguration(GetBackSourceConfigurationRequest request) {
+            return await new GetBackSourceConfigurationExecutor().Client(this).Execute<GetBackSourceConfigurationResponse, GetBackSourceConfigurationResult, GetBackSourceConfigurationRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  添加修改回源配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,25 +191,6 @@ namespace JDCloudSDK.Ossopenapi.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackSourceConfigurationResponse> DeleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) {
             return await new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取回源配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetBackSourceConfigurationResponse GetBackSourceConfiguration(GetBackSourceConfigurationRequest request) {
-            return  new GetBackSourceConfigurationExecutor().Client(this).Execute<GetBackSourceConfigurationResponse, GetBackSourceConfigurationResult, GetBackSourceConfigurationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取回源配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetBackSourceConfigurationResponse> GetBackSourceConfiguration(GetBackSourceConfigurationRequest request) {
-            return await new GetBackSourceConfigurationExecutor().Client(this).Execute<GetBackSourceConfigurationResponse, GetBackSourceConfigurationResult, GetBackSourceConfigurationRequest>(request);
         }
 #endif
 

@@ -33,13 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加app水印配置
+    ///  添加APP水印配置
     /// </summary>
     public class AddLiveStreamAppWatermarkResult : JdcloudResult
     {
-        ///<summary>
-        /// 返回结果
-        ///</summary>
-        public   bool Feedback{ get; set; }
     }
 }

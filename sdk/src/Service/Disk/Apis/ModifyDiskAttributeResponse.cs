@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    ///  修改云硬盘的名字或描述信息
+    ///  修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
     /// </summary>
     public class ModifyDiskAttributeResponse : JdcloudResponse<ModifyDiskAttributeResult>
     {

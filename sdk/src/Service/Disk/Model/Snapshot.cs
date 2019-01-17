@@ -42,13 +42,21 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        /// 创建快照的云硬盘ID
+        /// 快照来源 可以有self，others两种来源
+        ///</summary>
+        public string SnapshotSource{ get; set; }
+        ///<summary>
+        /// 创建快照的云硬盘ID(snapshotSource为others时不展示)
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
         /// 快照大小，单位为GiB
         ///</summary>
         public int? SnapshotSizeGB{ get; set; }
+        ///<summary>
+        /// 快照关联的所有镜像ID(snapshotSource为others时不展示)
+        ///</summary>
+        public List<string> Images{ get; set; }
         ///<summary>
         /// 快照名称
         ///</summary>
@@ -65,5 +73,13 @@ namespace JDCloudSDK.Disk.Model
         /// 创建时间
         ///</summary>
         public DateTime? CreateTime{ get; set; }
+        ///<summary>
+        /// 共享信息
+        ///</summary>
+        public List<ShareInfo> SharInfo{ get; set; }
+        ///<summary>
+        /// 快照是否为加密盘的快照
+        ///</summary>
+        public bool Encrypted{ get; set; }
     }
 }

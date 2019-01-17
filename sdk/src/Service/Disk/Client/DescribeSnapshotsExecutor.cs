@@ -33,12 +33,12 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    ///  查询云硬盘快照列表
+    ///  查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
     /// </summary>
     public class DescribeSnapshotsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云硬盘快照列表接口的Http 请求方法
+        ///  查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        ///  查询云硬盘快照列表接口的Http资源请求路径
+        ///  查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

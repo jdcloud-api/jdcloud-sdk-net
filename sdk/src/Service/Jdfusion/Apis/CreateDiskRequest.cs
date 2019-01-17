@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateDataDiskReq Body{ get; set; }
+        public   CreateDataDisk Disk{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

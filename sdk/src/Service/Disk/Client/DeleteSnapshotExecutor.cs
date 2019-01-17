@@ -33,12 +33,18 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    ///  删除单个云硬盘快照:快照状态必须为 available 或 error 状态
+    ///  -   删除单个云硬盘快照:快照状态必须为 available 或 error 状态。
+        /// -   快照独立于云硬盘生命周期，删除快照不会对创建快照的云硬盘有任何影响。
+        /// -   快照删除后不可恢复，请谨慎操作。
+        /// 
     /// </summary>
     public class DeleteSnapshotExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除单个云硬盘快照:快照状态必须为 available 或 error 状态接口的Http 请求方法
+        ///  -   删除单个云硬盘快照:快照状态必须为 available 或 error 状态。
+        /// -   快照独立于云硬盘生命周期，删除快照不会对创建快照的云硬盘有任何影响。
+        /// -   快照删除后不可恢复，请谨慎操作。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        ///  删除单个云硬盘快照:快照状态必须为 available 或 error 状态接口的Http资源请求路径
+        ///  -   删除单个云硬盘快照:快照状态必须为 available 或 error 状态。
+        /// -   快照独立于云硬盘生命周期，删除快照不会对创建快照的云硬盘有任何影响。
+        /// -   快照删除后不可恢复，请谨慎操作。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

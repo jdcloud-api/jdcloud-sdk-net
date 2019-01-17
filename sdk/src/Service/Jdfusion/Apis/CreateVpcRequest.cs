@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateVpcReq Body{ get; set; }
+        public   VpcInfo Vpc{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

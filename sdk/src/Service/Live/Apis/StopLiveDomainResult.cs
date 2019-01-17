@@ -33,13 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  停止域名
+    ///  停用域名
     /// </summary>
     public class StopLiveDomainResult : JdcloudResult
     {
-        ///<summary>
-        /// 要启动的域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

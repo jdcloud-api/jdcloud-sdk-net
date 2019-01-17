@@ -52,7 +52,7 @@ namespace JDCloudSDK.Monitor.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/cm/alarms";
+            return "/regions/{regionId}/cmAlarms";
             }
         }
     }

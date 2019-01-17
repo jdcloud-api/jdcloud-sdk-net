@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查询截图信息回调配置
+    ///  查询截图回调配置
     /// </summary>
     public class DescribeLiveStreamSnapshotNotifyConfigExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询截图信息回调配置接口的Http 请求方法
+        ///  查询截图回调配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查询截图信息回调配置接口的Http资源请求路径
+        ///  查询截图回调配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -40,11 +40,23 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// AggrPeriod
         ///</summary>
-        public long? AggrPeriod{ get; set; }
+        public string AggrPeriod{ get; set; }
         ///<summary>
         /// AggrType
         ///</summary>
         public string AggrType{ get; set; }
+        ///<summary>
+        /// CalculateUnit
+        ///</summary>
+        public string CalculateUnit{ get; set; }
+        ///<summary>
+        /// DownSampleType
+        ///</summary>
+        public string DownSampleType{ get; set; }
+        ///<summary>
+        /// Metric
+        ///</summary>
+        public string Metric{ get; set; }
         ///<summary>
         /// MetricName
         ///</summary>
@@ -53,5 +65,9 @@ namespace JDCloudSDK.Monitor.Model
         /// MetricUID
         ///</summary>
         public string MetricUID{ get; set; }
+        ///<summary>
+        /// Tags
+        ///</summary>
+        public Dictionary<string,string> Tags{ get; set; }
     }
 }

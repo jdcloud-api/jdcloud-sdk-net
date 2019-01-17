@@ -37,9 +37,5 @@ namespace  JDCloudSDK.Live.Apis
     /// </summary>
     public class DeleteLiveStreamRecordNotifyConfigResult : JdcloudResult
     {
-        ///<summary>
-        /// 您的推流加速域名
-        ///</summary>
-        public   string PublishDomain{ get; set; }
     }
 }

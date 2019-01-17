@@ -33,12 +33,18 @@ namespace JDCloudSDK.Disk.Client
 {
 
     /// <summary>
-    ///  删除单个云硬盘
+    ///  -   删除一块按配置计费的云硬盘，云盘类型包括高效云盘、SSD云盘、通用型SSD、性能型SSD和容量型HDD。
+        /// -   删除云盘时，云盘的状态必须为 待挂载（Available）。
+        /// -   云盘被删除后，云硬盘快照可以被保留。
+        /// 
     /// </summary>
     public class DeleteDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除单个云硬盘接口的Http 请求方法
+        ///  -   删除一块按配置计费的云硬盘，云盘类型包括高效云盘、SSD云盘、通用型SSD、性能型SSD和容量型HDD。
+        /// -   删除云盘时，云盘的状态必须为 待挂载（Available）。
+        /// -   云盘被删除后，云硬盘快照可以被保留。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Disk.Client
             }
         }
         /// <summary>
-        ///  删除单个云硬盘接口的Http资源请求路径
+        ///  -   删除一块按配置计费的云硬盘，云盘类型包括高效云盘、SSD云盘、通用型SSD、性能型SSD和容量型HDD。
+        /// -   删除云盘时，云盘的状态必须为 待挂载（Available）。
+        /// -   云盘被删除后，云硬盘快照可以被保留。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Disk.Apis
 {
 
     /// <summary>
-    ///  查询云硬盘信息详情
+    ///  查询某一块云硬盘的信息详情
     /// </summary>
     public class DescribeDiskResult : JdcloudResult
     {

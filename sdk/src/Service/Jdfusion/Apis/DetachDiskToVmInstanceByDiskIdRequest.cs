@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   DetachDataDiskReq Body{ get; set; }
+        public   DetachDataDisk Detach{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

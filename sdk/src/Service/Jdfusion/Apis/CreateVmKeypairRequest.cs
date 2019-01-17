@@ -44,7 +44,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   CreateKeypairReq Body{ get; set; }
+        public   CreateKeypair Keypair{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

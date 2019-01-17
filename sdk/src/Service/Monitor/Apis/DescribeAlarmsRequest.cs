@@ -36,11 +36,12 @@ namespace  JDCloudSDK.Monitor.Apis
 
     /// <summary>
     ///  查询规则, 查询参数组合及优先级从高到低为：
-        ///         /// 1：serviceCode不为空
-        ///         /// 1.1：serviceCode + resourceId
-        ///         /// 1.2: serviceCode + resourceIds
-        ///         /// 2：serviceCodes不为空
-        ///         /// 3: 所有规则
+        ///         /// 1：alarmId不为空
+        ///         /// 2：serviceCode不为空
+        ///         /// 2.1：serviceCode + resourceId
+        ///         /// 2.2: serviceCode + resourceIds
+        ///         /// 3：serviceCodes不为空
+        ///         /// 4: 所有规则
     /// </summary>
     public class DescribeAlarmsRequest : JdcloudRequest
     {
@@ -59,7 +60,7 @@ namespace  JDCloudSDK.Monitor.Apis
         ///<summary>
         /// 资源ID
         ///</summary>
-        public   string ResourceID{ get; set; }
+        public   string ResourceId{ get; set; }
         ///<summary>
         /// 规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控
         ///</summary>

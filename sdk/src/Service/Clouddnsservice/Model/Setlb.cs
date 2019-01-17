@@ -45,7 +45,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         [Required]
         public int Id{ get; set; }
         ///<summary>
-        /// 此条解析记录的权重。
+        /// 此条解析记录的权重。A,AAAA类型的权重范围为：0-100，CNAME, JNAME类型的权重范围为：1-100。
         ///Required:true
         ///</summary>
         [Required]

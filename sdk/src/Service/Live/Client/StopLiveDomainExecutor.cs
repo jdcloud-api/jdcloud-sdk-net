@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  停止域名
+    ///  停用域名
     /// </summary>
     public class StopLiveDomainExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  停止域名接口的Http 请求方法
+        ///  停用域名接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  停止域名接口的Http资源请求路径
+        ///  停用域名接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Kms.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.7
+        ///  版本号 1.0.9
         ///</summary>
-        public const string ClientVersion = "1.0.7";
+        public const string ClientVersion = "1.0.9";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,82 @@ namespace JDCloudSDK.Kms.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  获取密钥列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeyListResponse DescribeKeyList(DescribeKeyListRequest request) {
+            return  new DescribeKeyListExecutor().Client(this).Execute<DescribeKeyListResponse, DescribeKeyListResult, DescribeKeyListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取密钥列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeyListResponse> DescribeKeyList(DescribeKeyListRequest request) {
+            return await new DescribeKeyListExecutor().Client(this).Execute<DescribeKeyListResponse, DescribeKeyListResult, DescribeKeyListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改机密指定版本配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateSecretVersionResponse UpdateSecretVersion(UpdateSecretVersionRequest request) {
+            return  new UpdateSecretVersionExecutor().Client(this).Execute<UpdateSecretVersionResponse, UpdateSecretVersionResult, UpdateSecretVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改机密指定版本配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateSecretVersionResponse> UpdateSecretVersion(UpdateSecretVersionRequest request) {
+            return await new UpdateSecretVersionExecutor().Client(this).Execute<UpdateSecretVersionResponse, UpdateSecretVersionResult, UpdateSecretVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  从KMS中获取一对数据密钥的明文/密文
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GenerateDataKeyResponse GenerateDataKey(GenerateDataKeyRequest request) {
+            return  new GenerateDataKeyExecutor().Client(this).Execute<GenerateDataKeyResponse, GenerateDataKeyResult, GenerateDataKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  从KMS中获取一对数据密钥的明文/密文
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GenerateDataKeyResponse> GenerateDataKey(GenerateDataKeyRequest request) {
+            return await new GenerateDataKeyExecutor().Client(this).Execute<GenerateDataKeyResponse, GenerateDataKeyResult, GenerateDataKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用指定版本密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableKeyVersionResponse EnableKeyVersion(EnableKeyVersionRequest request) {
+            return  new EnableKeyVersionExecutor().Client(this).Execute<EnableKeyVersionResponse, EnableKeyVersionResult, EnableKeyVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用指定版本密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableKeyVersionResponse> EnableKeyVersion(EnableKeyVersionRequest request) {
+            return await new EnableKeyVersionExecutor().Client(this).Execute<EnableKeyVersionResponse, EnableKeyVersionResult, EnableKeyVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建机密
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -157,21 +233,78 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取指定机密版本的详细信息
+        ///  使用密钥对数据进行加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeSecretVersionInfoResponse DescribeSecretVersionInfo(DescribeSecretVersionInfoRequest request) {
-            return  new DescribeSecretVersionInfoExecutor().Client(this).Execute<DescribeSecretVersionInfoResponse, DescribeSecretVersionInfoResult, DescribeSecretVersionInfoRequest>(request);
+        public EncryptResponse Encrypt(EncryptRequest request) {
+            return  new EncryptExecutor().Client(this).Execute<EncryptResponse, EncryptResult, EncryptRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取指定机密版本的详细信息
+        ///  使用密钥对数据进行加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeSecretVersionInfoResponse> DescribeSecretVersionInfo(DescribeSecretVersionInfoRequest request) {
-            return await new DescribeSecretVersionInfoExecutor().Client(this).Execute<DescribeSecretVersionInfoResponse, DescribeSecretVersionInfoResult, DescribeSecretVersionInfoRequest>(request);
+        public async Task<EncryptResponse> Encrypt(EncryptRequest request) {
+            return await new EncryptExecutor().Client(this).Execute<EncryptResponse, EncryptResult, EncryptRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用当前状态为&#x60;已禁用&#x60;的密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableKeyResponse EnableKey(EnableKeyRequest request) {
+            return  new EnableKeyExecutor().Client(this).Execute<EnableKeyResponse, EnableKeyResult, EnableKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用当前状态为&#x60;已禁用&#x60;的密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableKeyResponse> EnableKey(EnableKeyRequest request) {
+            return await new EnableKeyExecutor().Client(this).Execute<EnableKeyResponse, EnableKeyResult, EnableKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  取消删除密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CancelKeyDeletionResponse CancelKeyDeletion(CancelKeyDeletionRequest request) {
+            return  new CancelKeyDeletionExecutor().Client(this).Execute<CancelKeyDeletionResponse, CancelKeyDeletionResult, CancelKeyDeletionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  取消删除密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CancelKeyDeletionResponse> CancelKeyDeletion(CancelKeyDeletionRequest request) {
+            return await new CancelKeyDeletionExecutor().Client(this).Execute<CancelKeyDeletionResponse, CancelKeyDeletionResult, CancelKeyDeletionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSecretResponse DeleteSecret(DeleteSecretRequest request) {
+            return  new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
+            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -214,25 +347,6 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取版本详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeKeyDetailResponse DescribeKeyDetail(DescribeKeyDetailRequest request) {
-            return  new DescribeKeyDetailExecutor().Client(this).Execute<DescribeKeyDetailResponse, DescribeKeyDetailResult, DescribeKeyDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取版本详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeyDetailResponse> DescribeKeyDetail(DescribeKeyDetailRequest request) {
-            return await new DescribeKeyDetailExecutor().Client(this).Execute<DescribeKeyDetailResponse, DescribeKeyDetailResult, DescribeKeyDetailRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建一个CMK（用户主密钥），默认为启用状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -252,40 +366,344 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  使用密钥对数据进行加密
+        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EncryptResponse Encrypt(EncryptRequest request) {
-            return  new EncryptExecutor().Client(this).Execute<EncryptResponse, EncryptResult, EncryptRequest>(request);
+        public UpdateKeyDescriptionResponse UpdateKeyDescription(UpdateKeyDescriptionRequest request) {
+            return  new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request);
         }
 #else
         /// <summary>
-        ///  使用密钥对数据进行加密
+        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EncryptResponse> Encrypt(EncryptRequest request) {
-            return await new EncryptExecutor().Client(this).Execute<EncryptResponse, EncryptResult, EncryptRequest>(request);
+        public async Task<UpdateKeyDescriptionResponse> UpdateKeyDescription(UpdateKeyDescriptionRequest request) {
+            return await new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  启用指定版本密钥
+        ///  获取机密详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableKeyVersionResponse EnableKeyVersion(EnableKeyVersionRequest request) {
-            return  new EnableKeyVersionExecutor().Client(this).Execute<EnableKeyVersionResponse, EnableKeyVersionResult, EnableKeyVersionRequest>(request);
+        public DescribeSecretVersionListResponse DescribeSecretVersionList(DescribeSecretVersionListRequest request) {
+            return  new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request);
         }
 #else
         /// <summary>
-        ///  启用指定版本密钥
+        ///  获取机密详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableKeyVersionResponse> EnableKeyVersion(EnableKeyVersionRequest request) {
-            return await new EnableKeyVersionExecutor().Client(this).Execute<EnableKeyVersionResponse, EnableKeyVersionResult, EnableKeyVersionRequest>(request);
+        public async Task<DescribeSecretVersionListResponse> DescribeSecretVersionList(DescribeSecretVersionListRequest request) {
+            return await new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导出机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExportSecretResponse ExportSecret(ExportSecretRequest request) {
+            return  new ExportSecretExecutor().Client(this).Execute<ExportSecretResponse, ExportSecretResult, ExportSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导出机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExportSecretResponse> ExportSecret(ExportSecretRequest request) {
+            return await new ExportSecretExecutor().Client(this).Execute<ExportSecretResponse, ExportSecretResult, ExportSecretRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除指定版本机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSecretVersionResponse DeleteSecretVersion(DeleteSecretVersionRequest request) {
+            return  new DeleteSecretVersionExecutor().Client(this).Execute<DeleteSecretVersionResponse, DeleteSecretVersionResult, DeleteSecretVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除指定版本机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSecretVersionResponse> DeleteSecretVersion(DeleteSecretVersionRequest request) {
+            return await new DeleteSecretVersionExecutor().Client(this).Execute<DeleteSecretVersionResponse, DeleteSecretVersionResult, DeleteSecretVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取密钥详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeyResponse DescribeKey(DescribeKeyRequest request) {
+            return  new DescribeKeyExecutor().Client(this).Execute<DescribeKeyResponse, DescribeKeyResult, DescribeKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取密钥详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeyResponse> DescribeKey(DescribeKeyRequest request) {
+            return await new DescribeKeyExecutor().Client(this).Execute<DescribeKeyResponse, DescribeKeyResult, DescribeKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导入机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImportSecretResponse ImportSecret(ImportSecretRequest request) {
+            return  new ImportSecretExecutor().Client(this).Execute<ImportSecretResponse, ImportSecretResult, ImportSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导入机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImportSecretResponse> ImportSecret(ImportSecretRequest request) {
+            return await new ImportSecretExecutor().Client(this).Execute<ImportSecretResponse, ImportSecretResult, ImportSecretRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  计划在以后的是个时间点删除密钥，默认为7天
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ScheduleKeyDeletionResponse ScheduleKeyDeletion(ScheduleKeyDeletionRequest request) {
+            return  new ScheduleKeyDeletionExecutor().Client(this).Execute<ScheduleKeyDeletionResponse, ScheduleKeyDeletionResult, ScheduleKeyDeletionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  计划在以后的是个时间点删除密钥，默认为7天
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ScheduleKeyDeletionResponse> ScheduleKeyDeletion(ScheduleKeyDeletionRequest request) {
+            return await new ScheduleKeyDeletionExecutor().Client(this).Execute<ScheduleKeyDeletionResponse, ScheduleKeyDeletionResult, ScheduleKeyDeletionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  立即轮换密钥，自动轮换周期顺延
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public KeyRotationResponse KeyRotation(KeyRotationRequest request) {
+            return  new KeyRotationExecutor().Client(this).Execute<KeyRotationResponse, KeyRotationResult, KeyRotationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  立即轮换密钥，自动轮换周期顺延
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<KeyRotationResponse> KeyRotation(KeyRotationRequest request) {
+            return await new KeyRotationExecutor().Client(this).Execute<KeyRotationResponse, KeyRotationResult, KeyRotationRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取机密列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSecretListResponse DescribeSecretList(DescribeSecretListRequest request) {
+            return  new DescribeSecretListExecutor().Client(this).Execute<DescribeSecretListResponse, DescribeSecretListResult, DescribeSecretListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取机密列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSecretListResponse> DescribeSecretList(DescribeSecretListRequest request) {
+            return await new DescribeSecretListExecutor().Client(this).Execute<DescribeSecretListResponse, DescribeSecretListResult, DescribeSecretListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取指定机密版本的详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSecretVersionInfoResponse DescribeSecretVersionInfo(DescribeSecretVersionInfoRequest request) {
+            return  new DescribeSecretVersionInfoExecutor().Client(this).Execute<DescribeSecretVersionInfoResponse, DescribeSecretVersionInfoResult, DescribeSecretVersionInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取指定机密版本的详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSecretVersionInfoResponse> DescribeSecretVersionInfo(DescribeSecretVersionInfoRequest request) {
+            return await new DescribeSecretVersionInfoExecutor().Client(this).Execute<DescribeSecretVersionInfoResponse, DescribeSecretVersionInfoResult, DescribeSecretVersionInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  禁用指定版本密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableKeyVersionResponse DisableKeyVersion(DisableKeyVersionRequest request) {
+            return  new DisableKeyVersionExecutor().Client(this).Execute<DisableKeyVersionResponse, DisableKeyVersionResult, DisableKeyVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用指定版本密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableKeyVersionResponse> DisableKeyVersion(DisableKeyVersionRequest request) {
+            return await new DisableKeyVersionExecutor().Client(this).Execute<DisableKeyVersionResponse, DisableKeyVersionResult, DisableKeyVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  使用密钥对数据进行解密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DecryptResponse Decrypt(DecryptRequest request) {
+            return  new DecryptExecutor().Client(this).Execute<DecryptResponse, DecryptResult, DecryptRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  使用密钥对数据进行解密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DecryptResponse> Decrypt(DecryptRequest request) {
+            return await new DecryptExecutor().Client(this).Execute<DecryptResponse, DecryptResult, DecryptRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableSecretResponse EnableSecret(EnableSecretRequest request) {
+            return  new EnableSecretExecutor().Client(this).Execute<EnableSecretResponse, EnableSecretResult, EnableSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableSecretResponse> EnableSecret(EnableSecretRequest request) {
+            return await new EnableSecretExecutor().Client(this).Execute<EnableSecretResponse, EnableSecretResult, EnableSecretRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  禁用当前状态为&#x60;已启用&#x60;的密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableKeyResponse DisableKey(DisableKeyRequest request) {
+            return  new DisableKeyExecutor().Client(this).Execute<DisableKeyResponse, DisableKeyResult, DisableKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用当前状态为&#x60;已启用&#x60;的密钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableKeyResponse> DisableKey(DisableKeyRequest request) {
+            return await new DisableKeyExecutor().Client(this).Execute<DisableKeyResponse, DisableKeyResult, DisableKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用指定版本机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableSecretVersionResponse EnableSecretVersion(EnableSecretVersionRequest request) {
+            return  new EnableSecretVersionExecutor().Client(this).Execute<EnableSecretVersionResponse, EnableSecretVersionResult, EnableSecretVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用指定版本机密
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableSecretVersionResponse> EnableSecretVersion(EnableSecretVersionRequest request) {
+            return await new EnableSecretVersionExecutor().Client(this).Execute<EnableSecretVersionResponse, EnableSecretVersionResult, EnableSecretVersionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  计划在以后的是个时间点删除指定版本密钥，默认为7天
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ScheduleKeyVersionDeletionResponse ScheduleKeyVersionDeletion(ScheduleKeyVersionDeletionRequest request) {
+            return  new ScheduleKeyVersionDeletionExecutor().Client(this).Execute<ScheduleKeyVersionDeletionResponse, ScheduleKeyVersionDeletionResult, ScheduleKeyVersionDeletionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  计划在以后的是个时间点删除指定版本密钥，默认为7天
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ScheduleKeyVersionDeletionResponse> ScheduleKeyVersionDeletion(ScheduleKeyVersionDeletionRequest request) {
+            return await new ScheduleKeyVersionDeletionExecutor().Client(this).Execute<ScheduleKeyVersionDeletionResponse, ScheduleKeyVersionDeletionResult, ScheduleKeyVersionDeletionRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取版本详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeyDetailResponse DescribeKeyDetail(DescribeKeyDetailRequest request) {
+            return  new DescribeKeyDetailExecutor().Client(this).Execute<DescribeKeyDetailResponse, DescribeKeyDetailResult, DescribeKeyDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取版本详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeyDetailResponse> DescribeKeyDetail(DescribeKeyDetailRequest request) {
+            return await new DescribeKeyDetailExecutor().Client(this).Execute<DescribeKeyDetailResponse, DescribeKeyDetailResult, DescribeKeyDetailRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建机密新的版本，默认为已启用状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSecretVersionResponse CreateSecretVersion(CreateSecretVersionRequest request) {
+            return  new CreateSecretVersionExecutor().Client(this).Execute<CreateSecretVersionResponse, CreateSecretVersionResult, CreateSecretVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建机密新的版本，默认为已启用状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSecretVersionResponse> CreateSecretVersion(CreateSecretVersionRequest request) {
+            return await new CreateSecretVersionExecutor().Client(this).Execute<CreateSecretVersionResponse, CreateSecretVersionResult, CreateSecretVersionRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -324,424 +742,6 @@ namespace JDCloudSDK.Kms.Client
         /// <returns>请求结果信息</returns>
         public async Task<CancelKeyVersionDeletionResponse> CancelKeyVersionDeletion(CancelKeyVersionDeletionRequest request) {
             return await new CancelKeyVersionDeletionExecutor().Client(this).Execute<CancelKeyVersionDeletionResponse, CancelKeyVersionDeletionResult, CancelKeyVersionDeletionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  从KMS中获取一对数据密钥的明文/密文
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GenerateDataKeyResponse GenerateDataKey(GenerateDataKeyRequest request) {
-            return  new GenerateDataKeyExecutor().Client(this).Execute<GenerateDataKeyResponse, GenerateDataKeyResult, GenerateDataKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  从KMS中获取一对数据密钥的明文/密文
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GenerateDataKeyResponse> GenerateDataKey(GenerateDataKeyRequest request) {
-            return await new GenerateDataKeyExecutor().Client(this).Execute<GenerateDataKeyResponse, GenerateDataKeyResult, GenerateDataKeyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改机密指定版本配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateSecretVersionResponse UpdateSecretVersion(UpdateSecretVersionRequest request) {
-            return  new UpdateSecretVersionExecutor().Client(this).Execute<UpdateSecretVersionResponse, UpdateSecretVersionResult, UpdateSecretVersionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改机密指定版本配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateSecretVersionResponse> UpdateSecretVersion(UpdateSecretVersionRequest request) {
-            return await new UpdateSecretVersionExecutor().Client(this).Execute<UpdateSecretVersionResponse, UpdateSecretVersionResult, UpdateSecretVersionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateKeyDescriptionResponse UpdateKeyDescription(UpdateKeyDescriptionRequest request) {
-            return  new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateKeyDescriptionResponse> UpdateKeyDescription(UpdateKeyDescriptionRequest request) {
-            return await new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  禁用当前状态为&#x60;已启用&#x60;的密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableKeyResponse DisableKey(DisableKeyRequest request) {
-            return  new DisableKeyExecutor().Client(this).Execute<DisableKeyResponse, DisableKeyResult, DisableKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  禁用当前状态为&#x60;已启用&#x60;的密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableKeyResponse> DisableKey(DisableKeyRequest request) {
-            return await new DisableKeyExecutor().Client(this).Execute<DisableKeyResponse, DisableKeyResult, DisableKeyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取机密详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSecretVersionListResponse DescribeSecretVersionList(DescribeSecretVersionListRequest request) {
-            return  new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取机密详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSecretVersionListResponse> DescribeSecretVersionList(DescribeSecretVersionListRequest request) {
-            return await new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  计划在以后的是个时间点删除密钥，默认为7天
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ScheduleKeyDeletionResponse ScheduleKeyDeletion(ScheduleKeyDeletionRequest request) {
-            return  new ScheduleKeyDeletionExecutor().Client(this).Execute<ScheduleKeyDeletionResponse, ScheduleKeyDeletionResult, ScheduleKeyDeletionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  计划在以后的是个时间点删除密钥，默认为7天
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ScheduleKeyDeletionResponse> ScheduleKeyDeletion(ScheduleKeyDeletionRequest request) {
-            return await new ScheduleKeyDeletionExecutor().Client(this).Execute<ScheduleKeyDeletionResponse, ScheduleKeyDeletionResult, ScheduleKeyDeletionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  导入机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImportSecretResponse ImportSecret(ImportSecretRequest request) {
-            return  new ImportSecretExecutor().Client(this).Execute<ImportSecretResponse, ImportSecretResult, ImportSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  导入机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImportSecretResponse> ImportSecret(ImportSecretRequest request) {
-            return await new ImportSecretExecutor().Client(this).Execute<ImportSecretResponse, ImportSecretResult, ImportSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  立即轮换密钥，自动轮换周期顺延
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public KeyRotationResponse KeyRotation(KeyRotationRequest request) {
-            return  new KeyRotationExecutor().Client(this).Execute<KeyRotationResponse, KeyRotationResult, KeyRotationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  立即轮换密钥，自动轮换周期顺延
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<KeyRotationResponse> KeyRotation(KeyRotationRequest request) {
-            return await new KeyRotationExecutor().Client(this).Execute<KeyRotationResponse, KeyRotationResult, KeyRotationRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取密钥详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeKeyResponse DescribeKey(DescribeKeyRequest request) {
-            return  new DescribeKeyExecutor().Client(this).Execute<DescribeKeyResponse, DescribeKeyResult, DescribeKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取密钥详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeyResponse> DescribeKey(DescribeKeyRequest request) {
-            return await new DescribeKeyExecutor().Client(this).Execute<DescribeKeyResponse, DescribeKeyResult, DescribeKeyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除指定版本机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteSecretVersionResponse DeleteSecretVersion(DeleteSecretVersionRequest request) {
-            return  new DeleteSecretVersionExecutor().Client(this).Execute<DeleteSecretVersionResponse, DeleteSecretVersionResult, DeleteSecretVersionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除指定版本机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteSecretVersionResponse> DeleteSecretVersion(DeleteSecretVersionRequest request) {
-            return await new DeleteSecretVersionExecutor().Client(this).Execute<DeleteSecretVersionResponse, DeleteSecretVersionResult, DeleteSecretVersionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取密钥列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeKeyListResponse DescribeKeyList(DescribeKeyListRequest request) {
-            return  new DescribeKeyListExecutor().Client(this).Execute<DescribeKeyListResponse, DescribeKeyListResult, DescribeKeyListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取密钥列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeyListResponse> DescribeKeyList(DescribeKeyListRequest request) {
-            return await new DescribeKeyListExecutor().Client(this).Execute<DescribeKeyListResponse, DescribeKeyListResult, DescribeKeyListRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建机密新的版本，默认为已启用状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateSecretVersionResponse CreateSecretVersion(CreateSecretVersionRequest request) {
-            return  new CreateSecretVersionExecutor().Client(this).Execute<CreateSecretVersionResponse, CreateSecretVersionResult, CreateSecretVersionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建机密新的版本，默认为已启用状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateSecretVersionResponse> CreateSecretVersion(CreateSecretVersionRequest request) {
-            return await new CreateSecretVersionExecutor().Client(this).Execute<CreateSecretVersionResponse, CreateSecretVersionResult, CreateSecretVersionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用当前状态为&#x60;已禁用&#x60;的密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableKeyResponse EnableKey(EnableKeyRequest request) {
-            return  new EnableKeyExecutor().Client(this).Execute<EnableKeyResponse, EnableKeyResult, EnableKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用当前状态为&#x60;已禁用&#x60;的密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableKeyResponse> EnableKey(EnableKeyRequest request) {
-            return await new EnableKeyExecutor().Client(this).Execute<EnableKeyResponse, EnableKeyResult, EnableKeyRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  使用密钥对数据进行解密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DecryptResponse Decrypt(DecryptRequest request) {
-            return  new DecryptExecutor().Client(this).Execute<DecryptResponse, DecryptResult, DecryptRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  使用密钥对数据进行解密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DecryptResponse> Decrypt(DecryptRequest request) {
-            return await new DecryptExecutor().Client(this).Execute<DecryptResponse, DecryptResult, DecryptRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  计划在以后的是个时间点删除指定版本密钥，默认为7天
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ScheduleKeyVersionDeletionResponse ScheduleKeyVersionDeletion(ScheduleKeyVersionDeletionRequest request) {
-            return  new ScheduleKeyVersionDeletionExecutor().Client(this).Execute<ScheduleKeyVersionDeletionResponse, ScheduleKeyVersionDeletionResult, ScheduleKeyVersionDeletionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  计划在以后的是个时间点删除指定版本密钥，默认为7天
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ScheduleKeyVersionDeletionResponse> ScheduleKeyVersionDeletion(ScheduleKeyVersionDeletionRequest request) {
-            return await new ScheduleKeyVersionDeletionExecutor().Client(this).Execute<ScheduleKeyVersionDeletionResponse, ScheduleKeyVersionDeletionResult, ScheduleKeyVersionDeletionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  取消删除密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CancelKeyDeletionResponse CancelKeyDeletion(CancelKeyDeletionRequest request) {
-            return  new CancelKeyDeletionExecutor().Client(this).Execute<CancelKeyDeletionResponse, CancelKeyDeletionResult, CancelKeyDeletionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  取消删除密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CancelKeyDeletionResponse> CancelKeyDeletion(CancelKeyDeletionRequest request) {
-            return await new CancelKeyDeletionExecutor().Client(this).Execute<CancelKeyDeletionResponse, CancelKeyDeletionResult, CancelKeyDeletionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用指定版本机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableSecretVersionResponse EnableSecretVersion(EnableSecretVersionRequest request) {
-            return  new EnableSecretVersionExecutor().Client(this).Execute<EnableSecretVersionResponse, EnableSecretVersionResult, EnableSecretVersionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用指定版本机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableSecretVersionResponse> EnableSecretVersion(EnableSecretVersionRequest request) {
-            return await new EnableSecretVersionExecutor().Client(this).Execute<EnableSecretVersionResponse, EnableSecretVersionResult, EnableSecretVersionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteSecretResponse DeleteSecret(DeleteSecretRequest request) {
-            return  new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
-            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  禁用指定版本密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableKeyVersionResponse DisableKeyVersion(DisableKeyVersionRequest request) {
-            return  new DisableKeyVersionExecutor().Client(this).Execute<DisableKeyVersionResponse, DisableKeyVersionResult, DisableKeyVersionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  禁用指定版本密钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableKeyVersionResponse> DisableKeyVersion(DisableKeyVersionRequest request) {
-            return await new DisableKeyVersionExecutor().Client(this).Execute<DisableKeyVersionResponse, DisableKeyVersionResult, DisableKeyVersionRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableSecretResponse EnableSecret(EnableSecretRequest request) {
-            return  new EnableSecretExecutor().Client(this).Execute<EnableSecretResponse, EnableSecretResult, EnableSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableSecretResponse> EnableSecret(EnableSecretRequest request) {
-            return await new EnableSecretExecutor().Client(this).Execute<EnableSecretResponse, EnableSecretResult, EnableSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  导出机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExportSecretResponse ExportSecret(ExportSecretRequest request) {
-            return  new ExportSecretExecutor().Client(this).Execute<ExportSecretResponse, ExportSecretResult, ExportSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  导出机密
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExportSecretResponse> ExportSecret(ExportSecretRequest request) {
-            return await new ExportSecretExecutor().Client(this).Execute<ExportSecretResponse, ExportSecretResult, ExportSecretRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取机密列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSecretListResponse DescribeSecretList(DescribeSecretListRequest request) {
-            return  new DescribeSecretListExecutor().Client(this).Execute<DescribeSecretListResponse, DescribeSecretListResult, DescribeSecretListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取机密列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSecretListResponse> DescribeSecretList(DescribeSecretListRequest request) {
-            return await new DescribeSecretListExecutor().Client(this).Execute<DescribeSecretListResponse, DescribeSecretListResult, DescribeSecretListRequest>(request);
         }
 #endif
 

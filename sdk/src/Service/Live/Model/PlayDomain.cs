@@ -59,9 +59,5 @@ namespace JDCloudSDK.Live.Model
         /// 更新时间
         ///</summary>
         public string UpdateTime{ get; set; }
-        ///<summary>
-        /// 地域编码
-        ///</summary>
-        public string RegionId{ get; set; }
     }
 }

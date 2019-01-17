@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加app录制配置
+    ///  添加APP录制配置
     /// </summary>
     public class AddLiveStreamAppRecordResponse : JdcloudResponse<AddLiveStreamAppRecordResult>
     {
