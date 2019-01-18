@@ -47,7 +47,7 @@ namespace JDCloudSDK.Core.Client
         /// <summary>
         /// 自定义Http请求头 
         /// </summary>
-        private Dictionary<String, String> customHeader = new Dictionary<String, String>();
+        private Dictionary<string, string> customHeader = new Dictionary<string, string>();
 
 
 

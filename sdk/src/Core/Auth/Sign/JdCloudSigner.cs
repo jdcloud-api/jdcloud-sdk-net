@@ -133,9 +133,17 @@ namespace JDCloudSDK.Core.Auth.Sign
                 RegionName, ServiceName, ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM);
             // SignerRequestParams
             AddHostHeader(ref builder);
-            builder.Header(ParameterConstant.X_JDCLOUD_DATE, signerRequestParams.FormattedSigningDateTime);
-
-            string contentSha256 = CalculateContentHash(builder);
+            builder.Header(ParameterConstant.X_JDCLOUD_DATE, signerRequestParams.FormattedSigningDateTime); 
+            string contentSha256 = string.Empty;
+            if (builder.GetHeaders() != null &&
+                builder.GetHeaders()[ParameterConstant.X_JDCLOUD_CONTENT_SHA256] != null &&
+                builder.GetHeaders()[ParameterConstant.X_JDCLOUD_CONTENT_SHA256].Count > 0)
+            {
+                contentSha256 = builder.GetHeaders()[ParameterConstant.X_JDCLOUD_CONTENT_SHA256][0];
+            }
+            else {
+                contentSha256 = CalculateContentHash(builder);
+            }
             string canonicalRequest = CreateCanonicalRequest(builder, contentSha256);
             string stringToSign = CreateStringToSign(canonicalRequest, signerRequestParams);
             byte[] signingKey = deriveSigningKey(credentials, signerRequestParams);
