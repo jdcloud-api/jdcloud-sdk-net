@@ -141,6 +141,8 @@ namespace JDCloudSDK.Test.Standard2
             filters.Add(filter);
             describeInstancesRequest.Filters = filters;
             var response = vmClient.DescribeInstances(describeInstancesRequest).Result;
+            _output.WriteLine(JsonConvert.SerializeObject(response.HttpResponse.Header));
+            _output.WriteLine("=====================================================");
             _output.WriteLine(JsonConvert.SerializeObject(response));
         }
 
@@ -162,10 +164,10 @@ namespace JDCloudSDK.Test.Standard2
             string accessKeyId = "";
             string secretAccessKey = "";
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
-           //2. 创建XXXClient
+            //2. 创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                     .CredentialsProvider(credentialsProvider)
-                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50)) 
+                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50))
                     .Build();
             return vmClient;
         }

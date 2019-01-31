@@ -1,4 +1,5 @@
 ﻿using JDCloudSDK.Core.Model;
+using JDCloudSDK.Core.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,5 +26,7 @@ namespace JDCloudSDK.Core.Service
         /// 请求的结果信息
         /// </summary>
         public R Result { get; set; } 
+
+        public HttpSDKResponse HttpResponse { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 using JDCloudSDK.Charge.Model;
 using JDCloudSDK.Core.Auth;
+using JDCloudSDK.Core.Client;
 using JDCloudSDK.Core.Http;
 using JDCloudSDK.Disk.Model;
 using JDCloudSDK.Vm.Apis;
@@ -118,18 +119,43 @@ namespace JDCloudSDK.Test.NET40
 
 
 
+        [Test]
+        public void TestDescriptionInstances()
+        {
+            var vmClient = GetVmClient();
+
+            //  var vmClient = new VmClient(credentialsProvider,new HttpRequestConfig(Protocol.HTTP,10));
+            DescribeInstancesRequest describeInstancesRequest = new DescribeInstancesRequest();
+            describeInstancesRequest.RegionId = "cn-north-1";
+            describeInstancesRequest.PageSize = 20;
+            describeInstancesRequest.PageNumber = 1;
+            //List<Filter> filters = new List<Filter>();
+
+            //Filter filter = new Filter();
+            //filter.Name = "name";
+            //List<string> filterValues = new List<string>();
+            //filterValues.Add("河北新明2");
+            //filter.Values = filterValues;
+            //filters.Add(filter);
+            //describeInstancesRequest.Filters = filters;
+            var response = vmClient.DescribeInstances(describeInstancesRequest);
+            Console.WriteLine(JsonConvert.SerializeObject(response.HttpResponse.Header));
+            Console.WriteLine("=====================================================");
+            Console.WriteLine(JsonConvert.SerializeObject(response));
+        }
+
+
         public VmClient GetVmClient()
         {
             //1. 设置accessKey和secretKey
-
             string accessKeyId = "";
             string secretAccessKey = "";
-
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
             //2. 创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                     .CredentialsProvider(credentialsProvider)
                     .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50))
+                    
                     .Build();
             return vmClient;
         }

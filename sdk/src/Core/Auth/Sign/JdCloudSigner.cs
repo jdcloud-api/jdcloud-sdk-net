@@ -135,7 +135,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             AddHostHeader(ref builder);
             builder.Header(ParameterConstant.X_JDCLOUD_DATE, signerRequestParams.FormattedSigningDateTime); 
             string contentSha256 = string.Empty;
-            if (builder.GetHeaders() != null &&
+            if (builder.GetHeaders() != null && builder.GetHeaders().ContainsKey(ParameterConstant.X_JDCLOUD_CONTENT_SHA256) &&
                 builder.GetHeaders()[ParameterConstant.X_JDCLOUD_CONTENT_SHA256] != null &&
                 builder.GetHeaders()[ParameterConstant.X_JDCLOUD_CONTENT_SHA256].Count > 0)
             {

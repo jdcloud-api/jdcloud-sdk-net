@@ -11,6 +11,7 @@ using System.Linq;
 using System.IO;
 using System.Net;
 using System.Reflection;
+using System.Collections.Specialized;
 
 namespace JDCloudSDK.Core.Utils
 {
@@ -96,11 +97,28 @@ namespace JDCloudSDK.Core.Utils
                     {
                         if (httpWebResponse != null)
                         {
+                            HttpSDKResponse httpSDKResponse = new HttpSDKResponse();
                             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
                             {
+                                httpSDKResponse.StatusCode = (int)httpWebResponse.StatusCode;
+                                if (httpWebResponse.Headers != null && httpWebResponse.Headers.Count > 0)
+                                {
+
+                                    for (int i = 0; i < httpWebResponse.Headers.Keys.Count; i++)
+                                    {
+                                        var key = httpWebResponse.Headers.Keys[i];
+                                        string[] values = httpWebResponse.Headers.GetValues(key);
+                                        if (values != null && values.Length > 0)
+                                        {
+                                            httpSDKResponse.AddHeader(key, values.ToList());
+                                        }
+                                        
+                                    } 
+                                }
                                 string responseContent = streamReader.ReadToEnd();
+                                httpSDKResponse.ResponseContent = Encoding.UTF8.GetBytes(responseContent);
                                 //return new Tuple<HttpStatusCode, string>(httpWebResponse.StatusCode, responseContent);
-                                return new JDCloudSdkResult { StatusCode = httpWebResponse.StatusCode, ReturnValue = responseContent };
+                                return new JDCloudSdkResult { StatusCode = httpWebResponse.StatusCode, ReturnValue = responseContent ,HttpSDKResponse = httpSDKResponse };
                             }
                         }
                     }
@@ -111,10 +129,27 @@ namespace JDCloudSDK.Core.Utils
                     {
                         if (exceptionResponce != null)
                         {
+                            HttpSDKResponse httpSDKResponse = new HttpSDKResponse();
                             using (StreamReader streamReader = new StreamReader(exceptionResponce.GetResponseStream()))
                             {
+                                httpSDKResponse.StatusCode = (int)exceptionResponce.StatusCode;
+                                if (exceptionResponce.Headers != null && exceptionResponce.Headers.Count > 0)
+                                {
+
+                                    for (int i = 0; i < exceptionResponce.Headers.Keys.Count; i++)
+                                    {
+                                        var key = exceptionResponce.Headers.Keys[i];
+                                        string[] values = exceptionResponce.Headers.GetValues(key);
+                                        if (values != null && values.Length > 0)
+                                        {
+                                            httpSDKResponse.AddHeader(key, values.ToList());
+                                        }
+
+                                    }
+                                }
                                 string responseContent = streamReader.ReadToEnd();
-                                return new JDCloudSdkResult { StatusCode = exceptionResponce.StatusCode, ReturnValue = responseContent };
+                                httpSDKResponse.ResponseContent = Encoding.UTF8.GetBytes(responseContent);
+                                return new JDCloudSdkResult { StatusCode = exceptionResponce.StatusCode, ReturnValue = responseContent, HttpSDKResponse = httpSDKResponse };
                                 //return new Tuple<HttpStatusCode, string>(exceptionResponce.StatusCode, responseContent);
                             }
                         }
@@ -149,10 +184,10 @@ namespace JDCloudSDK.Core.Utils
         {
             string result = null;
             try
-            { 
+            {
                 HttpResponseMessage message = null;
-              //  httpClient.Timeout = TimeSpan.FromSeconds(timeoutSeconds); 
-              
+                //  httpClient.Timeout = TimeSpan.FromSeconds(timeoutSeconds); 
+
                 HttpMethod methodInfo = GetHttpMethod(httpMethod);
                 using (HttpRequestMessage httpRequestMessage = new HttpRequestMessage(methodInfo, url))
                 {
@@ -165,7 +200,7 @@ namespace JDCloudSDK.Core.Utils
                                 httpRequestMessage.Headers.TryAddWithoutValidation(item.Key, item.Value);
                             }
                         }
-                    } 
+                    }
                     if (methodInfo != HttpMethod.Get && methodInfo != HttpMethod.Head && methodInfo != HttpMethod.Delete)
                     {
                         using (HttpContent content = new ByteArrayContent(bodyContent == null ? new byte[0] : bodyContent))
@@ -184,13 +219,25 @@ namespace JDCloudSDK.Core.Utils
                         message = await httpClient.SendAsync(httpRequestMessage);
                     }
                 }
-
+                HttpSDKResponse httpSDKResponse = new HttpSDKResponse();
                 if (message != null)
                 {
                     using (message)
                     {
+                        httpSDKResponse.StatusCode = (int)message.StatusCode;
                         if (message.Content != null)
                         {
+                            if (message != null && message.Headers.Count() > 0)
+                            {
+                                foreach (var item in message.Headers)
+                                {
+                                    if (item.Value.Count() > 0)
+                                    {
+                                        httpSDKResponse.AddHeader(item.Key, item.Value.ToList());
+                                    }
+                                   
+                                }
+                            }
                             using (Stream responseStream = await message.Content.ReadAsStreamAsync())
                             {
                                 if (responseStream != null)
@@ -199,6 +246,7 @@ namespace JDCloudSDK.Core.Utils
                                     responseStream.Read(responseData, 0, responseData.Length);
                                     if (responseData != null && responseData.Length > 0)
                                     {
+                                        httpSDKResponse.ResponseContent = responseData;
                                         result = Encoding.UTF8.GetString(responseData);
                                     }
                                 }
@@ -206,7 +254,7 @@ namespace JDCloudSDK.Core.Utils
                         }
                     }
                 }
-                return new JDCloudSdkResult { StatusCode = message.StatusCode, ReturnValue = result };
+                return new JDCloudSdkResult { StatusCode = message.StatusCode, ReturnValue = result,HttpSDKResponse = httpSDKResponse };
             }
             catch (Exception ex)
             {
@@ -309,6 +357,30 @@ namespace JDCloudSDK.Core.Utils
         /// 返回值
         /// </summary>
         public String ReturnValue { get; set; }
+
+
+        public HttpSDKResponse HttpSDKResponse { get; set; }
+
+    }
+
+
+    public class HttpSDKResponse{
+
+        public Dictionary<string, List<string>> Header { get; set; } = new Dictionary<string, List<string>>();
+
+        public byte[] ResponseContent { get; set; }
+
+        public int StatusCode { get; set; }
+
+        public void AddHeader(string key ,List<string > value)
+        {
+            if (Header == null)
+            {
+                Header = new Dictionary<string, List<string>>();
+            }
+            Header.Add(key, value);
+        }
+
 
     }
 }

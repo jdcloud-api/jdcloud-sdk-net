@@ -169,7 +169,9 @@ namespace JDCloudSDK.Core.Client
                             if (!String.IsNullOrWhiteSpace(resultStr))
 #endif
                             {
-                                return JsonConvert.DeserializeObject<R>(resultStr);
+                                var responseResult = JsonConvert.DeserializeObject<R>(resultStr);
+                                responseResult.HttpResponse = result.HttpSDKResponse;
+                                return responseResult;
                             }
                         }
 
@@ -189,7 +191,7 @@ namespace JDCloudSDK.Core.Client
                                 return JsonConvert.DeserializeObject<R>(resultStr);
                             }
                         }
-                        return new R() { Error = new ServiceError() { Code = (int)result.StatusCode, Message = $"the gateway return {result.StatusCode.ToString() }" } };
+                        return new R() { Error = new ServiceError() { Code = (int)result.StatusCode, Message = $"the gateway return {result.StatusCode.ToString() }" }, HttpResponse = result.HttpSDKResponse };
                     }
                 } 
             }
