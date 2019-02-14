@@ -71,6 +71,10 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string EnableInternet{ get; set; }
         ///<summary>
+        /// 是否启用IPv6, 如 yes/no
+        ///</summary>
+        public string EnableIpv6{ get; set; }
+        ///<summary>
         /// 带宽, 单位Mbps
         ///</summary>
         public int? Bandwidth{ get; set; }
@@ -130,6 +134,10 @@ namespace JDCloudSDK.Cps.Model
         /// 公网IP
         ///</summary>
         public string PublicIp{ get; set; }
+        ///<summary>
+        /// 公网IPv6
+        ///</summary>
+        public string PublicIpv6{ get; set; }
         ///<summary>
         /// 计费信息
         ///</summary>

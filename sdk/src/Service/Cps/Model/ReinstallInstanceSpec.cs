@@ -81,6 +81,10 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string Password{ get; set; }
         ///<summary>
+        /// 主机名
+        ///</summary>
+        public string Hostname{ get; set; }
+        ///<summary>
         /// Softwares
         ///</summary>
         public List<Software> Softwares{ get; set; }

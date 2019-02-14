@@ -35,7 +35,6 @@ namespace  JDCloudSDK.Cps.Apis
     /// <summary>
     ///  重装云物理服务器，只能重装stopped状态的服务器&lt;br/&gt;
         ///         /// - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表
-        ///         /// - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件
         ///         /// 
     /// </summary>
     public class ReinstallInstanceResult : JdcloudResult

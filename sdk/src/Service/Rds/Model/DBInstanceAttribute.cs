@@ -91,11 +91,11 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 实例公网域名
+        /// 实例内网域名
         ///</summary>
         public string InternalDomainName{ get; set; }
         ///<summary>
-        /// 实例内网域名
+        /// 实例公网域名
         ///</summary>
         public string PublicDomainName{ get; set; }
         ///<summary>

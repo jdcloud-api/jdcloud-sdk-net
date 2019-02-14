@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  创建一个跨地域备份同步服务。
+    ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class CreateBackupSynchronicityRequest : JdcloudRequest
     {

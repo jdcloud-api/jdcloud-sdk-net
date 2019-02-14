@@ -52,6 +52,10 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string DeviceType{ get; set; }
         ///<summary>
+        /// 主机名
+        ///</summary>
+        public string Hostname{ get; set; }
+        ///<summary>
         /// 镜像类型, 取值范围：standard、standard_app
         ///Required:true
         ///</summary>
@@ -83,6 +87,10 @@ namespace JDCloudSDK.Cps.Model
         /// 是否启用外网，取值范围：yes、no
         ///</summary>
         public string EnableInternet{ get; set; }
+        ///<summary>
+        /// 是否启用IPv6，取值范围：yes、no
+        ///</summary>
+        public string EnableIpv6{ get; set; }
         ///<summary>
         /// 网络类型，目前只支持basic
         ///Required:true

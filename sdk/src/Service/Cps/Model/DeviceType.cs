@@ -46,6 +46,10 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string NameZH{ get; set; }
         ///<summary>
+        /// 实例所属规格系列，如 计算、存储、GPU
+        ///</summary>
+        public string Family{ get; set; }
+        ///<summary>
         /// 镜像类型英文描述, 如 standard
         ///</summary>
         public string UseTypeEN{ get; set; }
@@ -105,5 +109,9 @@ namespace JDCloudSDK.Cps.Model
         /// GPU详细信息
         ///</summary>
         public string GpuDetail{ get; set; }
+        ///<summary>
+        /// 售罄状态
+        ///</summary>
+        public bool IsSoldOut{ get; set; }
     }
 }

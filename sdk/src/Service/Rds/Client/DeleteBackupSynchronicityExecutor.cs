@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  删除一个跨地域备份同步服务。
+    ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class DeleteBackupSynchronicityExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除一个跨地域备份同步服务。接口的Http 请求方法
+        ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  删除一个跨地域备份同步服务。接口的Http资源请求路径
+        ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

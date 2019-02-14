@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using JDCloudSDK.Common.Model;
 
 namespace  JDCloudSDK.Rds.Apis
 {
@@ -66,6 +67,14 @@ namespace  JDCloudSDK.Rds.Apis
         /// 每页显示的数据条数，默认为10，取值范围：10、20、50
         ///</summary>
         public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 过滤参数，多个过滤参数之间的关系为“与”(and)
+        /// 支持以下属性的过滤：
+        /// operation
+        /// 
+        ///</summary>
+        public List<Filter> Filters{ get; set; }
+
         ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true

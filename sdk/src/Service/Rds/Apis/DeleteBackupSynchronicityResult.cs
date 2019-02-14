@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除一个跨地域备份同步服务。
+    ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
     /// </summary>
     public class DeleteBackupSynchronicityResult : JdcloudResult
     {

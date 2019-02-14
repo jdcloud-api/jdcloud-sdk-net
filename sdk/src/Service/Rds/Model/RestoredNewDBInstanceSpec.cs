@@ -44,7 +44,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        /// 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
+        /// 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
         ///Required:true
         ///</summary>
         [Required]

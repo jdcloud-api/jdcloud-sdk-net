@@ -118,20 +118,7 @@ namespace JDCloudSDK.Test.Standard2
             var result = diskClient.DescribeSnapshots(request);
             _output.WriteLine(JsonConvert.SerializeObject(result));
 
-        }
-
-        [Fact]
-        public void TestModifySnapshotAttribute()
-        {
-            DiskClient diskClient = GetDiskClient();
-            ModifySnpAttributeRequest request = new ModifySnpAttributeRequest();
-
-            request.RegionId = "cn-north-1";
-            request.SnapshotId = "snapshot-d66rlhywi3";
-            request.Name = "dotnet sdk modify test";
-           // var result = diskClient.ModifySnpAttribute(request);
-           // _output.WriteLine(JsonConvert.SerializeObject(result));
-        }
+        } 
 
         [Fact]
         public void TestDeleteSnapshot()

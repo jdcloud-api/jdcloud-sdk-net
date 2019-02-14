@@ -43,5 +43,9 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public List<Database> Databases{ get; set; }
 
+        ///<summary>
+        /// TotalCount
+        ///</summary>
+        public   int? TotalCount{ get; set; }
     }
 }

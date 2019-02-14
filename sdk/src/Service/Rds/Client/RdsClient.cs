@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云数据库RDS
- * 目前RDS OpenAPI支持云数据库SQL Server、MySQL、PostgreSQL
+ * 目前RDS OpenAPI支持云数据库 MySQL、Percona、MariaDB、SQL Server
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Rds.Client
 {
     /// <summary>
     ///  云数据库RDS
-    ///  目前RDS OpenAPI支持云数据库SQL Server、MySQL、PostgreSQL
+    ///  目前RDS OpenAPI支持云数据库 MySQL、Percona、MariaDB、SQL Server
     ///  Rds Api 客户端
     ///</summary>
     public class RdsClient : JdcloudClient
@@ -195,6 +195,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查看开启高安全模式后，当前实例的 SQL 拦截记录&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInterceptResultResponse DescribeInterceptResult(DescribeInterceptResultRequest request) {
+            return  new DescribeInterceptResultExecutor().Client(this).Execute<DescribeInterceptResultResponse, DescribeInterceptResultResult, DescribeInterceptResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看开启高安全模式后，当前实例的 SQL 拦截记录&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInterceptResultResponse> DescribeInterceptResult(DescribeInterceptResultRequest request) {
+            return await new DescribeInterceptResultExecutor().Client(this).Execute<DescribeInterceptResultResponse, DescribeInterceptResultResult, DescribeInterceptResultRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取整个备份或备份中单个文件的下载链接。&lt;br&gt;- 当输入参数中有文件名时，获取该文件的下载链接。&lt;br&gt;- 输入参数中无文件名时，获取整个备份的下载链接。&lt;br&gt;由于备份机制的差异，使用该接口下载备份时，SQL Server必须输入文件名，每个文件逐一下载，不支持下载整个备份。SQL Server备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份。&lt;br&gt;MySQL可下载整个备份集，但不支持单个文件的下载。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -210,6 +229,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupDownloadURLResponse> DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest request) {
             return await new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  拷贝参数组&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CopyParameterGroupResponse CopyParameterGroup(CopyParameterGroupRequest request) {
+            return  new CopyParameterGroupExecutor().Client(this).Execute<CopyParameterGroupResponse, CopyParameterGroupResult, CopyParameterGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  拷贝参数组&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CopyParameterGroupResponse> CopyParameterGroup(CopyParameterGroupRequest request) {
+            return await new CopyParameterGroupExecutor().Client(this).Execute<CopyParameterGroupResponse, CopyParameterGroupResult, CopyParameterGroupRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -248,6 +286,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
             return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个参数组&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateParameterGroupResponse CreateParameterGroup(CreateParameterGroupRequest request) {
+            return  new CreateParameterGroupExecutor().Client(this).Execute<CreateParameterGroupResponse, CreateParameterGroupResult, CreateParameterGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个参数组&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateParameterGroupResponse> CreateParameterGroup(CreateParameterGroupRequest request) {
+            return await new CreateParameterGroupExecutor().Client(this).Execute<CreateParameterGroupResponse, CreateParameterGroupResult, CreateParameterGroupRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -362,6 +419,44 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableInternetAccessResponse> EnableInternetAccess(EnableInternetAccessRequest request) {
             return await new EnableInternetAccessExecutor().Client(this).Execute<EnableInternetAccessResponse, EnableInternetAccessResult, EnableInternetAccessRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改RDS实例的参数组&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyParameterGroupResponse ModifyParameterGroup(ModifyParameterGroupRequest request) {
+            return  new ModifyParameterGroupExecutor().Client(this).Execute<ModifyParameterGroupResponse, ModifyParameterGroupResult, ModifyParameterGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改RDS实例的参数组&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyParameterGroupResponse> ModifyParameterGroup(ModifyParameterGroupRequest request) {
+            return await new ModifyParameterGroupExecutor().Client(this).Execute<ModifyParameterGroupResponse, ModifyParameterGroupResult, ModifyParameterGroupRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeParameterModifyRecordsResponse DescribeParameterModifyRecords(DescribeParameterModifyRecordsRequest request) {
+            return  new DescribeParameterModifyRecordsExecutor().Client(this).Execute<DescribeParameterModifyRecordsResponse, DescribeParameterModifyRecordsResult, DescribeParameterModifyRecordsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeParameterModifyRecordsResponse> DescribeParameterModifyRecords(DescribeParameterModifyRecordsRequest request) {
+            return await new DescribeParameterModifyRecordsExecutor().Client(this).Execute<DescribeParameterModifyRecordsResponse, DescribeParameterModifyRecordsResult, DescribeParameterModifyRecordsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -594,7 +689,26 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建一个跨地域备份同步服务。
+        ///  查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeParameterGroupAttachedInstancesResponse DescribeParameterGroupAttachedInstances(DescribeParameterGroupAttachedInstancesRequest request) {
+            return  new DescribeParameterGroupAttachedInstancesExecutor().Client(this).Execute<DescribeParameterGroupAttachedInstancesResponse, DescribeParameterGroupAttachedInstancesResult, DescribeParameterGroupAttachedInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeParameterGroupAttachedInstancesResponse> DescribeParameterGroupAttachedInstances(DescribeParameterGroupAttachedInstancesRequest request) {
+            return await new DescribeParameterGroupAttachedInstancesExecutor().Client(this).Execute<DescribeParameterGroupAttachedInstancesResponse, DescribeParameterGroupAttachedInstancesResult, DescribeParameterGroupAttachedInstancesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -603,7 +717,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  创建一个跨地域备份同步服务。
+        ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -613,7 +727,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除一个跨地域备份同步服务。
+        ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -622,7 +736,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除一个跨地域备份同步服务。
+        ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1259,6 +1373,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeParameterGroupsResponse DescribeParameterGroups(DescribeParameterGroupsRequest request) {
+            return  new DescribeParameterGroupsExecutor().Client(this).Execute<DescribeParameterGroupsResponse, DescribeParameterGroupsResult, DescribeParameterGroupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeParameterGroupsResponse> DescribeParameterGroups(DescribeParameterGroupsRequest request) {
+            return await new DescribeParameterGroupsExecutor().Client(this).Execute<DescribeParameterGroupsResponse, DescribeParameterGroupsResult, DescribeParameterGroupsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1278,7 +1411,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询跨地域备份同步服务列表。
+        ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1287,7 +1420,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查询跨地域备份同步服务列表。
+        ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1331,6 +1464,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeWhiteListResponse> DescribeWhiteList(DescribeWhiteListRequest request) {
             return await new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看参数组的参数&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeParameterGroupParametersResponse DescribeParameterGroupParameters(DescribeParameterGroupParametersRequest request) {
+            return  new DescribeParameterGroupParametersExecutor().Client(this).Execute<DescribeParameterGroupParametersResponse, DescribeParameterGroupParametersResult, DescribeParameterGroupParametersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看参数组的参数&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeParameterGroupParametersResponse> DescribeParameterGroupParameters(DescribeParameterGroupParametersRequest request) {
+            return await new DescribeParameterGroupParametersExecutor().Client(this).Execute<DescribeParameterGroupParametersResponse, DescribeParameterGroupParametersResult, DescribeParameterGroupParametersRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -1426,6 +1578,44 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest request) {
             return await new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyParameterGroupParametersResponse ModifyParameterGroupParameters(ModifyParameterGroupParametersRequest request) {
+            return  new ModifyParameterGroupParametersExecutor().Client(this).Execute<ModifyParameterGroupParametersResponse, ModifyParameterGroupParametersResult, ModifyParameterGroupParametersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyParameterGroupParametersResponse> ModifyParameterGroupParameters(ModifyParameterGroupParametersRequest request) {
+            return await new ModifyParameterGroupParametersExecutor().Client(this).Execute<ModifyParameterGroupParametersResponse, ModifyParameterGroupParametersResult, ModifyParameterGroupParametersRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看当前实例已开启的安全模式。如果开启数据库的高安全模式，会返回配置信息&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInterceptResponse DescribeIntercept(DescribeInterceptRequest request) {
+            return  new DescribeInterceptExecutor().Client(this).Execute<DescribeInterceptResponse, DescribeInterceptResult, DescribeInterceptRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看当前实例已开启的安全模式。如果开启数据库的高安全模式，会返回配置信息&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInterceptResponse> DescribeIntercept(DescribeInterceptRequest request) {
+            return await new DescribeInterceptExecutor().Client(this).Execute<DescribeInterceptResponse, DescribeInterceptResult, DescribeInterceptRequest>(request);
         }
 #endif
 

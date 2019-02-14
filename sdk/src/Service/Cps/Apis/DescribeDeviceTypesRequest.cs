@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Cps.Apis
     public class DescribeDeviceTypesRequest : JdcloudRequest
     {
         ///<summary>
+        /// 可用区，精确匹配
+        ///</summary>
+        public   string Az{ get; set; }
+        ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>

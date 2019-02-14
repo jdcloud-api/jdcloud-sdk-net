@@ -41,7 +41,6 @@ namespace JDCloudSDK.Cps.Client
         ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
         /// - 操作系统和预装软件&lt;br/&gt;
         ///   - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
-        ///   - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件&lt;br/&gt;
         /// - 存储&lt;br/&gt;
         ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
         /// - 网络&lt;br/&gt;
@@ -49,7 +48,7 @@ namespace JDCloudSDK.Cps.Client
         ///   - 线路目前只支持bgp&lt;br/&gt;
         ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
         /// - 其他&lt;br/&gt;
-        ///   - 购买时长，可按年或月购买，最少购买时长1个月，最长36个月（3年）&lt;br/&gt;
+        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
         ///   - 密码设置参考公共参数规范&lt;br/&gt;
         /// 
     /// </summary>
@@ -64,7 +63,6 @@ namespace JDCloudSDK.Cps.Client
         ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
         /// - 操作系统和预装软件&lt;br/&gt;
         ///   - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
-        ///   - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件&lt;br/&gt;
         /// - 存储&lt;br/&gt;
         ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
         /// - 网络&lt;br/&gt;
@@ -72,7 +70,7 @@ namespace JDCloudSDK.Cps.Client
         ///   - 线路目前只支持bgp&lt;br/&gt;
         ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
         /// - 其他&lt;br/&gt;
-        ///   - 购买时长，可按年或月购买，最少购买时长1个月，最长36个月（3年）&lt;br/&gt;
+        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
         ///   - 密码设置参考公共参数规范&lt;br/&gt;
         /// 接口的Http 请求方法
         /// </summary>
@@ -91,7 +89,6 @@ namespace JDCloudSDK.Cps.Client
         ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
         /// - 操作系统和预装软件&lt;br/&gt;
         ///   - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
-        ///   - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件&lt;br/&gt;
         /// - 存储&lt;br/&gt;
         ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
         /// - 网络&lt;br/&gt;
@@ -99,7 +96,7 @@ namespace JDCloudSDK.Cps.Client
         ///   - 线路目前只支持bgp&lt;br/&gt;
         ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
         /// - 其他&lt;br/&gt;
-        ///   - 购买时长，可按年或月购买，最少购买时长1个月，最长36个月（3年）&lt;br/&gt;
+        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
         ///   - 密码设置参考公共参数规范&lt;br/&gt;
         /// 接口的Http资源请求路径
         /// </summary>
