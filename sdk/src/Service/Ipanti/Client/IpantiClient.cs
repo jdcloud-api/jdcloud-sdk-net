@@ -138,83 +138,64 @@ namespace JDCloudSDK.Ipanti.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  启用实例url白名单
+        ///  查询告警配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableInstanceUrlWhiteListResponse EnableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) {
-            return  new EnableInstanceUrlWhiteListExecutor().Client(this).Execute<EnableInstanceUrlWhiteListResponse, EnableInstanceUrlWhiteListResult, EnableInstanceUrlWhiteListRequest>(request);
+        public DescribeAlarmConfigResponse DescribeAlarmConfig(DescribeAlarmConfigRequest request) {
+            return  new DescribeAlarmConfigExecutor().Client(this).Execute<DescribeAlarmConfigResponse, DescribeAlarmConfigResult, DescribeAlarmConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  启用实例url白名单
+        ///  查询告警配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceUrlWhiteListResponse> EnableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) {
-            return await new EnableInstanceUrlWhiteListExecutor().Client(this).Execute<EnableInstanceUrlWhiteListResponse, EnableInstanceUrlWhiteListResult, EnableInstanceUrlWhiteListRequest>(request);
+        public async Task<DescribeAlarmConfigResponse> DescribeAlarmConfig(DescribeAlarmConfigRequest request) {
+            return await new DescribeAlarmConfigExecutor().Client(this).Execute<DescribeAlarmConfigResponse, DescribeAlarmConfigResult, DescribeAlarmConfigRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例CC防护
+        ///  查询非网站类转发规则的防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableInstanceCCResponse DisableInstanceCC(DisableInstanceCCRequest request) {
-            return  new DisableInstanceCCExecutor().Client(this).Execute<DisableInstanceCCResponse, DisableInstanceCCResult, DisableInstanceCCRequest>(request);
+        public DescribeProtectionRuleOfForwardRuleResponse DescribeProtectionRuleOfForwardRule(DescribeProtectionRuleOfForwardRuleRequest request) {
+            return  new DescribeProtectionRuleOfForwardRuleExecutor().Client(this).Execute<DescribeProtectionRuleOfForwardRuleResponse, DescribeProtectionRuleOfForwardRuleResult, DescribeProtectionRuleOfForwardRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例CC防护
+        ///  查询非网站类转发规则的防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableInstanceCCResponse> DisableInstanceCC(DisableInstanceCCRequest request) {
-            return await new DisableInstanceCCExecutor().Client(this).Execute<DisableInstanceCCResponse, DisableInstanceCCResult, DisableInstanceCCRequest>(request);
+        public async Task<DescribeProtectionRuleOfForwardRuleResponse> DescribeProtectionRuleOfForwardRule(DescribeProtectionRuleOfForwardRuleRequest request) {
+            return await new DescribeProtectionRuleOfForwardRuleExecutor().Client(this).Execute<DescribeProtectionRuleOfForwardRuleResponse, DescribeProtectionRuleOfForwardRuleResult, DescribeProtectionRuleOfForwardRuleRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  网站类规则切换成回源状态
+        ///  更新实例弹性防护带宽
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SwitchWebRuleOriginResponse SwitchWebRuleOrigin(SwitchWebRuleOriginRequest request) {
-            return  new SwitchWebRuleOriginExecutor().Client(this).Execute<SwitchWebRuleOriginResponse, SwitchWebRuleOriginResult, SwitchWebRuleOriginRequest>(request);
+        public ModifyEPBResponse ModifyEPB(ModifyEPBRequest request) {
+            return  new ModifyEPBExecutor().Client(this).Execute<ModifyEPBResponse, ModifyEPBResult, ModifyEPBRequest>(request);
         }
 #else
         /// <summary>
-        ///  网站类规则切换成回源状态
+        ///  更新实例弹性防护带宽
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SwitchWebRuleOriginResponse> SwitchWebRuleOrigin(SwitchWebRuleOriginRequest request) {
-            return await new SwitchWebRuleOriginExecutor().Client(this).Execute<SwitchWebRuleOriginResponse, SwitchWebRuleOriginResult, SwitchWebRuleOriginRequest>(request);
+        public async Task<ModifyEPBResponse> ModifyEPB(ModifyEPBRequest request) {
+            return await new ModifyEPBExecutor().Client(this).Execute<ModifyEPBResponse, ModifyEPBResult, ModifyEPBRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询cc攻击日志详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCcAttackLogDetailsResponse DescribeCcAttackLogDetails(DescribeCcAttackLogDetailsRequest request) {
-            return  new DescribeCcAttackLogDetailsExecutor().Client(this).Execute<DescribeCcAttackLogDetailsResponse, DescribeCcAttackLogDetailsResult, DescribeCcAttackLogDetailsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询cc攻击日志详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCcAttackLogDetailsResponse> DescribeCcAttackLogDetails(DescribeCcAttackLogDetailsRequest request) {
-            return await new DescribeCcAttackLogDetailsExecutor().Client(this).Execute<DescribeCcAttackLogDetailsResponse, DescribeCcAttackLogDetailsResult, DescribeCcAttackLogDetailsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用实例ip白名单
+        ///  开启实例 IP 白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,7 +204,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  启用实例ip白名单
+        ///  开启实例 IP 白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -233,45 +214,64 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启CC防护每ip的限速
+        ///  关闭实例 CC 防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableCcIpLimitResponse EnableCcIpLimit(EnableCcIpLimitRequest request) {
-            return  new EnableCcIpLimitExecutor().Client(this).Execute<EnableCcIpLimitResponse, EnableCcIpLimitResult, EnableCcIpLimitRequest>(request);
+        public DisableCCObserverModeResponse DisableCCObserverMode(DisableCCObserverModeRequest request) {
+            return  new DisableCCObserverModeExecutor().Client(this).Execute<DisableCCObserverModeResponse, DisableCCObserverModeResult, DisableCCObserverModeRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启CC防护每ip的限速
+        ///  关闭实例 CC 防护的观察者模式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableCcIpLimitResponse> EnableCcIpLimit(EnableCcIpLimitRequest request) {
-            return await new EnableCcIpLimitExecutor().Client(this).Execute<EnableCcIpLimitResponse, EnableCcIpLimitResult, EnableCcIpLimitRequest>(request);
+        public async Task<DisableCCObserverModeResponse> DisableCCObserverMode(DisableCCObserverModeRequest request) {
+            return await new DisableCCObserverModeExecutor().Client(this).Execute<DisableCCObserverModeResponse, DisableCCObserverModeResult, DisableCCObserverModeRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例CC防护的观察者模式
+        ///  开启 CC 防护每 IP 的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableCcObserverModeResponse DisableCcObserverMode(DisableCcObserverModeRequest request) {
-            return  new DisableCcObserverModeExecutor().Client(this).Execute<DisableCcObserverModeResponse, DisableCcObserverModeResult, DisableCcObserverModeRequest>(request);
+        public EnableCCIpLimitResponse EnableCCIpLimit(EnableCCIpLimitRequest request) {
+            return  new EnableCCIpLimitExecutor().Client(this).Execute<EnableCCIpLimitResponse, EnableCCIpLimitResult, EnableCCIpLimitRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例CC防护的观察者模式
+        ///  开启 CC 防护每 IP 的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableCcObserverModeResponse> DisableCcObserverMode(DisableCcObserverModeRequest request) {
-            return await new DisableCcObserverModeExecutor().Client(this).Execute<DisableCcObserverModeResponse, DisableCcObserverModeResult, DisableCcObserverModeRequest>(request);
+        public async Task<EnableCCIpLimitResponse> EnableCCIpLimit(EnableCCIpLimitRequest request) {
+            return await new EnableCCIpLimitExecutor().Client(this).Execute<EnableCCIpLimitResponse, EnableCCIpLimitResult, EnableCCIpLimitRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  更新某条网站类规则
+        ///  设置实例 CC 防护每 IP 限速
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCCIpLimitResponse SetCCIpLimit(SetCCIpLimitRequest request) {
+            return  new SetCCIpLimitExecutor().Client(this).Execute<SetCCIpLimitResponse, SetCCIpLimitResult, SetCCIpLimitRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置实例 CC 防护每 IP 限速
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCCIpLimitResponse> SetCCIpLimit(SetCCIpLimitRequest request) {
+            return await new SetCCIpLimitExecutor().Client(this).Execute<SetCCIpLimitResponse, SetCCIpLimitResult, SetCCIpLimitRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  更新某条网站类规则
+        ///  修改网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -290,64 +290,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启实例CC防护的观察者模式
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableCcObserverModeResponse EnableCcObserverMode(EnableCcObserverModeRequest request) {
-            return  new EnableCcObserverModeExecutor().Client(this).Execute<EnableCcObserverModeResponse, EnableCcObserverModeResult, EnableCcObserverModeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  开启实例CC防护的观察者模式
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableCcObserverModeResponse> EnableCcObserverMode(EnableCcObserverModeRequest request) {
-            return await new EnableCcObserverModeExecutor().Client(this).Execute<EnableCcObserverModeResponse, EnableCcObserverModeResult, EnableCcObserverModeRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  关闭CC防护每ip的限速
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableCcIpLimitResponse DisableCcIpLimit(DisableCcIpLimitRequest request) {
-            return  new DisableCcIpLimitExecutor().Client(this).Execute<DisableCcIpLimitResponse, DisableCcIpLimitResult, DisableCcIpLimitRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  关闭CC防护每ip的限速
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableCcIpLimitResponse> DisableCcIpLimit(DisableCcIpLimitRequest request) {
-            return await new DisableCcIpLimitExecutor().Client(this).Execute<DisableCcIpLimitResponse, DisableCcIpLimitResult, DisableCcIpLimitRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用实例ip黑名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableInstanceIpBlackListResponse EnableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) {
-            return  new EnableInstanceIpBlackListExecutor().Client(this).Execute<EnableInstanceIpBlackListResponse, EnableInstanceIpBlackListResult, EnableInstanceIpBlackListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用实例ip黑名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceIpBlackListResponse> EnableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) {
-            return await new EnableInstanceIpBlackListExecutor().Client(this).Execute<EnableInstanceIpBlackListResponse, EnableInstanceIpBlackListResult, EnableInstanceIpBlackListRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除某条非网站规则
+        ///  删除非网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,31 +299,12 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  删除某条非网站规则
+        ///  删除非网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteForwardRuleResponse> DeleteForwardRule(DeleteForwardRuleRequest request) {
             return await new DeleteForwardRuleExecutor().Client(this).Execute<DeleteForwardRuleResponse, DeleteForwardRuleResult, DeleteForwardRuleRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加网站类规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateWebRuleResponse CreateWebRule(CreateWebRuleRequest request) {
-            return  new CreateWebRuleExecutor().Client(this).Execute<CreateWebRuleResponse, CreateWebRuleResult, CreateWebRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加网站类规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateWebRuleResponse> CreateWebRule(CreateWebRuleRequest request) {
-            return await new CreateWebRuleExecutor().Client(this).Execute<CreateWebRuleResponse, CreateWebRuleResult, CreateWebRuleRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -423,7 +347,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例ip黑名单
+        ///  设置实例 IP 黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -432,7 +356,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  设置实例ip黑名单
+        ///  设置实例 IP 黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,7 +366,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建实例
+        ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -451,7 +375,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  创建实例
+        ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -461,59 +385,40 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  禁用实例ip白名单
+        ///  查询 CC 攻击日志详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableInstanceIpWhiteListResponse DisableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) {
-            return  new DisableInstanceIpWhiteListExecutor().Client(this).Execute<DisableInstanceIpWhiteListResponse, DisableInstanceIpWhiteListResult, DisableInstanceIpWhiteListRequest>(request);
+        public DescribeCCAttackLogDetailsResponse DescribeCCAttackLogDetails(DescribeCCAttackLogDetailsRequest request) {
+            return  new DescribeCCAttackLogDetailsExecutor().Client(this).Execute<DescribeCCAttackLogDetailsResponse, DescribeCCAttackLogDetailsResult, DescribeCCAttackLogDetailsRequest>(request);
         }
 #else
         /// <summary>
-        ///  禁用实例ip白名单
+        ///  查询 CC 攻击日志详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableInstanceIpWhiteListResponse> DisableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) {
-            return await new DisableInstanceIpWhiteListExecutor().Client(this).Execute<DisableInstanceIpWhiteListResponse, DisableInstanceIpWhiteListResult, DisableInstanceIpWhiteListRequest>(request);
+        public async Task<DescribeCCAttackLogDetailsResponse> DescribeCCAttackLogDetails(DescribeCCAttackLogDetailsRequest request) {
+            return await new DescribeCCAttackLogDetailsExecutor().Client(this).Execute<DescribeCCAttackLogDetailsResponse, DescribeCCAttackLogDetailsResult, DescribeCCAttackLogDetailsRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询cc攻击日志
+        ///  查询各类型攻击次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCcAttackLogsResponse DescribeCcAttackLogs(DescribeCcAttackLogsRequest request) {
-            return  new DescribeCcAttackLogsExecutor().Client(this).Execute<DescribeCcAttackLogsResponse, DescribeCcAttackLogsResult, DescribeCcAttackLogsRequest>(request);
+        public DescribeAttackTypeCountResponse DescribeAttackTypeCount(DescribeAttackTypeCountRequest request) {
+            return  new DescribeAttackTypeCountExecutor().Client(this).Execute<DescribeAttackTypeCountResponse, DescribeAttackTypeCountResult, DescribeAttackTypeCountRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询cc攻击日志
+        ///  查询各类型攻击次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCcAttackLogsResponse> DescribeCcAttackLogs(DescribeCcAttackLogsRequest request) {
-            return await new DescribeCcAttackLogsExecutor().Client(this).Execute<DescribeCcAttackLogsResponse, DescribeCcAttackLogsResult, DescribeCcAttackLogsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  ddos防护报表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DdosGraphResponse DdosGraph(DdosGraphRequest request) {
-            return  new DdosGraphExecutor().Client(this).Execute<DdosGraphResponse, DdosGraphResult, DdosGraphRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  ddos防护报表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DdosGraphResponse> DdosGraph(DdosGraphRequest request) {
-            return await new DdosGraphExecutor().Client(this).Execute<DdosGraphResponse, DdosGraphResult, DdosGraphRequest>(request);
+        public async Task<DescribeAttackTypeCountResponse> DescribeAttackTypeCount(DescribeAttackTypeCountRequest request) {
+            return await new DescribeAttackTypeCountExecutor().Client(this).Execute<DescribeAttackTypeCountResponse, DescribeAttackTypeCountResult, DescribeAttackTypeCountRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -537,7 +442,26 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  网站类规则开启CC
+        ///  查询非网站类转发规则的防护规则 Geo 拦截可设置区域编码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeGeoAreasResponse DescribeGeoAreas(DescribeGeoAreasRequest request) {
+            return  new DescribeGeoAreasExecutor().Client(this).Execute<DescribeGeoAreasResponse, DescribeGeoAreasResult, DescribeGeoAreasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询非网站类转发规则的防护规则 Geo 拦截可设置区域编码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeGeoAreasResponse> DescribeGeoAreas(DescribeGeoAreasRequest request) {
+            return await new DescribeGeoAreasExecutor().Client(this).Execute<DescribeGeoAreasResponse, DescribeGeoAreasResult, DescribeGeoAreasRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  网站类规则开启 CC
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -546,7 +470,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  网站类规则开启CC
+        ///  网站类规则开启 CC
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -556,26 +480,45 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  网站类规则禁用CC
+        ///  查询 CC 自定义默认阈值
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableWebRuleCCResponse DisableWebRuleCC(DisableWebRuleCCRequest request) {
-            return  new DisableWebRuleCCExecutor().Client(this).Execute<DisableWebRuleCCResponse, DisableWebRuleCCResult, DisableWebRuleCCRequest>(request);
+        public DescribeCCDefaultThresholdsResponse DescribeCCDefaultThresholds(DescribeCCDefaultThresholdsRequest request) {
+            return  new DescribeCCDefaultThresholdsExecutor().Client(this).Execute<DescribeCCDefaultThresholdsResponse, DescribeCCDefaultThresholdsResult, DescribeCCDefaultThresholdsRequest>(request);
         }
 #else
         /// <summary>
-        ///  网站类规则禁用CC
+        ///  查询 CC 自定义默认阈值
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableWebRuleCCResponse> DisableWebRuleCC(DisableWebRuleCCRequest request) {
-            return await new DisableWebRuleCCExecutor().Client(this).Execute<DisableWebRuleCCResponse, DisableWebRuleCCResult, DisableWebRuleCCRequest>(request);
+        public async Task<DescribeCCDefaultThresholdsResponse> DescribeCCDefaultThresholds(DescribeCCDefaultThresholdsRequest request) {
+            return await new DescribeCCDefaultThresholdsExecutor().Client(this).Execute<DescribeCCDefaultThresholdsResponse, DescribeCCDefaultThresholdsResult, DescribeCCDefaultThresholdsRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例CC防护
+        ///  查询 CC 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCCAttackLogsResponse DescribeCCAttackLogs(DescribeCCAttackLogsRequest request) {
+            return  new DescribeCCAttackLogsExecutor().Client(this).Execute<DescribeCCAttackLogsResponse, DescribeCCAttackLogsResult, DescribeCCAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 CC 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCCAttackLogsResponse> DescribeCCAttackLogs(DescribeCCAttackLogsRequest request) {
+            return await new DescribeCCAttackLogsExecutor().Client(this).Execute<DescribeCCAttackLogsResponse, DescribeCCAttackLogsResult, DescribeCCAttackLogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置实例 CC 防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -584,7 +527,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  设置实例CC防护
+        ///  设置实例 CC 防护
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -594,7 +537,45 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  更新某条非网站类规则
+        ///  删除网站规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCCProtectionRuleOfWebRuleResponse DeleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) {
+            return  new DeleteCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DeleteCCProtectionRuleOfWebRuleResponse, DeleteCCProtectionRuleOfWebRuleResult, DeleteCCProtectionRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除网站规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCCProtectionRuleOfWebRuleResponse> DeleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) {
+            return await new DeleteCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DeleteCCProtectionRuleOfWebRuleResponse, DeleteCCProtectionRuleOfWebRuleResult, DeleteCCProtectionRuleOfWebRuleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  转发流量报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeFwdGraphResponse DescribeFwdGraph(DescribeFwdGraphRequest request) {
+            return  new DescribeFwdGraphExecutor().Client(this).Execute<DescribeFwdGraphResponse, DescribeFwdGraphResult, DescribeFwdGraphRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  转发流量报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeFwdGraphResponse> DescribeFwdGraph(DescribeFwdGraphRequest request) {
+            return await new DescribeFwdGraphExecutor().Client(this).Execute<DescribeFwdGraphResponse, DescribeFwdGraphResult, DescribeFwdGraphRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -603,12 +584,31 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  更新某条非网站类规则
+        ///  更新非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyForwardRuleResponse> ModifyForwardRule(ModifyForwardRuleRequest request) {
             return await new ModifyForwardRuleExecutor().Client(this).Execute<ModifyForwardRuleResponse, ModifyForwardRuleResult, ModifyForwardRuleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询高防实例名称列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNameListResponse DescribeNameList(DescribeNameListRequest request) {
+            return  new DescribeNameListExecutor().Client(this).Execute<DescribeNameListResponse, DescribeNameListResult, DescribeNameListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询高防实例名称列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNameListResponse> DescribeNameList(DescribeNameListRequest request) {
+            return await new DescribeNameListExecutor().Client(this).Execute<DescribeNameListResponse, DescribeNameListResult, DescribeNameListRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -651,64 +651,26 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  转发流量报表
+        ///  关闭 CC 防护每 IP 的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public FwdGraphResponse FwdGraph(FwdGraphRequest request) {
-            return  new FwdGraphExecutor().Client(this).Execute<FwdGraphResponse, FwdGraphResult, FwdGraphRequest>(request);
+        public DisableCCIpLimitResponse DisableCCIpLimit(DisableCCIpLimitRequest request) {
+            return  new DisableCCIpLimitExecutor().Client(this).Execute<DisableCCIpLimitResponse, DisableCCIpLimitResult, DisableCCIpLimitRequest>(request);
         }
 #else
         /// <summary>
-        ///  转发流量报表
+        ///  关闭 CC 防护每 IP 的限速
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<FwdGraphResponse> FwdGraph(FwdGraphRequest request) {
-            return await new FwdGraphExecutor().Client(this).Execute<FwdGraphResponse, FwdGraphResult, FwdGraphRequest>(request);
+        public async Task<DisableCCIpLimitResponse> DisableCCIpLimit(DisableCCIpLimitRequest request) {
+            return await new DisableCCIpLimitExecutor().Client(this).Execute<DisableCCIpLimitResponse, DisableCCIpLimitResult, DisableCCIpLimitRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  转发流量报表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CcGraphResponse CcGraph(CcGraphRequest request) {
-            return  new CcGraphExecutor().Client(this).Execute<CcGraphResponse, CcGraphResult, CcGraphRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  转发流量报表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CcGraphResponse> CcGraph(CcGraphRequest request) {
-            return await new CcGraphExecutor().Client(this).Execute<CcGraphResponse, CcGraphResult, CcGraphRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  开启实例CC防护
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableInstanceCCResponse EnableInstanceCC(EnableInstanceCCRequest request) {
-            return  new EnableInstanceCCExecutor().Client(this).Execute<EnableInstanceCCResponse, EnableInstanceCCResult, EnableInstanceCCRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  开启实例CC防护
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceCCResponse> EnableInstanceCC(EnableInstanceCCRequest request) {
-            return await new EnableInstanceCCExecutor().Client(this).Execute<EnableInstanceCCResponse, EnableInstanceCCResult, EnableInstanceCCRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  禁用实例ip黑名单
+        ///  关闭实例 IP 黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -717,7 +679,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  禁用实例ip黑名单
+        ///  关闭实例 IP 黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -727,7 +689,26 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  禁用实例url白名单
+        ///  查询高防实例防护统计信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProtectionStatisticsResponse DescribeProtectionStatistics(DescribeProtectionStatisticsRequest request) {
+            return  new DescribeProtectionStatisticsExecutor().Client(this).Execute<DescribeProtectionStatisticsResponse, DescribeProtectionStatisticsResult, DescribeProtectionStatisticsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询高防实例防护统计信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProtectionStatisticsResponse> DescribeProtectionStatistics(DescribeProtectionStatisticsRequest request) {
+            return await new DescribeProtectionStatisticsExecutor().Client(this).Execute<DescribeProtectionStatisticsResponse, DescribeProtectionStatisticsResult, DescribeProtectionStatisticsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭实例 Url 白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -736,12 +717,411 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  禁用实例url白名单
+        ///  关闭实例 Url 白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableInstanceUrlWhiteListResponse> DisableInstanceUrlWhiteList(DisableInstanceUrlWhiteListRequest request) {
             return await new DisableInstanceUrlWhiteListExecutor().Client(this).Execute<DisableInstanceUrlWhiteListResponse, DisableInstanceUrlWhiteListResult, DisableInstanceUrlWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  编辑网站规则证书信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyCertInfoResponse ModifyCertInfo(ModifyCertInfoRequest request) {
+            return  new ModifyCertInfoExecutor().Client(this).Execute<ModifyCertInfoResponse, ModifyCertInfoResult, ModifyCertInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  编辑网站规则证书信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyCertInfoResponse> ModifyCertInfo(ModifyCertInfoRequest request) {
+            return await new ModifyCertInfoExecutor().Client(this).Execute<ModifyCertInfoResponse, ModifyCertInfoResult, ModifyCertInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置实例 Url 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceUrlWhiteListResponse ModifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) {
+            return  new ModifyInstanceUrlWhiteListExecutor().Client(this).Execute<ModifyInstanceUrlWhiteListResponse, ModifyInstanceUrlWhiteListResult, ModifyInstanceUrlWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置实例 Url 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceUrlWhiteListResponse> ModifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) {
+            return await new ModifyInstanceUrlWhiteListExecutor().Client(this).Execute<ModifyInstanceUrlWhiteListResponse, ModifyInstanceUrlWhiteListResult, ModifyInstanceUrlWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新告警配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyAlarmConfigResponse ModifyAlarmConfig(ModifyAlarmConfigRequest request) {
+            return  new ModifyAlarmConfigExecutor().Client(this).Execute<ModifyAlarmConfigResponse, ModifyAlarmConfigResult, ModifyAlarmConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新告警配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyAlarmConfigResponse> ModifyAlarmConfig(ModifyAlarmConfigRequest request) {
+            return await new ModifyAlarmConfigExecutor().Client(this).Execute<ModifyAlarmConfigResponse, ModifyAlarmConfigResult, ModifyAlarmConfigRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置实例 IP 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceIpWhiteListResponse ModifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) {
+            return  new ModifyInstanceIpWhiteListExecutor().Client(this).Execute<ModifyInstanceIpWhiteListResponse, ModifyInstanceIpWhiteListResult, ModifyInstanceIpWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置实例 IP 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceIpWhiteListResponse> ModifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) {
+            return await new ModifyInstanceIpWhiteListExecutor().Client(this).Execute<ModifyInstanceIpWhiteListResponse, ModifyInstanceIpWhiteListResult, ModifyInstanceIpWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询证书预览信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCertInfoResponse DescribeCertInfo(DescribeCertInfoRequest request) {
+            return  new DescribeCertInfoExecutor().Client(this).Execute<DescribeCertInfoResponse, DescribeCertInfoResult, DescribeCertInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询证书预览信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCertInfoResponse> DescribeCertInfo(DescribeCertInfoRequest request) {
+            return await new DescribeCertInfoExecutor().Client(this).Execute<DescribeCertInfoResponse, DescribeCertInfoResult, DescribeCertInfoRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  非网站类规则切换成防御状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SwitchForwardRuleProtectResponse SwitchForwardRuleProtect(SwitchForwardRuleProtectRequest request) {
+            return  new SwitchForwardRuleProtectExecutor().Client(this).Execute<SwitchForwardRuleProtectResponse, SwitchForwardRuleProtectResult, SwitchForwardRuleProtectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  非网站类规则切换成防御状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SwitchForwardRuleProtectResponse> SwitchForwardRuleProtect(SwitchForwardRuleProtectRequest request) {
+            return await new SwitchForwardRuleProtectExecutor().Client(this).Execute<SwitchForwardRuleProtectResponse, SwitchForwardRuleProtectResult, SwitchForwardRuleProtectRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  下载 DDos 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DownloadDDoSAttackLogsResponse DownloadDDoSAttackLogs(DownloadDDoSAttackLogsRequest request) {
+            return  new DownloadDDoSAttackLogsExecutor().Client(this).Execute<DownloadDDoSAttackLogsResponse, DownloadDDoSAttackLogsResult, DownloadDDoSAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  下载 DDos 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DownloadDDoSAttackLogsResponse> DownloadDDoSAttackLogs(DownloadDDoSAttackLogsRequest request) {
+            return await new DownloadDDoSAttackLogsExecutor().Client(this).Execute<DownloadDDoSAttackLogsResponse, DownloadDDoSAttackLogsResult, DownloadDDoSAttackLogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启实例 Url 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableInstanceUrlWhiteListResponse EnableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) {
+            return  new EnableInstanceUrlWhiteListExecutor().Client(this).Execute<EnableInstanceUrlWhiteListResponse, EnableInstanceUrlWhiteListResult, EnableInstanceUrlWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启实例 Url 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableInstanceUrlWhiteListResponse> EnableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) {
+            return await new EnableInstanceUrlWhiteListExecutor().Client(this).Execute<EnableInstanceUrlWhiteListResponse, EnableInstanceUrlWhiteListResult, EnableInstanceUrlWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭实例 CC 防护
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableInstanceCCResponse DisableInstanceCC(DisableInstanceCCRequest request) {
+            return  new DisableInstanceCCExecutor().Client(this).Execute<DisableInstanceCCResponse, DisableInstanceCCResult, DisableInstanceCCRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭实例 CC 防护
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableInstanceCCResponse> DisableInstanceCC(DisableInstanceCCRequest request) {
+            return await new DisableInstanceCCExecutor().Client(this).Execute<DisableInstanceCCResponse, DisableInstanceCCResult, DisableInstanceCCRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  网站类规则切换成回源状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SwitchWebRuleOriginResponse SwitchWebRuleOrigin(SwitchWebRuleOriginRequest request) {
+            return  new SwitchWebRuleOriginExecutor().Client(this).Execute<SwitchWebRuleOriginResponse, SwitchWebRuleOriginResult, SwitchWebRuleOriginRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  网站类规则切换成回源状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SwitchWebRuleOriginResponse> SwitchWebRuleOrigin(SwitchWebRuleOriginRequest request) {
+            return await new SwitchWebRuleOriginExecutor().Client(this).Execute<SwitchWebRuleOriginResponse, SwitchWebRuleOriginResult, SwitchWebRuleOriginRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  下载 CC 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DownloadCCAttackLogsResponse DownloadCCAttackLogs(DownloadCCAttackLogsRequest request) {
+            return  new DownloadCCAttackLogsExecutor().Client(this).Execute<DownloadCCAttackLogsResponse, DownloadCCAttackLogsResult, DownloadCCAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  下载 CC 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DownloadCCAttackLogsResponse> DownloadCCAttackLogs(DownloadCCAttackLogsRequest request) {
+            return await new DownloadCCAttackLogsExecutor().Client(this).Execute<DownloadCCAttackLogsResponse, DownloadCCAttackLogsResult, DownloadCCAttackLogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询攻击次数及流量峰值
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAttackStatisticsResponse DescribeAttackStatistics(DescribeAttackStatisticsRequest request) {
+            return  new DescribeAttackStatisticsExecutor().Client(this).Execute<DescribeAttackStatisticsResponse, DescribeAttackStatisticsResult, DescribeAttackStatisticsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询攻击次数及流量峰值
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAttackStatisticsResponse> DescribeAttackStatistics(DescribeAttackStatisticsRequest request) {
+            return await new DescribeAttackStatisticsExecutor().Client(this).Execute<DescribeAttackStatisticsResponse, DescribeAttackStatisticsResult, DescribeAttackStatisticsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 DDos 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDDoSAttackLogsResponse DescribeDDoSAttackLogs(DescribeDDoSAttackLogsRequest request) {
+            return  new DescribeDDoSAttackLogsExecutor().Client(this).Execute<DescribeDDoSAttackLogsResponse, DescribeDDoSAttackLogsResult, DescribeDDoSAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 DDos 攻击日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDDoSAttackLogsResponse> DescribeDDoSAttackLogs(DescribeDDoSAttackLogsRequest request) {
+            return await new DescribeDDoSAttackLogsExecutor().Client(this).Execute<DescribeDDoSAttackLogsResponse, DescribeDDoSAttackLogsResult, DescribeDDoSAttackLogsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启实例 CC 防护的观察者模式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableCCObserverModeResponse EnableCCObserverMode(EnableCCObserverModeRequest request) {
+            return  new EnableCCObserverModeExecutor().Client(this).Execute<EnableCCObserverModeResponse, EnableCCObserverModeResult, EnableCCObserverModeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启实例 CC 防护的观察者模式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableCCObserverModeResponse> EnableCCObserverMode(EnableCCObserverModeRequest request) {
+            return await new EnableCCObserverModeExecutor().Client(this).Execute<EnableCCObserverModeResponse, EnableCCObserverModeResult, EnableCCObserverModeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启实例 IP 黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableInstanceIpBlackListResponse EnableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) {
+            return  new EnableInstanceIpBlackListExecutor().Client(this).Execute<EnableInstanceIpBlackListResponse, EnableInstanceIpBlackListResult, EnableInstanceIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启实例 IP 黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableInstanceIpBlackListResponse> EnableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) {
+            return await new EnableInstanceIpBlackListExecutor().Client(this).Execute<EnableInstanceIpBlackListResponse, EnableInstanceIpBlackListResult, EnableInstanceIpBlackListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加网站类规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateWebRuleResponse CreateWebRule(CreateWebRuleRequest request) {
+            return  new CreateWebRuleExecutor().Client(this).Execute<CreateWebRuleResponse, CreateWebRuleResult, CreateWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加网站类规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateWebRuleResponse> CreateWebRule(CreateWebRuleRequest request) {
+            return await new CreateWebRuleExecutor().Client(this).Execute<CreateWebRuleResponse, CreateWebRuleResult, CreateWebRuleRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭实例 IP 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableInstanceIpWhiteListResponse DisableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) {
+            return  new DisableInstanceIpWhiteListExecutor().Client(this).Execute<DisableInstanceIpWhiteListResponse, DisableInstanceIpWhiteListResult, DisableInstanceIpWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭实例 IP 白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableInstanceIpWhiteListResponse> DisableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) {
+            return await new DisableInstanceIpWhiteListExecutor().Client(this).Execute<DisableInstanceIpWhiteListResponse, DisableInstanceIpWhiteListResult, DisableInstanceIpWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  网站类规则禁用 CC
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableWebRuleCCResponse DisableWebRuleCC(DisableWebRuleCCRequest request) {
+            return  new DisableWebRuleCCExecutor().Client(this).Execute<DisableWebRuleCCResponse, DisableWebRuleCCResult, DisableWebRuleCCRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  网站类规则禁用 CC
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableWebRuleCCResponse> DisableWebRuleCC(DisableWebRuleCCRequest request) {
+            return await new DisableWebRuleCCExecutor().Client(this).Execute<DisableWebRuleCCResponse, DisableWebRuleCCResult, DisableWebRuleCCRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  检测实例名称是否合法
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckNameResponse CheckName(CheckNameRequest request) {
+            return  new CheckNameExecutor().Client(this).Execute<CheckNameResponse, CheckNameResult, CheckNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  检测实例名称是否合法
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckNameResponse> CheckName(CheckNameRequest request) {
+            return await new CheckNameExecutor().Client(this).Execute<CheckNameResponse, CheckNameResult, CheckNameRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  DDos 防护流量报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDDoSGraphResponse DescribeDDoSGraph(DescribeDDoSGraphRequest request) {
+            return  new DescribeDDoSGraphExecutor().Client(this).Execute<DescribeDDoSGraphResponse, DescribeDDoSGraphResult, DescribeDDoSGraphRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  DDos 防护流量报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDDoSGraphResponse> DescribeDDoSGraph(DescribeDDoSGraphRequest request) {
+            return await new DescribeDDoSGraphExecutor().Client(this).Execute<DescribeDDoSGraphResponse, DescribeDDoSGraphResult, DescribeDDoSGraphRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启实例 CC 防护
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableInstanceCCResponse EnableInstanceCC(EnableInstanceCCRequest request) {
+            return  new EnableInstanceCCExecutor().Client(this).Execute<EnableInstanceCCResponse, EnableInstanceCCResult, EnableInstanceCCRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启实例 CC 防护
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableInstanceCCResponse> EnableInstanceCC(EnableInstanceCCRequest request) {
+            return await new EnableInstanceCCExecutor().Client(this).Execute<EnableInstanceCCResponse, EnableInstanceCCResult, EnableInstanceCCRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -765,7 +1145,26 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询某条网站类规则
+        ///  查询用户的京东云 IP 资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeVpcIpListResponse DescribeVpcIpList(DescribeVpcIpListRequest request) {
+            return  new DescribeVpcIpListExecutor().Client(this).Execute<DescribeVpcIpListResponse, DescribeVpcIpListResult, DescribeVpcIpListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户的京东云 IP 资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeVpcIpListResponse> DescribeVpcIpList(DescribeVpcIpListRequest request) {
+            return await new DescribeVpcIpListExecutor().Client(this).Execute<DescribeVpcIpListResponse, DescribeVpcIpListResult, DescribeVpcIpListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -774,7 +1173,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  查询某条网站类规则
+        ///  查询网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -784,45 +1183,45 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例url白名单
+        ///  修改非网站类转发规则的防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceUrlWhiteListResponse ModifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) {
-            return  new ModifyInstanceUrlWhiteListExecutor().Client(this).Execute<ModifyInstanceUrlWhiteListResponse, ModifyInstanceUrlWhiteListResult, ModifyInstanceUrlWhiteListRequest>(request);
+        public ModifyProtectionRuleOfForwardRuleResponse ModifyProtectionRuleOfForwardRule(ModifyProtectionRuleOfForwardRuleRequest request) {
+            return  new ModifyProtectionRuleOfForwardRuleExecutor().Client(this).Execute<ModifyProtectionRuleOfForwardRuleResponse, ModifyProtectionRuleOfForwardRuleResult, ModifyProtectionRuleOfForwardRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置实例url白名单
+        ///  修改非网站类转发规则的防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceUrlWhiteListResponse> ModifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) {
-            return await new ModifyInstanceUrlWhiteListExecutor().Client(this).Execute<ModifyInstanceUrlWhiteListResponse, ModifyInstanceUrlWhiteListResult, ModifyInstanceUrlWhiteListRequest>(request);
+        public async Task<ModifyProtectionRuleOfForwardRuleResponse> ModifyProtectionRuleOfForwardRule(ModifyProtectionRuleOfForwardRuleRequest request) {
+            return await new ModifyProtectionRuleOfForwardRuleExecutor().Client(this).Execute<ModifyProtectionRuleOfForwardRuleResponse, ModifyProtectionRuleOfForwardRuleResult, ModifyProtectionRuleOfForwardRuleRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例CC防护每ip限速
+        ///  下载 CC 攻击日志详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetCcIpLimitResponse SetCcIpLimit(SetCcIpLimitRequest request) {
-            return  new SetCcIpLimitExecutor().Client(this).Execute<SetCcIpLimitResponse, SetCcIpLimitResult, SetCcIpLimitRequest>(request);
+        public DownloadCCAttackLogDetailsResponse DownloadCCAttackLogDetails(DownloadCCAttackLogDetailsRequest request) {
+            return  new DownloadCCAttackLogDetailsExecutor().Client(this).Execute<DownloadCCAttackLogDetailsResponse, DownloadCCAttackLogDetailsResult, DownloadCCAttackLogDetailsRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置实例CC防护每ip限速
+        ///  下载 CC 攻击日志详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetCcIpLimitResponse> SetCcIpLimit(SetCcIpLimitRequest request) {
-            return await new SetCcIpLimitExecutor().Client(this).Execute<SetCcIpLimitResponse, SetCcIpLimitResult, SetCcIpLimitRequest>(request);
+        public async Task<DownloadCCAttackLogDetailsResponse> DownloadCCAttackLogDetails(DownloadCCAttackLogDetailsRequest request) {
+            return await new DownloadCCAttackLogDetailsExecutor().Client(this).Execute<DownloadCCAttackLogDetailsResponse, DownloadCCAttackLogDetailsResult, DownloadCCAttackLogDetailsRequest>(request);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除某条网站规则
+        ///  删除网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -831,7 +1230,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  删除某条网站规则
+        ///  删除网站规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -860,26 +1259,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例ip白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceIpWhiteListResponse ModifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) {
-            return  new ModifyInstanceIpWhiteListExecutor().Client(this).Execute<ModifyInstanceIpWhiteListResponse, ModifyInstanceIpWhiteListResult, ModifyInstanceIpWhiteListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置实例ip白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceIpWhiteListResponse> ModifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) {
-            return await new ModifyInstanceIpWhiteListExecutor().Client(this).Execute<ModifyInstanceIpWhiteListResponse, ModifyInstanceIpWhiteListResult, ModifyInstanceIpWhiteListRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询某条非网站类规则
+        ///  查询非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -888,7 +1268,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  查询某条非网站类规则
+        ///  查询非网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -898,40 +1278,21 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询DDos攻击日志
+        ///  CC 防护流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeDDosAttackLogsResponse DescribeDDosAttackLogs(DescribeDDosAttackLogsRequest request) {
-            return  new DescribeDDosAttackLogsExecutor().Client(this).Execute<DescribeDDosAttackLogsResponse, DescribeDDosAttackLogsResult, DescribeDDosAttackLogsRequest>(request);
+        public DescribeCCGraphResponse DescribeCCGraph(DescribeCCGraphRequest request) {
+            return  new DescribeCCGraphExecutor().Client(this).Execute<DescribeCCGraphResponse, DescribeCCGraphResult, DescribeCCGraphRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询DDos攻击日志
+        ///  CC 防护流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDDosAttackLogsResponse> DescribeDDosAttackLogs(DescribeDDosAttackLogsRequest request) {
-            return await new DescribeDDosAttackLogsExecutor().Client(this).Execute<DescribeDDosAttackLogsResponse, DescribeDDosAttackLogsResult, DescribeDDosAttackLogsRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  非网站类规则切换成防御状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SwitchForwardRuleProtectResponse SwitchForwardRuleProtect(SwitchForwardRuleProtectRequest request) {
-            return  new SwitchForwardRuleProtectExecutor().Client(this).Execute<SwitchForwardRuleProtectResponse, SwitchForwardRuleProtectResult, SwitchForwardRuleProtectRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  非网站类规则切换成防御状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SwitchForwardRuleProtectResponse> SwitchForwardRuleProtect(SwitchForwardRuleProtectRequest request) {
-            return await new SwitchForwardRuleProtectExecutor().Client(this).Execute<SwitchForwardRuleProtectResponse, SwitchForwardRuleProtectResult, SwitchForwardRuleProtectRequest>(request);
+        public async Task<DescribeCCGraphResponse> DescribeCCGraph(DescribeCCGraphRequest request) {
+            return await new DescribeCCGraphExecutor().Client(this).Execute<DescribeCCGraphResponse, DescribeCCGraphResult, DescribeCCGraphRequest>(request);
         }
 #endif
 #if NET40||NET35

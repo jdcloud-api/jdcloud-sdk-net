@@ -40,7 +40,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 攻击流量大小
         ///</summary>
-        public float? AttackTraffic{ get; set; }
+        public double? AttackTraffic{ get; set; }
         ///<summary>
         /// 是否触发黑洞，0否 1是
         ///</summary>

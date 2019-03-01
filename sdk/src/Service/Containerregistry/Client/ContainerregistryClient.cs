@@ -185,7 +185,7 @@ namespace JDCloudSDK.Containerregistry.Client
 #if NET40||NET35
         /// <summary>
         ///  删除指定用户下某个 registry.
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +195,7 @@ namespace JDCloudSDK.Containerregistry.Client
 #else
         /// <summary>
         ///  删除指定用户下某个 registry.
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -206,7 +206,7 @@ namespace JDCloudSDK.Containerregistry.Client
 #if NET40||NET35
         /// <summary>
         ///  删除指定用户下某个镜像仓库.
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -216,7 +216,7 @@ namespace JDCloudSDK.Containerregistry.Client
 #else
         /// <summary>
         ///  删除指定用户下某个镜像仓库.
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -355,7 +355,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
         /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
         /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -369,7 +369,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
         /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
         /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

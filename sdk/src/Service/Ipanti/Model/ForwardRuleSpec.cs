@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Ipanti.Model
 {
@@ -38,27 +39,40 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 协议：TCP或者UDP
+        /// 协议: TCP或者UDP
+        ///Required:true
         ///</summary>
+        [Required]
         public string Protocol{ get; set; }
         ///<summary>
-        /// 端口号
+        /// 端口号, 取值范围[1, 65535]
+        ///Required:true
         ///</summary>
-        public int? Port{ get; set; }
+        [Required]
+        public int Port{ get; set; }
         ///<summary>
-        /// 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+        /// 转发规则
+        /// - wrr 带权重的轮询
+        /// - wlc 加权最小连接
+        /// - rr  不带权重的轮询
+        /// - sh  源地址hash
+        /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public string Algorithm{ get; set; }
         ///<summary>
-        /// 回源类型，ip或者domain
+        /// 回源类型: A 或者 CNAME
+        ///Required:true
         ///</summary>
+        [Required]
         public string OriginType{ get; set; }
         ///<summary>
         /// OriginAddr
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        /// OnlineAddr
+        /// 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
@@ -66,8 +80,10 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        /// 回源端口号
+        /// 回源端口号, 取值范围[1, 65535]
+        ///Required:true
         ///</summary>
-        public int? OriginPort{ get; set; }
+        [Required]
+        public int OriginPort{ get; set; }
     }
 }

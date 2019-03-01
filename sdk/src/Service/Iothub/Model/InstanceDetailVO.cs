@@ -106,6 +106,10 @@ namespace JDCloudSDK.Iothub.Model
         ///</summary>
         public string RdsUserName{ get; set; }
         ///<summary>
+        /// JcqId
+        ///</summary>
+        public string JcqId{ get; set; }
+        ///<summary>
         /// JcqAccessPoint
         ///</summary>
         public string JcqAccessPoint{ get; set; }
@@ -121,5 +125,13 @@ namespace JDCloudSDK.Iothub.Model
         /// JcqRegion
         ///</summary>
         public string JcqRegion{ get; set; }
+        ///<summary>
+        /// ak
+        ///</summary>
+        public string Ak{ get; set; }
+        ///<summary>
+        /// sk
+        ///</summary>
+        public string Sk{ get; set; }
     }
 }

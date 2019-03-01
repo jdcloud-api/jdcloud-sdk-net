@@ -38,11 +38,11 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 规则id
+        /// 规则 Id
         ///</summary>
         public long? Id{ get; set; }
         ///<summary>
-        /// 实例id
+        /// 实例 Id
         ///</summary>
         public long? InstanceId{ get; set; }
         ///<summary>
@@ -50,23 +50,35 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string Domain{ get; set; }
         ///<summary>
-        /// 规则的cname
+        /// 规则的 cname
         ///</summary>
         public string Cname{ get; set; }
         ///<summary>
-        /// 协议：HTTP、HTTPS、HTTP_HTTPS
+        /// Protocol
         ///</summary>
-        public string Protocol{ get; set; }
+        public WebRuleProtocol Protocol{ get; set; }
         ///<summary>
-        /// HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+        /// 是否为自定义端口号, 0: 为默认, 1: 为自定义
         ///</summary>
-        public string Port{ get; set; }
+        public int? CustomPortStatus{ get; set; }
         ///<summary>
-        /// HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+        /// HTTP 协议的端口号, 如 80,81
         ///</summary>
-        public string HttpsPort{ get; set; }
+        public List<int?> Port{ get; set; }
         ///<summary>
-        /// 回源类型：A或者CNAME
+        /// HTTPS 协议的端口号, 如 443,8443
+        ///</summary>
+        public List<int?> HttpsPort{ get; set; }
+        ///<summary>
+        /// 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+        ///</summary>
+        public int? HttpOrigin{ get; set; }
+        ///<summary>
+        /// 0: 防御状态, 1: 回源状态
+        ///</summary>
+        public int? Status{ get; set; }
+        ///<summary>
+        /// 回源类型: A 或者 CNAME
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
@@ -74,13 +86,25 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
+        /// 回源域名, originType 为 CNAME 时返回该字段
+        ///</summary>
+        public string OriginDomain{ get; set; }
+        ///<summary>
         /// OnlineAddr
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        /// 回源域名,originType为CNAME时返回该字段
+        /// 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
         ///</summary>
-        public string OriginDomain{ get; set; }
+        public int? HttpCertStatus{ get; set; }
+        ///<summary>
+        /// 证书 Id
+        ///</summary>
+        public long? CertId{ get; set; }
+        ///<summary>
+        /// 证书名称
+        ///</summary>
+        public string CertName{ get; set; }
         ///<summary>
         /// 证书内容
         ///</summary>
@@ -90,32 +114,23 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string HttpsRsaKey{ get; set; }
         ///<summary>
-        /// 证书状态：0异常，1正常
-        ///</summary>
-        public int? HttpCertStatus{ get; set; }
-        ///<summary>
-        /// 0防御状态，1回源状态
-        ///</summary>
-        public int? Status{ get; set; }
-        ///<summary>
-        /// 0 CC关闭 1 CC开启
-        ///</summary>
-        public int? CcStatus{ get; set; }
-        ///<summary>
-        /// 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
-        ///</summary>
-        public string Algorithm{ get; set; }
-        ///<summary>
-        /// 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+        /// 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
+        ///   - 0 不强跳
+        ///   - 1 开启强跳
+        /// 
         ///</summary>
         public int? ForceJump{ get; set; }
         ///<summary>
-        /// 是否为自定义端口号，0为默认 1为自定义
+        /// 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
         ///</summary>
-        public int? CustomPortStatus{ get; set; }
+        public string Algorithm{ get; set; }
         ///<summary>
-        /// 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+        /// CC 状态, 0: CC 关闭, 1: CC 开启
         ///</summary>
-        public int? HttpOrigin{ get; set; }
+        public int? CcStatus{ get; set; }
+        ///<summary>
+        /// webSocketStatus, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? WebSocketStatus{ get; set; }
     }
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防攻击记录相关接口
- * Ip高防攻击记录相关接口
+ * Anti DDoS Pro Attack Log APIs
+ * Anti DDoS Pro Attack Log APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,9 +34,9 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询DDos攻击日志
+    ///  查询 DDos 攻击日志
     /// </summary>
-    public class DescribeDDosAttackLogsResult : JdcloudResult
+    public class DescribeDDoSAttackLogsResult : JdcloudResult
     {
         ///<summary>
         /// DataList
@@ -44,8 +44,16 @@ namespace  JDCloudSDK.Ipanti.Apis
         public List<DDosAttackLog> DataList{ get; set; }
 
         ///<summary>
-        /// TotalCount
+        /// 当前页数量
+        ///</summary>
+        public   int? CurrentCount{ get; set; }
+        ///<summary>
+        /// 实例总数
         ///</summary>
         public   int? TotalCount{ get; set; }
+        ///<summary>
+        /// 总页数
+        ///</summary>
+        public   int? TotalPage{ get; set; }
     }
 }

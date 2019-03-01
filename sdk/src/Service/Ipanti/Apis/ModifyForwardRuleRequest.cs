@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 非网站转发配置相关接口
- * 非网站转发配置相关接口
+ * Anti DDos Pro non-Web Rule Configuration APIs
+ * Anti DDos Pro non-Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,33 +35,33 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  更新某条非网站类规则
+    ///  更新非网站类规则
     /// </summary>
     public class ModifyForwardRuleRequest : JdcloudRequest
     {
         ///<summary>
-        /// 非网站类规则参数
+        /// 更新非网站类规则请求参数
         ///Required:true
         ///</summary>
         [Required]
         public   ForwardRuleSpec ForwardRuleSpec{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 区域 Id
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例id
+        /// 高防实例 Id
         ///Required:true
         ///</summary>
         [Required]
-        public   string InstanceId{ get; set; }
+        public   long InstanceId{ get; set; }
         ///<summary>
-        /// 转发规则id
+        /// 转发规则 Id
         ///Required:true
         ///</summary>
         [Required]
-        public   string ForwardRuleId{ get; set; }
+        public   long ForwardRuleId{ get; set; }
     }
 }

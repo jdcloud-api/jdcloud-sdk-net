@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -37,5 +37,13 @@ namespace  JDCloudSDK.Ipanti.Apis
     /// </summary>
     public class SwitchWebRuleOriginResult : JdcloudResult
     {
+        ///<summary>
+        /// 0: 规则切换成回源失败, 1: 规则切换成回源成功
+        ///</summary>
+        public   int? Code{ get; set; }
+        ///<summary>
+        /// 规则切换成回源失败时给出具体原因
+        ///</summary>
+        public   string Message{ get; set; }
     }
 }

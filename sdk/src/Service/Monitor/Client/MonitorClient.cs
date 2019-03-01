@@ -266,6 +266,25 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量删除规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteAlarmsResponse DeleteAlarms(DeleteAlarmsRequest request) {
+            return  new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteAlarmsResponse> DeleteAlarms(DeleteAlarmsRequest request) {
+            return await new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看某资源的最后一个点,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>

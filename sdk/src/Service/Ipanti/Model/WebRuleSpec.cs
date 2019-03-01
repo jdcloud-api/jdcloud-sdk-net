@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Ipanti.Model
 {
@@ -39,36 +40,72 @@ namespace JDCloudSDK.Ipanti.Model
 
         ///<summary>
         /// 子域名
+        ///Required:true
         ///</summary>
+        [Required]
         public string Domain{ get; set; }
         ///<summary>
-        /// 协议：HTTP、HTTPS、HTTP_HTTPS
+        /// 协议: http, https 至少一个为 true
+        ///Required:true
         ///</summary>
-        public string Protocol{ get; set; }
+        [Required]
+        public WebRuleProtocol Protocol{ get; set; }
         ///<summary>
-        /// HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+        /// HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
         ///</summary>
-        public string Port{ get; set; }
+        public List<int?> Port{ get; set; }
         ///<summary>
-        /// HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+        /// HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
         ///</summary>
-        public string HttpsPort{ get; set; }
+        public List<int?> HttpsPort{ get; set; }
         ///<summary>
         /// 回源类型：A或者CNAME
+        ///Required:true
         ///</summary>
+        [Required]
         public string OriginType{ get; set; }
         ///<summary>
-        /// OriginAddr
+        /// originType 为 A 时，需要设置该字段
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        /// OnlineAddr
+        /// 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
         /// 回源域名,originType为CNAME时需要指定该字段
         ///</summary>
         public string OriginDomain{ get; set; }
+        ///<summary>
+        /// 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string Algorithm{ get; set; }
+        ///<summary>
+        /// 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
+        ///   - 0 不开启强制跳转
+        ///   - 1 开启强制跳转
+        /// 
+        ///</summary>
+        public int? ForceJump{ get; set; }
+        ///<summary>
+        /// 是否为自定义端口号，0为默认 1为自定义
+        ///</summary>
+        public int? CustomPortStatus{ get; set; }
+        ///<summary>
+        /// 是否开启http回源, 当勾选HTTPS时可以配置该属性
+        ///   - 0 不开启
+        ///   - 1 开启
+        /// 
+        ///</summary>
+        public int? HttpOrigin{ get; set; }
+        ///<summary>
+        /// 是否开启 WebSocket, 0 为不开启, 1 为开启
+        ///Required:true
+        ///</summary>
+        [Required]
+        public int WebSocketStatus{ get; set; }
         ///<summary>
         /// 证书内容
         ///</summary>
@@ -78,20 +115,10 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string HttpsRsaKey{ get; set; }
         ///<summary>
-        /// 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+        /// 证书 Id
+        ///   - 如果传 certId, 请确认已经上传了相应的证书
+        ///   - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
         ///</summary>
-        public string Algorithm{ get; set; }
-        ///<summary>
-        /// 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
-        ///</summary>
-        public int? ForceJump{ get; set; }
-        ///<summary>
-        /// 是否为自定义端口号，0为默认 1为自定义
-        ///</summary>
-        public int? CustomPortStatus{ get; set; }
-        ///<summary>
-        /// 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
-        ///</summary>
-        public int? HttpOrigin{ get; set; }
+        public long? CertId{ get; set; }
     }
 }

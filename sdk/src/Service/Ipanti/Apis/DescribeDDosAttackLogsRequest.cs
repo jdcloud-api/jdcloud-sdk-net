@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防攻击记录相关接口
- * Ip高防攻击记录相关接口
+ * Anti DDoS Pro Attack Log APIs
+ * Anti DDoS Pro Attack Log APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,37 +34,37 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询DDos攻击日志
+    ///  查询 DDos 攻击日志
     /// </summary>
-    public class DescribeDDosAttackLogsRequest : JdcloudRequest
+    public class DescribeDDoSAttackLogsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码, 默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小, 默认为10, 取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 开始时间，最多查最近30天，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///Required:true
         ///</summary>
         [Required]
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 查询的结束时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 查询的结束时间, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///Required:true
         ///</summary>
         [Required]
         public   string EndTime{ get; set; }
         ///<summary>
-        /// 高防实例id
+        /// 高防实例 ID
         ///</summary>
-        public List<string> InstanceId{ get; set; }
+        public List<long?> InstanceId{ get; set; }
 
         ///<summary>
-        /// Region ID
+        /// 区域 Id
         ///Required:true
         ///</summary>
         [Required]

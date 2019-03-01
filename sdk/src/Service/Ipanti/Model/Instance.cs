@@ -38,17 +38,24 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 实例id
+        /// 实例 Id
         ///</summary>
-        public long? InstanceId{ get; set; }
+        public long? Id{ get; set; }
         ///<summary>
         /// 实例名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 线路，UNICOM、TELECOM
+        /// 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
         ///</summary>
-        public string Carrier{ get; set; }
+        public int? Carrier{ get; set; }
+        ///<summary>
+        /// 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+        /// - 0: IPV4,
+        /// - 1: IPV4/IPV6
+        /// 
+        ///</summary>
+        public int? IpType{ get; set; }
         ///<summary>
         /// 触发弹性带宽的次数
         ///</summary>
@@ -92,11 +99,11 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 实例的创建的时间
         ///</summary>
-        public long? CreateTime{ get; set; }
+        public string CreateTime{ get; set; }
         ///<summary>
         /// 实例的过期时间
         ///</summary>
-        public long? ExpireTime{ get; set; }
+        public string ExpireTime{ get; set; }
         ///<summary>
         /// 资源id，升级和续费时使用
         ///</summary>
@@ -133,10 +140,6 @@ namespace JDCloudSDK.Ipanti.Model
         /// ip白名单状态，0关闭，1开启
         ///</summary>
         public int? IpWhiteStatus{ get; set; }
-        ///<summary>
-        /// 用户pin
-        ///</summary>
-        public string Pin{ get; set; }
         ///<summary>
         /// url白名单列表
         ///</summary>

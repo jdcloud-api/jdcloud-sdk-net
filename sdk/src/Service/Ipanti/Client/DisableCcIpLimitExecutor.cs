@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    ///  关闭CC防护每ip的限速
+    ///  关闭 CC 防护每 IP 的限速
     /// </summary>
-    public class DisableCcIpLimitExecutor : JdcloudExecutor
+    public class DisableCCIpLimitExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  关闭CC防护每ip的限速接口的Http 请求方法
+        ///  关闭 CC 防护每 IP 的限速接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +47,12 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  关闭CC防护每ip的限速接口的Http资源请求路径
+        ///  关闭 CC 防护每 IP 的限速接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/instances/{instanceId}:disableCcIpLimit";
+            return "/regions/{regionId}/instances/{instanceId}:disableCCIpLimit";
             }
         }
     }

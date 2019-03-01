@@ -47,6 +47,10 @@ namespace  JDCloudSDK.Containerregistry.Apis
         public List<Filter> Filters{ get; set; }
 
         ///<summary>
+        /// 注册表名
+        ///</summary>
+        public   string RegistryName{ get; set; }
+        ///<summary>
         /// 页码；默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }

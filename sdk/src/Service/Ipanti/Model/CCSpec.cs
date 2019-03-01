@@ -44,22 +44,22 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// cc阈值大小
         ///</summary>
-        public int? CcThreshold{ get; set; }
+        public long? CcThreshold{ get; set; }
         ///<summary>
         /// ccProtectMode为自定义模式时，指定每个Host的防护阈值
         ///</summary>
-        public int? HostQps{ get; set; }
+        public long? HostQps{ get; set; }
         ///<summary>
         /// ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
         ///</summary>
-        public int? HostUrlQps{ get; set; }
+        public long? HostUrlQps{ get; set; }
         ///<summary>
         /// ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
         ///</summary>
-        public int? IpHostQps{ get; set; }
+        public long? IpHostQps{ get; set; }
         ///<summary>
         /// ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
         ///</summary>
-        public int? IpHostUrlQps{ get; set; }
+        public long? IpHostUrlQps{ get; set; }
     }
 }

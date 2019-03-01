@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  更新某条网站类规则
+    ///  修改网站类规则
     /// </summary>
     public class ModifyWebRuleResponse : JdcloudResponse<ModifyWebRuleResult>
     {

@@ -34,13 +34,13 @@ namespace JDCloudSDK.Containerregistry.Client
 
     /// <summary>
     ///  删除指定用户下某个 registry.
-        /// 
+        ///  [MFA enabled]
     /// </summary>
     public class DeleteRegistryExecutor : JdcloudExecutor
     {
         /// <summary>
         ///  删除指定用户下某个 registry.
-        /// 接口的Http 请求方法
+        ///  [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Containerregistry.Client
         }
         /// <summary>
         ///  删除指定用户下某个 registry.
-        /// 接口的Http资源请求路径
+        ///  [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

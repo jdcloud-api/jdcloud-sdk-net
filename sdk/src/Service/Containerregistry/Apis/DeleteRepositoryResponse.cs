@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Containerregistry.Apis
 
     /// <summary>
     ///  删除指定用户下某个镜像仓库.
-        ///         /// 
+        ///         ///  [MFA enabled]
     /// </summary>
     public class DeleteRepositoryResponse : JdcloudResponse<DeleteRepositoryResult>
     {

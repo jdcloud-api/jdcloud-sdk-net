@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  禁用实例ip白名单
+    ///  关闭实例 IP 白名单
     /// </summary>
     public class DisableInstanceIpWhiteListResponse : JdcloudResponse<DisableInstanceIpWhiteListResult>
     {

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,21 +28,23 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Ipanti.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  设置实例ip白名单
+    ///  设置实例 IP 白名单
     /// </summary>
     public class ModifyInstanceIpWhiteListRequest : JdcloudRequest
     {
         ///<summary>
-        /// ip白名单列表
+        /// 设置 IP 白名单请求参数
+        ///Required:true
         ///</summary>
-        public List<string> IpWhiteList{ get; set; }
-
+        [Required]
+        public   IpBwListSpec IpBwListSpec{ get; set; }
         ///<summary>
         /// Region ID
         ///Required:true
@@ -50,10 +52,10 @@ namespace  JDCloudSDK.Ipanti.Apis
         [Required]
         public override  string RegionId{ get; set; }
         ///<summary>
-        /// 实例id
+        /// 实例 ID
         ///Required:true
         ///</summary>
         [Required]
-        public   string InstanceId{ get; set; }
+        public   long InstanceId{ get; set; }
     }
 }

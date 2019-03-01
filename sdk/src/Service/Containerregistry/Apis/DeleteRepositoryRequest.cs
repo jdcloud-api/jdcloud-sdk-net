@@ -35,10 +35,14 @@ namespace  JDCloudSDK.Containerregistry.Apis
 
     /// <summary>
     ///  删除指定用户下某个镜像仓库.
-        ///         /// 
+        ///         ///  [MFA enabled]
     /// </summary>
     public class DeleteRepositoryRequest : JdcloudRequest
     {
+        ///<summary>
+        /// 是否强制删除有镜像的镜像仓库
+        ///</summary>
+        public   bool Force{ get; set; }
         ///<summary>
         /// Region ID
         ///Required:true

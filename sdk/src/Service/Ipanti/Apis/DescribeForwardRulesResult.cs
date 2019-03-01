@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 非网站转发配置相关接口
- * 非网站转发配置相关接口
+ * Anti DDos Pro non-Web Rule Configuration APIs
+ * Anti DDos Pro non-Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -44,8 +44,16 @@ namespace  JDCloudSDK.Ipanti.Apis
         public List<ForwardRule> DataList{ get; set; }
 
         ///<summary>
-        /// TotalCount
+        /// 当前页数量
+        ///</summary>
+        public   int? CurrentCount{ get; set; }
+        ///<summary>
+        /// 总数
         ///</summary>
         public   int? TotalCount{ get; set; }
+        ///<summary>
+        /// 总页数
+        ///</summary>
+        public   int? TotalPage{ get; set; }
     }
 }

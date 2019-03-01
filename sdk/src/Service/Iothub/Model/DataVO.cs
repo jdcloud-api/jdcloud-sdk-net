@@ -38,52 +38,56 @@ namespace JDCloudSDK.Iothub.Model
     {
 
         ///<summary>
-        /// Id
+        /// 系统流水号
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// Name
+        /// 实例名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// SubNetId
+        /// 子网编号
         ///</summary>
         public string SubNetId{ get; set; }
         ///<summary>
-        /// SubNetName
+        /// 子网名称
         ///</summary>
         public string SubNetName{ get; set; }
         ///<summary>
-        /// VpcId
+        /// VPC编号
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        /// VpcName
+        /// VPC名称
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
-        /// AzName
+        /// 可用区名称
         ///</summary>
         public string AzName{ get; set; }
         ///<summary>
-        /// PubDomain
+        /// 公网域名
         ///</summary>
         public string PubDomain{ get; set; }
         ///<summary>
-        /// PriDomain
+        /// 内网域名
         ///</summary>
         public string PriDomain{ get; set; }
         ///<summary>
-        /// Status
+        /// 实例状态
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// Feetype
+        /// 资费形式
         ///</summary>
         public string Feetype{ get; set; }
         ///<summary>
-        /// CreateTime
+        /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
+        ///<summary>
+        /// 实例编号
+        ///</summary>
+        public string InstanceId{ get; set; }
     }
 }

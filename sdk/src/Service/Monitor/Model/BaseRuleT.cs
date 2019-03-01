@@ -57,11 +57,13 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string DownSample{ get; set; }
         ///<summary>
-        /// 监控项ID
-        ///Required:true
+        /// 监控项
         ///</summary>
-        [Required]
-        public long MetricId{ get; set; }
+        public string Metric{ get; set; }
+        ///<summary>
+        /// 监控项ID
+        ///</summary>
+        public long? MetricId{ get; set; }
         ///<summary>
         /// NoticeLevel
         ///</summary>

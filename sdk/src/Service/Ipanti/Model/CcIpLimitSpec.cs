@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Ipanti.Model
 {
@@ -39,11 +40,15 @@ namespace JDCloudSDK.Ipanti.Model
 
         ///<summary>
         /// cc防护每ip的限速大小
+        ///Required:true
         ///</summary>
-        public int? CcSpeedLimit{ get; set; }
+        [Required]
+        public long CcSpeedLimit{ get; set; }
         ///<summary>
         /// cc防护每ip的限速大小的统计周期
+        ///Required:true
         ///</summary>
-        public int? CcSpeedPeriod{ get; set; }
+        [Required]
+        public long CcSpeedPeriod{ get; set; }
     }
 }

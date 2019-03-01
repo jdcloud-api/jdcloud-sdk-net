@@ -38,7 +38,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
         /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
         /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
-        /// 
+        ///  [MFA enabled]
     /// </summary>
     public class DeleteImageExecutor : JdcloudExecutor
     {
@@ -48,7 +48,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
         /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
         /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
-        /// 接口的Http 请求方法
+        ///  [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -62,7 +62,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// 可根据Tag状态删除Image，例如删除所有tagged的镜像。
         /// digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
         /// 例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
-        /// 接口的Http资源请求路径
+        ///  [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

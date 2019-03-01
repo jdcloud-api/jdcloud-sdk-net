@@ -39,11 +39,11 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+        /// 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
         ///</summary>
         public string AggrType{ get; set; }
         ///<summary>
-        /// 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+        /// 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
         ///</summary>
         public string DownSampleType{ get; set; }
         ///<summary>

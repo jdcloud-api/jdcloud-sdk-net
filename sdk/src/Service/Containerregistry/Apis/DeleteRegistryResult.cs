@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Containerregistry.Apis
 
     /// <summary>
     ///  删除指定用户下某个 registry.
-        ///         /// 
+        ///         ///  [MFA enabled]
     /// </summary>
     public class DeleteRegistryResult : JdcloudResult
     {

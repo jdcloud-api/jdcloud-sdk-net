@@ -54,7 +54,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string Cname{ get; set; }
         ///<summary>
-        /// 回源类型：ip或者domain
+        /// 回源类型: ip或者domain
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
@@ -62,7 +62,12 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+        /// 转发规则
+        /// - wrr 带权重的轮询
+        /// - wlc 加权最小连接
+        /// - rr  不带权重的轮询
+        /// - sh  源地址hash
+        /// 
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
@@ -70,7 +75,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        /// OnlineAddr
+        /// 备用的回源地址列表
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>

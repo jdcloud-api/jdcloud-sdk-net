@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -39,11 +39,11 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeInstancesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码, 默认为 1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小, 默认为 10, 取值范围[10, 100], 0 表示全量
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

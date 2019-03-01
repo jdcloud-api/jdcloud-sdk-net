@@ -51,7 +51,7 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string Metric{ get; set; }
         ///<summary>
-        /// 数据维度，数据类型为map类型，支持最少一个，最多6个标签，总长度不大于1024字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+        /// 数据维度，数据类型为map类型，支持最少一个，最多6个标签，总长度不大于1024字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err。eg:{&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;region&quot;:&quot;cn-north-1&quot;,&quot;role&quot;:&quot;M&quot;}
         ///Required:true
         ///</summary>
         [Required]

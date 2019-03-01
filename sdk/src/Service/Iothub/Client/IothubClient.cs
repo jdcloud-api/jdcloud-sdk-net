@@ -138,48 +138,6 @@ namespace JDCloudSDK.Iothub.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  客户用该接口可以批量登记设备
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DevicesEnrollResponse DevicesEnroll(DevicesEnrollRequest request) {
-            return  new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  客户用该接口可以批量登记设备
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DevicesEnrollResponse> DevicesEnroll(DevicesEnrollRequest request) {
-            return await new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  客户用该接口可以对设备下发命令
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeviceCommandResponse DeviceCommand(DeviceCommandRequest request) {
-            return  new DeviceCommandExecutor().Client(this).Execute<DeviceCommandResponse, DeviceCommandResult, DeviceCommandRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  客户用该接口可以对设备下发命令
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeviceCommandResponse> DeviceCommand(DeviceCommandRequest request) {
-            return await new DeviceCommandExecutor().Client(this).Execute<DeviceCommandResponse, DeviceCommandResult, DeviceCommandRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  物模型注册接口
         /// 
         /// </summary>
@@ -222,23 +180,21 @@ namespace JDCloudSDK.Iothub.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  客户用该接口可以修改模块预期状态
-        /// 
+        ///  删除设备
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModuleStateResponse ModuleState(ModuleStateRequest request) {
-            return  new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
+        public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest request) {
+            return  new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request);
         }
 #else
         /// <summary>
-        ///  客户用该接口可以修改模块预期状态
-        /// 
+        ///  删除设备
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModuleStateResponse> ModuleState(ModuleStateRequest request) {
-            return await new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
+        public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest request) {
+            return await new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -260,6 +216,172 @@ namespace JDCloudSDK.Iothub.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModuleEnrollResponse> ModuleEnroll(ModuleEnrollRequest request) {
             return await new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以批量登记设备
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DevicesEnrollResponse DevicesEnroll(DevicesEnrollRequest request) {
+            return  new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以批量登记设备
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DevicesEnrollResponse> DevicesEnroll(DevicesEnrollRequest request) {
+            return await new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以对设备下发命令
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeviceCommandResponse DeviceCommand(DeviceCommandRequest request) {
+            return  new DeviceCommandExecutor().Client(this).Execute<DeviceCommandResponse, DeviceCommandResult, DeviceCommandRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以对设备下发命令
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeviceCommandResponse> DeviceCommand(DeviceCommandRequest request) {
+            return await new DeviceCommandExecutor().Client(this).Execute<DeviceCommandResponse, DeviceCommandResult, DeviceCommandRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以修改模块预期状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModuleStateResponse ModuleState(ModuleStateRequest request) {
+            return  new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以修改模块预期状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModuleStateResponse> ModuleState(ModuleStateRequest request) {
+            return await new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  物模型通过文件上传注册接口
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OmEnrollbyFileResponse OmEnrollbyFile(OmEnrollbyFileRequest request) {
+            return  new OmEnrollbyFileExecutor().Client(this).Execute<OmEnrollbyFileResponse, OmEnrollbyFileResult, OmEnrollbyFileRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  物模型通过文件上传注册接口
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OmEnrollbyFileResponse> OmEnrollbyFile(OmEnrollbyFileRequest request) {
+            return await new OmEnrollbyFileExecutor().Client(this).Execute<OmEnrollbyFileResponse, OmEnrollbyFileResult, OmEnrollbyFileRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询设备在线信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDeviceOnlineInfosResponse QueryDeviceOnlineInfos(QueryDeviceOnlineInfosRequest request) {
+            return  new QueryDeviceOnlineInfosExecutor().Client(this).Execute<QueryDeviceOnlineInfosResponse, QueryDeviceOnlineInfosResult, QueryDeviceOnlineInfosRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询设备在线信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDeviceOnlineInfosResponse> QueryDeviceOnlineInfos(QueryDeviceOnlineInfosRequest request) {
+            return await new QueryDeviceOnlineInfosExecutor().Client(this).Execute<QueryDeviceOnlineInfosResponse, QueryDeviceOnlineInfosResult, QueryDeviceOnlineInfosRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以查询设备预期状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDeviceStatesResponse QueryDeviceStates(QueryDeviceStatesRequest request) {
+            return  new QueryDeviceStatesExecutor().Client(this).Execute<QueryDeviceStatesResponse, QueryDeviceStatesResult, QueryDeviceStatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以查询设备预期状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDeviceStatesResponse> QueryDeviceStates(QueryDeviceStatesRequest request) {
+            return await new QueryDeviceStatesExecutor().Client(this).Execute<QueryDeviceStatesResponse, QueryDeviceStatesResult, QueryDeviceStatesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以查询设备命令列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDeviceCommandsResponse QueryDeviceCommands(QueryDeviceCommandsRequest request) {
+            return  new QueryDeviceCommandsExecutor().Client(this).Execute<QueryDeviceCommandsResponse, QueryDeviceCommandsResult, QueryDeviceCommandsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以查询设备命令列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDeviceCommandsResponse> QueryDeviceCommands(QueryDeviceCommandsRequest request) {
+            return await new QueryDeviceCommandsExecutor().Client(this).Execute<QueryDeviceCommandsResponse, QueryDeviceCommandsResult, QueryDeviceCommandsRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取下载物模型的外链地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetOMPrivateURLResponse GetOMPrivateURL(GetOMPrivateURLRequest request) {
+            return  new GetOMPrivateURLExecutor().Client(this).Execute<GetOMPrivateURLResponse, GetOMPrivateURLResult, GetOMPrivateURLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取下载物模型的外链地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetOMPrivateURLResponse> GetOMPrivateURL(GetOMPrivateURLRequest request) {
+            return await new GetOMPrivateURLExecutor().Client(this).Execute<GetOMPrivateURLResponse, GetOMPrivateURLResult, GetOMPrivateURLRequest>(request);
         }
 #endif
 #if NET40||NET35
