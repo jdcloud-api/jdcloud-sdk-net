@@ -7,6 +7,9 @@
 /bin/
 *.cache
 *.pdb
+*.assets.json
+*.g.target
+*.g.props
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
