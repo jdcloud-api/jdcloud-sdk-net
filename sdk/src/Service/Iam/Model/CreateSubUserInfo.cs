@@ -39,7 +39,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 子账号用户名，4~20位数字、字母、中文、下划线、中划线
+        /// 子用户名：支持4-20位的字母，数字以及-和_，以字母开头
         ///Required:true
         ///</summary>
         [Required]
@@ -49,13 +49,13 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 密码，6~20位，至少包含一个字母，至少包含一个数字或半角符号
+        /// 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
         ///Required:true
         ///</summary>
         [Required]
         public string Password{ get; set; }
         ///<summary>
-        /// 手机号码，区号-手机号，目前只支持0086-中国手机号码
+        /// 手机号码，区号-手机号
         ///Required:true
         ///</summary>
         [Required]
@@ -67,16 +67,20 @@ namespace JDCloudSDK.Iam.Model
         [Required]
         public string Email{ get; set; }
         ///<summary>
-        /// 确认密码
-        ///Required:true
+        /// 是否创建accessKey，默认false
         ///</summary>
-        [Required]
-        public string PasswordConfirm{ get; set; }
-        ///<summary>
-        /// 是否创建accessKey
-        ///Required:true
-        ///</summary>
-        [Required]
         public bool CreateAk{ get; set; }
+        ///<summary>
+        /// 子用户首次登录是否需要重置密码，默认false
+        ///</summary>
+        public bool NeedResetPassword{ get; set; }
+        ///<summary>
+        /// 子用户是否支持控制台登录，默认true
+        ///</summary>
+        public bool ConsoleLogin{ get; set; }
+        ///<summary>
+        /// 是否自动生成密码，默认false
+        ///</summary>
+        public bool AutoGeneratePassword{ get; set; }
     }
 }

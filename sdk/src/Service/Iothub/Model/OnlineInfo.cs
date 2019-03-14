@@ -48,6 +48,6 @@ namespace JDCloudSDK.Iothub.Model
         ///<summary>
         /// LastConnectTime
         ///</summary>
-        public int? LastConnectTime{ get; set; }
+        public string LastConnectTime{ get; set; }
     }
 }

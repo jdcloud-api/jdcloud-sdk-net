@@ -42,7 +42,7 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// appName
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>
-        /// 水印模板配置
+        /// 水印模板集合
         ///</summary>
         public List<string> WatermarkConfig{ get; set; }
     }

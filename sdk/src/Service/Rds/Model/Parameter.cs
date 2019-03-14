@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Rds.Model
 {
@@ -38,12 +39,16 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 参数名称,目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)
+        /// 参数名称
+        ///Required:true
         ///</summary>
+        [Required]
         public string Name{ get; set; }
         ///<summary>
         /// 参数修改值
+        ///Required:true
         ///</summary>
+        [Required]
         public string Value{ get; set; }
     }
 }

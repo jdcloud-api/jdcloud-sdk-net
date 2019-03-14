@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Live.Apis
     public class DeleteLiveAppRequest : JdcloudRequest
     {
         ///<summary>
-        /// 推流域名
+        /// 直播推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播流所属应用名称
+        /// 应用名称
         ///Required:true
         ///</summary>
         [Required]

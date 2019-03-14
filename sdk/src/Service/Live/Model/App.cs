@@ -38,11 +38,14 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 应用名
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 应用状态
+        /// 应用状态：
+        ///  - online    开启
+        ///  - offline   关闭
+        /// 
         ///</summary>
         public string AppStatus{ get; set; }
         ///<summary>

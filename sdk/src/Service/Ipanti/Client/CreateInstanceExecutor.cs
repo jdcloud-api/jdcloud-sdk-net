@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
+    ///  新购或升级高防实例
     /// </summary>
     public class CreateInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效接口的Http 请求方法
+        ///  新购或升级高防实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效接口的Http资源请求路径
+        ///  新购或升级高防实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

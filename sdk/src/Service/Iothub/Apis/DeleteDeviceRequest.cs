@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 设备管理
+ * DeviceInfo
  * device管理模块
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,7 @@ namespace  JDCloudSDK.Iothub.Apis
         ///</summary>
         public   string DeviceId{ get; set; }
         ///<summary>
-        /// 设备目标实例的instanceId
+        /// hub实例instanceId
         ///</summary>
         public   string InstanceId{ get; set; }
     }

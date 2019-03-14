@@ -138,25 +138,6 @@ namespace JDCloudSDK.Iam.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  获取SessionToken
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetSessionTokenResponse GetSessionToken(GetSessionTokenRequest request) {
-            return  new GetSessionTokenExecutor().Client(this).Execute<GetSessionTokenResponse, GetSessionTokenResult, GetSessionTokenRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取SessionToken
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetSessionTokenResponse> GetSessionToken(GetSessionTokenRequest request) {
-            return await new GetSessionTokenExecutor().Client(this).Execute<GetSessionTokenResponse, GetSessionTokenResult, GetSessionTokenRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询子用户策略列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -233,21 +214,21 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  验证SessionToken有效性
+        ///  创建子用户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public VerifySessionTokenResponse VerifySessionToken(VerifySessionTokenRequest request) {
-            return  new VerifySessionTokenExecutor().Client(this).Execute<VerifySessionTokenResponse, VerifySessionTokenResult, VerifySessionTokenRequest>(request);
+        public CreateSubUserResponse CreateSubUser(CreateSubUserRequest request) {
+            return  new CreateSubUserExecutor().Client(this).Execute<CreateSubUserResponse, CreateSubUserResult, CreateSubUserRequest>(request);
         }
 #else
         /// <summary>
-        ///  验证SessionToken有效性
+        ///  创建子用户
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<VerifySessionTokenResponse> VerifySessionToken(VerifySessionTokenRequest request) {
-            return await new VerifySessionTokenExecutor().Client(this).Execute<VerifySessionTokenResponse, VerifySessionTokenResult, VerifySessionTokenRequest>(request);
+        public async Task<CreateSubUserResponse> CreateSubUser(CreateSubUserRequest request) {
+            return await new CreateSubUserExecutor().Client(this).Execute<CreateSubUserResponse, CreateSubUserResult, CreateSubUserRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -324,25 +305,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddPermissionsToSubUserResponse> AddPermissionsToSubUser(AddPermissionsToSubUserRequest request) {
             return await new AddPermissionsToSubUserExecutor().Client(this).Execute<AddPermissionsToSubUserResponse, AddPermissionsToSubUserResult, AddPermissionsToSubUserRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建子账号
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateSubuserResponse CreateSubuser(CreateSubuserRequest request) {
-            return  new CreateSubuserExecutor().Client(this).Execute<CreateSubuserResponse, CreateSubuserResult, CreateSubuserRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建子账号
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateSubuserResponse> CreateSubuser(CreateSubuserRequest request) {
-            return await new CreateSubuserExecutor().Client(this).Execute<CreateSubuserResponse, CreateSubuserResult, CreateSubuserRequest>(request);
         }
 #endif
 #if NET40||NET35

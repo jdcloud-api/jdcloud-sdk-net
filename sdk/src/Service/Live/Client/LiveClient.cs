@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 视频直播相关接口
  *
  * OpenAPI spec version: v1
@@ -39,7 +39,7 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Live.Client
 {
     /// <summary>
-    ///  Live API
+    ///  Live-Video
     ///  视频直播相关接口
     ///  Live Api 客户端
     ///</summary>
@@ -195,6 +195,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  关闭时移
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CloseLiveTimeshiftResponse CloseLiveTimeshift(CloseLiveTimeshiftRequest request) {
+            return  new CloseLiveTimeshiftExecutor().Client(this).Execute<CloseLiveTimeshiftResponse, CloseLiveTimeshiftResult, CloseLiveTimeshiftRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭时移
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CloseLiveTimeshiftResponse> CloseLiveTimeshift(CloseLiveTimeshiftRequest request) {
+            return await new CloseLiveTimeshiftExecutor().Client(this).Execute<CloseLiveTimeshiftResponse, CloseLiveTimeshiftResult, CloseLiveTimeshiftRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除直播流状态通知
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -215,6 +234,8 @@ namespace JDCloudSDK.Live.Client
 #if NET40||NET35
         /// <summary>
         ///  添加录制打点任务
+        ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -224,6 +245,8 @@ namespace JDCloudSDK.Live.Client
 #else
         /// <summary>
         ///  添加录制打点任务
+        ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -518,6 +541,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询直播截图张数数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveSnapshotDataResponse DescribeLiveSnapshotData(DescribeLiveSnapshotDataRequest request) {
+            return  new DescribeLiveSnapshotDataExecutor().Client(this).Execute<DescribeLiveSnapshotDataResponse, DescribeLiveSnapshotDataResult, DescribeLiveSnapshotDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播截图张数数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveSnapshotDataResponse> DescribeLiveSnapshotData(DescribeLiveSnapshotDataRequest request) {
+            return await new DescribeLiveSnapshotDataExecutor().Client(this).Execute<DescribeLiveSnapshotDataResponse, DescribeLiveSnapshotDataResult, DescribeLiveSnapshotDataRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除域名转码配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -632,7 +674,7 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询录制模板列表
+        ///  查询水印模板列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -641,7 +683,7 @@ namespace JDCloudSDK.Live.Client
         }
 #else
         /// <summary>
-        ///  查询录制模板列表
+        ///  查询水印模板列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -704,6 +746,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamPublishListResponse> DescribeLiveStreamPublishList(DescribeLiveStreamPublishListRequest request) {
             return await new DescribeLiveStreamPublishListExecutor().Client(this).Execute<DescribeLiveStreamPublishListResponse, DescribeLiveStreamPublishListResult, DescribeLiveStreamPublishListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询时移配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTimeshiftConfigsResponse DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
+            return  new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询时移配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTimeshiftConfigsResponse> DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
+            return await new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -860,6 +921,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLivePlayAuthKeyResponse SetLivePlayAuthKey(SetLivePlayAuthKeyRequest request) {
+            return  new SetLivePlayAuthKeyExecutor().Client(this).Execute<SetLivePlayAuthKeyResponse, SetLivePlayAuthKeyResult, SetLivePlayAuthKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLivePlayAuthKeyResponse> SetLivePlayAuthKey(SetLivePlayAuthKeyRequest request) {
+            return await new SetLivePlayAuthKeyExecutor().Client(this).Execute<SetLivePlayAuthKeyResponse, SetLivePlayAuthKeyResult, SetLivePlayAuthKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询水印配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -917,6 +997,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
+            return  new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
+            return await new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除用户自定义转码模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -970,6 +1069,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamTranscodeTemplatesResponse> DescribeCustomLiveStreamTranscodeTemplates(DescribeCustomLiveStreamTranscodeTemplatesRequest request) {
             return await new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播鉴黄张数数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLivePornDataResponse DescribeLivePornData(DescribeLivePornDataRequest request) {
+            return  new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播鉴黄张数数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLivePornDataResponse> DescribeLivePornData(DescribeLivePornDataRequest request) {
+            return await new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request);
         }
 #endif
 #if NET40||NET35
@@ -1069,7 +1187,7 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置直播流状态通知
+        ///  设置推流回调配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1078,7 +1196,7 @@ namespace JDCloudSDK.Live.Client
         }
 #else
         /// <summary>
-        ///  设置直播流状态通知
+        ///  设置推流回调配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1145,7 +1263,7 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除域名
+        ///  删除直播域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1154,7 +1272,7 @@ namespace JDCloudSDK.Live.Client
         }
 #else
         /// <summary>
-        ///  删除域名
+        ///  删除直播域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1236,6 +1354,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamAppTranscodeResponse> DeleteLiveStreamAppTranscode(DeleteLiveStreamAppTranscodeRequest request) {
             return await new DeleteLiveStreamAppTranscodeExecutor().Client(this).Execute<DeleteLiveStreamAppTranscodeResponse, DeleteLiveStreamAppTranscodeResult, DeleteLiveStreamAppTranscodeRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启时移
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OpenLiveTimeshiftResponse OpenLiveTimeshift(OpenLiveTimeshiftRequest request) {
+            return  new OpenLiveTimeshiftExecutor().Client(this).Execute<OpenLiveTimeshiftResponse, OpenLiveTimeshiftResult, OpenLiveTimeshiftRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启时移
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OpenLiveTimeshiftResponse> OpenLiveTimeshift(OpenLiveTimeshiftRequest request) {
+            return await new OpenLiveTimeshiftExecutor().Client(this).Execute<OpenLiveTimeshiftResponse, OpenLiveTimeshiftResult, OpenLiveTimeshiftRequest>(request);
         }
 #endif
 

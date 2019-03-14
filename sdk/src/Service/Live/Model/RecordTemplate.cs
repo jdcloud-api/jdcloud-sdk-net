@@ -38,23 +38,35 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 自动录制周期
+        /// 自动录制周期:
+        ///   - 取值:[15,360]
+        ///   - 单位: 分钟
+        /// 
         ///</summary>
         public int? RecordPeriod{ get; set; }
         ///<summary>
-        /// null
+        /// 存储桶
         ///</summary>
         public string SaveBucket{ get; set; }
         ///<summary>
-        /// null
+        /// 存储地址
         ///</summary>
         public string SaveEndpoint{ get; set; }
         ///<summary>
-        /// 录制文件格式
+        /// 录制文件格式:
+        ///   - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+        ///   - 不区分大小写
+        /// 
         ///</summary>
         public string RecordFileType{ get; set; }
         ///<summary>
-        /// 录制模板自定义名称
+        /// 录制模板自定义名称:
+        ///   - 标准质量模板：sd、hd、hsd
+        ///   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+        ///               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+        ///               首尾不能有特殊字符(&quot;-&quot;)
+        ///   - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+        /// 
         ///</summary>
         public string Template{ get; set; }
     }

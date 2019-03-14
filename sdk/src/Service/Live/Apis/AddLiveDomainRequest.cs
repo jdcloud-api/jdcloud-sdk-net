@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Live.Apis
     public class AddLiveDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 直播的推流域名
+        /// 直播的推流域名（不支持泛域名）
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播的播放域名
+        /// 直播的播放域名（不支持泛域名）
         ///Required:true
         ///</summary>
         [Required]

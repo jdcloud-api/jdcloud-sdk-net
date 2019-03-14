@@ -40,7 +40,7 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// 直播流的音频帧率
         ///</summary>
-        public double? AudioFrameRate{ get; set; }
+        public long? AudioFrameRate{ get; set; }
         ///<summary>
         /// 直播流的 URL
         ///</summary>
@@ -48,11 +48,11 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// 直播流的码率
         ///</summary>
-        public double? BitRate{ get; set; }
+        public long? BitRate{ get; set; }
         ///<summary>
         /// 直播流的视频帧率
         ///</summary>
-        public double? VideoFrameRate{ get; set; }
+        public long? VideoFrameRate{ get; set; }
         ///<summary>
         /// 统计时刻
         ///</summary>

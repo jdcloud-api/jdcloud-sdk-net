@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  设置直播流状态通知
+    ///  设置推流回调配置
     /// </summary>
     public class SetLiveStreamNotifyConfigRequest : JdcloudRequest
     {
@@ -45,7 +45,10 @@ namespace  JDCloudSDK.Live.Apis
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 设置直播流信息推送到的 URL 地址
+        /// 设置直播流信息推送到的 URL 地址:
+        ///   - 必须以 http:// 开头
+        ///   - 正则校验格式
+        /// 
         ///Required:true
         ///</summary>
         [Required]

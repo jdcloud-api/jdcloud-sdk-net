@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -47,7 +47,14 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 转码模板查询过滤条件, 不传递分页参数时默认返回10条
+        /// 模板配置查询过滤条件:
+        ///   - name:   publishDomain，必填(直播推流域名)
+        ///   - value:  参数
+        ///   - name:   appName，必填(应用名称)
+        ///   - value:  参数
+        ///   - name:   streamName，非必填(推流名称)
+        ///   - value:  参数
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
 

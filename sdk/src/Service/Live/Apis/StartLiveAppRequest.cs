@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Live.Apis
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// appName
+        /// 应用名称
         ///Required:true
         ///</summary>
         [Required]

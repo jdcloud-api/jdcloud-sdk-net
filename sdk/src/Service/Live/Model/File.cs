@@ -60,7 +60,7 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// 录制时长
         ///</summary>
-        public double? Duration{ get; set; }
+        public long? Duration{ get; set; }
         ///<summary>
         /// 视频高
         ///</summary>

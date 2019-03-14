@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 用户管理接口
- * 用户管理接口
+ * 子用户管理
+ * 子用户管理接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,14 +28,19 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Iam.Model;
 
 namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    ///  创建子账号
+    ///  创建子用户
     /// </summary>
-    public class CreateSubuserResult : JdcloudResult
+    public class CreateSubUserResult : JdcloudResult
     {
+        ///<summary>
+        /// SubUser
+        ///</summary>
+        public   CreateSubUserRes SubUser{ get; set; }
     }
 }

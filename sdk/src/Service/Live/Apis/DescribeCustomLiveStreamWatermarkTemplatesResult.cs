@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询录制模板列表
+    ///  查询水印模板列表
     /// </summary>
     public class DescribeCustomLiveStreamWatermarkTemplatesResult : JdcloudResult
     {
@@ -49,7 +49,7 @@ namespace  JDCloudSDK.Live.Apis
         ///<summary>
         /// 查询总数
         ///</summary>
-        public   double? TotalCount{ get; set; }
+        public   int? TotalCount{ get; set; }
         ///<summary>
         /// WatermarkTemplates
         ///</summary>

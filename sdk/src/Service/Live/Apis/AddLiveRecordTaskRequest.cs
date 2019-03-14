@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -36,11 +36,13 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  添加录制打点任务
+        ///         ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+        ///         /// 
     /// </summary>
     public class AddLiveRecordTaskRequest : JdcloudRequest
     {
         ///<summary>
-        /// 您的推流加速域名
+        /// 录制时间集合
         ///Required:true
         ///</summary>
         [Required]
@@ -59,13 +61,18 @@ namespace  JDCloudSDK.Live.Apis
         [Required]
         public   string SaveEndpoint{ get; set; }
         ///<summary>
-        /// 录制文件类型
+        /// 录制文件类型:
+        ///   - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+        ///   - 不区分大小写
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string RecordFileType{ get; set; }
         ///<summary>
-        /// 录制文件存储路径
+        /// 录制文件存储路径:
+        ///   - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+        /// 
         ///</summary>
         public   string SaveObject{ get; set; }
         ///<summary>

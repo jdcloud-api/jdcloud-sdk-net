@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查询录制模板列表
+    ///  查询水印模板列表
     /// </summary>
     public class DescribeCustomLiveStreamWatermarkTemplatesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询录制模板列表接口的Http 请求方法
+        ///  查询水印模板列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查询录制模板列表接口的Http资源请求路径
+        ///  查询水印模板列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net40;net45;net46;net47;net35</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.4.3.1</Version>
+        <Version>0.4.6.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>目前RDS OpenAPI支持云数据库 MySQL、Percona、MariaDB、SQL Server</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

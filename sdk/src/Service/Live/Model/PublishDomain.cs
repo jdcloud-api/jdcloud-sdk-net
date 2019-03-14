@@ -48,7 +48,14 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string PublishDomainCname{ get; set; }
         ///<summary>
-        /// 直播域名状态
+        /// 直播域名状态：
+        ///   - online表示启用
+        ///   - offline表示停用
+        ///   - configuring表示配置中
+        ///   - configure_failed表示配置失败
+        ///   - checking表示正在审核
+        ///   - check_failed表示审核失败
+        /// 
         ///</summary>
         public string DomainStatus{ get; set; }
         ///<summary>

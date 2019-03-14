@@ -54,11 +54,19 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string SnapshotTime{ get; set; }
         ///<summary>
-        /// 图片高
+        /// 截图高度:
+        ///   - 取值: [8,8192]
+        ///   - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+        ///   - 随源: 如果两个参数都不填写，则截取源流大小原图
+        /// 
         ///</summary>
         public int? Height{ get; set; }
         ///<summary>
-        /// 图片宽
+        /// 截图宽度:
+        ///   - 取值: [8,8192]
+        ///   - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+        ///   - 随源: 如果两个参数都不填写，则截取源流大小原图
+        /// 
         ///</summary>
         public int? Width{ get; set; }
         ///<summary>

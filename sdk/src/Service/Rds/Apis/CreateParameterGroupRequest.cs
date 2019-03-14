@@ -39,13 +39,13 @@ namespace  JDCloudSDK.Rds.Apis
     public class CreateParameterGroupRequest : JdcloudRequest
     {
         ///<summary>
-        /// 实例引擎类型
+        /// 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///Required:true
         ///</summary>
         [Required]
         public   string Engine{ get; set; }
         ///<summary>
-        /// 实例引擎版本
+        /// 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///Required:true
         ///</summary>
         [Required]

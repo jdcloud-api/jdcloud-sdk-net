@@ -974,7 +974,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改SQL Server数实例的配置参数。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档&lt;br&gt;- 仅支持SQL Server
+        ///  修改SQL Server实例的配置参数，目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -983,7 +983,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  修改SQL Server数实例的配置参数。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档&lt;br&gt;- 仅支持SQL Server
+        ///  修改SQL Server实例的配置参数，目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档。&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1027,6 +1027,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyWhiteListResponse> ModifyWhiteList(ModifyWhiteListRequest request) {
             return await new ModifyWhiteListExecutor().Client(this).Execute<ModifyWhiteListResponse, ModifyWhiteListResult, ModifyWhiteListRequest>(request);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  交换两个实例的域名，包括内网域名和外网域名。如果一个实例有外网域名，一个没有，则不允许交换。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExchangeInstanceDnsResponse ExchangeInstanceDns(ExchangeInstanceDnsRequest request) {
+            return  new ExchangeInstanceDnsExecutor().Client(this).Execute<ExchangeInstanceDnsResponse, ExchangeInstanceDnsResult, ExchangeInstanceDnsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  交换两个实例的域名，包括内网域名和外网域名。如果一个实例有外网域名，一个没有，则不允许交换。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExchangeInstanceDnsResponse> ExchangeInstanceDns(ExchangeInstanceDnsRequest request) {
+            return await new ExchangeInstanceDnsExecutor().Client(this).Execute<ExchangeInstanceDnsResponse, ExchangeInstanceDnsResult, ExchangeInstanceDnsRequest>(request);
         }
 #endif
 #if NET40||NET35

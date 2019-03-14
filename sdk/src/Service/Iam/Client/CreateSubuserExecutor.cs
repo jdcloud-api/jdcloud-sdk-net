@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 用户管理接口
- * 用户管理接口
+ * 子用户管理
+ * 子用户管理接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    ///  创建子账号
+    ///  创建子用户
     /// </summary>
-    public class CreateSubuserExecutor : JdcloudExecutor
+    public class CreateSubUserExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建子账号接口的Http 请求方法
+        ///  创建子用户接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +47,12 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        ///  创建子账号接口的Http资源请求路径
+        ///  创建子用户接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/subUser";
+            return "/subUser";
             }
         }
     }

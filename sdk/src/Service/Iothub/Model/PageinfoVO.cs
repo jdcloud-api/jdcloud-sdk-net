@@ -38,19 +38,19 @@ namespace JDCloudSDK.Iothub.Model
     {
 
         ///<summary>
-        /// PageSize
+        /// 每页显示条数
         ///</summary>
         public int? PageSize{ get; set; }
         ///<summary>
-        /// NowPage
+        /// 当前页数
         ///</summary>
         public int? NowPage{ get; set; }
         ///<summary>
-        /// TotalSize
+        /// 总记录数
         ///</summary>
         public int? TotalSize{ get; set; }
         ///<summary>
-        /// TotalPage
+        /// 总页数
         ///</summary>
         public int? TotalPage{ get; set; }
     }

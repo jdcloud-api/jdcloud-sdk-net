@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -39,61 +39,90 @@ namespace  JDCloudSDK.Live.Apis
     public class AddCustomLiveStreamTranscodeTemplateRequest : JdcloudRequest
     {
         ///<summary>
-        /// 转码输出的码率值
+        /// 转码输出的码率值:
+        ///  - 取值范围:[200,3000]
+        ///  - 单位: kpbs
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int VideoCodeRate{ get; set; }
         ///<summary>
-        /// 转码输出的帧率值
+        /// 转码输出的帧率值:
+        ///   - 取值：15/1、25/1、30/1、60/1
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string VideoFrameRate{ get; set; }
         ///<summary>
-        /// 转码输出视频宽度
-        ///Required:true
+        /// 转码输出视频宽度:
+        ///   - 取值: [100,1920]
+        ///   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+        ///   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+        /// 
         ///</summary>
-        [Required]
-        public   int Width{ get; set; }
+        public   int? Width{ get; set; }
         ///<summary>
-        /// 转码输出视频宽度
-        ///Required:true
+        /// 转码输出视频宽度:
+        ///   - 取值: [100,1920]
+        ///   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+        ///   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+        /// 
         ///</summary>
-        [Required]
-        public   int Height{ get; set; }
+        public   int? Height{ get; set; }
         ///<summary>
-        /// 转码模板自定义名称
+        /// 转码模板后缀:
+        ///   - 标准质量模板：sd、hd、hsd
+        ///   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+        ///               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+        ///               首尾不能有特殊字符(&quot;-&quot;)
+        ///   - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string Template{ get; set; }
         ///<summary>
-        /// 转码输出音频编码格式
+        /// 转码输出音频编码格式:
+        ///   - 取值: aac、mp3
+        ///   - 不区分大小写
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string AudioCodec{ get; set; }
         ///<summary>
-        /// 转码输出音频格式
+        /// 转码输出音频格式:
+        ///   - 取值: aac_lc，aac_low，aac_he，aac_he_v2
+        ///   - 不区分大小写
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string AudioFormat{ get; set; }
         ///<summary>
-        /// 转码输出音频采样率
+        /// 转码输出音频采样率:
+        ///   - 取值: [44100,48000]
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int AudioSampleRate{ get; set; }
         ///<summary>
-        /// 转码输出音频通道数
+        /// 转码输出音频通道数:
+        ///   - 1  单声道
+        ///   - 2  双声道
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int AudioChannel{ get; set; }
         ///<summary>
-        /// 转码输出音频码率
+        /// 转码输出音频码率:
+        ///   - 取值: [16,128]
+        ///   - 单位: kbps
+        /// 
         ///Required:true
         ///</summary>
         [Required]

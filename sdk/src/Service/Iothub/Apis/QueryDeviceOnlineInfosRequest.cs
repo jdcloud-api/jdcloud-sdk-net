@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 设备管理
+ * DeviceInfo
  * device管理模块
  *
  * OpenAPI spec version: v1
@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Iothub.Apis
     public class QueryDeviceOnlineInfosRequest : JdcloudRequest
     {
         ///<summary>
-        /// device标识符array
+        /// 设备Id集合
         ///</summary>
         public List<string> DeviceIds{ get; set; }
 

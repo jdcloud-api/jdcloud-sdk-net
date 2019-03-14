@@ -366,7 +366,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
+        ///  新购或升级高防实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +375,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
+        ///  新购或升级高防实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -533,25 +533,6 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceCCResponse> ModifyInstanceCC(ModifyInstanceCCRequest request) {
             return await new ModifyInstanceCCExecutor().Client(this).Execute<ModifyInstanceCCResponse, ModifyInstanceCCResult, ModifyInstanceCCRequest>(request);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站规则的 CC 防护规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteCCProtectionRuleOfWebRuleResponse DeleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) {
-            return  new DeleteCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DeleteCCProtectionRuleOfWebRuleResponse, DeleteCCProtectionRuleOfWebRuleResult, DeleteCCProtectionRuleOfWebRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除网站规则的 CC 防护规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteCCProtectionRuleOfWebRuleResponse> DeleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) {
-            return await new DeleteCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DeleteCCProtectionRuleOfWebRuleResponse, DeleteCCProtectionRuleOfWebRuleResult, DeleteCCProtectionRuleOfWebRuleRequest>(request);
         }
 #endif
 #if NET40||NET35

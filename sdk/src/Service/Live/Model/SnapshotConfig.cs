@@ -43,7 +43,7 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// APP名称
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
