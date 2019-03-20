@@ -161,16 +161,14 @@ namespace JDCloudSDK.Test.Standard2
         public VmClient GetVmClient()
         {
             //1. 设置accessKey和secretKey
-            string accessKeyId = "0E91C3765B78CBD71715F9BF24997AF3";
-            string secretAccessKey = "AF7B13C8010F50F03A52C01458714701";
+            string accessKeyId = "YOUR JDCLOUD AK";
+            string secretAccessKey = "YOUR JDCLOUD SK";
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
-            SDKEnvironment sDKEnvironment = new SDKEnvironment();
-            sDKEnvironment.Endpoint = "apigw-internal.cn-north-1.jcloudcs.com";
+        
             //2. 创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                     .CredentialsProvider(credentialsProvider)
-                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50))
-                    .Environment(sDKEnvironment)
+                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50)) 
                     .Build();
             return vmClient;
         }
