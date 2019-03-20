@@ -152,7 +152,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubUserPermissionsResponse> DescribeSubUserPermissions(DescribeSubUserPermissionsRequest request) {
-            return await new DescribeSubUserPermissionsExecutor().Client(this).Execute<DescribeSubUserPermissionsResponse, DescribeSubUserPermissionsResult, DescribeSubUserPermissionsRequest>(request);
+            return await new DescribeSubUserPermissionsExecutor().Client(this).Execute<DescribeSubUserPermissionsResponse, DescribeSubUserPermissionsResult, DescribeSubUserPermissionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RemovePermissionOfSubUserResponse> RemovePermissionOfSubUser(RemovePermissionOfSubUserRequest request) {
-            return await new RemovePermissionOfSubUserExecutor().Client(this).Execute<RemovePermissionOfSubUserResponse, RemovePermissionOfSubUserResult, RemovePermissionOfSubUserRequest>(request);
+            return await new RemovePermissionOfSubUserExecutor().Client(this).Execute<RemovePermissionOfSubUserResponse, RemovePermissionOfSubUserResult, RemovePermissionOfSubUserRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeUserAccessKeysResponse> DescribeUserAccessKeys(DescribeUserAccessKeysRequest request) {
-            return await new DescribeUserAccessKeysExecutor().Client(this).Execute<DescribeUserAccessKeysResponse, DescribeUserAccessKeysResult, DescribeUserAccessKeysRequest>(request);
+            return await new DescribeUserAccessKeysExecutor().Client(this).Execute<DescribeUserAccessKeysResponse, DescribeUserAccessKeysResult, DescribeUserAccessKeysRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdatePermissionResponse> UpdatePermission(UpdatePermissionRequest request) {
-            return await new UpdatePermissionExecutor().Client(this).Execute<UpdatePermissionResponse, UpdatePermissionResult, UpdatePermissionRequest>(request);
+            return await new UpdatePermissionExecutor().Client(this).Execute<UpdatePermissionResponse, UpdatePermissionResult, UpdatePermissionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSubUserResponse> CreateSubUser(CreateSubUserRequest request) {
-            return await new CreateSubUserExecutor().Client(this).Execute<CreateSubUserResponse, CreateSubUserResult, CreateSubUserRequest>(request);
+            return await new CreateSubUserExecutor().Client(this).Execute<CreateSubUserResponse, CreateSubUserResult, CreateSubUserRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreatePermissionResponse> CreatePermission(CreatePermissionRequest request) {
-            return await new CreatePermissionExecutor().Client(this).Execute<CreatePermissionResponse, CreatePermissionResult, CreatePermissionRequest>(request);
+            return await new CreatePermissionExecutor().Client(this).Execute<CreatePermissionResponse, CreatePermissionResult, CreatePermissionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribePermissionsResponse> DescribePermissions(DescribePermissionsRequest request) {
-            return await new DescribePermissionsExecutor().Client(this).Execute<DescribePermissionsResponse, DescribePermissionsResult, DescribePermissionsRequest>(request);
+            return await new DescribePermissionsExecutor().Client(this).Execute<DescribePermissionsResponse, DescribePermissionsResult, DescribePermissionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribePermissionDetailResponse> DescribePermissionDetail(DescribePermissionDetailRequest request) {
-            return await new DescribePermissionDetailExecutor().Client(this).Execute<DescribePermissionDetailResponse, DescribePermissionDetailResult, DescribePermissionDetailRequest>(request);
+            return await new DescribePermissionDetailExecutor().Client(this).Execute<DescribePermissionDetailResponse, DescribePermissionDetailResult, DescribePermissionDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddPermissionsToSubUserResponse> AddPermissionsToSubUser(AddPermissionsToSubUserRequest request) {
-            return await new AddPermissionsToSubUserExecutor().Client(this).Execute<AddPermissionsToSubUserResponse, AddPermissionsToSubUserResult, AddPermissionsToSubUserRequest>(request);
+            return await new AddPermissionsToSubUserExecutor().Client(this).Execute<AddPermissionsToSubUserResponse, AddPermissionsToSubUserResult, AddPermissionsToSubUserRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteUserAccessKeyResponse> DeleteUserAccessKey(DeleteUserAccessKeyRequest request) {
-            return await new DeleteUserAccessKeyExecutor().Client(this).Execute<DeleteUserAccessKeyResponse, DeleteUserAccessKeyResult, DeleteUserAccessKeyRequest>(request);
+            return await new DeleteUserAccessKeyExecutor().Client(this).Execute<DeleteUserAccessKeyResponse, DeleteUserAccessKeyResult, DeleteUserAccessKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisabledUserAccessKeyResponse> DisabledUserAccessKey(DisabledUserAccessKeyRequest request) {
-            return await new DisabledUserAccessKeyExecutor().Client(this).Execute<DisabledUserAccessKeyResponse, DisabledUserAccessKeyResult, DisabledUserAccessKeyRequest>(request);
+            return await new DisabledUserAccessKeyExecutor().Client(this).Execute<DisabledUserAccessKeyResponse, DisabledUserAccessKeyResult, DisabledUserAccessKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateUserAccessKeyResponse> CreateUserAccessKey(CreateUserAccessKeyRequest request) {
-            return await new CreateUserAccessKeyExecutor().Client(this).Execute<CreateUserAccessKeyResponse, CreateUserAccessKeyResult, CreateUserAccessKeyRequest>(request);
+            return await new CreateUserAccessKeyExecutor().Client(this).Execute<CreateUserAccessKeyResponse, CreateUserAccessKeyResult, CreateUserAccessKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Iam.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnabledUserAccessKeyResponse> EnabledUserAccessKey(EnabledUserAccessKeyRequest request) {
-            return await new EnabledUserAccessKeyExecutor().Client(this).Execute<EnabledUserAccessKeyResponse, EnabledUserAccessKeyResult, EnabledUserAccessKeyRequest>(request);
+            return await new EnabledUserAccessKeyExecutor().Client(this).Execute<EnabledUserAccessKeyResponse, EnabledUserAccessKeyResult, EnabledUserAccessKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 

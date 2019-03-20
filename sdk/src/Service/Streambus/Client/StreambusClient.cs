@@ -152,7 +152,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateTopicResponse> UpdateTopic(UpdateTopicRequest request) {
-            return await new UpdateTopicExecutor().Client(this).Execute<UpdateTopicResponse, UpdateTopicResult, UpdateTopicRequest>(request);
+            return await new UpdateTopicExecutor().Client(this).Execute<UpdateTopicResponse, UpdateTopicResult, UpdateTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetConsumerGroupListResponse> GetConsumerGroupList(GetConsumerGroupListRequest request) {
-            return await new GetConsumerGroupListExecutor().Client(this).Execute<GetConsumerGroupListResponse, GetConsumerGroupListResult, GetConsumerGroupListRequest>(request);
+            return await new GetConsumerGroupListExecutor().Client(this).Execute<GetConsumerGroupListResponse, GetConsumerGroupListResult, GetConsumerGroupListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTopicListResponse> GetTopicList(GetTopicListRequest request) {
-            return await new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request);
+            return await new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest request) {
-            return await new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request);
+            return await new DeleteConsumerGroupExecutor().Client(this).Execute<DeleteConsumerGroupResponse, DeleteConsumerGroupResult, DeleteConsumerGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddTopicResponse> AddTopic(AddTopicRequest request) {
-            return await new AddTopicExecutor().Client(this).Execute<AddTopicResponse, AddTopicResult, AddTopicRequest>(request);
+            return await new AddTopicExecutor().Client(this).Execute<AddTopicResponse, AddTopicResult, AddTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest request) {
-            return await new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request);
+            return await new CreateConsumerGroupExecutor().Client(this).Execute<CreateConsumerGroupResponse, CreateConsumerGroupResult, CreateConsumerGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeTopicResponse> DescribeTopic(DescribeTopicRequest request) {
-            return await new DescribeTopicExecutor().Client(this).Execute<DescribeTopicResponse, DescribeTopicResult, DescribeTopicRequest>(request);
+            return await new DescribeTopicExecutor().Client(this).Execute<DescribeTopicResponse, DescribeTopicResult, DescribeTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Streambus.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request) {
-            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
+            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 

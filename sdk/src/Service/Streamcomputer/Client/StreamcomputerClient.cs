@@ -152,7 +152,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryNamespaceDetailResponse> QueryNamespaceDetail(QueryNamespaceDetailRequest request) {
-            return await new QueryNamespaceDetailExecutor().Client(this).Execute<QueryNamespaceDetailResponse, QueryNamespaceDetailResult, QueryNamespaceDetailRequest>(request);
+            return await new QueryNamespaceDetailExecutor().Client(this).Execute<QueryNamespaceDetailResponse, QueryNamespaceDetailResult, QueryNamespaceDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeJobResponse> DescribeJob(DescribeJobRequest request) {
-            return await new DescribeJobExecutor().Client(this).Execute<DescribeJobResponse, DescribeJobResult, DescribeJobRequest>(request);
+            return await new DescribeJobExecutor().Client(this).Execute<DescribeJobResponse, DescribeJobResult, DescribeJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStorageResponse> DescribeStorage(DescribeStorageRequest request) {
-            return await new DescribeStorageExecutor().Client(this).Execute<DescribeStorageResponse, DescribeStorageResult, DescribeStorageRequest>(request);
+            return await new DescribeStorageExecutor().Client(this).Execute<DescribeStorageResponse, DescribeStorageResult, DescribeStorageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteJobResponse> DeleteJob(DeleteJobRequest request) {
-            return await new DeleteJobExecutor().Client(this).Execute<DeleteJobResponse, DeleteJobResult, DeleteJobRequest>(request);
+            return await new DeleteJobExecutor().Client(this).Execute<DeleteJobResponse, DeleteJobResult, DeleteJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddOrUpdateJobResponse> AddOrUpdateJob(AddOrUpdateJobRequest request) {
-            return await new AddOrUpdateJobExecutor().Client(this).Execute<AddOrUpdateJobResponse, AddOrUpdateJobResult, AddOrUpdateJobRequest>(request);
+            return await new AddOrUpdateJobExecutor().Client(this).Execute<AddOrUpdateJobResponse, AddOrUpdateJobResult, AddOrUpdateJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryNamespacesResponse> QueryNamespaces(QueryNamespacesRequest request) {
-            return await new QueryNamespacesExecutor().Client(this).Execute<QueryNamespacesResponse, QueryNamespacesResult, QueryNamespacesRequest>(request);
+            return await new QueryNamespacesExecutor().Client(this).Execute<QueryNamespacesResponse, QueryNamespacesResult, QueryNamespacesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartJobResponse> StartJob(StartJobRequest request) {
-            return await new StartJobExecutor().Client(this).Execute<StartJobResponse, StartJobResult, StartJobRequest>(request);
+            return await new StartJobExecutor().Client(this).Execute<StartJobResponse, StartJobResult, StartJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddOrUpdateStorageResponse> AddOrUpdateStorage(AddOrUpdateStorageRequest request) {
-            return await new AddOrUpdateStorageExecutor().Client(this).Execute<AddOrUpdateStorageResponse, AddOrUpdateStorageResult, AddOrUpdateStorageRequest>(request);
+            return await new AddOrUpdateStorageExecutor().Client(this).Execute<AddOrUpdateStorageResponse, AddOrUpdateStorageResult, AddOrUpdateStorageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetJobListResponse> GetJobList(GetJobListRequest request) {
-            return await new GetJobListExecutor().Client(this).Execute<GetJobListResponse, GetJobListResult, GetJobListRequest>(request);
+            return await new GetJobListExecutor().Client(this).Execute<GetJobListResponse, GetJobListResult, GetJobListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest request) {
-            return await new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request);
+            return await new DeleteNamespaceExecutor().Client(this).Execute<DeleteNamespaceResponse, DeleteNamespaceResult, DeleteNamespaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopJobResponse> StopJob(StopJobRequest request) {
-            return await new StopJobExecutor().Client(this).Execute<StopJobResponse, StopJobResult, StopJobRequest>(request);
+            return await new StopJobExecutor().Client(this).Execute<StopJobResponse, StopJobResult, StopJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateNamespaceResponse> CreateNamespace(CreateNamespaceRequest request) {
-            return await new CreateNamespaceExecutor().Client(this).Execute<CreateNamespaceResponse, CreateNamespaceResult, CreateNamespaceRequest>(request);
+            return await new CreateNamespaceExecutor().Client(this).Execute<CreateNamespaceResponse, CreateNamespaceResult, CreateNamespaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetStorageListResponse> GetStorageList(GetStorageListRequest request) {
-            return await new GetStorageListExecutor().Client(this).Execute<GetStorageListResponse, GetStorageListResult, GetStorageListRequest>(request);
+            return await new GetStorageListExecutor().Client(this).Execute<GetStorageListResponse, GetStorageListResult, GetStorageListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateNamespaceResponse> UpdateNamespace(UpdateNamespaceRequest request) {
-            return await new UpdateNamespaceExecutor().Client(this).Execute<UpdateNamespaceResponse, UpdateNamespaceResult, UpdateNamespaceRequest>(request);
+            return await new UpdateNamespaceExecutor().Client(this).Execute<UpdateNamespaceResponse, UpdateNamespaceResult, UpdateNamespaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Streamcomputer.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteStorageResponse> DeleteStorage(DeleteStorageRequest request) {
-            return await new DeleteStorageExecutor().Client(this).Execute<DeleteStorageResponse, DeleteStorageResult, DeleteStorageRequest>(request);
+            return await new DeleteStorageExecutor().Client(this).Execute<DeleteStorageResponse, DeleteStorageResult, DeleteStorageRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -152,7 +152,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request) {
-            return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
+            return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CancelRasQueryResponse> CancelRasQuery(CancelRasQueryRequest request) {
-            return await new CancelRasQueryExecutor().Client(this).Execute<CancelRasQueryResponse, CancelRasQueryResult, CancelRasQueryRequest>(request);
+            return await new CancelRasQueryExecutor().Client(this).Execute<CancelRasQueryResponse, CancelRasQueryResult, CancelRasQueryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListDatabaseInfoResponse> ListDatabaseInfo(ListDatabaseInfoRequest request) {
-            return await new ListDatabaseInfoExecutor().Client(this).Execute<ListDatabaseInfoResponse, ListDatabaseInfoResult, ListDatabaseInfoRequest>(request);
+            return await new ListDatabaseInfoExecutor().Client(this).Execute<ListDatabaseInfoResponse, ListDatabaseInfoResult, ListDatabaseInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetPySparkExecuteStateResponse> GetPySparkExecuteState(GetPySparkExecuteStateRequest request) {
-            return await new GetPySparkExecuteStateExecutor().Client(this).Execute<GetPySparkExecuteStateResponse, GetPySparkExecuteStateResult, GetPySparkExecuteStateRequest>(request);
+            return await new GetPySparkExecuteStateExecutor().Client(this).Execute<GetPySparkExecuteStateResponse, GetPySparkExecuteStateResult, GetPySparkExecuteStateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDatabaseInfoResponse> GetDatabaseInfo(GetDatabaseInfoRequest request) {
-            return await new GetDatabaseInfoExecutor().Client(this).Execute<GetDatabaseInfoResponse, GetDatabaseInfoResult, GetDatabaseInfoRequest>(request);
+            return await new GetDatabaseInfoExecutor().Client(this).Execute<GetDatabaseInfoResponse, GetDatabaseInfoResult, GetDatabaseInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListTableInfoResponse> ListTableInfo(ListTableInfoRequest request) {
-            return await new ListTableInfoExecutor().Client(this).Execute<ListTableInfoResponse, ListTableInfoResult, ListTableInfoRequest>(request);
+            return await new ListTableInfoExecutor().Client(this).Execute<ListTableInfoResponse, ListTableInfoResult, ListTableInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRasQueryStateResponse> GetRasQueryState(GetRasQueryStateRequest request) {
-            return await new GetRasQueryStateExecutor().Client(this).Execute<GetRasQueryStateResponse, GetRasQueryStateResult, GetRasQueryStateRequest>(request);
+            return await new GetRasQueryStateExecutor().Client(this).Execute<GetRasQueryStateResponse, GetRasQueryStateResult, GetRasQueryStateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExecuteRasQueryResponse> ExecuteRasQuery(ExecuteRasQueryRequest request) {
-            return await new ExecuteRasQueryExecutor().Client(this).Execute<ExecuteRasQueryResponse, ExecuteRasQueryResult, ExecuteRasQueryRequest>(request);
+            return await new ExecuteRasQueryExecutor().Client(this).Execute<ExecuteRasQueryResponse, ExecuteRasQueryResult, ExecuteRasQueryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CancelPySparkJobResponse> CancelPySparkJob(CancelPySparkJobRequest request) {
-            return await new CancelPySparkJobExecutor().Client(this).Execute<CancelPySparkJobResponse, CancelPySparkJobResult, CancelPySparkJobRequest>(request);
+            return await new CancelPySparkJobExecutor().Client(this).Execute<CancelPySparkJobResponse, CancelPySparkJobResult, CancelPySparkJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetPySparkExecuteResultResponse> GetPySparkExecuteResult(GetPySparkExecuteResultRequest request) {
-            return await new GetPySparkExecuteResultExecutor().Client(this).Execute<GetPySparkExecuteResultResponse, GetPySparkExecuteResultResult, GetPySparkExecuteResultRequest>(request);
+            return await new GetPySparkExecuteResultExecutor().Client(this).Execute<GetPySparkExecuteResultResponse, GetPySparkExecuteResultResult, GetPySparkExecuteResultRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListInstanceInfoResponse> ListInstanceInfo(ListInstanceInfoRequest request) {
-            return await new ListInstanceInfoExecutor().Client(this).Execute<ListInstanceInfoResponse, ListInstanceInfoResult, ListInstanceInfoRequest>(request);
+            return await new ListInstanceInfoExecutor().Client(this).Execute<ListInstanceInfoResponse, ListInstanceInfoResult, ListInstanceInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
-            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
+            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTableInfoResponse> GetTableInfo(GetTableInfoRequest request) {
-            return await new GetTableInfoExecutor().Client(this).Execute<GetTableInfoResponse, GetTableInfoResult, GetTableInfoRequest>(request);
+            return await new GetTableInfoExecutor().Client(this).Execute<GetTableInfoResponse, GetTableInfoResult, GetTableInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExecutePySparkQueryResponse> ExecutePySparkQuery(ExecutePySparkQueryRequest request) {
-            return await new ExecutePySparkQueryExecutor().Client(this).Execute<ExecutePySparkQueryResponse, ExecutePySparkQueryResult, ExecutePySparkQueryRequest>(request);
+            return await new ExecutePySparkQueryExecutor().Client(this).Execute<ExecutePySparkQueryResponse, ExecutePySparkQueryResult, ExecutePySparkQueryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRasQueryResultResponse> GetRasQueryResult(GetRasQueryResultRequest request) {
-            return await new GetRasQueryResultExecutor().Client(this).Execute<GetRasQueryResultResponse, GetRasQueryResultResult, GetRasQueryResultRequest>(request);
+            return await new GetRasQueryResultExecutor().Client(this).Execute<GetRasQueryResultResponse, GetRasQueryResultResult, GetRasQueryResultRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateTableResponse> CreateTable(CreateTableRequest request) {
-            return await new CreateTableExecutor().Client(this).Execute<CreateTableResponse, CreateTableResult, CreateTableRequest>(request);
+            return await new CreateTableExecutor().Client(this).Execute<CreateTableResponse, CreateTableResult, CreateTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRasQueryLogResponse> GetRasQueryLog(GetRasQueryLogRequest request) {
-            return await new GetRasQueryLogExecutor().Client(this).Execute<GetRasQueryLogResponse, GetRasQueryLogResult, GetRasQueryLogRequest>(request);
+            return await new GetRasQueryLogExecutor().Client(this).Execute<GetRasQueryLogResponse, GetRasQueryLogResult, GetRasQueryLogRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Xdata.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteTableResponse> DeleteTable(DeleteTableRequest request) {
-            return await new DeleteTableExecutor().Client(this).Execute<DeleteTableResponse, DeleteTableResult, DeleteTableRequest>(request);
+            return await new DeleteTableExecutor().Client(this).Execute<DeleteTableResponse, DeleteTableResult, DeleteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 

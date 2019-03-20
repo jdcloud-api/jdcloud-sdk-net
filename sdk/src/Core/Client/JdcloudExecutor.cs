@@ -154,7 +154,7 @@ namespace JDCloudSDK.Core.Client
 #if NET40 || NET35
                 var result = HttpClientUtil.ExecuteHttpRequest(url, bodyContent, header, Method, httpRequestConfig.RequestTimeout);
 #else
-                var result = await  HttpClientUtil.ExecuteHttpRequest(JdcloudClient.HttpClient, url, bodyContent, header, Method);
+                var result = await  HttpClientUtil.ExecuteHttpRequest(JdcloudClient.HttpClient, url, bodyContent, header, Method).ConfigureAwait(false);
 #endif
                 if (result != null)
                 {

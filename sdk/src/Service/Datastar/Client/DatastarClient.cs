@@ -152,7 +152,7 @@ namespace JDCloudSDK.Datastar.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetLargeScreenDataResponse> GetLargeScreenData(GetLargeScreenDataRequest request) {
-            return await new GetLargeScreenDataExecutor().Client(this).Execute<GetLargeScreenDataResponse, GetLargeScreenDataResult, GetLargeScreenDataRequest>(request);
+            return await new GetLargeScreenDataExecutor().Client(this).Execute<GetLargeScreenDataResponse, GetLargeScreenDataResult, GetLargeScreenDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 

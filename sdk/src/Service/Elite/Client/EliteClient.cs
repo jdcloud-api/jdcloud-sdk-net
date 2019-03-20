@@ -152,7 +152,7 @@ namespace JDCloudSDK.Elite.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListSaleServiceResponse> ListSaleService(ListSaleServiceRequest request) {
-            return await new ListSaleServiceExecutor().Client(this).Execute<ListSaleServiceResponse, ListSaleServiceResult, ListSaleServiceRequest>(request);
+            return await new ListSaleServiceExecutor().Client(this).Execute<ListSaleServiceResponse, ListSaleServiceResult, ListSaleServiceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Elite.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ConfirmSaleServiceDeliveryResponse> ConfirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) {
-            return await new ConfirmSaleServiceDeliveryExecutor().Client(this).Execute<ConfirmSaleServiceDeliveryResponse, ConfirmSaleServiceDeliveryResult, ConfirmSaleServiceDeliveryRequest>(request);
+            return await new ConfirmSaleServiceDeliveryExecutor().Client(this).Execute<ConfirmSaleServiceDeliveryResponse, ConfirmSaleServiceDeliveryResult, ConfirmSaleServiceDeliveryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Elite.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetSaleServiceByDeliverNumberResponse> GetSaleServiceByDeliverNumber(GetSaleServiceByDeliverNumberRequest request) {
-            return await new GetSaleServiceByDeliverNumberExecutor().Client(this).Execute<GetSaleServiceByDeliverNumberResponse, GetSaleServiceByDeliverNumberResult, GetSaleServiceByDeliverNumberRequest>(request);
+            return await new GetSaleServiceByDeliverNumberExecutor().Client(this).Execute<GetSaleServiceByDeliverNumberResponse, GetSaleServiceByDeliverNumberResult, GetSaleServiceByDeliverNumberRequest>(request).ConfigureAwait(false);
         }
 #endif
 

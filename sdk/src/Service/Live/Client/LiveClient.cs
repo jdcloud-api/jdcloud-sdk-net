@@ -152,7 +152,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamSnapshotConfigResponse> DescribeCustomLiveStreamSnapshotConfig(DescribeCustomLiveStreamSnapshotConfigRequest request) {
-            return await new DescribeCustomLiveStreamSnapshotConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamSnapshotConfigResponse, DescribeCustomLiveStreamSnapshotConfigResult, DescribeCustomLiveStreamSnapshotConfigRequest>(request);
+            return await new DescribeCustomLiveStreamSnapshotConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamSnapshotConfigResponse, DescribeCustomLiveStreamSnapshotConfigResult, DescribeCustomLiveStreamSnapshotConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamTranscodeTemplateResponse> DescribeCustomLiveStreamTranscodeTemplate(DescribeCustomLiveStreamTranscodeTemplateRequest request) {
-            return await new DescribeCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplateResponse, DescribeCustomLiveStreamTranscodeTemplateResult, DescribeCustomLiveStreamTranscodeTemplateRequest>(request);
+            return await new DescribeCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplateResponse, DescribeCustomLiveStreamTranscodeTemplateResult, DescribeCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamAppSnapshotResponse> AddLiveStreamAppSnapshot(AddLiveStreamAppSnapshotRequest request) {
-            return await new AddLiveStreamAppSnapshotExecutor().Client(this).Execute<AddLiveStreamAppSnapshotResponse, AddLiveStreamAppSnapshotResult, AddLiveStreamAppSnapshotRequest>(request);
+            return await new AddLiveStreamAppSnapshotExecutor().Client(this).Execute<AddLiveStreamAppSnapshotResponse, AddLiveStreamAppSnapshotResult, AddLiveStreamAppSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CloseLiveTimeshiftResponse> CloseLiveTimeshift(CloseLiveTimeshiftRequest request) {
-            return await new CloseLiveTimeshiftExecutor().Client(this).Execute<CloseLiveTimeshiftResponse, CloseLiveTimeshiftResult, CloseLiveTimeshiftRequest>(request);
+            return await new CloseLiveTimeshiftExecutor().Client(this).Execute<CloseLiveTimeshiftResponse, CloseLiveTimeshiftResult, CloseLiveTimeshiftRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamNotifyConfigResponse> DeleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) {
-            return await new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request);
+            return await new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -251,7 +251,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveRecordTaskResponse> AddLiveRecordTask(AddLiveRecordTaskRequest request) {
-            return await new AddLiveRecordTaskExecutor().Client(this).Execute<AddLiveRecordTaskResponse, AddLiveRecordTaskResult, AddLiveRecordTaskRequest>(request);
+            return await new AddLiveRecordTaskExecutor().Client(this).Execute<AddLiveRecordTaskResponse, AddLiveRecordTaskResult, AddLiveRecordTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -270,7 +270,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainWatermarkResponse> AddLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) {
-            return await new AddLiveStreamDomainWatermarkExecutor().Client(this).Execute<AddLiveStreamDomainWatermarkResponse, AddLiveStreamDomainWatermarkResult, AddLiveStreamDomainWatermarkRequest>(request);
+            return await new AddLiveStreamDomainWatermarkExecutor().Client(this).Execute<AddLiveStreamDomainWatermarkResponse, AddLiveStreamDomainWatermarkResult, AddLiveStreamDomainWatermarkRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -289,7 +289,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamDomainSnapshotResponse> DeleteLiveStreamDomainSnapshot(DeleteLiveStreamDomainSnapshotRequest request) {
-            return await new DeleteLiveStreamDomainSnapshotExecutor().Client(this).Execute<DeleteLiveStreamDomainSnapshotResponse, DeleteLiveStreamDomainSnapshotResult, DeleteLiveStreamDomainSnapshotRequest>(request);
+            return await new DeleteLiveStreamDomainSnapshotExecutor().Client(this).Execute<DeleteLiveStreamDomainSnapshotResponse, DeleteLiveStreamDomainSnapshotResult, DeleteLiveStreamDomainSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -308,7 +308,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamRecordTemplatesResponse> DescribeCustomLiveStreamRecordTemplates(DescribeCustomLiveStreamRecordTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamRecordTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordTemplatesResponse, DescribeCustomLiveStreamRecordTemplatesResult, DescribeCustomLiveStreamRecordTemplatesRequest>(request);
+            return await new DescribeCustomLiveStreamRecordTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordTemplatesResponse, DescribeCustomLiveStreamRecordTemplatesResult, DescribeCustomLiveStreamRecordTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -327,7 +327,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamRecordConfigResponse> DescribeCustomLiveStreamRecordConfig(DescribeCustomLiveStreamRecordConfigRequest request) {
-            return await new DescribeCustomLiveStreamRecordConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordConfigResponse, DescribeCustomLiveStreamRecordConfigResult, DescribeCustomLiveStreamRecordConfigRequest>(request);
+            return await new DescribeCustomLiveStreamRecordConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordConfigResponse, DescribeCustomLiveStreamRecordConfigResult, DescribeCustomLiveStreamRecordConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -346,7 +346,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ForbidLiveStreamResponse> ForbidLiveStream(ForbidLiveStreamRequest request) {
-            return await new ForbidLiveStreamExecutor().Client(this).Execute<ForbidLiveStreamResponse, ForbidLiveStreamResult, ForbidLiveStreamRequest>(request);
+            return await new ForbidLiveStreamExecutor().Client(this).Execute<ForbidLiveStreamResponse, ForbidLiveStreamResult, ForbidLiveStreamRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -365,7 +365,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveDomainsResponse> DescribeLiveDomains(DescribeLiveDomainsRequest request) {
-            return await new DescribeLiveDomainsExecutor().Client(this).Execute<DescribeLiveDomainsResponse, DescribeLiveDomainsResult, DescribeLiveDomainsRequest>(request);
+            return await new DescribeLiveDomainsExecutor().Client(this).Execute<DescribeLiveDomainsResponse, DescribeLiveDomainsResult, DescribeLiveDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -384,7 +384,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveDomainDetailResponse> DescribeLiveDomainDetail(DescribeLiveDomainDetailRequest request) {
-            return await new DescribeLiveDomainDetailExecutor().Client(this).Execute<DescribeLiveDomainDetailResponse, DescribeLiveDomainDetailResult, DescribeLiveDomainDetailRequest>(request);
+            return await new DescribeLiveDomainDetailExecutor().Client(this).Execute<DescribeLiveDomainDetailResponse, DescribeLiveDomainDetailResult, DescribeLiveDomainDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -403,7 +403,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveAppResponse> AddLiveApp(AddLiveAppRequest request) {
-            return await new AddLiveAppExecutor().Client(this).Execute<AddLiveAppResponse, AddLiveAppResult, AddLiveAppRequest>(request);
+            return await new AddLiveAppExecutor().Client(this).Execute<AddLiveAppResponse, AddLiveAppResult, AddLiveAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -422,7 +422,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCustomLiveStreamSnapshotTemplateResponse> DeleteCustomLiveStreamSnapshotTemplate(DeleteCustomLiveStreamSnapshotTemplateRequest request) {
-            return await new DeleteCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamSnapshotTemplateResponse, DeleteCustomLiveStreamSnapshotTemplateResult, DeleteCustomLiveStreamSnapshotTemplateRequest>(request);
+            return await new DeleteCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamSnapshotTemplateResponse, DeleteCustomLiveStreamSnapshotTemplateResult, DeleteCustomLiveStreamSnapshotTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -441,7 +441,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamAppWatermarkResponse> DeleteLiveStreamAppWatermark(DeleteLiveStreamAppWatermarkRequest request) {
-            return await new DeleteLiveStreamAppWatermarkExecutor().Client(this).Execute<DeleteLiveStreamAppWatermarkResponse, DeleteLiveStreamAppWatermarkResult, DeleteLiveStreamAppWatermarkRequest>(request);
+            return await new DeleteLiveStreamAppWatermarkExecutor().Client(this).Execute<DeleteLiveStreamAppWatermarkResponse, DeleteLiveStreamAppWatermarkResult, DeleteLiveStreamAppWatermarkRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -460,7 +460,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamWatermarkTemplateResponse> AddCustomLiveStreamWatermarkTemplate(AddCustomLiveStreamWatermarkTemplateRequest request) {
-            return await new AddCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<AddCustomLiveStreamWatermarkTemplateResponse, AddCustomLiveStreamWatermarkTemplateResult, AddCustomLiveStreamWatermarkTemplateRequest>(request);
+            return await new AddCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<AddCustomLiveStreamWatermarkTemplateResponse, AddCustomLiveStreamWatermarkTemplateResult, AddCustomLiveStreamWatermarkTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -479,7 +479,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCustomLiveStreamWatermarkTemplateResponse> DeleteCustomLiveStreamWatermarkTemplate(DeleteCustomLiveStreamWatermarkTemplateRequest request) {
-            return await new DeleteCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamWatermarkTemplateResponse, DeleteCustomLiveStreamWatermarkTemplateResult, DeleteCustomLiveStreamWatermarkTemplateRequest>(request);
+            return await new DeleteCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamWatermarkTemplateResponse, DeleteCustomLiveStreamWatermarkTemplateResult, DeleteCustomLiveStreamWatermarkTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -498,7 +498,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamDomainWatermarkResponse> DeleteLiveStreamDomainWatermark(DeleteLiveStreamDomainWatermarkRequest request) {
-            return await new DeleteLiveStreamDomainWatermarkExecutor().Client(this).Execute<DeleteLiveStreamDomainWatermarkResponse, DeleteLiveStreamDomainWatermarkResult, DeleteLiveStreamDomainWatermarkRequest>(request);
+            return await new DeleteLiveStreamDomainWatermarkExecutor().Client(this).Execute<DeleteLiveStreamDomainWatermarkResponse, DeleteLiveStreamDomainWatermarkResult, DeleteLiveStreamDomainWatermarkRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -517,7 +517,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamAppRecordResponse> DeleteLiveStreamAppRecord(DeleteLiveStreamAppRecordRequest request) {
-            return await new DeleteLiveStreamAppRecordExecutor().Client(this).Execute<DeleteLiveStreamAppRecordResponse, DeleteLiveStreamAppRecordResult, DeleteLiveStreamAppRecordRequest>(request);
+            return await new DeleteLiveStreamAppRecordExecutor().Client(this).Execute<DeleteLiveStreamAppRecordResponse, DeleteLiveStreamAppRecordResult, DeleteLiveStreamAppRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -536,7 +536,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCustomLiveStreamRecordTemplateResponse> DeleteCustomLiveStreamRecordTemplate(DeleteCustomLiveStreamRecordTemplateRequest request) {
-            return await new DeleteCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamRecordTemplateResponse, DeleteCustomLiveStreamRecordTemplateResult, DeleteCustomLiveStreamRecordTemplateRequest>(request);
+            return await new DeleteCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamRecordTemplateResponse, DeleteCustomLiveStreamRecordTemplateResult, DeleteCustomLiveStreamRecordTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -555,7 +555,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveSnapshotDataResponse> DescribeLiveSnapshotData(DescribeLiveSnapshotDataRequest request) {
-            return await new DescribeLiveSnapshotDataExecutor().Client(this).Execute<DescribeLiveSnapshotDataResponse, DescribeLiveSnapshotDataResult, DescribeLiveSnapshotDataRequest>(request);
+            return await new DescribeLiveSnapshotDataExecutor().Client(this).Execute<DescribeLiveSnapshotDataResponse, DescribeLiveSnapshotDataResult, DescribeLiveSnapshotDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -574,7 +574,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamDomainTranscodeResponse> DeleteLiveStreamDomainTranscode(DeleteLiveStreamDomainTranscodeRequest request) {
-            return await new DeleteLiveStreamDomainTranscodeExecutor().Client(this).Execute<DeleteLiveStreamDomainTranscodeResponse, DeleteLiveStreamDomainTranscodeResult, DeleteLiveStreamDomainTranscodeRequest>(request);
+            return await new DeleteLiveStreamDomainTranscodeExecutor().Client(this).Execute<DeleteLiveStreamDomainTranscodeResponse, DeleteLiveStreamDomainTranscodeResult, DeleteLiveStreamDomainTranscodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -593,7 +593,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartLiveAppResponse> StartLiveApp(StartLiveAppRequest request) {
-            return await new StartLiveAppExecutor().Client(this).Execute<StartLiveAppResponse, StartLiveAppResult, StartLiveAppRequest>(request);
+            return await new StartLiveAppExecutor().Client(this).Execute<StartLiveAppResponse, StartLiveAppResult, StartLiveAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -612,7 +612,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveStreamRecordNotifyConfigResponse> SetLiveStreamRecordNotifyConfig(SetLiveStreamRecordNotifyConfigRequest request) {
-            return await new SetLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<SetLiveStreamRecordNotifyConfigResponse, SetLiveStreamRecordNotifyConfigResult, SetLiveStreamRecordNotifyConfigRequest>(request);
+            return await new SetLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<SetLiveStreamRecordNotifyConfigResponse, SetLiveStreamRecordNotifyConfigResult, SetLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -631,7 +631,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamDomainRecordResponse> DeleteLiveStreamDomainRecord(DeleteLiveStreamDomainRecordRequest request) {
-            return await new DeleteLiveStreamDomainRecordExecutor().Client(this).Execute<DeleteLiveStreamDomainRecordResponse, DeleteLiveStreamDomainRecordResult, DeleteLiveStreamDomainRecordRequest>(request);
+            return await new DeleteLiveStreamDomainRecordExecutor().Client(this).Execute<DeleteLiveStreamDomainRecordResponse, DeleteLiveStreamDomainRecordResult, DeleteLiveStreamDomainRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -650,7 +650,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamSnapshotTemplateResponse> AddCustomLiveStreamSnapshotTemplate(AddCustomLiveStreamSnapshotTemplateRequest request) {
-            return await new AddCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<AddCustomLiveStreamSnapshotTemplateResponse, AddCustomLiveStreamSnapshotTemplateResult, AddCustomLiveStreamSnapshotTemplateRequest>(request);
+            return await new AddCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<AddCustomLiveStreamSnapshotTemplateResponse, AddCustomLiveStreamSnapshotTemplateResult, AddCustomLiveStreamSnapshotTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -669,7 +669,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartLiveDomainResponse> StartLiveDomain(StartLiveDomainRequest request) {
-            return await new StartLiveDomainExecutor().Client(this).Execute<StartLiveDomainResponse, StartLiveDomainResult, StartLiveDomainRequest>(request);
+            return await new StartLiveDomainExecutor().Client(this).Execute<StartLiveDomainResponse, StartLiveDomainResult, StartLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -688,7 +688,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamWatermarkTemplatesResponse> DescribeCustomLiveStreamWatermarkTemplates(DescribeCustomLiveStreamWatermarkTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamWatermarkTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkTemplatesResponse, DescribeCustomLiveStreamWatermarkTemplatesResult, DescribeCustomLiveStreamWatermarkTemplatesRequest>(request);
+            return await new DescribeCustomLiveStreamWatermarkTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkTemplatesResponse, DescribeCustomLiveStreamWatermarkTemplatesResult, DescribeCustomLiveStreamWatermarkTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -707,7 +707,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamAppTranscodeResponse> AddLiveStreamAppTranscode(AddLiveStreamAppTranscodeRequest request) {
-            return await new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request);
+            return await new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -726,7 +726,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamSnapshotNotifyConfigResponse> DeleteLiveStreamSnapshotNotifyConfig(DeleteLiveStreamSnapshotNotifyConfigRequest request) {
-            return await new DeleteLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamSnapshotNotifyConfigResponse, DeleteLiveStreamSnapshotNotifyConfigResult, DeleteLiveStreamSnapshotNotifyConfigRequest>(request);
+            return await new DeleteLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamSnapshotNotifyConfigResponse, DeleteLiveStreamSnapshotNotifyConfigResult, DeleteLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -745,7 +745,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamPublishListResponse> DescribeLiveStreamPublishList(DescribeLiveStreamPublishListRequest request) {
-            return await new DescribeLiveStreamPublishListExecutor().Client(this).Execute<DescribeLiveStreamPublishListResponse, DescribeLiveStreamPublishListResult, DescribeLiveStreamPublishListRequest>(request);
+            return await new DescribeLiveStreamPublishListExecutor().Client(this).Execute<DescribeLiveStreamPublishListResponse, DescribeLiveStreamPublishListResult, DescribeLiveStreamPublishListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -764,7 +764,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveTimeshiftConfigsResponse> DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
-            return await new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request);
+            return await new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -783,7 +783,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamAppWatermarkResponse> AddLiveStreamAppWatermark(AddLiveStreamAppWatermarkRequest request) {
-            return await new AddLiveStreamAppWatermarkExecutor().Client(this).Execute<AddLiveStreamAppWatermarkResponse, AddLiveStreamAppWatermarkResult, AddLiveStreamAppWatermarkRequest>(request);
+            return await new AddLiveStreamAppWatermarkExecutor().Client(this).Execute<AddLiveStreamAppWatermarkResponse, AddLiveStreamAppWatermarkResult, AddLiveStreamAppWatermarkRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -802,7 +802,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamAppRecordResponse> AddLiveStreamAppRecord(AddLiveStreamAppRecordRequest request) {
-            return await new AddLiveStreamAppRecordExecutor().Client(this).Execute<AddLiveStreamAppRecordResponse, AddLiveStreamAppRecordResult, AddLiveStreamAppRecordRequest>(request);
+            return await new AddLiveStreamAppRecordExecutor().Client(this).Execute<AddLiveStreamAppRecordResponse, AddLiveStreamAppRecordResult, AddLiveStreamAppRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -821,7 +821,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainRecordResponse> AddLiveStreamDomainRecord(AddLiveStreamDomainRecordRequest request) {
-            return await new AddLiveStreamDomainRecordExecutor().Client(this).Execute<AddLiveStreamDomainRecordResponse, AddLiveStreamDomainRecordResult, AddLiveStreamDomainRecordRequest>(request);
+            return await new AddLiveStreamDomainRecordExecutor().Client(this).Execute<AddLiveStreamDomainRecordResponse, AddLiveStreamDomainRecordResult, AddLiveStreamDomainRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -840,7 +840,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamAppSnapshotResponse> DeleteLiveStreamAppSnapshot(DeleteLiveStreamAppSnapshotRequest request) {
-            return await new DeleteLiveStreamAppSnapshotExecutor().Client(this).Execute<DeleteLiveStreamAppSnapshotResponse, DeleteLiveStreamAppSnapshotResult, DeleteLiveStreamAppSnapshotRequest>(request);
+            return await new DeleteLiveStreamAppSnapshotExecutor().Client(this).Execute<DeleteLiveStreamAppSnapshotResponse, DeleteLiveStreamAppSnapshotResult, DeleteLiveStreamAppSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -859,7 +859,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamSnapshotNotifyConfigResponse> DescribeLiveStreamSnapshotNotifyConfig(DescribeLiveStreamSnapshotNotifyConfigRequest request) {
-            return await new DescribeLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamSnapshotNotifyConfigResponse, DescribeLiveStreamSnapshotNotifyConfigResult, DescribeLiveStreamSnapshotNotifyConfigRequest>(request);
+            return await new DescribeLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamSnapshotNotifyConfigResponse, DescribeLiveStreamSnapshotNotifyConfigResult, DescribeLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -878,7 +878,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamRecordNotifyConfigResponse> DeleteLiveStreamRecordNotifyConfig(DeleteLiveStreamRecordNotifyConfigRequest request) {
-            return await new DeleteLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamRecordNotifyConfigResponse, DeleteLiveStreamRecordNotifyConfigResult, DeleteLiveStreamRecordNotifyConfigRequest>(request);
+            return await new DeleteLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamRecordNotifyConfigResponse, DeleteLiveStreamRecordNotifyConfigResult, DeleteLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -897,7 +897,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamTranscodeConfigResponse> DescribeLiveStreamTranscodeConfig(DescribeLiveStreamTranscodeConfigRequest request) {
-            return await new DescribeLiveStreamTranscodeConfigExecutor().Client(this).Execute<DescribeLiveStreamTranscodeConfigResponse, DescribeLiveStreamTranscodeConfigResult, DescribeLiveStreamTranscodeConfigRequest>(request);
+            return await new DescribeLiveStreamTranscodeConfigExecutor().Client(this).Execute<DescribeLiveStreamTranscodeConfigResponse, DescribeLiveStreamTranscodeConfigResult, DescribeLiveStreamTranscodeConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -916,7 +916,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveAppResponse> DeleteLiveApp(DeleteLiveAppRequest request) {
-            return await new DeleteLiveAppExecutor().Client(this).Execute<DeleteLiveAppResponse, DeleteLiveAppResult, DeleteLiveAppRequest>(request);
+            return await new DeleteLiveAppExecutor().Client(this).Execute<DeleteLiveAppResponse, DeleteLiveAppResult, DeleteLiveAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -935,7 +935,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLivePlayAuthKeyResponse> SetLivePlayAuthKey(SetLivePlayAuthKeyRequest request) {
-            return await new SetLivePlayAuthKeyExecutor().Client(this).Execute<SetLivePlayAuthKeyResponse, SetLivePlayAuthKeyResult, SetLivePlayAuthKeyRequest>(request);
+            return await new SetLivePlayAuthKeyExecutor().Client(this).Execute<SetLivePlayAuthKeyResponse, SetLivePlayAuthKeyResult, SetLivePlayAuthKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -954,7 +954,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamWatermarkConfigResponse> DescribeCustomLiveStreamWatermarkConfig(DescribeCustomLiveStreamWatermarkConfigRequest request) {
-            return await new DescribeCustomLiveStreamWatermarkConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkConfigResponse, DescribeCustomLiveStreamWatermarkConfigResult, DescribeCustomLiveStreamWatermarkConfigRequest>(request);
+            return await new DescribeCustomLiveStreamWatermarkConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkConfigResponse, DescribeCustomLiveStreamWatermarkConfigResult, DescribeCustomLiveStreamWatermarkConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -973,7 +973,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamRecordTemplateResponse> AddCustomLiveStreamRecordTemplate(AddCustomLiveStreamRecordTemplateRequest request) {
-            return await new AddCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<AddCustomLiveStreamRecordTemplateResponse, AddCustomLiveStreamRecordTemplateResult, AddCustomLiveStreamRecordTemplateRequest>(request);
+            return await new AddCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<AddCustomLiveStreamRecordTemplateResponse, AddCustomLiveStreamRecordTemplateResult, AddCustomLiveStreamRecordTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -992,7 +992,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveAppResponse> DescribeLiveApp(DescribeLiveAppRequest request) {
-            return await new DescribeLiveAppExecutor().Client(this).Execute<DescribeLiveAppResponse, DescribeLiveAppResult, DescribeLiveAppRequest>(request);
+            return await new DescribeLiveAppExecutor().Client(this).Execute<DescribeLiveAppResponse, DescribeLiveAppResult, DescribeLiveAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1011,7 +1011,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
-            return await new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request);
+            return await new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1030,7 +1030,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCustomLiveStreamTranscodeTemplateResponse> DeleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) {
-            return await new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request);
+            return await new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1049,7 +1049,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveDomainResponse> AddLiveDomain(AddLiveDomainRequest request) {
-            return await new AddLiveDomainExecutor().Client(this).Execute<AddLiveDomainResponse, AddLiveDomainResult, AddLiveDomainRequest>(request);
+            return await new AddLiveDomainExecutor().Client(this).Execute<AddLiveDomainResponse, AddLiveDomainResult, AddLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1068,7 +1068,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamTranscodeTemplatesResponse> DescribeCustomLiveStreamTranscodeTemplates(DescribeCustomLiveStreamTranscodeTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request);
+            return await new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1087,7 +1087,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLivePornDataResponse> DescribeLivePornData(DescribeLivePornDataRequest request) {
-            return await new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request);
+            return await new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1106,7 +1106,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopLiveDomainResponse> StopLiveDomain(StopLiveDomainRequest request) {
-            return await new StopLiveDomainExecutor().Client(this).Execute<StopLiveDomainResponse, StopLiveDomainResult, StopLiveDomainRequest>(request);
+            return await new StopLiveDomainExecutor().Client(this).Execute<StopLiveDomainResponse, StopLiveDomainResult, StopLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1125,7 +1125,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamOnlineListResponse> DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest request) {
-            return await new DescribeLiveStreamOnlineListExecutor().Client(this).Execute<DescribeLiveStreamOnlineListResponse, DescribeLiveStreamOnlineListResult, DescribeLiveStreamOnlineListRequest>(request);
+            return await new DescribeLiveStreamOnlineListExecutor().Client(this).Execute<DescribeLiveStreamOnlineListResponse, DescribeLiveStreamOnlineListResult, DescribeLiveStreamOnlineListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1144,7 +1144,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamRecordNotifyConfigResponse> DescribeLiveStreamRecordNotifyConfig(DescribeLiveStreamRecordNotifyConfigRequest request) {
-            return await new DescribeLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamRecordNotifyConfigResponse, DescribeLiveStreamRecordNotifyConfigResult, DescribeLiveStreamRecordNotifyConfigRequest>(request);
+            return await new DescribeLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamRecordNotifyConfigResponse, DescribeLiveStreamRecordNotifyConfigResult, DescribeLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1163,7 +1163,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamNotifyConfigResponse> DescribeLiveStreamNotifyConfig(DescribeLiveStreamNotifyConfigRequest request) {
-            return await new DescribeLiveStreamNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamNotifyConfigResponse, DescribeLiveStreamNotifyConfigResult, DescribeLiveStreamNotifyConfigRequest>(request);
+            return await new DescribeLiveStreamNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamNotifyConfigResponse, DescribeLiveStreamNotifyConfigResult, DescribeLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1182,7 +1182,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainSnapshotResponse> AddLiveStreamDomainSnapshot(AddLiveStreamDomainSnapshotRequest request) {
-            return await new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request);
+            return await new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1201,7 +1201,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveStreamNotifyConfigResponse> SetLiveStreamNotifyConfig(SetLiveStreamNotifyConfigRequest request) {
-            return await new SetLiveStreamNotifyConfigExecutor().Client(this).Execute<SetLiveStreamNotifyConfigResponse, SetLiveStreamNotifyConfigResult, SetLiveStreamNotifyConfigRequest>(request);
+            return await new SetLiveStreamNotifyConfigExecutor().Client(this).Execute<SetLiveStreamNotifyConfigResponse, SetLiveStreamNotifyConfigResult, SetLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1220,7 +1220,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveStreamSnapshotNotifyConfigResponse> SetLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) {
-            return await new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request);
+            return await new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1239,7 +1239,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamSnapshotTemplatesResponse> DescribeCustomLiveStreamSnapshotTemplates(DescribeCustomLiveStreamSnapshotTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamSnapshotTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamSnapshotTemplatesResponse, DescribeCustomLiveStreamSnapshotTemplatesResult, DescribeCustomLiveStreamSnapshotTemplatesRequest>(request);
+            return await new DescribeCustomLiveStreamSnapshotTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamSnapshotTemplatesResponse, DescribeCustomLiveStreamSnapshotTemplatesResult, DescribeCustomLiveStreamSnapshotTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1258,7 +1258,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopLiveAppResponse> StopLiveApp(StopLiveAppRequest request) {
-            return await new StopLiveAppExecutor().Client(this).Execute<StopLiveAppResponse, StopLiveAppResult, StopLiveAppRequest>(request);
+            return await new StopLiveAppExecutor().Client(this).Execute<StopLiveAppResponse, StopLiveAppResult, StopLiveAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1277,7 +1277,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveDomainResponse> DeleteLiveDomain(DeleteLiveDomainRequest request) {
-            return await new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request);
+            return await new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1296,7 +1296,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamTranscodeTemplateResponse> AddCustomLiveStreamTranscodeTemplate(AddCustomLiveStreamTranscodeTemplateRequest request) {
-            return await new AddCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<AddCustomLiveStreamTranscodeTemplateResponse, AddCustomLiveStreamTranscodeTemplateResult, AddCustomLiveStreamTranscodeTemplateRequest>(request);
+            return await new AddCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<AddCustomLiveStreamTranscodeTemplateResponse, AddCustomLiveStreamTranscodeTemplateResult, AddCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1315,7 +1315,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResumeLiveStreamResponse> ResumeLiveStream(ResumeLiveStreamRequest request) {
-            return await new ResumeLiveStreamExecutor().Client(this).Execute<ResumeLiveStreamResponse, ResumeLiveStreamResult, ResumeLiveStreamRequest>(request);
+            return await new ResumeLiveStreamExecutor().Client(this).Execute<ResumeLiveStreamResponse, ResumeLiveStreamResult, ResumeLiveStreamRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1334,7 +1334,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainTranscodeResponse> AddLiveStreamDomainTranscode(AddLiveStreamDomainTranscodeRequest request) {
-            return await new AddLiveStreamDomainTranscodeExecutor().Client(this).Execute<AddLiveStreamDomainTranscodeResponse, AddLiveStreamDomainTranscodeResult, AddLiveStreamDomainTranscodeRequest>(request);
+            return await new AddLiveStreamDomainTranscodeExecutor().Client(this).Execute<AddLiveStreamDomainTranscodeResponse, AddLiveStreamDomainTranscodeResult, AddLiveStreamDomainTranscodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1353,7 +1353,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamAppTranscodeResponse> DeleteLiveStreamAppTranscode(DeleteLiveStreamAppTranscodeRequest request) {
-            return await new DeleteLiveStreamAppTranscodeExecutor().Client(this).Execute<DeleteLiveStreamAppTranscodeResponse, DeleteLiveStreamAppTranscodeResult, DeleteLiveStreamAppTranscodeRequest>(request);
+            return await new DeleteLiveStreamAppTranscodeExecutor().Client(this).Execute<DeleteLiveStreamAppTranscodeResponse, DeleteLiveStreamAppTranscodeResult, DeleteLiveStreamAppTranscodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1372,7 +1372,7 @@ namespace JDCloudSDK.Live.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OpenLiveTimeshiftResponse> OpenLiveTimeshift(OpenLiveTimeshiftRequest request) {
-            return await new OpenLiveTimeshiftExecutor().Client(this).Execute<OpenLiveTimeshiftResponse, OpenLiveTimeshiftResult, OpenLiveTimeshiftRequest>(request);
+            return await new OpenLiveTimeshiftExecutor().Client(this).Execute<OpenLiveTimeshiftResponse, OpenLiveTimeshiftResult, OpenLiveTimeshiftRequest>(request).ConfigureAwait(false);
         }
 #endif
 

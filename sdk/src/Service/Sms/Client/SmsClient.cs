@@ -152,7 +152,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PullMoMsgResponse> PullMoMsg(PullMoMsgRequest request) {
-            return await new PullMoMsgExecutor().Client(this).Execute<PullMoMsgResponse, PullMoMsgResult, PullMoMsgRequest>(request);
+            return await new PullMoMsgExecutor().Client(this).Execute<PullMoMsgResponse, PullMoMsgResult, PullMoMsgRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSdkSmsSignResponse> DeleteSdkSmsSign(DeleteSdkSmsSignRequest request) {
-            return await new DeleteSdkSmsSignExecutor().Client(this).Execute<DeleteSdkSmsSignResponse, DeleteSdkSmsSignResult, DeleteSdkSmsSignRequest>(request);
+            return await new DeleteSdkSmsSignExecutor().Client(this).Execute<DeleteSdkSmsSignResponse, DeleteSdkSmsSignResult, DeleteSdkSmsSignRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddSdkSmsTemplateResponse> AddSdkSmsTemplate(AddSdkSmsTemplateRequest request) {
-            return await new AddSdkSmsTemplateExecutor().Client(this).Execute<AddSdkSmsTemplateResponse, AddSdkSmsTemplateResult, AddSdkSmsTemplateRequest>(request);
+            return await new AddSdkSmsTemplateExecutor().Client(this).Execute<AddSdkSmsTemplateResponse, AddSdkSmsTemplateResult, AddSdkSmsTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSdkSmsTemplateResponse> DeleteSdkSmsTemplate(DeleteSdkSmsTemplateRequest request) {
-            return await new DeleteSdkSmsTemplateExecutor().Client(this).Execute<DeleteSdkSmsTemplateResponse, DeleteSdkSmsTemplateResult, DeleteSdkSmsTemplateRequest>(request);
+            return await new DeleteSdkSmsTemplateExecutor().Client(this).Execute<DeleteSdkSmsTemplateResponse, DeleteSdkSmsTemplateResult, DeleteSdkSmsTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PullMtMsgResponse> PullMtMsg(PullMtMsgRequest request) {
-            return await new PullMtMsgExecutor().Client(this).Execute<PullMtMsgResponse, PullMtMsgResult, PullMtMsgRequest>(request);
+            return await new PullMtMsgExecutor().Client(this).Execute<PullMtMsgResponse, PullMtMsgResult, PullMtMsgRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QuerySdkSmsSignStatusResponse> QuerySdkSmsSignStatus(QuerySdkSmsSignStatusRequest request) {
-            return await new QuerySdkSmsSignStatusExecutor().Client(this).Execute<QuerySdkSmsSignStatusResponse, QuerySdkSmsSignStatusResult, QuerySdkSmsSignStatusRequest>(request);
+            return await new QuerySdkSmsSignStatusExecutor().Client(this).Execute<QuerySdkSmsSignStatusResponse, QuerySdkSmsSignStatusResult, QuerySdkSmsSignStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AggSendStatusResponse> AggSendStatus(AggSendStatusRequest request) {
-            return await new AggSendStatusExecutor().Client(this).Execute<AggSendStatusResponse, AggSendStatusResult, AggSendStatusRequest>(request);
+            return await new AggSendStatusExecutor().Client(this).Execute<AggSendStatusResponse, AggSendStatusResult, AggSendStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SendSingleSmsResponse> SendSingleSms(SendSingleSmsRequest request) {
-            return await new SendSingleSmsExecutor().Client(this).Execute<SendSingleSmsResponse, SendSingleSmsResult, SendSingleSmsRequest>(request);
+            return await new SendSingleSmsExecutor().Client(this).Execute<SendSingleSmsResponse, SendSingleSmsResult, SendSingleSmsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SendBatchSmsResponse> SendBatchSms(SendBatchSmsRequest request) {
-            return await new SendBatchSmsExecutor().Client(this).Execute<SendBatchSmsResponse, SendBatchSmsResult, SendBatchSmsRequest>(request);
+            return await new SendBatchSmsExecutor().Client(this).Execute<SendBatchSmsResponse, SendBatchSmsResult, SendBatchSmsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QuerySdkSmsTemplateStatusResponse> QuerySdkSmsTemplateStatus(QuerySdkSmsTemplateStatusRequest request) {
-            return await new QuerySdkSmsTemplateStatusExecutor().Client(this).Execute<QuerySdkSmsTemplateStatusResponse, QuerySdkSmsTemplateStatusResult, QuerySdkSmsTemplateStatusRequest>(request);
+            return await new QuerySdkSmsTemplateStatusExecutor().Client(this).Execute<QuerySdkSmsTemplateStatusResponse, QuerySdkSmsTemplateStatusResult, QuerySdkSmsTemplateStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AggReceiptStatusResponse> AggReceiptStatus(AggReceiptStatusRequest request) {
-            return await new AggReceiptStatusExecutor().Client(this).Execute<AggReceiptStatusResponse, AggReceiptStatusResult, AggReceiptStatusRequest>(request);
+            return await new AggReceiptStatusExecutor().Client(this).Execute<AggReceiptStatusResponse, AggReceiptStatusResult, AggReceiptStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PullMoMsgByMobileResponse> PullMoMsgByMobile(PullMoMsgByMobileRequest request) {
-            return await new PullMoMsgByMobileExecutor().Client(this).Execute<PullMoMsgByMobileResponse, PullMoMsgByMobileResult, PullMoMsgByMobileRequest>(request);
+            return await new PullMoMsgByMobileExecutor().Client(this).Execute<PullMoMsgByMobileResponse, PullMoMsgByMobileResult, PullMoMsgByMobileRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddSdkSmsSignResponse> AddSdkSmsSign(AddSdkSmsSignRequest request) {
-            return await new AddSdkSmsSignExecutor().Client(this).Execute<AddSdkSmsSignResponse, AddSdkSmsSignResult, AddSdkSmsSignRequest>(request);
+            return await new AddSdkSmsSignExecutor().Client(this).Execute<AddSdkSmsSignResponse, AddSdkSmsSignResult, AddSdkSmsSignRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PullMtMsgByMobileResponse> PullMtMsgByMobile(PullMtMsgByMobileRequest request) {
-            return await new PullMtMsgByMobileExecutor().Client(this).Execute<PullMtMsgByMobileResponse, PullMtMsgByMobileResult, PullMtMsgByMobileRequest>(request);
+            return await new PullMtMsgByMobileExecutor().Client(this).Execute<PullMtMsgByMobileResponse, PullMtMsgByMobileResult, PullMtMsgByMobileRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EditSdkSmsTemplateResponse> EditSdkSmsTemplate(EditSdkSmsTemplateRequest request) {
-            return await new EditSdkSmsTemplateExecutor().Client(this).Execute<EditSdkSmsTemplateResponse, EditSdkSmsTemplateResult, EditSdkSmsTemplateRequest>(request);
+            return await new EditSdkSmsTemplateExecutor().Client(this).Execute<EditSdkSmsTemplateResponse, EditSdkSmsTemplateResult, EditSdkSmsTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Sms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EditSdkSmsSignResponse> EditSdkSmsSign(EditSdkSmsSignRequest request) {
-            return await new EditSdkSmsSignExecutor().Client(this).Execute<EditSdkSmsSignResponse, EditSdkSmsSignResult, EditSdkSmsSignRequest>(request);
+            return await new EditSdkSmsSignExecutor().Client(this).Execute<EditSdkSmsSignResponse, EditSdkSmsSignResult, EditSdkSmsSignRequest>(request).ConfigureAwait(false);
         }
 #endif
 

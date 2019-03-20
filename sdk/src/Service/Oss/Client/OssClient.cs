@@ -154,7 +154,7 @@ namespace JDCloudSDK.Oss.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListBucketsResponse> ListBuckets(ListBucketsRequest request) {
-            return await new ListBucketsExecutor().Client(this).Execute<ListBucketsResponse, ListBucketsResult, ListBucketsRequest>(request);
+            return await new ListBucketsExecutor().Client(this).Execute<ListBucketsResponse, ListBucketsResult, ListBucketsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -175,7 +175,7 @@ namespace JDCloudSDK.Oss.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBucketResponse> DeleteBucket(DeleteBucketRequest request) {
-            return await new DeleteBucketExecutor().Client(this).Execute<DeleteBucketResponse, DeleteBucketResult, DeleteBucketRequest>(request);
+            return await new DeleteBucketExecutor().Client(this).Execute<DeleteBucketResponse, DeleteBucketResult, DeleteBucketRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -196,7 +196,7 @@ namespace JDCloudSDK.Oss.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<HeadBucketResponse> HeadBucket(HeadBucketRequest request) {
-            return await new HeadBucketExecutor().Client(this).Execute<HeadBucketResponse, HeadBucketResult, HeadBucketRequest>(request);
+            return await new HeadBucketExecutor().Client(this).Execute<HeadBucketResponse, HeadBucketResult, HeadBucketRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -217,7 +217,7 @@ namespace JDCloudSDK.Oss.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PutBucketResponse> PutBucket(PutBucketRequest request) {
-            return await new PutBucketExecutor().Client(this).Execute<PutBucketResponse, PutBucketResult, PutBucketRequest>(request);
+            return await new PutBucketExecutor().Client(this).Execute<PutBucketResponse, PutBucketResult, PutBucketRequest>(request).ConfigureAwait(false);
         }
 #endif
 

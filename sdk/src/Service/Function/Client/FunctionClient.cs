@@ -152,7 +152,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateAliasResponse> CreateAlias(CreateAliasRequest request) {
-            return await new CreateAliasExecutor().Client(this).Execute<CreateAliasResponse, CreateAliasResult, CreateAliasRequest>(request);
+            return await new CreateAliasExecutor().Client(this).Execute<CreateAliasResponse, CreateAliasResult, CreateAliasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVersionResponse> GetVersion(GetVersionRequest request) {
-            return await new GetVersionExecutor().Client(this).Execute<GetVersionResponse, GetVersionResult, GetVersionRequest>(request);
+            return await new GetVersionExecutor().Client(this).Execute<GetVersionResponse, GetVersionResult, GetVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAliasResponse> DeleteAlias(DeleteAliasRequest request) {
-            return await new DeleteAliasExecutor().Client(this).Execute<DeleteAliasResponse, DeleteAliasResult, DeleteAliasRequest>(request);
+            return await new DeleteAliasExecutor().Client(this).Execute<DeleteAliasResponse, DeleteAliasResult, DeleteAliasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest request) {
-            return await new CreateFunctionExecutor().Client(this).Execute<CreateFunctionResponse, CreateFunctionResult, CreateFunctionRequest>(request);
+            return await new CreateFunctionExecutor().Client(this).Execute<CreateFunctionResponse, CreateFunctionResult, CreateFunctionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVersionResponse> CreateVersion(CreateVersionRequest request) {
-            return await new CreateVersionExecutor().Client(this).Execute<CreateVersionResponse, CreateVersionResult, CreateVersionRequest>(request);
+            return await new CreateVersionExecutor().Client(this).Execute<CreateVersionResponse, CreateVersionResult, CreateVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetFunctionResponse> GetFunction(GetFunctionRequest request) {
-            return await new GetFunctionExecutor().Client(this).Execute<GetFunctionResponse, GetFunctionResult, GetFunctionRequest>(request);
+            return await new GetFunctionExecutor().Client(this).Execute<GetFunctionResponse, GetFunctionResult, GetFunctionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListTriggerResponse> ListTrigger(ListTriggerRequest request) {
-            return await new ListTriggerExecutor().Client(this).Execute<ListTriggerResponse, ListTriggerResult, ListTriggerRequest>(request);
+            return await new ListTriggerExecutor().Client(this).Execute<ListTriggerResponse, ListTriggerResult, ListTriggerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListVersionResponse> ListVersion(ListVersionRequest request) {
-            return await new ListVersionExecutor().Client(this).Execute<ListVersionResponse, ListVersionResult, ListVersionRequest>(request);
+            return await new ListVersionExecutor().Client(this).Execute<ListVersionResponse, ListVersionResult, ListVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateAliasResponse> UpdateAlias(UpdateAliasRequest request) {
-            return await new UpdateAliasExecutor().Client(this).Execute<UpdateAliasResponse, UpdateAliasResult, UpdateAliasRequest>(request);
+            return await new UpdateAliasExecutor().Client(this).Execute<UpdateAliasResponse, UpdateAliasResult, UpdateAliasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<TestInvokeResponse> TestInvoke(TestInvokeRequest request) {
-            return await new TestInvokeExecutor().Client(this).Execute<TestInvokeResponse, TestInvokeResult, TestInvokeRequest>(request);
+            return await new TestInvokeExecutor().Client(this).Execute<TestInvokeResponse, TestInvokeResult, TestInvokeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTriggerResponse> GetTrigger(GetTriggerRequest request) {
-            return await new GetTriggerExecutor().Client(this).Execute<GetTriggerResponse, GetTriggerResult, GetTriggerRequest>(request);
+            return await new GetTriggerExecutor().Client(this).Execute<GetTriggerResponse, GetTriggerResult, GetTriggerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVersionResponse> DeleteVersion(DeleteVersionRequest request) {
-            return await new DeleteVersionExecutor().Client(this).Execute<DeleteVersionResponse, DeleteVersionResult, DeleteVersionRequest>(request);
+            return await new DeleteVersionExecutor().Client(this).Execute<DeleteVersionResponse, DeleteVersionResult, DeleteVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteFunctionResponse> DeleteFunction(DeleteFunctionRequest request) {
-            return await new DeleteFunctionExecutor().Client(this).Execute<DeleteFunctionResponse, DeleteFunctionResult, DeleteFunctionRequest>(request);
+            return await new DeleteFunctionExecutor().Client(this).Execute<DeleteFunctionResponse, DeleteFunctionResult, DeleteFunctionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListFunctionResponse> ListFunction(ListFunctionRequest request) {
-            return await new ListFunctionExecutor().Client(this).Execute<ListFunctionResponse, ListFunctionResult, ListFunctionRequest>(request);
+            return await new ListFunctionExecutor().Client(this).Execute<ListFunctionResponse, ListFunctionResult, ListFunctionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListAliasResponse> ListAlias(ListAliasRequest request) {
-            return await new ListAliasExecutor().Client(this).Execute<ListAliasResponse, ListAliasResult, ListAliasRequest>(request);
+            return await new ListAliasExecutor().Client(this).Execute<ListAliasResponse, ListAliasResult, ListAliasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAliasResponse> GetAlias(GetAliasRequest request) {
-            return await new GetAliasExecutor().Client(this).Execute<GetAliasResponse, GetAliasResult, GetAliasRequest>(request);
+            return await new GetAliasExecutor().Client(this).Execute<GetAliasResponse, GetAliasResult, GetAliasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Function.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateFunctionResponse> UpdateFunction(UpdateFunctionRequest request) {
-            return await new UpdateFunctionExecutor().Client(this).Execute<UpdateFunctionResponse, UpdateFunctionResult, UpdateFunctionRequest>(request);
+            return await new UpdateFunctionExecutor().Client(this).Execute<UpdateFunctionResponse, UpdateFunctionResult, UpdateFunctionRequest>(request).ConfigureAwait(false);
         }
 #endif
 

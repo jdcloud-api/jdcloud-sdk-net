@@ -152,7 +152,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartVmInstanceByIdResponse> StartVmInstanceById(StartVmInstanceByIdRequest request) {
-            return await new StartVmInstanceByIdExecutor().Client(this).Execute<StartVmInstanceByIdResponse, StartVmInstanceByIdResult, StartVmInstanceByIdRequest>(request);
+            return await new StartVmInstanceByIdExecutor().Client(this).Execute<StartVmInstanceByIdResponse, StartVmInstanceByIdResult, StartVmInstanceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRdsAccountResponse> DeleteRdsAccount(DeleteRdsAccountRequest request) {
-            return await new DeleteRdsAccountExecutor().Client(this).Execute<DeleteRdsAccountResponse, DeleteRdsAccountResult, DeleteRdsAccountRequest>(request);
+            return await new DeleteRdsAccountExecutor().Client(this).Execute<DeleteRdsAccountResponse, DeleteRdsAccountResult, DeleteRdsAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDeploymentResponse> CreateDeployment(CreateDeploymentRequest request) {
-            return await new CreateDeploymentExecutor().Client(this).Execute<CreateDeploymentResponse, CreateDeploymentResult, CreateDeploymentRequest>(request);
+            return await new CreateDeploymentExecutor().Client(this).Execute<CreateDeploymentResponse, CreateDeploymentResult, CreateDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetBucketByNameResponse> GetBucketByName(GetBucketByNameRequest request) {
-            return await new GetBucketByNameExecutor().Client(this).Execute<GetBucketByNameResponse, GetBucketByNameResult, GetBucketByNameRequest>(request);
+            return await new GetBucketByNameExecutor().Client(this).Execute<GetBucketByNameResponse, GetBucketByNameResult, GetBucketByNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTaskInfoHistoryByIdResponse> GetTaskInfoHistoryById(GetTaskInfoHistoryByIdRequest request) {
-            return await new GetTaskInfoHistoryByIdExecutor().Client(this).Execute<GetTaskInfoHistoryByIdResponse, GetTaskInfoHistoryByIdResult, GetTaskInfoHistoryByIdRequest>(request);
+            return await new GetTaskInfoHistoryByIdExecutor().Client(this).Execute<GetTaskInfoHistoryByIdResponse, GetTaskInfoHistoryByIdResult, GetTaskInfoHistoryByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVmInstancesResponse> GetVmInstances(GetVmInstancesRequest request) {
-            return await new GetVmInstancesExecutor().Client(this).Execute<GetVmInstancesResponse, GetVmInstancesResult, GetVmInstancesRequest>(request);
+            return await new GetVmInstancesExecutor().Client(this).Execute<GetVmInstancesResponse, GetVmInstancesResult, GetVmInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RollbackDeploymentsVersionResponse> RollbackDeploymentsVersion(RollbackDeploymentsVersionRequest request) {
-            return await new RollbackDeploymentsVersionExecutor().Client(this).Execute<RollbackDeploymentsVersionResponse, RollbackDeploymentsVersionResult, RollbackDeploymentsVersionRequest>(request);
+            return await new RollbackDeploymentsVersionExecutor().Client(this).Execute<RollbackDeploymentsVersionResponse, RollbackDeploymentsVersionResult, RollbackDeploymentsVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRdsDatabaseByInstIdAndDbNameResponse> GetRdsDatabaseByInstIdAndDbName(GetRdsDatabaseByInstIdAndDbNameRequest request) {
-            return await new GetRdsDatabaseByInstIdAndDbNameExecutor().Client(this).Execute<GetRdsDatabaseByInstIdAndDbNameResponse, GetRdsDatabaseByInstIdAndDbNameResult, GetRdsDatabaseByInstIdAndDbNameRequest>(request);
+            return await new GetRdsDatabaseByInstIdAndDbNameExecutor().Client(this).Execute<GetRdsDatabaseByInstIdAndDbNameResponse, GetRdsDatabaseByInstIdAndDbNameResult, GetRdsDatabaseByInstIdAndDbNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDeploymentVersionsResponse> GetDeploymentVersions(GetDeploymentVersionsRequest request) {
-            return await new GetDeploymentVersionsExecutor().Client(this).Execute<GetDeploymentVersionsResponse, GetDeploymentVersionsResult, GetDeploymentVersionsRequest>(request);
+            return await new GetDeploymentVersionsExecutor().Client(this).Execute<GetDeploymentVersionsResponse, GetDeploymentVersionsResult, GetDeploymentVersionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcByIdResponse> GetVpcById(GetVpcByIdRequest request) {
-            return await new GetVpcByIdExecutor().Client(this).Execute<GetVpcByIdResponse, GetVpcByIdResult, GetVpcByIdRequest>(request);
+            return await new GetVpcByIdExecutor().Client(this).Execute<GetVpcByIdResponse, GetVpcByIdResult, GetVpcByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRdsAccountsByInstIdAndAccountNameResponse> GetRdsAccountsByInstIdAndAccountName(GetRdsAccountsByInstIdAndAccountNameRequest request) {
-            return await new GetRdsAccountsByInstIdAndAccountNameExecutor().Client(this).Execute<GetRdsAccountsByInstIdAndAccountNameResponse, GetRdsAccountsByInstIdAndAccountNameResult, GetRdsAccountsByInstIdAndAccountNameRequest>(request);
+            return await new GetRdsAccountsByInstIdAndAccountNameExecutor().Client(this).Execute<GetRdsAccountsByInstIdAndAccountNameResponse, GetRdsAccountsByInstIdAndAccountNameResult, GetRdsAccountsByInstIdAndAccountNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcNetworkInterfaceByIdResponse> GetVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) {
-            return await new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request);
+            return await new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDeploymentResultResponse> GetDeploymentResult(GetDeploymentResultRequest request) {
-            return await new GetDeploymentResultExecutor().Client(this).Execute<GetDeploymentResultResponse, GetDeploymentResultResult, GetDeploymentResultRequest>(request);
+            return await new GetDeploymentResultExecutor().Client(this).Execute<GetDeploymentResultResponse, GetDeploymentResultResult, GetDeploymentResultRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetBucketsResponse> GetBuckets(GetBucketsRequest request) {
-            return await new GetBucketsExecutor().Client(this).Execute<GetBucketsResponse, GetBucketsResult, GetBucketsRequest>(request);
+            return await new GetBucketsExecutor().Client(this).Execute<GetBucketsResponse, GetBucketsResult, GetBucketsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EditTransferTaskResponse> EditTransferTask(EditTransferTaskRequest request) {
-            return await new EditTransferTaskExecutor().Client(this).Execute<EditTransferTaskResponse, EditTransferTaskResult, EditTransferTaskRequest>(request);
+            return await new EditTransferTaskExecutor().Client(this).Execute<EditTransferTaskResponse, EditTransferTaskResult, EditTransferTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RebootVmInstanceByIdResponse> RebootVmInstanceById(RebootVmInstanceByIdRequest request) {
-            return await new RebootVmInstanceByIdExecutor().Client(this).Execute<RebootVmInstanceByIdResponse, RebootVmInstanceByIdResult, RebootVmInstanceByIdRequest>(request);
+            return await new RebootVmInstanceByIdExecutor().Client(this).Execute<RebootVmInstanceByIdResponse, RebootVmInstanceByIdResult, RebootVmInstanceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartTransferTaskResponse> StartTransferTask(StartTransferTaskRequest request) {
-            return await new StartTransferTaskExecutor().Client(this).Execute<StartTransferTaskResponse, StartTransferTaskResult, StartTransferTaskRequest>(request);
+            return await new StartTransferTaskExecutor().Client(this).Execute<StartTransferTaskResponse, StartTransferTaskResult, StartTransferTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GrantRdsAccountResponse> GrantRdsAccount(GrantRdsAccountRequest request) {
-            return await new GrantRdsAccountExecutor().Client(this).Execute<GrantRdsAccountResponse, GrantRdsAccountResult, GrantRdsAccountRequest>(request);
+            return await new GrantRdsAccountExecutor().Client(this).Execute<GrantRdsAccountResponse, GrantRdsAccountResult, GrantRdsAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -494,7 +494,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcNetworkInterfaceResponse> CreateVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) {
-            return await new CreateVpcNetworkInterfaceExecutor().Client(this).Execute<CreateVpcNetworkInterfaceResponse, CreateVpcNetworkInterfaceResult, CreateVpcNetworkInterfaceRequest>(request);
+            return await new CreateVpcNetworkInterfaceExecutor().Client(this).Execute<CreateVpcNetworkInterfaceResponse, CreateVpcNetworkInterfaceResult, CreateVpcNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -513,7 +513,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateRdsDatabaseResponse> CreateRdsDatabase(CreateRdsDatabaseRequest request) {
-            return await new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request);
+            return await new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,7 +532,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDeploymentsByIdResponse> GetDeploymentsById(GetDeploymentsByIdRequest request) {
-            return await new GetDeploymentsByIdExecutor().Client(this).Execute<GetDeploymentsByIdResponse, GetDeploymentsByIdResult, GetDeploymentsByIdRequest>(request);
+            return await new GetDeploymentsByIdExecutor().Client(this).Execute<GetDeploymentsByIdResponse, GetDeploymentsByIdResult, GetDeploymentsByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDeploymentsResponse> GetDeployments(GetDeploymentsRequest request) {
-            return await new GetDeploymentsExecutor().Client(this).Execute<GetDeploymentsResponse, GetDeploymentsResult, GetDeploymentsRequest>(request);
+            return await new GetDeploymentsExecutor().Client(this).Execute<GetDeploymentsResponse, GetDeploymentsResult, GetDeploymentsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -570,7 +570,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartChannelResponse> StartChannel(StartChannelRequest request) {
-            return await new StartChannelExecutor().Client(this).Execute<StartChannelResponse, StartChannelResult, StartChannelRequest>(request);
+            return await new StartChannelExecutor().Client(this).Execute<StartChannelResponse, StartChannelResult, StartChannelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -589,7 +589,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateChannelResponse> CreateChannel(CreateChannelRequest request) {
-            return await new CreateChannelExecutor().Client(this).Execute<CreateChannelResponse, CreateChannelResult, CreateChannelRequest>(request);
+            return await new CreateChannelExecutor().Client(this).Execute<CreateChannelResponse, CreateChannelResult, CreateChannelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -608,7 +608,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVmKeypairResponse> CreateVmKeypair(CreateVmKeypairRequest request) {
-            return await new CreateVmKeypairExecutor().Client(this).Execute<CreateVmKeypairResponse, CreateVmKeypairResult, CreateVmKeypairRequest>(request);
+            return await new CreateVmKeypairExecutor().Client(this).Execute<CreateVmKeypairResponse, CreateVmKeypairResult, CreateVmKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -627,7 +627,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVmKeypairsByNameResponse> GetVmKeypairsByName(GetVmKeypairsByNameRequest request) {
-            return await new GetVmKeypairsByNameExecutor().Client(this).Execute<GetVmKeypairsByNameResponse, GetVmKeypairsByNameResult, GetVmKeypairsByNameRequest>(request);
+            return await new GetVmKeypairsByNameExecutor().Client(this).Execute<GetVmKeypairsByNameResponse, GetVmKeypairsByNameResult, GetVmKeypairsByNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -646,7 +646,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcEipByIdResponse> DeleteVpcEipById(DeleteVpcEipByIdRequest request) {
-            return await new DeleteVpcEipByIdExecutor().Client(this).Execute<DeleteVpcEipByIdResponse, DeleteVpcEipByIdResult, DeleteVpcEipByIdRequest>(request);
+            return await new DeleteVpcEipByIdExecutor().Client(this).Execute<DeleteVpcEipByIdResponse, DeleteVpcEipByIdResult, DeleteVpcEipByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -665,7 +665,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ReverseDeploymentResponse> ReverseDeployment(ReverseDeploymentRequest request) {
-            return await new ReverseDeploymentExecutor().Client(this).Execute<ReverseDeploymentResponse, ReverseDeploymentResult, ReverseDeploymentRequest>(request);
+            return await new ReverseDeploymentExecutor().Client(this).Execute<ReverseDeploymentResponse, ReverseDeploymentResult, ReverseDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -684,7 +684,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTransferTaskByIdResponse> GetTransferTaskById(GetTransferTaskByIdRequest request) {
-            return await new GetTransferTaskByIdExecutor().Client(this).Execute<GetTransferTaskByIdResponse, GetTransferTaskByIdResult, GetTransferTaskByIdRequest>(request);
+            return await new GetTransferTaskByIdExecutor().Client(this).Execute<GetTransferTaskByIdResponse, GetTransferTaskByIdResult, GetTransferTaskByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -703,7 +703,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSubnetsResponse> GetVpcSubnets(GetVpcSubnetsRequest request) {
-            return await new GetVpcSubnetsExecutor().Client(this).Execute<GetVpcSubnetsResponse, GetVpcSubnetsResult, GetVpcSubnetsRequest>(request);
+            return await new GetVpcSubnetsExecutor().Client(this).Execute<GetVpcSubnetsResponse, GetVpcSubnetsResult, GetVpcSubnetsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -722,7 +722,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcLBHttpListenerResponse> CreateVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) {
-            return await new CreateVpcLBHttpListenerExecutor().Client(this).Execute<CreateVpcLBHttpListenerResponse, CreateVpcLBHttpListenerResult, CreateVpcLBHttpListenerRequest>(request);
+            return await new CreateVpcLBHttpListenerExecutor().Client(this).Execute<CreateVpcLBHttpListenerResponse, CreateVpcLBHttpListenerResult, CreateVpcLBHttpListenerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -741,7 +741,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopTransferTaskResponse> StopTransferTask(StopTransferTaskRequest request) {
-            return await new StopTransferTaskExecutor().Client(this).Execute<StopTransferTaskResponse, StopTransferTaskResult, StopTransferTaskRequest>(request);
+            return await new StopTransferTaskExecutor().Client(this).Execute<StopTransferTaskResponse, StopTransferTaskResult, StopTransferTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -760,7 +760,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcSubnetByIdResponse> DeleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) {
-            return await new DeleteVpcSubnetByIdExecutor().Client(this).Execute<DeleteVpcSubnetByIdResponse, DeleteVpcSubnetByIdResult, DeleteVpcSubnetByIdRequest>(request);
+            return await new DeleteVpcSubnetByIdExecutor().Client(this).Execute<DeleteVpcSubnetByIdResponse, DeleteVpcSubnetByIdResult, DeleteVpcSubnetByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -779,7 +779,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcEipResponse> CreateVpcEip(CreateVpcEipRequest request) {
-            return await new CreateVpcEipExecutor().Client(this).Execute<CreateVpcEipResponse, CreateVpcEipResult, CreateVpcEipRequest>(request);
+            return await new CreateVpcEipExecutor().Client(this).Execute<CreateVpcEipResponse, CreateVpcEipResult, CreateVpcEipRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -798,7 +798,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcSecurityGroupByIdResponse> DeleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) {
-            return await new DeleteVpcSecurityGroupByIdExecutor().Client(this).Execute<DeleteVpcSecurityGroupByIdResponse, DeleteVpcSecurityGroupByIdResult, DeleteVpcSecurityGroupByIdRequest>(request);
+            return await new DeleteVpcSecurityGroupByIdExecutor().Client(this).Execute<DeleteVpcSecurityGroupByIdResponse, DeleteVpcSecurityGroupByIdResult, DeleteVpcSecurityGroupByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -817,7 +817,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteChannelResponse> DeleteChannel(DeleteChannelRequest request) {
-            return await new DeleteChannelExecutor().Client(this).Execute<DeleteChannelResponse, DeleteChannelResult, DeleteChannelRequest>(request);
+            return await new DeleteChannelExecutor().Client(this).Execute<DeleteChannelResponse, DeleteChannelResult, DeleteChannelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -836,7 +836,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBucketResponse> DeleteBucket(DeleteBucketRequest request) {
-            return await new DeleteBucketExecutor().Client(this).Execute<DeleteBucketResponse, DeleteBucketResult, DeleteBucketRequest>(request);
+            return await new DeleteBucketExecutor().Client(this).Execute<DeleteBucketResponse, DeleteBucketResult, DeleteBucketRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -855,7 +855,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetCloudInfosResponse> GetCloudInfos(GetCloudInfosRequest request) {
-            return await new GetCloudInfosExecutor().Client(this).Execute<GetCloudInfosResponse, GetCloudInfosResult, GetCloudInfosRequest>(request);
+            return await new GetCloudInfosExecutor().Client(this).Execute<GetCloudInfosResponse, GetCloudInfosResult, GetCloudInfosRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -874,7 +874,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcNetworkInterfacesResponse> GetVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) {
-            return await new GetVpcNetworkInterfacesExecutor().Client(this).Execute<GetVpcNetworkInterfacesResponse, GetVpcNetworkInterfacesResult, GetVpcNetworkInterfacesRequest>(request);
+            return await new GetVpcNetworkInterfacesExecutor().Client(this).Execute<GetVpcNetworkInterfacesResponse, GetVpcNetworkInterfacesResult, GetVpcNetworkInterfacesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -893,7 +893,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateVpcEipByIdResponse> AssociateVpcEipById(AssociateVpcEipByIdRequest request) {
-            return await new AssociateVpcEipByIdExecutor().Client(this).Execute<AssociateVpcEipByIdResponse, AssociateVpcEipByIdResult, AssociateVpcEipByIdRequest>(request);
+            return await new AssociateVpcEipByIdExecutor().Client(this).Execute<AssociateVpcEipByIdResponse, AssociateVpcEipByIdResult, AssociateVpcEipByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -912,7 +912,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRdsDatabasesByInstIdResponse> GetRdsDatabasesByInstId(GetRdsDatabasesByInstIdRequest request) {
-            return await new GetRdsDatabasesByInstIdExecutor().Client(this).Execute<GetRdsDatabasesByInstIdResponse, GetRdsDatabasesByInstIdResult, GetRdsDatabasesByInstIdRequest>(request);
+            return await new GetRdsDatabasesByInstIdExecutor().Client(this).Execute<GetRdsDatabasesByInstIdResponse, GetRdsDatabasesByInstIdResult, GetRdsDatabasesByInstIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -931,7 +931,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcEipByIdResponse> GetVpcEipById(GetVpcEipByIdRequest request) {
-            return await new GetVpcEipByIdExecutor().Client(this).Execute<GetVpcEipByIdResponse, GetVpcEipByIdResult, GetVpcEipByIdRequest>(request);
+            return await new GetVpcEipByIdExecutor().Client(this).Execute<GetVpcEipByIdResponse, GetVpcEipByIdResult, GetVpcEipByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -950,7 +950,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDeploymentsVersionResponse> GetDeploymentsVersion(GetDeploymentsVersionRequest request) {
-            return await new GetDeploymentsVersionExecutor().Client(this).Execute<GetDeploymentsVersionResponse, GetDeploymentsVersionResult, GetDeploymentsVersionRequest>(request);
+            return await new GetDeploymentsVersionExecutor().Client(this).Execute<GetDeploymentsVersionResponse, GetDeploymentsVersionResult, GetDeploymentsVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -969,7 +969,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDatasourcesResponse> GetDatasources(GetDatasourcesRequest request) {
-            return await new GetDatasourcesExecutor().Client(this).Execute<GetDatasourcesResponse, GetDatasourcesResult, GetDatasourcesRequest>(request);
+            return await new GetDatasourcesExecutor().Client(this).Execute<GetDatasourcesResponse, GetDatasourcesResult, GetDatasourcesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -988,7 +988,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRdsDatabaseResponse> DeleteRdsDatabase(DeleteRdsDatabaseRequest request) {
-            return await new DeleteRdsDatabaseExecutor().Client(this).Execute<DeleteRdsDatabaseResponse, DeleteRdsDatabaseResult, DeleteRdsDatabaseRequest>(request);
+            return await new DeleteRdsDatabaseExecutor().Client(this).Execute<DeleteRdsDatabaseResponse, DeleteRdsDatabaseResult, DeleteRdsDatabaseRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1007,7 +1007,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetChannelsResponse> GetChannels(GetChannelsRequest request) {
-            return await new GetChannelsExecutor().Client(this).Execute<GetChannelsResponse, GetChannelsResult, GetChannelsRequest>(request);
+            return await new GetChannelsExecutor().Client(this).Execute<GetChannelsResponse, GetChannelsResult, GetChannelsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1026,7 +1026,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcEipsResponse> GetVpcEips(GetVpcEipsRequest request) {
-            return await new GetVpcEipsExecutor().Client(this).Execute<GetVpcEipsResponse, GetVpcEipsResult, GetVpcEipsRequest>(request);
+            return await new GetVpcEipsExecutor().Client(this).Execute<GetVpcEipsResponse, GetVpcEipsResult, GetVpcEipsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1045,7 +1045,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RegistCloudInfoResponse> RegistCloudInfo(RegistCloudInfoRequest request) {
-            return await new RegistCloudInfoExecutor().Client(this).Execute<RegistCloudInfoResponse, RegistCloudInfoResult, RegistCloudInfoRequest>(request);
+            return await new RegistCloudInfoExecutor().Client(this).Execute<RegistCloudInfoResponse, RegistCloudInfoResult, RegistCloudInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1064,7 +1064,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcSlbResponse> CreateVpcSlb(CreateVpcSlbRequest request) {
-            return await new CreateVpcSlbExecutor().Client(this).Execute<CreateVpcSlbResponse, CreateVpcSlbResult, CreateVpcSlbRequest>(request);
+            return await new CreateVpcSlbExecutor().Client(this).Execute<CreateVpcSlbResponse, CreateVpcSlbResult, CreateVpcSlbRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1083,7 +1083,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRdsByInstIdResponse> GetRdsByInstId(GetRdsByInstIdRequest request) {
-            return await new GetRdsByInstIdExecutor().Client(this).Execute<GetRdsByInstIdResponse, GetRdsByInstIdResult, GetRdsByInstIdRequest>(request);
+            return await new GetRdsByInstIdExecutor().Client(this).Execute<GetRdsByInstIdResponse, GetRdsByInstIdResult, GetRdsByInstIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1102,7 +1102,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UnregistCloudInfoResponse> UnregistCloudInfo(UnregistCloudInfoRequest request) {
-            return await new UnregistCloudInfoExecutor().Client(this).Execute<UnregistCloudInfoResponse, UnregistCloudInfoResult, UnregistCloudInfoRequest>(request);
+            return await new UnregistCloudInfoExecutor().Client(this).Execute<UnregistCloudInfoResponse, UnregistCloudInfoResult, UnregistCloudInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1121,7 +1121,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AttachDiskToVmInstanceByDiskIdResponse> AttachDiskToVmInstanceByDiskId(AttachDiskToVmInstanceByDiskIdRequest request) {
-            return await new AttachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<AttachDiskToVmInstanceByDiskIdResponse, AttachDiskToVmInstanceByDiskIdResult, AttachDiskToVmInstanceByDiskIdRequest>(request);
+            return await new AttachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<AttachDiskToVmInstanceByDiskIdResponse, AttachDiskToVmInstanceByDiskIdResult, AttachDiskToVmInstanceByDiskIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1140,7 +1140,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AttachVpcNetworkInterfaceByIdResponse> AttachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) {
-            return await new AttachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<AttachVpcNetworkInterfaceByIdResponse, AttachVpcNetworkInterfaceByIdResult, AttachVpcNetworkInterfaceByIdRequest>(request);
+            return await new AttachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<AttachVpcNetworkInterfaceByIdResponse, AttachVpcNetworkInterfaceByIdResult, AttachVpcNetworkInterfaceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1159,7 +1159,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DryrunDeploymentResponse> DryrunDeployment(DryrunDeploymentRequest request) {
-            return await new DryrunDeploymentExecutor().Client(this).Execute<DryrunDeploymentResponse, DryrunDeploymentResult, DryrunDeploymentRequest>(request);
+            return await new DryrunDeploymentExecutor().Client(this).Execute<DryrunDeploymentResponse, DryrunDeploymentResult, DryrunDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1178,7 +1178,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDatasourceResponse> CreateDatasource(CreateDatasourceRequest request) {
-            return await new CreateDatasourceExecutor().Client(this).Execute<CreateDatasourceResponse, CreateDatasourceResult, CreateDatasourceRequest>(request);
+            return await new CreateDatasourceExecutor().Client(this).Execute<CreateDatasourceResponse, CreateDatasourceResult, CreateDatasourceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1197,7 +1197,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DetachDiskToVmInstanceByDiskIdResponse> DetachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) {
-            return await new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request);
+            return await new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1216,7 +1216,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTransferTasksResponse> GetTransferTasks(GetTransferTasksRequest request) {
-            return await new GetTransferTasksExecutor().Client(this).Execute<GetTransferTasksResponse, GetTransferTasksResult, GetTransferTasksRequest>(request);
+            return await new GetTransferTasksExecutor().Client(this).Execute<GetTransferTasksResponse, GetTransferTasksResult, GetTransferTasksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1235,7 +1235,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RemoveDiskByIdResponse> RemoveDiskById(RemoveDiskByIdRequest request) {
-            return await new RemoveDiskByIdExecutor().Client(this).Execute<RemoveDiskByIdResponse, RemoveDiskByIdResult, RemoveDiskByIdRequest>(request);
+            return await new RemoveDiskByIdExecutor().Client(this).Execute<RemoveDiskByIdResponse, RemoveDiskByIdResult, RemoveDiskByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1254,7 +1254,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateRdsInstanceResponse> CreateRdsInstance(CreateRdsInstanceRequest request) {
-            return await new CreateRdsInstanceExecutor().Client(this).Execute<CreateRdsInstanceResponse, CreateRdsInstanceResult, CreateRdsInstanceRequest>(request);
+            return await new CreateRdsInstanceExecutor().Client(this).Execute<CreateRdsInstanceResponse, CreateRdsInstanceResult, CreateRdsInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1273,7 +1273,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSecurityGroupByIdResponse> GetVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) {
-            return await new GetVpcSecurityGroupByIdExecutor().Client(this).Execute<GetVpcSecurityGroupByIdResponse, GetVpcSecurityGroupByIdResult, GetVpcSecurityGroupByIdRequest>(request);
+            return await new GetVpcSecurityGroupByIdExecutor().Client(this).Execute<GetVpcSecurityGroupByIdResponse, GetVpcSecurityGroupByIdResult, GetVpcSecurityGroupByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1292,7 +1292,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetBucketFilesResponse> GetBucketFiles(GetBucketFilesRequest request) {
-            return await new GetBucketFilesExecutor().Client(this).Execute<GetBucketFilesResponse, GetBucketFilesResult, GetBucketFilesRequest>(request);
+            return await new GetBucketFilesExecutor().Client(this).Execute<GetBucketFilesResponse, GetBucketFilesResult, GetBucketFilesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1311,7 +1311,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRdsInstancesResponse> GetRdsInstances(GetRdsInstancesRequest request) {
-            return await new GetRdsInstancesExecutor().Client(this).Execute<GetRdsInstancesResponse, GetRdsInstancesResult, GetRdsInstancesRequest>(request);
+            return await new GetRdsInstancesExecutor().Client(this).Execute<GetRdsInstancesResponse, GetRdsInstancesResult, GetRdsInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1330,7 +1330,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcNetworkInterfaceByIdResponse> DeleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) {
-            return await new DeleteVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DeleteVpcNetworkInterfaceByIdResponse, DeleteVpcNetworkInterfaceByIdResult, DeleteVpcNetworkInterfaceByIdRequest>(request);
+            return await new DeleteVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DeleteVpcNetworkInterfaceByIdResponse, DeleteVpcNetworkInterfaceByIdResult, DeleteVpcNetworkInterfaceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1349,7 +1349,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetRdsAccountsByInstIdResponse> GetRdsAccountsByInstId(GetRdsAccountsByInstIdRequest request) {
-            return await new GetRdsAccountsByInstIdExecutor().Client(this).Execute<GetRdsAccountsByInstIdResponse, GetRdsAccountsByInstIdResult, GetRdsAccountsByInstIdRequest>(request);
+            return await new GetRdsAccountsByInstIdExecutor().Client(this).Execute<GetRdsAccountsByInstIdResponse, GetRdsAccountsByInstIdResult, GetRdsAccountsByInstIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1368,7 +1368,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSecurityGroupsResponse> GetVpcSecurityGroups(GetVpcSecurityGroupsRequest request) {
-            return await new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request);
+            return await new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1387,7 +1387,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ApplyDeploymentResponse> ApplyDeployment(ApplyDeploymentRequest request) {
-            return await new ApplyDeploymentExecutor().Client(this).Execute<ApplyDeploymentResponse, ApplyDeploymentResult, ApplyDeploymentRequest>(request);
+            return await new ApplyDeploymentExecutor().Client(this).Execute<ApplyDeploymentResponse, ApplyDeploymentResult, ApplyDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1406,7 +1406,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVmKeypairsResponse> GetVmKeypairs(GetVmKeypairsRequest request) {
-            return await new GetVmKeypairsExecutor().Client(this).Execute<GetVmKeypairsResponse, GetVmKeypairsResult, GetVmKeypairsRequest>(request);
+            return await new GetVmKeypairsExecutor().Client(this).Execute<GetVmKeypairsResponse, GetVmKeypairsResult, GetVmKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1425,7 +1425,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSlbByIdResponse> GetVpcSlbById(GetVpcSlbByIdRequest request) {
-            return await new GetVpcSlbByIdExecutor().Client(this).Execute<GetVpcSlbByIdResponse, GetVpcSlbByIdResult, GetVpcSlbByIdRequest>(request);
+            return await new GetVpcSlbByIdExecutor().Client(this).Execute<GetVpcSlbByIdResponse, GetVpcSlbByIdResult, GetVpcSlbByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1444,7 +1444,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDeploymentResponse> DeleteDeployment(DeleteDeploymentRequest request) {
-            return await new DeleteDeploymentExecutor().Client(this).Execute<DeleteDeploymentResponse, DeleteDeploymentResult, DeleteDeploymentRequest>(request);
+            return await new DeleteDeploymentExecutor().Client(this).Execute<DeleteDeploymentResponse, DeleteDeploymentResult, DeleteDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1463,7 +1463,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcSubnetResponse> CreateVpcSubnet(CreateVpcSubnetRequest request) {
-            return await new CreateVpcSubnetExecutor().Client(this).Execute<CreateVpcSubnetResponse, CreateVpcSubnetResult, CreateVpcSubnetRequest>(request);
+            return await new CreateVpcSubnetExecutor().Client(this).Execute<CreateVpcSubnetResponse, CreateVpcSubnetResult, CreateVpcSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1482,7 +1482,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateTransferTaskResponse> CreateTransferTask(CreateTransferTaskRequest request) {
-            return await new CreateTransferTaskExecutor().Client(this).Execute<CreateTransferTaskResponse, CreateTransferTaskResult, CreateTransferTaskRequest>(request);
+            return await new CreateTransferTaskExecutor().Client(this).Execute<CreateTransferTaskResponse, CreateTransferTaskResult, CreateTransferTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1501,7 +1501,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRdsByInstIdResponse> DeleteRdsByInstId(DeleteRdsByInstIdRequest request) {
-            return await new DeleteRdsByInstIdExecutor().Client(this).Execute<DeleteRdsByInstIdResponse, DeleteRdsByInstIdResult, DeleteRdsByInstIdRequest>(request);
+            return await new DeleteRdsByInstIdExecutor().Client(this).Execute<DeleteRdsByInstIdResponse, DeleteRdsByInstIdResult, DeleteRdsByInstIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1520,7 +1520,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSlbsResponse> GetVpcSlbs(GetVpcSlbsRequest request) {
-            return await new GetVpcSlbsExecutor().Client(this).Execute<GetVpcSlbsResponse, GetVpcSlbsResult, GetVpcSlbsRequest>(request);
+            return await new GetVpcSlbsExecutor().Client(this).Execute<GetVpcSlbsResponse, GetVpcSlbsResult, GetVpcSlbsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1539,7 +1539,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CloneDeploymentResponse> CloneDeployment(CloneDeploymentRequest request) {
-            return await new CloneDeploymentExecutor().Client(this).Execute<CloneDeploymentResponse, CloneDeploymentResult, CloneDeploymentRequest>(request);
+            return await new CloneDeploymentExecutor().Client(this).Execute<CloneDeploymentResponse, CloneDeploymentResult, CloneDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1558,7 +1558,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcByIdResponse> DeleteVpcById(DeleteVpcByIdRequest request) {
-            return await new DeleteVpcByIdExecutor().Client(this).Execute<DeleteVpcByIdResponse, DeleteVpcByIdResult, DeleteVpcByIdRequest>(request);
+            return await new DeleteVpcByIdExecutor().Client(this).Execute<DeleteVpcByIdResponse, DeleteVpcByIdResult, DeleteVpcByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1577,7 +1577,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
-            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
+            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1596,7 +1596,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateVpcEipByIdResponse> DisassociateVpcEipById(DisassociateVpcEipByIdRequest request) {
-            return await new DisassociateVpcEipByIdExecutor().Client(this).Execute<DisassociateVpcEipByIdResponse, DisassociateVpcEipByIdResult, DisassociateVpcEipByIdRequest>(request);
+            return await new DisassociateVpcEipByIdExecutor().Client(this).Execute<DisassociateVpcEipByIdResponse, DisassociateVpcEipByIdResult, DisassociateVpcEipByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1615,7 +1615,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcSecurityGroupResponse> CreateVpcSecurityGroup(CreateVpcSecurityGroupRequest request) {
-            return await new CreateVpcSecurityGroupExecutor().Client(this).Execute<CreateVpcSecurityGroupResponse, CreateVpcSecurityGroupResult, CreateVpcSecurityGroupRequest>(request);
+            return await new CreateVpcSecurityGroupExecutor().Client(this).Execute<CreateVpcSecurityGroupResponse, CreateVpcSecurityGroupResult, CreateVpcSecurityGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1634,7 +1634,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSubnetByIdResponse> GetVpcSubnetById(GetVpcSubnetByIdRequest request) {
-            return await new GetVpcSubnetByIdExecutor().Client(this).Execute<GetVpcSubnetByIdResponse, GetVpcSubnetByIdResult, GetVpcSubnetByIdRequest>(request);
+            return await new GetVpcSubnetByIdExecutor().Client(this).Execute<GetVpcSubnetByIdResponse, GetVpcSubnetByIdResult, GetVpcSubnetByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1653,7 +1653,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopChannelResponse> StopChannel(StopChannelRequest request) {
-            return await new StopChannelExecutor().Client(this).Execute<StopChannelResponse, StopChannelResult, StopChannelRequest>(request);
+            return await new StopChannelExecutor().Client(this).Execute<StopChannelResponse, StopChannelResult, StopChannelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1672,7 +1672,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcsResponse> GetVpcs(GetVpcsRequest request) {
-            return await new GetVpcsExecutor().Client(this).Execute<GetVpcsResponse, GetVpcsResult, GetVpcsRequest>(request);
+            return await new GetVpcsExecutor().Client(this).Execute<GetVpcsResponse, GetVpcsResult, GetVpcsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1691,7 +1691,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVmInstancesByIdResponse> GetVmInstancesById(GetVmInstancesByIdRequest request) {
-            return await new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request);
+            return await new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1710,7 +1710,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTransferTaskProgressResponse> GetTransferTaskProgress(GetTransferTaskProgressRequest request) {
-            return await new GetTransferTaskProgressExecutor().Client(this).Execute<GetTransferTaskProgressResponse, GetTransferTaskProgressResult, GetTransferTaskProgressRequest>(request);
+            return await new GetTransferTaskProgressExecutor().Client(this).Execute<GetTransferTaskProgressResponse, GetTransferTaskProgressResult, GetTransferTaskProgressRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1729,7 +1729,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcVServerGroupsResponse> GetVpcVServerGroups(GetVpcVServerGroupsRequest request) {
-            return await new GetVpcVServerGroupsExecutor().Client(this).Execute<GetVpcVServerGroupsResponse, GetVpcVServerGroupsResult, GetVpcVServerGroupsRequest>(request);
+            return await new GetVpcVServerGroupsExecutor().Client(this).Execute<GetVpcVServerGroupsResponse, GetVpcVServerGroupsResult, GetVpcVServerGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1748,7 +1748,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteTransferTaskResponse> DeleteTransferTask(DeleteTransferTaskRequest request) {
-            return await new DeleteTransferTaskExecutor().Client(this).Execute<DeleteTransferTaskResponse, DeleteTransferTaskResult, DeleteTransferTaskRequest>(request);
+            return await new DeleteTransferTaskExecutor().Client(this).Execute<DeleteTransferTaskResponse, DeleteTransferTaskResult, DeleteTransferTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1767,7 +1767,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTransferTaskFailedFilesResponse> GetTransferTaskFailedFiles(GetTransferTaskFailedFilesRequest request) {
-            return await new GetTransferTaskFailedFilesExecutor().Client(this).Execute<GetTransferTaskFailedFilesResponse, GetTransferTaskFailedFilesResult, GetTransferTaskFailedFilesRequest>(request);
+            return await new GetTransferTaskFailedFilesExecutor().Client(this).Execute<GetTransferTaskFailedFilesResponse, GetTransferTaskFailedFilesResult, GetTransferTaskFailedFilesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1786,7 +1786,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateRdsAccountsResponse> CreateRdsAccounts(CreateRdsAccountsRequest request) {
-            return await new CreateRdsAccountsExecutor().Client(this).Execute<CreateRdsAccountsResponse, CreateRdsAccountsResult, CreateRdsAccountsRequest>(request);
+            return await new CreateRdsAccountsExecutor().Client(this).Execute<CreateRdsAccountsResponse, CreateRdsAccountsResult, CreateRdsAccountsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1805,7 +1805,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcVServerGroupResponse> CreateVpcVServerGroup(CreateVpcVServerGroupRequest request) {
-            return await new CreateVpcVServerGroupExecutor().Client(this).Execute<CreateVpcVServerGroupResponse, CreateVpcVServerGroupResult, CreateVpcVServerGroupRequest>(request);
+            return await new CreateVpcVServerGroupExecutor().Client(this).Execute<CreateVpcVServerGroupResponse, CreateVpcVServerGroupResult, CreateVpcVServerGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1824,7 +1824,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDiskResponse> CreateDisk(CreateDiskRequest request) {
-            return await new CreateDiskExecutor().Client(this).Execute<CreateDiskResponse, CreateDiskResult, CreateDiskRequest>(request);
+            return await new CreateDiskExecutor().Client(this).Execute<CreateDiskResponse, CreateDiskResult, CreateDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1843,7 +1843,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTaskInfoByIdResponse> GetTaskInfoById(GetTaskInfoByIdRequest request) {
-            return await new GetTaskInfoByIdExecutor().Client(this).Execute<GetTaskInfoByIdResponse, GetTaskInfoByIdResult, GetTaskInfoByIdRequest>(request);
+            return await new GetTaskInfoByIdExecutor().Client(this).Execute<GetTaskInfoByIdResponse, GetTaskInfoByIdResult, GetTaskInfoByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1862,7 +1862,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDisksResponse> GetDisks(GetDisksRequest request) {
-            return await new GetDisksExecutor().Client(this).Execute<GetDisksResponse, GetDisksResult, GetDisksRequest>(request);
+            return await new GetDisksExecutor().Client(this).Execute<GetDisksResponse, GetDisksResult, GetDisksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1881,7 +1881,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DetachVpcNetworkInterfaceByIdResponse> DetachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) {
-            return await new DetachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DetachVpcNetworkInterfaceByIdResponse, DetachVpcNetworkInterfaceByIdResult, DetachVpcNetworkInterfaceByIdRequest>(request);
+            return await new DetachVpcNetworkInterfaceByIdExecutor().Client(this).Execute<DetachVpcNetworkInterfaceByIdResponse, DetachVpcNetworkInterfaceByIdResult, DetachVpcNetworkInterfaceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1900,7 +1900,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVmInstanceResponse> CreateVmInstance(CreateVmInstanceRequest request) {
-            return await new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request);
+            return await new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1919,7 +1919,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetCloudInfoByIdResponse> GetCloudInfoById(GetCloudInfoByIdRequest request) {
-            return await new GetCloudInfoByIdExecutor().Client(this).Execute<GetCloudInfoByIdResponse, GetCloudInfoByIdResult, GetCloudInfoByIdRequest>(request);
+            return await new GetCloudInfoByIdExecutor().Client(this).Execute<GetCloudInfoByIdResponse, GetCloudInfoByIdResult, GetCloudInfoByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1938,7 +1938,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVmKeypairByNameResponse> DeleteVmKeypairByName(DeleteVmKeypairByNameRequest request) {
-            return await new DeleteVmKeypairByNameExecutor().Client(this).Execute<DeleteVmKeypairByNameResponse, DeleteVmKeypairByNameResult, DeleteVmKeypairByNameRequest>(request);
+            return await new DeleteVmKeypairByNameExecutor().Client(this).Execute<DeleteVmKeypairByNameResponse, DeleteVmKeypairByNameResult, DeleteVmKeypairByNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1957,7 +1957,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RevokeRdsAccountResponse> RevokeRdsAccount(RevokeRdsAccountRequest request) {
-            return await new RevokeRdsAccountExecutor().Client(this).Execute<RevokeRdsAccountResponse, RevokeRdsAccountResult, RevokeRdsAccountRequest>(request);
+            return await new RevokeRdsAccountExecutor().Client(this).Execute<RevokeRdsAccountResponse, RevokeRdsAccountResult, RevokeRdsAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1976,7 +1976,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopVmInstanceByIdResponse> StopVmInstanceById(StopVmInstanceByIdRequest request) {
-            return await new StopVmInstanceByIdExecutor().Client(this).Execute<StopVmInstanceByIdResponse, StopVmInstanceByIdResult, StopVmInstanceByIdRequest>(request);
+            return await new StopVmInstanceByIdExecutor().Client(this).Execute<StopVmInstanceByIdResponse, StopVmInstanceByIdResult, StopVmInstanceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1995,7 +1995,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDiskByIdResponse> GetDiskById(GetDiskByIdRequest request) {
-            return await new GetDiskByIdExecutor().Client(this).Execute<GetDiskByIdResponse, GetDiskByIdResult, GetDiskByIdRequest>(request);
+            return await new GetDiskByIdExecutor().Client(this).Execute<GetDiskByIdResponse, GetDiskByIdResult, GetDiskByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2014,7 +2014,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVmImagesResponse> GetVmImages(GetVmImagesRequest request) {
-            return await new GetVmImagesExecutor().Client(this).Execute<GetVmImagesResponse, GetVmImagesResult, GetVmImagesRequest>(request);
+            return await new GetVmImagesExecutor().Client(this).Execute<GetVmImagesResponse, GetVmImagesResult, GetVmImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2033,7 +2033,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EditDeploymentResponse> EditDeployment(EditDeploymentRequest request) {
-            return await new EditDeploymentExecutor().Client(this).Execute<EditDeploymentResponse, EditDeploymentResult, EditDeploymentRequest>(request);
+            return await new EditDeploymentExecutor().Client(this).Execute<EditDeploymentResponse, EditDeploymentResult, EditDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2052,7 +2052,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDatasourceResponse> DeleteDatasource(DeleteDatasourceRequest request) {
-            return await new DeleteDatasourceExecutor().Client(this).Execute<DeleteDatasourceResponse, DeleteDatasourceResult, DeleteDatasourceRequest>(request);
+            return await new DeleteDatasourceExecutor().Client(this).Execute<DeleteDatasourceResponse, DeleteDatasourceResult, DeleteDatasourceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2071,7 +2071,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcSlbByIdResponse> DeleteVpcSlbById(DeleteVpcSlbByIdRequest request) {
-            return await new DeleteVpcSlbByIdExecutor().Client(this).Execute<DeleteVpcSlbByIdResponse, DeleteVpcSlbByIdResult, DeleteVpcSlbByIdRequest>(request);
+            return await new DeleteVpcSlbByIdExecutor().Client(this).Execute<DeleteVpcSlbByIdResponse, DeleteVpcSlbByIdResult, DeleteVpcSlbByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2090,7 +2090,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVmInstanceByIdResponse> DeleteVmInstanceById(DeleteVmInstanceByIdRequest request) {
-            return await new DeleteVmInstanceByIdExecutor().Client(this).Execute<DeleteVmInstanceByIdResponse, DeleteVmInstanceByIdResult, DeleteVmInstanceByIdRequest>(request);
+            return await new DeleteVmInstanceByIdExecutor().Client(this).Execute<DeleteVmInstanceByIdResponse, DeleteVmInstanceByIdResult, DeleteVmInstanceByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2109,7 +2109,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetVmInstanceTypesResponse> GetVmInstanceTypes(GetVmInstanceTypesRequest request) {
-            return await new GetVmInstanceTypesExecutor().Client(this).Execute<GetVmInstanceTypesResponse, GetVmInstanceTypesResult, GetVmInstanceTypesRequest>(request);
+            return await new GetVmInstanceTypesExecutor().Client(this).Execute<GetVmInstanceTypesResponse, GetVmInstanceTypesResult, GetVmInstanceTypesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2128,7 +2128,7 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateBucketResponse> CreateBucket(CreateBucketRequest request) {
-            return await new CreateBucketExecutor().Client(this).Execute<CreateBucketResponse, CreateBucketResult, CreateBucketRequest>(request);
+            return await new CreateBucketExecutor().Client(this).Execute<CreateBucketResponse, CreateBucketResult, CreateBucketRequest>(request).ConfigureAwait(false);
         }
 #endif
 

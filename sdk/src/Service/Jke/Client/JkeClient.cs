@@ -152,7 +152,7 @@ namespace JDCloudSDK.Jke.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
-            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
+            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
         }
 #endif
 

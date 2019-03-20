@@ -152,7 +152,7 @@ namespace JDCloudSDK.Billing.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryBillSummaryResponse> QueryBillSummary(QueryBillSummaryRequest request) {
-            return await new QueryBillSummaryExecutor().Client(this).Execute<QueryBillSummaryResponse, QueryBillSummaryResult, QueryBillSummaryRequest>(request);
+            return await new QueryBillSummaryExecutor().Client(this).Execute<QueryBillSummaryResponse, QueryBillSummaryResult, QueryBillSummaryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Billing.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryBillDetailResponse> QueryBillDetail(QueryBillDetailRequest request) {
-            return await new QueryBillDetailExecutor().Client(this).Execute<QueryBillDetailResponse, QueryBillDetailResult, QueryBillDetailRequest>(request);
+            return await new QueryBillDetailExecutor().Client(this).Execute<QueryBillDetailResponse, QueryBillDetailResult, QueryBillDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -152,7 +152,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeKeyListResponse> DescribeKeyList(DescribeKeyListRequest request) {
-            return await new DescribeKeyListExecutor().Client(this).Execute<DescribeKeyListResponse, DescribeKeyListResult, DescribeKeyListRequest>(request);
+            return await new DescribeKeyListExecutor().Client(this).Execute<DescribeKeyListResponse, DescribeKeyListResult, DescribeKeyListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateSecretVersionResponse> UpdateSecretVersion(UpdateSecretVersionRequest request) {
-            return await new UpdateSecretVersionExecutor().Client(this).Execute<UpdateSecretVersionResponse, UpdateSecretVersionResult, UpdateSecretVersionRequest>(request);
+            return await new UpdateSecretVersionExecutor().Client(this).Execute<UpdateSecretVersionResponse, UpdateSecretVersionResult, UpdateSecretVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GenerateDataKeyResponse> GenerateDataKey(GenerateDataKeyRequest request) {
-            return await new GenerateDataKeyExecutor().Client(this).Execute<GenerateDataKeyResponse, GenerateDataKeyResult, GenerateDataKeyRequest>(request);
+            return await new GenerateDataKeyExecutor().Client(this).Execute<GenerateDataKeyResponse, GenerateDataKeyResult, GenerateDataKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableKeyVersionResponse> EnableKeyVersion(EnableKeyVersionRequest request) {
-            return await new EnableKeyVersionExecutor().Client(this).Execute<EnableKeyVersionResponse, EnableKeyVersionResult, EnableKeyVersionRequest>(request);
+            return await new EnableKeyVersionExecutor().Client(this).Execute<EnableKeyVersionResponse, EnableKeyVersionResult, EnableKeyVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
-            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
+            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EncryptResponse> Encrypt(EncryptRequest request) {
-            return await new EncryptExecutor().Client(this).Execute<EncryptResponse, EncryptResult, EncryptRequest>(request);
+            return await new EncryptExecutor().Client(this).Execute<EncryptResponse, EncryptResult, EncryptRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableKeyResponse> EnableKey(EnableKeyRequest request) {
-            return await new EnableKeyExecutor().Client(this).Execute<EnableKeyResponse, EnableKeyResult, EnableKeyRequest>(request);
+            return await new EnableKeyExecutor().Client(this).Execute<EnableKeyResponse, EnableKeyResult, EnableKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CancelKeyDeletionResponse> CancelKeyDeletion(CancelKeyDeletionRequest request) {
-            return await new CancelKeyDeletionExecutor().Client(this).Execute<CancelKeyDeletionResponse, CancelKeyDeletionResult, CancelKeyDeletionRequest>(request);
+            return await new CancelKeyDeletionExecutor().Client(this).Execute<CancelKeyDeletionResponse, CancelKeyDeletionResult, CancelKeyDeletionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
-            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableSecretResponse> DisableSecret(DisableSecretRequest request) {
-            return await new DisableSecretExecutor().Client(this).Execute<DisableSecretResponse, DisableSecretResult, DisableSecretRequest>(request);
+            return await new DisableSecretExecutor().Client(this).Execute<DisableSecretResponse, DisableSecretResult, DisableSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableSecretVersionResponse> DisableSecretVersion(DisableSecretVersionRequest request) {
-            return await new DisableSecretVersionExecutor().Client(this).Execute<DisableSecretVersionResponse, DisableSecretVersionResult, DisableSecretVersionRequest>(request);
+            return await new DisableSecretVersionExecutor().Client(this).Execute<DisableSecretVersionResponse, DisableSecretVersionResult, DisableSecretVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateKeyResponse> CreateKey(CreateKeyRequest request) {
-            return await new CreateKeyExecutor().Client(this).Execute<CreateKeyResponse, CreateKeyResult, CreateKeyRequest>(request);
+            return await new CreateKeyExecutor().Client(this).Execute<CreateKeyResponse, CreateKeyResult, CreateKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateKeyDescriptionResponse> UpdateKeyDescription(UpdateKeyDescriptionRequest request) {
-            return await new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request);
+            return await new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretVersionListResponse> DescribeSecretVersionList(DescribeSecretVersionListRequest request) {
-            return await new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request);
+            return await new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExportSecretResponse> ExportSecret(ExportSecretRequest request) {
-            return await new ExportSecretExecutor().Client(this).Execute<ExportSecretResponse, ExportSecretResult, ExportSecretRequest>(request);
+            return await new ExportSecretExecutor().Client(this).Execute<ExportSecretResponse, ExportSecretResult, ExportSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSecretVersionResponse> DeleteSecretVersion(DeleteSecretVersionRequest request) {
-            return await new DeleteSecretVersionExecutor().Client(this).Execute<DeleteSecretVersionResponse, DeleteSecretVersionResult, DeleteSecretVersionRequest>(request);
+            return await new DeleteSecretVersionExecutor().Client(this).Execute<DeleteSecretVersionResponse, DeleteSecretVersionResult, DeleteSecretVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeKeyResponse> DescribeKey(DescribeKeyRequest request) {
-            return await new DescribeKeyExecutor().Client(this).Execute<DescribeKeyResponse, DescribeKeyResult, DescribeKeyRequest>(request);
+            return await new DescribeKeyExecutor().Client(this).Execute<DescribeKeyResponse, DescribeKeyResult, DescribeKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ImportSecretResponse> ImportSecret(ImportSecretRequest request) {
-            return await new ImportSecretExecutor().Client(this).Execute<ImportSecretResponse, ImportSecretResult, ImportSecretRequest>(request);
+            return await new ImportSecretExecutor().Client(this).Execute<ImportSecretResponse, ImportSecretResult, ImportSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -494,7 +494,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ScheduleKeyDeletionResponse> ScheduleKeyDeletion(ScheduleKeyDeletionRequest request) {
-            return await new ScheduleKeyDeletionExecutor().Client(this).Execute<ScheduleKeyDeletionResponse, ScheduleKeyDeletionResult, ScheduleKeyDeletionRequest>(request);
+            return await new ScheduleKeyDeletionExecutor().Client(this).Execute<ScheduleKeyDeletionResponse, ScheduleKeyDeletionResult, ScheduleKeyDeletionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -513,7 +513,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<KeyRotationResponse> KeyRotation(KeyRotationRequest request) {
-            return await new KeyRotationExecutor().Client(this).Execute<KeyRotationResponse, KeyRotationResult, KeyRotationRequest>(request);
+            return await new KeyRotationExecutor().Client(this).Execute<KeyRotationResponse, KeyRotationResult, KeyRotationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,7 +532,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretListResponse> DescribeSecretList(DescribeSecretListRequest request) {
-            return await new DescribeSecretListExecutor().Client(this).Execute<DescribeSecretListResponse, DescribeSecretListResult, DescribeSecretListRequest>(request);
+            return await new DescribeSecretListExecutor().Client(this).Execute<DescribeSecretListResponse, DescribeSecretListResult, DescribeSecretListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretVersionInfoResponse> DescribeSecretVersionInfo(DescribeSecretVersionInfoRequest request) {
-            return await new DescribeSecretVersionInfoExecutor().Client(this).Execute<DescribeSecretVersionInfoResponse, DescribeSecretVersionInfoResult, DescribeSecretVersionInfoRequest>(request);
+            return await new DescribeSecretVersionInfoExecutor().Client(this).Execute<DescribeSecretVersionInfoResponse, DescribeSecretVersionInfoResult, DescribeSecretVersionInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -570,7 +570,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableKeyVersionResponse> DisableKeyVersion(DisableKeyVersionRequest request) {
-            return await new DisableKeyVersionExecutor().Client(this).Execute<DisableKeyVersionResponse, DisableKeyVersionResult, DisableKeyVersionRequest>(request);
+            return await new DisableKeyVersionExecutor().Client(this).Execute<DisableKeyVersionResponse, DisableKeyVersionResult, DisableKeyVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -589,7 +589,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DecryptResponse> Decrypt(DecryptRequest request) {
-            return await new DecryptExecutor().Client(this).Execute<DecryptResponse, DecryptResult, DecryptRequest>(request);
+            return await new DecryptExecutor().Client(this).Execute<DecryptResponse, DecryptResult, DecryptRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -608,7 +608,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableSecretResponse> EnableSecret(EnableSecretRequest request) {
-            return await new EnableSecretExecutor().Client(this).Execute<EnableSecretResponse, EnableSecretResult, EnableSecretRequest>(request);
+            return await new EnableSecretExecutor().Client(this).Execute<EnableSecretResponse, EnableSecretResult, EnableSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -627,7 +627,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableKeyResponse> DisableKey(DisableKeyRequest request) {
-            return await new DisableKeyExecutor().Client(this).Execute<DisableKeyResponse, DisableKeyResult, DisableKeyRequest>(request);
+            return await new DisableKeyExecutor().Client(this).Execute<DisableKeyResponse, DisableKeyResult, DisableKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -646,7 +646,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableSecretVersionResponse> EnableSecretVersion(EnableSecretVersionRequest request) {
-            return await new EnableSecretVersionExecutor().Client(this).Execute<EnableSecretVersionResponse, EnableSecretVersionResult, EnableSecretVersionRequest>(request);
+            return await new EnableSecretVersionExecutor().Client(this).Execute<EnableSecretVersionResponse, EnableSecretVersionResult, EnableSecretVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -665,7 +665,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ScheduleKeyVersionDeletionResponse> ScheduleKeyVersionDeletion(ScheduleKeyVersionDeletionRequest request) {
-            return await new ScheduleKeyVersionDeletionExecutor().Client(this).Execute<ScheduleKeyVersionDeletionResponse, ScheduleKeyVersionDeletionResult, ScheduleKeyVersionDeletionRequest>(request);
+            return await new ScheduleKeyVersionDeletionExecutor().Client(this).Execute<ScheduleKeyVersionDeletionResponse, ScheduleKeyVersionDeletionResult, ScheduleKeyVersionDeletionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -684,7 +684,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeKeyDetailResponse> DescribeKeyDetail(DescribeKeyDetailRequest request) {
-            return await new DescribeKeyDetailExecutor().Client(this).Execute<DescribeKeyDetailResponse, DescribeKeyDetailResult, DescribeKeyDetailRequest>(request);
+            return await new DescribeKeyDetailExecutor().Client(this).Execute<DescribeKeyDetailResponse, DescribeKeyDetailResult, DescribeKeyDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -703,7 +703,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSecretVersionResponse> CreateSecretVersion(CreateSecretVersionRequest request) {
-            return await new CreateSecretVersionExecutor().Client(this).Execute<CreateSecretVersionResponse, CreateSecretVersionResult, CreateSecretVersionRequest>(request);
+            return await new CreateSecretVersionExecutor().Client(this).Execute<CreateSecretVersionResponse, CreateSecretVersionResult, CreateSecretVersionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -722,7 +722,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateSecretResponse> UpdateSecret(UpdateSecretRequest request) {
-            return await new UpdateSecretExecutor().Client(this).Execute<UpdateSecretResponse, UpdateSecretResult, UpdateSecretRequest>(request);
+            return await new UpdateSecretExecutor().Client(this).Execute<UpdateSecretResponse, UpdateSecretResult, UpdateSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -741,7 +741,7 @@ namespace JDCloudSDK.Kms.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CancelKeyVersionDeletionResponse> CancelKeyVersionDeletion(CancelKeyVersionDeletionRequest request) {
-            return await new CancelKeyVersionDeletionExecutor().Client(this).Execute<CancelKeyVersionDeletionResponse, CancelKeyVersionDeletionResult, CancelKeyVersionDeletionRequest>(request);
+            return await new CancelKeyVersionDeletionExecutor().Client(this).Execute<CancelKeyVersionDeletionResponse, CancelKeyVersionDeletionResult, CancelKeyVersionDeletionRequest>(request).ConfigureAwait(false);
         }
 #endif
 

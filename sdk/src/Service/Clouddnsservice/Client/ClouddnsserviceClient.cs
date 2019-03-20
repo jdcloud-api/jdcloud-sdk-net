@@ -152,7 +152,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DelDomainResponse> DelDomain(DelDomainRequest request) {
-            return await new DelDomainExecutor().Client(this).Execute<DelDomainResponse, DelDomainResult, DelDomainRequest>(request);
+            return await new DelDomainExecutor().Client(this).Execute<DelDomainResponse, DelDomainResult, DelDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainQueryCountResponse> GetDomainQueryCount(GetDomainQueryCountRequest request) {
-            return await new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request);
+            return await new GetDomainQueryCountExecutor().Client(this).Execute<GetDomainQueryCountResponse, GetDomainQueryCountResult, GetDomainQueryCountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -194,7 +194,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<BatchSetDnsResolveResponse> BatchSetDnsResolve(BatchSetDnsResolveRequest request) {
-            return await new BatchSetDnsResolveExecutor().Client(this).Execute<BatchSetDnsResolveResponse, BatchSetDnsResolveResult, BatchSetDnsResolveRequest>(request);
+            return await new BatchSetDnsResolveExecutor().Client(this).Execute<BatchSetDnsResolveResponse, BatchSetDnsResolveResult, BatchSetDnsResolveRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -213,7 +213,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetActionLogResponse> GetActionLog(GetActionLogRequest request) {
-            return await new GetActionLogExecutor().Client(this).Execute<GetActionLogResponse, GetActionLogResult, GetActionLogRequest>(request);
+            return await new GetActionLogExecutor().Client(this).Execute<GetActionLogResponse, GetActionLogResult, GetActionLogRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -232,7 +232,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainQueryTrafficResponse> GetDomainQueryTraffic(GetDomainQueryTrafficRequest request) {
-            return await new GetDomainQueryTrafficExecutor().Client(this).Execute<GetDomainQueryTrafficResponse, GetDomainQueryTrafficResult, GetDomainQueryTrafficRequest>(request);
+            return await new GetDomainQueryTrafficExecutor().Client(this).Execute<GetDomainQueryTrafficResponse, GetDomainQueryTrafficResult, GetDomainQueryTrafficRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -251,7 +251,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OperateMonitorResponse> OperateMonitor(OperateMonitorRequest request) {
-            return await new OperateMonitorExecutor().Client(this).Execute<OperateMonitorResponse, OperateMonitorResult, OperateMonitorRequest>(request);
+            return await new OperateMonitorExecutor().Client(this).Execute<OperateMonitorResponse, OperateMonitorResult, OperateMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -270,7 +270,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddUserViewIPResponse> AddUserViewIP(AddUserViewIPRequest request) {
-            return await new AddUserViewIPExecutor().Client(this).Execute<AddUserViewIPResponse, AddUserViewIPResult, AddUserViewIPRequest>(request);
+            return await new AddUserViewIPExecutor().Client(this).Execute<AddUserViewIPResponse, AddUserViewIPResult, AddUserViewIPRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -289,7 +289,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddMonitorTargetResponse> AddMonitorTarget(AddMonitorTargetRequest request) {
-            return await new AddMonitorTargetExecutor().Client(this).Execute<AddMonitorTargetResponse, AddMonitorTargetResult, AddMonitorTargetRequest>(request);
+            return await new AddMonitorTargetExecutor().Client(this).Execute<AddMonitorTargetResponse, AddMonitorTargetResult, AddMonitorTargetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -308,7 +308,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddRRResponse> AddRR(AddRRRequest request) {
-            return await new AddRRExecutor().Client(this).Execute<AddRRResponse, AddRRResult, AddRRRequest>(request);
+            return await new AddRRExecutor().Client(this).Execute<AddRRResponse, AddRRResult, AddRRRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -327,7 +327,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DelUserViewResponse> DelUserView(DelUserViewRequest request) {
-            return await new DelUserViewExecutor().Client(this).Execute<DelUserViewResponse, DelUserViewResult, DelUserViewRequest>(request);
+            return await new DelUserViewExecutor().Client(this).Execute<DelUserViewResponse, DelUserViewResult, DelUserViewRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -346,7 +346,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OperateRRResponse> OperateRR(OperateRRRequest request) {
-            return await new OperateRRExecutor().Client(this).Execute<OperateRRResponse, OperateRRResult, OperateRRRequest>(request);
+            return await new OperateRRExecutor().Client(this).Execute<OperateRRResponse, OperateRRResult, OperateRRRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -365,7 +365,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DelUserViewIPResponse> DelUserViewIP(DelUserViewIPRequest request) {
-            return await new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request);
+            return await new DelUserViewIPExecutor().Client(this).Execute<DelUserViewIPResponse, DelUserViewIPResult, DelUserViewIPRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -384,7 +384,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetMonitorResponse> GetMonitor(GetMonitorRequest request) {
-            return await new GetMonitorExecutor().Client(this).Execute<GetMonitorResponse, GetMonitorResult, GetMonitorRequest>(request);
+            return await new GetMonitorExecutor().Client(this).Execute<GetMonitorResponse, GetMonitorResult, GetMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -403,7 +403,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateMonitorResponse> UpdateMonitor(UpdateMonitorRequest request) {
-            return await new UpdateMonitorExecutor().Client(this).Execute<UpdateMonitorResponse, UpdateMonitorResult, UpdateMonitorRequest>(request);
+            return await new UpdateMonitorExecutor().Client(this).Execute<UpdateMonitorResponse, UpdateMonitorResult, UpdateMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -422,7 +422,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetUserViewIPResponse> GetUserViewIP(GetUserViewIPRequest request) {
-            return await new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request);
+            return await new GetUserViewIPExecutor().Client(this).Execute<GetUserViewIPResponse, GetUserViewIPResult, GetUserViewIPRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -441,7 +441,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetTargetsResponse> GetTargets(GetTargetsRequest request) {
-            return await new GetTargetsExecutor().Client(this).Execute<GetTargetsResponse, GetTargetsResult, GetTargetsRequest>(request);
+            return await new GetTargetsExecutor().Client(this).Execute<GetTargetsResponse, GetTargetsResult, GetTargetsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -460,7 +460,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetMonitorAlarmInfoResponse> GetMonitorAlarmInfo(GetMonitorAlarmInfoRequest request) {
-            return await new GetMonitorAlarmInfoExecutor().Client(this).Execute<GetMonitorAlarmInfoResponse, GetMonitorAlarmInfoResult, GetMonitorAlarmInfoRequest>(request);
+            return await new GetMonitorAlarmInfoExecutor().Client(this).Execute<GetMonitorAlarmInfoResponse, GetMonitorAlarmInfoResult, GetMonitorAlarmInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -479,7 +479,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddMonitorResponse> AddMonitor(AddMonitorRequest request) {
-            return await new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request);
+            return await new AddMonitorExecutor().Client(this).Execute<AddMonitorResponse, AddMonitorResult, AddMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -498,7 +498,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateDomainResponse> UpdateDomain(UpdateDomainRequest request) {
-            return await new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request);
+            return await new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -517,7 +517,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateRRResponse> UpdateRR(UpdateRRRequest request) {
-            return await new UpdateRRExecutor().Client(this).Execute<UpdateRRResponse, UpdateRRResult, UpdateRRRequest>(request);
+            return await new UpdateRRExecutor().Client(this).Execute<UpdateRRResponse, UpdateRRResult, UpdateRRRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -536,7 +536,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddUserViewResponse> AddUserView(AddUserViewRequest request) {
-            return await new AddUserViewExecutor().Client(this).Execute<AddUserViewResponse, AddUserViewResult, AddUserViewRequest>(request);
+            return await new AddUserViewExecutor().Client(this).Execute<AddUserViewResponse, AddUserViewResult, AddUserViewRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -559,7 +559,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SearchRRResponse> SearchRR(SearchRRRequest request) {
-            return await new SearchRRExecutor().Client(this).Execute<SearchRRResponse, SearchRRResult, SearchRRRequest>(request);
+            return await new SearchRRExecutor().Client(this).Execute<SearchRRResponse, SearchRRResult, SearchRRRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -578,7 +578,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetUserViewResponse> GetUserView(GetUserViewRequest request) {
-            return await new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request);
+            return await new GetUserViewExecutor().Client(this).Execute<GetUserViewResponse, GetUserViewResult, GetUserViewRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -601,7 +601,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainsResponse> GetDomains(GetDomainsRequest request) {
-            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
+            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -620,7 +620,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddDomainResponse> AddDomain(AddDomainRequest request) {
-            return await new AddDomainExecutor().Client(this).Execute<AddDomainResponse, AddDomainResult, AddDomainRequest>(request);
+            return await new AddDomainExecutor().Client(this).Execute<AddDomainResponse, AddDomainResult, AddDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -643,7 +643,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetViewTreeResponse> GetViewTree(GetViewTreeRequest request) {
-            return await new GetViewTreeExecutor().Client(this).Execute<GetViewTreeResponse, GetViewTreeResult, GetViewTreeRequest>(request);
+            return await new GetViewTreeExecutor().Client(this).Execute<GetViewTreeResponse, GetViewTreeResult, GetViewTreeRequest>(request).ConfigureAwait(false);
         }
 #endif
 

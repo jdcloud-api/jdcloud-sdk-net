@@ -152,7 +152,7 @@ namespace JDCloudSDK.Baseanti.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetCleanThresholdResponse> SetCleanThreshold(SetCleanThresholdRequest request) {
-            return await new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request);
+            return await new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Baseanti.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourcesResponse> DescribeIpResources(DescribeIpResourcesRequest request) {
-            return await new DescribeIpResourcesExecutor().Client(this).Execute<DescribeIpResourcesResponse, DescribeIpResourcesResult, DescribeIpResourcesRequest>(request);
+            return await new DescribeIpResourcesExecutor().Client(this).Execute<DescribeIpResourcesResponse, DescribeIpResourcesResult, DescribeIpResourcesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Baseanti.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourceFlowResponse> DescribeIpResourceFlow(DescribeIpResourceFlowRequest request) {
-            return await new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request);
+            return await new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Baseanti.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourceProtectInfoResponse> DescribeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) {
-            return await new DescribeIpResourceProtectInfoExecutor().Client(this).Execute<DescribeIpResourceProtectInfoResponse, DescribeIpResourceProtectInfoResult, DescribeIpResourceProtectInfoRequest>(request);
+            return await new DescribeIpResourceProtectInfoExecutor().Client(this).Execute<DescribeIpResourceProtectInfoResponse, DescribeIpResourceProtectInfoResult, DescribeIpResourceProtectInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Baseanti.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourceInfoResponse> DescribeIpResourceInfo(DescribeIpResourceInfoRequest request) {
-            return await new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request);
+            return await new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 

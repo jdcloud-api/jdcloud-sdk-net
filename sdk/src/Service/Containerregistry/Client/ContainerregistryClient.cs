@@ -158,7 +158,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateRepositoryResponse> CreateRepository(CreateRepositoryRequest request) {
-            return await new CreateRepositoryExecutor().Client(this).Execute<CreateRepositoryResponse, CreateRepositoryResult, CreateRepositoryRequest>(request);
+            return await new CreateRepositoryExecutor().Client(this).Execute<CreateRepositoryResponse, CreateRepositoryResult, CreateRepositoryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -179,7 +179,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CheckRepositoryNameResponse> CheckRepositoryName(CheckRepositoryNameRequest request) {
-            return await new CheckRepositoryNameExecutor().Client(this).Execute<CheckRepositoryNameResponse, CheckRepositoryNameResult, CheckRepositoryNameRequest>(request);
+            return await new CheckRepositoryNameExecutor().Client(this).Execute<CheckRepositoryNameResponse, CheckRepositoryNameResult, CheckRepositoryNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -200,7 +200,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRegistryResponse> DeleteRegistry(DeleteRegistryRequest request) {
-            return await new DeleteRegistryExecutor().Client(this).Execute<DeleteRegistryResponse, DeleteRegistryResult, DeleteRegistryRequest>(request);
+            return await new DeleteRegistryExecutor().Client(this).Execute<DeleteRegistryResponse, DeleteRegistryResult, DeleteRegistryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -221,7 +221,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRepositoryResponse> DeleteRepository(DeleteRepositoryRequest request) {
-            return await new DeleteRepositoryExecutor().Client(this).Execute<DeleteRepositoryResponse, DeleteRepositoryResult, DeleteRepositoryRequest>(request);
+            return await new DeleteRepositoryExecutor().Client(this).Execute<DeleteRepositoryResponse, DeleteRepositoryResult, DeleteRepositoryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -240,7 +240,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
-            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
+            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
-            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -282,7 +282,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRepositoriesResponse> DescribeRepositories(DescribeRepositoriesRequest request) {
-            return await new DescribeRepositoriesExecutor().Client(this).Execute<DescribeRepositoriesResponse, DescribeRepositoriesResult, DescribeRepositoriesRequest>(request);
+            return await new DescribeRepositoriesExecutor().Client(this).Execute<DescribeRepositoriesResponse, DescribeRepositoriesResult, DescribeRepositoriesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -303,7 +303,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRegistryResponse> DescribeRegistry(DescribeRegistryRequest request) {
-            return await new DescribeRegistryExecutor().Client(this).Execute<DescribeRegistryResponse, DescribeRegistryResult, DescribeRegistryRequest>(request);
+            return await new DescribeRegistryExecutor().Client(this).Execute<DescribeRegistryResponse, DescribeRegistryResult, DescribeRegistryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -324,7 +324,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CheckRegistryNameResponse> CheckRegistryName(CheckRegistryNameRequest request) {
-            return await new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request);
+            return await new CheckRegistryNameExecutor().Client(this).Execute<CheckRegistryNameResponse, CheckRegistryNameResult, CheckRegistryNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -345,7 +345,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateRegistryResponse> CreateRegistry(CreateRegistryRequest request) {
-            return await new CreateRegistryExecutor().Client(this).Execute<CreateRegistryResponse, CreateRegistryResult, CreateRegistryRequest>(request);
+            return await new CreateRegistryExecutor().Client(this).Execute<CreateRegistryResponse, CreateRegistryResult, CreateRegistryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -374,7 +374,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteImageResponse> DeleteImage(DeleteImageRequest request) {
-            return await new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request);
+            return await new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAuthorizationTokenResponse> GetAuthorizationToken(GetAuthorizationTokenRequest request) {
-            return await new GetAuthorizationTokenExecutor().Client(this).Execute<GetAuthorizationTokenResponse, GetAuthorizationTokenResult, GetAuthorizationTokenRequest>(request);
+            return await new GetAuthorizationTokenExecutor().Client(this).Execute<GetAuthorizationTokenResponse, GetAuthorizationTokenResult, GetAuthorizationTokenRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -422,7 +422,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuthorizationTokensResponse> DescribeAuthorizationTokens(DescribeAuthorizationTokensRequest request) {
-            return await new DescribeAuthorizationTokensExecutor().Client(this).Execute<DescribeAuthorizationTokensResponse, DescribeAuthorizationTokensResult, DescribeAuthorizationTokensRequest>(request);
+            return await new DescribeAuthorizationTokensExecutor().Client(this).Execute<DescribeAuthorizationTokensResponse, DescribeAuthorizationTokensResult, DescribeAuthorizationTokensRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -443,7 +443,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ReleaseAuthorizationTokenResponse> ReleaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) {
-            return await new ReleaseAuthorizationTokenExecutor().Client(this).Execute<ReleaseAuthorizationTokenResponse, ReleaseAuthorizationTokenResult, ReleaseAuthorizationTokenRequest>(request);
+            return await new ReleaseAuthorizationTokenExecutor().Client(this).Execute<ReleaseAuthorizationTokenResponse, ReleaseAuthorizationTokenResult, ReleaseAuthorizationTokenRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -466,7 +466,7 @@ namespace JDCloudSDK.Containerregistry.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRegistriesResponse> DescribeRegistries(DescribeRegistriesRequest request) {
-            return await new DescribeRegistriesExecutor().Client(this).Execute<DescribeRegistriesResponse, DescribeRegistriesResult, DescribeRegistriesRequest>(request);
+            return await new DescribeRegistriesExecutor().Client(this).Execute<DescribeRegistriesResponse, DescribeRegistriesResult, DescribeRegistriesRequest>(request).ConfigureAwait(false);
         }
 #endif
 

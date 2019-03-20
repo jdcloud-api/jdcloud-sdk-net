@@ -152,7 +152,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStacksResponse> DescribeStacks(DescribeStacksRequest request) {
-            return await new DescribeStacksExecutor().Client(this).Execute<DescribeStacksResponse, DescribeStacksResult, DescribeStacksRequest>(request);
+            return await new DescribeStacksExecutor().Client(this).Execute<DescribeStacksResponse, DescribeStacksResult, DescribeStacksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStackEventsResponse> DescribeStackEvents(DescribeStackEventsRequest request) {
-            return await new DescribeStackEventsExecutor().Client(this).Execute<DescribeStackEventsResponse, DescribeStackEventsResult, DescribeStackEventsRequest>(request);
+            return await new DescribeStackEventsExecutor().Client(this).Execute<DescribeStackEventsResponse, DescribeStackEventsResult, DescribeStackEventsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStackResourcesResponse> DescribeStackResources(DescribeStackResourcesRequest request) {
-            return await new DescribeStackResourcesExecutor().Client(this).Execute<DescribeStackResourcesResponse, DescribeStackResourcesResult, DescribeStackResourcesRequest>(request);
+            return await new DescribeStackResourcesExecutor().Client(this).Execute<DescribeStackResourcesResponse, DescribeStackResourcesResult, DescribeStackResourcesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateChangeSetResponse> CreateChangeSet(CreateChangeSetRequest request) {
-            return await new CreateChangeSetExecutor().Client(this).Execute<CreateChangeSetResponse, CreateChangeSetResult, CreateChangeSetRequest>(request);
+            return await new CreateChangeSetExecutor().Client(this).Execute<CreateChangeSetResponse, CreateChangeSetResult, CreateChangeSetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateStackResponse> CreateStack(CreateStackRequest request) {
-            return await new CreateStackExecutor().Client(this).Execute<CreateStackResponse, CreateStackResult, CreateStackRequest>(request);
+            return await new CreateStackExecutor().Client(this).Execute<CreateStackResponse, CreateStackResult, CreateStackRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStackResponse> DescribeStack(DescribeStackRequest request) {
-            return await new DescribeStackExecutor().Client(this).Execute<DescribeStackResponse, DescribeStackResult, DescribeStackRequest>(request);
+            return await new DescribeStackExecutor().Client(this).Execute<DescribeStackResponse, DescribeStackResult, DescribeStackRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStackTemplateResponse> DescribeStackTemplate(DescribeStackTemplateRequest request) {
-            return await new DescribeStackTemplateExecutor().Client(this).Execute<DescribeStackTemplateResponse, DescribeStackTemplateResult, DescribeStackTemplateRequest>(request);
+            return await new DescribeStackTemplateExecutor().Client(this).Execute<DescribeStackTemplateResponse, DescribeStackTemplateResult, DescribeStackTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExecuteChangeSetResponse> ExecuteChangeSet(ExecuteChangeSetRequest request) {
-            return await new ExecuteChangeSetExecutor().Client(this).Execute<ExecuteChangeSetResponse, ExecuteChangeSetResult, ExecuteChangeSetRequest>(request);
+            return await new ExecuteChangeSetExecutor().Client(this).Execute<ExecuteChangeSetResponse, ExecuteChangeSetResult, ExecuteChangeSetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteStackResponse> DeleteStack(DeleteStackRequest request) {
-            return await new DeleteStackExecutor().Client(this).Execute<DeleteStackResponse, DeleteStackResult, DeleteStackRequest>(request);
+            return await new DeleteStackExecutor().Client(this).Execute<DeleteStackResponse, DeleteStackResult, DeleteStackRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeResourceTypeSpecificationResponse> DescribeResourceTypeSpecification(DescribeResourceTypeSpecificationRequest request) {
-            return await new DescribeResourceTypeSpecificationExecutor().Client(this).Execute<DescribeResourceTypeSpecificationResponse, DescribeResourceTypeSpecificationResult, DescribeResourceTypeSpecificationRequest>(request);
+            return await new DescribeResourceTypeSpecificationExecutor().Client(this).Execute<DescribeResourceTypeSpecificationResponse, DescribeResourceTypeSpecificationResult, DescribeResourceTypeSpecificationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ValidateTemplateResponse> ValidateTemplate(ValidateTemplateRequest request) {
-            return await new ValidateTemplateExecutor().Client(this).Execute<ValidateTemplateResponse, ValidateTemplateResult, ValidateTemplateRequest>(request);
+            return await new ValidateTemplateExecutor().Client(this).Execute<ValidateTemplateResponse, ValidateTemplateResult, ValidateTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Jdro.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeResourceTypeListResponse> DescribeResourceTypeList(DescribeResourceTypeListRequest request) {
-            return await new DescribeResourceTypeListExecutor().Client(this).Execute<DescribeResourceTypeListResponse, DescribeResourceTypeListResult, DescribeResourceTypeListRequest>(request);
+            return await new DescribeResourceTypeListExecutor().Client(this).Execute<DescribeResourceTypeListResponse, DescribeResourceTypeListResult, DescribeResourceTypeListRequest>(request).ConfigureAwait(false);
         }
 #endif
 

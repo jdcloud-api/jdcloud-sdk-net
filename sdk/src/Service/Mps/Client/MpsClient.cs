@@ -152,7 +152,7 @@ namespace JDCloudSDK.Mps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateThumbnailTaskResponse> CreateThumbnailTask(CreateThumbnailTaskRequest request) {
-            return await new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request);
+            return await new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Mps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListThumbnailTaskResponse> ListThumbnailTask(ListThumbnailTaskRequest request) {
-            return await new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
+            return await new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Mps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetNotificationResponse> GetNotification(GetNotificationRequest request) {
-            return await new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request);
+            return await new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Mps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetThumbnailTaskResponse> GetThumbnailTask(GetThumbnailTaskRequest request) {
-            return await new GetThumbnailTaskExecutor().Client(this).Execute<GetThumbnailTaskResponse, GetThumbnailTaskResult, GetThumbnailTaskRequest>(request);
+            return await new GetThumbnailTaskExecutor().Client(this).Execute<GetThumbnailTaskResponse, GetThumbnailTaskResult, GetThumbnailTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Mps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetNotificationResponse> SetNotification(SetNotificationRequest request) {
-            return await new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request);
+            return await new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request).ConfigureAwait(false);
         }
 #endif
 

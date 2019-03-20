@@ -216,7 +216,7 @@ namespace JDCloudSDK.Core.Utils
                     }
                     else
                     {
-                        message = await httpClient.SendAsync(httpRequestMessage);
+                        message = await httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
                     }
                 }
                 HttpSDKResponse httpSDKResponse = new HttpSDKResponse();

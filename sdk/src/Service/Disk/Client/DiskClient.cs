@@ -152,7 +152,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifySnapshotAttributeResponse> ModifySnapshotAttribute(ModifySnapshotAttributeRequest request) {
-            return await new ModifySnapshotAttributeExecutor().Client(this).Execute<ModifySnapshotAttributeResponse, ModifySnapshotAttributeResult, ModifySnapshotAttributeRequest>(request);
+            return await new ModifySnapshotAttributeExecutor().Client(this).Execute<ModifySnapshotAttributeResponse, ModifySnapshotAttributeResult, ModifySnapshotAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDisksResponse> CreateDisks(CreateDisksRequest request) {
-            return await new CreateDisksExecutor().Client(this).Execute<CreateDisksResponse, CreateDisksResult, CreateDisksRequest>(request);
+            return await new CreateDisksExecutor().Client(this).Execute<CreateDisksResponse, CreateDisksResult, CreateDisksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -210,7 +210,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSnapshotResponse> DeleteSnapshot(DeleteSnapshotRequest request) {
-            return await new DeleteSnapshotExecutor().Client(this).Execute<DeleteSnapshotResponse, DeleteSnapshotResult, DeleteSnapshotRequest>(request);
+            return await new DeleteSnapshotExecutor().Client(this).Execute<DeleteSnapshotResponse, DeleteSnapshotResult, DeleteSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -229,7 +229,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSnapshotsResponse> DescribeSnapshots(DescribeSnapshotsRequest request) {
-            return await new DescribeSnapshotsExecutor().Client(this).Execute<DescribeSnapshotsResponse, DescribeSnapshotsResult, DescribeSnapshotsRequest>(request);
+            return await new DescribeSnapshotsExecutor().Client(this).Execute<DescribeSnapshotsResponse, DescribeSnapshotsResult, DescribeSnapshotsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -254,7 +254,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreDiskResponse> RestoreDisk(RestoreDiskRequest request) {
-            return await new RestoreDiskExecutor().Client(this).Execute<RestoreDiskResponse, RestoreDiskResult, RestoreDiskRequest>(request);
+            return await new RestoreDiskExecutor().Client(this).Execute<RestoreDiskResponse, RestoreDiskResult, RestoreDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -273,7 +273,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDiskResponse> DescribeDisk(DescribeDiskRequest request) {
-            return await new DescribeDiskExecutor().Client(this).Execute<DescribeDiskResponse, DescribeDiskResult, DescribeDiskRequest>(request);
+            return await new DescribeDiskExecutor().Client(this).Execute<DescribeDiskResponse, DescribeDiskResult, DescribeDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -296,7 +296,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExtendDiskResponse> ExtendDisk(ExtendDiskRequest request) {
-            return await new ExtendDiskExecutor().Client(this).Execute<ExtendDiskResponse, ExtendDiskResult, ExtendDiskRequest>(request);
+            return await new ExtendDiskExecutor().Client(this).Execute<ExtendDiskResponse, ExtendDiskResult, ExtendDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -315,7 +315,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyDiskAttributeResponse> ModifyDiskAttribute(ModifyDiskAttributeRequest request) {
-            return await new ModifyDiskAttributeExecutor().Client(this).Execute<ModifyDiskAttributeResponse, ModifyDiskAttributeResult, ModifyDiskAttributeRequest>(request);
+            return await new ModifyDiskAttributeExecutor().Client(this).Execute<ModifyDiskAttributeResponse, ModifyDiskAttributeResult, ModifyDiskAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -338,7 +338,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest request) {
-            return await new DescribeDisksExecutor().Client(this).Execute<DescribeDisksResponse, DescribeDisksResult, DescribeDisksRequest>(request);
+            return await new DescribeDisksExecutor().Client(this).Execute<DescribeDisksResponse, DescribeDisksResult, DescribeDisksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -363,7 +363,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDiskResponse> DeleteDisk(DeleteDiskRequest request) {
-            return await new DeleteDiskExecutor().Client(this).Execute<DeleteDiskResponse, DeleteDiskResult, DeleteDiskRequest>(request);
+            return await new DeleteDiskExecutor().Client(this).Execute<DeleteDiskResponse, DeleteDiskResult, DeleteDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -394,7 +394,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSnapshotResponse> CreateSnapshot(CreateSnapshotRequest request) {
-            return await new CreateSnapshotExecutor().Client(this).Execute<CreateSnapshotResponse, CreateSnapshotResult, CreateSnapshotRequest>(request);
+            return await new CreateSnapshotExecutor().Client(this).Execute<CreateSnapshotResponse, CreateSnapshotResult, CreateSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -413,7 +413,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSnapshotResponse> DescribeSnapshot(DescribeSnapshotRequest request) {
-            return await new DescribeSnapshotExecutor().Client(this).Execute<DescribeSnapshotResponse, DescribeSnapshotResult, DescribeSnapshotRequest>(request);
+            return await new DescribeSnapshotExecutor().Client(this).Execute<DescribeSnapshotResponse, DescribeSnapshotResult, DescribeSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 

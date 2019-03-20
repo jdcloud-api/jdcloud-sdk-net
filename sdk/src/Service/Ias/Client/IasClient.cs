@@ -152,7 +152,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAppResponse> GetApp(GetAppRequest request) {
-            return await new GetAppExecutor().Client(this).Execute<GetAppResponse, GetAppResult, GetAppRequest>(request);
+            return await new GetAppExecutor().Client(this).Execute<GetAppResponse, GetAppResult, GetAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StateResponse> State(StateRequest request) {
-            return await new StateExecutor().Client(this).Execute<StateResponse, StateResult, StateRequest>(request);
+            return await new StateExecutor().Client(this).Execute<StateResponse, StateResult, StateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateAppResponse> CreateApp(CreateAppRequest request) {
-            return await new CreateAppExecutor().Client(this).Execute<CreateAppResponse, CreateAppResult, CreateAppRequest>(request);
+            return await new CreateAppExecutor().Client(this).Execute<CreateAppResponse, CreateAppResult, CreateAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAppsResponse> GetApps(GetAppsRequest request) {
-            return await new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request);
+            return await new GetAppsExecutor().Client(this).Execute<GetAppsResponse, GetAppsResult, GetAppsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateAppResponse> UpdateApp(UpdateAppRequest request) {
-            return await new UpdateAppExecutor().Client(this).Execute<UpdateAppResponse, UpdateAppResult, UpdateAppRequest>(request);
+            return await new UpdateAppExecutor().Client(this).Execute<UpdateAppResponse, UpdateAppResult, UpdateAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AppDetailResponse> AppDetail(AppDetailRequest request) {
-            return await new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request);
+            return await new AppDetailExecutor().Client(this).Execute<AppDetailResponse, AppDetailResult, AppDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAppResponse> DeleteApp(DeleteAppRequest request) {
-            return await new DeleteAppExecutor().Client(this).Execute<DeleteAppResponse, DeleteAppResult, DeleteAppRequest>(request);
+            return await new DeleteAppExecutor().Client(this).Execute<DeleteAppResponse, DeleteAppResult, DeleteAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Ias.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AppsResponse> Apps(AppsRequest request) {
-            return await new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request);
+            return await new AppsExecutor().Client(this).Execute<AppsResponse, AppsResult, AppsRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -152,7 +152,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteElasticIpResponse> DeleteElasticIp(DeleteElasticIpRequest request) {
-            return await new DeleteElasticIpExecutor().Client(this).Execute<DeleteElasticIpResponse, DeleteElasticIpResult, DeleteElasticIpRequest>(request);
+            return await new DeleteElasticIpExecutor().Client(this).Execute<DeleteElasticIpResponse, DeleteElasticIpResult, DeleteElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyVpcPeeringResponse> ModifyVpcPeering(ModifyVpcPeeringRequest request) {
-            return await new ModifyVpcPeeringExecutor().Client(this).Execute<ModifyVpcPeeringResponse, ModifyVpcPeeringResult, ModifyVpcPeeringRequest>(request);
+            return await new ModifyVpcPeeringExecutor().Client(this).Execute<ModifyVpcPeeringResponse, ModifyVpcPeeringResult, ModifyVpcPeeringRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyElasticIpResponse> ModifyElasticIp(ModifyElasticIpRequest request) {
-            return await new ModifyElasticIpExecutor().Client(this).Execute<ModifyElasticIpResponse, ModifyElasticIpResult, ModifyElasticIpRequest>(request);
+            return await new ModifyElasticIpExecutor().Client(this).Execute<ModifyElasticIpResponse, ModifyElasticIpResult, ModifyElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNetworkAclRulesResponse> ModifyNetworkAclRules(ModifyNetworkAclRulesRequest request) {
-            return await new ModifyNetworkAclRulesExecutor().Client(this).Execute<ModifyNetworkAclRulesResponse, ModifyNetworkAclRulesResult, ModifyNetworkAclRulesRequest>(request);
+            return await new ModifyNetworkAclRulesExecutor().Client(this).Execute<ModifyNetworkAclRulesResponse, ModifyNetworkAclRulesResult, ModifyNetworkAclRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteNetworkAclResponse> DeleteNetworkAcl(DeleteNetworkAclRequest request) {
-            return await new DeleteNetworkAclExecutor().Client(this).Execute<DeleteNetworkAclResponse, DeleteNetworkAclResult, DeleteNetworkAclRequest>(request);
+            return await new DeleteNetworkAclExecutor().Client(this).Execute<DeleteNetworkAclResponse, DeleteNetworkAclResult, DeleteNetworkAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSubnetResponse> DeleteSubnet(DeleteSubnetRequest request) {
-            return await new DeleteSubnetExecutor().Client(this).Execute<DeleteSubnetResponse, DeleteSubnetResult, DeleteSubnetRequest>(request);
+            return await new DeleteSubnetExecutor().Client(this).Execute<DeleteSubnetResponse, DeleteSubnetResult, DeleteSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubnetsResponse> DescribeSubnets(DescribeSubnetsRequest request) {
-            return await new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request);
+            return await new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
-            return await new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
+            return await new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RemoveNetworkSecurityGroupRulesResponse> RemoveNetworkSecurityGroupRules(RemoveNetworkSecurityGroupRulesRequest request) {
-            return await new RemoveNetworkSecurityGroupRulesExecutor().Client(this).Execute<RemoveNetworkSecurityGroupRulesResponse, RemoveNetworkSecurityGroupRulesResult, RemoveNetworkSecurityGroupRulesRequest>(request);
+            return await new RemoveNetworkSecurityGroupRulesExecutor().Client(this).Execute<RemoveNetworkSecurityGroupRulesResponse, RemoveNetworkSecurityGroupRulesResult, RemoveNetworkSecurityGroupRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNetworkSecurityGroupResponse> ModifyNetworkSecurityGroup(ModifyNetworkSecurityGroupRequest request) {
-            return await new ModifyNetworkSecurityGroupExecutor().Client(this).Execute<ModifyNetworkSecurityGroupResponse, ModifyNetworkSecurityGroupResult, ModifyNetworkSecurityGroupRequest>(request);
+            return await new ModifyNetworkSecurityGroupExecutor().Client(this).Execute<ModifyNetworkSecurityGroupResponse, ModifyNetworkSecurityGroupResult, ModifyNetworkSecurityGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddNetworkSecurityGroupRulesResponse> AddNetworkSecurityGroupRules(AddNetworkSecurityGroupRulesRequest request) {
-            return await new AddNetworkSecurityGroupRulesExecutor().Client(this).Execute<AddNetworkSecurityGroupRulesResponse, AddNetworkSecurityGroupRulesResult, AddNetworkSecurityGroupRulesRequest>(request);
+            return await new AddNetworkSecurityGroupRulesExecutor().Client(this).Execute<AddNetworkSecurityGroupRulesResponse, AddNetworkSecurityGroupRulesResult, AddNetworkSecurityGroupRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateNetworkAclResponse> CreateNetworkAcl(CreateNetworkAclRequest request) {
-            return await new CreateNetworkAclExecutor().Client(this).Execute<CreateNetworkAclResponse, CreateNetworkAclResult, CreateNetworkAclRequest>(request);
+            return await new CreateNetworkAclExecutor().Client(this).Execute<CreateNetworkAclResponse, CreateNetworkAclResult, CreateNetworkAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
-            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
+            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateRouteTableResponse> CreateRouteTable(CreateRouteTableRequest request) {
-            return await new CreateRouteTableExecutor().Client(this).Execute<CreateRouteTableResponse, CreateRouteTableResult, CreateRouteTableRequest>(request);
+            return await new CreateRouteTableExecutor().Client(this).Execute<CreateRouteTableResponse, CreateRouteTableResult, CreateRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteNetworkSecurityGroupResponse> DeleteNetworkSecurityGroup(DeleteNetworkSecurityGroupRequest request) {
-            return await new DeleteNetworkSecurityGroupExecutor().Client(this).Execute<DeleteNetworkSecurityGroupResponse, DeleteNetworkSecurityGroupResult, DeleteNetworkSecurityGroupRequest>(request);
+            return await new DeleteNetworkSecurityGroupExecutor().Client(this).Execute<DeleteNetworkSecurityGroupResponse, DeleteNetworkSecurityGroupResult, DeleteNetworkSecurityGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRouteTableResponse> DescribeRouteTable(DescribeRouteTableRequest request) {
-            return await new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request);
+            return await new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest request) {
-            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
+            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeVpcPeeringsResponse> DescribeVpcPeerings(DescribeVpcPeeringsRequest request) {
-            return await new DescribeVpcPeeringsExecutor().Client(this).Execute<DescribeVpcPeeringsResponse, DescribeVpcPeeringsResult, DescribeVpcPeeringsRequest>(request);
+            return await new DescribeVpcPeeringsExecutor().Client(this).Execute<DescribeVpcPeeringsResponse, DescribeVpcPeeringsResult, DescribeVpcPeeringsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -494,7 +494,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkAclsResponse> DescribeNetworkAcls(DescribeNetworkAclsRequest request) {
-            return await new DescribeNetworkAclsExecutor().Client(this).Execute<DescribeNetworkAclsResponse, DescribeNetworkAclsResult, DescribeNetworkAclsRequest>(request);
+            return await new DescribeNetworkAclsExecutor().Client(this).Execute<DescribeNetworkAclsResponse, DescribeNetworkAclsResult, DescribeNetworkAclsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -513,7 +513,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
-            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,7 +532,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkSecurityGroupResponse> DescribeNetworkSecurityGroup(DescribeNetworkSecurityGroupRequest request) {
-            return await new DescribeNetworkSecurityGroupExecutor().Client(this).Execute<DescribeNetworkSecurityGroupResponse, DescribeNetworkSecurityGroupResult, DescribeNetworkSecurityGroupRequest>(request);
+            return await new DescribeNetworkSecurityGroupExecutor().Client(this).Execute<DescribeNetworkSecurityGroupResponse, DescribeNetworkSecurityGroupResult, DescribeNetworkSecurityGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkSecurityGroupsResponse> DescribeNetworkSecurityGroups(DescribeNetworkSecurityGroupsRequest request) {
-            return await new DescribeNetworkSecurityGroupsExecutor().Client(this).Execute<DescribeNetworkSecurityGroupsResponse, DescribeNetworkSecurityGroupsResult, DescribeNetworkSecurityGroupsRequest>(request);
+            return await new DescribeNetworkSecurityGroupsExecutor().Client(this).Execute<DescribeNetworkSecurityGroupsResponse, DescribeNetworkSecurityGroupsResult, DescribeNetworkSecurityGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -570,7 +570,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeVpcResponse> DescribeVpc(DescribeVpcRequest request) {
-            return await new DescribeVpcExecutor().Client(this).Execute<DescribeVpcResponse, DescribeVpcResult, DescribeVpcRequest>(request);
+            return await new DescribeVpcExecutor().Client(this).Execute<DescribeVpcResponse, DescribeVpcResult, DescribeVpcRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -589,7 +589,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateNetworkAclResponse> DisassociateNetworkAcl(DisassociateNetworkAclRequest request) {
-            return await new DisassociateNetworkAclExecutor().Client(this).Execute<DisassociateNetworkAclResponse, DisassociateNetworkAclResult, DisassociateNetworkAclRequest>(request);
+            return await new DisassociateNetworkAclExecutor().Client(this).Execute<DisassociateNetworkAclResponse, DisassociateNetworkAclResult, DisassociateNetworkAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -608,7 +608,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RemoveNetworkAclRulesResponse> RemoveNetworkAclRules(RemoveNetworkAclRulesRequest request) {
-            return await new RemoveNetworkAclRulesExecutor().Client(this).Execute<RemoveNetworkAclRulesResponse, RemoveNetworkAclRulesResult, RemoveNetworkAclRulesRequest>(request);
+            return await new RemoveNetworkAclRulesExecutor().Client(this).Execute<RemoveNetworkAclRulesResponse, RemoveNetworkAclRulesResult, RemoveNetworkAclRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -627,7 +627,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateRouteTableResponse> AssociateRouteTable(AssociateRouteTableRequest request) {
-            return await new AssociateRouteTableExecutor().Client(this).Execute<AssociateRouteTableResponse, AssociateRouteTableResult, AssociateRouteTableRequest>(request);
+            return await new AssociateRouteTableExecutor().Client(this).Execute<AssociateRouteTableResponse, AssociateRouteTableResult, AssociateRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -646,7 +646,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeVpcsResponse> DescribeVpcs(DescribeVpcsRequest request) {
-            return await new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request);
+            return await new DescribeVpcsExecutor().Client(this).Execute<DescribeVpcsResponse, DescribeVpcsResult, DescribeVpcsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -665,7 +665,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateNetworkSecurityGroupResponse> CreateNetworkSecurityGroup(CreateNetworkSecurityGroupRequest request) {
-            return await new CreateNetworkSecurityGroupExecutor().Client(this).Execute<CreateNetworkSecurityGroupResponse, CreateNetworkSecurityGroupResult, CreateNetworkSecurityGroupRequest>(request);
+            return await new CreateNetworkSecurityGroupExecutor().Client(this).Execute<CreateNetworkSecurityGroupResponse, CreateNetworkSecurityGroupResult, CreateNetworkSecurityGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -684,7 +684,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSubnetResponse> CreateSubnet(CreateSubnetRequest request) {
-            return await new CreateSubnetExecutor().Client(this).Execute<CreateSubnetResponse, CreateSubnetResult, CreateSubnetRequest>(request);
+            return await new CreateSubnetExecutor().Client(this).Execute<CreateSubnetResponse, CreateSubnetResult, CreateSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -703,7 +703,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRouteTableResponse> DeleteRouteTable(DeleteRouteTableRequest request) {
-            return await new DeleteRouteTableExecutor().Client(this).Execute<DeleteRouteTableResponse, DeleteRouteTableResult, DeleteRouteTableRequest>(request);
+            return await new DeleteRouteTableExecutor().Client(this).Execute<DeleteRouteTableResponse, DeleteRouteTableResult, DeleteRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -722,7 +722,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeVpcPeeringResponse> DescribeVpcPeering(DescribeVpcPeeringRequest request) {
-            return await new DescribeVpcPeeringExecutor().Client(this).Execute<DescribeVpcPeeringResponse, DescribeVpcPeeringResult, DescribeVpcPeeringRequest>(request);
+            return await new DescribeVpcPeeringExecutor().Client(this).Execute<DescribeVpcPeeringResponse, DescribeVpcPeeringResult, DescribeVpcPeeringRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -741,7 +741,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RemoveRouteTableRulesResponse> RemoveRouteTableRules(RemoveRouteTableRulesRequest request) {
-            return await new RemoveRouteTableRulesExecutor().Client(this).Execute<RemoveRouteTableRulesResponse, RemoveRouteTableRulesResult, RemoveRouteTableRulesRequest>(request);
+            return await new RemoveRouteTableRulesExecutor().Client(this).Execute<RemoveRouteTableRulesResponse, RemoveRouteTableRulesResult, RemoveRouteTableRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -760,7 +760,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcPeeringResponse> CreateVpcPeering(CreateVpcPeeringRequest request) {
-            return await new CreateVpcPeeringExecutor().Client(this).Execute<CreateVpcPeeringResponse, CreateVpcPeeringResult, CreateVpcPeeringRequest>(request);
+            return await new CreateVpcPeeringExecutor().Client(this).Execute<CreateVpcPeeringResponse, CreateVpcPeeringResult, CreateVpcPeeringRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -779,7 +779,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssignSecondaryIpsResponse> AssignSecondaryIps(AssignSecondaryIpsRequest request) {
-            return await new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request);
+            return await new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -798,7 +798,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRouteTablesResponse> DescribeRouteTables(DescribeRouteTablesRequest request) {
-            return await new DescribeRouteTablesExecutor().Client(this).Execute<DescribeRouteTablesResponse, DescribeRouteTablesResult, DescribeRouteTablesRequest>(request);
+            return await new DescribeRouteTablesExecutor().Client(this).Execute<DescribeRouteTablesResponse, DescribeRouteTablesResult, DescribeRouteTablesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -817,7 +817,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNetworkInterfaceResponse> ModifyNetworkInterface(ModifyNetworkInterfaceRequest request) {
-            return await new ModifyNetworkInterfaceExecutor().Client(this).Execute<ModifyNetworkInterfaceResponse, ModifyNetworkInterfaceResult, ModifyNetworkInterfaceRequest>(request);
+            return await new ModifyNetworkInterfaceExecutor().Client(this).Execute<ModifyNetworkInterfaceResponse, ModifyNetworkInterfaceResult, ModifyNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -836,7 +836,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeElasticIpsResponse> DescribeElasticIps(DescribeElasticIpsRequest request) {
-            return await new DescribeElasticIpsExecutor().Client(this).Execute<DescribeElasticIpsResponse, DescribeElasticIpsResult, DescribeElasticIpsRequest>(request);
+            return await new DescribeElasticIpsExecutor().Client(this).Execute<DescribeElasticIpsResponse, DescribeElasticIpsResult, DescribeElasticIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -855,7 +855,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNetworkSecurityGroupRulesResponse> ModifyNetworkSecurityGroupRules(ModifyNetworkSecurityGroupRulesRequest request) {
-            return await new ModifyNetworkSecurityGroupRulesExecutor().Client(this).Execute<ModifyNetworkSecurityGroupRulesResponse, ModifyNetworkSecurityGroupRulesResult, ModifyNetworkSecurityGroupRulesRequest>(request);
+            return await new ModifyNetworkSecurityGroupRulesExecutor().Client(this).Execute<ModifyNetworkSecurityGroupRulesResponse, ModifyNetworkSecurityGroupRulesResult, ModifyNetworkSecurityGroupRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -874,7 +874,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNetworkAclResponse> ModifyNetworkAcl(ModifyNetworkAclRequest request) {
-            return await new ModifyNetworkAclExecutor().Client(this).Execute<ModifyNetworkAclResponse, ModifyNetworkAclResult, ModifyNetworkAclRequest>(request);
+            return await new ModifyNetworkAclExecutor().Client(this).Execute<ModifyNetworkAclResponse, ModifyNetworkAclResult, ModifyNetworkAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -893,7 +893,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkInterfaceResponse> DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
-            return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
+            return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -912,7 +912,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
-            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -931,7 +931,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVpcPeeringResponse> DeleteVpcPeering(DeleteVpcPeeringRequest request) {
-            return await new DeleteVpcPeeringExecutor().Client(this).Execute<DeleteVpcPeeringResponse, DeleteVpcPeeringResult, DeleteVpcPeeringRequest>(request);
+            return await new DeleteVpcPeeringExecutor().Client(this).Execute<DeleteVpcPeeringResponse, DeleteVpcPeeringResult, DeleteVpcPeeringRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -950,7 +950,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateNetworkInterfaceResponse> CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
-            return await new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
+            return await new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -969,7 +969,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
-            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request);
+            return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -988,7 +988,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyRouteTableRulesResponse> ModifyRouteTableRules(ModifyRouteTableRulesRequest request) {
-            return await new ModifyRouteTableRulesExecutor().Client(this).Execute<ModifyRouteTableRulesResponse, ModifyRouteTableRulesResult, ModifyRouteTableRulesRequest>(request);
+            return await new ModifyRouteTableRulesExecutor().Client(this).Execute<ModifyRouteTableRulesResponse, ModifyRouteTableRulesResult, ModifyRouteTableRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1007,7 +1007,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddRouteTableRulesResponse> AddRouteTableRules(AddRouteTableRulesRequest request) {
-            return await new AddRouteTableRulesExecutor().Client(this).Execute<AddRouteTableRulesResponse, AddRouteTableRulesResult, AddRouteTableRulesRequest>(request);
+            return await new AddRouteTableRulesExecutor().Client(this).Execute<AddRouteTableRulesResponse, AddRouteTableRulesResult, AddRouteTableRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1026,7 +1026,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
-            return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+            return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1045,7 +1045,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UnassignSecondaryIpsResponse> UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
-            return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
+            return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1064,7 +1064,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyRouteTableResponse> ModifyRouteTable(ModifyRouteTableRequest request) {
-            return await new ModifyRouteTableExecutor().Client(this).Execute<ModifyRouteTableResponse, ModifyRouteTableResult, ModifyRouteTableRequest>(request);
+            return await new ModifyRouteTableExecutor().Client(this).Execute<ModifyRouteTableResponse, ModifyRouteTableResult, ModifyRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1083,7 +1083,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1102,7 +1102,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateRouteTableResponse> DisassociateRouteTable(DisassociateRouteTableRequest request) {
-            return await new DisassociateRouteTableExecutor().Client(this).Execute<DisassociateRouteTableResponse, DisassociateRouteTableResult, DisassociateRouteTableRequest>(request);
+            return await new DisassociateRouteTableExecutor().Client(this).Execute<DisassociateRouteTableResponse, DisassociateRouteTableResult, DisassociateRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1121,7 +1121,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyVpcResponse> ModifyVpc(ModifyVpcRequest request) {
-            return await new ModifyVpcExecutor().Client(this).Execute<ModifyVpcResponse, ModifyVpcResult, ModifyVpcRequest>(request);
+            return await new ModifyVpcExecutor().Client(this).Execute<ModifyVpcResponse, ModifyVpcResult, ModifyVpcRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1140,7 +1140,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateNetworkAclResponse> AssociateNetworkAcl(AssociateNetworkAclRequest request) {
-            return await new AssociateNetworkAclExecutor().Client(this).Execute<AssociateNetworkAclResponse, AssociateNetworkAclResult, AssociateNetworkAclRequest>(request);
+            return await new AssociateNetworkAclExecutor().Client(this).Execute<AssociateNetworkAclResponse, AssociateNetworkAclResult, AssociateNetworkAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1159,7 +1159,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifySubnetResponse> ModifySubnet(ModifySubnetRequest request) {
-            return await new ModifySubnetExecutor().Client(this).Execute<ModifySubnetResponse, ModifySubnetResult, ModifySubnetRequest>(request);
+            return await new ModifySubnetExecutor().Client(this).Execute<ModifySubnetResponse, ModifySubnetResult, ModifySubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1178,7 +1178,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateElasticIpsResponse> CreateElasticIps(CreateElasticIpsRequest request) {
-            return await new CreateElasticIpsExecutor().Client(this).Execute<CreateElasticIpsResponse, CreateElasticIpsResult, CreateElasticIpsRequest>(request);
+            return await new CreateElasticIpsExecutor().Client(this).Execute<CreateElasticIpsResponse, CreateElasticIpsResult, CreateElasticIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1197,7 +1197,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteNetworkInterfaceResponse> DeleteNetworkInterface(DeleteNetworkInterfaceRequest request) {
-            return await new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request);
+            return await new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1216,7 +1216,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNetworkAclResponse> DescribeNetworkAcl(DescribeNetworkAclRequest request) {
-            return await new DescribeNetworkAclExecutor().Client(this).Execute<DescribeNetworkAclResponse, DescribeNetworkAclResult, DescribeNetworkAclRequest>(request);
+            return await new DescribeNetworkAclExecutor().Client(this).Execute<DescribeNetworkAclResponse, DescribeNetworkAclResult, DescribeNetworkAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1235,7 +1235,7 @@ namespace JDCloudSDK.Vpc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddNetworkAclRulesResponse> AddNetworkAclRules(AddNetworkAclRulesRequest request) {
-            return await new AddNetworkAclRulesExecutor().Client(this).Execute<AddNetworkAclRulesResponse, AddNetworkAclRulesResult, AddNetworkAclRulesRequest>(request);
+            return await new AddNetworkAclRulesExecutor().Client(this).Execute<AddNetworkAclRulesResponse, AddNetworkAclRulesResult, AddNetworkAclRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 

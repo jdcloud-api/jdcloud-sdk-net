@@ -152,7 +152,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
-            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
+            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -175,7 +175,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyCacheInstanceClassResponse> ModifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) {
-            return await new ModifyCacheInstanceClassExecutor().Client(this).Execute<ModifyCacheInstanceClassResponse, ModifyCacheInstanceClassResult, ModifyCacheInstanceClassRequest>(request);
+            return await new ModifyCacheInstanceClassExecutor().Client(this).Execute<ModifyCacheInstanceClassResponse, ModifyCacheInstanceClassResult, ModifyCacheInstanceClassRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -194,7 +194,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCacheInstancesResponse> DescribeCacheInstances(DescribeCacheInstancesRequest request) {
-            return await new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request);
+            return await new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -213,7 +213,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyCacheInstanceAttributeResponse> ModifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) {
-            return await new ModifyCacheInstanceAttributeExecutor().Client(this).Execute<ModifyCacheInstanceAttributeResponse, ModifyCacheInstanceAttributeResult, ModifyCacheInstanceAttributeRequest>(request);
+            return await new ModifyCacheInstanceAttributeExecutor().Client(this).Execute<ModifyCacheInstanceAttributeResponse, ModifyCacheInstanceAttributeResult, ModifyCacheInstanceAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -232,7 +232,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCacheInstanceResponse> DescribeCacheInstance(DescribeCacheInstanceRequest request) {
-            return await new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
+            return await new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -257,7 +257,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCacheInstanceResponse> DeleteCacheInstance(DeleteCacheInstanceRequest request) {
-            return await new DeleteCacheInstanceExecutor().Client(this).Execute<DeleteCacheInstanceResponse, DeleteCacheInstanceResult, DeleteCacheInstanceRequest>(request);
+            return await new DeleteCacheInstanceExecutor().Client(this).Execute<DeleteCacheInstanceResponse, DeleteCacheInstanceResult, DeleteCacheInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -276,7 +276,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResetCacheInstancePasswordResponse> ResetCacheInstancePassword(ResetCacheInstancePasswordRequest request) {
-            return await new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request);
+            return await new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -295,7 +295,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceClassResponse> DescribeInstanceClass(DescribeInstanceClassRequest request) {
-            return await new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
+            return await new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -324,7 +324,7 @@ namespace JDCloudSDK.Redis.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateCacheInstanceResponse> CreateCacheInstance(CreateCacheInstanceRequest request) {
-            return await new CreateCacheInstanceExecutor().Client(this).Execute<CreateCacheInstanceResponse, CreateCacheInstanceResult, CreateCacheInstanceRequest>(request);
+            return await new CreateCacheInstanceExecutor().Client(this).Execute<CreateCacheInstanceResponse, CreateCacheInstanceResult, CreateCacheInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 

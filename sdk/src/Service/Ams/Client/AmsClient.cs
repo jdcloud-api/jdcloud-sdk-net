@@ -152,7 +152,7 @@ namespace JDCloudSDK.Ams.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuthenticateResponse> DescribeAuthenticate(DescribeAuthenticateRequest request) {
-            return await new DescribeAuthenticateExecutor().Client(this).Execute<DescribeAuthenticateResponse, DescribeAuthenticateResult, DescribeAuthenticateRequest>(request);
+            return await new DescribeAuthenticateExecutor().Client(this).Execute<DescribeAuthenticateResponse, DescribeAuthenticateResult, DescribeAuthenticateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Ams.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeStreamsInputResponse> DescribeStreamsInput(DescribeStreamsInputRequest request) {
-            return await new DescribeStreamsInputExecutor().Client(this).Execute<DescribeStreamsInputResponse, DescribeStreamsInputResult, DescribeStreamsInputRequest>(request);
+            return await new DescribeStreamsInputExecutor().Client(this).Execute<DescribeStreamsInputResponse, DescribeStreamsInputResult, DescribeStreamsInputRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;net40;net45;net46;net47;net35</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Configurations>Debug;Release;</Configurations>
-    <Version>0.2.5</Version>
+    <Version>0.2.6</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>京东云SDK C# core</Description>
     <Copyright>Copyright  ©  2012-2019  JDCloud.com</Copyright>
@@ -27,7 +27,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
    <ItemGroup Condition="'$(TargetFramework)' == 'net45' Or '$(TargetFramework)' == 'net46' Or '$(TargetFramework)' == 'net47'">
-    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net35'">

@@ -152,7 +152,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateAlarmResponse> CreateAlarm(CreateAlarmRequest request) {
-            return await new CreateAlarmExecutor().Client(this).Execute<CreateAlarmResponse, CreateAlarmResult, CreateAlarmRequest>(request);
+            return await new CreateAlarmExecutor().Client(this).Execute<CreateAlarmResponse, CreateAlarmResult, CreateAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMetricDataResponse> DescribeMetricData(DescribeMetricDataRequest request) {
-            return await new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request);
+            return await new DescribeMetricDataExecutor().Client(this).Execute<DescribeMetricDataResponse, DescribeMetricDataResult, DescribeMetricDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmContactsResponse> DescribeAlarmContacts(DescribeAlarmContactsRequest request) {
-            return await new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request);
+            return await new DescribeAlarmContactsExecutor().Client(this).Execute<DescribeAlarmContactsResponse, DescribeAlarmContactsResult, DescribeAlarmContactsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -223,7 +223,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmHistoryResponse> DescribeAlarmHistory(DescribeAlarmHistoryRequest request) {
-            return await new DescribeAlarmHistoryExecutor().Client(this).Execute<DescribeAlarmHistoryResponse, DescribeAlarmHistoryResult, DescribeAlarmHistoryRequest>(request);
+            return await new DescribeAlarmHistoryExecutor().Client(this).Execute<DescribeAlarmHistoryResponse, DescribeAlarmHistoryResult, DescribeAlarmHistoryRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAlarmsCmResponse> DeleteAlarmsCm(DeleteAlarmsCmRequest request) {
-            return await new DeleteAlarmsCmExecutor().Client(this).Execute<DeleteAlarmsCmResponse, DeleteAlarmsCmResult, DeleteAlarmsCmRequest>(request);
+            return await new DeleteAlarmsCmExecutor().Client(this).Execute<DeleteAlarmsCmResponse, DeleteAlarmsCmResult, DeleteAlarmsCmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMetricsForCreateAlarmResponse> DescribeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) {
-            return await new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request);
+            return await new DescribeMetricsForCreateAlarmExecutor().Client(this).Execute<DescribeMetricsForCreateAlarmResponse, DescribeMetricsForCreateAlarmResult, DescribeMetricsForCreateAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAlarmsResponse> DeleteAlarms(DeleteAlarmsRequest request) {
-            return await new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request);
+            return await new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
-            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
+            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmsByIDResponse> DescribeAlarmsByID(DescribeAlarmsByIDRequest request) {
-            return await new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request);
+            return await new DescribeAlarmsByIDExecutor().Client(this).Execute<DescribeAlarmsByIDResponse, DescribeAlarmsByIDResult, DescribeAlarmsByIDRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -337,7 +337,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateAlarmResponse> UpdateAlarm(UpdateAlarmRequest request) {
-            return await new UpdateAlarmExecutor().Client(this).Execute<UpdateAlarmResponse, UpdateAlarmResult, UpdateAlarmRequest>(request);
+            return await new UpdateAlarmExecutor().Client(this).Execute<UpdateAlarmResponse, UpdateAlarmResult, UpdateAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -370,7 +370,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmHistoryAllRegionResponse> DescribeAlarmHistoryAllRegion(DescribeAlarmHistoryAllRegionRequest request) {
-            return await new DescribeAlarmHistoryAllRegionExecutor().Client(this).Execute<DescribeAlarmHistoryAllRegionResponse, DescribeAlarmHistoryAllRegionResult, DescribeAlarmHistoryAllRegionRequest>(request);
+            return await new DescribeAlarmHistoryAllRegionExecutor().Client(this).Execute<DescribeAlarmHistoryAllRegionResponse, DescribeAlarmHistoryAllRegionResult, DescribeAlarmHistoryAllRegionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -389,7 +389,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PutMetricDataResponse> PutMetricData(PutMetricDataRequest request) {
-            return await new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request);
+            return await new PutMetricDataExecutor().Client(this).Execute<PutMetricDataResponse, PutMetricDataResult, PutMetricDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -408,7 +408,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableAlarmResponse> DisableAlarm(DisableAlarmRequest request) {
-            return await new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request);
+            return await new DisableAlarmExecutor().Client(this).Execute<DisableAlarmResponse, DisableAlarmResult, DisableAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -427,7 +427,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableAlarmResponse> EnableAlarm(EnableAlarmRequest request) {
-            return await new EnableAlarmExecutor().Client(this).Execute<EnableAlarmResponse, EnableAlarmResult, EnableAlarmRequest>(request);
+            return await new EnableAlarmExecutor().Client(this).Execute<EnableAlarmResponse, EnableAlarmResult, EnableAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -458,7 +458,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmsResponse> DescribeAlarms(DescribeAlarmsRequest request) {
-            return await new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request);
+            return await new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -477,7 +477,7 @@ namespace JDCloudSDK.Monitor.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMetricsResponse> DescribeMetrics(DescribeMetricsRequest request) {
-            return await new DescribeMetricsExecutor().Client(this).Execute<DescribeMetricsResponse, DescribeMetricsResult, DescribeMetricsRequest>(request);
+            return await new DescribeMetricsExecutor().Client(this).Execute<DescribeMetricsResponse, DescribeMetricsResult, DescribeMetricsRequest>(request).ConfigureAwait(false);
         }
 #endif
 

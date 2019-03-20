@@ -152,7 +152,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainGroupDetailResponse> QueryDomainGroupDetail(QueryDomainGroupDetailRequest request) {
-            return await new QueryDomainGroupDetailExecutor().Client(this).Execute<QueryDomainGroupDetailResponse, QueryDomainGroupDetailResult, QueryDomainGroupDetailRequest>(request);
+            return await new QueryDomainGroupDetailExecutor().Client(this).Execute<QueryDomainGroupDetailResponse, QueryDomainGroupDetailResult, QueryDomainGroupDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteHttpHeaderResponse> DeleteHttpHeader(DeleteHttpHeaderRequest request) {
-            return await new DeleteHttpHeaderExecutor().Client(this).Execute<DeleteHttpHeaderResponse, DeleteHttpHeaderResult, DeleteHttpHeaderRequest>(request);
+            return await new DeleteHttpHeaderExecutor().Client(this).Execute<DeleteHttpHeaderResponse, DeleteHttpHeaderResult, DeleteHttpHeaderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryOssBucketsResponse> QueryOssBuckets(QueryOssBucketsRequest request) {
-            return await new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request);
+            return await new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryIpBlackListResponse> QueryIpBlackList(QueryIpBlackListRequest request) {
-            return await new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request);
+            return await new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainBackSourceHostResponse> SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
-            return await new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request);
+            return await new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryStatisticsTopUrlResponse> QueryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) {
-            return await new QueryStatisticsTopUrlExecutor().Client(this).Execute<QueryStatisticsTopUrlResponse, QueryStatisticsTopUrlResult, QueryStatisticsTopUrlRequest>(request);
+            return await new QueryStatisticsTopUrlExecutor().Client(this).Execute<QueryStatisticsTopUrlResponse, QueryStatisticsTopUrlResult, QueryStatisticsTopUrlRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetProtocolConvertResponse> SetProtocolConvert(SetProtocolConvertRequest request) {
-            return await new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request);
+            return await new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainListResponse> GetDomainList(GetDomainListRequest request) {
-            return await new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
+            return await new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainReferResponse> SetLiveDomainRefer(SetLiveDomainReferRequest request) {
-            return await new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request);
+            return await new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetIpBlackListResponse> SetIpBlackList(SetIpBlackListRequest request) {
-            return await new SetIpBlackListExecutor().Client(this).Execute<SetIpBlackListResponse, SetIpBlackListResult, SetIpBlackListRequest>(request);
+            return await new SetIpBlackListExecutor().Client(this).Execute<SetIpBlackListResponse, SetIpBlackListResult, SetIpBlackListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetIgnoreQueryStringResponse> SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
-            return await new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request);
+            return await new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<BatchDeleteDomainGroupResponse> BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
-            return await new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request);
+            return await new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetUserAgentConfigResponse> SetUserAgentConfig(SetUserAgentConfigRequest request) {
-            return await new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request);
+            return await new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainBackSourceResponse> SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
-            return await new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request);
+            return await new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartDomainResponse> StartDomain(StartDomainRequest request) {
-            return await new StartDomainExecutor().Client(this).Execute<StartDomainResponse, StartDomainResult, StartDomainRequest>(request);
+            return await new StartDomainExecutor().Client(this).Execute<StartDomainResponse, StartDomainResult, StartDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetAccesskeyConfigResponse> SetAccesskeyConfig(SetAccesskeyConfigRequest request) {
-            return await new SetAccesskeyConfigExecutor().Client(this).Execute<SetAccesskeyConfigResponse, SetAccesskeyConfigResult, SetAccesskeyConfigRequest>(request);
+            return await new SetAccesskeyConfigExecutor().Client(this).Execute<SetAccesskeyConfigResponse, SetAccesskeyConfigResult, SetAccesskeyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetRangeResponse> SetRange(SetRangeRequest request) {
-            return await new SetRangeExecutor().Client(this).Execute<SetRangeResponse, SetRangeResult, SetRangeRequest>(request);
+            return await new SetRangeExecutor().Client(this).Execute<SetRangeResponse, SetRangeResult, SetRangeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest request) {
-            return await new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request);
+            return await new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -494,7 +494,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainConfigResponse> QueryDomainConfig(QueryDomainConfigRequest request) {
-            return await new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request);
+            return await new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -513,7 +513,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetVideoDraftResponse> SetVideoDraft(SetVideoDraftRequest request) {
-            return await new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request);
+            return await new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,7 +532,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainIpBlackListResponse> SetLiveDomainIpBlackList(SetLiveDomainIpBlackListRequest request) {
-            return await new SetLiveDomainIpBlackListExecutor().Client(this).Execute<SetLiveDomainIpBlackListResponse, SetLiveDomainIpBlackListResult, SetLiveDomainIpBlackListRequest>(request);
+            return await new SetLiveDomainIpBlackListExecutor().Client(this).Execute<SetLiveDomainIpBlackListResponse, SetLiveDomainIpBlackListResult, SetLiveDomainIpBlackListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryMonitorResponse> QueryMonitor(QueryMonitorRequest request) {
-            return await new QueryMonitorExecutor().Client(this).Execute<QueryMonitorResponse, QueryMonitorResult, QueryMonitorRequest>(request);
+            return await new QueryMonitorExecutor().Client(this).Execute<QueryMonitorResponse, QueryMonitorResult, QueryMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -570,7 +570,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateLiveDomainResponse> CreateLiveDomain(CreateLiveDomainRequest request) {
-            return await new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request);
+            return await new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -589,7 +589,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OperateShareCacheResponse> OperateShareCache(OperateShareCacheRequest request) {
-            return await new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request);
+            return await new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -608,7 +608,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OperateLiveDomainIpBlackListResponse> OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
-            return await new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request);
+            return await new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -627,7 +627,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryStatisticsDataResponse> QueryStatisticsData(QueryStatisticsDataRequest request) {
-            return await new QueryStatisticsDataExecutor().Client(this).Execute<QueryStatisticsDataResponse, QueryStatisticsDataResult, QueryStatisticsDataRequest>(request);
+            return await new QueryStatisticsDataExecutor().Client(this).Execute<QueryStatisticsDataResponse, QueryStatisticsDataResult, QueryStatisticsDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -646,7 +646,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDomainGroupResponse> CreateDomainGroup(CreateDomainGroupRequest request) {
-            return await new CreateDomainGroupExecutor().Client(this).Execute<CreateDomainGroupResponse, CreateDomainGroupResult, CreateDomainGroupRequest>(request);
+            return await new CreateDomainGroupExecutor().Client(this).Execute<CreateDomainGroupResponse, CreateDomainGroupResult, CreateDomainGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -665,7 +665,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OperateIpBlackListResponse> OperateIpBlackList(OperateIpBlackListRequest request) {
-            return await new OperateIpBlackListExecutor().Client(this).Execute<OperateIpBlackListResponse, OperateIpBlackListResult, OperateIpBlackListRequest>(request);
+            return await new OperateIpBlackListExecutor().Client(this).Execute<OperateIpBlackListResponse, OperateIpBlackListResult, OperateIpBlackListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -684,7 +684,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDefaultHttpHeaderKeyResponse> QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
-            return await new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request);
+            return await new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -703,7 +703,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainDetailResponse> GetDomainDetail(GetDomainDetailRequest request) {
-            return await new GetDomainDetailExecutor().Client(this).Execute<GetDomainDetailResponse, GetDomainDetailResult, GetDomainDetailRequest>(request);
+            return await new GetDomainDetailExecutor().Client(this).Execute<GetDomainDetailResponse, GetDomainDetailResult, GetDomainDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -722,7 +722,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetMonitorResponse> SetMonitor(SetMonitorRequest request) {
-            return await new SetMonitorExecutor().Client(this).Execute<SetMonitorResponse, SetMonitorResult, SetMonitorRequest>(request);
+            return await new SetMonitorExecutor().Client(this).Execute<SetMonitorResponse, SetMonitorResult, SetMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -741,7 +741,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest request) {
-            return await new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request);
+            return await new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -760,7 +760,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryUserAgentResponse> QueryUserAgent(QueryUserAgentRequest request) {
-            return await new QueryUserAgentExecutor().Client(this).Execute<QueryUserAgentResponse, QueryUserAgentResult, QueryUserAgentRequest>(request);
+            return await new QueryUserAgentExecutor().Client(this).Execute<QueryUserAgentResponse, QueryUserAgentResult, QueryUserAgentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -779,7 +779,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryStatisticsDataGroupByAreaResponse> QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
-            return await new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
+            return await new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -798,7 +798,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCacheRuleResponse> DeleteCacheRule(DeleteCacheRuleRequest request) {
-            return await new DeleteCacheRuleExecutor().Client(this).Execute<DeleteCacheRuleResponse, DeleteCacheRuleResult, DeleteCacheRuleRequest>(request);
+            return await new DeleteCacheRuleExecutor().Client(this).Execute<DeleteCacheRuleResponse, DeleteCacheRuleResult, DeleteCacheRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -817,7 +817,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainAccessKeyResponse> SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
-            return await new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request);
+            return await new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -836,7 +836,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainGroupListResponse> QueryDomainGroupList(QueryDomainGroupListRequest request) {
-            return await new QueryDomainGroupListExecutor().Client(this).Execute<QueryDomainGroupListResponse, QueryDomainGroupListResult, QueryDomainGroupListRequest>(request);
+            return await new QueryDomainGroupListExecutor().Client(this).Execute<QueryDomainGroupListResponse, QueryDomainGroupListResult, QueryDomainGroupListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -855,7 +855,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainsNotInGroupResponse> QueryDomainsNotInGroup(QueryDomainsNotInGroupRequest request) {
-            return await new QueryDomainsNotInGroupExecutor().Client(this).Execute<QueryDomainsNotInGroupResponse, QueryDomainsNotInGroupResult, QueryDomainsNotInGroupRequest>(request);
+            return await new QueryDomainsNotInGroupExecutor().Client(this).Execute<QueryDomainsNotInGroupResponse, QueryDomainsNotInGroupResult, QueryDomainsNotInGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -874,7 +874,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryStatisticsDataGroupSumResponse> QueryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) {
-            return await new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request);
+            return await new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -893,7 +893,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetHttpHeaderResponse> SetHttpHeader(SetHttpHeaderRequest request) {
-            return await new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request);
+            return await new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -912,7 +912,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateDomainGroupResponse> UpdateDomainGroup(UpdateDomainGroupRequest request) {
-            return await new UpdateDomainGroupExecutor().Client(this).Execute<UpdateDomainGroupResponse, UpdateDomainGroupResult, UpdateDomainGroupRequest>(request);
+            return await new UpdateDomainGroupExecutor().Client(this).Execute<UpdateDomainGroupResponse, UpdateDomainGroupResult, UpdateDomainGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -931,7 +931,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopDomainResponse> StopDomain(StopDomainRequest request) {
-            return await new StopDomainExecutor().Client(this).Execute<StopDomainResponse, StopDomainResult, StopDomainRequest>(request);
+            return await new StopDomainExecutor().Client(this).Execute<StopDomainResponse, StopDomainResult, StopDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -950,7 +950,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetReferResponse> SetRefer(SetReferRequest request) {
-            return await new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request);
+            return await new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -969,7 +969,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryLiveDomainDetailResponse> QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
-            return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request);
+            return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -988,7 +988,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryStatisticsTopIpResponse> QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
-            return await new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
+            return await new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1007,7 +1007,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PreviewCertificateResponse> PreviewCertificate(PreviewCertificateRequest request) {
-            return await new PreviewCertificateExecutor().Client(this).Execute<PreviewCertificateResponse, PreviewCertificateResult, PreviewCertificateRequest>(request);
+            return await new PreviewCertificateExecutor().Client(this).Execute<PreviewCertificateResponse, PreviewCertificateResult, PreviewCertificateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1026,7 +1026,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopMonitorResponse> StopMonitor(StopMonitorRequest request) {
-            return await new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request);
+            return await new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1045,7 +1045,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryAccesskeyConfigResponse> QueryAccesskeyConfig(QueryAccesskeyConfigRequest request) {
-            return await new QueryAccesskeyConfigExecutor().Client(this).Execute<QueryAccesskeyConfigResponse, QueryAccesskeyConfigResult, QueryAccesskeyConfigRequest>(request);
+            return await new QueryAccesskeyConfigExecutor().Client(this).Execute<QueryAccesskeyConfigResponse, QueryAccesskeyConfigResult, QueryAccesskeyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1064,7 +1064,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryHttpHeaderResponse> QueryHttpHeader(QueryHttpHeaderRequest request) {
-            return await new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request);
+            return await new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1083,7 +1083,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<BatchCreateResponse> BatchCreate(BatchCreateRequest request) {
-            return await new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request);
+            return await new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1102,7 +1102,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateCacheRuleResponse> UpdateCacheRule(UpdateCacheRuleRequest request) {
-            return await new UpdateCacheRuleExecutor().Client(this).Execute<UpdateCacheRuleResponse, UpdateCacheRuleResult, UpdateCacheRuleRequest>(request);
+            return await new UpdateCacheRuleExecutor().Client(this).Execute<UpdateCacheRuleResponse, UpdateCacheRuleResult, UpdateCacheRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1121,7 +1121,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
-            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
+            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1140,7 +1140,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateCacheRuleResponse> CreateCacheRule(CreateCacheRuleRequest request) {
-            return await new CreateCacheRuleExecutor().Client(this).Execute<CreateCacheRuleResponse, CreateCacheRuleResult, CreateCacheRuleRequest>(request);
+            return await new CreateCacheRuleExecutor().Client(this).Execute<CreateCacheRuleResponse, CreateCacheRuleResult, CreateCacheRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1159,7 +1159,7 @@ namespace JDCloudSDK.Cdn.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetSourceResponse> SetSource(SetSourceRequest request) {
-            return await new SetSourceExecutor().Client(this).Execute<SetSourceResponse, SetSourceResult, SetSourceRequest>(request);
+            return await new SetSourceExecutor().Client(this).Execute<SetSourceResponse, SetSourceResult, SetSourceRequest>(request).ConfigureAwait(false);
         }
 #endif
 

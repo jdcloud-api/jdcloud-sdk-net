@@ -152,7 +152,7 @@ namespace JDCloudSDK.Ossopenapi.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetBackSourceConfigurationResponse> GetBackSourceConfiguration(GetBackSourceConfigurationRequest request) {
-            return await new GetBackSourceConfigurationExecutor().Client(this).Execute<GetBackSourceConfigurationResponse, GetBackSourceConfigurationResult, GetBackSourceConfigurationRequest>(request);
+            return await new GetBackSourceConfigurationExecutor().Client(this).Execute<GetBackSourceConfigurationResponse, GetBackSourceConfigurationResult, GetBackSourceConfigurationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Ossopenapi.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<PutBackSourceConfigurationResponse> PutBackSourceConfiguration(PutBackSourceConfigurationRequest request) {
-            return await new PutBackSourceConfigurationExecutor().Client(this).Execute<PutBackSourceConfigurationResponse, PutBackSourceConfigurationResult, PutBackSourceConfigurationRequest>(request);
+            return await new PutBackSourceConfigurationExecutor().Client(this).Execute<PutBackSourceConfigurationResponse, PutBackSourceConfigurationResult, PutBackSourceConfigurationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Ossopenapi.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackSourceConfigurationResponse> DeleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) {
-            return await new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request);
+            return await new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request).ConfigureAwait(false);
         }
 #endif
 

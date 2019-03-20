@@ -152,7 +152,7 @@ namespace JDCloudSDK.Sop.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetSecurityTokenResponse> GetSecurityToken(GetSecurityTokenRequest request) {
-            return await new GetSecurityTokenExecutor().Client(this).Execute<GetSecurityTokenResponse, GetSecurityTokenResult, GetSecurityTokenRequest>(request);
+            return await new GetSecurityTokenExecutor().Client(this).Execute<GetSecurityTokenResponse, GetSecurityTokenResult, GetSecurityTokenRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Sop.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetSensitiveOpSettingResponse> GetSensitiveOpSetting(GetSensitiveOpSettingRequest request) {
-            return await new GetSensitiveOpSettingExecutor().Client(this).Execute<GetSensitiveOpSettingResponse, GetSensitiveOpSettingResult, GetSensitiveOpSettingRequest>(request);
+            return await new GetSensitiveOpSettingExecutor().Client(this).Execute<GetSensitiveOpSettingResponse, GetSensitiveOpSettingResult, GetSensitiveOpSettingRequest>(request).ConfigureAwait(false);
         }
 #endif
 

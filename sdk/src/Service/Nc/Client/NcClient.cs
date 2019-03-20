@@ -158,7 +158,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -179,7 +179,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretResponse> DescribeSecret(DescribeSecretRequest request) {
-            return await new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request);
+            return await new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -200,7 +200,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
-            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
+            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -221,7 +221,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyContainerAttributeResponse> ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
-            return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
+            return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -242,7 +242,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
-            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -263,7 +263,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
-            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -288,7 +288,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteContainerResponse> DeleteContainer(DeleteContainerRequest request) {
-            return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
+            return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -309,7 +309,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeContainerResponse> DescribeContainer(DescribeContainerRequest request) {
-            return await new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request);
+            return await new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -332,7 +332,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartContainerResponse> StartContainer(StartContainerRequest request) {
-            return await new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
+            return await new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -355,7 +355,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeContainersResponse> DescribeContainers(DescribeContainersRequest request) {
-            return await new DescribeContainersExecutor().Client(this).Execute<DescribeContainersResponse, DescribeContainersResult, DescribeContainersRequest>(request);
+            return await new DescribeContainersExecutor().Client(this).Execute<DescribeContainersResponse, DescribeContainersResult, DescribeContainersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -376,7 +376,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetLogsResponse> GetLogs(GetLogsRequest request) {
-            return await new GetLogsExecutor().Client(this).Execute<GetLogsResponse, GetLogsResult, GetLogsRequest>(request);
+            return await new GetLogsExecutor().Client(this).Execute<GetLogsResponse, GetLogsResult, GetLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -397,7 +397,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
-            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
+            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -522,7 +522,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateContainersResponse> CreateContainers(CreateContainersRequest request) {
-            return await new CreateContainersExecutor().Client(this).Execute<CreateContainersResponse, CreateContainersResult, CreateContainersRequest>(request);
+            return await new CreateContainersExecutor().Client(this).Execute<CreateContainersResponse, CreateContainersResult, CreateContainersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -543,7 +543,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopContainerResponse> StopContainer(StopContainerRequest request) {
-            return await new StopContainerExecutor().Client(this).Execute<StopContainerResponse, StopContainerResult, StopContainerRequest>(request);
+            return await new StopContainerExecutor().Client(this).Execute<StopContainerResponse, StopContainerResult, StopContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -566,7 +566,7 @@ namespace JDCloudSDK.Nc.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretsResponse> DescribeSecrets(DescribeSecretsRequest request) {
-            return await new DescribeSecretsExecutor().Client(this).Execute<DescribeSecretsResponse, DescribeSecretsResult, DescribeSecretsRequest>(request);
+            return await new DescribeSecretsExecutor().Client(this).Execute<DescribeSecretsResponse, DescribeSecretsResult, DescribeSecretsRequest>(request).ConfigureAwait(false);
         }
 #endif
 

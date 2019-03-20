@@ -152,7 +152,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
-            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
-            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
-            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
+            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIps(DescribeSecurityIpsRequest request) {
-            return await new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request);
+            return await new DescribeSecurityIpsExecutor().Client(this).Execute<DescribeSecurityIpsResponse, DescribeSecurityIpsResult, DescribeSecurityIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<BackupDownloadURLResponse> BackupDownloadURL(BackupDownloadURLRequest request) {
-            return await new BackupDownloadURLExecutor().Client(this).Execute<BackupDownloadURLResponse, BackupDownloadURLResult, BackupDownloadURLRequest>(request);
+            return await new BackupDownloadURLExecutor().Client(this).Execute<BackupDownloadURLResponse, BackupDownloadURLResult, BackupDownloadURLRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
-            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
-            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeFlavorsResponse> DescribeFlavors(DescribeFlavorsRequest request) {
-            return await new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request);
+            return await new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
-            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
+            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
-            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
+            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
-            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
+            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAvailableZonesResponse> DescribeAvailableZones(DescribeAvailableZonesRequest request) {
-            return await new DescribeAvailableZonesExecutor().Client(this).Execute<DescribeAvailableZonesResponse, DescribeAvailableZonesResult, DescribeAvailableZonesRequest>(request);
+            return await new DescribeAvailableZonesExecutor().Client(this).Execute<DescribeAvailableZonesResponse, DescribeAvailableZonesResult, DescribeAvailableZonesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifySecurityIpsResponse> ModifySecurityIps(ModifySecurityIpsRequest request) {
-            return await new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request);
+            return await new ModifySecurityIpsExecutor().Client(this).Execute<ModifySecurityIpsResponse, ModifySecurityIpsResult, ModifySecurityIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
-            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Mongodb.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
-            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 

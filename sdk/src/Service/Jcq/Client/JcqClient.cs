@@ -152,7 +152,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RemovePermissionResponse> RemovePermission(RemovePermissionRequest request) {
-            return await new RemovePermissionExecutor().Client(this).Execute<RemovePermissionResponse, RemovePermissionResult, RemovePermissionRequest>(request);
+            return await new RemovePermissionExecutor().Client(this).Execute<RemovePermissionResponse, RemovePermissionResult, RemovePermissionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResetConsumeOffsetResponse> ResetConsumeOffset(ResetConsumeOffsetRequest request) {
-            return await new ResetConsumeOffsetExecutor().Client(this).Execute<ResetConsumeOffsetResponse, ResetConsumeOffsetResult, ResetConsumeOffsetRequest>(request);
+            return await new ResetConsumeOffsetExecutor().Client(this).Execute<ResetConsumeOffsetResponse, ResetConsumeOffsetResult, ResetConsumeOffsetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDeadLettersResponse> DeleteDeadLetters(DeleteDeadLettersRequest request) {
-            return await new DeleteDeadLettersExecutor().Client(this).Execute<DeleteDeadLettersResponse, DeleteDeadLettersResult, DeleteDeadLettersRequest>(request);
+            return await new DeleteDeadLettersExecutor().Client(this).Execute<DeleteDeadLettersResponse, DeleteDeadLettersResult, DeleteDeadLettersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest request) {
-            return await new CreateTopicExecutor().Client(this).Execute<CreateTopicResponse, CreateTopicResult, CreateTopicRequest>(request);
+            return await new CreateTopicExecutor().Client(this).Execute<CreateTopicResponse, CreateTopicResult, CreateTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListDeadLettersResponse> ListDeadLetters(ListDeadLettersRequest request) {
-            return await new ListDeadLettersExecutor().Client(this).Execute<ListDeadLettersResponse, ListDeadLettersResult, ListDeadLettersRequest>(request);
+            return await new ListDeadLettersExecutor().Client(this).Execute<ListDeadLettersResponse, ListDeadLettersResult, ListDeadLettersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDeadLetterNumbersResponse> DescribeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) {
-            return await new DescribeDeadLetterNumbersExecutor().Client(this).Execute<DescribeDeadLetterNumbersResponse, DescribeDeadLetterNumbersResult, DescribeDeadLetterNumbersRequest>(request);
+            return await new DescribeDeadLetterNumbersExecutor().Client(this).Execute<DescribeDeadLetterNumbersResponse, DescribeDeadLetterNumbersResult, DescribeDeadLetterNumbersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSubscriptionResponse> CreateSubscription(CreateSubscriptionRequest request) {
-            return await new CreateSubscriptionExecutor().Client(this).Execute<CreateSubscriptionResponse, CreateSubscriptionResult, CreateSubscriptionRequest>(request);
+            return await new CreateSubscriptionExecutor().Client(this).Execute<CreateSubscriptionResponse, CreateSubscriptionResult, CreateSubscriptionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CleanMessagesResponse> CleanMessages(CleanMessagesRequest request) {
-            return await new CleanMessagesExecutor().Client(this).Execute<CleanMessagesResponse, CleanMessagesResult, CleanMessagesRequest>(request);
+            return await new CleanMessagesExecutor().Client(this).Execute<CleanMessagesResponse, CleanMessagesResult, CleanMessagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request) {
-            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
+            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResendDeadLettersResponse> ResendDeadLetters(ResendDeadLettersRequest request) {
-            return await new ResendDeadLettersExecutor().Client(this).Execute<ResendDeadLettersResponse, ResendDeadLettersResult, ResendDeadLettersRequest>(request);
+            return await new ResendDeadLettersExecutor().Client(this).Execute<ResendDeadLettersResponse, ResendDeadLettersResult, ResendDeadLettersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeConsumerGroupIdsResponse> DescribeConsumerGroupIds(DescribeConsumerGroupIdsRequest request) {
-            return await new DescribeConsumerGroupIdsExecutor().Client(this).Execute<DescribeConsumerGroupIdsResponse, DescribeConsumerGroupIdsResult, DescribeConsumerGroupIdsRequest>(request);
+            return await new DescribeConsumerGroupIdsExecutor().Client(this).Execute<DescribeConsumerGroupIdsResponse, DescribeConsumerGroupIdsResult, DescribeConsumerGroupIdsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAccessPointResponse> DescribeAccessPoint(DescribeAccessPointRequest request) {
-            return await new DescribeAccessPointExecutor().Client(this).Execute<DescribeAccessPointResponse, DescribeAccessPointResult, DescribeAccessPointRequest>(request);
+            return await new DescribeAccessPointExecutor().Client(this).Execute<DescribeAccessPointResponse, DescribeAccessPointResult, DescribeAccessPointRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddPermissionResponse> AddPermission(AddPermissionRequest request) {
-            return await new AddPermissionExecutor().Client(this).Execute<AddPermissionResponse, AddPermissionResult, AddPermissionRequest>(request);
+            return await new AddPermissionExecutor().Client(this).Execute<AddPermissionResponse, AddPermissionResult, AddPermissionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubscriptionResponse> DescribeSubscription(DescribeSubscriptionRequest request) {
-            return await new DescribeSubscriptionExecutor().Client(this).Execute<DescribeSubscriptionResponse, DescribeSubscriptionResult, DescribeSubscriptionRequest>(request);
+            return await new DescribeSubscriptionExecutor().Client(this).Execute<DescribeSubscriptionResponse, DescribeSubscriptionResult, DescribeSubscriptionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeTopicResponse> DescribeTopic(DescribeTopicRequest request) {
-            return await new DescribeTopicExecutor().Client(this).Execute<DescribeTopicResponse, DescribeTopicResult, DescribeTopicRequest>(request);
+            return await new DescribeTopicExecutor().Client(this).Execute<DescribeTopicResponse, DescribeTopicResult, DescribeTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMessagesResponse> DescribeMessages(DescribeMessagesRequest request) {
-            return await new DescribeMessagesExecutor().Client(this).Execute<DescribeMessagesResponse, DescribeMessagesResult, DescribeMessagesRequest>(request);
+            return await new DescribeMessagesExecutor().Client(this).Execute<DescribeMessagesResponse, DescribeMessagesResult, DescribeMessagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeTopicsResponse> DescribeTopics(DescribeTopicsRequest request) {
-            return await new DescribeTopicsExecutor().Client(this).Execute<DescribeTopicsResponse, DescribeTopicsResult, DescribeTopicsRequest>(request);
+            return await new DescribeTopicsExecutor().Client(this).Execute<DescribeTopicsResponse, DescribeTopicsResult, DescribeTopicsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubscriptionsResponse> DescribeSubscriptions(DescribeSubscriptionsRequest request) {
-            return await new DescribeSubscriptionsExecutor().Client(this).Execute<DescribeSubscriptionsResponse, DescribeSubscriptionsResult, DescribeSubscriptionsRequest>(request);
+            return await new DescribeSubscriptionsExecutor().Client(this).Execute<DescribeSubscriptionsResponse, DescribeSubscriptionsResult, DescribeSubscriptionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -494,7 +494,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMessageResponse> DescribeMessage(DescribeMessageRequest request) {
-            return await new DescribeMessageExecutor().Client(this).Execute<DescribeMessageResponse, DescribeMessageResult, DescribeMessageRequest>(request);
+            return await new DescribeMessageExecutor().Client(this).Execute<DescribeMessageResponse, DescribeMessageResult, DescribeMessageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -513,7 +513,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribePermissionResponse> DescribePermission(DescribePermissionRequest request) {
-            return await new DescribePermissionExecutor().Client(this).Execute<DescribePermissionResponse, DescribePermissionResult, DescribePermissionRequest>(request);
+            return await new DescribePermissionExecutor().Client(this).Execute<DescribePermissionResponse, DescribePermissionResult, DescribePermissionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,7 +532,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDeadLetterNumbersWithTopicResponse> DescribeDeadLetterNumbersWithTopic(DescribeDeadLetterNumbersWithTopicRequest request) {
-            return await new DescribeDeadLetterNumbersWithTopicExecutor().Client(this).Execute<DescribeDeadLetterNumbersWithTopicResponse, DescribeDeadLetterNumbersWithTopicResult, DescribeDeadLetterNumbersWithTopicRequest>(request);
+            return await new DescribeDeadLetterNumbersWithTopicExecutor().Client(this).Execute<DescribeDeadLetterNumbersWithTopicResponse, DescribeDeadLetterNumbersWithTopicResult, DescribeDeadLetterNumbersWithTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Jcq.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSubscriptionResponse> DeleteSubscription(DeleteSubscriptionRequest request) {
-            return await new DeleteSubscriptionExecutor().Client(this).Execute<DeleteSubscriptionResponse, DeleteSubscriptionResult, DeleteSubscriptionRequest>(request);
+            return await new DeleteSubscriptionExecutor().Client(this).Execute<DeleteSubscriptionResponse, DeleteSubscriptionResult, DeleteSubscriptionRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -152,7 +152,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteNodeGroupResponse> DeleteNodeGroup(DeleteNodeGroupRequest request) {
-            return await new DeleteNodeGroupExecutor().Client(this).Execute<DeleteNodeGroupResponse, DeleteNodeGroupResult, DeleteNodeGroupRequest>(request);
+            return await new DeleteNodeGroupExecutor().Client(this).Execute<DeleteNodeGroupResponse, DeleteNodeGroupResult, DeleteNodeGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNodeGroupsResponse> DescribeNodeGroups(DescribeNodeGroupsRequest request) {
-            return await new DescribeNodeGroupsExecutor().Client(this).Execute<DescribeNodeGroupsResponse, DescribeNodeGroupsResult, DescribeNodeGroupsRequest>(request);
+            return await new DescribeNodeGroupsExecutor().Client(this).Execute<DescribeNodeGroupsResponse, DescribeNodeGroupsResult, DescribeNodeGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -194,7 +194,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateNodeGroupResponse> CreateNodeGroup(CreateNodeGroupRequest request) {
-            return await new CreateNodeGroupExecutor().Client(this).Execute<CreateNodeGroupResponse, CreateNodeGroupResult, CreateNodeGroupRequest>(request);
+            return await new CreateNodeGroupExecutor().Client(this).Execute<CreateNodeGroupResponse, CreateNodeGroupResult, CreateNodeGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -213,7 +213,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteClusterResponse> DeleteCluster(DeleteClusterRequest request) {
-            return await new DeleteClusterExecutor().Client(this).Execute<DeleteClusterResponse, DeleteClusterResult, DeleteClusterRequest>(request);
+            return await new DeleteClusterExecutor().Client(this).Execute<DeleteClusterResponse, DeleteClusterResult, DeleteClusterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -232,7 +232,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNodeGroupResponse> ModifyNodeGroup(ModifyNodeGroupRequest request) {
-            return await new ModifyNodeGroupExecutor().Client(this).Execute<ModifyNodeGroupResponse, ModifyNodeGroupResult, ModifyNodeGroupRequest>(request);
+            return await new ModifyNodeGroupExecutor().Client(this).Execute<ModifyNodeGroupResponse, ModifyNodeGroupResult, ModifyNodeGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -251,7 +251,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetUserMetricsResponse> SetUserMetrics(SetUserMetricsRequest request) {
-            return await new SetUserMetricsExecutor().Client(this).Execute<SetUserMetricsResponse, SetUserMetricsResult, SetUserMetricsRequest>(request);
+            return await new SetUserMetricsExecutor().Client(this).Execute<SetUserMetricsResponse, SetUserMetricsResult, SetUserMetricsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -302,7 +302,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateClusterResponse> CreateCluster(CreateClusterRequest request) {
-            return await new CreateClusterExecutor().Client(this).Execute<CreateClusterResponse, CreateClusterResult, CreateClusterRequest>(request);
+            return await new CreateClusterExecutor().Client(this).Execute<CreateClusterResponse, CreateClusterResult, CreateClusterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -321,7 +321,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
-            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -340,7 +340,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetNodeGroupSizeResponse> SetNodeGroupSize(SetNodeGroupSizeRequest request) {
-            return await new SetNodeGroupSizeExecutor().Client(this).Execute<SetNodeGroupSizeResponse, SetNodeGroupSizeResult, SetNodeGroupSizeRequest>(request);
+            return await new SetNodeGroupSizeExecutor().Client(this).Execute<SetNodeGroupSizeResponse, SetNodeGroupSizeResult, SetNodeGroupSizeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -359,7 +359,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeClusterResponse> DescribeCluster(DescribeClusterRequest request) {
-            return await new DescribeClusterExecutor().Client(this).Execute<DescribeClusterResponse, DescribeClusterResult, DescribeClusterRequest>(request);
+            return await new DescribeClusterExecutor().Client(this).Execute<DescribeClusterResponse, DescribeClusterResult, DescribeClusterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -378,7 +378,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeServerConfigResponse> DescribeServerConfig(DescribeServerConfigRequest request) {
-            return await new DescribeServerConfigExecutor().Client(this).Execute<DescribeServerConfigResponse, DescribeServerConfigResult, DescribeServerConfigRequest>(request);
+            return await new DescribeServerConfigExecutor().Client(this).Execute<DescribeServerConfigResponse, DescribeServerConfigResult, DescribeServerConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -397,7 +397,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyClusterResponse> ModifyCluster(ModifyClusterRequest request) {
-            return await new ModifyClusterExecutor().Client(this).Execute<ModifyClusterResponse, ModifyClusterResult, ModifyClusterRequest>(request);
+            return await new ModifyClusterExecutor().Client(this).Execute<ModifyClusterResponse, ModifyClusterResult, ModifyClusterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -416,7 +416,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeVersionsResponse> DescribeVersions(DescribeVersionsRequest request) {
-            return await new DescribeVersionsExecutor().Client(this).Execute<DescribeVersionsResponse, DescribeVersionsResult, DescribeVersionsRequest>(request);
+            return await new DescribeVersionsExecutor().Client(this).Execute<DescribeVersionsResponse, DescribeVersionsResult, DescribeVersionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -435,7 +435,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetAutoRepairResponse> SetAutoRepair(SetAutoRepairRequest request) {
-            return await new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request);
+            return await new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -454,7 +454,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
-            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
+            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -473,7 +473,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest request) {
-            return await new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request);
+            return await new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -492,7 +492,7 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNodeGroupResponse> DescribeNodeGroup(DescribeNodeGroupRequest request) {
-            return await new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request);
+            return await new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 

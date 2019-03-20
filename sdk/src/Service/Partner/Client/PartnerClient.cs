@@ -152,7 +152,7 @@ namespace JDCloudSDK.Partner.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryMyCustomerListResponse> QueryMyCustomerList(QueryMyCustomerListRequest request) {
-            return await new QueryMyCustomerListExecutor().Client(this).Execute<QueryMyCustomerListResponse, QueryMyCustomerListResult, QueryMyCustomerListRequest>(request);
+            return await new QueryMyCustomerListExecutor().Client(this).Execute<QueryMyCustomerListResponse, QueryMyCustomerListResult, QueryMyCustomerListRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -154,7 +154,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OmEnrollResponse> OmEnroll(OmEnrollRequest request) {
-            return await new OmEnrollExecutor().Client(this).Execute<OmEnrollResponse, OmEnrollResult, OmEnrollRequest>(request);
+            return await new OmEnrollExecutor().Client(this).Execute<OmEnrollResponse, OmEnrollResult, OmEnrollRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -175,7 +175,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeviceActivateResponse> DeviceActivate(DeviceActivateRequest request) {
-            return await new DeviceActivateExecutor().Client(this).Execute<DeviceActivateResponse, DeviceActivateResult, DeviceActivateRequest>(request);
+            return await new DeviceActivateExecutor().Client(this).Execute<DeviceActivateResponse, DeviceActivateResult, DeviceActivateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -194,7 +194,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest request) {
-            return await new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request);
+            return await new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -215,7 +215,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModuleEnrollResponse> ModuleEnroll(ModuleEnrollRequest request) {
-            return await new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request);
+            return await new ModuleEnrollExecutor().Client(this).Execute<ModuleEnrollResponse, ModuleEnrollResult, ModuleEnrollRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -236,7 +236,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DevicesEnrollResponse> DevicesEnroll(DevicesEnrollRequest request) {
-            return await new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request);
+            return await new DevicesEnrollExecutor().Client(this).Execute<DevicesEnrollResponse, DevicesEnrollResult, DevicesEnrollRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -257,7 +257,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeviceCommandResponse> DeviceCommand(DeviceCommandRequest request) {
-            return await new DeviceCommandExecutor().Client(this).Execute<DeviceCommandResponse, DeviceCommandResult, DeviceCommandRequest>(request);
+            return await new DeviceCommandExecutor().Client(this).Execute<DeviceCommandResponse, DeviceCommandResult, DeviceCommandRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -278,7 +278,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModuleStateResponse> ModuleState(ModuleStateRequest request) {
-            return await new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request);
+            return await new ModuleStateExecutor().Client(this).Execute<ModuleStateResponse, ModuleStateResult, ModuleStateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OmEnrollbyFileResponse> OmEnrollbyFile(OmEnrollbyFileRequest request) {
-            return await new OmEnrollbyFileExecutor().Client(this).Execute<OmEnrollbyFileResponse, OmEnrollbyFileResult, OmEnrollbyFileRequest>(request);
+            return await new OmEnrollbyFileExecutor().Client(this).Execute<OmEnrollbyFileResponse, OmEnrollbyFileResult, OmEnrollbyFileRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -318,7 +318,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDeviceOnlineInfosResponse> QueryDeviceOnlineInfos(QueryDeviceOnlineInfosRequest request) {
-            return await new QueryDeviceOnlineInfosExecutor().Client(this).Execute<QueryDeviceOnlineInfosResponse, QueryDeviceOnlineInfosResult, QueryDeviceOnlineInfosRequest>(request);
+            return await new QueryDeviceOnlineInfosExecutor().Client(this).Execute<QueryDeviceOnlineInfosResponse, QueryDeviceOnlineInfosResult, QueryDeviceOnlineInfosRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -339,7 +339,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDeviceStatesResponse> QueryDeviceStates(QueryDeviceStatesRequest request) {
-            return await new QueryDeviceStatesExecutor().Client(this).Execute<QueryDeviceStatesResponse, QueryDeviceStatesResult, QueryDeviceStatesRequest>(request);
+            return await new QueryDeviceStatesExecutor().Client(this).Execute<QueryDeviceStatesResponse, QueryDeviceStatesResult, QueryDeviceStatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -360,7 +360,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryDeviceCommandsResponse> QueryDeviceCommands(QueryDeviceCommandsRequest request) {
-            return await new QueryDeviceCommandsExecutor().Client(this).Execute<QueryDeviceCommandsResponse, QueryDeviceCommandsResult, QueryDeviceCommandsRequest>(request);
+            return await new QueryDeviceCommandsExecutor().Client(this).Execute<QueryDeviceCommandsResponse, QueryDeviceCommandsResult, QueryDeviceCommandsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -381,7 +381,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetOMPrivateURLResponse> GetOMPrivateURL(GetOMPrivateURLRequest request) {
-            return await new GetOMPrivateURLExecutor().Client(this).Execute<GetOMPrivateURLResponse, GetOMPrivateURLResult, GetOMPrivateURLRequest>(request);
+            return await new GetOMPrivateURLExecutor().Client(this).Execute<GetOMPrivateURLResponse, GetOMPrivateURLResult, GetOMPrivateURLRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -402,7 +402,7 @@ namespace JDCloudSDK.Iothub.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeviceStateResponse> DeviceState(DeviceStateRequest request) {
-            return await new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request);
+            return await new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request).ConfigureAwait(false);
         }
 #endif
 

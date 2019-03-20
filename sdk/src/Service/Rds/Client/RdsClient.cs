@@ -152,7 +152,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditDownloadURLResponse> DescribeAuditDownloadURL(DescribeAuditDownloadURLRequest request) {
-            return await new DescribeAuditDownloadURLExecutor().Client(this).Execute<DescribeAuditDownloadURLResponse, DescribeAuditDownloadURLResult, DescribeAuditDownloadURLRequest>(request);
+            return await new DescribeAuditDownloadURLExecutor().Client(this).Execute<DescribeAuditDownloadURLResponse, DescribeAuditDownloadURLResult, DescribeAuditDownloadURLRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ClearBinlogsResponse> ClearBinlogs(ClearBinlogsRequest request) {
-            return await new ClearBinlogsExecutor().Client(this).Execute<ClearBinlogsResponse, ClearBinlogsResult, ClearBinlogsRequest>(request);
+            return await new ClearBinlogsExecutor().Client(this).Execute<ClearBinlogsResponse, ClearBinlogsResult, ClearBinlogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
-            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
+            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInterceptResultResponse> DescribeInterceptResult(DescribeInterceptResultRequest request) {
-            return await new DescribeInterceptResultExecutor().Client(this).Execute<DescribeInterceptResultResponse, DescribeInterceptResultResult, DescribeInterceptResultRequest>(request);
+            return await new DescribeInterceptResultExecutor().Client(this).Execute<DescribeInterceptResultResponse, DescribeInterceptResultResult, DescribeInterceptResultRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupDownloadURLResponse> DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest request) {
-            return await new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request);
+            return await new DescribeBackupDownloadURLExecutor().Client(this).Execute<DescribeBackupDownloadURLResponse, DescribeBackupDownloadURLResult, DescribeBackupDownloadURLRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,7 +247,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CopyParameterGroupResponse> CopyParameterGroup(CopyParameterGroupRequest request) {
-            return await new CopyParameterGroupExecutor().Client(this).Execute<CopyParameterGroupResponse, CopyParameterGroupResult, CopyParameterGroupRequest>(request);
+            return await new CopyParameterGroupExecutor().Client(this).Execute<CopyParameterGroupResponse, CopyParameterGroupResult, CopyParameterGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -266,7 +266,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBinlogsResponse> DescribeBinlogs(DescribeBinlogsRequest request) {
-            return await new DescribeBinlogsExecutor().Client(this).Execute<DescribeBinlogsResponse, DescribeBinlogsResult, DescribeBinlogsRequest>(request);
+            return await new DescribeBinlogsExecutor().Client(this).Execute<DescribeBinlogsResponse, DescribeBinlogsResult, DescribeBinlogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -285,7 +285,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
-            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -304,7 +304,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateParameterGroupResponse> CreateParameterGroup(CreateParameterGroupRequest request) {
-            return await new CreateParameterGroupExecutor().Client(this).Execute<CreateParameterGroupResponse, CreateParameterGroupResult, CreateParameterGroupRequest>(request);
+            return await new CreateParameterGroupExecutor().Client(this).Execute<CreateParameterGroupResponse, CreateParameterGroupResult, CreateParameterGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -323,7 +323,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
-            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -342,7 +342,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyConnectionModeResponse> ModifyConnectionMode(ModifyConnectionModeRequest request) {
-            return await new ModifyConnectionModeExecutor().Client(this).Execute<ModifyConnectionModeResponse, ModifyConnectionModeResult, ModifyConnectionModeRequest>(request);
+            return await new ModifyConnectionModeExecutor().Client(this).Execute<ModifyConnectionModeResponse, ModifyConnectionModeResult, ModifyConnectionModeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -361,7 +361,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAuditResponse> DeleteAudit(DeleteAuditRequest request) {
-            return await new DeleteAuditExecutor().Client(this).Execute<DeleteAuditResponse, DeleteAuditResult, DeleteAuditRequest>(request);
+            return await new DeleteAuditExecutor().Client(this).Execute<DeleteAuditResponse, DeleteAuditResult, DeleteAuditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -380,7 +380,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateInstanceByTimeResponse> CreateInstanceByTime(CreateInstanceByTimeRequest request) {
-            return await new CreateInstanceByTimeExecutor().Client(this).Execute<CreateInstanceByTimeResponse, CreateInstanceByTimeResult, CreateInstanceByTimeRequest>(request);
+            return await new CreateInstanceByTimeExecutor().Client(this).Execute<CreateInstanceByTimeResponse, CreateInstanceByTimeResult, CreateInstanceByTimeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -399,7 +399,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest request) {
-            return await new DescribeAccountsExecutor().Client(this).Execute<DescribeAccountsResponse, DescribeAccountsResult, DescribeAccountsRequest>(request);
+            return await new DescribeAccountsExecutor().Client(this).Execute<DescribeAccountsResponse, DescribeAccountsResult, DescribeAccountsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -418,7 +418,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableInternetAccessResponse> EnableInternetAccess(EnableInternetAccessRequest request) {
-            return await new EnableInternetAccessExecutor().Client(this).Execute<EnableInternetAccessResponse, EnableInternetAccessResult, EnableInternetAccessRequest>(request);
+            return await new EnableInternetAccessExecutor().Client(this).Execute<EnableInternetAccessResponse, EnableInternetAccessResult, EnableInternetAccessRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyParameterGroupResponse> ModifyParameterGroup(ModifyParameterGroupRequest request) {
-            return await new ModifyParameterGroupExecutor().Client(this).Execute<ModifyParameterGroupResponse, ModifyParameterGroupResult, ModifyParameterGroupRequest>(request);
+            return await new ModifyParameterGroupExecutor().Client(this).Execute<ModifyParameterGroupResponse, ModifyParameterGroupResult, ModifyParameterGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterModifyRecordsResponse> DescribeParameterModifyRecords(DescribeParameterModifyRecordsRequest request) {
-            return await new DescribeParameterModifyRecordsExecutor().Client(this).Execute<DescribeParameterModifyRecordsResponse, DescribeParameterModifyRecordsResult, DescribeParameterModifyRecordsRequest>(request);
+            return await new DescribeParameterModifyRecordsExecutor().Client(this).Execute<DescribeParameterModifyRecordsResponse, DescribeParameterModifyRecordsResult, DescribeParameterModifyRecordsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -475,7 +475,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBinlogDownloadURLResponse> DescribeBinlogDownloadURL(DescribeBinlogDownloadURLRequest request) {
-            return await new DescribeBinlogDownloadURLExecutor().Client(this).Execute<DescribeBinlogDownloadURLResponse, DescribeBinlogDownloadURLResult, DescribeBinlogDownloadURLRequest>(request);
+            return await new DescribeBinlogDownloadURLExecutor().Client(this).Execute<DescribeBinlogDownloadURLResponse, DescribeBinlogDownloadURLResult, DescribeBinlogDownloadURLRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -494,7 +494,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditFilesResponse> DescribeAuditFiles(DescribeAuditFilesRequest request) {
-            return await new DescribeAuditFilesExecutor().Client(this).Execute<DescribeAuditFilesResponse, DescribeAuditFilesResult, DescribeAuditFilesRequest>(request);
+            return await new DescribeAuditFilesExecutor().Client(this).Execute<DescribeAuditFilesResponse, DescribeAuditFilesResult, DescribeAuditFilesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -513,7 +513,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest request) {
-            return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
+            return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,7 +532,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GrantPrivilegeResponse> GrantPrivilege(GrantPrivilegeRequest request) {
-            return await new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request);
+            return await new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RevokePrivilegeResponse> RevokePrivilege(RevokePrivilegeRequest request) {
-            return await new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request);
+            return await new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -570,7 +570,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAzsResponse> DescribeAzs(DescribeAzsRequest request) {
-            return await new DescribeAzsExecutor().Client(this).Execute<DescribeAzsResponse, DescribeAzsResult, DescribeAzsRequest>(request);
+            return await new DescribeAzsExecutor().Client(this).Execute<DescribeAzsResponse, DescribeAzsResult, DescribeAzsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -589,7 +589,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetUploadKeyResponse> GetUploadKey(GetUploadKeyRequest request) {
-            return await new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request);
+            return await new GetUploadKeyExecutor().Client(this).Execute<GetUploadKeyResponse, GetUploadKeyResult, GetUploadKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -608,7 +608,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreDatabaseFromFileResponse> RestoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) {
-            return await new RestoreDatabaseFromFileExecutor().Client(this).Execute<RestoreDatabaseFromFileResponse, RestoreDatabaseFromFileResult, RestoreDatabaseFromFileRequest>(request);
+            return await new RestoreDatabaseFromFileExecutor().Client(this).Execute<RestoreDatabaseFromFileResponse, RestoreDatabaseFromFileResult, RestoreDatabaseFromFileRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -627,7 +627,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceAttributesResponse> DescribeInstanceAttributes(DescribeInstanceAttributesRequest request) {
-            return await new DescribeInstanceAttributesExecutor().Client(this).Execute<DescribeInstanceAttributesResponse, DescribeInstanceAttributesResult, DescribeInstanceAttributesRequest>(request);
+            return await new DescribeInstanceAttributesExecutor().Client(this).Execute<DescribeInstanceAttributesResponse, DescribeInstanceAttributesResult, DescribeInstanceAttributesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -646,7 +646,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpec(ModifyInstanceSpecRequest request) {
-            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request);
+            return await new ModifyInstanceSpecExecutor().Client(this).Execute<ModifyInstanceSpecResponse, ModifyInstanceSpecResult, ModifyInstanceSpecRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -665,7 +665,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest request) {
-            return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request);
+            return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -684,7 +684,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQueryPerformanceResponse> DescribeQueryPerformance(DescribeQueryPerformanceRequest request) {
-            return await new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request);
+            return await new DescribeQueryPerformanceExecutor().Client(this).Execute<DescribeQueryPerformanceResponse, DescribeQueryPerformanceResult, DescribeQueryPerformanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -703,7 +703,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterGroupAttachedInstancesResponse> DescribeParameterGroupAttachedInstances(DescribeParameterGroupAttachedInstancesRequest request) {
-            return await new DescribeParameterGroupAttachedInstancesExecutor().Client(this).Execute<DescribeParameterGroupAttachedInstancesResponse, DescribeParameterGroupAttachedInstancesResult, DescribeParameterGroupAttachedInstancesRequest>(request);
+            return await new DescribeParameterGroupAttachedInstancesExecutor().Client(this).Execute<DescribeParameterGroupAttachedInstancesResponse, DescribeParameterGroupAttachedInstancesResult, DescribeParameterGroupAttachedInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -722,7 +722,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateBackupSynchronicityResponse> CreateBackupSynchronicity(CreateBackupSynchronicityRequest request) {
-            return await new CreateBackupSynchronicityExecutor().Client(this).Execute<CreateBackupSynchronicityResponse, CreateBackupSynchronicityResult, CreateBackupSynchronicityRequest>(request);
+            return await new CreateBackupSynchronicityExecutor().Client(this).Execute<CreateBackupSynchronicityResponse, CreateBackupSynchronicityResult, CreateBackupSynchronicityRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -741,7 +741,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackupSynchronicityResponse> DeleteBackupSynchronicity(DeleteBackupSynchronicityRequest request) {
-            return await new DeleteBackupSynchronicityExecutor().Client(this).Execute<DeleteBackupSynchronicityResponse, DeleteBackupSynchronicityResult, DeleteBackupSynchronicityRequest>(request);
+            return await new DeleteBackupSynchronicityExecutor().Client(this).Execute<DeleteBackupSynchronicityResponse, DeleteBackupSynchronicityResult, DeleteBackupSynchronicityRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -760,7 +760,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteImportFileResponse> DeleteImportFile(DeleteImportFileRequest request) {
-            return await new DeleteImportFileExecutor().Client(this).Execute<DeleteImportFileResponse, DeleteImportFileResult, DeleteImportFileRequest>(request);
+            return await new DeleteImportFileExecutor().Client(this).Execute<DeleteImportFileResponse, DeleteImportFileResult, DeleteImportFileRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -779,7 +779,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSlowLogAttributesResponse> DescribeSlowLogAttributes(DescribeSlowLogAttributesRequest request) {
-            return await new DescribeSlowLogAttributesExecutor().Client(this).Execute<DescribeSlowLogAttributesResponse, DescribeSlowLogAttributesResult, DescribeSlowLogAttributesRequest>(request);
+            return await new DescribeSlowLogAttributesExecutor().Client(this).Execute<DescribeSlowLogAttributesResponse, DescribeSlowLogAttributesResult, DescribeSlowLogAttributesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -798,7 +798,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyParameterGroupAttributeResponse> ModifyParameterGroupAttribute(ModifyParameterGroupAttributeRequest request) {
-            return await new ModifyParameterGroupAttributeExecutor().Client(this).Execute<ModifyParameterGroupAttributeResponse, ModifyParameterGroupAttributeResult, ModifyParameterGroupAttributeRequest>(request);
+            return await new ModifyParameterGroupAttributeExecutor().Client(this).Execute<ModifyParameterGroupAttributeResponse, ModifyParameterGroupAttributeResult, ModifyParameterGroupAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -817,7 +817,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyAuditResponse> ModifyAudit(ModifyAuditRequest request) {
-            return await new ModifyAuditExecutor().Client(this).Execute<ModifyAuditResponse, ModifyAuditResult, ModifyAuditRequest>(request);
+            return await new ModifyAuditExecutor().Client(this).Execute<ModifyAuditResponse, ModifyAuditResult, ModifyAuditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -836,7 +836,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditResultResponse> DescribeAuditResult(DescribeAuditResultRequest request) {
-            return await new DescribeAuditResultExecutor().Client(this).Execute<DescribeAuditResultResponse, DescribeAuditResultResult, DescribeAuditResultRequest>(request);
+            return await new DescribeAuditResultExecutor().Client(this).Execute<DescribeAuditResultResponse, DescribeAuditResultResult, DescribeAuditResultRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -855,7 +855,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLatestRestoreTimeResponse> DescribeLatestRestoreTime(DescribeLatestRestoreTimeRequest request) {
-            return await new DescribeLatestRestoreTimeExecutor().Client(this).Execute<DescribeLatestRestoreTimeResponse, DescribeLatestRestoreTimeResult, DescribeLatestRestoreTimeRequest>(request);
+            return await new DescribeLatestRestoreTimeExecutor().Client(this).Execute<DescribeLatestRestoreTimeResponse, DescribeLatestRestoreTimeResult, DescribeLatestRestoreTimeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -874,7 +874,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeErrorLogsResponse> DescribeErrorLogs(DescribeErrorLogsRequest request) {
-            return await new DescribeErrorLogsExecutor().Client(this).Execute<DescribeErrorLogsResponse, DescribeErrorLogsResult, DescribeErrorLogsRequest>(request);
+            return await new DescribeErrorLogsExecutor().Client(this).Execute<DescribeErrorLogsResponse, DescribeErrorLogsResult, DescribeErrorLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -893,7 +893,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest request) {
-            return await new DescribeSlowLogsExecutor().Client(this).Execute<DescribeSlowLogsResponse, DescribeSlowLogsResult, DescribeSlowLogsRequest>(request);
+            return await new DescribeSlowLogsExecutor().Client(this).Execute<DescribeSlowLogsResponse, DescribeSlowLogsResult, DescribeSlowLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -912,7 +912,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDatabaseResponse> DeleteDatabase(DeleteDatabaseRequest request) {
-            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request);
+            return await new DeleteDatabaseExecutor().Client(this).Execute<DeleteDatabaseResponse, DeleteDatabaseResult, DeleteDatabaseRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -931,7 +931,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeActiveQueryPerformanceResponse> DescribeActiveQueryPerformance(DescribeActiveQueryPerformanceRequest request) {
-            return await new DescribeActiveQueryPerformanceExecutor().Client(this).Execute<DescribeActiveQueryPerformanceResponse, DescribeActiveQueryPerformanceResult, DescribeActiveQueryPerformanceRequest>(request);
+            return await new DescribeActiveQueryPerformanceExecutor().Client(this).Execute<DescribeActiveQueryPerformanceResponse, DescribeActiveQueryPerformanceResult, DescribeActiveQueryPerformanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -950,7 +950,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateInstanceFromBackupResponse> CreateInstanceFromBackup(CreateInstanceFromBackupRequest request) {
-            return await new CreateInstanceFromBackupExecutor().Client(this).Execute<CreateInstanceFromBackupResponse, CreateInstanceFromBackupResult, CreateInstanceFromBackupRequest>(request);
+            return await new CreateInstanceFromBackupExecutor().Client(this).Execute<CreateInstanceFromBackupResponse, CreateInstanceFromBackupResult, CreateInstanceFromBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -969,7 +969,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParametersResponse> DescribeParameters(DescribeParametersRequest request) {
-            return await new DescribeParametersExecutor().Client(this).Execute<DescribeParametersResponse, DescribeParametersResult, DescribeParametersRequest>(request);
+            return await new DescribeParametersExecutor().Client(this).Execute<DescribeParametersResponse, DescribeParametersResult, DescribeParametersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -988,7 +988,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyParametersResponse> ModifyParameters(ModifyParametersRequest request) {
-            return await new ModifyParametersExecutor().Client(this).Execute<ModifyParametersResponse, ModifyParametersResult, ModifyParametersRequest>(request);
+            return await new ModifyParametersExecutor().Client(this).Execute<ModifyParametersResponse, ModifyParametersResult, ModifyParametersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1007,7 +1007,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1026,7 +1026,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyWhiteListResponse> ModifyWhiteList(ModifyWhiteListRequest request) {
-            return await new ModifyWhiteListExecutor().Client(this).Execute<ModifyWhiteListResponse, ModifyWhiteListResult, ModifyWhiteListRequest>(request);
+            return await new ModifyWhiteListExecutor().Client(this).Execute<ModifyWhiteListResponse, ModifyWhiteListResult, ModifyWhiteListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1045,7 +1045,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExchangeInstanceDnsResponse> ExchangeInstanceDns(ExchangeInstanceDnsRequest request) {
-            return await new ExchangeInstanceDnsExecutor().Client(this).Execute<ExchangeInstanceDnsResponse, ExchangeInstanceDnsResult, ExchangeInstanceDnsRequest>(request);
+            return await new ExchangeInstanceDnsExecutor().Client(this).Execute<ExchangeInstanceDnsResponse, ExchangeInstanceDnsResult, ExchangeInstanceDnsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1064,7 +1064,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableInterceptResponse> DisableIntercept(DisableInterceptRequest request) {
-            return await new DisableInterceptExecutor().Client(this).Execute<DisableInterceptResponse, DisableInterceptResult, DisableInterceptRequest>(request);
+            return await new DisableInterceptExecutor().Client(this).Execute<DisableInterceptResponse, DisableInterceptResult, DisableInterceptRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1083,7 +1083,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableAuditResponse> DisableAudit(DisableAuditRequest request) {
-            return await new DisableAuditExecutor().Client(this).Execute<DisableAuditResponse, DisableAuditResult, DisableAuditRequest>(request);
+            return await new DisableAuditExecutor().Client(this).Execute<DisableAuditResponse, DisableAuditResult, DisableAuditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1102,7 +1102,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest request) {
-            return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request);
+            return await new CreateDatabaseExecutor().Client(this).Execute<CreateDatabaseResponse, CreateDatabaseResult, CreateDatabaseRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1121,7 +1121,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableInterceptResponse> EnableIntercept(EnableInterceptRequest request) {
-            return await new EnableInterceptExecutor().Client(this).Execute<EnableInterceptResponse, EnableInterceptResult, EnableInterceptRequest>(request);
+            return await new EnableInterceptExecutor().Client(this).Execute<EnableInterceptResponse, EnableInterceptResult, EnableInterceptRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1140,7 +1140,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetImportFileSharedResponse> SetImportFileShared(SetImportFileSharedRequest request) {
-            return await new SetImportFileSharedExecutor().Client(this).Execute<SetImportFileSharedResponse, SetImportFileSharedResult, SetImportFileSharedRequest>(request);
+            return await new SetImportFileSharedExecutor().Client(this).Execute<SetImportFileSharedResponse, SetImportFileSharedResult, SetImportFileSharedRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1159,7 +1159,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
-            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
+            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1178,7 +1178,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest request) {
-            return await new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request);
+            return await new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1197,7 +1197,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIndexPerformanceResponse> DescribeIndexPerformance(DescribeIndexPerformanceRequest request) {
-            return await new DescribeIndexPerformanceExecutor().Client(this).Execute<DescribeIndexPerformanceResponse, DescribeIndexPerformanceResult, DescribeIndexPerformanceRequest>(request);
+            return await new DescribeIndexPerformanceExecutor().Client(this).Execute<DescribeIndexPerformanceResponse, DescribeIndexPerformanceResult, DescribeIndexPerformanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1216,7 +1216,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateAuditResponse> CreateAudit(CreateAuditRequest request) {
-            return await new CreateAuditExecutor().Client(this).Execute<CreateAuditResponse, CreateAuditResult, CreateAuditRequest>(request);
+            return await new CreateAuditExecutor().Client(this).Execute<CreateAuditResponse, CreateAuditResult, CreateAuditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1235,7 +1235,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
-            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request);
+            return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1254,7 +1254,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableAuditResponse> EnableAudit(EnableAuditRequest request) {
-            return await new EnableAuditExecutor().Client(this).Execute<EnableAuditResponse, EnableAuditResult, EnableAuditRequest>(request);
+            return await new EnableAuditExecutor().Client(this).Execute<EnableAuditResponse, EnableAuditResult, EnableAuditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1273,7 +1273,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteParameterGroupResponse> DeleteParameterGroup(DeleteParameterGroupRequest request) {
-            return await new DeleteParameterGroupExecutor().Client(this).Execute<DeleteParameterGroupResponse, DeleteParameterGroupResult, DeleteParameterGroupRequest>(request);
+            return await new DeleteParameterGroupExecutor().Client(this).Execute<DeleteParameterGroupResponse, DeleteParameterGroupResult, DeleteParameterGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1292,7 +1292,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
-            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
+            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1311,7 +1311,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
-            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1330,7 +1330,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
-            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
+            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1349,7 +1349,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
-            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1368,7 +1368,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreDatabaseFromOSSResponse> RestoreDatabaseFromOSS(RestoreDatabaseFromOSSRequest request) {
-            return await new RestoreDatabaseFromOSSExecutor().Client(this).Execute<RestoreDatabaseFromOSSResponse, RestoreDatabaseFromOSSResult, RestoreDatabaseFromOSSRequest>(request);
+            return await new RestoreDatabaseFromOSSExecutor().Client(this).Execute<RestoreDatabaseFromOSSResponse, RestoreDatabaseFromOSSResult, RestoreDatabaseFromOSSRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1387,7 +1387,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImportFilesResponse> DescribeImportFiles(DescribeImportFilesRequest request) {
-            return await new DescribeImportFilesExecutor().Client(this).Execute<DescribeImportFilesResponse, DescribeImportFilesResult, DescribeImportFilesRequest>(request);
+            return await new DescribeImportFilesExecutor().Client(this).Execute<DescribeImportFilesResponse, DescribeImportFilesResult, DescribeImportFilesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1406,7 +1406,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterGroupsResponse> DescribeParameterGroups(DescribeParameterGroupsRequest request) {
-            return await new DescribeParameterGroupsExecutor().Client(this).Execute<DescribeParameterGroupsResponse, DescribeParameterGroupsResult, DescribeParameterGroupsRequest>(request);
+            return await new DescribeParameterGroupsExecutor().Client(this).Execute<DescribeParameterGroupsResponse, DescribeParameterGroupsResult, DescribeParameterGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1425,7 +1425,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
-            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1444,7 +1444,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBackupSynchronicitiesResponse> DescribeBackupSynchronicities(DescribeBackupSynchronicitiesRequest request) {
-            return await new DescribeBackupSynchronicitiesExecutor().Client(this).Execute<DescribeBackupSynchronicitiesResponse, DescribeBackupSynchronicitiesResult, DescribeBackupSynchronicitiesRequest>(request);
+            return await new DescribeBackupSynchronicitiesExecutor().Client(this).Execute<DescribeBackupSynchronicitiesResponse, DescribeBackupSynchronicitiesResult, DescribeBackupSynchronicitiesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1463,7 +1463,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreDatabaseFromBackupResponse> RestoreDatabaseFromBackup(RestoreDatabaseFromBackupRequest request) {
-            return await new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request);
+            return await new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1482,7 +1482,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeWhiteListResponse> DescribeWhiteList(DescribeWhiteListRequest request) {
-            return await new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request);
+            return await new DescribeWhiteListExecutor().Client(this).Execute<DescribeWhiteListResponse, DescribeWhiteListResult, DescribeWhiteListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1501,7 +1501,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterGroupParametersResponse> DescribeParameterGroupParameters(DescribeParameterGroupParametersRequest request) {
-            return await new DescribeParameterGroupParametersExecutor().Client(this).Execute<DescribeParameterGroupParametersResponse, DescribeParameterGroupParametersResult, DescribeParameterGroupParametersRequest>(request);
+            return await new DescribeParameterGroupParametersExecutor().Client(this).Execute<DescribeParameterGroupParametersResponse, DescribeParameterGroupParametersResult, DescribeParameterGroupParametersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1520,7 +1520,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<FailoverInstanceResponse> FailoverInstance(FailoverInstanceRequest request) {
-            return await new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request);
+            return await new FailoverInstanceExecutor().Client(this).Execute<FailoverInstanceResponse, FailoverInstanceResult, FailoverInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1539,7 +1539,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableInternetAccessResponse> DisableInternetAccess(DisableInternetAccessRequest request) {
-            return await new DisableInternetAccessExecutor().Client(this).Execute<DisableInternetAccessResponse, DisableInternetAccessResult, DisableInternetAccessRequest>(request);
+            return await new DisableInternetAccessExecutor().Client(this).Execute<DisableInternetAccessResponse, DisableInternetAccessResult, DisableInternetAccessRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1558,7 +1558,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1577,7 +1577,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditOptionsResponse> DescribeAuditOptions(DescribeAuditOptionsRequest request) {
-            return await new DescribeAuditOptionsExecutor().Client(this).Execute<DescribeAuditOptionsResponse, DescribeAuditOptionsResult, DescribeAuditOptionsRequest>(request);
+            return await new DescribeAuditOptionsExecutor().Client(this).Execute<DescribeAuditOptionsResponse, DescribeAuditOptionsResult, DescribeAuditOptionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1596,7 +1596,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest request) {
-            return await new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request);
+            return await new DeleteAccountExecutor().Client(this).Execute<DeleteAccountResponse, DeleteAccountResult, DeleteAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1615,7 +1615,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyParameterGroupParametersResponse> ModifyParameterGroupParameters(ModifyParameterGroupParametersRequest request) {
-            return await new ModifyParameterGroupParametersExecutor().Client(this).Execute<ModifyParameterGroupParametersResponse, ModifyParameterGroupParametersResult, ModifyParameterGroupParametersRequest>(request);
+            return await new ModifyParameterGroupParametersExecutor().Client(this).Execute<ModifyParameterGroupParametersResponse, ModifyParameterGroupParametersResult, ModifyParameterGroupParametersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1634,7 +1634,7 @@ namespace JDCloudSDK.Rds.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInterceptResponse> DescribeIntercept(DescribeInterceptRequest request) {
-            return await new DescribeInterceptExecutor().Client(this).Execute<DescribeInterceptResponse, DescribeInterceptResult, DescribeInterceptRequest>(request);
+            return await new DescribeInterceptExecutor().Client(this).Execute<DescribeInterceptResponse, DescribeInterceptResult, DescribeInterceptRequest>(request).ConfigureAwait(false);
         }
 #endif
 

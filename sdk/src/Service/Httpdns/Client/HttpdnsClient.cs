@@ -152,7 +152,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAccountInfoResponse> GetAccountInfo(GetAccountInfoRequest request) {
-            return await new GetAccountInfoExecutor().Client(this).Execute<GetAccountInfoResponse, GetAccountInfoResult, GetAccountInfoRequest>(request);
+            return await new GetAccountInfoExecutor().Client(this).Execute<GetAccountInfoResponse, GetAccountInfoResult, GetAccountInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -175,7 +175,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddDomainsResponse> AddDomains(AddDomainsRequest request) {
-            return await new AddDomainsExecutor().Client(this).Execute<AddDomainsResponse, AddDomainsResult, AddDomainsRequest>(request);
+            return await new AddDomainsExecutor().Client(this).Execute<AddDomainsResponse, AddDomainsResult, AddDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -194,7 +194,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DelDomainsResponse> DelDomains(DelDomainsRequest request) {
-            return await new DelDomainsExecutor().Client(this).Execute<DelDomainsResponse, DelDomainsResult, DelDomainsRequest>(request);
+            return await new DelDomainsExecutor().Client(this).Execute<DelDomainsResponse, DelDomainsResult, DelDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -213,7 +213,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest request) {
-            return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request);
+            return await new CreateAccountExecutor().Client(this).Execute<CreateAccountResponse, CreateAccountResult, CreateAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -232,7 +232,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetAccountIdResponse> GetAccountId(GetAccountIdRequest request) {
-            return await new GetAccountIdExecutor().Client(this).Execute<GetAccountIdResponse, GetAccountIdResult, GetAccountIdRequest>(request);
+            return await new GetAccountIdExecutor().Client(this).Execute<GetAccountIdResponse, GetAccountIdResult, GetAccountIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -251,7 +251,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainsResponse> GetDomains(GetDomainsRequest request) {
-            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request);
+            return await new GetDomainsExecutor().Client(this).Execute<GetDomainsResponse, GetDomainsResult, GetDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -270,7 +270,7 @@ namespace JDCloudSDK.Httpdns.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<OperateKeyResponse> OperateKey(OperateKeyRequest request) {
-            return await new OperateKeyExecutor().Client(this).Execute<OperateKeyResponse, OperateKeyResult, OperateKeyRequest>(request);
+            return await new OperateKeyExecutor().Client(this).Execute<OperateKeyResponse, OperateKeyResult, OperateKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 

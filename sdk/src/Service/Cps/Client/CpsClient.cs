@@ -152,7 +152,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
-            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -171,7 +171,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDeviceTypesResponse> DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
-            return await new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
+            return await new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -190,7 +190,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
-            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
+            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -209,7 +209,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest request) {
-            return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
+            return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -228,7 +228,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
-            return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request);
+            return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -251,7 +251,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ReinstallInstanceResponse> ReinstallInstance(ReinstallInstanceRequest request) {
-            return await new ReinstallInstanceExecutor().Client(this).Execute<ReinstallInstanceResponse, ReinstallInstanceResult, ReinstallInstanceRequest>(request);
+            return await new ReinstallInstanceExecutor().Client(this).Execute<ReinstallInstanceResponse, ReinstallInstanceResult, ReinstallInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -270,7 +270,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeOSResponse> DescribeOS(DescribeOSRequest request) {
-            return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
+            return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -289,7 +289,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDeviceRaidsResponse> DescribeDeviceRaids(DescribeDeviceRaidsRequest request) {
-            return await new DescribeDeviceRaidsExecutor().Client(this).Execute<DescribeDeviceRaidsResponse, DescribeDeviceRaidsResult, DescribeDeviceRaidsRequest>(request);
+            return await new DescribeDeviceRaidsExecutor().Client(this).Execute<DescribeDeviceRaidsResponse, DescribeDeviceRaidsResult, DescribeDeviceRaidsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -308,7 +308,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceNameResponse> DescribeInstanceName(DescribeInstanceNameRequest request) {
-            return await new DescribeInstanceNameExecutor().Client(this).Execute<DescribeInstanceNameResponse, DescribeInstanceNameResult, DescribeInstanceNameRequest>(request);
+            return await new DescribeInstanceNameExecutor().Client(this).Execute<DescribeInstanceNameResponse, DescribeInstanceNameResult, DescribeInstanceNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -327,7 +327,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceRaidResponse> DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
-            return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
+            return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -352,7 +352,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyBandwidthResponse> ModifyBandwidth(ModifyBandwidthRequest request) {
-            return await new ModifyBandwidthExecutor().Client(this).Execute<ModifyBandwidthResponse, ModifyBandwidthResult, ModifyBandwidthRequest>(request);
+            return await new ModifyBandwidthExecutor().Client(this).Execute<ModifyBandwidthResponse, ModifyBandwidthResult, ModifyBandwidthRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -371,7 +371,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
-            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request);
+            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -394,7 +394,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -413,7 +413,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRegionesResponse> DescribeRegiones(DescribeRegionesRequest request) {
-            return await new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request);
+            return await new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -432,7 +432,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
-            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request);
+            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -485,7 +485,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest request) {
-            return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request);
+            return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -504,7 +504,7 @@ namespace JDCloudSDK.Cps.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest request) {
-            return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
+            return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 

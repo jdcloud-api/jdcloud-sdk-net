@@ -154,7 +154,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImageMembersResponse> DescribeImageMembers(DescribeImageMembersRequest request) {
-            return await new DescribeImageMembersExecutor().Client(this).Execute<DescribeImageMembersResponse, DescribeImageMembersResult, DescribeImageMembersRequest>(request);
+            return await new DescribeImageMembersExecutor().Client(this).Execute<DescribeImageMembersResponse, DescribeImageMembersResult, DescribeImageMembersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -181,7 +181,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateImageResponse> CreateImage(CreateImageRequest request) {
-            return await new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request);
+            return await new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -298,7 +298,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest request) {
-            return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request);
+            return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -321,7 +321,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -344,7 +344,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ShareImageResponse> ShareImage(ShareImageRequest request) {
-            return await new ShareImageExecutor().Client(this).Execute<ShareImageResponse, ShareImageResult, ShareImageRequest>(request);
+            return await new ShareImageExecutor().Client(this).Execute<ShareImageResponse, ShareImageResult, ShareImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -365,7 +365,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
-            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -386,7 +386,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
-            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
+            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -409,7 +409,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
-            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request);
+            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -434,7 +434,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
-            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -457,7 +457,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImageConstraintsResponse> DescribeImageConstraints(DescribeImageConstraintsRequest request) {
-            return await new DescribeImageConstraintsExecutor().Client(this).Execute<DescribeImageConstraintsResponse, DescribeImageConstraintsResult, DescribeImageConstraintsRequest>(request);
+            return await new DescribeImageConstraintsExecutor().Client(this).Execute<DescribeImageConstraintsResponse, DescribeImageConstraintsResult, DescribeImageConstraintsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -480,7 +480,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest request) {
-            return await new DescribeInstanceVncUrlExecutor().Client(this).Execute<DescribeInstanceVncUrlResponse, DescribeInstanceVncUrlResult, DescribeInstanceVncUrlRequest>(request);
+            return await new DescribeInstanceVncUrlExecutor().Client(this).Execute<DescribeInstanceVncUrlResponse, DescribeInstanceVncUrlResult, DescribeInstanceVncUrlRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -509,7 +509,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RebuildInstanceResponse> RebuildInstance(RebuildInstanceRequest request) {
-            return await new RebuildInstanceExecutor().Client(this).Execute<RebuildInstanceResponse, RebuildInstanceResult, RebuildInstanceRequest>(request);
+            return await new RebuildInstanceExecutor().Client(this).Execute<RebuildInstanceResponse, RebuildInstanceResult, RebuildInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -530,7 +530,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UnShareImageResponse> UnShareImage(UnShareImageRequest request) {
-            return await new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request);
+            return await new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,7 +551,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
-            return await new ModifyInstanceAttributeExecutor().Client(this).Execute<ModifyInstanceAttributeResponse, ModifyInstanceAttributeResult, ModifyInstanceAttributeRequest>(request);
+            return await new ModifyInstanceAttributeExecutor().Client(this).Execute<ModifyInstanceAttributeResponse, ModifyInstanceAttributeResult, ModifyInstanceAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -588,7 +588,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResizeInstanceResponse> ResizeInstance(ResizeInstanceRequest request) {
-            return await new ResizeInstanceExecutor().Client(this).Execute<ResizeInstanceResponse, ResizeInstanceResult, ResizeInstanceRequest>(request);
+            return await new ResizeInstanceExecutor().Client(this).Execute<ResizeInstanceResponse, ResizeInstanceResult, ResizeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -611,7 +611,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImageConstraintsBatchResponse> DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
-            return await new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request);
+            return await new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -636,7 +636,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AttachDiskResponse> AttachDisk(AttachDiskRequest request) {
-            return await new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request);
+            return await new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -659,7 +659,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstancePasswordResponse> ModifyInstancePassword(ModifyInstancePasswordRequest request) {
-            return await new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request);
+            return await new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -682,7 +682,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteImageResponse> DeleteImage(DeleteImageRequest request) {
-            return await new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request);
+            return await new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -703,7 +703,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypes(DescribeInstanceTypesRequest request) {
-            return await new DescribeInstanceTypesExecutor().Client(this).Execute<DescribeInstanceTypesResponse, DescribeInstanceTypesResult, DescribeInstanceTypesRequest>(request);
+            return await new DescribeInstanceTypesExecutor().Client(this).Execute<DescribeInstanceTypesResponse, DescribeInstanceTypesResult, DescribeInstanceTypesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -732,7 +732,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
-            return await new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request);
+            return await new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -753,7 +753,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteKeypairResponse> DeleteKeypair(DeleteKeypairRequest request) {
-            return await new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request);
+            return await new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -774,7 +774,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImageResponse> DescribeImage(DescribeImageRequest request) {
-            return await new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request);
+            return await new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -799,7 +799,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DetachNetworkInterfaceResponse> DetachNetworkInterface(DetachNetworkInterfaceRequest request) {
-            return await new DetachNetworkInterfaceExecutor().Client(this).Execute<DetachNetworkInterfaceResponse, DetachNetworkInterfaceResult, DetachNetworkInterfaceRequest>(request);
+            return await new DetachNetworkInterfaceExecutor().Client(this).Execute<DetachNetworkInterfaceResponse, DetachNetworkInterfaceResult, DetachNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -822,7 +822,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ImportKeypairResponse> ImportKeypair(ImportKeypairRequest request) {
-            return await new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request);
+            return await new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -845,7 +845,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CopyImagesResponse> CopyImages(CopyImagesRequest request) {
-            return await new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request);
+            return await new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -866,7 +866,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
-            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request);
+            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -889,7 +889,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) {
-            return await new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request);
+            return await new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -910,7 +910,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
-            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
+            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -931,7 +931,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest request) {
-            return await new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request);
+            return await new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -952,7 +952,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
-            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
+            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -973,7 +973,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceDiskAttributeResponse> ModifyInstanceDiskAttribute(ModifyInstanceDiskAttributeRequest request) {
-            return await new ModifyInstanceDiskAttributeExecutor().Client(this).Execute<ModifyInstanceDiskAttributeResponse, ModifyInstanceDiskAttributeResult, ModifyInstanceDiskAttributeRequest>(request);
+            return await new ModifyInstanceDiskAttributeExecutor().Client(this).Execute<ModifyInstanceDiskAttributeResponse, ModifyInstanceDiskAttributeResult, ModifyInstanceDiskAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -992,7 +992,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstancePrivateIpAddressResponse> DescribeInstancePrivateIpAddress(DescribeInstancePrivateIpAddressRequest request) {
-            return await new DescribeInstancePrivateIpAddressExecutor().Client(this).Execute<DescribeInstancePrivateIpAddressResponse, DescribeInstancePrivateIpAddressResult, DescribeInstancePrivateIpAddressRequest>(request);
+            return await new DescribeInstancePrivateIpAddressExecutor().Client(this).Execute<DescribeInstancePrivateIpAddressResponse, DescribeInstancePrivateIpAddressResult, DescribeInstancePrivateIpAddressRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1011,7 +1011,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
-            return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request);
+            return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1034,7 +1034,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
-            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
+            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1055,7 +1055,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DetachDiskResponse> DetachDisk(DetachDiskRequest request) {
-            return await new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request);
+            return await new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1082,7 +1082,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
-            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1105,7 +1105,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1128,7 +1128,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateKeypairResponse> CreateKeypair(CreateKeypairRequest request) {
-            return await new CreateKeypairExecutor().Client(this).Execute<CreateKeypairResponse, CreateKeypairResult, CreateKeypairRequest>(request);
+            return await new CreateKeypairExecutor().Client(this).Execute<CreateKeypairResponse, CreateKeypairResult, CreateKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
 

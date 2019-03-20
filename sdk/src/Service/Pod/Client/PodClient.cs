@@ -154,7 +154,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
-            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
+            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -177,7 +177,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretsResponse> DescribeSecrets(DescribeSecretsRequest request) {
-            return await new DescribeSecretsExecutor().Client(this).Execute<DescribeSecretsResponse, DescribeSecretsResult, DescribeSecretsRequest>(request);
+            return await new DescribeSecretsExecutor().Client(this).Execute<DescribeSecretsResponse, DescribeSecretsResult, DescribeSecretsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -198,7 +198,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
-            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
+            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -219,7 +219,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretResponse> DescribeSecret(DescribeSecretRequest request) {
-            return await new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request);
+            return await new DescribeSecretExecutor().Client(this).Execute<DescribeSecretResponse, DescribeSecretResult, DescribeSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -240,7 +240,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
-            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request);
+            return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -261,7 +261,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<GetContainerLogsResponse> GetContainerLogs(GetContainerLogsRequest request) {
-            return await new GetContainerLogsExecutor().Client(this).Execute<GetContainerLogsResponse, GetContainerLogsResult, GetContainerLogsRequest>(request);
+            return await new GetContainerLogsExecutor().Client(this).Execute<GetContainerLogsResponse, GetContainerLogsResult, GetContainerLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -280,7 +280,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ResizeTTYResponse> ResizeTTY(ResizeTTYRequest request) {
-            return await new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request);
+            return await new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -301,7 +301,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AttachResponse> Attach(AttachRequest request) {
-            return await new AttachExecutor().Client(this).Execute<AttachResponse, AttachResult, AttachRequest>(request);
+            return await new AttachExecutor().Client(this).Execute<AttachResponse, AttachResult, AttachRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -322,7 +322,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyPodAttributeResponse> ModifyPodAttribute(ModifyPodAttributeRequest request) {
-            return await new ModifyPodAttributeExecutor().Client(this).Execute<ModifyPodAttributeResponse, ModifyPodAttributeResult, ModifyPodAttributeRequest>(request);
+            return await new ModifyPodAttributeExecutor().Client(this).Execute<ModifyPodAttributeResponse, ModifyPodAttributeResult, ModifyPodAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -347,7 +347,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeletePodResponse> DeletePod(DeletePodRequest request) {
-            return await new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request);
+            return await new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -366,7 +366,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExecStartResponse> ExecStart(ExecStartRequest request) {
-            return await new ExecStartExecutor().Client(this).Execute<ExecStartResponse, ExecStartResult, ExecStartRequest>(request);
+            return await new ExecStartExecutor().Client(this).Execute<ExecStartResponse, ExecStartResult, ExecStartRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -391,7 +391,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -414,7 +414,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StartPodResponse> StartPod(StartPodRequest request) {
-            return await new StartPodExecutor().Client(this).Execute<StartPodResponse, StartPodResult, StartPodRequest>(request);
+            return await new StartPodExecutor().Client(this).Execute<StartPodResponse, StartPodResult, StartPodRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,7 +437,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribePodsResponse> DescribePods(DescribePodsRequest request) {
-            return await new DescribePodsExecutor().Client(this).Execute<DescribePodsResponse, DescribePodsResult, DescribePodsRequest>(request);
+            return await new DescribePodsExecutor().Client(this).Execute<DescribePodsResponse, DescribePodsResult, DescribePodsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -456,7 +456,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExecGetExitCodeResponse> ExecGetExitCode(ExecGetExitCodeRequest request) {
-            return await new ExecGetExitCodeExecutor().Client(this).Execute<ExecGetExitCodeResponse, ExecGetExitCodeResult, ExecGetExitCodeRequest>(request);
+            return await new ExecGetExitCodeExecutor().Client(this).Execute<ExecGetExitCodeResponse, ExecGetExitCodeResult, ExecGetExitCodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -477,7 +477,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ExecCreateResponse> ExecCreate(ExecCreateRequest request) {
-            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request);
+            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -592,7 +592,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreatePodsResponse> CreatePods(CreatePodsRequest request) {
-            return await new CreatePodsExecutor().Client(this).Execute<CreatePodsResponse, CreatePodsResult, CreatePodsRequest>(request);
+            return await new CreatePodsExecutor().Client(this).Execute<CreatePodsResponse, CreatePodsResult, CreatePodsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -613,7 +613,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<StopPodResponse> StopPod(StopPodRequest request) {
-            return await new StopPodExecutor().Client(this).Execute<StopPodResponse, StopPodResult, StopPodRequest>(request);
+            return await new StopPodExecutor().Client(this).Execute<StopPodResponse, StopPodResult, StopPodRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -634,7 +634,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribePodResponse> DescribePod(DescribePodRequest request) {
-            return await new DescribePodExecutor().Client(this).Execute<DescribePodResponse, DescribePodResult, DescribePodRequest>(request);
+            return await new DescribePodExecutor().Client(this).Execute<DescribePodResponse, DescribePodResult, DescribePodRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -653,7 +653,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DecribeContainerResponse> DecribeContainer(DecribeContainerRequest request) {
-            return await new DecribeContainerExecutor().Client(this).Execute<DecribeContainerResponse, DecribeContainerResult, DecribeContainerRequest>(request);
+            return await new DecribeContainerExecutor().Client(this).Execute<DecribeContainerResponse, DecribeContainerResult, DecribeContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -674,7 +674,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
-            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -695,7 +695,7 @@ namespace JDCloudSDK.Pod.Client
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CheckPodNameResponse> CheckPodName(CheckPodNameRequest request) {
-            return await new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request);
+            return await new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 

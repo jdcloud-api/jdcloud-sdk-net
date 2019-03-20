@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.2.0.1</Version>
+        <Version>0.2.0.2</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>容器镜像仓库服务</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

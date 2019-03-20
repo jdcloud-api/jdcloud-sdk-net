@@ -33,7 +33,7 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "System.Net.Http/4.3.3": {
+      "System.Net.Http/4.3.4": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Net.Http"
@@ -56,7 +56,7 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "System.Net.Http/4.3.3": {
+      "System.Net.Http/4.3.4": {
         "type": "package",
         "dependencies": {
           "System.Security.Cryptography.X509Certificates": "4.3.0"
@@ -184,7 +184,7 @@
           "lib/net462/System.IO.dll": {}
         }
       },
-      "System.Net.Http/4.3.3": {
+      "System.Net.Http/4.3.4": {
         "type": "package",
         "dependencies": {
           "System.Security.Cryptography.X509Certificates": "4.3.0"
@@ -610,12 +610,13 @@
         "system.io.nuspec"
       ]
     },
-    "System.Net.Http/4.3.3": {
-      "sha512": "7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
+    "System.Net.Http/4.3.4": {
+      "sha512": "aOa2d51SEbmM+H+Csw7yJOuNZoHkrP2XnAurye5HWYgGVVU54YZDvsLUYRv6h18X3sPnjNCANmN7ZhIPiqMcjA==",
       "type": "package",
-      "path": "system.net.http/4.3.3",
+      "path": "system.net.http/4.3.4",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -647,7 +648,7 @@
         "runtimes/win/lib/net46/System.Net.Http.dll",
         "runtimes/win/lib/netcore50/System.Net.Http.dll",
         "runtimes/win/lib/netstandard1.3/System.Net.Http.dll",
-        "system.net.http.4.3.3.nupkg.sha512",
+        "system.net.http.4.3.4.nupkg.sha512",
         "system.net.http.nuspec"
       ]
     },
@@ -915,15 +916,15 @@
     ],
     ".NETFramework,Version=v4.5": [
       "Newtonsoft.Json >= 11.0.2",
-      "System.Net.Http >= 4.3.3"
+      "System.Net.Http >= 4.3.4"
     ],
     ".NETFramework,Version=v4.6": [
       "Newtonsoft.Json >= 11.0.2",
-      "System.Net.Http >= 4.3.3"
+      "System.Net.Http >= 4.3.4"
     ],
     ".NETFramework,Version=v4.7": [
       "Newtonsoft.Json >= 11.0.2",
-      "System.Net.Http >= 4.3.3"
+      "System.Net.Http >= 4.3.4"
     ],
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
@@ -935,7 +936,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.2.5",
+    "version": "0.2.6",
     "restore": {
       "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\github\\jdcloud-sdk-net\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
       "projectName": "JDCloudSDK.Core",
@@ -1014,7 +1015,7 @@
           },
           "System.Net.Http": {
             "target": "Package",
-            "version": "[4.3.3, )"
+            "version": "[4.3.4, )"
           }
         }
       },
@@ -1026,7 +1027,7 @@
           },
           "System.Net.Http": {
             "target": "Package",
-            "version": "[4.3.3, )"
+            "version": "[4.3.4, )"
           }
         }
       },
@@ -1038,7 +1039,7 @@
           },
           "System.Net.Http": {
             "target": "Package",
-            "version": "[4.3.3, )"
+            "version": "[4.3.4, )"
           }
         }
       },

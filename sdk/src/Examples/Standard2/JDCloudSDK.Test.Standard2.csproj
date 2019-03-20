@@ -17,6 +17,7 @@
     <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
     <ProjectReference Include="..\..\Service\Charge\JDCloudSDK.Charge.csproj" />
     <ProjectReference Include="..\..\Service\Common\JDCloudSDK.Common.csproj" />
+    <ProjectReference Include="..\..\Service\Datastar\JDCloudSDK.Datastar.csproj" />
     <ProjectReference Include="..\..\Service\Disk\JDCloudSDK.Disk.csproj" />
     <ProjectReference Include="..\..\Service\Mongodb\JDCloudSDK.Mongodb.csproj" />
     <ProjectReference Include="..\..\Service\Monitor\JDCloudSDK.Monitor.csproj" />
