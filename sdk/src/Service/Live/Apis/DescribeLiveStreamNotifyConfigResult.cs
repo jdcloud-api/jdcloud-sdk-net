@@ -33,16 +33,16 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询直播流状态通知
+    ///  查询直播流状态回调地址
     /// </summary>
     public class DescribeLiveStreamNotifyConfigResult : JdcloudResult
     {
         ///<summary>
-        /// 您的加速域名
+        /// 推流域名
         ///</summary>
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 回调地址
+        /// 流状态回调地址
         ///</summary>
         public   string NotifyUrl{ get; set; }
     }

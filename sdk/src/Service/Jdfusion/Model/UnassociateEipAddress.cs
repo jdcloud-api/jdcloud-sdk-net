@@ -45,9 +45,5 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 要解绑的资源类型
         ///</summary>
         public string InstanceType{ get; set; }
-        ///<summary>
-        /// 是否强制解绑
-        ///</summary>
-        public bool Force{ get; set; }
     }
 }

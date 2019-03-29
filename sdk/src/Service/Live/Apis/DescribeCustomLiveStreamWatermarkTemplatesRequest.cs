@@ -34,16 +34,21 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询水印模板列表
+    ///  查询用户定义水印模板列表
+        ///         /// 
     /// </summary>
     public class DescribeCustomLiveStreamWatermarkTemplatesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1；取值范围[1, 100000]
+        /// 页码
+        /// - 取值范围 [1, 100000]
+        /// 
         ///</summary>
         public   int? PageNum{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小
+        /// - 取值范围 [10, 100]
+        /// 
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

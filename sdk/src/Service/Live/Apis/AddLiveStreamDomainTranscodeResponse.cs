@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加域名转码配置
+    ///  添加域名级别转码配置
+        ///         /// - 添加域名级别的转码模板配置
+        ///         /// 
     /// </summary>
     public class AddLiveStreamDomainTranscodeResponse : JdcloudResponse<AddLiveStreamDomainTranscodeResult>
     {

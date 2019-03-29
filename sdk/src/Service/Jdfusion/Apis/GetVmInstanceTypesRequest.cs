@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Jdfusion.Apis
     public class GetVmInstanceTypesRequest : JdcloudRequest
     {
         ///<summary>
+        /// 可用区
+        ///</summary>
+        public   string Az{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>

@@ -89,5 +89,13 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 所属云提供商ID
         ///</summary>
         public string CloudID{ get; set; }
+        ///<summary>
+        /// 安全组id列表
+        ///</summary>
+        public List<string> SecurityGroupIds{ get; set; }
+        ///<summary>
+        /// 内网ip详情列表。
+        ///</summary>
+        public List<PrivateIp> PrivateIps{ get; set; }
     }
 }

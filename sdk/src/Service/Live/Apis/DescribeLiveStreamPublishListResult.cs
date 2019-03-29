@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查看域名下推流记录
+    ///  查看推流历史记录
     /// </summary>
     public class DescribeLiveStreamPublishListResult : JdcloudResult
     {

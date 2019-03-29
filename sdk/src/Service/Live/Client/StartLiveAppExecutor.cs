@@ -33,12 +33,16 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  启用APP
+    ///  启用应用
+        /// - 启用 停用 状态的应用
+        /// 
     /// </summary>
     public class StartLiveAppExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  启用APP接口的Http 请求方法
+        ///  启用应用
+        /// - 启用 停用 状态的应用
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  启用APP接口的Http资源请求路径
+        ///  启用应用
+        /// - 启用 停用 状态的应用
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jdfusion.Client
 {
 
     /// <summary>
-    ///  给RDS账号分配数据库权限
+    ///  撤销RDS账号在指定数据库的所有权限
     /// </summary>
     public class RevokeRdsAccountExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  给RDS账号分配数据库权限接口的Http 请求方法
+        ///  撤销RDS账号在指定数据库的所有权限接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jdfusion.Client
             }
         }
         /// <summary>
-        ///  给RDS账号分配数据库权限接口的Http资源请求路径
+        ///  撤销RDS账号在指定数据库的所有权限接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -42,7 +42,7 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public List<PublishDomain> PublishDomains{ get; set; }
         ///<summary>
-        /// 直播域名集合
+        /// 播放域名集合
         ///</summary>
         public List<PlayDomain> PlayDomains{ get; set; }
     }

@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除域名转码配置
+    ///  删除域名级别转码模板配置
+        ///         /// - 删除域名级别转码模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamDomainTranscodeResult : JdcloudResult
     {

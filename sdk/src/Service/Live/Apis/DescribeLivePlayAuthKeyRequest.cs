@@ -39,7 +39,9 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLivePlayAuthKeyRequest : JdcloudRequest
     {
         ///<summary>
-        /// 您的播放加速域名
+        /// 直播的播放域名
+        /// - 仅支持精确匹配
+        /// 
         ///Required:true
         ///</summary>
         [Required]

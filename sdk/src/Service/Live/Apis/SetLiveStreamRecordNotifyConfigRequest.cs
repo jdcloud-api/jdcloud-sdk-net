@@ -34,18 +34,21 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  设置录制回调通知
+    ///  设置直播录制回调通知
+        ///         /// 
     /// </summary>
     public class SetLiveStreamRecordNotifyConfigRequest : JdcloudRequest
     {
         ///<summary>
-        /// 您的推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 设置直播流信息推送到的 URL 地址
+        /// 录制回调通知的URL地址
+        /// - 以 http:// 开头,外网可访问的地址
+        /// 
         ///Required:true
         ///</summary>
         [Required]

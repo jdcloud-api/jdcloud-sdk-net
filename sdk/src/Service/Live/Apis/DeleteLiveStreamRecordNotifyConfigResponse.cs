@@ -34,6 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  删除录制回调配置
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamRecordNotifyConfigResponse : JdcloudResponse<DeleteLiveStreamRecordNotifyConfigResult>
     {

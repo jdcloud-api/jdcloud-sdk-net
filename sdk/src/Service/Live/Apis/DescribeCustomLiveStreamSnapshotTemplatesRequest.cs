@@ -39,17 +39,21 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeCustomLiveStreamSnapshotTemplatesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1；取值范围[1, 100000]
+        /// 页码
+        /// - 取值范围 [1, 100000]
+        /// 
         ///</summary>
         public   int? PageNum{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小
+        /// - 取值范围 [10, 100]
+        /// 
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 截图模板查询过滤条件:
-        ///   - name:   template 录制模板自定义名称
-        ///   - value:  如果参数为空，则查询全部
+        /// 截图模板查询过滤条件
+        /// - name:   template 录制模板自定义名称
+        /// - value:  如果参数为空，则查询全部
         /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }

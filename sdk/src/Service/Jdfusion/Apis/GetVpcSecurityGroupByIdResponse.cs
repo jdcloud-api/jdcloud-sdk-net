@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
 {
 
     /// <summary>
-    ///  根据云提供商查询对应的安全组资源信息
+    ///  查询指定的安全组资源信息
     /// </summary>
     public class GetVpcSecurityGroupByIdResponse : JdcloudResponse<GetVpcSecurityGroupByIdResult>
     {

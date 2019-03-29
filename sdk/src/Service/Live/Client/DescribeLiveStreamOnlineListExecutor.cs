@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查看域名下所有的正在推的流的信息
+    ///  查询直播中的流的信息
     /// </summary>
     public class DescribeLiveStreamOnlineListExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查看域名下所有的正在推的流的信息接口的Http 请求方法
+        ///  查询直播中的流的信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查看域名下所有的正在推的流的信息接口的Http资源请求路径
+        ///  查询直播中的流的信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

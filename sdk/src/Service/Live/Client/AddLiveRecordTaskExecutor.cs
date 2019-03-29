@@ -33,15 +33,15 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加录制打点任务
-        ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+    ///  添加打点录制任务
+        /// - 您可以调用此接口精确提取已录制的文件中所需要的部分
         /// 
     /// </summary>
     public class AddLiveRecordTaskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加录制打点任务
-        ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+        ///  添加打点录制任务
+        /// - 您可以调用此接口精确提取已录制的文件中所需要的部分
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -51,8 +51,8 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加录制打点任务
-        ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+        ///  添加打点录制任务
+        /// - 您可以调用此接口精确提取已录制的文件中所需要的部分
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

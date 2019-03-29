@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查看域名下推流记录
+    ///  查看推流历史记录
     /// </summary>
     public class DescribeLiveStreamPublishListExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查看域名下推流记录接口的Http 请求方法
+        ///  查看推流历史记录接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查看域名下推流记录接口的Http资源请求路径
+        ///  查看推流历史记录接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

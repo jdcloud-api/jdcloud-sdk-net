@@ -39,16 +39,14 @@ namespace  JDCloudSDK.Cdn.Apis
     public class OperateLiveDomainIpBlackListRequest : JdcloudRequest
     {
         ///<summary>
+        /// BlackIpsEnable
+        ///</summary>
+        public   string BlackIpsEnable{ get; set; }
+        ///<summary>
         /// 用户域名
         ///Required:true
         ///</summary>
         [Required]
         public   string Domain{ get; set; }
-        ///<summary>
-        /// BlackIpsEnable
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string BlackIpsEnable{ get; set; }
     }
 }

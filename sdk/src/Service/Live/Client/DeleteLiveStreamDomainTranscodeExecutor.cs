@@ -33,12 +33,16 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  删除域名转码配置
+    ///  删除域名级别转码模板配置
+        /// - 删除域名级别转码模板配置,重新推流后生效
+        /// 
     /// </summary>
     public class DeleteLiveStreamDomainTranscodeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除域名转码配置接口的Http 请求方法
+        ///  删除域名级别转码模板配置
+        /// - 删除域名级别转码模板配置,重新推流后生效
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除域名转码配置接口的Http资源请求路径
+        ///  删除域名级别转码模板配置
+        /// - 删除域名级别转码模板配置,重新推流后生效
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

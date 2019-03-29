@@ -62,6 +62,10 @@ namespace JDCloudSDK.Jdfusion.Model
         ///</summary>
         public Dictionary<string,CreateSecurityGroup> SecurityGroups{ get; set; }
         ///<summary>
+        /// SecurityGroupRules
+        ///</summary>
+        public Dictionary<string,CreateSgRule> SecurityGroupRules{ get; set; }
+        ///<summary>
         /// Keypairs
         ///</summary>
         public Dictionary<string,CreateKeypair> Keypairs{ get; set; }
@@ -93,6 +97,26 @@ namespace JDCloudSDK.Jdfusion.Model
         /// EipAssociate
         ///</summary>
         public Dictionary<string,DeploymentAssociateEip> EipAssociate{ get; set; }
+        ///<summary>
+        /// Rds
+        ///</summary>
+        public Dictionary<string,CreateRDSInstance> Rds{ get; set; }
+        ///<summary>
+        /// RdsDatabase
+        ///</summary>
+        public Dictionary<string,DeploymentRdsDatabase> RdsDatabase{ get; set; }
+        ///<summary>
+        /// RdsAccount
+        ///</summary>
+        public Dictionary<string,DeploymentRdsAccount> RdsAccount{ get; set; }
+        ///<summary>
+        /// RdsAccountGrant
+        ///</summary>
+        public Dictionary<string,DeploymentAccountGrant> RdsAccountGrant{ get; set; }
+        ///<summary>
+        /// Bucket
+        ///</summary>
+        public Dictionary<string,DeploymentBucket> Bucket{ get; set; }
         ///<summary>
         /// Variables
         ///</summary>

@@ -34,29 +34,26 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加APP直播截图配置
+    ///  添加应用截图配置
+        ///         /// - 添加应用级别的截图模板配置
+        ///         /// 
     /// </summary>
     public class AddLiveStreamAppSnapshotRequest : JdcloudRequest
     {
         ///<summary>
-        /// 直播流所属应用名称
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string AppName{ get; set; }
-        ///<summary>
-        /// 您的推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 截图模板自定义名称:
-        ///   - 标准质量模板：sd、hd、hsd
-        ///   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-        ///               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-        ///               首尾不能有特殊字符(&quot;-&quot;)
-        ///   - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+        /// 应用名称
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string AppName{ get; set; }
+        ///<summary>
+        /// 截图模板
         /// 
         ///Required:true
         ///</summary>

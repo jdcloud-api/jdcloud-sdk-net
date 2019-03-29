@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  设置推流回调配置
+    ///  设置直播流状态回调地址
     /// </summary>
     public class SetLiveStreamNotifyConfigExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置推流回调配置接口的Http 请求方法
+        ///  设置直播流状态回调地址接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  设置推流回调配置接口的Http资源请求路径
+        ///  设置直播流状态回调地址接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

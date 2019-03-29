@@ -34,6 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  查询截图回调配置
+        ///         /// 
     /// </summary>
     public class DescribeLiveStreamSnapshotNotifyConfigResponse : JdcloudResponse<DescribeLiveStreamSnapshotNotifyConfigResult>
     {

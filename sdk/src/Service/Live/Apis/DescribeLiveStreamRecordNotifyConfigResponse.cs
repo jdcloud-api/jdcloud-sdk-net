@@ -34,6 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  查询录制回调配置
+        ///         /// 
     /// </summary>
     public class DescribeLiveStreamRecordNotifyConfigResponse : JdcloudResponse<DescribeLiveStreamRecordNotifyConfigResult>
     {

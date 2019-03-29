@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Jdfusion.Apis
     public class GetVpcNetworkInterfacesRequest : JdcloudRequest
     {
         ///<summary>
+        /// 云主机id
+        ///</summary>
+        public   string VmId{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>

@@ -42,7 +42,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///<summary>
         /// 
         ///</summary>
-        public   TransferTaskInfo Task{ get; set; }
+        public   TransferSimpleTaskInfo Task{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

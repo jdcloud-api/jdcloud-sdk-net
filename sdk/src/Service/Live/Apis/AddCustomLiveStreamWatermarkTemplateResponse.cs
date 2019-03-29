@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加直播水印模板
+    ///  添加用户自定义水印模板
+        ///         /// 
     /// </summary>
     public class AddCustomLiveStreamWatermarkTemplateResponse : JdcloudResponse<AddCustomLiveStreamWatermarkTemplateResult>
     {

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jdfusion.Client
 {
 
     /// <summary>
-    ///  根据云提供商查询对应的RDS实例信息
+    ///  查询指定ID的RDS实例信息
     /// </summary>
     public class GetRdsByInstIdExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  根据云提供商查询对应的RDS实例信息接口的Http 请求方法
+        ///  查询指定ID的RDS实例信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jdfusion.Client
             }
         }
         /// <summary>
-        ///  根据云提供商查询对应的RDS实例信息接口的Http资源请求路径
+        ///  查询指定ID的RDS实例信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

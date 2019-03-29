@@ -138,6 +138,44 @@ namespace JDCloudSDK.Cdn.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  设置线上计费方式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetOnlineBillingTypeResponse SetOnlineBillingType(SetOnlineBillingTypeRequest request) {
+            return  new SetOnlineBillingTypeExecutor().Client(this).Execute<SetOnlineBillingTypeResponse, SetOnlineBillingTypeResult, SetOnlineBillingTypeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置线上计费方式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetOnlineBillingTypeResponse> SetOnlineBillingType(SetOnlineBillingTypeRequest request) {
+            return await new SetOnlineBillingTypeExecutor().Client(this).Execute<SetOnlineBillingTypeResponse, SetOnlineBillingTypeResult, SetOnlineBillingTypeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryMixTrafficGroupSumResponse QueryMixTrafficGroupSum(QueryMixTrafficGroupSumRequest request) {
+            return  new QueryMixTrafficGroupSumExecutor().Client(this).Execute<QueryMixTrafficGroupSumResponse, QueryMixTrafficGroupSumResult, QueryMixTrafficGroupSumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryMixTrafficGroupSumResponse> QueryMixTrafficGroupSum(QueryMixTrafficGroupSumRequest request) {
+            return await new QueryMixTrafficGroupSumExecutor().Client(this).Execute<QueryMixTrafficGroupSumResponse, QueryMixTrafficGroupSumResult, QueryMixTrafficGroupSumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询域名组详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -271,6 +309,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveStatisticsAreaDataGroupByResponse QueryLiveStatisticsAreaDataGroupBy(QueryLiveStatisticsAreaDataGroupByRequest request) {
+            return  new QueryLiveStatisticsAreaDataGroupByExecutor().Client(this).Execute<QueryLiveStatisticsAreaDataGroupByResponse, QueryLiveStatisticsAreaDataGroupByResult, QueryLiveStatisticsAreaDataGroupByRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveStatisticsAreaDataGroupByResponse> QueryLiveStatisticsAreaDataGroupBy(QueryLiveStatisticsAreaDataGroupByRequest request) {
+            return await new QueryLiveStatisticsAreaDataGroupByExecutor().Client(this).Execute<QueryLiveStatisticsAreaDataGroupByResponse, QueryLiveStatisticsAreaDataGroupByResult, QueryLiveStatisticsAreaDataGroupByRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询加速域名接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -400,6 +457,44 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainBackSourceResponse> SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
             return await new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置协议跟随回源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetFollowSourceProtocolResponse SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
+            return  new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置协议跟随回源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetFollowSourceProtocolResponse> SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
+            return await new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置回源302跳转
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetFollowRedirectResponse SetFollowRedirect(SetFollowRedirectRequest request) {
+            return  new SetFollowRedirectExecutor().Client(this).Execute<SetFollowRedirectResponse, SetFollowRedirectResult, SetFollowRedirectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置回源302跳转
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetFollowRedirectResponse> SetFollowRedirect(SetFollowRedirectRequest request) {
+            return await new SetFollowRedirectExecutor().Client(this).Execute<SetFollowRedirectResponse, SetFollowRedirectResult, SetFollowRedirectRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -594,6 +689,44 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询直播域名app列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveDomainAppsResponse QueryLiveDomainApps(QueryLiveDomainAppsRequest request) {
+            return  new QueryLiveDomainAppsExecutor().Client(this).Execute<QueryLiveDomainAppsResponse, QueryLiveDomainAppsResult, QueryLiveDomainAppsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播域名app列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveDomainAppsResponse> QueryLiveDomainApps(QueryLiveDomainAppsRequest request) {
+            return await new QueryLiveDomainAppsExecutor().Client(this).Execute<QueryLiveDomainAppsResponse, QueryLiveDomainAppsResult, QueryLiveDomainAppsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryMixStatisticsWithAreaDataResponse QueryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) {
+            return  new QueryMixStatisticsWithAreaDataExecutor().Client(this).Execute<QueryMixStatisticsWithAreaDataResponse, QueryMixStatisticsWithAreaDataResult, QueryMixStatisticsWithAreaDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryMixStatisticsWithAreaDataResponse> QueryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) {
+            return await new QueryMixStatisticsWithAreaDataExecutor().Client(this).Execute<QueryMixStatisticsWithAreaDataResponse, QueryMixStatisticsWithAreaDataResult, QueryMixStatisticsWithAreaDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  开启或关闭ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -632,6 +765,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查找地域运营商列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryAreaIspListResponse QueryAreaIspList(QueryAreaIspListRequest request) {
+            return  new QueryAreaIspListExecutor().Client(this).Execute<QueryAreaIspListResponse, QueryAreaIspListResult, QueryAreaIspListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查找地域运营商列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryAreaIspListResponse> QueryAreaIspList(QueryAreaIspListRequest request) {
+            return await new QueryAreaIspListExecutor().Client(this).Execute<QueryAreaIspListResponse, QueryAreaIspListResult, QueryAreaIspListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建域名组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -666,6 +818,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<OperateIpBlackListResponse> OperateIpBlackList(OperateIpBlackListRequest request) {
             return await new OperateIpBlackListExecutor().Client(this).Execute<OperateIpBlackListResponse, OperateIpBlackListResult, OperateIpBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryMixStatisticsDataResponse QueryMixStatisticsData(QueryMixStatisticsDataRequest request) {
+            return  new QueryMixStatisticsDataExecutor().Client(this).Execute<QueryMixStatisticsDataResponse, QueryMixStatisticsDataResult, QueryMixStatisticsDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryMixStatisticsDataResponse> QueryMixStatisticsData(QueryMixStatisticsDataRequest request) {
+            return await new QueryMixStatisticsDataExecutor().Client(this).Execute<QueryMixStatisticsDataResponse, QueryMixStatisticsDataResult, QueryMixStatisticsDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -765,6 +936,63 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  通过标签查询加速域名接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainListByFilterResponse GetDomainListByFilter(GetDomainListByFilterRequest request) {
+            return  new GetDomainListByFilterExecutor().Client(this).Execute<GetDomainListByFilterResponse, GetDomainListByFilterResult, GetDomainListByFilterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  通过标签查询加速域名接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainListByFilterResponse> GetDomainListByFilter(GetDomainListByFilterRequest request) {
+            return await new GetDomainListByFilterExecutor().Client(this).Execute<GetDomainListByFilterResponse, GetDomainListByFilterResult, GetDomainListByFilterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询回源302跳转信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryFollowRedirectResponse QueryFollowRedirect(QueryFollowRedirectRequest request) {
+            return  new QueryFollowRedirectExecutor().Client(this).Execute<QueryFollowRedirectResponse, QueryFollowRedirectResult, QueryFollowRedirectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询回源302跳转信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryFollowRedirectResponse> QueryFollowRedirect(QueryFollowRedirectRequest request) {
+            return await new QueryFollowRedirectExecutor().Client(this).Execute<QueryFollowRedirectResponse, QueryFollowRedirectResult, QueryFollowRedirectRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户推流域名app名/流名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryPushDomainORAppOrStreamResponse QueryPushDomainORAppOrStream(QueryPushDomainORAppOrStreamRequest request) {
+            return  new QueryPushDomainORAppOrStreamExecutor().Client(this).Execute<QueryPushDomainORAppOrStreamResponse, QueryPushDomainORAppOrStreamResult, QueryPushDomainORAppOrStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户推流域名app名/流名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryPushDomainORAppOrStreamResponse> QueryPushDomainORAppOrStream(QueryPushDomainORAppOrStreamRequest request) {
+            return await new QueryPushDomainORAppOrStreamExecutor().Client(this).Execute<QueryPushDomainORAppOrStreamResponse, QueryPushDomainORAppOrStreamResult, QueryPushDomainORAppOrStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  分地区及运营商查询统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -860,6 +1088,44 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除禁播流
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteForbiddenStreamResponse DeleteForbiddenStream(DeleteForbiddenStreamRequest request) {
+            return  new DeleteForbiddenStreamExecutor().Client(this).Execute<DeleteForbiddenStreamResponse, DeleteForbiddenStreamResult, DeleteForbiddenStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除禁播流
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteForbiddenStreamResponse> DeleteForbiddenStream(DeleteForbiddenStreamRequest request) {
+            return await new DeleteForbiddenStreamExecutor().Client(this).Execute<DeleteForbiddenStreamResponse, DeleteForbiddenStreamResult, DeleteForbiddenStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询协议跟随回源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryFollowSourceProtocolResponse QueryFollowSourceProtocol(QueryFollowSourceProtocolRequest request) {
+            return  new QueryFollowSourceProtocolExecutor().Client(this).Execute<QueryFollowSourceProtocolResponse, QueryFollowSourceProtocolResult, QueryFollowSourceProtocolRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询协议跟随回源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryFollowSourceProtocolResponse> QueryFollowSourceProtocol(QueryFollowSourceProtocolRequest request) {
+            return await new QueryFollowSourceProtocolExecutor().Client(this).Execute<QueryFollowSourceProtocolResponse, QueryFollowSourceProtocolResult, QueryFollowSourceProtocolRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询统计数据并进行汇总加和
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -936,6 +1202,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveStatisticsDataResponse QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
+            return  new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveStatisticsDataResponse> QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
+            return await new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置域名refer
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -970,6 +1255,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryLiveDomainDetailResponse> QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
             return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLiveDomainPrefecthTaskResponse CreateLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) {
+            return  new CreateLiveDomainPrefecthTaskExecutor().Client(this).Execute<CreateLiveDomainPrefecthTaskResponse, CreateLiveDomainPrefecthTaskResult, CreateLiveDomainPrefecthTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLiveDomainPrefecthTaskResponse> CreateLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) {
+            return await new CreateLiveDomainPrefecthTaskExecutor().Client(this).Execute<CreateLiveDomainPrefecthTaskResponse, CreateLiveDomainPrefecthTaskResult, CreateLiveDomainPrefecthTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1084,6 +1388,63 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<BatchCreateResponse> BatchCreate(BatchCreateRequest request) {
             return await new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLivePrefetchTaskResponse QueryLivePrefetchTask(QueryLivePrefetchTaskRequest request) {
+            return  new QueryLivePrefetchTaskExecutor().Client(this).Execute<QueryLivePrefetchTaskResponse, QueryLivePrefetchTaskResult, QueryLivePrefetchTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLivePrefetchTaskResponse> QueryLivePrefetchTask(QueryLivePrefetchTaskRequest request) {
+            return await new QueryLivePrefetchTaskExecutor().Client(this).Execute<QueryLivePrefetchTaskResponse, QueryLivePrefetchTaskResult, QueryLivePrefetchTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveTrafficGroupSumResponse QueryLiveTrafficGroupSum(QueryLiveTrafficGroupSumRequest request) {
+            return  new QueryLiveTrafficGroupSumExecutor().Client(this).Execute<QueryLiveTrafficGroupSumResponse, QueryLiveTrafficGroupSumResult, QueryLiveTrafficGroupSumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveTrafficGroupSumResponse> QueryLiveTrafficGroupSum(QueryLiveTrafficGroupSumRequest request) {
+            return await new QueryLiveTrafficGroupSumExecutor().Client(this).Execute<QueryLiveTrafficGroupSumResponse, QueryLiveTrafficGroupSumResult, QueryLiveTrafficGroupSumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置线上计费方式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryOnlineBillingTypeResponse QueryOnlineBillingType(QueryOnlineBillingTypeRequest request) {
+            return  new QueryOnlineBillingTypeExecutor().Client(this).Execute<QueryOnlineBillingTypeResponse, QueryOnlineBillingTypeResult, QueryOnlineBillingTypeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置线上计费方式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryOnlineBillingTypeResponse> QueryOnlineBillingType(QueryOnlineBillingTypeRequest request) {
+            return await new QueryOnlineBillingTypeExecutor().Client(this).Execute<QueryOnlineBillingTypeResponse, QueryOnlineBillingTypeResult, QueryOnlineBillingTypeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

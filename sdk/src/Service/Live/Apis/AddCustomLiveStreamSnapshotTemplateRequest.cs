@@ -39,56 +39,56 @@ namespace  JDCloudSDK.Live.Apis
     public class AddCustomLiveStreamSnapshotTemplateRequest : JdcloudRequest
     {
         ///<summary>
-        /// 截图格式:
-        ///   - 取值: jpg, png
-        ///   - 不区分大小写
+        /// 截图格式
+        /// - 取值: jpg, png
+        /// - 不区分大小写
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string Format{ get; set; }
         ///<summary>
-        /// 截图宽度:
-        ///   - 取值: [8,8192]
-        ///   - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-        ///   - 随源: 如果两个参数都不填写，则截取源流大小原图
+        /// 截图宽度
+        /// - 取值: [8,8192]
+        /// - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出截图
+        /// - 如果(width,height)都不设置，则按源流大小输出截图
         /// 
         ///</summary>
         public   int? Width{ get; set; }
         ///<summary>
-        /// 截图高度:
-        ///   - 取值: [8,8192]
-        ///   - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-        ///   - 随源: 如果两个参数都不填写，则截取源流大小原图
+        /// 截图高度
+        /// - 取值: [8,8192]
+        /// - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出截图
+        /// - 如果(width,height)都不设置，则按源流大小输出截图
         /// 
         ///</summary>
         public   int? Height{ get; set; }
         ///<summary>
-        /// 截图与设定的宽高不匹配时的处理规则:
-        ///   - 1-拉伸
-        ///   - 2-留黑
-        ///   - 3-留白
-        ///   - 4-高斯模糊
-        ///   - 默认值1,2,3,4是等比例的缩放，1是按照设定宽高拉伸
+        /// 截图与设定的宽高不匹配时的处理规则
+        ///   1: 拉伸
+        ///   2: 留黑
+        ///   3: 留白
+        ///   4: 高斯模糊
+        /// - 1是按照设定宽高拉伸
+        /// - 2,3,4是等比例的缩放多余或不足处按调置处理
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int FillType{ get; set; }
         ///<summary>
-        /// 截图周期:
-        ///   - MIN_INTEGER &#x3D; 5
-        ///   - MAX_INTEGER &#x3D; 3600;
-        ///   - 单位: 秒
+        /// 截图周期
+        /// - 取值范围 [5,3600]
+        /// - 单位: 秒
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int SnapshotInterval{ get; set; }
         ///<summary>
-        /// 存储模式:
-        ///   - 1-覆盖
-        ///   - 2-顺序编号存储
+        /// 存储模式
+        ///   1: 覆盖存储
+        ///   2: 顺序存储
         /// 
         ///Required:true
         ///</summary>
@@ -108,11 +108,9 @@ namespace  JDCloudSDK.Live.Apis
         public   string SaveEndpoint{ get; set; }
         ///<summary>
         /// 截图模板自定义名称:
-        ///   - 标准质量模板：sd、hd、hsd
-        ///   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-        ///                取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-        ///                首尾不能有特殊字符(&quot;-&quot;)
-        ///   - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+        /// - 取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+        ///   首尾不能有特殊字符(&quot;-&quot;)
+        /// - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
         /// 
         ///Required:true
         ///</summary>

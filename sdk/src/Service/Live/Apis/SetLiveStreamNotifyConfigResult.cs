@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  设置推流回调配置
+    ///  设置直播流状态回调地址
     /// </summary>
     public class SetLiveStreamNotifyConfigResult : JdcloudResult
     {

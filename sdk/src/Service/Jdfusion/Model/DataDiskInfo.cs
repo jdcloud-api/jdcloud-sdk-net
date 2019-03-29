@@ -38,6 +38,10 @@ namespace JDCloudSDK.Jdfusion.Model
     {
 
         ///<summary>
+        /// 硬盘ID
+        ///</summary>
+        public string DiskId{ get; set; }
+        ///<summary>
         /// 硬盘大小
         ///</summary>
         public int? DiskSize{ get; set; }

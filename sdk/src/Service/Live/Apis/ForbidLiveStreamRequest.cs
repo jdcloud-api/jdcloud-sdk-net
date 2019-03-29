@@ -39,17 +39,17 @@ namespace  JDCloudSDK.Live.Apis
     public class ForbidLiveStreamRequest : JdcloudRequest
     {
         ///<summary>
+        /// 推流域名
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string PublishDomain{ get; set; }
+        ///<summary>
         /// 应用名称
         ///Required:true
         ///</summary>
         [Required]
         public   string AppName{ get; set; }
-        ///<summary>
-        /// 您的加速域名
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string PublishDomain{ get; set; }
         ///<summary>
         /// 流名称
         ///Required:true

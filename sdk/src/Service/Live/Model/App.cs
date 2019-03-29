@@ -42,14 +42,17 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 应用状态：
-        ///  - online    开启
-        ///  - offline   关闭
+        /// 应用状态
+        ///   online: 开启
+        ///   offline: 关闭
         /// 
         ///</summary>
         public string AppStatus{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 应用创建时间
+        /// - UTC时间
+        ///   格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        /// 
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>

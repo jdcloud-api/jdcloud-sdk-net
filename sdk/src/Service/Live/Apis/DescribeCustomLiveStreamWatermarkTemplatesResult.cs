@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询水印模板列表
+    ///  查询用户定义水印模板列表
+        ///         /// 
     /// </summary>
     public class DescribeCustomLiveStreamWatermarkTemplatesResult : JdcloudResult
     {

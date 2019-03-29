@@ -40,10 +40,10 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// 推流域名集合
         ///</summary>
-        public List<ShiftPublishDomain> PublishDomains{ get; set; }
+        public List<TimeshiftPublishDomain> PublishDomains{ get; set; }
         ///<summary>
-        /// 直播域名集合
+        /// 播放域名集合
         ///</summary>
-        public List<ShiftPlayDomain> PlayDomains{ get; set; }
+        public List<TimeshiftPlayDomain> PlayDomains{ get; set; }
     }
 }

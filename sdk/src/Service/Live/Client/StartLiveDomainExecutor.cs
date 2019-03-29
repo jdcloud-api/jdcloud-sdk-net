@@ -34,11 +34,15 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  启动域名
+        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+        /// 
     /// </summary>
     public class StartLiveDomainExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  启动域名接口的Http 请求方法
+        ///  启动域名
+        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  启动域名接口的Http资源请求路径
+        ///  启动域名
+        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

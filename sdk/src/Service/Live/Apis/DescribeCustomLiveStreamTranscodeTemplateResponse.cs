@@ -34,6 +34,13 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  查询用户自定义转码模板详情
+        ///         /// - 查询用户自定义转码模板详情
+        ///         /// - 系统标准转码模板
+        ///         ///     ld (h.264/640*360/15f)
+        ///         ///     sd (h.264/854*480/24f)
+        ///         ///     hd (h.264/1280*720/25f)
+        ///         ///     shd (h.264/1920*1080/30f)
+        ///         /// 
     /// </summary>
     public class DescribeCustomLiveStreamTranscodeTemplateResponse : JdcloudResponse<DescribeCustomLiveStreamTranscodeTemplateResult>
     {

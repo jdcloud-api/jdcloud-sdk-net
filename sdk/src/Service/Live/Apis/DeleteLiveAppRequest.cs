@@ -34,12 +34,15 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除APP
+    ///  删除应用
+        ///         /// - 删除应用之前需要先停用应用
+        ///         /// - 删除应用同时会删除此应用下的所有数据
+        ///         /// 
     /// </summary>
     public class DeleteLiveAppRequest : JdcloudRequest
     {
         ///<summary>
-        /// 直播推流域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]

@@ -34,11 +34,13 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  查询录制回调配置
+        /// 
     /// </summary>
     public class DescribeLiveStreamRecordNotifyConfigExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询录制回调配置接口的Http 请求方法
+        ///  查询录制回调配置
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查询录制回调配置接口的Http资源请求路径
+        ///  查询录制回调配置
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

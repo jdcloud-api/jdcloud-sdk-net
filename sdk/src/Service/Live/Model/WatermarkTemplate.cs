@@ -39,31 +39,35 @@ namespace JDCloudSDK.Live.Model
 
         ///<summary>
         /// x轴偏移量
+        /// - 单位: 像素
+        /// 
         ///</summary>
         public int? OffSetX{ get; set; }
         ///<summary>
         /// y轴偏移量
+        /// - 单位: 像素
+        /// 
         ///</summary>
         public int? OffSetY{ get; set; }
         ///<summary>
-        /// 宽
+        /// 水印宽度
+        /// - 单位: 像素
+        /// 
         ///</summary>
         public int? Width{ get; set; }
         ///<summary>
-        /// 高
+        /// 水印高度
+        /// - 单位: 像素
+        /// 
         ///</summary>
         public int? Height{ get; set; }
         ///<summary>
-        /// url
+        /// 水印地址
+        /// 
         ///</summary>
         public string Url{ get; set; }
         ///<summary>
-        /// 水印模板自定义名称:
-        ///   - 标准质量模板：sd、hd、hsd
-        ///   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-        ///               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-        ///               首尾不能有特殊字符(&quot;-&quot;)
-        ///   - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+        /// 水印模板自定义名称
         /// 
         ///</summary>
         public string Template{ get; set; }

@@ -34,11 +34,17 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  停用域名
+        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+        /// 
     /// </summary>
     public class StopLiveDomainExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  停用域名接口的Http 请求方法
+        ///  停用域名
+        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  停用域名接口的Http资源请求路径
+        ///  停用域名
+        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

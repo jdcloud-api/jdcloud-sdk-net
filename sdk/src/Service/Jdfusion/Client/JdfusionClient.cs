@@ -233,6 +233,25 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询某一次的历史执行结果（内部使用）
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDeploymentsResultsByIdRecordResponse GetDeploymentsResultsByIdRecord(GetDeploymentsResultsByIdRecordRequest request) {
+            return  new GetDeploymentsResultsByIdRecordExecutor().Client(this).Execute<GetDeploymentsResultsByIdRecordResponse, GetDeploymentsResultsByIdRecordResult, GetDeploymentsResultsByIdRecordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询某一次的历史执行结果（内部使用）
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDeploymentsResultsByIdRecordResponse> GetDeploymentsResultsByIdRecord(GetDeploymentsResultsByIdRecordRequest request) {
+            return await new GetDeploymentsResultsByIdRecordExecutor().Client(this).Execute<GetDeploymentsResultsByIdRecordResponse, GetDeploymentsResultsByIdRecordResult, GetDeploymentsResultsByIdRecordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  根据云提供商查询对应的虚拟机资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -328,7 +347,7 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据过滤条件，取得指定RDS实例上的账号信息
+        ///  取得指定RDS实例上的指定账号信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -337,7 +356,7 @@ namespace JDCloudSDK.Jdfusion.Client
         }
 #else
         /// <summary>
-        ///  根据过滤条件，取得指定RDS实例上的账号信息
+        ///  取得指定RDS实例上的指定账号信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -362,6 +381,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcNetworkInterfaceByIdResponse> GetVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) {
             return await new GetVpcNetworkInterfaceByIdExecutor().Client(this).Execute<GetVpcNetworkInterfaceByIdResponse, GetVpcNetworkInterfaceByIdResult, GetVpcNetworkInterfaceByIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除安全组规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSecurityGroupsRuleResponse DeleteSecurityGroupsRule(DeleteSecurityGroupsRuleRequest request) {
+            return  new DeleteSecurityGroupsRuleExecutor().Client(this).Execute<DeleteSecurityGroupsRuleResponse, DeleteSecurityGroupsRuleResult, DeleteSecurityGroupsRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除安全组规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSecurityGroupsRuleResponse> DeleteSecurityGroupsRule(DeleteSecurityGroupsRuleRequest request) {
+            return await new DeleteSecurityGroupsRuleExecutor().Client(this).Execute<DeleteSecurityGroupsRuleResponse, DeleteSecurityGroupsRuleResult, DeleteSecurityGroupsRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -518,6 +556,25 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  停止监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopSlbListenerResponse StopSlbListener(StopSlbListenerRequest request) {
+            return  new StopSlbListenerExecutor().Client(this).Execute<StopSlbListenerResponse, StopSlbListenerResult, StopSlbListenerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopSlbListenerResponse> StopSlbListener(StopSlbListenerRequest request) {
+            return await new StopSlbListenerExecutor().Client(this).Execute<StopSlbListenerResponse, StopSlbListenerResult, StopSlbListenerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询部署信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -556,6 +613,44 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据数据库类型，取得RDS实例的规格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRdsSpecificationResponse GetRdsSpecification(GetRdsSpecificationRequest request) {
+            return  new GetRdsSpecificationExecutor().Client(this).Execute<GetRdsSpecificationResponse, GetRdsSpecificationResult, GetRdsSpecificationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据数据库类型，取得RDS实例的规格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRdsSpecificationResponse> GetRdsSpecification(GetRdsSpecificationRequest request) {
+            return await new GetRdsSpecificationExecutor().Client(this).Execute<GetRdsSpecificationResponse, GetRdsSpecificationResult, GetRdsSpecificationRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  验证指定云信息的AK、SK
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ValidCloudInfoResponse ValidCloudInfo(ValidCloudInfoRequest request) {
+            return  new ValidCloudInfoExecutor().Client(this).Execute<ValidCloudInfoResponse, ValidCloudInfoResult, ValidCloudInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  验证指定云信息的AK、SK
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ValidCloudInfoResponse> ValidCloudInfo(ValidCloudInfoRequest request) {
+            return await new ValidCloudInfoExecutor().Client(this).Execute<ValidCloudInfoResponse, ValidCloudInfoResult, ValidCloudInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  启动数据同步
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -571,6 +666,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<StartChannelResponse> StartChannel(StartChannelRequest request) {
             return await new StartChannelExecutor().Client(this).Execute<StartChannelResponse, StartChannelResult, StartChannelRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除服务器组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVserverGroupResponse DeleteVserverGroup(DeleteVserverGroupRequest request) {
+            return  new DeleteVserverGroupExecutor().Client(this).Execute<DeleteVserverGroupResponse, DeleteVserverGroupResult, DeleteVserverGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除服务器组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVserverGroupResponse> DeleteVserverGroup(DeleteVserverGroupRequest request) {
+            return await new DeleteVserverGroupExecutor().Client(this).Execute<DeleteVserverGroupResponse, DeleteVserverGroupResult, DeleteVserverGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -742,6 +856,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<StopTransferTaskResponse> StopTransferTask(StopTransferTaskRequest request) {
             return await new StopTransferTaskExecutor().Client(this).Execute<StopTransferTaskResponse, StopTransferTaskResult, StopTransferTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据过滤条件，取得服务器组的信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVserverGroupsByIdResponse GetVserverGroupsById(GetVserverGroupsByIdRequest request) {
+            return  new GetVserverGroupsByIdExecutor().Client(this).Execute<GetVserverGroupsByIdResponse, GetVserverGroupsByIdResult, GetVserverGroupsByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据过滤条件，取得服务器组的信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVserverGroupsByIdResponse> GetVserverGroupsById(GetVserverGroupsByIdRequest request) {
+            return await new GetVserverGroupsByIdExecutor().Client(this).Execute<GetVserverGroupsByIdResponse, GetVserverGroupsByIdResult, GetVserverGroupsByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1069,7 +1202,7 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的RDS实例信息
+        ///  查询指定ID的RDS实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1078,7 +1211,7 @@ namespace JDCloudSDK.Jdfusion.Client
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的RDS实例信息
+        ///  查询指定ID的RDS实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1145,6 +1278,25 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据过滤条件，查监听器列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetLbHttpListenerResponse GetLbHttpListener(GetLbHttpListenerRequest request) {
+            return  new GetLbHttpListenerExecutor().Client(this).Execute<GetLbHttpListenerResponse, GetLbHttpListenerResult, GetLbHttpListenerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据过滤条件，查监听器列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetLbHttpListenerResponse> GetLbHttpListener(GetLbHttpListenerRequest request) {
+            return await new GetLbHttpListenerExecutor().Client(this).Execute<GetLbHttpListenerResponse, GetLbHttpListenerResult, GetLbHttpListenerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  预部署
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1183,6 +1335,25 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询可用域列表信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRegionsAvailableZonesResponse GetRegionsAvailableZones(GetRegionsAvailableZonesRequest request) {
+            return  new GetRegionsAvailableZonesExecutor().Client(this).Execute<GetRegionsAvailableZonesResponse, GetRegionsAvailableZonesResult, GetRegionsAvailableZonesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用域列表信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRegionsAvailableZonesResponse> GetRegionsAvailableZones(GetRegionsAvailableZonesRequest request) {
+            return await new GetRegionsAvailableZonesExecutor().Client(this).Execute<GetRegionsAvailableZonesResponse, GetRegionsAvailableZonesResult, GetRegionsAvailableZonesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  从虚拟机卸载云硬盘
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1198,6 +1369,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<DetachDiskToVmInstanceByDiskIdResponse> DetachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) {
             return await new DetachDiskToVmInstanceByDiskIdExecutor().Client(this).Execute<DetachDiskToVmInstanceByDiskIdResponse, DetachDiskToVmInstanceByDiskIdResult, DetachDiskToVmInstanceByDiskIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartSlbListenerResponse StartSlbListener(StartSlbListenerRequest request) {
+            return  new StartSlbListenerExecutor().Client(this).Execute<StartSlbListenerResponse, StartSlbListenerResult, StartSlbListenerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartSlbListenerResponse> StartSlbListener(StartSlbListenerRequest request) {
+            return await new StartSlbListenerExecutor().Client(this).Execute<StartSlbListenerResponse, StartSlbListenerResult, StartSlbListenerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1259,7 +1449,7 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息
+        ///  查询指定的安全组资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1268,7 +1458,7 @@ namespace JDCloudSDK.Jdfusion.Client
         }
 #else
         /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息
+        ///  查询指定的安全组资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1369,6 +1559,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetVpcSecurityGroupsResponse> GetVpcSecurityGroups(GetVpcSecurityGroupsRequest request) {
             return await new GetVpcSecurityGroupsExecutor().Client(this).Execute<GetVpcSecurityGroupsResponse, GetVpcSecurityGroupsResult, GetVpcSecurityGroupsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  新增安全组规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSecurityGroupsRuleResponse CreateSecurityGroupsRule(CreateSecurityGroupsRuleRequest request) {
+            return  new CreateSecurityGroupsRuleExecutor().Client(this).Execute<CreateSecurityGroupsRuleResponse, CreateSecurityGroupsRuleResult, CreateSecurityGroupsRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  新增安全组规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSecurityGroupsRuleResponse> CreateSecurityGroupsRule(CreateSecurityGroupsRuleRequest request) {
+            return await new CreateSecurityGroupsRuleExecutor().Client(this).Execute<CreateSecurityGroupsRuleResponse, CreateSecurityGroupsRuleResult, CreateSecurityGroupsRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1677,6 +1886,25 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  启动负载均衡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartSlbResponse StartSlb(StartSlbRequest request) {
+            return  new StartSlbExecutor().Client(this).Execute<StartSlbResponse, StartSlbResult, StartSlbRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动负载均衡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartSlbResponse> StartSlb(StartSlbRequest request) {
+            return await new StartSlbExecutor().Client(this).Execute<StartSlbResponse, StartSlbResult, StartSlbRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  根据云提供商查询对应的VM资源信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1692,6 +1920,44 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetVmInstancesByIdResponse> GetVmInstancesById(GetVmInstancesByIdRequest request) {
             return await new GetVmInstancesByIdExecutor().Client(this).Execute<GetVmInstancesByIdResponse, GetVmInstancesByIdResult, GetVmInstancesByIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询地域列表信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRegionsResponse GetRegions(GetRegionsRequest request) {
+            return  new GetRegionsExecutor().Client(this).Execute<GetRegionsResponse, GetRegionsResult, GetRegionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询地域列表信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRegionsResponse> GetRegions(GetRegionsRequest request) {
+            return await new GetRegionsExecutor().Client(this).Execute<GetRegionsResponse, GetRegionsResult, GetRegionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止负载均衡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopSlbResponse StopSlb(StopSlbRequest request) {
+            return  new StopSlbExecutor().Client(this).Execute<StopSlbResponse, StopSlbResult, StopSlbRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止负载均衡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopSlbResponse> StopSlb(StopSlbRequest request) {
+            return await new StopSlbExecutor().Client(this).Execute<StopSlbResponse, StopSlbResult, StopSlbRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1867,6 +2133,25 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  通过异步任务，给RDS账号分配数据库权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GrantRdsAccountsByTaskResponse GrantRdsAccountsByTask(GrantRdsAccountsByTaskRequest request) {
+            return  new GrantRdsAccountsByTaskExecutor().Client(this).Execute<GrantRdsAccountsByTaskResponse, GrantRdsAccountsByTaskResult, GrantRdsAccountsByTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  通过异步任务，给RDS账号分配数据库权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GrantRdsAccountsByTaskResponse> GrantRdsAccountsByTask(GrantRdsAccountsByTaskRequest request) {
+            return await new GrantRdsAccountsByTaskExecutor().Client(this).Execute<GrantRdsAccountsByTaskResponse, GrantRdsAccountsByTaskResult, GrantRdsAccountsByTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  卸载网卡
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1901,6 +2186,25 @@ namespace JDCloudSDK.Jdfusion.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateVmInstanceResponse> CreateVmInstance(CreateVmInstanceRequest request) {
             return await new CreateVmInstanceExecutor().Client(this).Execute<CreateVmInstanceResponse, CreateVmInstanceResult, CreateVmInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSlbsListenerResponse DeleteSlbsListener(DeleteSlbsListenerRequest request) {
+            return  new DeleteSlbsListenerExecutor().Client(this).Execute<DeleteSlbsListenerResponse, DeleteSlbsListenerResult, DeleteSlbsListenerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除监听器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSlbsListenerResponse> DeleteSlbsListener(DeleteSlbsListenerRequest request) {
+            return await new DeleteSlbsListenerExecutor().Client(this).Execute<DeleteSlbsListenerResponse, DeleteSlbsListenerResult, DeleteSlbsListenerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1943,7 +2247,7 @@ namespace JDCloudSDK.Jdfusion.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  给RDS账号分配数据库权限
+        ///  撤销RDS账号在指定数据库的所有权限
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1952,7 +2256,7 @@ namespace JDCloudSDK.Jdfusion.Client
         }
 #else
         /// <summary>
-        ///  给RDS账号分配数据库权限
+        ///  撤销RDS账号在指定数据库的所有权限
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

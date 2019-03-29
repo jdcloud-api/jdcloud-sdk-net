@@ -39,15 +39,21 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLiveTimeshiftConfigsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1；取值范围[1, 100000]
+        /// 页码
+        /// - 取值范围[1, 100000]
+        /// 
         ///</summary>
-        public   int? PageNum{ get; set; }
+        public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小
+        /// - 取值范围[10, 100]
+        /// 
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 直播的推流域名
+        /// 直播的播放域名
+        /// - 目前仅支持精确匹配
+        /// 
         ///Required:true
         ///</summary>
         [Required]

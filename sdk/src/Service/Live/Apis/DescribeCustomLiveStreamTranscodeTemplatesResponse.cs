@@ -34,6 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  查询用户自定义转码模板列表
+        ///         /// 
     /// </summary>
     public class DescribeCustomLiveStreamTranscodeTemplatesResponse : JdcloudResponse<DescribeCustomLiveStreamTranscodeTemplatesResult>
     {

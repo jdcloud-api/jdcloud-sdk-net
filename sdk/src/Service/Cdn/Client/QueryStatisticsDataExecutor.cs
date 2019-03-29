@@ -52,7 +52,7 @@ namespace JDCloudSDK.Cdn.Client
         public override string Url
         {
             get {
-            return "/statistics";
+            return "/vodStatistics";
             }
         }
     }

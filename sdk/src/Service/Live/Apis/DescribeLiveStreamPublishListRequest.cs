@@ -34,34 +34,49 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查看域名下推流记录
+    ///  查看推流历史记录
     /// </summary>
     public class DescribeLiveStreamPublishListRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1；取值范围[1, 100000]
+        /// 页码&lt;br&gt;
+        /// - 取值范围[1, 100000]
+        /// 
         ///</summary>
         public   int? PageNum{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小&lt;br&gt;
+        /// - 取值范围[10, 100]
+        /// 
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 直播流所属应用名称
+        /// 应用名称
         ///</summary>
         public   string AppName{ get; set; }
         ///<summary>
-        /// 直播流名称
+        /// 流名称
         ///</summary>
         public   string StreamName{ get; set; }
         ///<summary>
-        /// 起始时间
+        /// 推流起始时间&lt;br&gt;
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// - 最大支持最近90天内的流历史查询
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 结束时间
+        /// 推流结束时间&lt;br&gt;
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// - 最大支持最近90天内的流历史查询
+        /// - 结束时间为空默认为当前时间
+        /// 
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>

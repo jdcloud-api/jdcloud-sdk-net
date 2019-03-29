@@ -35,11 +35,12 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  查询截图回调配置
+        ///         /// 
     /// </summary>
     public class DescribeLiveStreamSnapshotNotifyConfigRequest : JdcloudRequest
     {
         ///<summary>
-        /// 推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]

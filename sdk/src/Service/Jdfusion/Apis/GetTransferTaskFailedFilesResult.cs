@@ -39,8 +39,8 @@ namespace  JDCloudSDK.Jdfusion.Apis
     public class GetTransferTaskFailedFilesResult : JdcloudResult
     {
         ///<summary>
-        /// Bucket
+        /// Task
         ///</summary>
-        public   TransferTaskFailedDetailInfo Bucket{ get; set; }
+        public   TransferTaskFailedDetailInfo Task{ get; set; }
     }
 }

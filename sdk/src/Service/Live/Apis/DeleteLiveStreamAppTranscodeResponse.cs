@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除APP转码配置
+    ///  删除应用级别转码模板配置
+        ///         /// - 删除应用级别的转码模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamAppTranscodeResponse : JdcloudResponse<DeleteLiveStreamAppTranscodeResult>
     {

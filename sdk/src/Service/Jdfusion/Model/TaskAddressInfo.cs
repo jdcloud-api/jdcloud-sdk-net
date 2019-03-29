@@ -61,5 +61,9 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 源地址的Prefix，不能以/开头
         ///</summary>
         public string Prefix{ get; set; }
+        ///<summary>
+        /// 云信息ID
+        ///</summary>
+        public string CloudID{ get; set; }
     }
 }

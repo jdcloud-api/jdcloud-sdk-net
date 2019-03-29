@@ -39,17 +39,23 @@ namespace  JDCloudSDK.Live.Apis
     public class SetLivePlayAuthKeyRequest : JdcloudRequest
     {
         ///<summary>
-        /// 您的播放加速域名
+        /// 播放域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PlayDomain{ get; set; }
         ///<summary>
         /// 播放鉴权状态
+        ///   on: 开启
+        ///   off: 关闭
+        /// - 当推流鉴权状态on(开启)时,authKey不能为空
+        /// 
         ///</summary>
         public   string AuthStatus{ get; set; }
         ///<summary>
         /// 播放鉴权key
+        /// - 取值: 支持大小写字母和数字 长度6-32位
+        /// 
         ///</summary>
         public   string AuthKey{ get; set; }
     }

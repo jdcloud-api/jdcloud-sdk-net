@@ -33,7 +33,10 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加直播APP
+    ///  添加直播应用名
+        ///         /// - 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
+        ///         /// - 新的应用名可以推流时自动创建
+        ///         /// 
     /// </summary>
     public class AddLiveAppResponse : JdcloudResponse<AddLiveAppResult>
     {

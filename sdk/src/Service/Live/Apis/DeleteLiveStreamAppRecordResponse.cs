@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除APP录制配置
+    ///  删除应用级别录制模板配置
+        ///         /// - 删除应用级别的录制模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamAppRecordResponse : JdcloudResponse<DeleteLiveStreamAppRecordResult>
     {

@@ -104,5 +104,9 @@ namespace JDCloudSDK.Jdfusion.Model
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
+        ///<summary>
+        /// 创建时间
+        ///</summary>
+        public string CreateTime{ get; set; }
     }
 }

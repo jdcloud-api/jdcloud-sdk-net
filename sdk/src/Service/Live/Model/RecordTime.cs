@@ -40,12 +40,20 @@ namespace JDCloudSDK.Live.Model
 
         ///<summary>
         /// 开始时间
+        /// - UTC时间
+        ///   格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例: 2018-10-21T10:00:00Z
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public string StartTime{ get; set; }
         ///<summary>
         /// 结束时间
+        /// - UTC时间
+        ///   格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例: 2018-10-21T10:00:00Z
+        /// 
         ///Required:true
         ///</summary>
         [Required]

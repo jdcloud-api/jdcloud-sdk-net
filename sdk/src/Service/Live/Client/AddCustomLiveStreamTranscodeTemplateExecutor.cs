@@ -34,11 +34,25 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  添加自定义转码模板
+        /// - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
+        /// - 系统标准转码模板
+        ///     ld (h.264/640*360/15f)
+        ///     sd (h.264/854*480/24f)
+        ///     hd (h.264/1280*720/25f)
+        ///     shd (h.264/1920*1080/30f)
+        /// 
     /// </summary>
     public class AddCustomLiveStreamTranscodeTemplateExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加自定义转码模板接口的Http 请求方法
+        ///  添加自定义转码模板
+        /// - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
+        /// - 系统标准转码模板
+        ///     ld (h.264/640*360/15f)
+        ///     sd (h.264/854*480/24f)
+        ///     hd (h.264/1280*720/25f)
+        ///     shd (h.264/1920*1080/30f)
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +61,14 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加自定义转码模板接口的Http资源请求路径
+        ///  添加自定义转码模板
+        /// - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
+        /// - 系统标准转码模板
+        ///     ld (h.264/640*360/15f)
+        ///     sd (h.264/854*480/24f)
+        ///     hd (h.264/1280*720/25f)
+        ///     shd (h.264/1920*1080/30f)
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

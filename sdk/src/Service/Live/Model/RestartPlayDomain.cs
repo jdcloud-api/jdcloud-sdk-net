@@ -38,20 +38,20 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 直播播放域名
+        /// 播放域名
         ///</summary>
         public string PlayDomain{ get; set; }
         ///<summary>
-        /// 直播时移状态:
-        ///   - on表示开启
-        ///   - off表示关闭
+        /// 直播回看状态:
+        ///   on: 开启
+        ///   off: 关闭
         /// 
         ///</summary>
         public string RestartStatus{ get; set; }
         ///<summary>
         /// 播放域名类型:
-        ///   - normal  一般的播放域名
-        ///   - restart 回看播放域名
+        ///   normal: 普通播放域名(时移播放域名)
+        ///   restart: 回看播放域名
         ///</summary>
         public string PlayType{ get; set; }
     }

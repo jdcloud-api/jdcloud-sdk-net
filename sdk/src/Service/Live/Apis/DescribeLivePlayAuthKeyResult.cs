@@ -43,6 +43,9 @@ namespace  JDCloudSDK.Live.Apis
         public   string PlayDomain{ get; set; }
         ///<summary>
         /// 播放鉴权状态
+        ///   on: 开启
+        ///   off: 关闭
+        /// 
         ///</summary>
         public   string AuthStatus{ get; set; }
         ///<summary>

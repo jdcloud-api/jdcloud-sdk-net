@@ -34,11 +34,15 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  删除用户自定义直播截图模板
+        /// - 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+        /// 
     /// </summary>
     public class DeleteCustomLiveStreamSnapshotTemplateExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除用户自定义直播截图模板接口的Http 请求方法
+        ///  删除用户自定义直播截图模板
+        /// - 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除用户自定义直播截图模板接口的Http资源请求路径
+        ///  删除用户自定义直播截图模板
+        /// - 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

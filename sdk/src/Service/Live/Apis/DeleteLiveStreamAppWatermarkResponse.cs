@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除APP水印配置
+    ///  删除应用级别水印模板配置
+        ///         /// - 删除应用级别的水印模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamAppWatermarkResponse : JdcloudResponse<DeleteLiveStreamAppWatermarkResult>
     {

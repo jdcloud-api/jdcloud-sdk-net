@@ -42,11 +42,11 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// 流所属应用名称
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 直播流名称
+        /// 流名称
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>
@@ -55,17 +55,17 @@ namespace JDCloudSDK.Live.Model
         public string SnapshotTime{ get; set; }
         ///<summary>
         /// 截图高度:
-        ///   - 取值: [8,8192]
-        ///   - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-        ///   - 随源: 如果两个参数都不填写，则截取源流大小原图
+        /// - 取值: [8,8192]
+        /// - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+        /// - 随源: 如果两个参数都不填写，则截取源流大小原图
         /// 
         ///</summary>
         public int? Height{ get; set; }
         ///<summary>
         /// 截图宽度:
-        ///   - 取值: [8,8192]
-        ///   - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-        ///   - 随源: 如果两个参数都不填写，则截取源流大小原图
+        /// - 取值: [8,8192]
+        /// - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+        /// - 随源: 如果两个参数都不填写，则截取源流大小原图
         /// 
         ///</summary>
         public int? Width{ get; set; }

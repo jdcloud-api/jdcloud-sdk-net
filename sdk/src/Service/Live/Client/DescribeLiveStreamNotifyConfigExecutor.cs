@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查询直播流状态通知
+    ///  查询直播流状态回调地址
     /// </summary>
     public class DescribeLiveStreamNotifyConfigExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询直播流状态通知接口的Http 请求方法
+        ///  查询直播流状态回调地址接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查询直播流状态通知接口的Http资源请求路径
+        ///  查询直播流状态回调地址接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

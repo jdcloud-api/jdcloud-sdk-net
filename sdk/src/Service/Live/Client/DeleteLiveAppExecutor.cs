@@ -33,12 +33,18 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  删除APP
+    ///  删除应用
+        /// - 删除应用之前需要先停用应用
+        /// - 删除应用同时会删除此应用下的所有数据
+        /// 
     /// </summary>
     public class DeleteLiveAppExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除APP接口的Http 请求方法
+        ///  删除应用
+        /// - 删除应用之前需要先停用应用
+        /// - 删除应用同时会删除此应用下的所有数据
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除APP接口的Http资源请求路径
+        ///  删除应用
+        /// - 删除应用之前需要先停用应用
+        /// - 删除应用同时会删除此应用下的所有数据
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

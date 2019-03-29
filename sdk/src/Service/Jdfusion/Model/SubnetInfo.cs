@@ -77,5 +77,13 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 所属云提供商ID
         ///</summary>
         public string CloudID{ get; set; }
+        ///<summary>
+        /// 可用区
+        ///</summary>
+        public string Az{ get; set; }
+        ///<summary>
+        /// 子网创建时间
+        ///</summary>
+        public string CreatedTime{ get; set; }
     }
 }

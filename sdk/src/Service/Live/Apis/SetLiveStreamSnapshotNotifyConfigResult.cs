@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  设置截图回调通知
+    ///  设置直播截图回调通知地址
+        ///         /// 
     /// </summary>
     public class SetLiveStreamSnapshotNotifyConfigResult : JdcloudResult
     {

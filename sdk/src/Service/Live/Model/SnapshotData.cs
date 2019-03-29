@@ -38,26 +38,27 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 查询的推流域名
+        /// 推流域名
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// 查询的应用名称
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 查询的流名
+        /// 流名称
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>
-        /// 日期:
-        ///   - yyyyMMdd 示例:20190308
+        /// 日期
+        /// - 格式: yyyyMMdd
+        /// - 示例: 20190308
         /// 
         ///</summary>
         public string Date{ get; set; }
         ///<summary>
-        /// 单日截图总张数:
-        ///   - 单位: 张
+        /// 截图张数
+        /// - 单位: 张
         /// 
         ///</summary>
         public int? Total{ get; set; }

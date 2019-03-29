@@ -38,24 +38,23 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 直播流的音频帧率
+        /// 推流域名
         ///</summary>
-        public long? AudioFrameRate{ get; set; }
+        public string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播流的 URL
+        /// 应用名称
         ///</summary>
-        public string StreamUrl{ get; set; }
+        public string AppName{ get; set; }
         ///<summary>
-        /// 直播流的码率
+        /// 流名称
         ///</summary>
-        public long? BitRate{ get; set; }
+        public string StreamName{ get; set; }
         ///<summary>
-        /// 直播流的视频帧率
+        /// 流状态
+        ///   on: 推流中
+        ///   off: 推流中断
+        /// 
         ///</summary>
-        public long? VideoFrameRate{ get; set; }
-        ///<summary>
-        /// 统计时刻
-        ///</summary>
-        public string Time{ get; set; }
+        public string Status{ get; set; }
     }
 }

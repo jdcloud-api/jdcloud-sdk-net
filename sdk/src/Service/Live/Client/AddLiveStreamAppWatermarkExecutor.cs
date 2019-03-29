@@ -33,12 +33,14 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加APP水印配置
+    ///  添加应用级别水印配置
+        /// 
     /// </summary>
     public class AddLiveStreamAppWatermarkExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加APP水印配置接口的Http 请求方法
+        ///  添加应用级别水印配置
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加APP水印配置接口的Http资源请求路径
+        ///  添加应用级别水印配置
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

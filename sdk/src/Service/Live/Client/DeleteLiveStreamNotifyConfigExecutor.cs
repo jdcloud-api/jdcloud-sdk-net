@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  删除直播流状态通知
+    ///  删除直播流状态回调地址
     /// </summary>
     public class DeleteLiveStreamNotifyConfigExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除直播流状态通知接口的Http 请求方法
+        ///  删除直播流状态回调地址接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除直播流状态通知接口的Http资源请求路径
+        ///  删除直播流状态回调地址接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

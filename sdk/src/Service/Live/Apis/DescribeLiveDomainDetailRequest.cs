@@ -40,6 +40,8 @@ namespace  JDCloudSDK.Live.Apis
     {
         ///<summary>
         /// 推流域名
+        /// - 需要停用的域名对(推流域名,播放域名)中的推流域名
+        /// 
         ///Required:true
         ///</summary>
         [Required]

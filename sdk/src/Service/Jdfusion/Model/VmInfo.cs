@@ -101,5 +101,13 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 镜像ID
+        ///</summary>
+        public string ImageId{ get; set; }
+        ///<summary>
+        /// 安全组ID
+        ///</summary>
+        public List<string> SecurityGroupIds{ get; set; }
     }
 }

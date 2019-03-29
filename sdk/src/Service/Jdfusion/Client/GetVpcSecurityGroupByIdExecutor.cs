@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jdfusion.Client
 {
 
     /// <summary>
-    ///  根据云提供商查询对应的安全组资源信息
+    ///  查询指定的安全组资源信息
     /// </summary>
     public class GetVpcSecurityGroupByIdExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息接口的Http 请求方法
+        ///  查询指定的安全组资源信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jdfusion.Client
             }
         }
         /// <summary>
-        ///  根据云提供商查询对应的安全组资源信息接口的Http资源请求路径
+        ///  查询指定的安全组资源信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -34,11 +34,13 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  查询用户自定义转码模板列表
+        /// 
     /// </summary>
     public class DescribeCustomLiveStreamTranscodeTemplatesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询用户自定义转码模板列表接口的Http 请求方法
+        ///  查询用户自定义转码模板列表
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  查询用户自定义转码模板列表接口的Http资源请求路径
+        ///  查询用户自定义转码模板列表
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

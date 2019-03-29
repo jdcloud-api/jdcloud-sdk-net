@@ -46,7 +46,7 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 流名
+        /// 流名称
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>

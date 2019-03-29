@@ -34,6 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  添加域名水印配置
+        ///         /// 
     /// </summary>
     public class AddLiveStreamDomainWatermarkResult : JdcloudResult
     {

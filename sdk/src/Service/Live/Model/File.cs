@@ -38,23 +38,31 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 流所属加速域名
+        /// 推流域名
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// 流所属应用名称
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 直播流名称
+        /// 流名称
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>
         /// 开始时间
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// 
         ///</summary>
         public string StartTime{ get; set; }
         ///<summary>
         /// 结束时间
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// 
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>

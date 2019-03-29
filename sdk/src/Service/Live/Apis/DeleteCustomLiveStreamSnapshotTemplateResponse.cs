@@ -34,6 +34,8 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  删除用户自定义直播截图模板
+        ///         /// - 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+        ///         /// 
     /// </summary>
     public class DeleteCustomLiveStreamSnapshotTemplateResponse : JdcloudResponse<DeleteCustomLiveStreamSnapshotTemplateResult>
     {

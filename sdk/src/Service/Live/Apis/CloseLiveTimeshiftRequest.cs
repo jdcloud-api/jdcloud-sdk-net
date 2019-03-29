@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Live.Apis
     public class CloseLiveTimeshiftRequest : JdcloudRequest
     {
         ///<summary>
-        /// 直播的推流域名
+        /// 直播的播放域名
         ///Required:true
         ///</summary>
         [Required]

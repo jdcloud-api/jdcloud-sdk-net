@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  设置录制回调通知
+    ///  设置直播录制回调通知
+        ///         /// 
     /// </summary>
     public class SetLiveStreamRecordNotifyConfigResult : JdcloudResult
     {

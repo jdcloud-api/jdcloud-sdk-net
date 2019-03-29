@@ -33,12 +33,16 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加域名直播截图配置
+    ///  添加域名截图配置
+        /// - 添加域名级别的截图模板配置
+        /// 
     /// </summary>
     public class AddLiveStreamDomainSnapshotExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加域名直播截图配置接口的Http 请求方法
+        ///  添加域名截图配置
+        /// - 添加域名级别的截图模板配置
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加域名直播截图配置接口的Http资源请求路径
+        ///  添加域名截图配置
+        /// - 添加域名级别的截图模板配置
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

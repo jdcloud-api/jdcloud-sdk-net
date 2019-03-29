@@ -58,6 +58,10 @@ namespace JDCloudSDK.Jdfusion.Model
         ///</summary>
         public string HostName{ get; set; }
         ///<summary>
+        /// 镜像ID
+        ///</summary>
+        public string ImageId{ get; set; }
+        ///<summary>
         /// ImageType
         ///</summary>
         public ImageType ImageType{ get; set; }
@@ -93,6 +97,10 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 私有ip地址
         ///</summary>
         public string PrivateIpAddress{ get; set; }
+        ///<summary>
+        /// 安全组ID
+        ///</summary>
+        public List<string> SecurityGroupIds{ get; set; }
         ///<summary>
         /// 云主机状态
         ///</summary>

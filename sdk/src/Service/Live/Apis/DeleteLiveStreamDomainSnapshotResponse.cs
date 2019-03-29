@@ -34,6 +34,8 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  删除域名截图配置
+        ///         /// - 删除域名级别的截图模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamDomainSnapshotResponse : JdcloudResponse<DeleteLiveStreamDomainSnapshotResult>
     {

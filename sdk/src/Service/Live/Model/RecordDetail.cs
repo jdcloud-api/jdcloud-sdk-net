@@ -38,17 +38,17 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 格式:
-        ///   - MP4
-        ///   - FLV
-        ///   - TS
+        /// 格式
+        ///   mp4
+        ///   flv
+        ///   ts
         /// 
         ///</summary>
         public string Format{ get; set; }
         ///<summary>
         /// 时长:
-        ///   - 单位: 分
-        ///   - 精确两位小数
+        /// - 单位: 分钟
+        /// - 精确两位小数
         /// 
         ///</summary>
         public double? Duration{ get; set; }

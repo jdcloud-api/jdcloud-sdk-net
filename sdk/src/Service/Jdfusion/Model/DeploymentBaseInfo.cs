@@ -73,5 +73,9 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 更新时间
         ///</summary>
         public string UpdatedTime{ get; set; }
+        ///<summary>
+        /// 最近一次操作
+        ///</summary>
+        public string LastOperation{ get; set; }
     }
 }

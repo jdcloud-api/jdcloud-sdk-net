@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加APP转码配置
+    ///  添加应用转码配置
+        ///         /// - 添加应用级别的转码模板配置
+        ///         /// 
     /// </summary>
     public class AddLiveStreamAppTranscodeResponse : JdcloudResponse<AddLiveStreamAppTranscodeResult>
     {

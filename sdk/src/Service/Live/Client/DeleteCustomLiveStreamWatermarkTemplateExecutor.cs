@@ -34,11 +34,15 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  删除用户自定义水印模板
+        /// - 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+        /// 
     /// </summary>
     public class DeleteCustomLiveStreamWatermarkTemplateExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除用户自定义水印模板接口的Http 请求方法
+        ///  删除用户自定义水印模板
+        /// - 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除用户自定义水印模板接口的Http资源请求路径
+        ///  删除用户自定义水印模板
+        /// - 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

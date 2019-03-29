@@ -38,7 +38,7 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// appName
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>

@@ -41,6 +41,6 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///<summary>
         /// Bucket
         ///</summary>
-        public   OssBucketInfo Bucket{ get; set; }
+        public   OssBucketDetailInfo Bucket{ get; set; }
     }
 }

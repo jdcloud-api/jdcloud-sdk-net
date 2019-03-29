@@ -42,8 +42,8 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string Area{ get; set; }
         ///<summary>
-        /// 查询结果,类型为HashMap&lt;String, Object&gt;
+        /// IspStat
         ///</summary>
-        public Dictionary<string,string> IspStat{ get; set; }
+        public List<Dictionary<string,string>> IspStat{ get; set; }
     }
 }

@@ -33,12 +33,16 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加域名录制配置
+    ///  添加域名级别直播录制配置
+        /// - 添加域名级别的直播录制模板配置
+        /// 
     /// </summary>
     public class AddLiveStreamDomainRecordExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加域名录制配置接口的Http 请求方法
+        ///  添加域名级别直播录制配置
+        /// - 添加域名级别的直播录制模板配置
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加域名录制配置接口的Http资源请求路径
+        ///  添加域名级别直播录制配置
+        /// - 添加域名级别的直播录制模板配置
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

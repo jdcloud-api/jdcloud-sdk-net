@@ -38,15 +38,22 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLiveDomainsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1；取值范围[1, 100000]
+        /// 页码
+        /// - 取值范围[1, 100000]
+        /// 
         ///</summary>
         public   int? PageNum{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小
+        /// - 取值范围[10, 100]
+        /// 
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 域名
+        /// 推流域名
+        /// - 目前仅支持精确查询
+        /// - 为空时,查询用户所有直播域名
+        /// 
         ///</summary>
         public   string PublishDomain{ get; set; }
     }

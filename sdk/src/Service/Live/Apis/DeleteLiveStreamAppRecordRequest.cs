@@ -34,29 +34,26 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除APP录制配置
+    ///  删除应用级别录制模板配置
+        ///         /// - 删除应用级别的录制模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamAppRecordRequest : JdcloudRequest
     {
         ///<summary>
-        /// 推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播流所属应用名称
+        /// 应用名称
         ///Required:true
         ///</summary>
         [Required]
         public   string AppName{ get; set; }
         ///<summary>
-        /// 录制模板自定义名称:
-        ///   - 标准质量模板：sd、hd、hsd
-        ///   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-        ///                取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-        ///                首尾不能有特殊字符(&quot;-&quot;)
-        ///   - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+        /// 录制模板
         /// 
         ///Required:true
         ///</summary>

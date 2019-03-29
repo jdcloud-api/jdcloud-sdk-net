@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除直播流状态通知
+    ///  删除直播流状态回调地址
     /// </summary>
     public class DeleteLiveStreamNotifyConfigRequest : JdcloudRequest
     {

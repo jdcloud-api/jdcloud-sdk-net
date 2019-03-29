@@ -33,12 +33,16 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  删除APP录制配置
+    ///  删除应用级别录制模板配置
+        /// - 删除应用级别的录制模板配置,重新推流后生效
+        /// 
     /// </summary>
     public class DeleteLiveStreamAppRecordExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除APP录制配置接口的Http 请求方法
+        ///  删除应用级别录制模板配置
+        /// - 删除应用级别的录制模板配置,重新推流后生效
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  删除APP录制配置接口的Http资源请求路径
+        ///  删除应用级别录制模板配置
+        /// - 删除应用级别的录制模板配置,重新推流后生效
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

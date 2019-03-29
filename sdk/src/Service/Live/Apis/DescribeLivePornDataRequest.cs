@@ -39,22 +39,25 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLivePornDataRequest : JdcloudRequest
     {
         ///<summary>
-        /// 您的推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播流所属应用名称
+        /// 应用名称
         ///</summary>
         public   string AppName{ get; set; }
         ///<summary>
-        /// 直播流名称
+        /// 流名称
         ///</summary>
         public   string StreamName{ get; set; }
         ///<summary>
-        /// 起始时间:
-        ///   - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+        /// 起始时间
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// - 支持最大查询90天以内的数据
         /// 
         ///Required:true
         ///</summary>
@@ -62,7 +65,10 @@ namespace  JDCloudSDK.Live.Apis
         public   string StartTime{ get; set; }
         ///<summary>
         /// 结束时间:
-        ///   - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// - 为空,默认为当前时间
         /// 
         ///</summary>
         public   string EndTime{ get; set; }

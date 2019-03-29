@@ -35,17 +35,24 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  添加直播域名
+        ///         /// - 创建直播域名之前,必须先开通直播服务
+        ///         /// - 直播域名必须已经备案完成
+        ///         /// 
     /// </summary>
     public class AddLiveDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 直播的推流域名（不支持泛域名）
+        /// 直播的推流域名
+        /// - 不支持泛域名
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播的播放域名（不支持泛域名）
+        /// 直播的播放域名
+        /// - 不支持泛域名
+        /// 
         ///Required:true
         ///</summary>
         [Required]

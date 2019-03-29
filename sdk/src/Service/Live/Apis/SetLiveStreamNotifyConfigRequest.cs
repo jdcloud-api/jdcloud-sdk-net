@@ -34,20 +34,19 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  设置推流回调配置
+    ///  设置直播流状态回调地址
     /// </summary>
     public class SetLiveStreamNotifyConfigRequest : JdcloudRequest
     {
         ///<summary>
-        /// 您的加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 设置直播流信息推送到的 URL 地址:
-        ///   - 必须以 http:// 开头
-        ///   - 正则校验格式
+        /// 直播流状态回调地址
+        /// - 必须以 http:// 开头
         /// 
         ///Required:true
         ///</summary>

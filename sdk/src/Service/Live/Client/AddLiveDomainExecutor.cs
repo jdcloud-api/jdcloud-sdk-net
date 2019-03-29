@@ -34,11 +34,17 @@ namespace JDCloudSDK.Live.Client
 
     /// <summary>
     ///  添加直播域名
+        /// - 创建直播域名之前,必须先开通直播服务
+        /// - 直播域名必须已经备案完成
+        /// 
     /// </summary>
     public class AddLiveDomainExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加直播域名接口的Http 请求方法
+        ///  添加直播域名
+        /// - 创建直播域名之前,必须先开通直播服务
+        /// - 直播域名必须已经备案完成
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +53,10 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加直播域名接口的Http资源请求路径
+        ///  添加直播域名
+        /// - 创建直播域名之前,必须先开通直播服务
+        /// - 直播域名必须已经备案完成
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

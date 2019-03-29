@@ -34,22 +34,24 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加APP录制配置
+    ///  添加应用级别直播录制配置
+        ///         /// - 添加应用级别的直播录制模板配置
+        ///         /// 
     /// </summary>
     public class AddLiveStreamAppRecordRequest : JdcloudRequest
     {
         ///<summary>
-        /// 直播流所属应用名称
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string AppName{ get; set; }
-        ///<summary>
-        /// 您的推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
+        ///<summary>
+        /// 应用名称
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string AppName{ get; set; }
         ///<summary>
         /// 录制模版
         ///Required:true

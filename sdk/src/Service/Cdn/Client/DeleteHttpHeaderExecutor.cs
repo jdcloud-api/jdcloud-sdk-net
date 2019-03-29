@@ -43,7 +43,7 @@ namespace JDCloudSDK.Cdn.Client
         public override  string Method
         {
             get {
-                return "DELETE";
+                return "PUT";
             }
         }
         /// <summary>

@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加域名录制配置
+    ///  添加域名级别直播录制配置
+        ///         /// - 添加域名级别的直播录制模板配置
+        ///         /// 
     /// </summary>
     public class AddLiveStreamDomainRecordResult : JdcloudResult
     {

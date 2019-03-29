@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  停用APP
+    ///  停用 运行中 状态的应用
+        ///         /// - 停用应用之后,不能再用此应用名推流
+        ///         /// 
     /// </summary>
     public class StopLiveAppResponse : JdcloudResponse<StopLiveAppResult>
     {

@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  删除域名录制配置
+    ///  删除域名级别录制模板配置
+        ///         /// - 删除域名级别录制模板配置,重新推流后生效
+        ///         /// 
     /// </summary>
     public class DeleteLiveStreamDomainRecordResponse : JdcloudResponse<DeleteLiveStreamDomainRecordResult>
     {

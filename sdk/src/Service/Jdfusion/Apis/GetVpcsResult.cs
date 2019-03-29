@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Jdfusion.Apis
         ///<summary>
         /// Vpcs
         ///</summary>
-        public List<VpcInfo> Vpcs{ get; set; }
+        public List<VpcListInfo> Vpcs{ get; set; }
 
     }
 }

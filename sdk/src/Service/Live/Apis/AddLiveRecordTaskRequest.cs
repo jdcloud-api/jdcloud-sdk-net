@@ -35,14 +35,14 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加录制打点任务
-        ///         ///   - 您可以调用此接口精确提取已录制的文件中所需要的部分
+    ///  添加打点录制任务
+        ///         /// - 您可以调用此接口精确提取已录制的文件中所需要的部分
         ///         /// 
     /// </summary>
     public class AddLiveRecordTaskRequest : JdcloudRequest
     {
         ///<summary>
-        /// 录制时间集合
+        /// 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
         ///Required:true
         ///</summary>
         [Required]
@@ -62,8 +62,8 @@ namespace  JDCloudSDK.Live.Apis
         public   string SaveEndpoint{ get; set; }
         ///<summary>
         /// 录制文件类型:
-        ///   - 取值: ts,flv,mp4 (多种类型之前用;隔开)
-        ///   - 不区分大小写
+        /// - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+        /// - 不区分大小写
         /// 
         ///Required:true
         ///</summary>
@@ -71,24 +71,24 @@ namespace  JDCloudSDK.Live.Apis
         public   string RecordFileType{ get; set; }
         ///<summary>
         /// 录制文件存储路径:
-        ///   - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+        /// - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
         /// 
         ///</summary>
         public   string SaveObject{ get; set; }
         ///<summary>
-        /// 推流加速域名
+        /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
-        /// 直播流所属应用名称
+        /// 应用名称
         ///Required:true
         ///</summary>
         [Required]
         public   string AppName{ get; set; }
         ///<summary>
-        /// 直播流名称
+        /// 流名称
         ///Required:true
         ///</summary>
         [Required]

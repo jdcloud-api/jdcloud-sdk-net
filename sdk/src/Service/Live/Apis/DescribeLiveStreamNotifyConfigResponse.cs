@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询直播流状态通知
+    ///  查询直播流状态回调地址
     /// </summary>
     public class DescribeLiveStreamNotifyConfigResponse : JdcloudResponse<DescribeLiveStreamNotifyConfigResult>
     {

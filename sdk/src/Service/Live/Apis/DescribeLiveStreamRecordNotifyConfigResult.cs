@@ -34,11 +34,12 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  查询录制回调配置
+        ///         /// 
     /// </summary>
     public class DescribeLiveStreamRecordNotifyConfigResult : JdcloudResult
     {
         ///<summary>
-        /// 您的加速域名
+        /// 推流域名
         ///</summary>
         public   string PublishDomain{ get; set; }
         ///<summary>

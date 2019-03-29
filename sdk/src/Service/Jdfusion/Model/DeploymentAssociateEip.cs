@@ -45,5 +45,9 @@ namespace JDCloudSDK.Jdfusion.Model
         /// 云产品的实例ID
         ///</summary>
         public string InstanceId{ get; set; }
+        ///<summary>
+        /// 要解绑的资源类型  虚拟机：vm 负载均衡：slb
+        ///</summary>
+        public string InstanceType{ get; set; }
     }
 }

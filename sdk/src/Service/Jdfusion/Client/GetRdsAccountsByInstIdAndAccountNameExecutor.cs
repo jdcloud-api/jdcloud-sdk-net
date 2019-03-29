@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jdfusion.Client
 {
 
     /// <summary>
-    ///  根据过滤条件，取得指定RDS实例上的账号信息
+    ///  取得指定RDS实例上的指定账号信息
     /// </summary>
     public class GetRdsAccountsByInstIdAndAccountNameExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  根据过滤条件，取得指定RDS实例上的账号信息接口的Http 请求方法
+        ///  取得指定RDS实例上的指定账号信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jdfusion.Client
             }
         }
         /// <summary>
-        ///  根据过滤条件，取得指定RDS实例上的账号信息接口的Http资源请求路径
+        ///  取得指定RDS实例上的指定账号信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

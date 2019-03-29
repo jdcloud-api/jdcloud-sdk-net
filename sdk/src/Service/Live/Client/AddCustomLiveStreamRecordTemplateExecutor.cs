@@ -33,12 +33,14 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  添加直播录制模板
+    ///  添加用户自定义直播录制模板
+        /// 
     /// </summary>
     public class AddCustomLiveStreamRecordTemplateExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加直播录制模板接口的Http 请求方法
+        ///  添加用户自定义直播录制模板
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  添加直播录制模板接口的Http资源请求路径
+        ///  添加用户自定义直播录制模板
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

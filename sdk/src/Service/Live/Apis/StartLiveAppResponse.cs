@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  启用APP
+    ///  启用应用
+        ///         /// - 启用 停用 状态的应用
+        ///         /// 
     /// </summary>
     public class StartLiveAppResponse : JdcloudResponse<StartLiveAppResult>
     {

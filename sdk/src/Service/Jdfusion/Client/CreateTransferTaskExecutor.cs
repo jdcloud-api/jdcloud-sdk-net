@@ -52,7 +52,7 @@ namespace JDCloudSDK.Jdfusion.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/oss_transferTasks";
+            return "/regions/{regionId}/oss_transferTasks_simple";
             }
         }
     }

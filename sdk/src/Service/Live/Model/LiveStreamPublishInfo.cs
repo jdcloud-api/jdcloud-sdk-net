@@ -38,23 +38,29 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 您的加速域名
+        /// 推流域名
         ///</summary>
         public string PublishDomain{ get; set; }
         ///<summary>
-        /// 您的APP
+        /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
         ///<summary>
-        /// 您的流名
+        /// 流名称
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>
-        /// 开始推流时刻 UTC 时间
+        /// 推流开始时间
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        /// 
         ///</summary>
         public string PublishUpTime{ get; set; }
         ///<summary>
-        /// 开始推流时刻 UTC 时间
+        /// 推流结束时刻
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        /// 
         ///</summary>
         public string PublishDownTime{ get; set; }
     }
