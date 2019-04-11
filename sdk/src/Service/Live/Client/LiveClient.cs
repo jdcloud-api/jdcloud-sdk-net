@@ -198,6 +198,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转码流信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTranscodeStreamListResponse DescribeLiveTranscodeStreamList(DescribeLiveTranscodeStreamListRequest request) {
+            return  new DescribeLiveTranscodeStreamListExecutor().Client(this).Execute<DescribeLiveTranscodeStreamListResponse, DescribeLiveTranscodeStreamListResult, DescribeLiveTranscodeStreamListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码流信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTranscodeStreamListResponse> DescribeLiveTranscodeStreamList(DescribeLiveTranscodeStreamListRequest request) {
+            return await new DescribeLiveTranscodeStreamListExecutor().Client(this).Execute<DescribeLiveTranscodeStreamListResponse, DescribeLiveTranscodeStreamListResult, DescribeLiveTranscodeStreamListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  添加应用截图配置
         /// - 添加应用级别的截图模板配置
         /// 
@@ -236,6 +255,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<CloseLiveTimeshiftResponse> CloseLiveTimeshift(CloseLiveTimeshiftRequest request) {
             return await new CloseLiveTimeshiftExecutor().Client(this).Execute<CloseLiveTimeshiftResponse, CloseLiveTimeshiftResult, CloseLiveTimeshiftRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询转码流观看人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTranscodeStreamPlayerUserNumResponse DescribeLiveTranscodeStreamPlayerUserNum(DescribeLiveTranscodeStreamPlayerUserNumRequest request) {
+            return  new DescribeLiveTranscodeStreamPlayerUserNumExecutor().Client(this).Execute<DescribeLiveTranscodeStreamPlayerUserNumResponse, DescribeLiveTranscodeStreamPlayerUserNumResult, DescribeLiveTranscodeStreamPlayerUserNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码流观看人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTranscodeStreamPlayerUserNumResponse> DescribeLiveTranscodeStreamPlayerUserNum(DescribeLiveTranscodeStreamPlayerUserNumRequest request) {
+            return await new DescribeLiveTranscodeStreamPlayerUserNumExecutor().Client(this).Execute<DescribeLiveTranscodeStreamPlayerUserNumResponse, DescribeLiveTranscodeStreamPlayerUserNumResult, DescribeLiveTranscodeStreamPlayerUserNumRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -326,6 +364,31 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询带宽数据
+        /// - 查询某个时间段内的带宽数据（平均带宽）
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamBandwidthDataResponse DescribeLiveStreamBandwidthData(DescribeLiveStreamBandwidthDataRequest request) {
+            return  new DescribeLiveStreamBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamBandwidthDataResponse, DescribeLiveStreamBandwidthDataResult, DescribeLiveStreamBandwidthDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询带宽数据
+        /// - 查询某个时间段内的带宽数据（平均带宽）
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamBandwidthDataResponse> DescribeLiveStreamBandwidthData(DescribeLiveStreamBandwidthDataRequest request) {
+            return await new DescribeLiveStreamBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamBandwidthDataResponse, DescribeLiveStreamBandwidthDataResult, DescribeLiveStreamBandwidthDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询用户自定义直播录制模板列表
         /// 
         /// </summary>
@@ -374,6 +437,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询推流监控数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribePublishStreamInfoDataResponse DescribePublishStreamInfoData(DescribePublishStreamInfoDataRequest request) {
+            return  new DescribePublishStreamInfoDataExecutor().Client(this).Execute<DescribePublishStreamInfoDataResponse, DescribePublishStreamInfoDataResult, DescribePublishStreamInfoDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询推流监控数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribePublishStreamInfoDataResponse> DescribePublishStreamInfoData(DescribePublishStreamInfoDataRequest request) {
+            return await new DescribePublishStreamInfoDataExecutor().Client(this).Execute<DescribePublishStreamInfoDataResponse, DescribePublishStreamInfoDataResult, DescribePublishStreamInfoDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  禁止直播流推送
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -389,6 +471,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<ForbidLiveStreamResponse> ForbidLiveStream(ForbidLiveStreamRequest request) {
             return await new ForbidLiveStreamExecutor().Client(this).Execute<ForbidLiveStreamResponse, ForbidLiveStreamResult, ForbidLiveStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询转码流数量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTranscodeStreamNumResponse DescribeLiveTranscodeStreamNum(DescribeLiveTranscodeStreamNumRequest request) {
+            return  new DescribeLiveTranscodeStreamNumExecutor().Client(this).Execute<DescribeLiveTranscodeStreamNumResponse, DescribeLiveTranscodeStreamNumResult, DescribeLiveTranscodeStreamNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码流数量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTranscodeStreamNumResponse> DescribeLiveTranscodeStreamNum(DescribeLiveTranscodeStreamNumRequest request) {
+            return await new DescribeLiveTranscodeStreamNumExecutor().Client(this).Execute<DescribeLiveTranscodeStreamNumResponse, DescribeLiveTranscodeStreamNumResult, DescribeLiveTranscodeStreamNumRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -615,6 +716,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询直播流播放人数排行
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPlayerRankingDataResponse DescribeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) {
+            return  new DescribeLiveStreamPlayerRankingDataExecutor().Client(this).Execute<DescribeLiveStreamPlayerRankingDataResponse, DescribeLiveStreamPlayerRankingDataResult, DescribeLiveStreamPlayerRankingDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播流播放人数排行
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPlayerRankingDataResponse> DescribeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) {
+            return await new DescribeLiveStreamPlayerRankingDataExecutor().Client(this).Execute<DescribeLiveStreamPlayerRankingDataResponse, DescribeLiveStreamPlayerRankingDataResult, DescribeLiveStreamPlayerRankingDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询直播截图张数数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -724,6 +844,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询直播推流数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLivePublishStreamNumResponse DescribeLivePublishStreamNum(DescribeLivePublishStreamNumRequest request) {
+            return  new DescribeLivePublishStreamNumExecutor().Client(this).Execute<DescribeLivePublishStreamNumResponse, DescribeLivePublishStreamNumResult, DescribeLivePublishStreamNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播推流数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLivePublishStreamNumResponse> DescribeLivePublishStreamNum(DescribeLivePublishStreamNumRequest request) {
+            return await new DescribeLivePublishStreamNumExecutor().Client(this).Execute<DescribeLivePublishStreamNumResponse, DescribeLivePublishStreamNumResult, DescribeLivePublishStreamNumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  添加直播截图模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -806,6 +945,31 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamAppTranscodeResponse> AddLiveStreamAppTranscode(AddLiveStreamAppTranscodeRequest request) {
             return await new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询推流上行流量数据
+        /// - 查询某个时间段内的流量数据。
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPublishTrafficDataResponse DescribeLiveStreamPublishTrafficData(DescribeLiveStreamPublishTrafficDataRequest request) {
+            return  new DescribeLiveStreamPublishTrafficDataExecutor().Client(this).Execute<DescribeLiveStreamPublishTrafficDataResponse, DescribeLiveStreamPublishTrafficDataResult, DescribeLiveStreamPublishTrafficDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询推流上行流量数据
+        /// - 查询某个时间段内的流量数据。
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPublishTrafficDataResponse> DescribeLiveStreamPublishTrafficData(DescribeLiveStreamPublishTrafficDataRequest request) {
+            return await new DescribeLiveStreamPublishTrafficDataExecutor().Client(this).Execute<DescribeLiveStreamPublishTrafficDataResponse, DescribeLiveStreamPublishTrafficDataResult, DescribeLiveStreamPublishTrafficDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1154,6 +1318,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转码时长数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTranscodingDurationDataResponse DescribeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) {
+            return  new DescribeLiveTranscodingDurationDataExecutor().Client(this).Execute<DescribeLiveTranscodingDurationDataResponse, DescribeLiveTranscodingDurationDataResult, DescribeLiveTranscodingDurationDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码时长数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTranscodingDurationDataResponse> DescribeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) {
+            return await new DescribeLiveTranscodingDurationDataExecutor().Client(this).Execute<DescribeLiveTranscodingDurationDataResponse, DescribeLiveTranscodingDurationDataResult, DescribeLiveTranscodingDurationDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除用户自定义转码模板
         /// - 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
         /// 
@@ -1267,6 +1450,50 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转码流播放带宽
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTranscodeStreamBandwidthResponse DescribeLiveTranscodeStreamBandwidth(DescribeLiveTranscodeStreamBandwidthRequest request) {
+            return  new DescribeLiveTranscodeStreamBandwidthExecutor().Client(this).Execute<DescribeLiveTranscodeStreamBandwidthResponse, DescribeLiveTranscodeStreamBandwidthResult, DescribeLiveTranscodeStreamBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码流播放带宽
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTranscodeStreamBandwidthResponse> DescribeLiveTranscodeStreamBandwidth(DescribeLiveTranscodeStreamBandwidthRequest request) {
+            return await new DescribeLiveTranscodeStreamBandwidthExecutor().Client(this).Execute<DescribeLiveTranscodeStreamBandwidthResponse, DescribeLiveTranscodeStreamBandwidthResult, DescribeLiveTranscodeStreamBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播实时流信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamInfoResponse DescribeLiveStreamInfo(DescribeLiveStreamInfoRequest request) {
+            return  new DescribeLiveStreamInfoExecutor().Client(this).Execute<DescribeLiveStreamInfoResponse, DescribeLiveStreamInfoResult, DescribeLiveStreamInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播实时流信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamInfoResponse> DescribeLiveStreamInfo(DescribeLiveStreamInfoRequest request) {
+            return await new DescribeLiveStreamInfoExecutor().Client(this).Execute<DescribeLiveStreamInfoResponse, DescribeLiveStreamInfoResult, DescribeLiveStreamInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询直播中的流的信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1345,6 +1572,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainSnapshotResponse> AddLiveStreamDomainSnapshot(AddLiveStreamDomainSnapshotRequest request) {
             return await new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播流历史在线人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamHistoryUserNumResponse DescribeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request) {
+            return  new DescribeLiveStreamHistoryUserNumExecutor().Client(this).Execute<DescribeLiveStreamHistoryUserNumResponse, DescribeLiveStreamHistoryUserNumResult, DescribeLiveStreamHistoryUserNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播流历史在线人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamHistoryUserNumResponse> DescribeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request) {
+            return await new DescribeLiveStreamHistoryUserNumExecutor().Client(this).Execute<DescribeLiveStreamHistoryUserNumResponse, DescribeLiveStreamHistoryUserNumResult, DescribeLiveStreamHistoryUserNumRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1452,6 +1698,56 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveDomainResponse> DeleteLiveDomain(DeleteLiveDomainRequest request) {
             return await new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询推流带宽
+        /// - 查询某个时间段内的推流上行带宽数据
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPublishBandwidthDataResponse DescribeLiveStreamPublishBandwidthData(DescribeLiveStreamPublishBandwidthDataRequest request) {
+            return  new DescribeLiveStreamPublishBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamPublishBandwidthDataResponse, DescribeLiveStreamPublishBandwidthDataResult, DescribeLiveStreamPublishBandwidthDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询推流带宽
+        /// - 查询某个时间段内的推流上行带宽数据
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPublishBandwidthDataResponse> DescribeLiveStreamPublishBandwidthData(DescribeLiveStreamPublishBandwidthDataRequest request) {
+            return await new DescribeLiveStreamPublishBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamPublishBandwidthDataResponse, DescribeLiveStreamPublishBandwidthDataResult, DescribeLiveStreamPublishBandwidthDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询流量数据
+        /// - 查询某个时间段内的流量数据。
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamTrafficDataResponse DescribeLiveStreamTrafficData(DescribeLiveStreamTrafficDataRequest request) {
+            return  new DescribeLiveStreamTrafficDataExecutor().Client(this).Execute<DescribeLiveStreamTrafficDataResponse, DescribeLiveStreamTrafficDataResult, DescribeLiveStreamTrafficDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询流量数据
+        /// - 查询某个时间段内的流量数据。
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamTrafficDataResponse> DescribeLiveStreamTrafficData(DescribeLiveStreamTrafficDataRequest request) {
+            return await new DescribeLiveStreamTrafficDataExecutor().Client(this).Execute<DescribeLiveStreamTrafficDataResponse, DescribeLiveStreamTrafficDataResult, DescribeLiveStreamTrafficDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

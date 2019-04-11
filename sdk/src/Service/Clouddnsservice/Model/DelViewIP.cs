@@ -39,7 +39,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
     {
 
         ///<summary>
-        /// 域名ID
+        /// 主域名ID，请使用getDomains接口获取
         ///Required:true
         ///</summary>
         [Required]
@@ -57,8 +57,9 @@ namespace JDCloudSDK.Clouddnsservice.Model
         [Required]
         public string ViewName{ get; set; }
         ///<summary>
-        /// 此线路需要删除的ip段。&lt;br&gt;
-        /// ip段支持1.2.3.4-5.6.7.8和1.2.3.4/16两种格式。    
+        /// 此线路需要删除的ip段。  
+        /// IPv4地址段支持1.2.3.4-5.6.7.8和1.2.3.4/16两种格式。    
+        /// IPv6地址段支持CIDR格式，例如：11:22:33:44:55::99/64
         /// 
         ///Required:true
         ///</summary>

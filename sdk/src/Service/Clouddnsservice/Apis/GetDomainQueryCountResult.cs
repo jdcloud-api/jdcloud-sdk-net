@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查看域名的解析次数
+    ///  查看主域名的解析次数
     /// </summary>
     public class GetDomainQueryCountResult : JdcloudResult
     {

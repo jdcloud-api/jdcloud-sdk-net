@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class DelDomainRequest : JdcloudRequest
     {
         ///<summary>
-        /// 需要删除的域名ID
+        /// 需要删除的主域名ID，请使用getDomains接口获取
         ///Required:true
         ///</summary>
         [Required]

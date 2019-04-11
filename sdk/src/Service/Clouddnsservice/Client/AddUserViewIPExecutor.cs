@@ -33,12 +33,12 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  添加域名的自定义解析线路的IP段
+    ///  添加主域名的自定义解析线路的IP段
     /// </summary>
     public class AddUserViewIPExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加域名的自定义解析线路的IP段接口的Http 请求方法
+        ///  添加主域名的自定义解析线路的IP段接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  添加域名的自定义解析线路的IP段接口的Http资源请求路径
+        ///  添加主域名的自定义解析线路的IP段接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

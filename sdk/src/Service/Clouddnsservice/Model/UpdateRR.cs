@@ -67,11 +67,11 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public bool JcloudRes{ get; set; }
         ///<summary>
-        /// 优先级，只存在于某些解析记录类型
+        /// 优先级，只存在于MX, SRV解析记录类型
         ///</summary>
         public int? MxPriority{ get; set; }
         ///<summary>
-        /// 端口，只存在于某些解析记录类型
+        /// 端口，只存在于SRV解析记录类型
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
@@ -81,17 +81,17 @@ namespace JDCloudSDK.Clouddnsservice.Model
         [Required]
         public int Ttl{ get; set; }
         ///<summary>
-        /// 解析的类型
+        /// 解析的类型，请参考&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/detailed-interpretation-of-parsed-records&quot;&gt;解析记录类型详解&lt;/a&gt;
         ///Required:true
         ///</summary>
         [Required]
         public string Type{ get; set; }
         ///<summary>
-        /// 解析记录的权重
+        /// 解析记录的权重，目前支持权重的有：A/AAAA/CNAME/JNAME。
         ///</summary>
         public int? Weight{ get; set; }
         ///<summary>
-        /// 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
+        /// 解析线路的ID，请调用getViewTree接口获取基础解析线路的ID，使用getUserView接口获取自定义线路的ID。
         ///Required:true
         ///</summary>
         [Required]

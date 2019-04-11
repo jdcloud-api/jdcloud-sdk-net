@@ -38,9 +38,9 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 流量，单位：Byte
+        /// 流量，单位:Byte
         /// 
         ///</summary>
-        public int? Value{ get; set; }
+        public long? Value{ get; set; }
     }
 }

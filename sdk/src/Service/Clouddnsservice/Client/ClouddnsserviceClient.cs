@@ -157,7 +157,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看域名的解析次数
+        ///  查看主域名的解析次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查看域名的解析次数
+        ///  查看主域名的解析次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  同一个主域名下，批量新增、更新导入解析记录&lt;br&gt;
+        ///  同一个主域名下，批量新增或者批量更新导入解析记录。
         /// 如果解析记录的ID为0，是新增解析记录，如果不为0，则是更新解析记录。
         /// 
         /// </summary>
@@ -187,7 +187,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  同一个主域名下，批量新增、更新导入解析记录&lt;br&gt;
+        ///  同一个主域名下，批量新增或者批量更新导入解析记录。
         /// 如果解析记录的ID为0，是新增解析记录，如果不为0，则是更新解析记录。
         /// 
         /// </summary>
@@ -256,7 +256,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加域名的自定义解析线路的IP段
+        ///  添加主域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -265,7 +265,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  添加域名的自定义解析线路的IP段
+        ///  添加主域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -294,7 +294,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加域名的解析记录
+        ///  添加主域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -303,7 +303,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  添加域名的解析记录
+        ///  添加主域名的解析记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -313,7 +313,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除域名的自定义解析线路
+        ///  删除主域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -322,7 +322,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  删除域名的自定义解析线路
+        ///  删除主域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -351,7 +351,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除域名的自定义解析线路的IP段
+        ///  删除主域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -360,7 +360,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  删除域名的自定义解析线路的IP段
+        ///  删除主域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -408,7 +408,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询域名的自定义解析线路的IP段
+        ///  查询主域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -417,7 +417,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询域名的自定义解析线路的IP段
+        ///  查询主域名的自定义解析线路的IP段
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -522,7 +522,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加域名的自定义解析线路
+        ///  添加主域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -531,7 +531,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  添加域名的自定义解析线路
+        ///  添加主域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -541,7 +541,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询主域名的解析记录。&lt;br&gt;
+        ///  查询主域名的解析记录。  
         /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
         /// 
         /// </summary>
@@ -552,7 +552,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询主域名的解析记录。&lt;br&gt;
+        ///  查询主域名的解析记录。  
         /// 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
         /// 
         /// </summary>
@@ -564,7 +564,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询域名的自定义解析线路
+        ///  查询主域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -573,7 +573,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询域名的自定义解析线路
+        ///  查询主域名的自定义解析线路
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -583,8 +583,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户名下的主域名列表。&lt;br&gt;    
-        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        ///  获取用户所属的主域名列表。   
+        /// 请在调用域名相关的接口之前，调用此接口获取相关的domainId和domainName。  
+        /// 主域名的相关概念，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/product-overview&quot;&gt;云解析文档&lt;/a&gt;
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -594,8 +595,9 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询用户名下的主域名列表。&lt;br&gt;    
-        /// 请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+        ///  获取用户所属的主域名列表。   
+        /// 请在调用域名相关的接口之前，调用此接口获取相关的domainId和domainName。  
+        /// 主域名的相关概念，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/product-overview&quot;&gt;云解析文档&lt;/a&gt;
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -606,7 +608,11 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加主域名
+        ///  添加主域名  
+        /// 如何添加免费域名，详细情况请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/domainadd&quot;&gt;文档&lt;/a&gt;
+        /// 添加收费域名，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/purchase-process&quot;&gt;文档&lt;/a&gt;，
+        /// 添加收费域名前，请确保用户的京东云账户有足够的资金支付，Openapi接口回返回订单号，可以用此订单号向计费系统查阅详情。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -615,7 +621,11 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  添加主域名
+        ///  添加主域名  
+        /// 如何添加免费域名，详细情况请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/domainadd&quot;&gt;文档&lt;/a&gt;
+        /// 添加收费域名，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/purchase-process&quot;&gt;文档&lt;/a&gt;，
+        /// 添加收费域名前，请确保用户的京东云账户有足够的资金支付，Openapi接口回返回订单号，可以用此订单号向计费系统查阅详情。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -625,7 +635,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        ///  查询云解析所有的基础解析线路。  
         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
         /// 
         /// </summary>
@@ -636,7 +646,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
         }
 #else
         /// <summary>
-        ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        ///  查询云解析所有的基础解析线路。  
         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
         /// 
         /// </summary>

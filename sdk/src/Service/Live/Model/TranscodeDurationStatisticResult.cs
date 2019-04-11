@@ -41,11 +41,15 @@ namespace JDCloudSDK.Live.Model
         /// 时间点
         /// 
         ///</summary>
-        public string Date{ get; set; }
+        public string StartTime{ get; set; }
         ///<summary>
-        /// 时长，单位：毫秒
+        /// 时间点
         /// 
         ///</summary>
-        public int? Duration{ get; set; }
+        public string EndTime{ get; set; }
+        ///<summary>
+        /// Data
+        ///</summary>
+        public TranscodeDurationStatisticData Data{ get; set; }
     }
 }

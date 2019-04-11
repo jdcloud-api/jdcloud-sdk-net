@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询域名的自定义解析线路
+    ///  查询主域名的自定义解析线路
     /// </summary>
     public class GetUserViewResult : JdcloudResult
     {

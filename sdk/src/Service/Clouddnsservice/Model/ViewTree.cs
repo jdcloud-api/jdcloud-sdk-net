@@ -42,7 +42,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public bool Disabled{ get; set; }
         ///<summary>
-        /// 解析线路的名称
+        /// 解析线路的描述
         ///</summary>
         public string Label{ get; set; }
         ///<summary>
@@ -53,6 +53,10 @@ namespace JDCloudSDK.Clouddnsservice.Model
         /// 解析线路ID
         ///</summary>
         public int? Value{ get; set; }
+        ///<summary>
+        /// 解析线路的名称，在使用viewName的参数处使用，如果为空表明此解析线路不能直接使用，请使用它的子线路。
+        ///</summary>
+        public string ViewName{ get; set; }
         ///<summary>
         /// Children
         ///</summary>

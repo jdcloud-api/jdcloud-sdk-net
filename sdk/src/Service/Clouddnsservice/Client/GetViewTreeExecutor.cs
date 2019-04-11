@@ -33,14 +33,14 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  查询云解析所有的基础解析线路。&lt;br&gt;
+    ///  查询云解析所有的基础解析线路。  
         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
         /// 
     /// </summary>
     public class GetViewTreeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        ///  查询云解析所有的基础解析线路。  
         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
         /// 接口的Http 请求方法
         /// </summary>
@@ -51,7 +51,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  查询云解析所有的基础解析线路。&lt;br&gt;
+        ///  查询云解析所有的基础解析线路。  
         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
         /// 接口的Http资源请求路径
         /// </summary>

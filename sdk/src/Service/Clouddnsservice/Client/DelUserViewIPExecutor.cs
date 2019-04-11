@@ -33,12 +33,12 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  删除域名的自定义解析线路的IP段
+    ///  删除主域名的自定义解析线路的IP段
     /// </summary>
     public class DelUserViewIPExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除域名的自定义解析线路的IP段接口的Http 请求方法
+        ///  删除主域名的自定义解析线路的IP段接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  删除域名的自定义解析线路的IP段接口的Http资源请求路径
+        ///  删除主域名的自定义解析线路的IP段接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

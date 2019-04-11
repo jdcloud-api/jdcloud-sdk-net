@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询域名的自定义解析线路的IP段
+    ///  查询主域名的自定义解析线路的IP段
     /// </summary>
     public class GetUserViewIPResponse : JdcloudResponse<GetUserViewIPResult>
     {

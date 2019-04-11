@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Function OpenAPI
- * 
+ * Mount-Target
+ * 挂载目标相关接口。
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,30 +29,33 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace JDCloudSDK.Function.Client
+namespace JDCloudSDK.Zfs.Client
 {
 
     /// <summary>
-    ///  控制台测试执行函数
+    ///  -   删除挂载目标的同时会删除相关的网络接口。
+        /// 
     /// </summary>
-    public class TestInvokeExecutor : JdcloudExecutor
+    public class DeleteMountTargetExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  控制台测试执行函数接口的Http 请求方法
+        ///  -   删除挂载目标的同时会删除相关的网络接口。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
             get {
-                return "POST";
+                return "DELETE";
             }
         }
         /// <summary>
-        ///  控制台测试执行函数接口的Http资源请求路径
+        ///  -   删除挂载目标的同时会删除相关的网络接口。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/testinvoke";
+            return "/regions/{regionId}/mountTargets/{mountTargetId}";
             }
         }
     }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Function OpenAPI
- * 
+ * Image-Style-Delimiter-API
+ * 图片样式分隔符API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -23,19 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-
-namespace  JDCloudSDK.Function.Apis
+namespace JDCloudSDK.Mps.Client
 {
 
     /// <summary>
-    ///  控制台测试执行函数
+    ///  获取bucket的图片样式分隔符配置
     /// </summary>
-    public class TestInvokeResponse : JdcloudResponse<TestInvokeResult>
+    public class GetStyleDelimiterExecutor : JdcloudExecutor
     {
+        /// <summary>
+        ///  获取bucket的图片样式分隔符配置接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "GET";
+            }
+        }
+        /// <summary>
+        ///  获取bucket的图片样式分隔符配置接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/regions/{regionId}/buckets/{bucketName}/styleDelimiter/";
+            }
+        }
     }
 }

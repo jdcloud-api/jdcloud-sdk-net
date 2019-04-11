@@ -290,6 +290,25 @@ namespace JDCloudSDK.Function.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  控制台测试执行函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public InvokeResponse Invoke(InvokeRequest request) {
+            return  new InvokeExecutor().Client(this).Execute<InvokeResponse, InvokeResult, InvokeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  控制台测试执行函数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<InvokeResponse> Invoke(InvokeRequest request) {
+            return await new InvokeExecutor().Client(this).Execute<InvokeResponse, InvokeResult, InvokeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  更新别名
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -309,21 +328,21 @@ namespace JDCloudSDK.Function.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  控制台测试执行函数
+        ///  异步测试执行函数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public TestInvokeResponse TestInvoke(TestInvokeRequest request) {
-            return  new TestInvokeExecutor().Client(this).Execute<TestInvokeResponse, TestInvokeResult, TestInvokeRequest>(request);
+        public AsyncInvokeResponse AsyncInvoke(AsyncInvokeRequest request) {
+            return  new AsyncInvokeExecutor().Client(this).Execute<AsyncInvokeResponse, AsyncInvokeResult, AsyncInvokeRequest>(request);
         }
 #else
         /// <summary>
-        ///  控制台测试执行函数
+        ///  异步测试执行函数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<TestInvokeResponse> TestInvoke(TestInvokeRequest request) {
-            return await new TestInvokeExecutor().Client(this).Execute<TestInvokeResponse, TestInvokeResult, TestInvokeRequest>(request).ConfigureAwait(false);
+        public async Task<AsyncInvokeResponse> AsyncInvoke(AsyncInvokeRequest request) {
+            return await new AsyncInvokeExecutor().Client(this).Execute<AsyncInvokeResponse, AsyncInvokeResult, AsyncInvokeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

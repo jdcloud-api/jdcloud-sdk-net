@@ -39,7 +39,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
     {
 
         ///<summary>
-        /// 域名ID
+        /// 主域名ID，请使用getDomains接口获取
         ///Required:true
         ///</summary>
         [Required]
@@ -61,6 +61,6 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///Required:true
         ///</summary>
         [Required]
-        public string ViewId{ get; set; }
+        public int ViewId{ get; set; }
     }
 }

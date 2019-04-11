@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询域名的自定义解析线路的IP段
+    ///  查询主域名的自定义解析线路的IP段
     /// </summary>
     public class GetUserViewIPRequest : JdcloudRequest
     {
@@ -53,7 +53,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
         ///<summary>
         /// 自定义线路名称, 最多64个字符
         ///</summary>
-        public   int? ViewName{ get; set; }
+        public   string ViewName{ get; set; }
         ///<summary>
         /// 分页参数，页的序号, 默认为1
         ///Required:true

@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
     public class OperateRRRequest : JdcloudRequest
     {
         ///<summary>
-        /// 需要操作的解析记录ID
+        /// 需要操作的解析记录ID，请使用searchRR接口获取。
         ///Required:true
         ///</summary>
         [Required]

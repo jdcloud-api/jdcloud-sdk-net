@@ -33,12 +33,12 @@ namespace JDCloudSDK.Clouddnsservice.Client
 {
 
     /// <summary>
-    ///  查看域名的解析次数
+    ///  查看主域名的解析次数
     /// </summary>
     public class GetDomainQueryCountExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查看域名的解析次数接口的Http 请求方法
+        ///  查看主域名的解析次数接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Clouddnsservice.Client
             }
         }
         /// <summary>
-        ///  查看域名的解析次数接口的Http资源请求路径
+        ///  查看主域名的解析次数接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

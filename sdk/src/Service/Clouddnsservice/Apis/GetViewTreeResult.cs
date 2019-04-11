@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  查询云解析所有的基础解析线路。&lt;br&gt;
+    ///  查询云解析所有的基础解析线路。  
         ///         /// 在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
         ///         /// 
     /// </summary>

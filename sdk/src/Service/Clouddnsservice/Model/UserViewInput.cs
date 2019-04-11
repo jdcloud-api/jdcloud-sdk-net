@@ -46,7 +46,7 @@ namespace JDCloudSDK.Clouddnsservice.Model
         ///</summary>
         public string ViewName{ get; set; }
         ///<summary>
-        /// 域名ID
+        /// 主域名ID
         ///</summary>
         public int? DomainId{ get; set; }
         ///<summary>

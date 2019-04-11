@@ -138,7 +138,7 @@ namespace JDCloudSDK.Mps.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  创建截图任务
+        ///  创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        ///  创建截图任务
+        ///  创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询截图任务
+        ///  查询截图任务，返回满足查询条件的任务列表。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        ///  查询截图任务
+        ///  查询截图任务，返回满足查询条件的任务列表。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,26 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取截图通知
+        ///  删除bucket的图片样式分隔符配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteStyleDelimiterResponse DeleteStyleDelimiter(DeleteStyleDelimiterRequest request) {
+            return  new DeleteStyleDelimiterExecutor().Client(this).Execute<DeleteStyleDelimiterResponse, DeleteStyleDelimiterResult, DeleteStyleDelimiterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除bucket的图片样式分隔符配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteStyleDelimiterResponse> DeleteStyleDelimiter(DeleteStyleDelimiterRequest request) {
+            return await new DeleteStyleDelimiterExecutor().Client(this).Execute<DeleteStyleDelimiterResponse, DeleteStyleDelimiterResult, DeleteStyleDelimiterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取媒体处理通知
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +204,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        ///  获取截图通知
+        ///  获取媒体处理通知
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,7 +214,7 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取截图任务
+        ///  根据任务ID获取截图任务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +223,7 @@ namespace JDCloudSDK.Mps.Client
         }
 #else
         /// <summary>
-        ///  获取截图任务
+        ///  根据任务ID获取截图任务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -229,6 +248,44 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetNotificationResponse> SetNotification(SetNotificationRequest request) {
             return await new SetNotificationExecutor().Client(this).Execute<SetNotificationResponse, SetNotificationResult, SetNotificationRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置图片样式分隔符
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetStyleDelimiterResponse SetStyleDelimiter(SetStyleDelimiterRequest request) {
+            return  new SetStyleDelimiterExecutor().Client(this).Execute<SetStyleDelimiterResponse, SetStyleDelimiterResult, SetStyleDelimiterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置图片样式分隔符
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetStyleDelimiterResponse> SetStyleDelimiter(SetStyleDelimiterRequest request) {
+            return await new SetStyleDelimiterExecutor().Client(this).Execute<SetStyleDelimiterResponse, SetStyleDelimiterResult, SetStyleDelimiterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取bucket的图片样式分隔符配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetStyleDelimiterResponse GetStyleDelimiter(GetStyleDelimiterRequest request) {
+            return  new GetStyleDelimiterExecutor().Client(this).Execute<GetStyleDelimiterResponse, GetStyleDelimiterResult, GetStyleDelimiterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取bucket的图片样式分隔符配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetStyleDelimiterResponse> GetStyleDelimiter(GetStyleDelimiterRequest request) {
+            return await new GetStyleDelimiterExecutor().Client(this).Execute<GetStyleDelimiterResponse, GetStyleDelimiterResult, GetStyleDelimiterRequest>(request).ConfigureAwait(false);
         }
 #endif
 

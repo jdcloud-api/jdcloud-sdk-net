@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  添加域名的解析记录
+    ///  添加主域名的解析记录
     /// </summary>
     public class AddRRRequest : JdcloudRequest
     {

@@ -50,6 +50,6 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// Data
         ///</summary>
-        public object Data{ get; set; }
+        public TrafficStatisticResultData Data{ get; set; }
     }
 }

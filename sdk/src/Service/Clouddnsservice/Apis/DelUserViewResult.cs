@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Clouddnsservice.Apis
 {
 
     /// <summary>
-    ///  删除域名的自定义解析线路
+    ///  删除主域名的自定义解析线路
     /// </summary>
     public class DelUserViewResult : JdcloudResult
     {

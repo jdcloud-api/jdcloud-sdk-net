@@ -41,11 +41,11 @@ namespace JDCloudSDK.Live.Model
         /// 带宽，单位：bps
         /// 
         ///</summary>
-        public int? Value{ get; set; }
+        public long? Value{ get; set; }
         ///<summary>
         /// 带宽峰值时间点，单位：秒
         /// 
         ///</summary>
-        public int? MaxValueTime{ get; set; }
+        public long? MaxValueTime{ get; set; }
     }
 }

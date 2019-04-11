@@ -42,7 +42,11 @@ namespace  JDCloudSDK.Live.Apis
     public class AddLiveRecordTaskRequest : JdcloudRequest
     {
         ///<summary>
-        /// 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
+        /// 录制时间集合
+        /// - 最大支持10段,多段合并成一个文件
+        /// - 多段时间跨度最小不能小于10s
+        /// - 多段时间跨度最大不能超过8小时
+        /// 
         ///Required:true
         ///</summary>
         [Required]
@@ -71,10 +75,15 @@ namespace  JDCloudSDK.Live.Apis
         public   string RecordFileType{ get; set; }
         ///<summary>
         /// 录制文件存储路径:
-        /// - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+        /// - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
         /// 
         ///</summary>
         public   string SaveObject{ get; set; }
+        ///<summary>
+        /// 打点录制任务外键
+        /// 
+        ///</summary>
+        public   string TaskExternalId{ get; set; }
         ///<summary>
         /// 推流域名
         ///Required:true
