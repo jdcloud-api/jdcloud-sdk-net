@@ -28,21 +28,21 @@
 在visual studio Nuget包浏览器查找JDCloudSDK 或者使用包管理控制台输入命令
 
 ```powershell
-Install-Package JDCloudSDK.Vm -Version 1.0.4.1
+Install-Package JDCloudSDK.Vm -Version 1.0.8.3
 ```
 
 或者使用 .NET CLI 安装
 
 ```powershell
-dotnet add package JDCloudSDK.Vm --version 1.0.4.1
+dotnet add package JDCloudSDK.Vm --version 1.0.8.3
 ```
 
 请选择自己需要使用的模块安装。
 
-<em> 注意：</em> 请使用包管理器将 JDCloudSDK.Core  的版本更新到0.2.3,因为以前版本在调用某些接口会出现鉴权失败的问题
+<em> 注意：</em> 请使用包管理器将 JDCloudSDK.Core  的版本更新到0.2.7,因为以前版本在调用某些接口会出现在.NET Framework 4.5 winform框架下，使用ui 线程调用api 取不到返回值的情况.
 
 ```powershell
-Install-Package JDCloudSDK.Core -Version 0.2.3
+Install-Package JDCloudSDK.Core -Version 0.2.7
 ```
 
 # 调用SDK
