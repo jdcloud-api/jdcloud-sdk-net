@@ -4,17 +4,19 @@
     <TargetFrameworks>netstandard2.0;net40;net45;net46;net47;net35</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Configurations>Debug;Release;</Configurations>
-    <Version>0.2.6</Version>
+    <Version>0.2.7</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>京东云SDK C# core</Description>
     <Copyright>Copyright  ©  2012-2019  JDCloud.com</Copyright>
 	<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://docs.jdcloud.com/cn/sdk/dotnet</PackageProjectUrl>
-    <PackageIconUrl></PackageIconUrl>
+    <PackageIconUrl>https://www.jdcloud.com/static/img/favicon.ico</PackageIconUrl>
     <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>京东云SDK C# core</PackageReleaseNotes>
 	<PackageOutputPath>..\..\Release\nuget</PackageOutputPath>
+	<Authors>JDCloud API Gateway</Authors>
+	<Company>JDCloud.com</Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

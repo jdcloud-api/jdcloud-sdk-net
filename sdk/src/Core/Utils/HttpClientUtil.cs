@@ -211,7 +211,7 @@ namespace JDCloudSDK.Core.Utils
                                 content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeHeader.Value);
                             }
                             httpRequestMessage.Content = content;
-                            message = await httpClient.SendAsync(httpRequestMessage);
+                            message = await httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
                         }
                     }
                     else
