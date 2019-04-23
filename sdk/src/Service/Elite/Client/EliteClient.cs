@@ -157,6 +157,25 @@ namespace JDCloudSDK.Elite.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取云存服务信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetStoreServiceResponse GetStoreService(GetStoreServiceRequest request) {
+            return  new GetStoreServiceExecutor().Client(this).Execute<GetStoreServiceResponse, GetStoreServiceResult, GetStoreServiceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取云存服务信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetStoreServiceResponse> GetStoreService(GetStoreServiceRequest request) {
+            return await new GetStoreServiceExecutor().Client(this).Execute<GetStoreServiceResponse, GetStoreServiceResult, GetStoreServiceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  确认交付
         /// </summary>
         /// <param name="request">请求参数信息</param>

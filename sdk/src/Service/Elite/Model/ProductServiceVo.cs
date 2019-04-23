@@ -105,5 +105,25 @@ namespace JDCloudSDK.Elite.Model
         /// 交付单备注
         ///</summary>
         public string Remark{ get; set; }
+        ///<summary>
+        /// 订单金额
+        ///</summary>
+        public string OrderTotalFee{ get; set; }
+        ///<summary>
+        /// 订单实付金额
+        ///</summary>
+        public string OrderActualFee{ get; set; }
+        ///<summary>
+        /// 订单支付时间
+        ///</summary>
+        public string PaymentDt{ get; set; }
+        ///<summary>
+        /// 额外计费项信息
+        ///</summary>
+        public string ExtraChargeInfo{ get; set; }
+        ///<summary>
+        /// 额外计费详情信息
+        ///</summary>
+        public List<OrderItemExtraChargeInfo> OrderItemExtraChargeInfos{ get; set; }
     }
 }
