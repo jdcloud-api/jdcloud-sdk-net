@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/wtkrtxbmts44eg5o/branch/master?svg=true)](https://ci.appveyor.com/project/lishjun01/jdcloud-sdk-net/branch/master)
 
 # 简介
 
