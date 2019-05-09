@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
+    ///  查询跨地域备份同步服务列表。
     /// </summary>
     public class DescribeBackupSynchronicitiesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  查询跨地域备份同步服务列表。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  查询跨地域备份同步服务列表。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

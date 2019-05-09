@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+    ///  创建一个跨地域备份同步服务。
     /// </summary>
     public class CreateBackupSynchronicityExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  创建一个跨地域备份同步服务。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  创建一个跨地域备份同步服务。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

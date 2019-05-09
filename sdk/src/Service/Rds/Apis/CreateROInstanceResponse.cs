@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * product
- * 产品页相关接口
+ * 实例管理
+ * 实例管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,14 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 
-namespace  JDCloudSDK.Portal.Apis
+namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  产品页列表查询接口
-        ///         /// 
+    ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
     /// </summary>
-    public class DescribeProductsResponse : JdcloudResponse<DescribeProductsResult>
+    public class CreateROInstanceResponse : JdcloudResponse<CreateROInstanceResult>
     {
     }
 }

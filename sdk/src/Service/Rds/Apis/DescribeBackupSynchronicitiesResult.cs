@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
+    ///  查询跨地域备份同步服务列表。
     /// </summary>
     public class DescribeBackupSynchronicitiesResult : JdcloudResult
     {

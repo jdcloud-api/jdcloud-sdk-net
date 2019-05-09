@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * product
- * 产品页相关接口
+ * SSL Certificate
+ * SSL数字证书相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -23,40 +23,42 @@
  */
 
 
-using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-namespace JDCloudSDK.Portal.Client
+using JDCloudSDK.Core.Annotation;
+
+namespace  JDCloudSDK.Ssl.Apis
 {
 
     /// <summary>
-    ///  产品页列表查询接口
-        /// 
+    ///  上传证书
     /// </summary>
-    public class DescribeProductsExecutor : JdcloudExecutor
+    public class UploadCertRequest : JdcloudRequest
     {
-        /// <summary>
-        ///  产品页列表查询接口
-        /// 接口的Http 请求方法
-        /// </summary>
-        public override  string Method
-        {
-            get {
-                return "GET";
-            }
-        }
-        /// <summary>
-        ///  产品页列表查询接口
-        /// 接口的Http资源请求路径
-        /// </summary>
-        public override string Url
-        {
-            get {
-            return "/regions/{regionId}/products";
-            }
-        }
+        ///<summary>
+        /// 证书名称
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string CertName{ get; set; }
+        ///<summary>
+        /// 私钥
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string KeyFile{ get; set; }
+        ///<summary>
+        /// 证书
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string CertFile{ get; set; }
+        ///<summary>
+        /// 证书别名
+        ///</summary>
+        public   string AliasName{ get; set; }
     }
 }

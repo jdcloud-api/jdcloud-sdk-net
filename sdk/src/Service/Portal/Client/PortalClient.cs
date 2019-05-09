@@ -178,27 +178,6 @@ namespace JDCloudSDK.Portal.Client
             return await new DescribeProductsByIdExecutor().Client(this).Execute<DescribeProductsByIdResponse, DescribeProductsByIdResult, DescribeProductsByIdRequest>(request).ConfigureAwait(false);
         }
 #endif
-#if NET40||NET35
-        /// <summary>
-        ///  产品页列表查询接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductsResponse DescribeProducts(DescribeProductsRequest request) {
-            return  new DescribeProductsExecutor().Client(this).Execute<DescribeProductsResponse, DescribeProductsResult, DescribeProductsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  产品页列表查询接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductsResponse> DescribeProducts(DescribeProductsRequest request) {
-            return await new DescribeProductsExecutor().Client(this).Execute<DescribeProductsResponse, DescribeProductsResult, DescribeProductsRequest>(request).ConfigureAwait(false);
-        }
-#endif
 
             /// <summary>
             ///  默认PortalClient 构造器 接口

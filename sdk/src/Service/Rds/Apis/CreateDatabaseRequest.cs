@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class CreateDatabaseRequest : JdcloudRequest
     {
         ///<summary>
-        /// 数据库名，数据库名称的限制请参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        /// 数据库名，数据库名称的限制请参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///Required:true
         ///</summary>
         [Required]

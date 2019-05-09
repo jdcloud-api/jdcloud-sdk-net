@@ -32,7 +32,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  订单状态
+    ///  Redis实例的订单结果
     /// </summary>
     public class OrderStatus
     {
@@ -42,15 +42,15 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public int? Total{ get; set; }
         ///<summary>
-        /// 成功数
+        /// 成功的订单数
         ///</summary>
         public int? Success{ get; set; }
         ///<summary>
-        /// 失败数
+        /// 失败的订单数
         ///</summary>
         public int? Fail{ get; set; }
         ///<summary>
-        /// 正在处理数
+        /// 正在处理的订单数
         ///</summary>
         public int? InProcess{ get; set; }
         ///<summary>

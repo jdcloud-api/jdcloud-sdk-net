@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class ResetPasswordRequest : JdcloudRequest
     {
         ///<summary>
-        /// 新密码，密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        /// 新密码，密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///Required:true
         ///</summary>
         [Required]

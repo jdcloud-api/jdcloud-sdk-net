@@ -32,7 +32,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  缓存Redis实例所在区域可用区ID信息
+    ///  创建缓存Redis实例时，用户输入的可用区ID信息
     /// </summary>
     public class AzIdSpec
     {

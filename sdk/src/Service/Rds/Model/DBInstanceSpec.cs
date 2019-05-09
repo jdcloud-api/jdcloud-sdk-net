@@ -40,7 +40,7 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        /// 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
@@ -95,5 +95,17 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         [Required]
         public ChargeSpec ChargeSpec{ get; set; }
+        ///<summary>
+        /// 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
+        ///</summary>
+        public string InstanceStorageType{ get; set; }
+        ///<summary>
+        /// 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
+        ///</summary>
+        public bool StorageEncrypted{ get; set; }
+        ///<summary>
+        /// 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public string InstanceType{ get; set; }
     }
 }

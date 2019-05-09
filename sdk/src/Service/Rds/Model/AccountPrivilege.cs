@@ -38,7 +38,7 @@ namespace JDCloudSDK.Rds.Model
     {
 
         ///<summary>
-        /// 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        /// 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string DbName{ get; set; }
         ///<summary>

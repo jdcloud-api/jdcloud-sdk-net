@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  查询单个缓存Redis实例详情
+    ///  查询缓存Redis实例的详细信息
     /// </summary>
     public class DescribeCacheInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询单个缓存Redis实例详情接口的Http 请求方法
+        ///  查询缓存Redis实例的详细信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  查询单个缓存Redis实例详情接口的Http资源请求路径
+        ///  查询缓存Redis实例的详细信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

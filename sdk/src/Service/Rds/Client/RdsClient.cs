@@ -689,7 +689,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+        ///  查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -698,7 +698,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+        ///  查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -708,7 +708,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+        ///  创建一个跨地域备份同步服务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -717,7 +717,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+        ///  创建一个跨地域备份同步服务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -727,7 +727,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+        ///  删除一个跨地域备份同步服务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -736,7 +736,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+        ///  删除一个跨地域备份同步服务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1221,7 +1221,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1230,7 +1230,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1430,7 +1430,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
+        ///  查询跨地域备份同步服务列表。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1439,7 +1439,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
+        ///  查询跨地域备份同步服务列表。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1563,6 +1563,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateROInstanceResponse CreateROInstance(CreateROInstanceRequest request) {
+            return  new CreateROInstanceExecutor().Client(this).Execute<CreateROInstanceResponse, CreateROInstanceResult, CreateROInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateROInstanceResponse> CreateROInstance(CreateROInstanceRequest request) {
+            return await new CreateROInstanceExecutor().Client(this).Execute<CreateROInstanceResponse, CreateROInstanceResult, CreateROInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1616,6 +1635,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyParameterGroupParametersResponse> ModifyParameterGroupParameters(ModifyParameterGroupParametersRequest request) {
             return await new ModifyParameterGroupParametersExecutor().Client(this).Execute<ModifyParameterGroupParametersResponse, ModifyParameterGroupParametersResult, ModifyParameterGroupParametersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据跨地域备份同步服务时间点创建实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstanceByTimeInCrossRegionResponse CreateInstanceByTimeInCrossRegion(CreateInstanceByTimeInCrossRegionRequest request) {
+            return  new CreateInstanceByTimeInCrossRegionExecutor().Client(this).Execute<CreateInstanceByTimeInCrossRegionResponse, CreateInstanceByTimeInCrossRegionResult, CreateInstanceByTimeInCrossRegionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据跨地域备份同步服务时间点创建实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstanceByTimeInCrossRegionResponse> CreateInstanceByTimeInCrossRegion(CreateInstanceByTimeInCrossRegionRequest request) {
+            return await new CreateInstanceByTimeInCrossRegionExecutor().Client(this).Execute<CreateInstanceByTimeInCrossRegionResponse, CreateInstanceByTimeInCrossRegionResult, CreateInstanceByTimeInCrossRegionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

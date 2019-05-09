@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis配额接口
- * 缓存Redis配额相关接口
+ * Redis Quota API
+ * 缓存Redis配额查询、修改接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  查询账户配额信息
+    ///  查询账户的缓存Redis配额信息
     /// </summary>
     public class DescribeUserQuotaRequest : JdcloudRequest
     {
         ///<summary>
-        /// 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+        /// 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
         ///Required:true
         ///</summary>
         [Required]

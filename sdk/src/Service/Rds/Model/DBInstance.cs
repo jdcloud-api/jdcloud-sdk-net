@@ -43,7 +43,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        /// 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
@@ -59,6 +59,22 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string EngineVersion{ get; set; }
         ///<summary>
+        /// 实例规格代码
+        ///</summary>
+        public string InstanceClass{ get; set; }
+        ///<summary>
+        /// 磁盘，单位GB
+        ///</summary>
+        public int? InstanceStorageGB{ get; set; }
+        ///<summary>
+        /// CPU核数
+        ///</summary>
+        public int? InstanceCPU{ get; set; }
+        ///<summary>
+        /// 内存，单位MB
+        ///</summary>
+        public int? InstanceMemoryMB{ get; set; }
+        ///<summary>
         /// 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
         public string RegionId{ get; set; }
@@ -66,6 +82,14 @@ namespace JDCloudSDK.Rds.Model
         /// 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
         public List<string> AzId{ get; set; }
+        ///<summary>
+        /// VPC的ID
+        ///</summary>
+        public string VpcId{ get; set; }
+        ///<summary>
+        /// 子网的ID
+        ///</summary>
+        public string SubnetId{ get; set; }
         ///<summary>
         /// 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
@@ -82,5 +106,9 @@ namespace JDCloudSDK.Rds.Model
         /// 标签信息
         ///</summary>
         public List<Tag> Tags{ get; set; }
+        ///<summary>
+        /// MySQL只读实例对应的主实例ID
+        ///</summary>
+        public string SourceInstanceId{ get; set; }
     }
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * product
- * 产品页相关接口
+ * SSL Certificate
+ * SSL数字证书相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,34 +28,14 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 
-namespace  JDCloudSDK.Portal.Apis
+namespace  JDCloudSDK.Ssl.Apis
 {
 
     /// <summary>
-    ///  产品页列表查询接口
-        ///         /// 
+    ///  查看证书详情
     /// </summary>
-    public class DescribeProductsRequest : JdcloudRequest
+    public class DescribeCertResponse : JdcloudResponse<DescribeCertResult>
     {
-        ///<summary>
-        /// 语言类型；中文cn；英文en；
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string Lang{ get; set; }
-        ///<summary>
-        /// 外部使用ak；
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string Ak{ get; set; }
-        ///<summary>
-        /// Region ID （cn-north-1：华北-北京）
-        ///Required:true
-        ///</summary>
-        [Required]
-        public override  string RegionId{ get; set; }
     }
 }

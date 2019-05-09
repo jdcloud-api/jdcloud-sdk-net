@@ -33,7 +33,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  cacheInstance
+    ///  查询缓存Redis实例时，返回的实例信息（列表和详情的信息一样）
     /// </summary>
     public class CacheInstance
     {
@@ -47,15 +47,15 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+        /// 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         ///</summary>
         public string CacheInstanceClass{ get; set; }
         ///<summary>
-        /// 容量，单位MB
+        /// 实例的总内存（MB）
         ///</summary>
         public int? CacheInstanceMemoryMB{ get; set; }
         ///<summary>
-        /// 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+        /// 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
         ///</summary>
         public string CacheInstanceStatus{ get; set; }
         ///<summary>
@@ -63,7 +63,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceDescription{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
         ///</summary>
         public DateTime? CreateTime{ get; set; }
         ///<summary>
@@ -91,12 +91,28 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        /// 实例版本
+        /// 实例的详细版本号，形如x.x-x.x
         ///</summary>
         public string InstanceVersion{ get; set; }
         ///<summary>
-        /// 是否免密
+        /// 连接redis实例时，是否需要密码认证，false表示无密码
         ///</summary>
         public bool Auth{ get; set; }
+        ///<summary>
+        /// 创建实例时选择的redis引擎版本：目前支持2.8和4.0
+        ///</summary>
+        public string RedisVersion{ get; set; }
+        ///<summary>
+        /// 实例类型：master-slave表示主从版，cluster表示集群版
+        ///</summary>
+        public string CacheInstanceType{ get; set; }
+        ///<summary>
+        /// 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
+        ///</summary>
+        public int? Ipv6On{ get; set; }
+        ///<summary>
+        /// 标签信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

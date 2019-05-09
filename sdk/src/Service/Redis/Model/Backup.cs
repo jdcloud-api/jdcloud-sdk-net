@@ -33,7 +33,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  backup
+    ///  缓存Redis实例的一个备份文件对象
     /// </summary>
     public class Backup
     {
@@ -51,19 +51,19 @@ namespace JDCloudSDK.Redis.Model
         [Required]
         public string BackupFileName{ get; set; }
         ///<summary>
-        /// 备份实例ID
+        /// 备份文件对应的实例ID
         ///Required:true
         ///</summary>
         [Required]
-        public string SpaceId{ get; set; }
+        public string CacheInstanceId{ get; set; }
         ///<summary>
-        /// 备份开始时间
+        /// 备份开始时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
         ///Required:true
         ///</summary>
         [Required]
         public DateTime BackupStartTime{ get; set; }
         ///<summary>
-        /// 备份结束时间
+        /// 备份结束时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
         ///Required:true
         ///</summary>
         [Required]
@@ -75,19 +75,19 @@ namespace JDCloudSDK.Redis.Model
         [Required]
         public int BackupType{ get; set; }
         ///<summary>
-        /// 备份文件大小，如果实例是集群版，则表示每个分片备份文件大小的总和
+        /// 备份文件总字节大小，如果实例是集群版，则表示每个分片备份文件大小的总和
         ///Required:true
         ///</summary>
         [Required]
-        public int BackupSize{ get; set; }
+        public long BackupSize{ get; set; }
         ///<summary>
-        /// 备份任务状态状态，1表示失败，2表示成功
+        /// 备份任务状态状态，0表示备份中，1表示失败，2表示成功
         ///Required:true
         ///</summary>
         [Required]
         public int BackupStatus{ get; set; }
         ///<summary>
-        /// 备份文件下载的URL地址，集群版有多个URL地址
+        /// 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
         ///Required:true
         ///</summary>
         [Required]

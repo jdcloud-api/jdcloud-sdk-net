@@ -33,34 +33,38 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  某缓存Redis实例规格信息
+    ///  缓存Redis实例的规格信息
     /// </summary>
     public class InstanceClass
     {
 
         ///<summary>
-        /// 实例规格代码,参见实例规格代码表
+        /// 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         ///</summary>
         [JsonProperty("instanceClass")]
         public string InstanceClassValue{ get; set; }
         ///<summary>
-        /// cpu
+        /// 规格类型：master-slave表示主从版，cluster表示集群版
+        ///</summary>
+        public string InstanceType{ get; set; }
+        ///<summary>
+        /// cpu核数
         ///</summary>
         public int? Cpu{ get; set; }
         ///<summary>
-        /// 内存
+        /// 内存总容量（MB）
         ///</summary>
         public int? MemoryMB{ get; set; }
         ///<summary>
-        /// 磁盘
+        /// 磁盘总容量（GB）
         ///</summary>
         public int? DiskGB{ get; set; }
         ///<summary>
-        /// 最大链接数
+        /// 最大连接数
         ///</summary>
-        public int? MaxConnetction{ get; set; }
+        public int? MaxConnection{ get; set; }
         ///<summary>
-        /// 带宽
+        /// 内网带宽（MBps）
         ///</summary>
         public int? BandwidthMbps{ get; set; }
     }
