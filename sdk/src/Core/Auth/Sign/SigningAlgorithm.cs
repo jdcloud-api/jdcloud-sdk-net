@@ -1,6 +1,9 @@
 ﻿namespace JDCloudSDK.Core.Auth.Sign
 {
-    public class SigningAlgorithm
+    /// <summary>
+    /// 签名算法枚举
+    /// </summary>
+    public enum SigningAlgorithm
     {
     }
 }
