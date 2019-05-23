@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// OnlineStreamInfos
+        /// 在线推流集合
         ///</summary>
         public List<OnlineStreamInfo> OnlineStreamInfos{ get; set; }
 

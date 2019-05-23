@@ -89,9 +89,9 @@ namespace JDCloudSDK.Function.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -248,25 +248,6 @@ namespace JDCloudSDK.Function.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetFunctionResponse> GetFunction(GetFunctionRequest request) {
             return await new GetFunctionExecutor().Client(this).Execute<GetFunctionResponse, GetFunctionResult, GetFunctionRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询触发器列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListTriggerResponse ListTrigger(ListTriggerRequest request) {
-            return  new ListTriggerExecutor().Client(this).Execute<ListTriggerResponse, ListTriggerResult, ListTriggerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询触发器列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListTriggerResponse> ListTrigger(ListTriggerRequest request) {
-            return await new ListTriggerExecutor().Client(this).Execute<ListTriggerResponse, ListTriggerResult, ListTriggerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

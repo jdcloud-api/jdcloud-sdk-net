@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Billing.Model;
 
 namespace JDCloudSDK.Billing.Model
 {
@@ -152,7 +153,7 @@ namespace JDCloudSDK.Billing.Model
         ///<summary>
         /// 最新价格map
         ///</summary>
-        public object PriceMap{ get; set; }
+        public PriceMap PriceMap{ get; set; }
         ///<summary>
         /// 价格快照
         ///</summary>

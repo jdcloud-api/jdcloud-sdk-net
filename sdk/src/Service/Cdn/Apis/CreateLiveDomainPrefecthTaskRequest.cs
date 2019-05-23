@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 预热的URL
         ///</summary>
-        public List<Array> UrlList{ get; set; }
+        public List<string> UrlList{ get; set; }
 
         ///<summary>
         /// 预热时长

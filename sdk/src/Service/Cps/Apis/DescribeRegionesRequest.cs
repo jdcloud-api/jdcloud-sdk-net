@@ -37,5 +37,9 @@ namespace  JDCloudSDK.Cps.Apis
     /// </summary>
     public class DescribeRegionesRequest : JdcloudRequest
     {
+        ///<summary>
+        /// 网络类型basic/vpc, 默认basic
+        ///</summary>
+        public   string NetworkType{ get; set; }
     }
 }

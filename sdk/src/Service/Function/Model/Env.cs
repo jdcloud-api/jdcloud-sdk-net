@@ -40,6 +40,6 @@ namespace JDCloudSDK.Function.Model
         ///<summary>
         /// Data
         ///</summary>
-        public Dictionary<string,string> Data{ get; set; }
+        public Dictionary<String,string> Data{ get; set; }
     }
 }

@@ -46,16 +46,44 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        /// 子网CIDR
-        ///</summary>
-        public string Cidr{ get; set; }
-        ///<summary>
         /// 子网ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
+        /// 子网名称
+        ///</summary>
+        public string Name{ get; set; }
+        ///<summary>
+        /// 子网CIDR
+        ///</summary>
+        public string Cidr{ get; set; }
+        ///<summary>
+        /// 私有网络Id
+        ///</summary>
+        public string VpcId{ get; set; }
+        ///<summary>
+        /// 私有网络名称
+        ///</summary>
+        public string VpcName{ get; set; }
+        ///<summary>
+        /// 可用ip数量
+        ///</summary>
+        public int? AvailableIpCount{ get; set; }
+        ///<summary>
+        /// 总ip数量
+        ///</summary>
+        public int? TotalIpCount{ get; set; }
+        ///<summary>
         /// 网络类型
         ///</summary>
         public string NetworkType{ get; set; }
+        ///<summary>
+        /// 描述
+        ///</summary>
+        public string Description{ get; set; }
+        ///<summary>
+        /// 创建时间
+        ///</summary>
+        public string CreateTime{ get; set; }
     }
 }

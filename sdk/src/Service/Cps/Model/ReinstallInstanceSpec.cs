@@ -84,9 +84,5 @@ namespace JDCloudSDK.Cps.Model
         /// 主机名
         ///</summary>
         public string Hostname{ get; set; }
-        ///<summary>
-        /// Softwares
-        ///</summary>
-        public List<Software> Softwares{ get; set; }
     }
 }

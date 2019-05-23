@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Cps.Apis
 
     /// <summary>
     ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        ///         /// 支持分页查询，默认每页10条&lt;br/&gt;
+        ///         /// 支持分页查询，默认每页20条&lt;br/&gt;
         ///         /// 
     /// </summary>
     public class DescribeInstancesResult : JdcloudResult
@@ -50,7 +50,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[20, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

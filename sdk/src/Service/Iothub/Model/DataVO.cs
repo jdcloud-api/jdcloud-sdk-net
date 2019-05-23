@@ -74,7 +74,7 @@ namespace JDCloudSDK.Iothub.Model
         ///</summary>
         public string PriDomain{ get; set; }
         ///<summary>
-        /// 实例状态
+        /// 实例状态[0-创建中，1-运行中，2-停止]
         ///</summary>
         public string Status{ get; set; }
         ///<summary>

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DDoS基础防护相关接口
- * DDoS基础防护相关接口
+ * IP Resource APIs
+ * Anti DDoS Basic IP Resource APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,14 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    ///  查询公网Ip基本信息
+    ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        /// 
     /// </summary>
     public class DescribeIpResourceInfoExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询公网Ip基本信息接口的Http 请求方法
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        ///  查询公网Ip基本信息接口的Http资源请求路径
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

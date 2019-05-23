@@ -52,6 +52,6 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// 查询结果,类型为HashMap&lt;String, Object&gt;
         ///</summary>
-        public Dictionary<string,string> FullValue{ get; set; }
+        public Dictionary<String,string> FullValue{ get; set; }
     }
 }

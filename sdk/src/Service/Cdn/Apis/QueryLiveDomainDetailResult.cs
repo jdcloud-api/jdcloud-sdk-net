@@ -131,22 +131,22 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string ForwardCustomVhost{ get; set; }
         ///<summary>
-        /// FlvUrls
+        /// flvUrls
         ///</summary>
         public List<string> FlvUrls{ get; set; }
 
         ///<summary>
-        /// HlsUrls
+        /// hlsUrls
         ///</summary>
         public List<string> HlsUrls{ get; set; }
 
         ///<summary>
-        /// RtmpUrls
+        /// rtmpUrls
         ///</summary>
         public List<string> RtmpUrls{ get; set; }
 
         ///<summary>
-        /// ProtocolConverts
+        /// 转协议
         ///</summary>
         public List<ProtocolConvert> ProtocolConverts{ get; set; }
 
@@ -191,12 +191,12 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string OriginPrivateKey{ get; set; }
         ///<summary>
-        /// AllowApps
+        /// app列表
         ///</summary>
         public List<string> AllowApps{ get; set; }
 
         ///<summary>
-        /// Ips
+        /// ip黑名单列表
         ///</summary>
         public List<string> Ips{ get; set; }
 
@@ -217,7 +217,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string ReferType{ get; set; }
         ///<summary>
-        /// ReferList
+        /// referList
         ///</summary>
         public List<string> ReferList{ get; set; }
 

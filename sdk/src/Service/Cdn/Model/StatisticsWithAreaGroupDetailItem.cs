@@ -44,6 +44,6 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// IspStat
         ///</summary>
-        public List<Dictionary<string,string>> IspStat{ get; set; }
+        public List<Dictionary<String,string>> IspStat{ get; set; }
     }
 }

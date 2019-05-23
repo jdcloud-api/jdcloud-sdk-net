@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Ams.Apis
     public class DescribeStreamsInputResult : JdcloudResult
     {
         ///<summary>
-        /// StreamInputDatas
+        /// Input数据集合
         ///</summary>
         public List<StreamInputData> StreamInputDatas{ get; set; }
 

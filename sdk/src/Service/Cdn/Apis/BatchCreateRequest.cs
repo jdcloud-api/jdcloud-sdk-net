@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cdn.Model;
 
 namespace  JDCloudSDK.Cdn.Apis
 {
@@ -40,7 +41,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// Domains
         ///</summary>
-        public List<Array> Domains{ get; set; }
+        public List<string> Domains{ get; set; }
 
         ///<summary>
         /// 回源类型只能是[ips,domain,oss]中的一种
@@ -89,12 +90,12 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// IpSource
         ///</summary>
-        public List<Array> IpSource{ get; set; }
+        public List<IpSourceInfo> IpSource{ get; set; }
 
         ///<summary>
         /// DomainSource
         ///</summary>
-        public List<Array> DomainSource{ get; set; }
+        public List<DomainSourceInfo> DomainSource{ get; set; }
 
         ///<summary>
         /// OssSource

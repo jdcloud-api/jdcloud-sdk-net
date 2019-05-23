@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// Apps
+        /// app列表
         ///</summary>
         public List<App> Apps{ get; set; }
 

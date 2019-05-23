@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 域名组内域名包含主域名
         ///</summary>
-        public List<Array> Domains{ get; set; }
+        public List<string> Domains{ get; set; }
 
     }
 }

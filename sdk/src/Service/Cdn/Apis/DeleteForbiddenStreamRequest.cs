@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cdn.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Cdn.Apis
@@ -41,7 +42,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 要删除的禁播流
         ///</summary>
-        public List<Array> DeleteStreams{ get; set; }
+        public List<DeleteStream> DeleteStreams{ get; set; }
 
         ///<summary>
         /// 用户域名

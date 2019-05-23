@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryDomainGroupDetailResult : JdcloudResult
     {
         ///<summary>
-        /// Domains
+        /// 域名组成员
         ///</summary>
         public List<string> Domains{ get; set; }
 

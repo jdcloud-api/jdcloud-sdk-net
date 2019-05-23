@@ -89,9 +89,9 @@ namespace JDCloudSDK.Elite.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Elite.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询价格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public JdxQueryPriceResponse JdxQueryPrice(JdxQueryPriceRequest request) {
+            return  new JdxQueryPriceExecutor().Client(this).Execute<JdxQueryPriceResponse, JdxQueryPriceResult, JdxQueryPriceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询价格
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<JdxQueryPriceResponse> JdxQueryPrice(JdxQueryPriceRequest request) {
+            return await new JdxQueryPriceExecutor().Client(this).Execute<JdxQueryPriceResponse, JdxQueryPriceResult, JdxQueryPriceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  分页查询交付单信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,6 +191,25 @@ namespace JDCloudSDK.Elite.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetStoreServiceResponse> GetStoreService(GetStoreServiceRequest request) {
             return await new GetStoreServiceExecutor().Client(this).Execute<GetStoreServiceResponse, GetStoreServiceResult, GetStoreServiceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  上报订单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public JdxReportOrderResponse JdxReportOrder(JdxReportOrderRequest request) {
+            return  new JdxReportOrderExecutor().Client(this).Execute<JdxReportOrderResponse, JdxReportOrderResult, JdxReportOrderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  上报订单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<JdxReportOrderResponse> JdxReportOrder(JdxReportOrderRequest request) {
+            return await new JdxReportOrderExecutor().Client(this).Execute<JdxReportOrderResponse, JdxReportOrderResult, JdxReportOrderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

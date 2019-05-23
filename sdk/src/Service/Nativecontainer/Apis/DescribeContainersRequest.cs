@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
+using JDCloudSDK.Nativecontainer.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Nativecontainer.Apis
@@ -57,9 +58,10 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         /// status - 容器状态，精确匹配，支持多个
         /// name - 实例名称，模糊匹配，支持单个
         /// subnetId - 镜像ID，模糊匹配，支持单个
+        /// securityGroups - 安全组 id，精确匹配，支持多个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// Tag筛选条件

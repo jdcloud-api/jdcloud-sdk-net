@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// ip黑名单,ips中url不能超过50条
         ///</summary>
-        public List<Array> Ips{ get; set; }
+        public List<string> Ips{ get; set; }
 
         ///<summary>
         /// 用户域名

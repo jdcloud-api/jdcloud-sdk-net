@@ -51,16 +51,12 @@ namespace  JDCloudSDK.Live.Apis
         ///<summary>
         /// 存储桶
         /// 
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SaveBucket{ get; set; }
         ///<summary>
         /// endpoint
         /// 
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SaveEndpoint{ get; set; }
         ///<summary>
         /// 录制文件格式:
@@ -73,7 +69,8 @@ namespace  JDCloudSDK.Live.Apis
         public   string RecordFileType{ get; set; }
         ///<summary>
         /// 录制模板自定义名称:
-        ///  - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)
+        ///  - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
+        ///    最大长度50个字符
         ///  - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
         /// 
         ///Required:true

@@ -49,7 +49,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// HttpRequestHeader
         ///</summary>
-        public   Dictionary<string,string> HttpRequestHeader{ get; set; }
+        public   Dictionary<String,string> HttpRequestHeader{ get; set; }
         ///<summary>
         /// 用户域名
         ///Required:true

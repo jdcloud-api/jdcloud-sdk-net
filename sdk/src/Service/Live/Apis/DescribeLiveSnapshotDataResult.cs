@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Live.Apis
         ///<summary>
         /// SnapshotData
         ///</summary>
-        public List<SnapshotData> SnapshotData{ get; set; }
+        public List<SnapshotCountStatisticResult> SnapshotData{ get; set; }
 
     }
 }

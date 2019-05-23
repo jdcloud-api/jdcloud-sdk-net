@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询子网
+    ///  查询子网详情
     /// </summary>
     public class DescribeSubnetResult : JdcloudResult
     {

@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// RecordTemplates
+        /// 录制模板信息
         ///</summary>
         public List<RecordTemplate> RecordTemplates{ get; set; }
 

@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// TimeshiftConfigs
+        /// 直播域名集合
         ///</summary>
         public List<TimeshiftConfig> TimeshiftConfigs{ get; set; }
 

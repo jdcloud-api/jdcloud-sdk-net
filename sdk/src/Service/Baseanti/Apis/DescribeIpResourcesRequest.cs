@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DDoS基础防护相关接口
- * DDoS基础防护相关接口
+ * IP Resource APIs
+ * Anti DDoS Basic IP Resource APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,16 +34,18 @@ namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    ///  查询区域下的公网Ip资源列表
+    ///  查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+        ///         /// 
     /// </summary>
     public class DescribeIpResourcesRequest : JdcloudRequest
     {
         ///<summary>
-        /// IP模糊匹配
+        /// IP 模糊匹配
         ///</summary>
         public   string Ip{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
+        /// 
         ///Required:true
         ///</summary>
         [Required]

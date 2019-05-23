@@ -54,7 +54,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string OsVersion{ get; set; }
         ///<summary>
-        /// 实例类型, 如 cps.c.normal,
+        /// 实例类型, 如 cps.c.normal
         ///</summary>
         public string DeviceType{ get; set; }
     }

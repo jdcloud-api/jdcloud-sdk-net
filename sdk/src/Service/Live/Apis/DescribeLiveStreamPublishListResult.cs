@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// LiveStreamPublishInfos
+        /// 推流历史集合
         ///</summary>
         public List<LiveStreamPublishInfo> LiveStreamPublishInfos{ get; set; }
 

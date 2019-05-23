@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// SnapshotTemplates
+        /// 截图模板集合
         ///</summary>
         public List<SnapshotTemplate> SnapshotTemplates{ get; set; }
 

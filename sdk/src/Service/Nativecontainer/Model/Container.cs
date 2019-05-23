@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Nativecontainer.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model

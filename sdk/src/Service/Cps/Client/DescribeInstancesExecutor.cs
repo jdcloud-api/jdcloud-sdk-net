@@ -34,14 +34,14 @@ namespace JDCloudSDK.Cps.Client
 
     /// <summary>
     ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        /// 支持分页查询，默认每页10条&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
         /// 
     /// </summary>
     public class DescribeInstancesExecutor : JdcloudExecutor
     {
         /// <summary>
         ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        /// 支持分页查询，默认每页10条&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -52,7 +52,7 @@ namespace JDCloudSDK.Cps.Client
         }
         /// <summary>
         ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        /// 支持分页查询，默认每页10条&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// Ips
         ///</summary>
-        public List<Array> Ips{ get; set; }
+        public List<string> Ips{ get; set; }
 
         ///<summary>
         /// 用户域名

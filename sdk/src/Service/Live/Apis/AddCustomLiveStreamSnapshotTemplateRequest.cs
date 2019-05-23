@@ -96,20 +96,17 @@ namespace  JDCloudSDK.Live.Apis
         public   int SaveMode{ get; set; }
         ///<summary>
         /// 存储桶
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SaveBucket{ get; set; }
         ///<summary>
         /// 存储地址
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SaveEndpoint{ get; set; }
         ///<summary>
         /// 截图模板自定义名称:
-        /// - 取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+        /// - 取值要求: 数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
         ///   首尾不能有特殊字符(&quot;-&quot;)
+        ///   最大长度50个字符
         /// - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
         /// 
         ///Required:true

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Billing.Model;
 
 namespace JDCloudSDK.Billing.Model
 {
@@ -80,6 +81,6 @@ namespace JDCloudSDK.Billing.Model
         ///<summary>
         /// ProductDetailList
         ///</summary>
-        public object ProductDetailList{ get; set; }
+        public ProductDetailList ProductDetailList{ get; set; }
     }
 }

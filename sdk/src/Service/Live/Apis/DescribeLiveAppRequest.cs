@@ -57,7 +57,7 @@ namespace  JDCloudSDK.Live.Apis
         ///   - 过滤条件为空,则表示查询用户下的所有应用名
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
     }
 }

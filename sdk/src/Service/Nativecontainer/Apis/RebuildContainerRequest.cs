@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Nativecontainer.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Nativecontainer.Apis
@@ -77,7 +78,7 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///<summary>
         /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
         ///</summary>
-        public List<string> Evns{ get; set; }
+        public List<EnvVar> Envs{ get; set; }
 
         ///<summary>
         /// Region ID

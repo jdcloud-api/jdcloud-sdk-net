@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云DDoS基础防护相关接口
- * 京东云DDoS基础防护相关接口
+ * Anti-DDoS Basic APIs
+ * DDoS 基础防护防护 IP、攻击记录相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -39,8 +39,8 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Baseanti.Client
 {
     /// <summary>
-    ///  京东云DDoS基础防护相关接口
-    ///  京东云DDoS基础防护相关接口
+    ///  Anti-DDoS Basic APIs
+    ///  DDoS 基础防护防护 IP、攻击记录相关接口
     ///  Baseanti Api 客户端
     ///</summary>
     public class BaseantiClient : JdcloudClient
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Baseanti.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,26 +138,65 @@ namespace JDCloudSDK.Baseanti.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  设置公网Ip的清洗阈值
+        ///  查询基础防护已防护公网 IP 安全信息, 支持 ipv4 和 ipv6
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetCleanThresholdResponse SetCleanThreshold(SetCleanThresholdRequest request) {
-            return  new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request);
+        public DescribeIpSafetyInfoResponse DescribeIpSafetyInfo(DescribeIpSafetyInfoRequest request) {
+            return  new DescribeIpSafetyInfoExecutor().Client(this).Execute<DescribeIpSafetyInfoResponse, DescribeIpSafetyInfoResult, DescribeIpSafetyInfoRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置公网Ip的清洗阈值
+        ///  查询基础防护已防护公网 IP 安全信息, 支持 ipv4 和 ipv6
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetCleanThresholdResponse> SetCleanThreshold(SetCleanThresholdRequest request) {
-            return await new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeIpSafetyInfoResponse> DescribeIpSafetyInfo(DescribeIpSafetyInfoRequest request) {
+            return await new DescribeIpSafetyInfoExecutor().Client(this).Execute<DescribeIpSafetyInfoResponse, DescribeIpSafetyInfoResult, DescribeIpSafetyInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询区域下的公网Ip资源列表
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 支持 ipv4 和 ipv6
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetIpCleanThresholdResponse SetIpCleanThreshold(SetIpCleanThresholdRequest request) {
+            return  new SetIpCleanThresholdExecutor().Client(this).Execute<SetIpCleanThresholdResponse, SetIpCleanThresholdResult, SetIpCleanThresholdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 支持 ipv4 和 ipv6
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetIpCleanThresholdResponse> SetIpCleanThreshold(SetIpCleanThresholdRequest request) {
+            return await new SetIpCleanThresholdExecutor().Client(this).Execute<SetIpCleanThresholdResponse, SetIpCleanThresholdResult, SetIpCleanThresholdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询多个公网 IP 的监控流量, 支持 ipv4 和 ipv6
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpMonitorFlowResponse DescribeIpMonitorFlow(DescribeIpMonitorFlowRequest request) {
+            return  new DescribeIpMonitorFlowExecutor().Client(this).Execute<DescribeIpMonitorFlowResponse, DescribeIpMonitorFlowResult, DescribeIpMonitorFlowRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询多个公网 IP 的监控流量, 支持 ipv4 和 ipv6
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpMonitorFlowResponse> DescribeIpMonitorFlow(DescribeIpMonitorFlowRequest request) {
+            return await new DescribeIpMonitorFlowExecutor().Client(this).Execute<DescribeIpMonitorFlowResponse, DescribeIpMonitorFlowResult, DescribeIpMonitorFlowRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +205,8 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询区域下的公网Ip资源列表
+        ///  查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,26 +216,86 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网Ip的监控流量
+        ///  攻击情况统计
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeIpResourceFlowResponse DescribeIpResourceFlow(DescribeIpResourceFlowRequest request) {
-            return  new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request);
+        public DescribeAttackStatisticsResponse DescribeAttackStatistics(DescribeAttackStatisticsRequest request) {
+            return  new DescribeAttackStatisticsExecutor().Client(this).Execute<DescribeAttackStatisticsResponse, DescribeAttackStatisticsResult, DescribeAttackStatisticsRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询公网Ip的监控流量
+        ///  攻击情况统计
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeIpResourceFlowResponse> DescribeIpResourceFlow(DescribeIpResourceFlowRequest request) {
-            return await new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeAttackStatisticsResponse> DescribeAttackStatistics(DescribeAttackStatisticsRequest request) {
+            return await new DescribeAttackStatisticsExecutor().Client(this).Execute<DescribeAttackStatisticsResponse, DescribeAttackStatisticsResult, DescribeAttackStatisticsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网Ip的防护明细
+        ///  查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpResourcesResponse DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
+            return  new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpResourcesResponse> DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
+            return await new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 可设置清洗阈值范围, 支持 ipv4 和 ipv6
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpCleanThresholdRangeResponse DescribeIpCleanThresholdRange(DescribeIpCleanThresholdRangeRequest request) {
+            return  new DescribeIpCleanThresholdRangeExecutor().Client(this).Execute<DescribeIpCleanThresholdRangeResponse, DescribeIpCleanThresholdRangeResult, DescribeIpCleanThresholdRangeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询公网 IP 可设置清洗阈值范围, 支持 ipv4 和 ipv6
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpCleanThresholdRangeResponse> DescribeIpCleanThresholdRange(DescribeIpCleanThresholdRangeRequest request) {
+            return await new DescribeIpCleanThresholdRangeExecutor().Client(this).Execute<DescribeIpCleanThresholdRangeResponse, DescribeIpCleanThresholdRangeResult, DescribeIpCleanThresholdRangeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询各类型攻击次数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAttackTypeCountResponse DescribeAttackTypeCount(DescribeAttackTypeCountRequest request) {
+            return  new DescribeAttackTypeCountExecutor().Client(this).Execute<DescribeAttackTypeCountResponse, DescribeAttackTypeCountResult, DescribeAttackTypeCountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询各类型攻击次数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAttackTypeCountResponse> DescribeAttackTypeCount(DescribeAttackTypeCountRequest request) {
+            return await new DescribeAttackTypeCountExecutor().Client(this).Execute<DescribeAttackTypeCountResponse, DescribeAttackTypeCountResult, DescribeAttackTypeCountRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&quot;&gt;describeAttackLogs&lt;/a&gt; 接口)
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,7 +304,8 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询公网Ip的防护明细
+        ///  查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&quot;&gt;describeAttackLogs&lt;/a&gt; 接口)
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -214,7 +315,71 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网Ip基本信息
+        ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCpsIpResourcesResponse DescribeCpsIpResources(DescribeCpsIpResourcesRequest request) {
+            return  new DescribeCpsIpResourcesExecutor().Client(this).Execute<DescribeCpsIpResourcesResponse, DescribeCpsIpResourcesResult, DescribeCpsIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCpsIpResourcesResponse> DescribeCpsIpResources(DescribeCpsIpResourcesRequest request) {
+            return await new DescribeCpsIpResourcesExecutor().Client(this).Execute<DescribeCpsIpResourcesResponse, DescribeCpsIpResourcesResult, DescribeCpsIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCleanThresholdResponse SetCleanThreshold(SetCleanThresholdRequest request) {
+            return  new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCleanThresholdResponse> SetCleanThreshold(SetCleanThresholdRequest request) {
+            return await new SetCleanThresholdExecutor().Client(this).Execute<SetCleanThresholdResponse, SetCleanThresholdResult, SetCleanThresholdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&quot;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpResourceFlowResponse DescribeIpResourceFlow(DescribeIpResourceFlowRequest request) {
+            return  new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&quot;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpResourceFlowResponse> DescribeIpResourceFlow(DescribeIpResourceFlowRequest request) {
+            return await new DescribeIpResourceFlowExecutor().Client(this).Execute<DescribeIpResourceFlowResponse, DescribeIpResourceFlowResult, DescribeIpResourceFlowRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -223,12 +388,32 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询公网Ip基本信息
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourceInfoResponse> DescribeIpResourceInfo(DescribeIpResourceInfoRequest request) {
             return await new DescribeIpResourceInfoExecutor().Client(this).Execute<DescribeIpResourceInfoResponse, DescribeIpResourceInfoResult, DescribeIpResourceInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询攻击记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAttackLogsResponse DescribeAttackLogs(DescribeAttackLogsRequest request) {
+            return  new DescribeAttackLogsExecutor().Client(this).Execute<DescribeAttackLogsResponse, DescribeAttackLogsResult, DescribeAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询攻击记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAttackLogsResponse> DescribeAttackLogs(DescribeAttackLogsRequest request) {
+            return await new DescribeAttackLogsExecutor().Client(this).Execute<DescribeAttackLogsResponse, DescribeAttackLogsResult, DescribeAttackLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 

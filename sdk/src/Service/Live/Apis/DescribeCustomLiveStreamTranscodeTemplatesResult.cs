@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// TranscodeTemplates
+        /// 码率信息
         ///</summary>
         public List<TranscodeInfo> TranscodeTemplates{ get; set; }
 

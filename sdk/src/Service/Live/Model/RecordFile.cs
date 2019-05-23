@@ -70,12 +70,12 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        /// 视频时长
+        /// 视频时长，单位：毫秒
         /// 
         ///</summary>
         public int? Duration{ get; set; }
         ///<summary>
-        /// 文件大小
+        /// 文件大小，单位：B
         /// 
         ///</summary>
         public int? Size{ get; set; }
@@ -93,7 +93,7 @@ namespace JDCloudSDK.Live.Model
         /// 文件地址
         /// 
         ///</summary>
-        public string ImgUrl{ get; set; }
+        public string FileUrl{ get; set; }
         ///<summary>
         /// 创建时间
         /// 

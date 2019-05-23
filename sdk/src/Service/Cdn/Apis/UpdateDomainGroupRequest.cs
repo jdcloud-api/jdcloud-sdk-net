@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 域名组内域名，包含主域名
         ///</summary>
-        public List<Array> Domains{ get; set; }
+        public List<string> Domains{ get; set; }
 
         ///<summary>
         /// 主域名,开启共享缓存时必传

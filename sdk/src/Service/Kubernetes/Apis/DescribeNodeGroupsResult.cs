@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Kubernetes.Model;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
@@ -40,7 +41,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///<summary>
         /// NodeGroups
         ///</summary>
-        public List<JDCloudSDK.Kubernetes.Model.NodeGroup> NodeGroups{ get; set; }
+        public List<NodeGroup> NodeGroups{ get; set; }
 
         ///<summary>
         /// TotalCount

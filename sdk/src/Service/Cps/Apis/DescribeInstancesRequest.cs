@@ -36,7 +36,7 @@ namespace  JDCloudSDK.Cps.Apis
 
     /// <summary>
     ///  批量查询云物理服务器详细信息&lt;br/&gt;
-        ///         /// 支持分页查询，默认每页10条&lt;br/&gt;
+        ///         /// 支持分页查询，默认每页20条&lt;br/&gt;
         ///         /// 
     /// </summary>
     public class DescribeInstancesRequest : JdcloudRequest
@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 分页大小；默认为20；取值范围[20, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
@@ -58,7 +58,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 网络类型，精确匹配，目前只支持basic
+        /// 网络类型，精确匹配，支持basic，vpc
         ///</summary>
         public   string NetworkType{ get; set; }
         ///<summary>
@@ -66,14 +66,20 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string DeviceType{ get; set; }
         ///<summary>
-        /// 云物理服务器状态，参考云物理服务器状态
+        /// 子网ID
         ///</summary>
-        public   string Status{ get; set; }
+        public   string SubnetId{ get; set; }
         ///<summary>
-        /// instanceId - 云物理服务器ID，精确匹配，支持多个
+        /// 是否启用外网, yes/no
+        ///</summary>
+        public   string EnableInternet{ get; set; }
+        ///<summary>
+        /// instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
+        /// privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
+        /// status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Iothub.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,25 @@ namespace JDCloudSDK.Iothub.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  计算模块部署
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeployModuleResponse DeployModule(DeployModuleRequest request) {
+            return  new DeployModuleExecutor().Client(this).Execute<DeployModuleResponse, DeployModuleResult, DeployModuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  计算模块部署
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeployModuleResponse> DeployModule(DeployModuleRequest request) {
+            return await new DeployModuleExecutor().Client(this).Execute<DeployModuleResponse, DeployModuleResult, DeployModuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  物模型注册接口
@@ -199,8 +218,7 @@ namespace JDCloudSDK.Iothub.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  客户用该接口可以登记模块
-        /// 
+        ///  计算模块登记
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -209,8 +227,7 @@ namespace JDCloudSDK.Iothub.Client
         }
 #else
         /// <summary>
-        ///  客户用该接口可以登记模块
-        /// 
+        ///  计算模块登记
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -283,6 +300,46 @@ namespace JDCloudSDK.Iothub.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  验证DeviceId是否可用
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckDeviceIdResponse CheckDeviceId(CheckDeviceIdRequest request) {
+            return  new CheckDeviceIdExecutor().Client(this).Execute<CheckDeviceIdResponse, CheckDeviceIdResult, CheckDeviceIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  验证DeviceId是否可用
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckDeviceIdResponse> CheckDeviceId(CheckDeviceIdRequest request) {
+            return await new CheckDeviceIdExecutor().Client(this).Execute<CheckDeviceIdResponse, CheckDeviceIdResult, CheckDeviceIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加边缘计算设备
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EdgeEnrollResponse EdgeEnroll(EdgeEnrollRequest request) {
+            return  new EdgeEnrollExecutor().Client(this).Execute<EdgeEnrollResponse, EdgeEnrollResult, EdgeEnrollRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加边缘计算设备
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EdgeEnrollResponse> EdgeEnroll(EdgeEnrollRequest request) {
+            return await new EdgeEnrollExecutor().Client(this).Execute<EdgeEnrollResponse, EdgeEnrollResult, EdgeEnrollRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  物模型通过文件上传注册接口
         /// 
         /// </summary>
@@ -340,6 +397,46 @@ namespace JDCloudSDK.Iothub.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryDeviceStatesResponse> QueryDeviceStates(QueryDeviceStatesRequest request) {
             return await new QueryDeviceStatesExecutor().Client(this).Execute<QueryDeviceStatesResponse, QueryDeviceStatesResult, QueryDeviceStatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  客户用该接口可以登记模块
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModuleEnrollmentResponse ModuleEnrollment(ModuleEnrollmentRequest request) {
+            return  new ModuleEnrollmentExecutor().Client(this).Execute<ModuleEnrollmentResponse, ModuleEnrollmentResult, ModuleEnrollmentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  客户用该接口可以登记模块
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModuleEnrollmentResponse> ModuleEnrollment(ModuleEnrollmentRequest request) {
+            return await new ModuleEnrollmentExecutor().Client(this).Execute<ModuleEnrollmentResponse, ModuleEnrollmentResult, ModuleEnrollmentRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  边缘计算设备删除接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteEdgeResponse DeleteEdge(DeleteEdgeRequest request) {
+            return  new DeleteEdgeExecutor().Client(this).Execute<DeleteEdgeResponse, DeleteEdgeResult, DeleteEdgeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  边缘计算设备删除接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteEdgeResponse> DeleteEdge(DeleteEdgeRequest request) {
+            return await new DeleteEdgeExecutor().Client(this).Execute<DeleteEdgeResponse, DeleteEdgeResult, DeleteEdgeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -403,6 +500,25 @@ namespace JDCloudSDK.Iothub.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeviceStateResponse> DeviceState(DeviceStateRequest request) {
             return await new DeviceStateExecutor().Client(this).Execute<DeviceStateResponse, DeviceStateResult, DeviceStateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  计算模块删除接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteModuleResponse DeleteModule(DeleteModuleRequest request) {
+            return  new DeleteModuleExecutor().Client(this).Execute<DeleteModuleResponse, DeleteModuleResult, DeleteModuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  计算模块删除接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteModuleResponse> DeleteModule(DeleteModuleRequest request) {
+            return await new DeleteModuleExecutor().Client(this).Execute<DeleteModuleResponse, DeleteModuleResult, DeleteModuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 

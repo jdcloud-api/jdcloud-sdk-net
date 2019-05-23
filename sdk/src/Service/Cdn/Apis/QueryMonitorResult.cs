@@ -52,6 +52,6 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 查询结果,类型为HashMap&lt;String, Object&gt;
         ///</summary>
-        public   Dictionary<string,string> HttpRequestHeader{ get; set; }
+        public   Dictionary<String,string> HttpRequestHeader{ get; set; }
     }
 }

@@ -38,16 +38,24 @@ namespace JDCloudSDK.Iothub.Model
     {
 
         ///<summary>
-        /// Id
+        /// 规则Id
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// Name
+        /// 规则名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// Desc
+        /// 规则说明
         ///</summary>
         public string Desc{ get; set; }
+        ///<summary>
+        /// 状态，停止:disable,启动:enable
+        ///</summary>
+        public string Status{ get; set; }
+        ///<summary>
+        /// 创建时间，精确到毫秒
+        ///</summary>
+        public string CreatedTime{ get; set; }
     }
 }

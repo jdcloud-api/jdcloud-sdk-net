@@ -56,7 +56,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Hostname{ get; set; }
         ///<summary>
-        /// 镜像类型, 取值范围：standard、standard_app
+        /// 镜像类型, 取值范围：standard
         ///Required:true
         ///</summary>
         [Required]
@@ -92,7 +92,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string EnableIpv6{ get; set; }
         ///<summary>
-        /// 网络类型，目前只支持basic
+        /// 网络类型，取值范围：basic、vpc
         ///Required:true
         ///</summary>
         [Required]
@@ -101,6 +101,10 @@ namespace JDCloudSDK.Cps.Model
         /// 网络CIDR
         ///</summary>
         public string Cidr{ get; set; }
+        ///<summary>
+        /// 内网IP
+        ///</summary>
+        public string PrivateIp{ get; set; }
         ///<summary>
         /// 外网链路类型, 目前只支持bgp
         ///</summary>
@@ -137,9 +141,5 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         [Required]
         public ChargeSpec Charge{ get; set; }
-        ///<summary>
-        /// Softwares
-        ///</summary>
-        public List<Software> Softwares{ get; set; }
     }
 }

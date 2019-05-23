@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// RecordConfigs
+        /// 模板信息
         ///</summary>
         public List<LiveRecordConfig> RecordConfigs{ get; set; }
 

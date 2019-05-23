@@ -34,21 +34,21 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  查询子网
+    ///  查询子网详情
     /// </summary>
     public class DescribeSubnetRequest : JdcloudRequest
     {
-        ///<summary>
-        /// 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string Az{ get; set; }
         ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]
         public override  string RegionId{ get; set; }
+        ///<summary>
+        /// 子网ID
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string SubnetId{ get; set; }
     }
 }

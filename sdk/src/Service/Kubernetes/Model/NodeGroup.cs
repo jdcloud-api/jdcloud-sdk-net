@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Kubernetes.Model;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
@@ -85,6 +86,10 @@ namespace JDCloudSDK.Kubernetes.Model
         /// 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
         ///</summary>
         public string State{ get; set; }
+        ///<summary>
+        /// Tags
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
         ///<summary>
         /// 更新时间
         ///</summary>

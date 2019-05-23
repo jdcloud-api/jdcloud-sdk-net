@@ -79,7 +79,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public int? Bandwidth{ get; set; }
         ///<summary>
-        /// 镜像类型, 如 standard/standard_app
+        /// 镜像类型, 如 standard
         ///</summary>
         public string ImageType{ get; set; }
         ///<summary>
@@ -115,21 +115,37 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string DataRaidType{ get; set; }
         ///<summary>
-        /// 网络类型, 如 basic
+        /// 网络类型, 如 basic, vpc
         ///</summary>
         public string NetworkType{ get; set; }
         ///<summary>
-        /// 外网链路类型, 如 bgp
+        /// 私有网络ID
         ///</summary>
-        public string LineType{ get; set; }
+        public string VpcId{ get; set; }
+        ///<summary>
+        /// 私有网络名称
+        ///</summary>
+        public string VpcName{ get; set; }
         ///<summary>
         /// 子网编号
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
+        /// 子网名称
+        ///</summary>
+        public string SubnetName{ get; set; }
+        ///<summary>
         /// 内网IP
         ///</summary>
         public string PrivateIp{ get; set; }
+        ///<summary>
+        /// 外网链路类型, 如 bgp
+        ///</summary>
+        public string LineType{ get; set; }
+        ///<summary>
+        /// 弹性公网IPID
+        ///</summary>
+        public string ElasticIpId{ get; set; }
         ///<summary>
         /// 公网IP
         ///</summary>

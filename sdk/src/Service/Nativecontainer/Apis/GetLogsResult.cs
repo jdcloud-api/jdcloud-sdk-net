@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Nativecontainer.Model;
 
 namespace  JDCloudSDK.Nativecontainer.Apis
 {
@@ -41,6 +42,6 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///<summary>
         /// Logs
         ///</summary>
-        public   object Logs{ get; set; }
+        public   Logs Logs{ get; set; }
     }
 }

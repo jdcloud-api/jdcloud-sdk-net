@@ -40,11 +40,13 @@ namespace  JDCloudSDK.Iothub.Apis
     public class OmEnrollbyFileRequest : JdcloudRequest
     {
         ///<summary>
-        /// InstanceId
+        /// 待上传物模型的IoT Hub实例编号
+        ///Required:true
         ///</summary>
+        [Required]
         public   string InstanceId{ get; set; }
         ///<summary>
-        /// FileName
+        /// 物模型文件名称
         ///Required:true
         ///</summary>
         [Required]

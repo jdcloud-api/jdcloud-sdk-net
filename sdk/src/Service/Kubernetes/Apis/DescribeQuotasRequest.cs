@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         /// resourceTypes - 资源类型，暂时只支持[kubernetes]
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

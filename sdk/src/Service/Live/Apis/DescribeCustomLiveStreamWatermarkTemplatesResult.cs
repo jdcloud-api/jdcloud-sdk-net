@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// WatermarkTemplates
+        /// 水印模板
         ///</summary>
         public List<WatermarkTemplate> WatermarkTemplates{ get; set; }
 

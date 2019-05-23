@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ModuleManager
- * 用于完成设备全生命周期管理
+ * EdgeManager
+ * edge管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,14 +33,9 @@ namespace  JDCloudSDK.Iothub.Apis
 {
 
     /// <summary>
-    ///  客户用该接口可以登记模块
-        ///         /// 
+    ///  计算模块登记
     /// </summary>
     public class ModuleEnrollResult : JdcloudResult
     {
-        ///<summary>
-        /// Data
-        ///</summary>
-        public   string Data{ get; set; }
     }
 }

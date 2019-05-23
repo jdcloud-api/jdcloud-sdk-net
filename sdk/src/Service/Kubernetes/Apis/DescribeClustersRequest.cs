@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         /// id - id，支持多个   
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域 ID

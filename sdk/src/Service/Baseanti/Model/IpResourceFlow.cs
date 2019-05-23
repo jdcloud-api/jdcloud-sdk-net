@@ -38,12 +38,20 @@ namespace JDCloudSDK.Baseanti.Model
     {
 
         ///<summary>
-        /// Bps
+        /// UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///</summary>
-        public IpResourceFlowDetail Bps{ get; set; }
+        public List<string> Time{ get; set; }
         ///<summary>
-        /// Pps
+        /// 防护后流量
         ///</summary>
-        public IpResourceFlowDetail Pps{ get; set; }
+        public List<double?> PostProtect{ get; set; }
+        ///<summary>
+        /// 防护前流量
+        ///</summary>
+        public List<double?> PreProtect{ get; set; }
+        ///<summary>
+        /// 流量单位
+        ///</summary>
+        public string Unit{ get; set; }
     }
 }

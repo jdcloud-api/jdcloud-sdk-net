@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// UA列表,如果userAgentList为空,则为全部删除
         ///</summary>
-        public List<Array> UserAgentList{ get; set; }
+        public List<string> UserAgentList{ get; set; }
 
         ///<summary>
         /// 用户域名

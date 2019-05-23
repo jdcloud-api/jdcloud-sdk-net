@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Kubernetes.Model;
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
@@ -48,13 +49,18 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// Tag筛选条件
+        ///</summary>
+        public List<JDCloudSDK.Kubernetes.Model.TagFilter> Tags{ get; set; }
+
+        ///<summary>
         /// name - 节点组名称，模糊匹配，支持单个      
         /// id - 节点组 id，支持多个     
         /// clusterId - 根据clusterId查询        
         /// clusterName - 根据名称查询 cluster             
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域 ID

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Billing.Model;
 
 namespace JDCloudSDK.Billing.Model
 {

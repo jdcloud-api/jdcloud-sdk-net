@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Function.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Function.Apis
 {
@@ -41,73 +41,51 @@ namespace  JDCloudSDK.Function.Apis
     {
         ///<summary>
         /// 函数描述信息
-        ///Required:true
         ///</summary>
-        [Required]
         public   string Description{ get; set; }
         ///<summary>
         /// 函数入口，格式为入口文件.入口函数名
-        ///Required:true
         ///</summary>
-        [Required]
         public   string Entrance{ get; set; }
         ///<summary>
         /// 函数运行最大内存
-        ///Required:true
         ///</summary>
-        [Required]
-        public   int Memory{ get; set; }
+        public   int? Memory{ get; set; }
         ///<summary>
         /// 函数运行环境
-        ///Required:true
         ///</summary>
-        [Required]
         public   string RunTime{ get; set; }
         ///<summary>
         /// 函数运行超时时间
-        ///Required:true
         ///</summary>
-        [Required]
-        public   int OverTime{ get; set; }
+        public   int? OverTime{ get; set; }
         ///<summary>
         /// 函数版本
         ///</summary>
         public override  string Version{ get; set; }
         ///<summary>
         /// 函数代码包
-        ///Required:true
         ///</summary>
-        [Required]
         public   Code Code{ get; set; }
         ///<summary>
         /// 函数运行时环境变量
-        ///Required:true
         ///</summary>
-        [Required]
         public   Env Environment{ get; set; }
         ///<summary>
         /// 函数指定的日志集Id
-        ///Required:true
         ///</summary>
-        [Required]
         public   string LogSetId{ get; set; }
         ///<summary>
         /// 函数指定的日志主题Id
-        ///Required:true
         ///</summary>
-        [Required]
         public   string LogTopicId{ get; set; }
         ///<summary>
         /// 函数配置的VPCId
-        ///Required:true
         ///</summary>
-        [Required]
         public   string VpcId{ get; set; }
         ///<summary>
         /// 函数配置的子网Id
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SubnetId{ get; set; }
         ///<summary>
         /// Region ID

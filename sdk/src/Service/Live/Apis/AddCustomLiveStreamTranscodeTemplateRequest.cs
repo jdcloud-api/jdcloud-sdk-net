@@ -46,6 +46,12 @@ namespace  JDCloudSDK.Live.Apis
     public class AddCustomLiveStreamTranscodeTemplateRequest : JdcloudRequest
     {
         ///<summary>
+        /// 转码模板名称
+        /// - 长度范围：[1,50]
+        /// 
+        ///</summary>
+        public   string TemplateName{ get; set; }
+        ///<summary>
         /// 转码输出的码率值
         /// - 取值范围: [200,3000]
         /// - 单位: kpbs
@@ -56,7 +62,7 @@ namespace  JDCloudSDK.Live.Apis
         public   int VideoCodeRate{ get; set; }
         ///<summary>
         /// 转码输出的帧率值
-        /// - 取值：15、25、30、60
+        /// - 取值：[1,30]
         /// 
         ///Required:true
         ///</summary>

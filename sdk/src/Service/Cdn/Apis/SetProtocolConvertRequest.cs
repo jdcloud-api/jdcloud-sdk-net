@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cdn.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Cdn.Apis
@@ -49,7 +50,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// ProtocolConverts
         ///</summary>
-        public List<Array> ProtocolConverts{ get; set; }
+        public List<ProtocolConvert> ProtocolConverts{ get; set; }
 
         ///<summary>
         /// 用户域名

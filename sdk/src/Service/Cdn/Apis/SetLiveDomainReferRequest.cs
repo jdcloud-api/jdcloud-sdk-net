@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 逗号隔开的域名列表，如果referList传空则为删除
         ///</summary>
-        public List<Array> ReferList{ get; set; }
+        public List<string> ReferList{ get; set; }
 
         ///<summary>
         /// 是否允许空refer访问，默认为“on”

@@ -63,7 +63,7 @@ namespace  JDCloudSDK.Live.Apis
         /// - UTC时间
         ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
         ///   示例:2018-10-21T10:00:00Z
-        /// - 最大支持最近90天内的流历史查询
+        /// - 最大支持最近30天内的流历史查询
         /// 
         ///Required:true
         ///</summary>
@@ -74,7 +74,7 @@ namespace  JDCloudSDK.Live.Apis
         /// - UTC时间
         ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
         ///   示例:2018-10-21T10:00:00Z
-        /// - 最大支持最近90天内的流历史查询
+        /// - 最大支持最近30天内的流历史查询
         /// - 结束时间为空默认为当前时间
         /// 
         ///</summary>

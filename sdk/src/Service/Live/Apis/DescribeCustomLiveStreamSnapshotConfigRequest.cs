@@ -64,7 +64,7 @@ namespace  JDCloudSDK.Live.Apis
         /// - value:  参数
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
     }
 }

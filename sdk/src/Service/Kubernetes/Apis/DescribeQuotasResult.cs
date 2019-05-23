@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Kubernetes.Model;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
@@ -38,9 +39,9 @@ namespace  JDCloudSDK.Kubernetes.Apis
     public class DescribeQuotasResult : JdcloudResult
     {
         ///<summary>
-        /// Quotas
+        /// 配额列表
         ///</summary>
-        public List<JDCloudSDK.Kubernetes.Model.Quota> Quotas{ get; set; }
+        public List<Quota> Quotas{ get; set; }
 
     }
 }

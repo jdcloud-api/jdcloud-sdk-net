@@ -89,9 +89,9 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,6 +157,44 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNodeVersionResponse DescribeNodeVersion(DescribeNodeVersionRequest request) {
+            return  new DescribeNodeVersionExecutor().Client(this).Execute<DescribeNodeVersionResponse, DescribeNodeVersionResult, DescribeNodeVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNodeVersionResponse> DescribeNodeVersion(DescribeNodeVersionRequest request) {
+            return await new DescribeNodeVersionExecutor().Client(this).Execute<DescribeNodeVersionResponse, DescribeNodeVersionResult, DescribeNodeVersionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  回滚未升级完的节点组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RollbackNodeGroupUpgradeResponse RollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) {
+            return  new RollbackNodeGroupUpgradeExecutor().Client(this).Execute<RollbackNodeGroupUpgradeResponse, RollbackNodeGroupUpgradeResult, RollbackNodeGroupUpgradeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  回滚未升级完的节点组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RollbackNodeGroupUpgradeResponse> RollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) {
+            return await new RollbackNodeGroupUpgradeExecutor().Client(this).Execute<RollbackNodeGroupUpgradeResponse, RollbackNodeGroupUpgradeResult, RollbackNodeGroupUpgradeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询节点组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,6 +210,44 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNodeGroupsResponse> DescribeNodeGroups(DescribeNodeGroupsRequest request) {
             return await new DescribeNodeGroupsExecutor().Client(this).Execute<DescribeNodeGroupsResponse, DescribeNodeGroupsResult, DescribeNodeGroupsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  终止升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AbortUpgradeResponse AbortUpgrade(AbortUpgradeRequest request) {
+            return  new AbortUpgradeExecutor().Client(this).Execute<AbortUpgradeResponse, AbortUpgradeResult, AbortUpgradeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  终止升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AbortUpgradeResponse> AbortUpgrade(AbortUpgradeRequest request) {
+            return await new AbortUpgradeExecutor().Client(this).Execute<AbortUpgradeResponse, AbortUpgradeResult, AbortUpgradeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可升级的节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUpgradableNodeVersionsResponse DescribeUpgradableNodeVersions(DescribeUpgradableNodeVersionsRequest request) {
+            return  new DescribeUpgradableNodeVersionsExecutor().Client(this).Execute<DescribeUpgradableNodeVersionsResponse, DescribeUpgradableNodeVersionsResult, DescribeUpgradableNodeVersionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可升级的节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUpgradableNodeVersionsResponse> DescribeUpgradableNodeVersions(DescribeUpgradableNodeVersionsRequest request) {
+            return await new DescribeUpgradableNodeVersionsExecutor().Client(this).Execute<DescribeUpgradableNodeVersionsResponse, DescribeUpgradableNodeVersionsResult, DescribeUpgradableNodeVersionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -195,6 +271,25 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateNodeGroupResponse> CreateNodeGroup(CreateNodeGroupRequest request) {
             return await new CreateNodeGroupExecutor().Client(this).Execute<CreateNodeGroupResponse, CreateNodeGroupResult, CreateNodeGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可升级的控制节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUpgradableMasterVersionsResponse DescribeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) {
+            return  new DescribeUpgradableMasterVersionsExecutor().Client(this).Execute<DescribeUpgradableMasterVersionsResponse, DescribeUpgradableMasterVersionsResult, DescribeUpgradableMasterVersionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可升级的控制节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUpgradableMasterVersionsResponse> DescribeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) {
+            return await new DescribeUpgradableMasterVersionsExecutor().Client(this).Execute<DescribeUpgradableMasterVersionsResponse, DescribeUpgradableMasterVersionsResult, DescribeUpgradableMasterVersionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -256,6 +351,25 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置自动升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetAutoUpgradeResponse SetAutoUpgrade(SetAutoUpgradeRequest request) {
+            return  new SetAutoUpgradeExecutor().Client(this).Execute<SetAutoUpgradeResponse, SetAutoUpgradeResult, SetAutoUpgradeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置自动升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetAutoUpgradeResponse> SetAutoUpgrade(SetAutoUpgradeRequest request) {
+            return await new SetAutoUpgradeExecutor().Client(this).Execute<SetAutoUpgradeResponse, SetAutoUpgradeResult, SetAutoUpgradeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  - 创建集群
         /// - 证书
         ///   - 关于kubernetes的证书，默认生成，不需要用户传入。
@@ -303,25 +417,6 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateClusterResponse> CreateCluster(CreateClusterRequest request) {
             return await new CreateClusterExecutor().Client(this).Execute<CreateClusterResponse, CreateClusterResult, CreateClusterRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询服务配置信息，提供详细的 master 和 node 镜像信息。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeImagesResponse DescribeImages(DescribeImagesRequest request) {
-            return  new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询服务配置信息，提供详细的 master 和 node 镜像信息。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
-            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -398,6 +493,25 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyClusterResponse> ModifyCluster(ModifyClusterRequest request) {
             return await new ModifyClusterExecutor().Client(this).Execute<ModifyClusterResponse, ModifyClusterResult, ModifyClusterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  触发升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpgradeClusterResponse UpgradeCluster(UpgradeClusterRequest request) {
+            return  new UpgradeClusterExecutor().Client(this).Execute<UpgradeClusterResponse, UpgradeClusterResult, UpgradeClusterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  触发升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpgradeClusterResponse> UpgradeCluster(UpgradeClusterRequest request) {
+            return await new UpgradeClusterExecutor().Client(this).Execute<UpgradeClusterResponse, UpgradeClusterResult, UpgradeClusterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -493,6 +607,25 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNodeGroupResponse> DescribeNodeGroup(DescribeNodeGroupRequest request) {
             return await new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询集群操作进度
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProgressResponse DescribeProgress(DescribeProgressRequest request) {
+            return  new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询集群操作进度
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProgressResponse> DescribeProgress(DescribeProgressRequest request) {
+            return await new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request).ConfigureAwait(false);
         }
 #endif
 

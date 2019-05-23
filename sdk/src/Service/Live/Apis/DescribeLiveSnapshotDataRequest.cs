@@ -40,9 +40,7 @@ namespace  JDCloudSDK.Live.Apis
     {
         ///<summary>
         /// 推流域名
-        ///Required:true
         ///</summary>
-        [Required]
         public   string PublishDomain{ get; set; }
         ///<summary>
         /// 应用名称

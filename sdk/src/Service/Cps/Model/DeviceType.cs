@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Cps.Model
 {
@@ -38,25 +39,18 @@ namespace JDCloudSDK.Cps.Model
     {
 
         ///<summary>
-        /// 实例类型英文名称, 如 cps.c.normal
+        /// 实例类型, 如 cps.c.normal
         ///</summary>
-        public string NameEN{ get; set; }
+        [JsonProperty("deviceType")]
+        public string DeviceTypeValue{ get; set; }
         ///<summary>
-        /// 实例类型中文名称, 如 计算型
+        /// 实例类型名称, 如 标准计算型
         ///</summary>
-        public string NameZH{ get; set; }
+        public string Name{ get; set; }
         ///<summary>
         /// 实例所属规格系列，如 计算、存储、GPU
         ///</summary>
         public string Family{ get; set; }
-        ///<summary>
-        /// 镜像类型英文描述, 如 standard
-        ///</summary>
-        public string UseTypeEN{ get; set; }
-        ///<summary>
-        /// 镜像类型中文描述, 如 标准型
-        ///</summary>
-        public string UseTypeZH{ get; set; }
         ///<summary>
         /// 区域代码, 如 cn-east-1
         ///</summary>
@@ -86,22 +80,6 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string IfDetail{ get; set; }
         ///<summary>
-        /// 系统磁盘概要信息
-        ///</summary>
-        public string SystemDiskConcise{ get; set; }
-        ///<summary>
-        /// 系统磁盘详细信息
-        ///</summary>
-        public string SystemDiskDetail{ get; set; }
-        ///<summary>
-        /// 数据磁盘概要信息
-        ///</summary>
-        public string DataDiskConcise{ get; set; }
-        ///<summary>
-        /// 数据磁盘详细信息
-        ///</summary>
-        public string DataDiskDetail{ get; set; }
-        ///<summary>
         /// GPU概要信息
         ///</summary>
         public string GpuConcise{ get; set; }
@@ -109,6 +87,30 @@ namespace JDCloudSDK.Cps.Model
         /// GPU详细信息
         ///</summary>
         public string GpuDetail{ get; set; }
+        ///<summary>
+        /// 系统盘数量
+        ///</summary>
+        public int? SystemDiskAmount{ get; set; }
+        ///<summary>
+        /// 系统盘单盘大小（GB）
+        ///</summary>
+        public int? SystemDiskSize{ get; set; }
+        ///<summary>
+        /// 系统盘规格
+        ///</summary>
+        public string SystemDiskModel{ get; set; }
+        ///<summary>
+        /// 数据盘数量
+        ///</summary>
+        public int? DataDiskAmount{ get; set; }
+        ///<summary>
+        /// 数据盘单盘大小（GB）
+        ///</summary>
+        public int? DataDiskSize{ get; set; }
+        ///<summary>
+        /// 数据盘规格
+        ///</summary>
+        public string DataDiskModel{ get; set; }
         ///<summary>
         /// 售罄状态
         ///</summary>

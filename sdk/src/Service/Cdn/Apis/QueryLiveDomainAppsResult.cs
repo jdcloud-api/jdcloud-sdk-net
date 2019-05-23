@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryLiveDomainAppsResult : JdcloudResult
     {
         ///<summary>
-        /// Apps
+        /// app列表
         ///</summary>
         public List<string> Apps{ get; set; }
 

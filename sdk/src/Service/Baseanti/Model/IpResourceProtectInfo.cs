@@ -46,11 +46,11 @@ namespace JDCloudSDK.Baseanti.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        /// 状态，0-&gt;完成，1-&gt;清洗，2-&gt;黑洞
+        /// 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
         ///</summary>
         public int? Status{ get; set; }
         ///<summary>
-        /// 触发原因，0-&gt;未知，1-&gt;四层，2-&gt;七层，3-&gt;四和7层
+        /// 触发原因，0-&gt;未知 1-&gt;四层 2-&gt;七层 3-&gt;四和7层
         ///</summary>
         public int? Cause{ get; set; }
     }

@@ -76,6 +76,11 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string Template{ get; set; }
         ///<summary>
+        /// 转码模板名称
+        /// 
+        ///</summary>
+        public string TemplateName{ get; set; }
+        ///<summary>
         /// 转码输出音频编码格式:
         ///   - 取值: aac、mp3
         ///   - 不区分大小写

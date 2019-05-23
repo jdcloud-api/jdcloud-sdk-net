@@ -40,11 +40,25 @@ namespace  JDCloudSDK.Function.Apis
     public class ListFunctionRequest : JdcloudRequest
     {
         ///<summary>
+        /// 是否返回所有函数
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   bool ListAll{ get; set; }
+        ///<summary>
+        /// 页码
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 分页大小
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
         /// functionId -函数ID，精确匹配，支持多个
         /// functionName  - 函数名称，模糊匹配，支持单个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID

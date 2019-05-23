@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ModuleManager
- * 用于完成设备全生命周期管理
+ * EdgeManager
+ * edge管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,14 +33,12 @@ namespace JDCloudSDK.Iothub.Client
 {
 
     /// <summary>
-    ///  客户用该接口可以登记模块
-        /// 
+    ///  计算模块登记
     /// </summary>
     public class ModuleEnrollExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  客户用该接口可以登记模块
-        /// 接口的Http 请求方法
+        ///  计算模块登记接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -49,13 +47,12 @@ namespace JDCloudSDK.Iothub.Client
             }
         }
         /// <summary>
-        ///  客户用该接口可以登记模块
-        /// 接口的Http资源请求路径
+        ///  计算模块登记接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/module/{moduleName}/enroll";
+            return "/edge/{edgeId}/module:enroll";
             }
         }
     }

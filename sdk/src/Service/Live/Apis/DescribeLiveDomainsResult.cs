@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// DomainDetails
+        /// 域名信息集合
         ///</summary>
         public List<DomainDetails> DomainDetails{ get; set; }
 

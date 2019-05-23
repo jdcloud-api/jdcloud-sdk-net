@@ -89,9 +89,9 @@ namespace JDCloudSDK.Nativecontainer.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -395,6 +395,48 @@ namespace JDCloudSDK.Nativecontainer.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建exec
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExecCreateResponse ExecCreate(ExecCreateRequest request) {
+            return  new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建exec
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExecCreateResponse> ExecCreate(ExecCreateRequest request) {
+            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取exec退出码
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExecGetExitCodeResponse ExecGetExitCode(ExecGetExitCodeRequest request) {
+            return  new ExecGetExitCodeExecutor().Client(this).Execute<ExecGetExitCodeResponse, ExecGetExitCodeResult, ExecGetExitCodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取exec退出码
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExecGetExitCodeResponse> ExecGetExitCode(ExecGetExitCodeRequest request) {
+            return await new ExecGetExitCodeExecutor().Client(this).Execute<ExecGetExitCodeResponse, ExecGetExitCodeResult, ExecGetExitCodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建一台或多台指定配置容器。
         /// - 创建容器需要通过实名认证
         /// - 镜像
@@ -583,6 +625,27 @@ namespace JDCloudSDK.Nativecontainer.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyContainerAttributeResponse> ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
             return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  调整TTY大小
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResizeTTYResponse ResizeTTY(ResizeTTYRequest request) {
+            return  new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  调整TTY大小
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResizeTTYResponse> ResizeTTY(ResizeTTYRequest request) {
+            return await new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

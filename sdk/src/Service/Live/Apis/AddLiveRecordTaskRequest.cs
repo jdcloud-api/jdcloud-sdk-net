@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Live.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Live.Apis
 {
@@ -54,15 +54,11 @@ namespace  JDCloudSDK.Live.Apis
 
         ///<summary>
         /// 存储桶
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SaveBucket{ get; set; }
         ///<summary>
         /// 存储地址
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SaveEndpoint{ get; set; }
         ///<summary>
         /// 录制文件类型:

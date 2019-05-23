@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  查询子网
+    ///  查询子网详情
     /// </summary>
     public class DescribeSubnetExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询子网接口的Http 请求方法
+        ///  查询子网详情接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +47,12 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  查询子网接口的Http资源请求路径
+        ///  查询子网详情接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/subnet";
+            return "/regions/{regionId}/subnets/{subnetId}";
             }
         }
     }

@@ -45,6 +45,10 @@ namespace  JDCloudSDK.Cps.Apis
         [Required]
         public   string DeviceType{ get; set; }
         ///<summary>
+        /// 操作系统类型，取值范围：CentOS、Ubuntu
+        ///</summary>
+        public   string OsType{ get; set; }
+        ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>

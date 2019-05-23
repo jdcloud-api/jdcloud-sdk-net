@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Live.Apis
         ///<summary>
         /// PornData
         ///</summary>
-        public List<PornData> PornData{ get; set; }
+        public List<PornCountStatisticResult> PornData{ get; set; }
 
     }
 }

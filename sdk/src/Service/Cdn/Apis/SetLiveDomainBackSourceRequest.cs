@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cdn.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Cdn.Apis
@@ -53,12 +54,12 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// DomainSource
         ///</summary>
-        public List<Array> DomainSource{ get; set; }
+        public List<DomainSourceInfo> DomainSource{ get; set; }
 
         ///<summary>
         /// IpSource
         ///</summary>
-        public List<Array> IpSource{ get; set; }
+        public List<IpSourceInfo> IpSource{ get; set; }
 
         ///<summary>
         /// 用户域名

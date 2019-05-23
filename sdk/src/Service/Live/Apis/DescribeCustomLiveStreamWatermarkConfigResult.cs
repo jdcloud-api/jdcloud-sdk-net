@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// WatermarkConfigs
+        /// 水印模板配置列表
         ///</summary>
         public List<LiveStreamRecordConfig> WatermarkConfigs{ get; set; }
 

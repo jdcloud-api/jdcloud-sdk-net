@@ -75,7 +75,7 @@ namespace  JDCloudSDK.Live.Apis
         public   int Height{ get; set; }
         ///<summary>
         /// 自定义水印模板名称
-        /// -&amp;ensp;取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+        /// -&amp;ensp;取值要求: 数字、大小写字母、短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
         /// &amp;ensp;&amp;ensp;首尾不能有特殊字符(&quot;-&quot;),
         /// &amp;ensp;&amp;ensp;不超过50字符,utf-8格式
         /// -&amp;ensp;&lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
@@ -84,6 +84,11 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         [Required]
         public   string Template{ get; set; }
+        ///<summary>
+        /// 创建上传任务时返回的uploadId参数，当通过接口上传水印图片时，uploadId必填
+        /// 
+        ///</summary>
+        public   string UploadId{ get; set; }
         ///<summary>
         /// 水印地址&lt;br&gt;-&amp;ensp;以&amp;ensp;http:// 开头,可公开访问地址&lt;br&gt;
         ///Required:true

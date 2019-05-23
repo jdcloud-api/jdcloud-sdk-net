@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ModuleManager
- * 用于完成设备全生命周期管理
+ * EdgeManager
+ * edge管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,32 +34,35 @@ namespace  JDCloudSDK.Iothub.Apis
 {
 
     /// <summary>
-    ///  客户用该接口可以登记模块
-        ///         /// 
+    ///  计算模块登记
     /// </summary>
     public class ModuleEnrollRequest : JdcloudRequest
     {
         ///<summary>
-        /// InstanceId
+        /// 待添加的设备编号
         ///</summary>
-        public   string InstanceId{ get; set; }
+        public   string DeviceId{ get; set; }
         ///<summary>
-        /// ModelName
+        /// 边缘计算模块名称
         ///</summary>
-        public   string ModelName{ get; set; }
+        public   string ModuleId{ get; set; }
         ///<summary>
-        /// ParentDeviceName
+        /// 边缘计算模块类型编号
         ///</summary>
-        public   string ParentDeviceName{ get; set; }
+        public   string ModuleTypeId{ get; set; }
         ///<summary>
-        /// Name
+        /// 边缘计算模块配置编号
         ///</summary>
-        public   string Name{ get; set; }
+        public   string ModuleConfId{ get; set; }
         ///<summary>
-        /// moduleName 唯一标识
+        /// 是否立即部署[0-立即部署,1-暂不部署]
+        ///</summary>
+        public   int? IsDeploy{ get; set; }
+        ///<summary>
+        /// 边缘计算节点编号
         ///Required:true
         ///</summary>
         [Required]
-        public   string ModuleName{ get; set; }
+        public   string EdgeId{ get; set; }
     }
 }

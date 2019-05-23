@@ -41,7 +41,6 @@ namespace  JDCloudSDK.Function.Apis
         ///<summary>
         /// Data
         ///</summary>
-        public List<FunctionSpec> Data{ get; set; }
-
+        public   ListFunctionResult Data{ get; set; }
     }
 }
