@@ -40,7 +40,9 @@ namespace  JDCloudSDK.Mps.Apis
     {
         ///<summary>
         /// 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+        ///Required:true
         ///</summary>
+        [Required]
         public List<string> Delimiters{ get; set; }
 
         ///<summary>

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Mps.Apis
 {
@@ -39,7 +40,9 @@ namespace  JDCloudSDK.Mps.Apis
     {
         ///<summary>
         /// 是否启用通知
+        ///Required:true
         ///</summary>
+        [Required]
         public   bool Enabled{ get; set; }
         ///<summary>
         /// 通知endpoint, 当前支持http://和https://

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Mps.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,82 @@ namespace JDCloudSDK.Mps.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  图片样式详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetImageStyleResponse GetImageStyle(GetImageStyleRequest request) {
+            return  new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  图片样式详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetImageStyleResponse> GetImageStyle(GetImageStyleRequest request) {
+            return await new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateImageStyleResponse UpdateImageStyle(UpdateImageStyleRequest request) {
+            return  new UpdateImageStyleExecutor().Client(this).Execute<UpdateImageStyleResponse, UpdateImageStyleResult, UpdateImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateImageStyleResponse> UpdateImageStyle(UpdateImageStyleRequest request) {
+            return await new UpdateImageStyleExecutor().Client(this).Execute<UpdateImageStyleResponse, UpdateImageStyleResult, UpdateImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteImageStyleResponse DeleteImageStyle(DeleteImageStyleRequest request) {
+            return  new DeleteImageStyleExecutor().Client(this).Execute<DeleteImageStyleResponse, DeleteImageStyleResult, DeleteImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteImageStyleResponse> DeleteImageStyle(DeleteImageStyleRequest request) {
+            return await new DeleteImageStyleExecutor().Client(this).Execute<DeleteImageStyleResponse, DeleteImageStyleResult, DeleteImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  图片样式总数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CountImageStyleResponse CountImageStyle(CountImageStyleRequest request) {
+            return  new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  图片样式总数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CountImageStyleResponse> CountImageStyle(CountImageStyleRequest request) {
+            return await new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。
@@ -286,6 +362,44 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetStyleDelimiterResponse> GetStyleDelimiter(GetStyleDelimiterRequest request) {
             return await new GetStyleDelimiterExecutor().Client(this).Execute<GetStyleDelimiterResponse, GetStyleDelimiterResult, GetStyleDelimiterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateImageStyleResponse CreateImageStyle(CreateImageStyleRequest request) {
+            return  new CreateImageStyleExecutor().Client(this).Execute<CreateImageStyleResponse, CreateImageStyleResult, CreateImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateImageStyleResponse> CreateImageStyle(CreateImageStyleRequest request) {
+            return await new CreateImageStyleExecutor().Client(this).Execute<CreateImageStyleResponse, CreateImageStyleResult, CreateImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  图片样式列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListImageStyleResponse ListImageStyle(ListImageStyleRequest request) {
+            return  new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  图片样式列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListImageStyleResponse> ListImageStyle(ListImageStyleRequest request) {
+            return await new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request).ConfigureAwait(false);
         }
 #endif
 

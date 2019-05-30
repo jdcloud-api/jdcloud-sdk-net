@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Mps.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Mps.Apis
 {
@@ -60,11 +61,15 @@ namespace  JDCloudSDK.Mps.Apis
         public   string LastUpdatedTime{ get; set; }
         ///<summary>
         /// Source
+        ///Required:true
         ///</summary>
+        [Required]
         public   ThumbnailTaskSource Source{ get; set; }
         ///<summary>
         /// Target
+        ///Required:true
         ///</summary>
+        [Required]
         public   ThumbnailTaskTarget Target{ get; set; }
         ///<summary>
         /// Rule
