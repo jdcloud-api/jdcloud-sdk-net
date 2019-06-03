@@ -38,7 +38,8 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public static HttpClient DoSign(this HttpClient httpClient, Credentials credentials)
         {
-            return httpClient;
+            HttpClientWrapper httpClientWrapper = new HttpClientWrapper(httpClient, credentials); 
+            return httpClientWrapper;
         }
 #endif
 
