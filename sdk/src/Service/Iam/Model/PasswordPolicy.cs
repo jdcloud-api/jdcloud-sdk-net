@@ -39,31 +39,31 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 密码长度，6-20之间
+        /// 密码长度，6~20位，默认8位
         ///Required:true
         ///</summary>
         [Required]
         public int Length{ get; set; }
         ///<summary>
-        /// 密码有效期，0-1095之间
+        /// 密码有效期（天），0~1095，0表示永不过期
         ///Required:true
         ///</summary>
         [Required]
         public int Age{ get; set; }
         ///<summary>
-        /// 过期重置类型：0-主账号重置，1-子账号重置
+        /// 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
         ///Required:true
         ///</summary>
         [Required]
         public int ExpirationOperation{ get; set; }
         ///<summary>
-        /// 历史密码检查次数,0-10之间
+        /// 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
         ///Required:true
         ///</summary>
         [Required]
         public int ReusePrevention{ get; set; }
         ///<summary>
-        /// 密码重试次数,1-16之间
+        /// 1小时内使用错误密码最多(1~16)次
         ///Required:true
         ///</summary>
         [Required]

@@ -46,7 +46,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// jrn描述
+        /// 京东云资源标识(jrn)
         ///</summary>
         public string Jrn{ get; set; }
         ///<summary>
@@ -54,7 +54,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 策略类型:0-系统策略，1-用户策略
+        /// 策略类型：0-系统策略，1-用户策略
         ///</summary>
         public string PolicyType{ get; set; }
         ///<summary>

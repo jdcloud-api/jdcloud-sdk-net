@@ -38,7 +38,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 用户名
+        /// 子用户名
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
@@ -46,7 +46,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 用户更新时间
+        /// 用户创建时间
         ///</summary>
         public DateTime? CreateTime{ get; set; }
     }

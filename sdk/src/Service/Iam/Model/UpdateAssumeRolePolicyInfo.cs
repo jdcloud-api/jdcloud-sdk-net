@@ -38,7 +38,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 角色代入policy
+        /// 信任实体信息
         ///</summary>
         public string AssumeRolePolicyDocument{ get; set; }
     }

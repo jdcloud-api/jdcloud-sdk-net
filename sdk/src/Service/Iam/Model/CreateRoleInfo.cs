@@ -39,11 +39,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 角色路径
-        ///</summary>
-        public string Path{ get; set; }
-        ///<summary>
-        /// 角色名：支持4-64位的字母，数字以及-和_, 以字母开头
+        /// 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
         ///Required:true
         ///</summary>
         [Required]

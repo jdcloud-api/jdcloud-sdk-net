@@ -50,7 +50,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public bool AutoGeneratePassword{ get; set; }
         ///<summary>
-        /// 指定子用户在下次登录时是否必须绑定多因素认证器
+        /// 指定子用户在下次登录时是否必须绑定虚拟MFA设备
         ///</summary>
         public bool MFABindRequired{ get; set; }
     }

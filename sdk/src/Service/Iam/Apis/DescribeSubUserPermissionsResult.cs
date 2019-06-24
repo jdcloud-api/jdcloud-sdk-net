@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Iam.Apis
         ///</summary>
         public   int? Total{ get; set; }
         ///<summary>
-        /// Permissions
+        /// 权限列表信息
         ///</summary>
         public List<Permission> Permissions{ get; set; }
 

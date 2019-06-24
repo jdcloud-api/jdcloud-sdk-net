@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iam.Client
 {
 
     /// <summary>
-    ///  查询AccessKey列表
+    ///  查询主账号AccessKey列表
     /// </summary>
     public class DescribeUserAccessKeysExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询AccessKey列表接口的Http 请求方法
+        ///  查询主账号AccessKey列表接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iam.Client
             }
         }
         /// <summary>
-        ///  查询AccessKey列表接口的Http资源请求路径
+        ///  查询主账号AccessKey列表接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

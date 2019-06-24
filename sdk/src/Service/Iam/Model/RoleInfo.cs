@@ -38,10 +38,6 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 角色路径
-        ///</summary>
-        public string Path{ get; set; }
-        ///<summary>
         /// 角色ID
         ///</summary>
         public string RoleId{ get; set; }
@@ -54,7 +50,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public int? Type{ get; set; }
         ///<summary>
-        /// 角色代入policy
+        /// 信任实体信息
         ///</summary>
         public string AssumeRolePolicyDocument{ get; set; }
         ///<summary>
@@ -66,7 +62,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public int? MaxSessionDuration{ get; set; }
         ///<summary>
-        /// 资源描述
+        /// 京东云资源标识(jrn)
         ///</summary>
         public string Jrn{ get; set; }
         ///<summary>

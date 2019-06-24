@@ -42,7 +42,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 手机号码，区号-手机号，目前只支持0086-中国手机号码
+        /// 手机号码，区号-手机号
         ///</summary>
         public string Phone{ get; set; }
         ///<summary>

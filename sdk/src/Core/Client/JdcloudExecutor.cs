@@ -425,7 +425,7 @@ namespace JDCloudSDK.Core.Client
             if (!string.IsNullOrWhiteSpace(contentStr))
 #endif
             {
-                contentStr = contentStr.Replace(System.Environment.NewLine, "").Replace(" ","");
+                contentStr = contentStr.Replace(System.Environment.NewLine, "");
             }
             return contentStr;
         }
@@ -547,14 +547,10 @@ namespace JDCloudSDK.Core.Client
                         stringBuilder.Append(".");
                         stringBuilder.Append(i+1); 
                         string encodeStr = Regex.Replace(jArrayObject[i].ToString(), "^\"|\"$", "");
-#if NET35 || NET40
-                        string value = System.Web.HttpUtility.UrlEncode(encodeStr, Encoding.GetEncoding(charset));
-                        
-#else
-                        string value = System.Net.WebUtility.UrlEncode(encodeStr);
+ 
+                        string value = Uri.EscapeDataString(encodeStr);
 
-#endif
-                        dic.Add(stringBuilder.ToString(), value);
+                         dic.Add(stringBuilder.ToString(), value);
                     }
                     else
                     {

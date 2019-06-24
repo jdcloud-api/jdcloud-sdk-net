@@ -38,7 +38,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 权限名称
+        /// 策略名称
         ///</summary>
         public string PolicyName{ get; set; }
         ///<summary>
@@ -46,11 +46,11 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 权限类型
+        /// 策略类型：0-系统策略，1-用户策略
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        /// 权限资源描
+        /// 京东云策略资源描述
         ///</summary>
         public string PolicyJrn{ get; set; }
     }

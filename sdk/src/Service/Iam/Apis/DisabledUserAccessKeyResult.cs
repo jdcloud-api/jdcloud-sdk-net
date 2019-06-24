@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    ///  禁用AccessKey
+    ///  禁用主账号AccessKey
     /// </summary>
     public class DisabledUserAccessKeyResult : JdcloudResult
     {

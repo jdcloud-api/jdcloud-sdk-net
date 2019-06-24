@@ -46,7 +46,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public bool PasswordResetRequired{ get; set; }
         ///<summary>
-        /// 要求必须绑定多因素认证设备
+        /// 要求必须绑定虚拟MFA设备
         ///</summary>
         public bool MFABindRequired{ get; set; }
     }

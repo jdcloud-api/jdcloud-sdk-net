@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    ///  查询AccessKey列表
+    ///  查询主账号AccessKey列表
     /// </summary>
     public class DescribeUserAccessKeysRequest : JdcloudRequest
     {

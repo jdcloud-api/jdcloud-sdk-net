@@ -39,7 +39,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 策略名：支持4-64位的字母，数字以及-和_, 以字母开头
+        /// 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
         ///Required:true
         ///</summary>
         [Required]

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iam.Apis
 {
 
     /// <summary>
-    ///  创建AccessKey
+    ///  创建主账号AccessKey
     /// </summary>
     public class CreateUserAccessKeyResult : JdcloudResult
     {

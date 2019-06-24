@@ -46,7 +46,7 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// jrn描述
+        /// 京东云资源标识(jrn)
         ///</summary>
         public string Jrn{ get; set; }
         ///<summary>

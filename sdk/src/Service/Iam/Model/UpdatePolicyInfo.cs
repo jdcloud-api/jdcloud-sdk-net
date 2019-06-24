@@ -39,7 +39,7 @@ namespace JDCloudSDK.Iam.Model
     {
 
         ///<summary>
-        /// 策略信息详情，最多2048个字符
+        /// 策略信息详情，最多6144个字符
         ///Required:true
         ///</summary>
         [Required]
