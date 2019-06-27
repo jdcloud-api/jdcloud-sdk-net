@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// Domains
+        /// 域名列表
         ///</summary>
         public List<ListDomainItem> Domains{ get; set; }
 

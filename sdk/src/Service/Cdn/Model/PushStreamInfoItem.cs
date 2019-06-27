@@ -38,6 +38,10 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
+        /// App
+        ///</summary>
+        public string App{ get; set; }
+        ///<summary>
         /// Stream
         ///</summary>
         public string Stream{ get; set; }
@@ -46,13 +50,17 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string ClientIp{ get; set; }
         ///<summary>
-        /// StartTimeStamp
+        /// NodeIp
         ///</summary>
-        public long? StartTimeStamp{ get; set; }
+        public string NodeIp{ get; set; }
         ///<summary>
-        /// EndTimeStamp
+        /// 任务创建时间,UTC时间
         ///</summary>
-        public long? EndTimeStamp{ get; set; }
+        public string StartTime{ get; set; }
+        ///<summary>
+        /// 任务创建时间,UTC时间
+        ///</summary>
+        public string EndTime{ get; set; }
         ///<summary>
         /// Duration
         ///</summary>

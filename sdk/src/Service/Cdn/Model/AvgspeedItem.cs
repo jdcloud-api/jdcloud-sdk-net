@@ -44,11 +44,19 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// Avgspeed
         ///</summary>
-        public long? Avgspeed{ get; set; }
+        public double? Avgspeed{ get; set; }
+        ///<summary>
+        /// AvgspeedUnit
+        ///</summary>
+        public string AvgspeedUnit{ get; set; }
         ///<summary>
         /// Firstpkgtime
         ///</summary>
         public double? Firstpkgtime{ get; set; }
+        ///<summary>
+        /// FirstpkgtimeUnit
+        ///</summary>
+        public string FirstpkgtimeUnit{ get; set; }
         ///<summary>
         /// ErrorRatio
         ///</summary>
@@ -57,6 +65,10 @@ namespace JDCloudSDK.Cdn.Model
         /// Flow
         ///</summary>
         public double? Flow{ get; set; }
+        ///<summary>
+        /// FlowUnit
+        ///</summary>
+        public string FlowUnit{ get; set; }
         ///<summary>
         /// FlowPercent
         ///</summary>
@@ -68,6 +80,6 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// HitRatio
         ///</summary>
-        public int? HitRatio{ get; set; }
+        public double? HitRatio{ get; set; }
     }
 }

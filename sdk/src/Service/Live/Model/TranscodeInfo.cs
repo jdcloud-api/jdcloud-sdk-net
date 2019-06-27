@@ -38,6 +38,12 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
+        /// 视频编码格式
+        ///   - 取值：h264,h265，默认h264
+        /// 
+        ///</summary>
+        public string VideoCodec{ get; set; }
+        ///<summary>
         /// 转码输出的码率值:
         ///   - 取值: [200,3000]
         ///   - 单位: kpbs
@@ -46,7 +52,7 @@ namespace JDCloudSDK.Live.Model
         public int? VideoCodeRate{ get; set; }
         ///<summary>
         /// 转码输出的帧率值:
-        ///   - 取值: 15/1、25/1、30/1、60/1
+        ///   - 取值：[1,30]
         /// 
         ///</summary>
         public string VideoFrameRate{ get; set; }

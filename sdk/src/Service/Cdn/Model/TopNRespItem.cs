@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Cdn.Model;
 
 namespace JDCloudSDK.Cdn.Model
 {
@@ -47,13 +46,13 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public object TopValue{ get; set; }
         ///<summary>
-        /// TopFlowValue
+        /// TopDataValue
         ///</summary>
-        public double? TopFlowValue{ get; set; }
+        public double? TopDataValue{ get; set; }
         ///<summary>
-        /// TopFlowPercent
+        /// TopDataPercent
         ///</summary>
-        public string TopFlowPercent{ get; set; }
+        public string TopDataPercent{ get; set; }
         ///<summary>
         /// Details
         ///</summary>

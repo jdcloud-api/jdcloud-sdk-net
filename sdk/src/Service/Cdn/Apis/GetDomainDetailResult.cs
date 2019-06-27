@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class GetDomainDetailResult : JdcloudResult
     {
         ///<summary>
-        /// AllStatus
+        /// null
         ///</summary>
         public   string AllStatus{ get; set; }
         ///<summary>
@@ -147,5 +147,29 @@ namespace  JDCloudSDK.Cdn.Apis
         /// JumpType
         ///</summary>
         public   string JumpType{ get; set; }
+        ///<summary>
+        /// CertFrom
+        ///</summary>
+        public   string CertFrom{ get; set; }
+        ///<summary>
+        /// SslCertId
+        ///</summary>
+        public   string SslCertId{ get; set; }
+        ///<summary>
+        /// CertName
+        ///</summary>
+        public   string CertName{ get; set; }
+        ///<summary>
+        /// CertType
+        ///</summary>
+        public   string CertType{ get; set; }
+        ///<summary>
+        /// SslCertStartTime
+        ///</summary>
+        public   string SslCertStartTime{ get; set; }
+        ///<summary>
+        /// SslCertEndTime
+        ///</summary>
+        public   string SslCertEndTime{ get; set; }
     }
 }

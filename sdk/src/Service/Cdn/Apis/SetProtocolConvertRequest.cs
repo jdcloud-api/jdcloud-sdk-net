@@ -48,6 +48,22 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string RsaKey{ get; set; }
         ///<summary>
+        /// 证书来源有两种类型：default,ssl
+        ///</summary>
+        public   string CertFrom{ get; set; }
+        ///<summary>
+        /// ssl证书id
+        ///</summary>
+        public   string SslCertId{ get; set; }
+        ///<summary>
+        /// 是否同步到ssl,boolean值，取值true或者false
+        ///</summary>
+        public   bool SyncToSsl{ get; set; }
+        ///<summary>
+        /// syncToSsl是true时，certName是必填项
+        ///</summary>
+        public   string CertName{ get; set; }
+        ///<summary>
         /// ProtocolConverts
         ///</summary>
         public List<ProtocolConvert> ProtocolConverts{ get; set; }

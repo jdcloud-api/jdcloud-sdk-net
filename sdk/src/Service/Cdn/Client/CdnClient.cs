@@ -309,6 +309,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取所有上层节点的ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetAllUpperNodeIpListResponse GetAllUpperNodeIpList(GetAllUpperNodeIpListRequest request) {
+            return  new GetAllUpperNodeIpListExecutor().Client(this).Execute<GetAllUpperNodeIpListResponse, GetAllUpperNodeIpListResult, GetAllUpperNodeIpListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取所有上层节点的ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetAllUpperNodeIpListResponse> GetAllUpperNodeIpList(GetAllUpperNodeIpListRequest request) {
+            return await new GetAllUpperNodeIpListExecutor().Client(this).Execute<GetAllUpperNodeIpListResponse, GetAllUpperNodeIpListResult, GetAllUpperNodeIpListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  分地区及运营商查询统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -476,6 +495,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetFollowSourceProtocolResponse> SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
             return await new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看证书列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetSslCertListResponse GetSslCertList(GetSslCertListRequest request) {
+            return  new GetSslCertListExecutor().Client(this).Execute<GetSslCertListResponse, GetSslCertListResult, GetSslCertListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看证书列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetSslCertListResponse> GetSslCertList(GetSslCertListRequest request) {
+            return await new GetSslCertListExecutor().Client(this).Execute<GetSslCertListResponse, GetSslCertListResult, GetSslCertListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -651,25 +689,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建直播域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateLiveDomainResponse CreateLiveDomain(CreateLiveDomainRequest request) {
-            return  new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建直播域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateLiveDomainResponse> CreateLiveDomain(CreateLiveDomainRequest request) {
-            return await new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  泛域名共享缓存
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -837,6 +856,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryMixStatisticsDataResponse> QueryMixStatisticsData(QueryMixStatisticsDataRequest request) {
             return await new QueryMixStatisticsDataExecutor().Client(this).Execute<QueryMixStatisticsDataResponse, QueryMixStatisticsDataResult, QueryMixStatisticsDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryRefreshTaskResponse QueryRefreshTask(QueryRefreshTaskRequest request) {
+            return  new QueryRefreshTaskExecutor().Client(this).Execute<QueryRefreshTaskResponse, QueryRefreshTaskResult, QueryRefreshTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryRefreshTaskResponse> QueryRefreshTask(QueryRefreshTaskRequest request) {
+            return await new QueryRefreshTaskExecutor().Client(this).Execute<QueryRefreshTaskResponse, QueryRefreshTaskResult, QueryRefreshTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1107,6 +1145,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据taskIds查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryRefreshTaskByIdsResponse QueryRefreshTaskByIds(QueryRefreshTaskByIdsRequest request) {
+            return  new QueryRefreshTaskByIdsExecutor().Client(this).Execute<QueryRefreshTaskByIdsResponse, QueryRefreshTaskByIdsResult, QueryRefreshTaskByIdsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据taskIds查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryRefreshTaskByIdsResponse> QueryRefreshTaskByIds(QueryRefreshTaskByIdsRequest request) {
+            return await new QueryRefreshTaskByIdsExecutor().Client(this).Execute<QueryRefreshTaskByIdsResponse, QueryRefreshTaskByIdsResult, QueryRefreshTaskByIdsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询协议跟随回源
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1183,6 +1240,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查看证书详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetSslCertDetailResponse GetSslCertDetail(GetSslCertDetailRequest request) {
+            return  new GetSslCertDetailExecutor().Client(this).Execute<GetSslCertDetailResponse, GetSslCertDetailResult, GetSslCertDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看证书详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetSslCertDetailResponse> GetSslCertDetail(GetSslCertDetailRequest request) {
+            return await new GetSslCertDetailExecutor().Client(this).Execute<GetSslCertDetailResponse, GetSslCertDetailResult, GetSslCertDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  停止加速域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1221,6 +1297,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量域名查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainsLogResponse QueryDomainsLog(QueryDomainsLogRequest request) {
+            return  new QueryDomainsLogExecutor().Client(this).Execute<QueryDomainsLogResponse, QueryDomainsLogResult, QueryDomainsLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量域名查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainsLogResponse> QueryDomainsLog(QueryDomainsLogRequest request) {
+            return await new QueryDomainsLogExecutor().Client(this).Execute<QueryDomainsLogResponse, QueryDomainsLogResult, QueryDomainsLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置域名refer
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1255,6 +1350,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryLiveDomainDetailResponse> QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
             return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRefreshTaskResponse CreateRefreshTask(CreateRefreshTaskRequest request) {
+            return  new CreateRefreshTaskExecutor().Client(this).Execute<CreateRefreshTaskResponse, CreateRefreshTaskResult, CreateRefreshTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRefreshTaskResponse> CreateRefreshTask(CreateRefreshTaskRequest request) {
+            return await new CreateRefreshTaskExecutor().Client(this).Execute<CreateRefreshTaskResponse, CreateRefreshTaskResult, CreateRefreshTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1354,6 +1468,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建刷新预热回调任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRefreshTaskForCallbackResponse CreateRefreshTaskForCallback(CreateRefreshTaskForCallbackRequest request) {
+            return  new CreateRefreshTaskForCallbackExecutor().Client(this).Execute<CreateRefreshTaskForCallbackResponse, CreateRefreshTaskForCallbackResult, CreateRefreshTaskForCallbackRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建刷新预热回调任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRefreshTaskForCallbackResponse> CreateRefreshTaskForCallback(CreateRefreshTaskForCallbackRequest request) {
+            return await new CreateRefreshTaskForCallbackExecutor().Client(this).Execute<CreateRefreshTaskForCallbackResponse, CreateRefreshTaskForCallbackResult, CreateRefreshTaskForCallbackRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询http header头
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1388,6 +1521,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<BatchCreateResponse> BatchCreate(BatchCreateRequest request) {
             return await new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建刷新预热回调任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRefreshTaskForCallbackV2Response CreateRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) {
+            return  new CreateRefreshTaskForCallbackV2Executor().Client(this).Execute<CreateRefreshTaskForCallbackV2Response, CreateRefreshTaskForCallbackV2Result, CreateRefreshTaskForCallbackV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  创建刷新预热回调任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRefreshTaskForCallbackV2Response> CreateRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) {
+            return await new CreateRefreshTaskForCallbackV2Executor().Client(this).Execute<CreateRefreshTaskForCallbackV2Response, CreateRefreshTaskForCallbackV2Result, CreateRefreshTaskForCallbackV2Request>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1449,6 +1601,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据taskId查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryRefreshTaskByIdResponse QueryRefreshTaskById(QueryRefreshTaskByIdRequest request) {
+            return  new QueryRefreshTaskByIdExecutor().Client(this).Execute<QueryRefreshTaskByIdResponse, QueryRefreshTaskByIdResult, QueryRefreshTaskByIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据taskId查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryRefreshTaskByIdResponse> QueryRefreshTaskById(QueryRefreshTaskByIdRequest request) {
+            return await new QueryRefreshTaskByIdExecutor().Client(this).Execute<QueryRefreshTaskByIdResponse, QueryRefreshTaskByIdResult, QueryRefreshTaskByIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改缓存规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1487,6 +1658,44 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainLogResponse QueryDomainLog(QueryDomainLogRequest request) {
+            return  new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainLogResponse> QueryDomainLog(QueryDomainLogRequest request) {
+            return await new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  上传证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UploadCertResponse UploadCert(UploadCertRequest request) {
+            return  new UploadCertExecutor().Client(this).Execute<UploadCertResponse, UploadCertResult, UploadCertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  上传证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UploadCertResponse> UploadCert(UploadCertRequest request) {
+            return await new UploadCertExecutor().Client(this).Execute<UploadCertResponse, UploadCertResult, UploadCertRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  添加缓存规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1502,6 +1711,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateCacheRuleResponse> CreateCacheRule(CreateCacheRuleRequest request) {
             return await new CreateCacheRuleExecutor().Client(this).Execute<CreateCacheRuleResponse, CreateCacheRuleResult, CreateCacheRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建直播域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchCreateLiveDomainResponse BatchCreateLiveDomain(BatchCreateLiveDomainRequest request) {
+            return  new BatchCreateLiveDomainExecutor().Client(this).Execute<BatchCreateLiveDomainResponse, BatchCreateLiveDomainResult, BatchCreateLiveDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建直播域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchCreateLiveDomainResponse> BatchCreateLiveDomain(BatchCreateLiveDomainRequest request) {
+            return await new BatchCreateLiveDomainExecutor().Client(this).Execute<BatchCreateLiveDomainResponse, BatchCreateLiveDomainResult, BatchCreateLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

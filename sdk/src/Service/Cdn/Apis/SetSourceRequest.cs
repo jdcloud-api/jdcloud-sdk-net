@@ -58,11 +58,11 @@ namespace  JDCloudSDK.Cdn.Apis
         public List<DomainSourceInfo> DomainSource{ get; set; }
 
         ///<summary>
-        /// OssSource
+        /// oss回源域名
         ///</summary>
         public   string OssSource{ get; set; }
         ///<summary>
-        /// DefaultSourceHost
+        /// 默认回源host
         ///</summary>
         public   string DefaultSourceHost{ get; set; }
         ///<summary>

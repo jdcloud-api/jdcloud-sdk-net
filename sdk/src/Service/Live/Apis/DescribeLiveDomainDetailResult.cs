@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLiveDomainDetailResult : JdcloudResult
     {
         ///<summary>
+        /// SourceID
+        ///</summary>
+        public   long? SourceId{ get; set; }
+        ///<summary>
         /// 推流域名集合
         ///</summary>
         public List<PublishDomain> PublishDomains{ get; set; }

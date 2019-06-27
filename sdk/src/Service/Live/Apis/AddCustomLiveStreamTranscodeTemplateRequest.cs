@@ -38,9 +38,13 @@ namespace  JDCloudSDK.Live.Apis
         ///         /// - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
         ///         /// - 系统标准转码模板
         ///         ///     ld (h.264/640*360/15f)
-        ///         ///     sd (h.264/854*480/24f)
+        ///         ///     sd (h.264/960*540/24f)
         ///         ///     hd (h.264/1280*720/25f)
         ///         ///     shd (h.264/1920*1080/30f)
+        ///         ///     ld.265 (h.265/640*360/15f)
+        ///         ///     sd.265 (h.265/960*540/24f)
+        ///         ///     hd.265 (h.265/1280*720/25f)
+        ///         ///     shd.265 (h.265/1920*1080/30f)
         ///         /// 
     /// </summary>
     public class AddCustomLiveStreamTranscodeTemplateRequest : JdcloudRequest
@@ -52,8 +56,13 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   string TemplateName{ get; set; }
         ///<summary>
+        /// 视频编码格式，取值：h264,h265，默认h264
+        /// 
+        ///</summary>
+        public   string VideoCodec{ get; set; }
+        ///<summary>
         /// 转码输出的码率值
-        /// - 取值范围: [200,3000]
+        /// - 取值范围: [1,6000]
         /// - 单位: kpbs
         /// 
         ///Required:true
@@ -70,7 +79,7 @@ namespace  JDCloudSDK.Live.Apis
         public   string VideoFrameRate{ get; set; }
         ///<summary>
         /// 转码输出视频宽度
-        /// - 取值: [100,1920]
+        /// - 取值: [128,1920]
         /// - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
         /// - 如果(width,height)都不设置，则按源流大小输出转码
         /// 
@@ -78,7 +87,7 @@ namespace  JDCloudSDK.Live.Apis
         public   int? Width{ get; set; }
         ///<summary>
         /// 转码输出视频宽度
-        /// - 取值: [100,1920]
+        /// - 取值: [128,1920]
         /// - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
         /// - 如果(width,height)都不设置，则按源流大小输出转码
         /// 
@@ -90,9 +99,13 @@ namespace  JDCloudSDK.Live.Apis
         /// - &lt;b&gt;注意: 不能与系统的标准的转码模板和当前用户已自定义命名重复&lt;/b&gt;
         /// - 系统标准转码模板
         ///   ld (h.264/640*360/15f)
-        ///   sd (h.264/854*480/24f)
+        ///   sd (h.264/960*540/24f)
         ///   hd (h.264/1280*720/25f)
         ///   shd (h.264/1920*1080/30f)
+        ///   ld.265 (h.265/640*360/15f)
+        ///   sd.265 (h.265/960*540/24f)
+        ///   hd.265 (h.265/1280*720/25f)
+        ///   shd.265 (h.265/1920*1080/30f)
         /// 
         ///Required:true
         ///</summary>

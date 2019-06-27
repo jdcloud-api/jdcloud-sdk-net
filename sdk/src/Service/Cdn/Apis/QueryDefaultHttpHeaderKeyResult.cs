@@ -38,12 +38,12 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryDefaultHttpHeaderKeyResult : JdcloudResult
     {
         ///<summary>
-        /// ReqDefaultHttpHeaderKey
+        /// 默认的http请求头
         ///</summary>
         public List<string> ReqDefaultHttpHeaderKey{ get; set; }
 
         ///<summary>
-        /// RespDefaultHttpHeaderKey
+        /// 默认的http响应头
         ///</summary>
         public List<string> RespDefaultHttpHeaderKey{ get; set; }
 

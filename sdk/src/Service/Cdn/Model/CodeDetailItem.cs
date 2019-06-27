@@ -44,58 +44,58 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// Ok
         ///</summary>
-        public long? Ok{ get; set; }
+        public double? Ok{ get; set; }
         ///<summary>
         /// BadGateway
         ///</summary>
-        public long? BadGateway{ get; set; }
+        public double? BadGateway{ get; set; }
         ///<summary>
         /// BadRequest
         ///</summary>
-        public long? BadRequest{ get; set; }
+        public double? BadRequest{ get; set; }
         ///<summary>
         /// Forbidden
         ///</summary>
-        public long? Forbidden{ get; set; }
+        public double? Forbidden{ get; set; }
         ///<summary>
         /// Found
         ///</summary>
-        public long? Found{ get; set; }
+        public double? Found{ get; set; }
         ///<summary>
         /// GatewayTimeout
         ///</summary>
-        public long? GatewayTimeout{ get; set; }
+        public double? GatewayTimeout{ get; set; }
         ///<summary>
         /// InternalServerError
         ///</summary>
-        public long? InternalServerError{ get; set; }
+        public double? InternalServerError{ get; set; }
         ///<summary>
         /// MovedPermanently
         ///</summary>
-        public long? MovedPermanently{ get; set; }
+        public double? MovedPermanently{ get; set; }
         ///<summary>
         /// NotFound
         ///</summary>
-        public long? NotFound{ get; set; }
+        public double? NotFound{ get; set; }
         ///<summary>
         /// NotModified
         ///</summary>
-        public long? NotModified{ get; set; }
+        public double? NotModified{ get; set; }
         ///<summary>
         /// PartialContent
         ///</summary>
-        public long? PartialContent{ get; set; }
+        public double? PartialContent{ get; set; }
         ///<summary>
         /// RequestedRangeNotSuitable
         ///</summary>
-        public long? RequestedRangeNotSuitable{ get; set; }
+        public double? RequestedRangeNotSuitable{ get; set; }
         ///<summary>
         /// Other
         ///</summary>
-        public long? Other{ get; set; }
+        public double? Other{ get; set; }
         ///<summary>
         /// ServiceUnavailable
         ///</summary>
-        public long? ServiceUnavailable{ get; set; }
+        public double? ServiceUnavailable{ get; set; }
     }
 }

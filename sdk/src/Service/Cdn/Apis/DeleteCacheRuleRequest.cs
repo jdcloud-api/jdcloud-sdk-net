@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class DeleteCacheRuleRequest : JdcloudRequest
     {
         ///<summary>
-        /// 缓存规则id
+        /// 缓存规则配置ID
         ///</summary>
         public   long? ConfigId{ get; set; }
         ///<summary>

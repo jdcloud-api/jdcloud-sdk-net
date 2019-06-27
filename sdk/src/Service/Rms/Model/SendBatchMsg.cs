@@ -38,18 +38,6 @@ namespace JDCloudSDK.Rms.Model
     {
 
         ///<summary>
-        /// 请求状态
-        ///</summary>
-        public bool Status{ get; set; }
-        ///<summary>
-        /// 错误码
-        ///</summary>
-        public string Code{ get; set; }
-        ///<summary>
-        /// 错误消息
-        ///</summary>
-        public string Message{ get; set; }
-        ///<summary>
         /// 本次发送请求的序列号
         ///</summary>
         public string SequenceNumber{ get; set; }

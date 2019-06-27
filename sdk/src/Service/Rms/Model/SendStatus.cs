@@ -46,9 +46,9 @@ namespace JDCloudSDK.Rms.Model
         ///</summary>
         public string AppId{ get; set; }
         ///<summary>
-        /// 任务ID
+        /// 任务序列号
         ///</summary>
-        public string TaskId{ get; set; }
+        public string SequenceNumber{ get; set; }
         ///<summary>
         /// 短信ID
         ///</summary>
@@ -62,7 +62,7 @@ namespace JDCloudSDK.Rms.Model
         ///</summary>
         public int? StateFlag{ get; set; }
         ///<summary>
-        /// 发送时间
+        /// 发送时间 yyyy-MM-dd HH:mm:ss
         ///</summary>
         public string SendTime{ get; set; }
     }

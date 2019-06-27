@@ -42,16 +42,16 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Domain{ get; set; }
         ///<summary>
-        /// UserAgentType
+        /// userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
         ///</summary>
         public   string UserAgentType{ get; set; }
         ///<summary>
-        /// UserAgentList
+        /// UA列表
         ///</summary>
         public List<string> UserAgentList{ get; set; }
 
         ///<summary>
-        /// AllowNoUserAgentHeader
+        /// 是否允许空userAgent访问,默认为“on”
         ///</summary>
         public   string AllowNoUserAgentHeader{ get; set; }
     }

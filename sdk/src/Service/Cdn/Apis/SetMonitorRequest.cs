@@ -47,7 +47,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string MonitorPath{ get; set; }
         ///<summary>
-        /// HttpRequestHeader
+        /// http请求头
         ///</summary>
         public   Dictionary<String,string> HttpRequestHeader{ get; set; }
         ///<summary>

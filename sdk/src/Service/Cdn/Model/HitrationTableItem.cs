@@ -50,9 +50,13 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public long? Pv{ get; set; }
         ///<summary>
-        /// Hitpv
+        /// HitPv
         ///</summary>
-        public long? Hitpv{ get; set; }
+        public long? HitPv{ get; set; }
+        ///<summary>
+        /// OriPV
+        ///</summary>
+        public long? OriPV{ get; set; }
         ///<summary>
         /// HitRatio
         ///</summary>

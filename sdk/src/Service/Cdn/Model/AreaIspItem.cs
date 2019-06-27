@@ -38,9 +38,9 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
-        /// Name
+        /// Description
         ///</summary>
-        public string Name{ get; set; }
+        public string Description{ get; set; }
         ///<summary>
         /// Code
         ///</summary>

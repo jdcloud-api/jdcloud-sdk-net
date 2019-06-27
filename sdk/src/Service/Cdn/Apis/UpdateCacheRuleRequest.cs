@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   int? CacheType{ get; set; }
         ///<summary>
-        /// 配置id
+        /// 缓存规则配置ID
         ///</summary>
         public   long? ConfigId{ get; set; }
         ///<summary>

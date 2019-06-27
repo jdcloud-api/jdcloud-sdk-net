@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Cdn.Model;
 
 namespace JDCloudSDK.Cdn.Model
 {
@@ -47,8 +46,8 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public double? Total{ get; set; }
         ///<summary>
-        /// Detail
+        /// Details
         ///</summary>
-        public List<OriBandwithDetailItem> Detail{ get; set; }
+        public List<OriBandwithDetailItem> Details{ get; set; }
     }
 }

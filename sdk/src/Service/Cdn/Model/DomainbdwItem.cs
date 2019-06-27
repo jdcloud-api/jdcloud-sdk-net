@@ -46,8 +46,20 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string DomainType{ get; set; }
         ///<summary>
-        /// TimeStamp
+        /// TopTimeStamp
         ///</summary>
-        public long? TimeStamp{ get; set; }
+        public long? TopTimeStamp{ get; set; }
+        ///<summary>
+        /// Pv
+        ///</summary>
+        public long? Pv{ get; set; }
+        ///<summary>
+        /// Flow
+        ///</summary>
+        public double? Flow{ get; set; }
+        ///<summary>
+        /// Avgbandwidth
+        ///</summary>
+        public double? Avgbandwidth{ get; set; }
     }
 }

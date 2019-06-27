@@ -52,11 +52,11 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// app名
         ///</summary>
-        public   string Appname{ get; set; }
+        public   string AppName{ get; set; }
         ///<summary>
         /// 流名
         ///</summary>
-        public   string Streamname{ get; set; }
+        public   string StreamName{ get; set; }
         ///<summary>
         /// 子域名
         ///</summary>

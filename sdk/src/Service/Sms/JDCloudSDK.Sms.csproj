@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.1.0.1</Version>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Description>sms相关接口</Description>
+        <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageProjectUrl>https://docs.jdcloud.com/cn/sdk/dotnet</PackageProjectUrl>
+        <PackageIconUrl>https://www.jdcloud.com/static/img/favicon.ico</PackageIconUrl>
+        <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReleaseNotes>sms相关接口</PackageReleaseNotes>
+        <PackageOutputPath>..\..\..\Release\nuget</PackageOutputPath>
+        <Authors>JDCloud API Gateway</Authors>
+        <Company>JDCloud.com</Company>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)|$(TargetFramework)'=='Debug|AnyCPU|netstandard2.0'">
+        <DocumentationFile>bin\Debug\netstandard2.0\JDCloudSDK.sms.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
+    </ItemGroup>
+</Project>

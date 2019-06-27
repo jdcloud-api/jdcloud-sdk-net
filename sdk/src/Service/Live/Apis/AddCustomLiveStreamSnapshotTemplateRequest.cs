@@ -96,7 +96,9 @@ namespace  JDCloudSDK.Live.Apis
         public   int SaveMode{ get; set; }
         ///<summary>
         /// 存储桶
+        ///Required:true
         ///</summary>
+        [Required]
         public   string SaveBucket{ get; set; }
         ///<summary>
         /// 存储地址

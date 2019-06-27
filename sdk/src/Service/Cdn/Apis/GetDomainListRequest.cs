@@ -42,11 +42,11 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string KeyWord{ get; set; }
         ///<summary>
-        /// pageNumber
+        /// pageNumber,默认值1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// pageSize
+        /// pageSize,最大值50,默认值20
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
@@ -54,7 +54,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Status{ get; set; }
         ///<summary>
-        /// type
+        /// 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
         ///</summary>
         public   string Type{ get; set; }
     }

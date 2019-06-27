@@ -38,15 +38,15 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryMonitorResult : JdcloudResult
     {
         ///<summary>
-        /// Domain
+        /// 域名
         ///</summary>
         public   string Domain{ get; set; }
         ///<summary>
-        /// Cycle
+        /// 探测周期，单位分钟
         ///</summary>
         public   int? Cycle{ get; set; }
         ///<summary>
-        /// MonitorPath
+        /// 探测路径
         ///</summary>
         public   string MonitorPath{ get; set; }
         ///<summary>

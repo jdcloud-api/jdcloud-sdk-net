@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class CreateCacheRuleResult : JdcloudResult
     {
         ///<summary>
-        /// ConfigId
+        /// 缓存规则配置ID
         ///</summary>
         public   long? ConfigId{ get; set; }
     }

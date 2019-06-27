@@ -38,32 +38,36 @@ namespace JDCloudSDK.Rms.Model
     {
 
         ///<summary>
-        /// reason参数
-        ///</summary>
-        public string Reason{ get; set; }
-        ///<summary>
-        /// createTime参数
-        ///</summary>
-        public string CreateTime{ get; set; }
-        ///<summary>
-        /// contentSize参数
-        ///</summary>
-        public string ContentSize{ get; set; }
-        ///<summary>
-        /// description参数
-        ///</summary>
-        public string Description{ get; set; }
-        ///<summary>
-        /// templateId参数
+        /// 短信ID
         ///</summary>
         public string TemplateId{ get; set; }
         ///<summary>
-        /// title参数
+        /// 短信标题
         ///</summary>
         public string Title{ get; set; }
         ///<summary>
-        /// status参数
+        /// 审核状态 0: 审核中 1: 通过 2: 未通过 4:待提交
         ///</summary>
         public string Status{ get; set; }
+        ///<summary>
+        /// 审核未通过原因
+        ///</summary>
+        public string Reason{ get; set; }
+        ///<summary>
+        /// 短信创建时间 yyyy-MM-dd HH:mm:ss
+        ///</summary>
+        public string CreateTime{ get; set; }
+        ///<summary>
+        /// 短信内容大小
+        ///</summary>
+        public string ContentSize{ get; set; }
+        ///<summary>
+        /// 资质Id
+        ///</summary>
+        public string AptitudesId{ get; set; }
+        ///<summary>
+        /// 短信描述
+        ///</summary>
+        public string Description{ get; set; }
     }
 }

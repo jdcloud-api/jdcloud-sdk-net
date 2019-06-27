@@ -48,10 +48,14 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// 禁播类型:forever永不禁播limit限时禁播
         ///</summary>
-        public string Type{ get; set; }
+        public string ForbiddenType{ get; set; }
         ///<summary>
         /// 禁播时长
         ///</summary>
         public long? Ttl{ get; set; }
+        ///<summary>
+        /// 禁播类型说明
+        ///</summary>
+        public string ForbiddenTypeDesc{ get; set; }
     }
 }

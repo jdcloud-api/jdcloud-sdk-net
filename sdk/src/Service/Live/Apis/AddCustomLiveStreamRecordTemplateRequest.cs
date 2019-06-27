@@ -51,7 +51,9 @@ namespace  JDCloudSDK.Live.Apis
         ///<summary>
         /// 存储桶
         /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public   string SaveBucket{ get; set; }
         ///<summary>
         /// endpoint

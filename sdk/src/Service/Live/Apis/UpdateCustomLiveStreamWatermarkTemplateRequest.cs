@@ -40,6 +40,12 @@ namespace  JDCloudSDK.Live.Apis
     public class UpdateCustomLiveStreamWatermarkTemplateRequest : JdcloudRequest
     {
         ///<summary>
+        /// 水印位置
+        /// - 取值范围：左上：1，右上：3， 左下：7，右下：9，默认：1
+        /// 
+        ///</summary>
+        public   int? Position{ get; set; }
+        ///<summary>
         /// x轴偏移量
         /// - 单位: 像素
         /// 

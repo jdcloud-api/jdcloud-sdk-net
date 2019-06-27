@@ -241,5 +241,29 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 推断流通知key
         ///</summary>
         public   string NotifyCustomAuthKey{ get; set; }
+        ///<summary>
+        /// 证书来源有两种类型：default,ssl
+        ///</summary>
+        public   string CertFrom{ get; set; }
+        ///<summary>
+        /// ssl证书id
+        ///</summary>
+        public   string SslCertId{ get; set; }
+        ///<summary>
+        /// 证书名称
+        ///</summary>
+        public   string CertName{ get; set; }
+        ///<summary>
+        /// 证书类型
+        ///</summary>
+        public   string CertType{ get; set; }
+        ///<summary>
+        /// SslCertStartTime
+        ///</summary>
+        public   string SslCertStartTime{ get; set; }
+        ///<summary>
+        /// SslCertEndTime
+        ///</summary>
+        public   string SslCertEndTime{ get; set; }
     }
 }
