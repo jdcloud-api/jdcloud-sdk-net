@@ -20,6 +20,12 @@ namespace JDCloudSDK.Core.Extensions
 
         private Credentials _credentials;
 
+        private string _serviceName;
+
+
+        private string _signType;
+
+        private DateTime? _overWriteDate;
         /// <summary>
         /// get http client DefaultRequestHeaders
         /// </summary>
@@ -44,12 +50,18 @@ namespace JDCloudSDK.Core.Extensions
         /// the construst
         /// </summary>
         /// <param name="httpClient"></param>
+        /// <param name="serviceName">the current request service name</param>
         /// <param name="credentials"></param>
-        public HttpClientWrapper(HttpClient httpClient, Credentials credentials) {
+        /// <param name="overWriteDate">sign data override</param>
+        /// <param name="signType">the sign method type</param>
+        public HttpClientWrapper(HttpClient httpClient, Credentials credentials,string serviceName = null,string signType = null, DateTime? overWriteDate = null) {
            
             this._httpClient = httpClient;
-
+            this._serviceName = serviceName;
             this._credentials = credentials;
+
+            this._signType = signType;
+            this._overWriteDate = overWriteDate;
         }
 
         /// <summary>
@@ -363,7 +375,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public override  Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,  CancellationToken cancellationToken)
         {
-            request = request.DoSign(_credentials); 
+            request = request.DoSign(_credentials,_serviceName,_signType,_overWriteDate); 
             return _httpClient.SendAsync(request, cancellationToken);
         }
     }

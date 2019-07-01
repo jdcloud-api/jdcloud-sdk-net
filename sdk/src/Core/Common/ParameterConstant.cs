@@ -235,5 +235,10 @@ namespace JDCloudSDK.Core.Common
         /// HmacSHA256签名方法
         /// </summary>
         public const string SIGN_SHA256 = "HMACSHA256";
+
+        /// <summary>
+        /// the sdk default request region
+        /// </summary>
+        public const string DEFAULT_REGION = "cn-north-1";
     }
 }

@@ -84,7 +84,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -99,12 +99,11 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -228,7 +227,7 @@
       ]
     },
     "Newtonsoft.Json/11.0.2": {
-      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
       "path": "newtonsoft.json/11.0.2",
       "files": [
@@ -258,7 +257,7 @@
       ]
     },
     "System.Net.Http/4.3.3": {
-      "sha512": "K8Bf1xc41hhxmOp1X3W/y1eRyCwTD5JdEua97gn+7FXCwUeWKK9joR/bTbud07Via/S4W4oYewyzmFeIbt5w4A==",
+      "sha512": "7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
       "type": "package",
       "path": "system.net.http/4.3.3",
       "files": [
@@ -317,24 +316,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/lishijun1/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\lishijun1\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "0.1.0",
     "restore": {
-      "projectUniqueName": "/Users/lishijun1/Documents/cshapworkspace/JDCloudSDK-dev/jdcloudsdk-github/sdk/src/Core/JDCloudSDK.Core.csproj",
+      "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
       "projectName": "JDCloudSDK.Core",
-      "projectPath": "/Users/lishijun1/Documents/cshapworkspace/JDCloudSDK-dev/jdcloudsdk-github/sdk/src/Core/JDCloudSDK.Core.csproj",
-      "packagesPath": "/Users/lishijun1/.nuget/packages/",
-      "outputPath": "/Users/lishijun1/Documents/cshapworkspace/JDCloudSDK-dev/jdcloudsdk-github/sdk/src/Core/obj/",
+      "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
+      "packagesPath": "C:\\Users\\lishijun1\\.nuget\\packages\\",
+      "outputPath": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/lishijun1/.config/NuGet/NuGet.Config"
+        "C:\\Users\\lishijun1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net35",
@@ -343,6 +343,7 @@
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 
-namespace JDCloudSDK.Core.Client
+namespace JDCloudSDK.Core.Model
 {
     /// <summary>
     /// 构造最后请求的详细信息
@@ -34,7 +34,7 @@ namespace JDCloudSDK.Core.Client
         /// <summary>
         /// request body
         /// </summary>
-        public string Content { get; set; }
+        public byte[] Content { get; set; }
 
 
         /// <summary>
@@ -67,6 +67,17 @@ namespace JDCloudSDK.Core.Client
         /// 请求区域名称
         /// </summary>
         public string RegionName { get; set; }
+
+
+        /// <summary>
+        /// the sgin api version info
+        /// </summary>
+        public string ApiVersion { get; set; }
+
+        /// <summary>
+        /// the request port
+        /// </summary>
+        public int? RequestPort { get; set; }
 
 
 

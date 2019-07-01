@@ -31,14 +31,25 @@ namespace JDCloudSDK.Core.Utils
                 throw new Exception("Unable to calculate a request signature: ", e);
             }
         }
-
+        /// <summary>
+        /// 进行SHA256 加密
+        /// </summary>
+        /// <param name="byteContent">需要计算的字节数组</param>
+        /// <returns>转换后的字节数组</returns>
+        public static byte[] SignHash(byte[] byteContent) {
+            if (byteContent == null) {
+                byteContent = new byte[0];
+            }
+            byte[] result = ComputeHashSha256(byteContent);
+            return result;
+        }
 
         /// <summary>
         /// 进行SHA256 加密
         /// </summary>
         /// <param name="strSrc">需要计算的字符串</param>
         /// <returns>转换后的字节数组</returns>
-        public static byte[] SignHash(String strSrc)
+        public static byte[] SignHash(string strSrc)
         {
             byte[] byteArray;
  
@@ -50,11 +61,8 @@ namespace JDCloudSDK.Core.Utils
             else
             {
                 byteArray = System.Text.Encoding.UTF8.GetBytes(strSrc);
-            }
-
-            byte[] result = ComputeHashSha256(byteArray);
-            return result;
-
+            } 
+            return SignHash(byteArray); 
         }
 
         /// <summary>

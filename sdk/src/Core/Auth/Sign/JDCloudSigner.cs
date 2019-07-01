@@ -1,4 +1,5 @@
-﻿using JDCloudSDK.Core.Client;
+﻿using JDCloudSDK.Core.Model;
+using JDCloudSDK.Core.Client;
 using JDCloudSDK.Core.Common;
 using JDCloudSDK.Core.Utils;
 using System;
@@ -11,27 +12,13 @@ namespace JDCloudSDK.Core.Auth.Sign
     /// <summary>
     /// 京东云网关签名类
     /// </summary>
-    public class JDCloudSigner
+    public class JDCloudSigner: IJDCloudSigner
     {
         /// <summary>
         /// 要进行忽略的签名头信息
         /// </summary>
         private static readonly string[] LIST_OF_HEADERS_TO_IGNORE_IN_LOWER_CASE = { "connection","x-jdcloud-trace-id"};
-
-        /// <summary>
-        /// 服务名称
-        /// </summary>
-        public string ServiceName { get; set; }
-
-        /// <summary>
-        /// 可用区名称
-        /// </summary>
-        public string RegionName { get; set; }
-
-        /// <summary>
-        ///  重写日期信息
-        /// </summary>
-        public DateTime? OverrddenDate { get; set; } = null;
+          
 
         /// <summary>
         /// URL 进行二次加密
@@ -60,19 +47,85 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="requestModel"></param>
         /// <param name="credentials"></param>
         /// <returns></returns>
-        public RequestModel Sign(RequestModel requestModel, Credentials credentials) {
+        public SignedRequestModel Sign(RequestModel requestModel, Credentials credentials) {
+            string nonceId = Guid.NewGuid().ToString().ToLower();
+            var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
+            string formattedSigningDatetime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
+            string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
+            string scope = GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName);
+            var requestHeader = requestModel.Header;
+            requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
+                              new List<string> { formattedSigningDatetime } );
+            requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE, 
+                              new List<string> { nonceId });
 
+            var contentSHA256 = CalculateContentHash(requestModel);
+            var canonicalRequest = CreateCanonicalRequest(requestModel, contentSHA256);
 
             return null;
         }
 
 
-        private byte[] BuildSignData(RequestModel requestModel)
-        {
-            // string ContentSha256 = C
-            throw new NotImplementedException();
+        private string CreateCanonicalRequest(RequestModel requestModel, string contentSha256) {
+            var requestParameters = requestModel.QueryParameters;
+            if (!requestParameters.IsNullOrWhiteSpace()) {
+                if (requestParameters.StartsWith("?")) {
+                    requestParameters = requestParameters.Substring(1);
+                }
+            }
+            string path = "";
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append(requestModel.Uri.Host);
+            if (requestModel.RequestPort != null && requestModel.RequestPort > 0) {
+                stringBuilder.Append(":").Append(requestModel.RequestPort);
+            }
+            stringBuilder.Append("/");
+            stringBuilder.Append(requestModel.ResourcePath);
+            path = stringBuilder.ToString();
+            string canonicalRequest = new StringBuilder(requestModel.HttpMethod.ToString().ToUpper())
+                .Append(ParameterConstant.LINE_SEPARATOR)
+                .Append(GetCanonicalizedResourcePath(path, false))
+                .Append(ParameterConstant.LINE_SEPARATOR)
+                .Append(requestParameters)
+                .Append(ParameterConstant.LINE_SEPARATOR)
+                .Append(GetCanonicalizedHeaderString(builder))
+                .Append(ParameterConstant.LINE_SEPARATOR)
+                .Append(GetSignedHeadersString(builder))
+                .Append(ParameterConstant.LINE_SEPARATOR)
+                .Append(contentSha256)
+                .ToString();
+
+
+            return string.Empty;
         }
 
+
+        /// <summary>
+        /// 进行请求path 转换
+        /// </summary>
+        /// <param name="path">请求path</param>
+        /// <param name="doubleUrlEncode">是否进行二次编码</param>
+        /// <returns>转换后的path</returns>
+        protected string GetCanonicalizedResourcePath(string path, bool doubleUrlEncode)
+        {
+ 
+            if (path.IsNullOrWhiteSpace()) 
+            {
+                return "/";
+            }
+            else
+            {
+                string value = doubleUrlEncode ?Uri.EscapeDataString(path).Replace("%2F","/"): path;
+                if (value.StartsWith("/"))
+                {
+                    return value;
+                }
+                else
+                {
+                    return $"/{value}";
+                }
+            }
+        }
 
         /// <summary>
         /// 计算http content SHA256 hash 校验值
@@ -83,10 +136,10 @@ namespace JDCloudSDK.Core.Auth.Sign
         {
             try
             {
-                string content = requestModel.Content;
-                if (content.IsNullOrWhiteSpace())
+                byte[] content = requestModel.Content;
+                if (content != null && content.Length>0)
                 {
-                    content = string.Empty;
+                    content = new byte[0];
                 }
                 string contentSha256 = StringUtils.ByteToHex(SignUtil.SignHash(content), true);
                 return contentSha256;
