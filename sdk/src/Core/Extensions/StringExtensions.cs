@@ -25,8 +25,9 @@ namespace JDCloudSDK.Core.Utils
             }
 
             return string.IsNullOrEmpty(value.Trim());
-#endif
+#else
             return string.IsNullOrWhiteSpace(value);
+#endif
         }
 
 

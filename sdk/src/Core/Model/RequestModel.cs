@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+using System.Collections.Generic;  
 
 namespace JDCloudSDK.Core.Model
 {
@@ -29,7 +27,7 @@ namespace JDCloudSDK.Core.Model
         /// <summary>
         /// 请求方法名
         /// </summary>
-        public HttpMethod HttpMethod { get; set; }
+        public string HttpMethod { get; set; }
 
         /// <summary>
         /// request body

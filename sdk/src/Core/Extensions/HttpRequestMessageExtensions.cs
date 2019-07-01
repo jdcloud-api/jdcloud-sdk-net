@@ -1,4 +1,5 @@
-﻿using JDCloudSDK.Core.Auth;
+﻿#if!(NET35||NET40)
+using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Auth.Sign;
 using JDCloudSDK.Core.Common;
 using JDCloudSDK.Core.Model;
@@ -41,7 +42,7 @@ namespace JDCloudSDK.Core.Extensions
                 }
             }
             requestModel.ContentType = requestContent.Headers.ContentType.ToString();
-            requestModel.HttpMethod = requestMethod;
+            requestModel.HttpMethod = requestMethod.ToString().ToUpper();
             var pathRegion = requestUri.GetRequestVersion();
             if (!string.IsNullOrWhiteSpace(pathRegion)) {
                 requestModel.RegionName = pathRegion;
@@ -79,3 +80,4 @@ namespace JDCloudSDK.Core.Extensions
         }
     }
 }
+#endif

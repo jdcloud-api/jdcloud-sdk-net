@@ -18,7 +18,7 @@ namespace JDCloudSDK.Core.Utils
         /// <returns>通过反射获取属性得到的值</returns>
         public static object GetPropertyInfoValue(PropertyInfo propertyInfo,object value)
         {
-#if NET35
+#if NET35||NET40
             return propertyInfo.GetValue(value,null);
 #else
             return propertyInfo.GetValue(value);

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#if !(NET35||NET40)
 using System.Net.Http;
-using System.Text;
-
+#endif
 namespace JDCloudSDK.Core.Common.Profile
 {
     /// <summary>
@@ -56,7 +54,7 @@ namespace JDCloudSDK.Core.Common.Profile
             this.Timeout = timeout;
         }
 
-
+#if!(NET35||NET40)
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -73,7 +71,7 @@ namespace JDCloudSDK.Core.Common.Profile
             ContentType = contentType;
             WebProxy = webProxy;
         }
-
+#endif
         /// <summary>
         /// 请求协议
         /// </summary>
@@ -97,11 +95,13 @@ namespace JDCloudSDK.Core.Common.Profile
         /// </summary>
         public int Timeout { get; set; } = 10;
 
+#if!(NET35||NET40)
+
         /// <summary>
         /// 请求方法
         /// </summary>
         public HttpMethod HttpMethod { get; set; }
-
+#endif
         /// <summary>
         /// 请求 content-type
         /// </summary>

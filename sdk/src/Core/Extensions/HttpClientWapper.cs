@@ -1,15 +1,19 @@
 ﻿using JDCloudSDK.Core.Auth;
+
+#if NET35 || NET40
+#else
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+#endif
 namespace JDCloudSDK.Core.Extensions
 {
+#if NET35 || NET40
+
+#else
     /// <summary>
     /// http client 包装类
     /// </summary>
@@ -378,5 +382,6 @@ namespace JDCloudSDK.Core.Extensions
             request = request.DoSign(_credentials,_serviceName,_signType,_overWriteDate); 
             return _httpClient.SendAsync(request, cancellationToken);
         }
-    }
+    } 
+#endif
 }

@@ -89,7 +89,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             signedRequestModel.CanonicalRequest = canonicalRequest;
             signedRequestModel.ContentSHA256 = contentSHA256;
             foreach (var header in requestModel.Header) {
-                signedRequestModel.RequestHead.Add(header.Key, string.Join(",", header.Value));
+                signedRequestModel.RequestHead.Add(header.Key, string.Join(",", header.Value.ToArray()));
             }
             signedRequestModel.RequestNonceId = nonceId; 
             signedRequestModel.SignedHeaders = signHeader;
@@ -210,7 +210,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             stringBuilder.Append("/");
             stringBuilder.Append(requestModel.ResourcePath);
             path = stringBuilder.ToString();
-            string canonicalRequest = new StringBuilder(requestModel.HttpMethod.ToString().ToUpper())
+            string canonicalRequest = new StringBuilder(requestModel.HttpMethod)
                 .Append(ParameterConstant.LINE_SEPARATOR)
                 .Append(GetCanonicalizedResourcePath(path, false))
                 .Append(ParameterConstant.LINE_SEPARATOR)
