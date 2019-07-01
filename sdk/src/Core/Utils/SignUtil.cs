@@ -18,7 +18,7 @@ namespace JDCloudSDK.Core.Utils
         /// <param name="key">加密使用的key</param>
         /// <param name="algorithm">算法</param>
         /// <returns>签名计算的结果</returns>
-        public byte[] Sign(String stringData, byte[] key,
+        public static byte[] Sign(String stringData, byte[] key,
                            string algorithm)
         {
             try
@@ -103,7 +103,7 @@ namespace JDCloudSDK.Core.Utils
         /// <param name="key">密钥</param>
         /// <param name="algorithm">算法</param>
         /// <returns>HMAC计算的结果</returns>
-        public byte[] Sign(byte[] data, byte[] key, string algorithm)
+        public static byte[] Sign(byte[] data, byte[] key, string algorithm)
         {
             try
             {

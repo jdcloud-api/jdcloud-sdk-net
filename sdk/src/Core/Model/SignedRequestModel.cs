@@ -17,7 +17,7 @@ namespace JDCloudSDK.Core.Model
         /// <summary>
         /// the after sign all request head
         /// </summary>
-        public Dictionary<string, string> RequestHead { get; set; }
+        public Dictionary<string, string> RequestHead { get; set; } = new Dictionary<string, string>();
 
 
         /// <summary>

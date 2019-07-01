@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Linq;
+using System.Globalization;
 
 namespace JDCloudSDK.Core.Auth.Sign
 {
@@ -50,29 +52,155 @@ namespace JDCloudSDK.Core.Auth.Sign
         public SignedRequestModel Sign(RequestModel requestModel, Credentials credentials) {
             string nonceId = Guid.NewGuid().ToString().ToLower();
             var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
-            string formattedSigningDatetime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
+            string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
             string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
             string scope = GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName);
             var requestHeader = requestModel.Header;
             requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
-                              new List<string> { formattedSigningDatetime } );
+                              new List<string> { formattedSigningDateTime } );
             requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE, 
                               new List<string> { nonceId });
-
             var contentSHA256 = CalculateContentHash(requestModel);
             var canonicalRequest = CreateCanonicalRequest(requestModel, contentSHA256);
+            var stringToSign = CreateStringToSign(canonicalRequest, formattedSigningDateTime, scope);
 
-            return null;
+            byte[] kSecret = System.Text.Encoding.UTF8.GetBytes($"JDCLOUD2{credentials.SecretAccessKey}");
+            byte[] kDate =SignUtil.Sign(formattedSigningDate, kSecret, ParameterConstant.SIGN_SHA256);
+            byte[] kRegion = SignUtil.Sign(requestModel.RegionName, kDate, ParameterConstant.SIGN_SHA256);
+            byte[] kService = SignUtil.Sign(requestModel.ServiceName, kRegion, ParameterConstant.SIGN_SHA256);
+            byte[] signingKey = SignUtil.Sign(ParameterConstant.JDCLOUD_TERMINATOR, kService, ParameterConstant.SIGN_SHA256);
+            byte[] signature = ComputeSignature(stringToSign, signingKey);
+            string signingCredentials = credentials.AccessKeyId + "/" + scope;
+            string credential = "Credential=" + signingCredentials;
+            string signerHeaders = "SignedHeaders=" + GetSignedHeadersString(requestModel);
+            string signatureHeader = "Signature=" + StringUtils.ByteToHex(signature, true);
+
+            var signHeader = new StringBuilder().Append(ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM)
+                    .Append(" ")
+                    .Append(credential)
+                    .Append(", ")
+                    .Append(signerHeaders)
+                    .Append(", ")
+                    .Append(signatureHeader)
+                    .ToString();
+           
+            requestModel.AddHeader(ParameterConstant.AUTHORIZATION, signHeader);
+            SignedRequestModel signedRequestModel = new SignedRequestModel();
+            signedRequestModel.CanonicalRequest = canonicalRequest;
+            signedRequestModel.ContentSHA256 = contentSHA256;
+            foreach (var header in requestModel.Header) {
+                signedRequestModel.RequestHead.Add(header.Key, string.Join(",", header.Value));
+            }
+            signedRequestModel.RequestNonceId = nonceId; 
+            signedRequestModel.SignedHeaders = signHeader;
+            signedRequestModel.StringSignature = stringToSign;
+            signedRequestModel.StringToSign = stringToSign; 
+            return signedRequestModel;
+        }
+
+       
+
+        /// <summary>
+        /// 计算签名
+        /// </summary>
+        /// <param name="stringToSign">需要签名的字符串</param>
+        /// <param name="signingKey">签名使用的key</param>
+        /// <returns>签名后的字节数组信息</returns>
+        private byte[] ComputeSignature(string stringToSign, byte[] signingKey)
+        {
+            byte[] stringToSignBytes = System.Text.Encoding.UTF8.GetBytes(stringToSign); 
+            return SignUtil.Sign(stringToSignBytes, signingKey, ParameterConstant.SIGN_SHA256);
         }
 
 
-        private string CreateCanonicalRequest(RequestModel requestModel, string contentSha256) {
-            var requestParameters = requestModel.QueryParameters;
-            if (!requestParameters.IsNullOrWhiteSpace()) {
-                if (requestParameters.StartsWith("?")) {
-                    requestParameters = requestParameters.Substring(1);
+
+
+        /// <summary>
+        ///  获得待计算签名的字符串
+        /// </summary>
+        /// <param name="canonicalRequest">canonicalRequest 字符串</param>
+        /// <param name="formattedSigningDateTime">签名时间信息</param>
+        /// <param name="scope">签名 scope 信息</param>
+        /// <returns>计算签名的字符串</returns>
+        private string CreateStringToSign(string canonicalRequest,
+                                     string formattedSigningDateTime,string scope)
+        {
+            string stringToSign = new StringBuilder(ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM)
+                  .Append(ParameterConstant.LINE_SEPARATOR)
+                  .Append(formattedSigningDateTime)
+                  .Append(ParameterConstant.LINE_SEPARATOR)
+                  .Append(scope)
+                  .Append(ParameterConstant.LINE_SEPARATOR)
+                  .Append(StringUtils.ByteToHex(SignUtil.SignHash(canonicalRequest), true))
+                  .ToString();
+            return stringToSign;
+        }
+        /// <summary>
+        /// order request parameters
+        /// </summary>
+        /// <param name="requestQueryParameters"></param>
+        /// <returns></returns>
+        private static string OrderRequestParameters(string requestQueryParameters) {
+            if (requestQueryParameters.IsNullOrWhiteSpace()) {
+                return string.Empty;
+            }
+            if (!requestQueryParameters.IsNullOrWhiteSpace())
+            {
+                if (requestQueryParameters.StartsWith("?"))
+                {
+                    requestQueryParameters = requestQueryParameters.Substring(1);
                 }
             }
+            Dictionary<string, string> paramDic = new Dictionary<string, string>();
+            var paramArray = requestQueryParameters.Split('&');
+            if (paramArray != null && paramArray.Length > 0) {
+                foreach (var paramKeyValue in paramArray) {
+                    var keyValue = paramKeyValue.Split('=');
+                    if (keyValue != null && keyValue.Length > 0) {
+                        if (keyValue.Length == 1)
+                        {
+                            paramDic.Add(keyValue[0], string.Empty);
+                        }
+                        else if (keyValue.Length == 2)
+                        {
+                            paramDic.Add(keyValue[0], keyValue[1]);
+                        }
+                        else {
+                            StringBuilder stringBuilder = new StringBuilder();
+                            for (int i = 1; i < keyValue.Length; i++) {
+                                if (i == keyValue.Length - 1)
+                                {
+                                    stringBuilder.Append(keyValue[i]);
+                                }
+                                else {
+                                    stringBuilder.Append(keyValue[i]).Append("=");
+                                }
+                            } 
+                            paramDic.Add(keyValue[0], stringBuilder.ToString());
+                        }
+                    }
+                }
+            }
+            if (paramDic != null && paramDic.Count > 0) {
+                StringBuilder resultBuilder = new StringBuilder();
+                var orderParamDic = paramDic.OrderBy(p => p.Key);
+                foreach (var param in orderParamDic) {
+                    resultBuilder.Append(param.Key).Append("=").Append(param.Value);
+                    resultBuilder.Append("&");
+                }
+                return resultBuilder.ToString().TrimEnd('&');
+            } 
+            return string.Empty;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestModel"></param>
+        /// <param name="contentSha256"></param>
+        /// <returns></returns>
+        private string CreateCanonicalRequest(RequestModel requestModel, string contentSha256) {
+            var requestParameters = OrderRequestParameters(requestModel.QueryParameters);
             string path = "";
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append(requestModel.Uri.Host);
@@ -88,15 +216,88 @@ namespace JDCloudSDK.Core.Auth.Sign
                 .Append(ParameterConstant.LINE_SEPARATOR)
                 .Append(requestParameters)
                 .Append(ParameterConstant.LINE_SEPARATOR)
-                .Append(GetCanonicalizedHeaderString(builder))
+                .Append(GetCanonicalizedHeaderString(requestModel))
                 .Append(ParameterConstant.LINE_SEPARATOR)
-                .Append(GetSignedHeadersString(builder))
+                .Append(GetSignedHeadersString(requestModel))
                 .Append(ParameterConstant.LINE_SEPARATOR)
                 .Append(contentSha256)
                 .ToString();
 
 
             return string.Empty;
+        }
+
+
+        /// <summary>
+        /// 生成签名头信息字符串
+        /// </summary>
+        /// <param name="requestModel">http 请求信息</param>
+        /// <returns>签名头信息字符串</returns>
+        private string GetSignedHeadersString(RequestModel requestModel)
+        {
+            var headers = requestModel.Header;
+            var keys = headers.Keys;
+            List<string> keysList = keys.ToList().OrderBy(p => p.ToLower(CultureInfo.GetCultureInfo("en-US"))).ToList();
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (String header in keysList)
+            {
+                if (ShouldExcludeHeaderFromSigning(header))
+                {
+                    continue;
+                }
+                if (stringBuilder.Length > 0)
+                {
+                    stringBuilder.Append(";");
+                }
+                stringBuilder.Append(header.ToLower(CultureInfo.GetCultureInfo("en-US")));
+            }
+            return stringBuilder.ToString();
+        }
+
+        /// <summary>
+        /// 获取规范化的头信息
+        /// </summary>
+        /// <param name="requestModel">签名请求信息</param>
+        /// <returns>规范化头信息字符串</returns>
+        private string GetCanonicalizedHeaderString(RequestModel requestModel)
+        {
+            var headers = requestModel.Header;
+            var keys = headers.Keys;
+            List<string> keysList = keys.ToList().OrderBy(p => p.ToLower(CultureInfo.GetCultureInfo("en-US"))).ToList();
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var item in keysList)
+            {
+                if (ShouldExcludeHeaderFromSigning(item))
+                {
+                    continue;
+                }
+                string key = item.ToLower(CultureInfo.GetCultureInfo("en-US"));
+
+                foreach (var headerValue in headers[item])
+                {
+                    string headerCompactedValue = StringUtils.AppendCompactedString(key);
+                    stringBuilder.Append(key).Append(":");
+                    if (headerValue != null)
+                    {
+                        string headerValueCompactedValue = StringUtils.AppendCompactedString(headerValue);
+                        stringBuilder.Append(headerValueCompactedValue);
+                    }
+                    stringBuilder.Append("\n");
+                }
+            }
+
+
+            return stringBuilder.ToString();
+        }
+
+        /// <summary>
+        /// 是否属于被排除的报文头
+        /// </summary>
+        /// <param name="header">头信息字符串</param>
+        /// <returns>是否是需要排除的头信息</returns>
+        private bool ShouldExcludeHeaderFromSigning(string header)
+        {
+            return LIST_OF_HEADERS_TO_IGNORE_IN_LOWER_CASE.Contains(header.ToLower());
         }
 
 
@@ -244,23 +445,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
 
             return requestModel;
-        }
-
-
-        /// <summary>
-        /// 获取当前传入的区域信息
-        /// </summary>
-        /// <param name="host">http 请求host</param>
-        /// <param name="regionNameOverride">  region name 字符串</param>
-        /// <returns>格式化后的region 信息 </returns>
-        private string ParseRegion(string host, string regionNameOverride)
-        {
- 
-            return !regionNameOverride.IsNullOrWhiteSpace() ? regionNameOverride
-                    : HostNameUtils.ParseRegion(host,this.ServiceName);
-
-        }
-
+        } 
         /// <summary>
         /// Returns the scope to be used for the signing.
         /// </summary>
