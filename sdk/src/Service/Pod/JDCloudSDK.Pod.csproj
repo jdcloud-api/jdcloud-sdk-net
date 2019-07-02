@@ -3,17 +3,19 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.0.0.2</Version>
+        <Version>1.0.4.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>pod 服务</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageProjectUrl>https://docs.jdcloud.com/cn/sdk/dotnet</PackageProjectUrl>
-        <PackageIconUrl></PackageIconUrl>
+        <PackageIconUrl>https://www.jdcloud.com/static/img/favicon.ico</PackageIconUrl>
         <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>pod 服务</PackageReleaseNotes>
         <PackageOutputPath>..\..\..\Release\nuget</PackageOutputPath>
+        <Authors>JDCloud API Gateway</Authors>
+        <Company>JDCloud.com</Company>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)|$(TargetFramework)'=='Debug|AnyCPU|netstandard2.0'">
@@ -33,9 +35,21 @@
 		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\Nc\JDCloudSDK.Nc.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Charge\JDCloudSDK.Charge.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Nc\JDCloudSDK.Nc.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\Charge\JDCloudSDK.Charge.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Vpc\JDCloudSDK.Vpc.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Nc\JDCloudSDK.Nc.csproj" />
 	</ItemGroup>
 </Project>

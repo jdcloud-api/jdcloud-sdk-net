@@ -115,6 +115,10 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public NetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
+        /// Tags
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
+        ///<summary>
         /// 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }

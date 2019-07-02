@@ -79,6 +79,10 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public int? UnifyDate{ get; set; }
         ///<summary>
+        /// 是否自动支付 true-是 false-否（默认为true）
+        ///</summary>
+        public bool AutoPay{ get; set; }
+        ///<summary>
         /// 回调地址
         ///</summary>
         public string ReturnURL{ get; set; }

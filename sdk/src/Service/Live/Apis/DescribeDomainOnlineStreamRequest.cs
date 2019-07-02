@@ -34,40 +34,52 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  添加应用转码配置
-        ///         /// - 添加应用级别的转码模板配置
-        ///         /// 
+    ///  查询在线流列表
     /// </summary>
-    public class AddLiveStreamAppTranscodeRequest : JdcloudRequest
+    public class DescribeDomainOnlineStreamRequest : JdcloudRequest
     {
         ///<summary>
         /// 推流域名
         ///Required:true
         ///</summary>
         [Required]
-        public   string PublishDomain{ get; set; }
+        public   string DomainName{ get; set; }
         ///<summary>
         /// 应用名称
-        ///Required:true
         ///</summary>
-        [Required]
         public   string AppName{ get; set; }
         ///<summary>
-        /// 转码模版
-        /// - 取值范围: 系统标准转码模板, 用户自定义转码模板
-        /// - 系统标准转码模板
-        ///   ld (h.264/640*360/15f)
-        ///   sd (h.264/960*540/24f)
-        ///   hd (h.264/1280*720/25f)
-        ///   shd (h.264/1920*1080/30f)
-        ///   ld-265 (h-265/640*360/15f)
-        ///   sd-265 (h-265/960*540/24f)
-        ///   hd-265 (h-265/1280*720/25f)
-        ///   shd-265 (h-265/1920*1080/30f)
+        /// 流名称
+        ///</summary>
+        public   string StreamName{ get; set; }
+        ///<summary>
+        /// 页码，起始页码1
+        /// 
+        ///</summary>
+        public   int? PageNum{ get; set; }
+        ///<summary>
+        /// 每页最大记录数，取值：[10,100]，默认：10
+        /// 
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 起始时间
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
         /// 
         ///Required:true
         ///</summary>
         [Required]
-        public   string Template{ get; set; }
+        public   string StartTime{ get; set; }
+        ///<summary>
+        /// 结束时间:
+        /// - UTC时间
+        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+        ///   示例:2018-10-21T10:00:00Z
+        /// - 为空,默认为当前时间，查询时间跨度不超过30天
+        /// 
+        ///</summary>
+        public   string EndTime{ get; set; }
     }
 }

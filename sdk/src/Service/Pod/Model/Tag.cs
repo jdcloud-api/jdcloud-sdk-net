@@ -27,30 +27,23 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
-namespace JDCloudSDK.Nativecontainer.Model
+namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  在创建容器时指定的网卡信息
+    ///  tag
     /// </summary>
-    public class ContainerNetworkInterfaceAttachmentSpec
+    public class Tag
     {
 
         ///<summary>
-        /// 指明删除容器时是否删除网卡，默认True；当前只能是True
+        /// Tag键
         ///</summary>
-        public bool AutoDelete{ get; set; }
+        public string Key{ get; set; }
         ///<summary>
-        /// 设备Index
+        /// Tag值
         ///</summary>
-        public int? DeviceIndex{ get; set; }
-        ///<summary>
-        /// 网卡接口规范
-        ///Required:true
-        ///</summary>
-        [Required]
-        public NetworkInterfaceSpec NetworkInterface{ get; set; }
+        public string Value{ get; set; }
     }
 }

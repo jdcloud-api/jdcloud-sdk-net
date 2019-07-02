@@ -89,9 +89,9 @@ namespace JDCloudSDK.Pod.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -330,7 +330,7 @@ namespace JDCloudSDK.Pod.Client
         ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
         /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
         /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -342,12 +342,33 @@ namespace JDCloudSDK.Pod.Client
         ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
         /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
         /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DeletePodResponse> DeletePod(DeletePodRequest request) {
             return await new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RebuildPodResponse RebuildPod(RebuildPodRequest request) {
+            return  new RebuildPodExecutor().Client(this).Execute<RebuildPodResponse, RebuildPodResult, RebuildPodRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RebuildPodResponse> RebuildPod(RebuildPodRequest request) {
+            return await new RebuildPodExecutor().Client(this).Execute<RebuildPodResponse, RebuildPodResult, RebuildPodRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

@@ -75,6 +75,10 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
+        /// 主机绑定的内网ip地址
+        ///</summary>
+        public string IpAddress{ get; set; }
+        ///<summary>
         /// 资源计费类型 1:按配置,3:包年包月,默认不筛选
         ///</summary>
         public string BillingType{ get; set; }

@@ -69,6 +69,10 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public bool FormatVolume{ get; set; }
         ///<summary>
+        /// 云盘的 iops 值，目前只有 ssd.io1 类型有效
+        ///</summary>
+        public int? Iops{ get; set; }
+        ///<summary>
         /// 是否随pod删除。默认：true
         ///</summary>
         public bool AutoDelete{ get; set; }

@@ -28,9 +28,9 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Pod.Model;
 using JDCloudSDK.Nc.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Pod.Apis
 {
@@ -62,7 +62,7 @@ namespace  JDCloudSDK.Pod.Apis
         /// 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
         /// 
         ///</summary>
-        public   DockerRegistryData Data{ get; set; }
+        public   JDCloudSDK.Nc.Model.DockerRegistryData Data{ get; set; }
         ///<summary>
         /// Region ID
         ///Required:true

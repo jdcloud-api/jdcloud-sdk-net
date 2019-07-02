@@ -172,10 +172,10 @@ namespace JDCloudSDK.Live.Client
         ///       sd (h.264/960*540/24f)
         ///       hd (h.264/1280*720/25f)
         ///       shd (h.264/1920*1080/30f)
-        ///       ld.265 (h.265/640*360/15f)
-        ///       sd.265 (h.265/960*540/24f)
-        ///       hd.265 (h.265/1280*720/25f)
-        ///       shd.265 (h.265/1920*1080/30f)
+        ///       ld-265 (h-265/640*360/15f)
+        ///       sd-265 (h-265/960*540/24f)
+        ///       hd-265 (h-265/1280*720/25f)
+        ///       shd-265 (h-265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -192,16 +192,35 @@ namespace JDCloudSDK.Live.Client
         ///       sd (h.264/960*540/24f)
         ///       hd (h.264/1280*720/25f)
         ///       shd (h.264/1920*1080/30f)
-        ///       ld.265 (h.265/640*360/15f)
-        ///       sd.265 (h.265/960*540/24f)
-        ///       hd.265 (h.265/1280*720/25f)
-        ///       shd.265 (h.265/1920*1080/30f)
+        ///       ld-265 (h-265/640*360/15f)
+        ///       sd-265 (h-265/960*540/24f)
+        ///       hd-265 (h-265/1280*720/25f)
+        ///       shd-265 (h-265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamTranscodeTemplateResponse> DescribeCustomLiveStreamTranscodeTemplate(DescribeCustomLiveStreamTranscodeTemplateRequest request) {
             return await new DescribeCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplateResponse, DescribeCustomLiveStreamTranscodeTemplateResult, DescribeCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询在线流列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDomainOnlineStreamResponse DescribeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) {
+            return  new DescribeDomainOnlineStreamExecutor().Client(this).Execute<DescribeDomainOnlineStreamResponse, DescribeDomainOnlineStreamResult, DescribeDomainOnlineStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询在线流列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDomainOnlineStreamResponse> DescribeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) {
+            return await new DescribeDomainOnlineStreamExecutor().Client(this).Execute<DescribeDomainOnlineStreamResponse, DescribeDomainOnlineStreamResult, DescribeDomainOnlineStreamRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1841,10 +1860,10 @@ namespace JDCloudSDK.Live.Client
         ///     sd (h.264/960*540/24f)
         ///     hd (h.264/1280*720/25f)
         ///     shd (h.264/1920*1080/30f)
-        ///     ld.265 (h.265/640*360/15f)
-        ///     sd.265 (h.265/960*540/24f)
-        ///     hd.265 (h.265/1280*720/25f)
-        ///     shd.265 (h.265/1920*1080/30f)
+        ///     ld-265 (h-265/640*360/15f)
+        ///     sd-265 (h-265/960*540/24f)
+        ///     hd-265 (h-265/1280*720/25f)
+        ///     shd-265 (h-265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1861,10 +1880,10 @@ namespace JDCloudSDK.Live.Client
         ///     sd (h.264/960*540/24f)
         ///     hd (h.264/1280*720/25f)
         ///     shd (h.264/1920*1080/30f)
-        ///     ld.265 (h.265/640*360/15f)
-        ///     sd.265 (h.265/960*540/24f)
-        ///     hd.265 (h.265/1280*720/25f)
-        ///     shd.265 (h.265/1920*1080/30f)
+        ///     ld-265 (h-265/640*360/15f)
+        ///     sd-265 (h-265/960*540/24f)
+        ///     hd-265 (h-265/1280*720/25f)
+        ///     shd-265 (h-265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>

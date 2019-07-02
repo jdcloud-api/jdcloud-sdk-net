@@ -23,33 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-
-namespace JDCloudSDK.Live.Model
+namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  liveStatisticGroupQosByStreamResult
+    ///  查询在线流列表
     /// </summary>
-    public class LiveStatisticGroupQosByStreamResult
+    public class DescribeDomainOnlineStreamExecutor : JdcloudExecutor
     {
-
-        ///<summary>
-        /// 起始时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-        /// 
-        ///</summary>
-        public string StartTime{ get; set; }
-        ///<summary>
-        /// 结束时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-        /// 
-        ///</summary>
-        public string EndTime{ get; set; }
-        ///<summary>
-        /// Data
-        ///</summary>
-        public List<LiveStatisticGroupQosByStreamResultData> Data{ get; set; }
+        /// <summary>
+        ///  查询在线流列表接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "GET";
+            }
+        }
+        /// <summary>
+        ///  查询在线流列表接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/describeDomainOnlineStream";
+            }
+        }
     }
 }

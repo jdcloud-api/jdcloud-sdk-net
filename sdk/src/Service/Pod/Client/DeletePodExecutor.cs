@@ -36,7 +36,7 @@ namespace JDCloudSDK.Pod.Client
     ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
         /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
         /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
+        ///  [MFA enabled]
     /// </summary>
     public class DeletePodExecutor : JdcloudExecutor
     {
@@ -44,7 +44,7 @@ namespace JDCloudSDK.Pod.Client
         ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
         /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
         /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 接口的Http 请求方法
+        ///  [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -56,7 +56,7 @@ namespace JDCloudSDK.Pod.Client
         ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
         /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
         /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 接口的Http资源请求路径
+        ///  [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

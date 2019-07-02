@@ -44,6 +44,7 @@ namespace JDCloudSDK.Live.Model
         public string StreamName{ get; set; }
         ///<summary>
         /// 流状态
+        /// 
         ///</summary>
         public string Status{ get; set; }
     }
