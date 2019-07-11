@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47;net48</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
@@ -12,7 +12,6 @@
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageProjectUrl>https://docs.jdcloud.com/cn/sdk/dotnet</PackageProjectUrl>
 		<PackageIconUrl>https://www.jdcloud.com/static/img/favicon.ico</PackageIconUrl>
-        <PackageIconUrl></PackageIconUrl>
         <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>云主机实例、镜像、实例规格、实例模板、配额相关的接口</PackageReleaseNotes>
