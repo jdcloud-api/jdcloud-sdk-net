@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Vm.Apis
     public class CopyImagesResult : JdcloudResult
     {
         ///<summary>
-        /// CopyImages
+        /// 源镜像与目标镜像映射关系
         ///</summary>
         public List<CopyImage> CopyImages{ get; set; }
 

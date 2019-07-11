@@ -52,11 +52,11 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// 宽度
         ///</summary>
-        public   int? Width{ get; set; }
+        public   string Width{ get; set; }
         ///<summary>
         /// 高度
         ///</summary>
-        public   int? Height{ get; set; }
+        public   string Height{ get; set; }
         ///<summary>
         /// 水印位置
         ///</summary>
@@ -74,11 +74,11 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   int? OffsetY{ get; set; }
         ///<summary>
-        /// CreateTime
+        /// 创建时间
         ///</summary>
         public   DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// UpdateTime
+        /// 修改时间
         ///</summary>
         public   DateTime? UpdateTime{ get; set; }
     }

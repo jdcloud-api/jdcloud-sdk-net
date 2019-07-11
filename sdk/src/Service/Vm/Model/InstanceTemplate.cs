@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Vm.Model;
 
 namespace JDCloudSDK.Vm.Model
 {
@@ -56,7 +57,7 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 关联的高可用组(ag)信息
         ///</summary>
-        public List<Ag> Ags{ get; set; }
+        public List<JDCloudSDK.Vm.Model.Ag> Ags{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>

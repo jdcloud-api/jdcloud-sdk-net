@@ -51,39 +51,33 @@ namespace JDCloudSDK.Renewal.Model
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
-        /// 时间单位 1:小时 2:天 3:月 4:年
-        ///Required:true
-        ///</summary>
-        [Required]
-        public int TimeUnit{ get; set; }
-        ///<summary>
-        /// 时长
+        /// 续费时长(timeUnit&#x3D;MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit&#x3D;YEAR时只能传1、2、3)
         ///Required:true
         ///</summary>
         [Required]
         public int TimeSpan{ get; set; }
         ///<summary>
-        /// 签名 md5(pin+serviceCode+key)
+        /// 时间单位(MONTH-月,YEAR-年)
         ///Required:true
         ///</summary>
         [Required]
-        public string Sign{ get; set; }
+        public string TimeUnit{ get; set; }
         ///<summary>
-        /// 待续费资源id列表,英文逗号分隔
+        /// 待续费资源ID列表,英文逗号分隔
         ///Required:true
         ///</summary>
         [Required]
         public string InstanceIds{ get; set; }
         ///<summary>
-        /// 是否统一续费到期日续费 1-是 0-否（默认为0）
+        /// 续费至统一续费到期日(YES-是,NO-否)
         ///</summary>
-        public int? UnifyDate{ get; set; }
+        public string UnifyDate{ get; set; }
         ///<summary>
-        /// 是否自动支付 true-是 false-否（默认为true）
+        /// 是否自动支付
         ///</summary>
         public bool AutoPay{ get; set; }
         ///<summary>
-        /// 回调地址
+        /// 支付成功后的回调地址
         ///</summary>
         public string ReturnURL{ get; set; }
     }

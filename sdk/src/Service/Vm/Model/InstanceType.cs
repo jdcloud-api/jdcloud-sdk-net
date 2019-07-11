@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using Newtonsoft.Json;
+using JDCloudSDK.Vm.Model;
 
 namespace JDCloudSDK.Vm.Model
 {

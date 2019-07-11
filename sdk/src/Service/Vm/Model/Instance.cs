@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Charge.Model;
 using JDCloudSDK.Disk.Model;
 
@@ -118,7 +119,7 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
         ///</summary>
-        public Ag Ag{ get; set; }
+        public JDCloudSDK.Vm.Model.Ag Ag{ get; set; }
         ///<summary>
         /// 高可用组中的错误域
         ///</summary>

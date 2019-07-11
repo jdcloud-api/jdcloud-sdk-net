@@ -47,15 +47,15 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 视频参数
+        /// Video
         ///</summary>
         public   Video Video{ get; set; }
         ///<summary>
-        /// 音频参数
+        /// Audio
         ///</summary>
         public   Audio Audio{ get; set; }
         ///<summary>
-        /// 封装配置
+        /// Encapsulation
         ///</summary>
         public   Encapsulation Encapsulation{ get; set; }
         ///<summary>
@@ -67,11 +67,11 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Source{ get; set; }
         ///<summary>
-        /// CreateTime
+        /// 创建时间
         ///</summary>
         public   DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// UpdateTime
+        /// 修改时间
         ///</summary>
         public   DateTime? UpdateTime{ get; set; }
     }

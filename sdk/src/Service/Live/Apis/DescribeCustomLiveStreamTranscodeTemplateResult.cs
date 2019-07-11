@@ -40,14 +40,19 @@ namespace  JDCloudSDK.Live.Apis
         ///         ///       sd (h.264/960*540/24f)
         ///         ///       hd (h.264/1280*720/25f)
         ///         ///       shd (h.264/1920*1080/30f)
-        ///         ///       ld-265 (h-265/640*360/15f)
-        ///         ///       sd-265 (h-265/960*540/24f)
-        ///         ///       hd-265 (h-265/1280*720/25f)
-        ///         ///       shd-265 (h-265/1920*1080/30f)
+        ///         ///       ld-265 (h.265/640*360/15f)
+        ///         ///       sd-265 (h.265/960*540/24f)
+        ///         ///       hd-265 (h.265/1280*720/25f)
+        ///         ///       shd-265 (h.265/1920*1080/30f)
         ///         /// 
     /// </summary>
     public class DescribeCustomLiveStreamTranscodeTemplateResult : JdcloudResult
     {
+        ///<summary>
+        /// 视频编码格式，取值：h264,h265，默认h264
+        /// 
+        ///</summary>
+        public   string VideoCodec{ get; set; }
         ///<summary>
         /// 转码输出的码率值
         /// - 单位: kpbs
@@ -65,7 +70,7 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? Width{ get; set; }
         ///<summary>
-        /// 转码输出视频宽度
+        /// 转码输出视频高度
         /// 
         ///</summary>
         public   int? Height{ get; set; }
@@ -102,5 +107,17 @@ namespace  JDCloudSDK.Live.Apis
         /// 
         ///</summary>
         public   int? AudioCodeRate{ get; set; }
+        ///<summary>
+        /// 京享超清
+        /// - 取值: jdchd-1.0,off
+        /// 
+        ///</summary>
+        public   string Jdchd{ get; set; }
+        ///<summary>
+        /// 舒适音频
+        /// - 取值: on,off
+        /// 
+        ///</summary>
+        public   string AudioComfort{ get; set; }
     }
 }

@@ -39,17 +39,9 @@ namespace  JDCloudSDK.Vod.Apis
     public class UpdateCategoryRequest : JdcloudRequest
     {
         ///<summary>
-        /// 分类ID
-        ///</summary>
-        public   long? Id{ get; set; }
-        ///<summary>
         /// 分类名称
         ///</summary>
         public   string Name{ get; set; }
-        ///<summary>
-        /// 分类级别
-        ///</summary>
-        public   int? Level{ get; set; }
         ///<summary>
         /// 父分类ID
         ///</summary>

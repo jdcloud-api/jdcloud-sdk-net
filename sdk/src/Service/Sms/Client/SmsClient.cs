@@ -142,8 +142,8 @@ namespace JDCloudSDK.Sms.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SendBatchSmsResponse SendBatchSms(SendBatchSmsRequest request) {
-            return  new SendBatchSmsExecutor().Client(this).Execute<SendBatchSmsResponse, SendBatchSmsResult, SendBatchSmsRequest>(request);
+        public BatchSendResponse BatchSend(BatchSendRequest request) {
+            return  new BatchSendExecutor().Client(this).Execute<BatchSendResponse, BatchSendResult, BatchSendRequest>(request);
         }
 #else
         /// <summary>
@@ -151,27 +151,46 @@ namespace JDCloudSDK.Sms.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SendBatchSmsResponse> SendBatchSms(SendBatchSmsRequest request) {
-            return await new SendBatchSmsExecutor().Client(this).Execute<SendBatchSmsResponse, SendBatchSmsResult, SendBatchSmsRequest>(request).ConfigureAwait(false);
+        public async Task<BatchSendResponse> BatchSend(BatchSendRequest request) {
+            return await new BatchSendExecutor().Client(this).Execute<BatchSendResponse, BatchSendResult, BatchSendRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  拉取单个手机短信状态
+        ///  短信发送回执接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public PullMtMsgByMobileResponse PullMtMsgByMobile(PullMtMsgByMobileRequest request) {
-            return  new PullMtMsgByMobileExecutor().Client(this).Execute<PullMtMsgByMobileResponse, PullMtMsgByMobileResult, PullMtMsgByMobileRequest>(request);
+        public StatusReportResponse StatusReport(StatusReportRequest request) {
+            return  new StatusReportExecutor().Client(this).Execute<StatusReportResponse, StatusReportResult, StatusReportRequest>(request);
         }
 #else
         /// <summary>
-        ///  拉取单个手机短信状态
+        ///  短信发送回执接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<PullMtMsgByMobileResponse> PullMtMsgByMobile(PullMtMsgByMobileRequest request) {
-            return await new PullMtMsgByMobileExecutor().Client(this).Execute<PullMtMsgByMobileResponse, PullMtMsgByMobileResult, PullMtMsgByMobileRequest>(request).ConfigureAwait(false);
+        public async Task<StatusReportResponse> StatusReport(StatusReportRequest request) {
+            return await new StatusReportExecutor().Client(this).Execute<StatusReportResponse, StatusReportResult, StatusReportRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  短信回复接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ReplyResponse Reply(ReplyRequest request) {
+            return  new ReplyExecutor().Client(this).Execute<ReplyResponse, ReplyResult, ReplyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  短信回复接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ReplyResponse> Reply(ReplyRequest request) {
+            return await new ReplyExecutor().Client(this).Execute<ReplyResponse, ReplyResult, ReplyRequest>(request).ConfigureAwait(false);
         }
 #endif
 

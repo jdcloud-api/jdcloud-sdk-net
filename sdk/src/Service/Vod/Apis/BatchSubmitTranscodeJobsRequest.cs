@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// Jobs
         ///</summary>
-        public List<SubmitTranscodeJobReq> Jobs{ get; set; }
+        public List<SubmitTranscodeJobRequestObject> Jobs{ get; set; }
 
     }
 }

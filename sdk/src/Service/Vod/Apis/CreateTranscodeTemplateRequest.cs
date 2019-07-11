@@ -43,15 +43,15 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 视频参数
+        /// Video
         ///</summary>
         public   Video Video{ get; set; }
         ///<summary>
-        /// 音频参数
+        /// Audio
         ///</summary>
         public   Audio Audio{ get; set; }
         ///<summary>
-        /// 封装配置
+        /// Encapsulation
         ///</summary>
         public   Encapsulation Encapsulation{ get; set; }
         ///<summary>

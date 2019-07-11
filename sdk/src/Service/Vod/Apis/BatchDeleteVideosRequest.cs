@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Vod.Apis
     public class BatchDeleteVideosRequest : JdcloudRequest
     {
         ///<summary>
-        /// VideoIds
+        /// 需要删除的视频ID列表
         ///</summary>
         public List<string> VideoIds{ get; set; }
 

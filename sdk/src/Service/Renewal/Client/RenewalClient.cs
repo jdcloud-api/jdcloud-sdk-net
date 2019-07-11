@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * 续费管理
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -39,8 +39,8 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Renewal.Client
 {
     /// <summary>
-    ///  JDCLOUD Renewal API v2
-    ///  API related to Renewal
+    ///  续费管理
+    ///  续费管理相关接口
     ///  Renewal Api 客户端
     ///</summary>
     public class RenewalClient : JdcloudClient
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Renewal.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  开通、取消实例自动续费
+        ///  为一个或多个实例设置自动续费服务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Renewal.Client
         }
 #else
         /// <summary>
-        ///  开通、取消实例自动续费
+        ///  为一个或多个实例设置自动续费服务。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,7 +157,7 @@ namespace JDCloudSDK.Renewal.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  实例续费
+        ///  对相关实例进行续费。调用该接口会创建一个续费订单，并自动扣除您账户可用代金券和余额完成支付，如因为某些原因支付失败，订单会自动取消。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -166,7 +166,7 @@ namespace JDCloudSDK.Renewal.Client
         }
 #else
         /// <summary>
-        ///  实例续费
+        ///  对相关实例进行续费。调用该接口会创建一个续费订单，并自动扣除您账户可用代金券和余额完成支付，如因为某些原因支付失败，订单会自动取消。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Renewal.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询可续费实例
+        ///  提供可续费的实例信息查询。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,12 +185,31 @@ namespace JDCloudSDK.Renewal.Client
         }
 #else
         /// <summary>
-        ///  查询可续费实例
+        ///  提供可续费的实例信息查询。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryInstanceResponse> QueryInstance(QueryInstanceRequest request) {
             return await new QueryInstanceExecutor().Client(this).Execute<QueryInstanceResponse, QueryInstanceResult, QueryInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询已过期资源详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeExpiredResourcesResponse DescribeExpiredResources(DescribeExpiredResourcesRequest request) {
+            return  new DescribeExpiredResourcesExecutor().Client(this).Execute<DescribeExpiredResourcesResponse, DescribeExpiredResourcesResult, DescribeExpiredResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询已过期资源详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeExpiredResourcesResponse> DescribeExpiredResources(DescribeExpiredResourcesRequest request) {
+            return await new DescribeExpiredResourcesExecutor().Client(this).Execute<DescribeExpiredResourcesResponse, DescribeExpiredResourcesResult, DescribeExpiredResourcesRequest>(request).ConfigureAwait(false);
         }
 #endif
 

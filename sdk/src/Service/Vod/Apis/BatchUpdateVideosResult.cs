@@ -38,14 +38,19 @@ namespace  JDCloudSDK.Vod.Apis
     public class BatchUpdateVideosResult : JdcloudResult
     {
         ///<summary>
-        /// UpdateVideoIds
+        /// 更新成功的视频ID列表
         ///</summary>
-        public List<string> UpdateVideoIds{ get; set; }
+        public List<string> OkVideoIds{ get; set; }
 
         ///<summary>
-        /// NotFoundVideoIds
+        /// 未找到的视频ID列表
         ///</summary>
         public List<string> NotFoundVideoIds{ get; set; }
+
+        ///<summary>
+        /// 更新失败的视频ID列表
+        ///</summary>
+        public List<string> FailedVideoIds{ get; set; }
 
     }
 }

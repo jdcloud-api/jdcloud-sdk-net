@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  视频参数
+    ///  视频参数配置
     /// </summary>
     public class Video
     {

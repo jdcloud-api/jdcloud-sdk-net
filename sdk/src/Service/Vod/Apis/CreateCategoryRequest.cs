@@ -42,10 +42,6 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 分类级别
-        ///</summary>
-        public   int? Level{ get; set; }
-        ///<summary>
         /// 父分类ID
         ///</summary>
         public   long? ParentId{ get; set; }

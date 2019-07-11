@@ -40,10 +40,6 @@ namespace  JDCloudSDK.Vod.Apis
     public class SetRefererRuleRequest : JdcloudRequest
     {
         ///<summary>
-        /// 规则类型，取值 &#39;referer&#39;
-        ///</summary>
-        public   string RuleType{ get; set; }
-        ///<summary>
         /// 规则配置对象
         ///</summary>
         public   Config Config{ get; set; }

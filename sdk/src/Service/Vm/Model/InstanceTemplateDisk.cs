@@ -38,11 +38,11 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 云硬盘类型，取值为 ssd 或 premium-hdd
+        /// 云硬盘类型，取值为 ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        /// 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+        /// 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
         ///</summary>
         public int? DiskSizeGB{ get; set; }
         ///<summary>

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * Renew Management APIs
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Renewal.Client
 {
 
     /// <summary>
-    ///  查询可续费实例
+    ///  提供可续费的实例信息查询。
     /// </summary>
     public class QueryInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询可续费实例接口的Http 请求方法
+        ///  提供可续费的实例信息查询。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Renewal.Client
             }
         }
         /// <summary>
-        ///  查询可续费实例接口的Http资源请求路径
+        ///  提供可续费的实例信息查询。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

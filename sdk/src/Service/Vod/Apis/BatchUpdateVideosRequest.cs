@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Vod.Model;
 
 namespace  JDCloudSDK.Vod.Apis
 {
@@ -38,9 +39,9 @@ namespace  JDCloudSDK.Vod.Apis
     public class BatchUpdateVideosRequest : JdcloudRequest
     {
         ///<summary>
-        /// Contents
+        /// 批量更新视频的条目列表信息
         ///</summary>
-        public List<object> Contents{ get; set; }
+        public List<UpdateVideoBulkItem> Bulk{ get; set; }
 
     }
 }

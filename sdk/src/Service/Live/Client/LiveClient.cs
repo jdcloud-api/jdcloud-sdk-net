@@ -138,6 +138,1260 @@ namespace JDCloudSDK.Live.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  设置播放鉴权IP黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetPlayAuthIPConfigResponse SetPlayAuthIPConfig(SetPlayAuthIPConfigRequest request) {
+            return  new SetPlayAuthIPConfigExecutor().Client(this).Execute<SetPlayAuthIPConfigResponse, SetPlayAuthIPConfigResult, SetPlayAuthIPConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置播放鉴权IP黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetPlayAuthIPConfigResponse> SetPlayAuthIPConfig(SetPlayAuthIPConfigRequest request) {
+            return await new SetPlayAuthIPConfigExecutor().Client(this).Execute<SetPlayAuthIPConfigResponse, SetPlayAuthIPConfigResult, SetPlayAuthIPConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询录制文件列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveRecordFilesResponse DescribeLiveRecordFiles(DescribeLiveRecordFilesRequest request) {
+            return  new DescribeLiveRecordFilesExecutor().Client(this).Execute<DescribeLiveRecordFilesResponse, DescribeLiveRecordFilesResult, DescribeLiveRecordFilesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询录制文件列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveRecordFilesResponse> DescribeLiveRecordFiles(DescribeLiveRecordFilesRequest request) {
+            return await new DescribeLiveRecordFilesExecutor().Client(this).Execute<DescribeLiveRecordFilesResponse, DescribeLiveRecordFilesResult, DescribeLiveRecordFilesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询在线流列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDomainOnlineStreamResponse DescribeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) {
+            return  new DescribeDomainOnlineStreamExecutor().Client(this).Execute<DescribeDomainOnlineStreamResponse, DescribeDomainOnlineStreamResult, DescribeDomainOnlineStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询在线流列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDomainOnlineStreamResponse> DescribeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) {
+            return await new DescribeDomainOnlineStreamExecutor().Client(this).Execute<DescribeDomainOnlineStreamResponse, DescribeDomainOnlineStreamResult, DescribeDomainOnlineStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询URL播放排行
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUrlRankingResponse DescribeUrlRanking(DescribeUrlRankingRequest request) {
+            return  new DescribeUrlRankingExecutor().Client(this).Execute<DescribeUrlRankingResponse, DescribeUrlRankingResult, DescribeUrlRankingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询URL播放排行
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUrlRankingResponse> DescribeUrlRanking(DescribeUrlRankingRequest request) {
+            return await new DescribeUrlRankingExecutor().Client(this).Execute<DescribeUrlRankingResponse, DescribeUrlRankingResult, DescribeUrlRankingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启回看
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OpenLiveRestartResponse OpenLiveRestart(OpenLiveRestartRequest request) {
+            return  new OpenLiveRestartExecutor().Client(this).Execute<OpenLiveRestartResponse, OpenLiveRestartResult, OpenLiveRestartRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启回看
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OpenLiveRestartResponse> OpenLiveRestart(OpenLiveRestartRequest request) {
+            return await new OpenLiveRestartExecutor().Client(this).Execute<OpenLiveRestartResponse, OpenLiveRestartResult, OpenLiveRestartRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除直播流状态回调地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamNotifyConfigResponse DeleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) {
+            return  new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除直播流状态回调地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamNotifyConfigResponse> DeleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) {
+            return await new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改用户自定义直播录制模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCustomLiveStreamRecordTemplateResponse UpdateCustomLiveStreamRecordTemplate(UpdateCustomLiveStreamRecordTemplateRequest request) {
+            return  new UpdateCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamRecordTemplateResponse, UpdateCustomLiveStreamRecordTemplateResult, UpdateCustomLiveStreamRecordTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改用户自定义直播录制模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCustomLiveStreamRecordTemplateResponse> UpdateCustomLiveStreamRecordTemplate(UpdateCustomLiveStreamRecordTemplateRequest request) {
+            return await new UpdateCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamRecordTemplateResponse, UpdateCustomLiveStreamRecordTemplateResult, UpdateCustomLiveStreamRecordTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置播放鉴权referer
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetPlayAuthRefererConfigResponse SetPlayAuthRefererConfig(SetPlayAuthRefererConfigRequest request) {
+            return  new SetPlayAuthRefererConfigExecutor().Client(this).Execute<SetPlayAuthRefererConfigResponse, SetPlayAuthRefererConfigResult, SetPlayAuthRefererConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置播放鉴权referer
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetPlayAuthRefererConfigResponse> SetPlayAuthRefererConfig(SetPlayAuthRefererConfigRequest request) {
+            return await new SetPlayAuthRefererConfigExecutor().Client(this).Execute<SetPlayAuthRefererConfigResponse, SetPlayAuthRefererConfigResult, SetPlayAuthRefererConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除录制文件
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveRecordFilesResponse DeleteLiveRecordFiles(DeleteLiveRecordFilesRequest request) {
+            return  new DeleteLiveRecordFilesExecutor().Client(this).Execute<DeleteLiveRecordFilesResponse, DeleteLiveRecordFilesResult, DeleteLiveRecordFilesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除录制文件
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveRecordFilesResponse> DeleteLiveRecordFiles(DeleteLiveRecordFilesRequest request) {
+            return await new DeleteLiveRecordFilesExecutor().Client(this).Execute<DeleteLiveRecordFilesResponse, DeleteLiveRecordFilesResult, DeleteLiveRecordFilesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户自定义直播录制模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomLiveStreamRecordTemplatesResponse DescribeCustomLiveStreamRecordTemplates(DescribeCustomLiveStreamRecordTemplatesRequest request) {
+            return  new DescribeCustomLiveStreamRecordTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordTemplatesResponse, DescribeCustomLiveStreamRecordTemplatesResult, DescribeCustomLiveStreamRecordTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户自定义直播录制模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomLiveStreamRecordTemplatesResponse> DescribeCustomLiveStreamRecordTemplates(DescribeCustomLiveStreamRecordTemplatesRequest request) {
+            return await new DescribeCustomLiveStreamRecordTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordTemplatesResponse, DescribeCustomLiveStreamRecordTemplatesResult, DescribeCustomLiveStreamRecordTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播直播录制配置
+        /// - 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+        /// - 该查询旨在查询域名、应用、流最终生效的录制模板配置,并非各级的模板绑定情况
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomLiveStreamRecordConfigResponse DescribeCustomLiveStreamRecordConfig(DescribeCustomLiveStreamRecordConfigRequest request) {
+            return  new DescribeCustomLiveStreamRecordConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordConfigResponse, DescribeCustomLiveStreamRecordConfigResult, DescribeCustomLiveStreamRecordConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播直播录制配置
+        /// - 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+        /// - 该查询旨在查询域名、应用、流最终生效的录制模板配置,并非各级的模板绑定情况
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomLiveStreamRecordConfigResponse> DescribeCustomLiveStreamRecordConfig(DescribeCustomLiveStreamRecordConfigRequest request) {
+            return await new DescribeCustomLiveStreamRecordConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordConfigResponse, DescribeCustomLiveStreamRecordConfigResult, DescribeCustomLiveStreamRecordConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest request) {
+            return  new DescribeLiveDomainsExecutor().Client(this).Execute<DescribeLiveDomainsResponse, DescribeLiveDomainsResult, DescribeLiveDomainsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveDomainsResponse> DescribeLiveDomains(DescribeLiveDomainsRequest request) {
+            return await new DescribeLiveDomainsExecutor().Client(this).Execute<DescribeLiveDomainsResponse, DescribeLiveDomainsResult, DescribeLiveDomainsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加直播应用名
+        /// - 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
+        /// - 新的应用名可以推流时自动创建
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveAppResponse AddLiveApp(AddLiveAppRequest request) {
+            return  new AddLiveAppExecutor().Client(this).Execute<AddLiveAppResponse, AddLiveAppResult, AddLiveAppRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加直播应用名
+        /// - 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
+        /// - 新的应用名可以推流时自动创建
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveAppResponse> AddLiveApp(AddLiveAppRequest request) {
+            return await new AddLiveAppExecutor().Client(this).Execute<AddLiveAppResponse, AddLiveAppResult, AddLiveAppRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名下的截图模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveDomainSnapshotConfigResponse DescribeLiveDomainSnapshotConfig(DescribeLiveDomainSnapshotConfigRequest request) {
+            return  new DescribeLiveDomainSnapshotConfigExecutor().Client(this).Execute<DescribeLiveDomainSnapshotConfigResponse, DescribeLiveDomainSnapshotConfigResult, DescribeLiveDomainSnapshotConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名下的截图模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveDomainSnapshotConfigResponse> DescribeLiveDomainSnapshotConfig(DescribeLiveDomainSnapshotConfigRequest request) {
+            return await new DescribeLiveDomainSnapshotConfigExecutor().Client(this).Execute<DescribeLiveDomainSnapshotConfigResponse, DescribeLiveDomainSnapshotConfigResult, DescribeLiveDomainSnapshotConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改用户自定义水印模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCustomLiveStreamWatermarkTemplateResponse UpdateCustomLiveStreamWatermarkTemplate(UpdateCustomLiveStreamWatermarkTemplateRequest request) {
+            return  new UpdateCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamWatermarkTemplateResponse, UpdateCustomLiveStreamWatermarkTemplateResult, UpdateCustomLiveStreamWatermarkTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改用户自定义水印模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCustomLiveStreamWatermarkTemplateResponse> UpdateCustomLiveStreamWatermarkTemplate(UpdateCustomLiveStreamWatermarkTemplateRequest request) {
+            return await new UpdateCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamWatermarkTemplateResponse, UpdateCustomLiveStreamWatermarkTemplateResult, UpdateCustomLiveStreamWatermarkTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除应用级别水印模板配置
+        /// - 删除应用级别的水印模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamAppWatermarkResponse DeleteLiveStreamAppWatermark(DeleteLiveStreamAppWatermarkRequest request) {
+            return  new DeleteLiveStreamAppWatermarkExecutor().Client(this).Execute<DeleteLiveStreamAppWatermarkResponse, DeleteLiveStreamAppWatermarkResult, DeleteLiveStreamAppWatermarkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除应用级别水印模板配置
+        /// - 删除应用级别的水印模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamAppWatermarkResponse> DeleteLiveStreamAppWatermark(DeleteLiveStreamAppWatermarkRequest request) {
+            return await new DeleteLiveStreamAppWatermarkExecutor().Client(this).Execute<DeleteLiveStreamAppWatermarkResponse, DeleteLiveStreamAppWatermarkResult, DeleteLiveStreamAppWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名下的录制模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveDomainRecordConfigResponse DescribeLiveDomainRecordConfig(DescribeLiveDomainRecordConfigRequest request) {
+            return  new DescribeLiveDomainRecordConfigExecutor().Client(this).Execute<DescribeLiveDomainRecordConfigResponse, DescribeLiveDomainRecordConfigResult, DescribeLiveDomainRecordConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名下的录制模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveDomainRecordConfigResponse> DescribeLiveDomainRecordConfig(DescribeLiveDomainRecordConfigRequest request) {
+            return await new DescribeLiveDomainRecordConfigExecutor().Client(this).Execute<DescribeLiveDomainRecordConfigResponse, DescribeLiveDomainRecordConfigResult, DescribeLiveDomainRecordConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播流播放人数排行
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPlayerRankingDataResponse DescribeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) {
+            return  new DescribeLiveStreamPlayerRankingDataExecutor().Client(this).Execute<DescribeLiveStreamPlayerRankingDataResponse, DescribeLiveStreamPlayerRankingDataResult, DescribeLiveStreamPlayerRankingDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播流播放人数排行
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPlayerRankingDataResponse> DescribeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) {
+            return await new DescribeLiveStreamPlayerRankingDataExecutor().Client(this).Execute<DescribeLiveStreamPlayerRankingDataResponse, DescribeLiveStreamPlayerRankingDataResult, DescribeLiveStreamPlayerRankingDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询流分组统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStatisticGroupByStreamResponse DescribeLiveStatisticGroupByStream(DescribeLiveStatisticGroupByStreamRequest request) {
+            return  new DescribeLiveStatisticGroupByStreamExecutor().Client(this).Execute<DescribeLiveStatisticGroupByStreamResponse, DescribeLiveStatisticGroupByStreamResult, DescribeLiveStatisticGroupByStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询流分组统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStatisticGroupByStreamResponse> DescribeLiveStatisticGroupByStream(DescribeLiveStatisticGroupByStreamRequest request) {
+            return await new DescribeLiveStatisticGroupByStreamExecutor().Client(this).Execute<DescribeLiveStatisticGroupByStreamResponse, DescribeLiveStatisticGroupByStreamResult, DescribeLiveStatisticGroupByStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用应用
+        /// - 启用 停用 状态的应用
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartLiveAppResponse StartLiveApp(StartLiveAppRequest request) {
+            return  new StartLiveAppExecutor().Client(this).Execute<StartLiveAppResponse, StartLiveAppResult, StartLiveAppRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用应用
+        /// - 启用 停用 状态的应用
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartLiveAppResponse> StartLiveApp(StartLiveAppRequest request) {
+            return await new StartLiveAppExecutor().Client(this).Execute<StartLiveAppResponse, StartLiveAppResult, StartLiveAppRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播录制回调通知
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveStreamRecordNotifyConfigResponse SetLiveStreamRecordNotifyConfig(SetLiveStreamRecordNotifyConfigRequest request) {
+            return  new SetLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<SetLiveStreamRecordNotifyConfigResponse, SetLiveStreamRecordNotifyConfigResult, SetLiveStreamRecordNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播录制回调通知
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveStreamRecordNotifyConfigResponse> SetLiveStreamRecordNotifyConfig(SetLiveStreamRecordNotifyConfigRequest request) {
+            return await new SetLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<SetLiveStreamRecordNotifyConfigResponse, SetLiveStreamRecordNotifyConfigResult, SetLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播录制时长数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveRecordDataResponse DescribeLiveRecordData(DescribeLiveRecordDataRequest request) {
+            return  new DescribeLiveRecordDataExecutor().Client(this).Execute<DescribeLiveRecordDataResponse, DescribeLiveRecordDataResult, DescribeLiveRecordDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播录制时长数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveRecordDataResponse> DescribeLiveRecordData(DescribeLiveRecordDataRequest request) {
+            return await new DescribeLiveRecordDataExecutor().Client(this).Execute<DescribeLiveRecordDataResponse, DescribeLiveRecordDataResult, DescribeLiveRecordDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加直播截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddCustomLiveStreamSnapshotTemplateResponse AddCustomLiveStreamSnapshotTemplate(AddCustomLiveStreamSnapshotTemplateRequest request) {
+            return  new AddCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<AddCustomLiveStreamSnapshotTemplateResponse, AddCustomLiveStreamSnapshotTemplateResult, AddCustomLiveStreamSnapshotTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加直播截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddCustomLiveStreamSnapshotTemplateResponse> AddCustomLiveStreamSnapshotTemplate(AddCustomLiveStreamSnapshotTemplateRequest request) {
+            return await new AddCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<AddCustomLiveStreamSnapshotTemplateResponse, AddCustomLiveStreamSnapshotTemplateResult, AddCustomLiveStreamSnapshotTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动域名
+        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartLiveDomainResponse StartLiveDomain(StartLiveDomainRequest request) {
+            return  new StartLiveDomainExecutor().Client(this).Execute<StartLiveDomainResponse, StartLiveDomainResult, StartLiveDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动域名
+        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartLiveDomainResponse> StartLiveDomain(StartLiveDomainRequest request) {
+            return await new StartLiveDomainExecutor().Client(this).Execute<StartLiveDomainResponse, StartLiveDomainResult, StartLiveDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询播放鉴权配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribePlayAuthConfigResponse DescribePlayAuthConfig(DescribePlayAuthConfigRequest request) {
+            return  new DescribePlayAuthConfigExecutor().Client(this).Execute<DescribePlayAuthConfigResponse, DescribePlayAuthConfigResult, DescribePlayAuthConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询播放鉴权配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribePlayAuthConfigResponse> DescribePlayAuthConfig(DescribePlayAuthConfigRequest request) {
+            return await new DescribePlayAuthConfigExecutor().Client(this).Execute<DescribePlayAuthConfigResponse, DescribePlayAuthConfigResult, DescribePlayAuthConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户定义水印模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomLiveStreamWatermarkTemplatesResponse DescribeCustomLiveStreamWatermarkTemplates(DescribeCustomLiveStreamWatermarkTemplatesRequest request) {
+            return  new DescribeCustomLiveStreamWatermarkTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkTemplatesResponse, DescribeCustomLiveStreamWatermarkTemplatesResult, DescribeCustomLiveStreamWatermarkTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户定义水印模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomLiveStreamWatermarkTemplatesResponse> DescribeCustomLiveStreamWatermarkTemplates(DescribeCustomLiveStreamWatermarkTemplatesRequest request) {
+            return await new DescribeCustomLiveStreamWatermarkTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkTemplatesResponse, DescribeCustomLiveStreamWatermarkTemplatesResult, DescribeCustomLiveStreamWatermarkTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加应用转码配置
+        /// - 添加应用级别的转码模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamAppTranscodeResponse AddLiveStreamAppTranscode(AddLiveStreamAppTranscodeRequest request) {
+            return  new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加应用转码配置
+        /// - 添加应用级别的转码模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamAppTranscodeResponse> AddLiveStreamAppTranscode(AddLiveStreamAppTranscodeRequest request) {
+            return await new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除截图回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamSnapshotNotifyConfigResponse DeleteLiveStreamSnapshotNotifyConfig(DeleteLiveStreamSnapshotNotifyConfigRequest request) {
+            return  new DeleteLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamSnapshotNotifyConfigResponse, DeleteLiveStreamSnapshotNotifyConfigResult, DeleteLiveStreamSnapshotNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除截图回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamSnapshotNotifyConfigResponse> DeleteLiveStreamSnapshotNotifyConfig(DeleteLiveStreamSnapshotNotifyConfigRequest request) {
+            return await new DeleteLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamSnapshotNotifyConfigResponse, DeleteLiveStreamSnapshotNotifyConfigResult, DeleteLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询时移配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTimeshiftConfigsResponse DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
+            return  new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询时移配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTimeshiftConfigsResponse> DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
+            return await new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加应用级别水印配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamAppWatermarkResponse AddLiveStreamAppWatermark(AddLiveStreamAppWatermarkRequest request) {
+            return  new AddLiveStreamAppWatermarkExecutor().Client(this).Execute<AddLiveStreamAppWatermarkResponse, AddLiveStreamAppWatermarkResult, AddLiveStreamAppWatermarkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加应用级别水印配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamAppWatermarkResponse> AddLiveStreamAppWatermark(AddLiveStreamAppWatermarkRequest request) {
+            return await new AddLiveStreamAppWatermarkExecutor().Client(this).Execute<AddLiveStreamAppWatermarkResponse, AddLiveStreamAppWatermarkResult, AddLiveStreamAppWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除流级别水印模板配置
+        /// - 删除流级别水印模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamWatermarkResponse DeleteLiveStreamWatermark(DeleteLiveStreamWatermarkRequest request) {
+            return  new DeleteLiveStreamWatermarkExecutor().Client(this).Execute<DeleteLiveStreamWatermarkResponse, DeleteLiveStreamWatermarkResult, DeleteLiveStreamWatermarkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除流级别水印模板配置
+        /// - 删除流级别水印模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamWatermarkResponse> DeleteLiveStreamWatermark(DeleteLiveStreamWatermarkRequest request) {
+            return await new DeleteLiveStreamWatermarkExecutor().Client(this).Execute<DeleteLiveStreamWatermarkResponse, DeleteLiveStreamWatermarkResult, DeleteLiveStreamWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetPlayAuthConfigResponse SetPlayAuthConfig(SetPlayAuthConfigRequest request) {
+            return  new SetPlayAuthConfigExecutor().Client(this).Execute<SetPlayAuthConfigResponse, SetPlayAuthConfigResult, SetPlayAuthConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetPlayAuthConfigResponse> SetPlayAuthConfig(SetPlayAuthConfigRequest request) {
+            return await new SetPlayAuthConfigExecutor().Client(this).Execute<SetPlayAuthConfigResponse, SetPlayAuthConfigResult, SetPlayAuthConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除APP截图配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamAppSnapshotResponse DeleteLiveStreamAppSnapshot(DeleteLiveStreamAppSnapshotRequest request) {
+            return  new DeleteLiveStreamAppSnapshotExecutor().Client(this).Execute<DeleteLiveStreamAppSnapshotResponse, DeleteLiveStreamAppSnapshotResult, DeleteLiveStreamAppSnapshotRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除APP截图配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamAppSnapshotResponse> DeleteLiveStreamAppSnapshot(DeleteLiveStreamAppSnapshotRequest request) {
+            return await new DeleteLiveStreamAppSnapshotExecutor().Client(this).Execute<DeleteLiveStreamAppSnapshotResponse, DeleteLiveStreamAppSnapshotResult, DeleteLiveStreamAppSnapshotRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除录制回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamRecordNotifyConfigResponse DeleteLiveStreamRecordNotifyConfig(DeleteLiveStreamRecordNotifyConfigRequest request) {
+            return  new DeleteLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamRecordNotifyConfigResponse, DeleteLiveStreamRecordNotifyConfigResult, DeleteLiveStreamRecordNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除录制回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamRecordNotifyConfigResponse> DeleteLiveStreamRecordNotifyConfig(DeleteLiveStreamRecordNotifyConfigRequest request) {
+            return await new DeleteLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamRecordNotifyConfigResponse, DeleteLiveStreamRecordNotifyConfigResult, DeleteLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播水印配置
+        /// - 水印模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+        /// - 该查询旨在查询域名、应用、流最终生效的水印模板配置,并非各级的模板绑定情况
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomLiveStreamWatermarkConfigResponse DescribeCustomLiveStreamWatermarkConfig(DescribeCustomLiveStreamWatermarkConfigRequest request) {
+            return  new DescribeCustomLiveStreamWatermarkConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkConfigResponse, DescribeCustomLiveStreamWatermarkConfigResult, DescribeCustomLiveStreamWatermarkConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播水印配置
+        /// - 水印模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+        /// - 该查询旨在查询域名、应用、流最终生效的水印模板配置,并非各级的模板绑定情况
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomLiveStreamWatermarkConfigResponse> DescribeCustomLiveStreamWatermarkConfig(DescribeCustomLiveStreamWatermarkConfigRequest request) {
+            return await new DescribeCustomLiveStreamWatermarkConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkConfigResponse, DescribeCustomLiveStreamWatermarkConfigResult, DescribeCustomLiveStreamWatermarkConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加用户自定义直播录制模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddCustomLiveStreamRecordTemplateResponse AddCustomLiveStreamRecordTemplate(AddCustomLiveStreamRecordTemplateRequest request) {
+            return  new AddCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<AddCustomLiveStreamRecordTemplateResponse, AddCustomLiveStreamRecordTemplateResult, AddCustomLiveStreamRecordTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加用户自定义直播录制模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddCustomLiveStreamRecordTemplateResponse> AddCustomLiveStreamRecordTemplate(AddCustomLiveStreamRecordTemplateRequest request) {
+            return await new AddCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<AddCustomLiveStreamRecordTemplateResponse, AddCustomLiveStreamRecordTemplateResult, AddCustomLiveStreamRecordTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名下的水印模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveDomainWatermarkConfigResponse DescribeLiveDomainWatermarkConfig(DescribeLiveDomainWatermarkConfigRequest request) {
+            return  new DescribeLiveDomainWatermarkConfigExecutor().Client(this).Execute<DescribeLiveDomainWatermarkConfigResponse, DescribeLiveDomainWatermarkConfigResult, DescribeLiveDomainWatermarkConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名下的水印模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveDomainWatermarkConfigResponse> DescribeLiveDomainWatermarkConfig(DescribeLiveDomainWatermarkConfigRequest request) {
+            return await new DescribeLiveDomainWatermarkConfigExecutor().Client(this).Execute<DescribeLiveDomainWatermarkConfigResponse, DescribeLiveDomainWatermarkConfigResult, DescribeLiveDomainWatermarkConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
+            return  new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询播放鉴权KEY
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
+            return await new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询转码时长数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveTranscodingDurationDataResponse DescribeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) {
+            return  new DescribeLiveTranscodingDurationDataExecutor().Client(this).Execute<DescribeLiveTranscodingDurationDataResponse, DescribeLiveTranscodingDurationDataResult, DescribeLiveTranscodingDurationDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码时长数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveTranscodingDurationDataResponse> DescribeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) {
+            return await new DescribeLiveTranscodingDurationDataExecutor().Client(this).Execute<DescribeLiveTranscodingDurationDataResponse, DescribeLiveTranscodingDurationDataResult, DescribeLiveTranscodingDurationDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询截图列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveSnapshotsResponse DescribeLiveSnapshots(DescribeLiveSnapshotsRequest request) {
+            return  new DescribeLiveSnapshotsExecutor().Client(this).Execute<DescribeLiveSnapshotsResponse, DescribeLiveSnapshotsResult, DescribeLiveSnapshotsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询截图列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveSnapshotsResponse> DescribeLiveSnapshots(DescribeLiveSnapshotsRequest request) {
+            return await new DescribeLiveSnapshotsExecutor().Client(this).Execute<DescribeLiveSnapshotsResponse, DescribeLiveSnapshotsResult, DescribeLiveSnapshotsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除用户自定义转码模板
+        /// - 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCustomLiveStreamTranscodeTemplateResponse DeleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) {
+            return  new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除用户自定义转码模板
+        /// - 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCustomLiveStreamTranscodeTemplateResponse> DeleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) {
+            return await new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户自定义转码模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomLiveStreamTranscodeTemplatesResponse DescribeCustomLiveStreamTranscodeTemplates(DescribeCustomLiveStreamTranscodeTemplatesRequest request) {
+            return  new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户自定义转码模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomLiveStreamTranscodeTemplatesResponse> DescribeCustomLiveStreamTranscodeTemplates(DescribeCustomLiveStreamTranscodeTemplatesRequest request) {
+            return await new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播鉴黄张数数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLivePornDataResponse DescribeLivePornData(DescribeLivePornDataRequest request) {
+            return  new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播鉴黄张数数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLivePornDataResponse> DescribeLivePornData(DescribeLivePornDataRequest request) {
+            return await new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停用域名
+        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopLiveDomainResponse StopLiveDomain(StopLiveDomainRequest request) {
+            return  new StopLiveDomainExecutor().Client(this).Execute<StopLiveDomainResponse, StopLiveDomainResult, StopLiveDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停用域名
+        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopLiveDomainResponse> StopLiveDomain(StopLiveDomainRequest request) {
+            return await new StopLiveDomainExecutor().Client(this).Execute<StopLiveDomainResponse, StopLiveDomainResult, StopLiveDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询存储空间数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveFileStorageDataResponse DescribeLiveFileStorageData(DescribeLiveFileStorageDataRequest request) {
+            return  new DescribeLiveFileStorageDataExecutor().Client(this).Execute<DescribeLiveFileStorageDataResponse, DescribeLiveFileStorageDataResult, DescribeLiveFileStorageDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询存储空间数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveFileStorageDataResponse> DescribeLiveFileStorageData(DescribeLiveFileStorageDataRequest request) {
+            return await new DescribeLiveFileStorageDataExecutor().Client(this).Execute<DescribeLiveFileStorageDataResponse, DescribeLiveFileStorageDataResult, DescribeLiveFileStorageDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播中的流的信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest request) {
+            return  new DescribeLiveStreamOnlineListExecutor().Client(this).Execute<DescribeLiveStreamOnlineListResponse, DescribeLiveStreamOnlineListResult, DescribeLiveStreamOnlineListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播中的流的信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamOnlineListResponse> DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest request) {
+            return await new DescribeLiveStreamOnlineListExecutor().Client(this).Execute<DescribeLiveStreamOnlineListResponse, DescribeLiveStreamOnlineListResult, DescribeLiveStreamOnlineListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询录制回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamRecordNotifyConfigResponse DescribeLiveStreamRecordNotifyConfig(DescribeLiveStreamRecordNotifyConfigRequest request) {
+            return  new DescribeLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamRecordNotifyConfigResponse, DescribeLiveStreamRecordNotifyConfigResult, DescribeLiveStreamRecordNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询录制回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamRecordNotifyConfigResponse> DescribeLiveStreamRecordNotifyConfig(DescribeLiveStreamRecordNotifyConfigRequest request) {
+            return await new DescribeLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamRecordNotifyConfigResponse, DescribeLiveStreamRecordNotifyConfigResult, DescribeLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加域名截图配置
+        /// - 添加域名级别的截图模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamDomainSnapshotResponse AddLiveStreamDomainSnapshot(AddLiveStreamDomainSnapshotRequest request) {
+            return  new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加域名截图配置
+        /// - 添加域名级别的截图模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamDomainSnapshotResponse> AddLiveStreamDomainSnapshot(AddLiveStreamDomainSnapshotRequest request) {
+            return await new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名下的转码模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveDomainTranscodeConfigResponse DescribeLiveDomainTranscodeConfig(DescribeLiveDomainTranscodeConfigRequest request) {
+            return  new DescribeLiveDomainTranscodeConfigExecutor().Client(this).Execute<DescribeLiveDomainTranscodeConfigResponse, DescribeLiveDomainTranscodeConfigResult, DescribeLiveDomainTranscodeConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名下的转码模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveDomainTranscodeConfigResponse> DescribeLiveDomainTranscodeConfig(DescribeLiveDomainTranscodeConfigRequest request) {
+            return await new DescribeLiveDomainTranscodeConfigExecutor().Client(this).Execute<DescribeLiveDomainTranscodeConfigResponse, DescribeLiveDomainTranscodeConfigResult, DescribeLiveDomainTranscodeConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播流历史在线人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamHistoryUserNumResponse DescribeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request) {
+            return  new DescribeLiveStreamHistoryUserNumExecutor().Client(this).Execute<DescribeLiveStreamHistoryUserNumResponse, DescribeLiveStreamHistoryUserNumResult, DescribeLiveStreamHistoryUserNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播流历史在线人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamHistoryUserNumResponse> DescribeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request) {
+            return await new DescribeLiveStreamHistoryUserNumExecutor().Client(this).Execute<DescribeLiveStreamHistoryUserNumResponse, DescribeLiveStreamHistoryUserNumResult, DescribeLiveStreamHistoryUserNumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播流状态回调地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveStreamNotifyConfigResponse SetLiveStreamNotifyConfig(SetLiveStreamNotifyConfigRequest request) {
+            return  new SetLiveStreamNotifyConfigExecutor().Client(this).Execute<SetLiveStreamNotifyConfigResponse, SetLiveStreamNotifyConfigResult, SetLiveStreamNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播流状态回调地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveStreamNotifyConfigResponse> SetLiveStreamNotifyConfig(SetLiveStreamNotifyConfigRequest request) {
+            return await new SetLiveStreamNotifyConfigExecutor().Client(this).Execute<SetLiveStreamNotifyConfigResponse, SetLiveStreamNotifyConfigResult, SetLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取用户Bucket列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBucketsResponse DescribeBuckets(DescribeBucketsRequest request) {
+            return  new DescribeBucketsExecutor().Client(this).Execute<DescribeBucketsResponse, DescribeBucketsResult, DescribeBucketsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取用户Bucket列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBucketsResponse> DescribeBuckets(DescribeBucketsRequest request) {
+            return await new DescribeBucketsExecutor().Client(this).Execute<DescribeBucketsResponse, DescribeBucketsResult, DescribeBucketsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播截图回调通知地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveStreamSnapshotNotifyConfigResponse SetLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) {
+            return  new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播截图回调通知地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveStreamSnapshotNotifyConfigResponse> SetLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) {
+            return await new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除流级别录制模板配置
+        /// - 删除流级别录制模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamRecordResponse DeleteLiveStreamRecord(DeleteLiveStreamRecordRequest request) {
+            return  new DeleteLiveStreamRecordExecutor().Client(this).Execute<DeleteLiveStreamRecordResponse, DeleteLiveStreamRecordResult, DeleteLiveStreamRecordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除流级别录制模板配置
+        /// - 删除流级别录制模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamRecordResponse> DeleteLiveStreamRecord(DeleteLiveStreamRecordRequest request) {
+            return await new DeleteLiveStreamRecordExecutor().Client(this).Execute<DeleteLiveStreamRecordResponse, DeleteLiveStreamRecordResult, DeleteLiveStreamRecordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除直播域名
+        /// - 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
+        ///   deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest request) {
+            return  new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除直播域名
+        /// - 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
+        ///   deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveDomainResponse> DeleteLiveDomain(DeleteLiveDomainRequest request) {
+            return await new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询推流带宽
+        /// - 查询某个时间段内的推流上行带宽数据
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPublishBandwidthDataResponse DescribeLiveStreamPublishBandwidthData(DescribeLiveStreamPublishBandwidthDataRequest request) {
+            return  new DescribeLiveStreamPublishBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamPublishBandwidthDataResponse, DescribeLiveStreamPublishBandwidthDataResult, DescribeLiveStreamPublishBandwidthDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询推流带宽
+        /// - 查询某个时间段内的推流上行带宽数据
+        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPublishBandwidthDataResponse> DescribeLiveStreamPublishBandwidthData(DescribeLiveStreamPublishBandwidthDataRequest request) {
+            return await new DescribeLiveStreamPublishBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamPublishBandwidthDataResponse, DescribeLiveStreamPublishBandwidthDataResult, DescribeLiveStreamPublishBandwidthDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取图片上传地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateImageUploadTaskResponse CreateImageUploadTask(CreateImageUploadTaskRequest request) {
+            return  new CreateImageUploadTaskExecutor().Client(this).Execute<CreateImageUploadTaskResponse, CreateImageUploadTaskResult, CreateImageUploadTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取图片上传地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateImageUploadTaskResponse> CreateImageUploadTask(CreateImageUploadTaskRequest request) {
+            return await new CreateImageUploadTaskExecutor().Client(this).Execute<CreateImageUploadTaskResponse, CreateImageUploadTaskResult, CreateImageUploadTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询服务开通状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveServiceStatusResponse DescribeLiveServiceStatus(DescribeLiveServiceStatusRequest request) {
+            return  new DescribeLiveServiceStatusExecutor().Client(this).Execute<DescribeLiveServiceStatusResponse, DescribeLiveServiceStatusResult, DescribeLiveServiceStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询服务开通状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveServiceStatusResponse> DescribeLiveServiceStatus(DescribeLiveServiceStatusRequest request) {
+            return await new DescribeLiveServiceStatusExecutor().Client(this).Execute<DescribeLiveServiceStatusResponse, DescribeLiveServiceStatusResult, DescribeLiveServiceStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  恢复直播流推送
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest request) {
+            return  new ResumeLiveStreamExecutor().Client(this).Execute<ResumeLiveStreamResponse, ResumeLiveStreamResult, ResumeLiveStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  恢复直播流推送
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResumeLiveStreamResponse> ResumeLiveStream(ResumeLiveStreamRequest request) {
+            return await new ResumeLiveStreamExecutor().Client(this).Execute<ResumeLiveStreamResponse, ResumeLiveStreamResult, ResumeLiveStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加流的转码模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamTranscodeResponse AddLiveStreamTranscode(AddLiveStreamTranscodeRequest request) {
+            return  new AddLiveStreamTranscodeExecutor().Client(this).Execute<AddLiveStreamTranscodeResponse, AddLiveStreamTranscodeResult, AddLiveStreamTranscodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加流的转码模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamTranscodeResponse> AddLiveStreamTranscode(AddLiveStreamTranscodeRequest request) {
+            return await new AddLiveStreamTranscodeExecutor().Client(this).Execute<AddLiveStreamTranscodeResponse, AddLiveStreamTranscodeResult, AddLiveStreamTranscodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询直播截图配置
         /// - 截图模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
         /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
@@ -165,6 +1419,46 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取录制文件地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveRecordFileUrlResponse DescribeLiveRecordFileUrl(DescribeLiveRecordFileUrlRequest request) {
+            return  new DescribeLiveRecordFileUrlExecutor().Client(this).Execute<DescribeLiveRecordFileUrlResponse, DescribeLiveRecordFileUrlResult, DescribeLiveRecordFileUrlRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取录制文件地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveRecordFileUrlResponse> DescribeLiveRecordFileUrl(DescribeLiveRecordFileUrlRequest request) {
+            return await new DescribeLiveRecordFileUrlExecutor().Client(this).Execute<DescribeLiveRecordFileUrlResponse, DescribeLiveRecordFileUrlResult, DescribeLiveRecordFileUrlRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询回看配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveRestartConfigsResponse DescribeLiveRestartConfigs(DescribeLiveRestartConfigsRequest request) {
+            return  new DescribeLiveRestartConfigsExecutor().Client(this).Execute<DescribeLiveRestartConfigsResponse, DescribeLiveRestartConfigsResult, DescribeLiveRestartConfigsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询回看配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveRestartConfigsResponse> DescribeLiveRestartConfigs(DescribeLiveRestartConfigsRequest request) {
+            return await new DescribeLiveRestartConfigsExecutor().Client(this).Execute<DescribeLiveRestartConfigsResponse, DescribeLiveRestartConfigsResult, DescribeLiveRestartConfigsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询用户自定义转码模板详情
         /// - 查询用户自定义转码模板详情
         /// - 系统标准转码模板
@@ -172,10 +1466,10 @@ namespace JDCloudSDK.Live.Client
         ///       sd (h.264/960*540/24f)
         ///       hd (h.264/1280*720/25f)
         ///       shd (h.264/1920*1080/30f)
-        ///       ld-265 (h-265/640*360/15f)
-        ///       sd-265 (h-265/960*540/24f)
-        ///       hd-265 (h-265/1280*720/25f)
-        ///       shd-265 (h-265/1920*1080/30f)
+        ///       ld-265 (h.265/640*360/15f)
+        ///       sd-265 (h.265/960*540/24f)
+        ///       hd-265 (h.265/1280*720/25f)
+        ///       shd-265 (h.265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -192,10 +1486,10 @@ namespace JDCloudSDK.Live.Client
         ///       sd (h.264/960*540/24f)
         ///       hd (h.264/1280*720/25f)
         ///       shd (h.264/1920*1080/30f)
-        ///       ld-265 (h-265/640*360/15f)
-        ///       sd-265 (h-265/960*540/24f)
-        ///       hd-265 (h-265/1280*720/25f)
-        ///       shd-265 (h-265/1920*1080/30f)
+        ///       ld-265 (h.265/640*360/15f)
+        ///       sd-265 (h.265/960*540/24f)
+        ///       hd-265 (h.265/1280*720/25f)
+        ///       shd-265 (h.265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -206,21 +1500,21 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询在线流列表
+        ///  关闭回看
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeDomainOnlineStreamResponse DescribeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) {
-            return  new DescribeDomainOnlineStreamExecutor().Client(this).Execute<DescribeDomainOnlineStreamResponse, DescribeDomainOnlineStreamResult, DescribeDomainOnlineStreamRequest>(request);
+        public CloseLiveRestartResponse CloseLiveRestart(CloseLiveRestartRequest request) {
+            return  new CloseLiveRestartExecutor().Client(this).Execute<CloseLiveRestartResponse, CloseLiveRestartResult, CloseLiveRestartRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询在线流列表
+        ///  关闭回看
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDomainOnlineStreamResponse> DescribeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) {
-            return await new DescribeDomainOnlineStreamExecutor().Client(this).Execute<DescribeDomainOnlineStreamResponse, DescribeDomainOnlineStreamResult, DescribeDomainOnlineStreamRequest>(request).ConfigureAwait(false);
+        public async Task<CloseLiveRestartResponse> CloseLiveRestart(CloseLiveRestartRequest request) {
+            return await new CloseLiveRestartExecutor().Client(this).Execute<CloseLiveRestartResponse, CloseLiveRestartResult, CloseLiveRestartRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -305,25 +1599,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除直播流状态回调地址
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteLiveStreamNotifyConfigResponse DeleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) {
-            return  new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除直播流状态回调地址
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteLiveStreamNotifyConfigResponse> DeleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) {
-            return await new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  添加打点录制任务
         /// - 您可以调用此接口精确提取已录制的文件中所需要的部分
         /// 
@@ -364,6 +1639,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainWatermarkResponse> AddLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) {
             return await new AddLiveStreamDomainWatermarkExecutor().Client(this).Execute<AddLiveStreamDomainWatermarkResponse, AddLiveStreamDomainWatermarkResult, AddLiveStreamDomainWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播流信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamListResponse DescribeLiveStreamList(DescribeLiveStreamListRequest request) {
+            return  new DescribeLiveStreamListExecutor().Client(this).Execute<DescribeLiveStreamListResponse, DescribeLiveStreamListResult, DescribeLiveStreamListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播流信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamListResponse> DescribeLiveStreamList(DescribeLiveStreamListRequest request) {
+            return await new DescribeLiveStreamListExecutor().Client(this).Execute<DescribeLiveStreamListResponse, DescribeLiveStreamListResult, DescribeLiveStreamListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -416,50 +1710,82 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户自定义直播录制模板列表
+        ///  修改自定义转码模板
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCustomLiveStreamRecordTemplatesResponse DescribeCustomLiveStreamRecordTemplates(DescribeCustomLiveStreamRecordTemplatesRequest request) {
-            return  new DescribeCustomLiveStreamRecordTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordTemplatesResponse, DescribeCustomLiveStreamRecordTemplatesResult, DescribeCustomLiveStreamRecordTemplatesRequest>(request);
+        public UpdateCustomLiveStreamTranscodeTemplateResponse UpdateCustomLiveStreamTranscodeTemplate(UpdateCustomLiveStreamTranscodeTemplateRequest request) {
+            return  new UpdateCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamTranscodeTemplateResponse, UpdateCustomLiveStreamTranscodeTemplateResult, UpdateCustomLiveStreamTranscodeTemplateRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询用户自定义直播录制模板列表
+        ///  修改自定义转码模板
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomLiveStreamRecordTemplatesResponse> DescribeCustomLiveStreamRecordTemplates(DescribeCustomLiveStreamRecordTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamRecordTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordTemplatesResponse, DescribeCustomLiveStreamRecordTemplatesResult, DescribeCustomLiveStreamRecordTemplatesRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateCustomLiveStreamTranscodeTemplateResponse> UpdateCustomLiveStreamTranscodeTemplate(UpdateCustomLiveStreamTranscodeTemplateRequest request) {
+            return await new UpdateCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamTranscodeTemplateResponse, UpdateCustomLiveStreamTranscodeTemplateResult, UpdateCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询直播直播录制配置
-        /// - 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
-        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
-        /// - 该查询旨在查询域名、应用、流最终生效的录制模板配置,并非各级的模板绑定情况
-        /// 
+        ///  设置推流鉴权IP黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCustomLiveStreamRecordConfigResponse DescribeCustomLiveStreamRecordConfig(DescribeCustomLiveStreamRecordConfigRequest request) {
-            return  new DescribeCustomLiveStreamRecordConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordConfigResponse, DescribeCustomLiveStreamRecordConfigResult, DescribeCustomLiveStreamRecordConfigRequest>(request);
+        public SetPublishAuthIPConfigResponse SetPublishAuthIPConfig(SetPublishAuthIPConfigRequest request) {
+            return  new SetPublishAuthIPConfigExecutor().Client(this).Execute<SetPublishAuthIPConfigResponse, SetPublishAuthIPConfigResult, SetPublishAuthIPConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询直播直播录制配置
-        /// - 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
-        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
-        /// - 该查询旨在查询域名、应用、流最终生效的录制模板配置,并非各级的模板绑定情况
+        ///  设置推流鉴权IP黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetPublishAuthIPConfigResponse> SetPublishAuthIPConfig(SetPublishAuthIPConfigRequest request) {
+            return await new SetPublishAuthIPConfigExecutor().Client(this).Execute<SetPublishAuthIPConfigResponse, SetPublishAuthIPConfigResult, SetPublishAuthIPConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  日志下载
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDomainsLogResponse DescribeDomainsLog(DescribeDomainsLogRequest request) {
+            return  new DescribeDomainsLogExecutor().Client(this).Execute<DescribeDomainsLogResponse, DescribeDomainsLogResult, DescribeDomainsLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  日志下载
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDomainsLogResponse> DescribeDomainsLog(DescribeDomainsLogRequest request) {
+            return await new DescribeDomainsLogExecutor().Client(this).Execute<DescribeDomainsLogResponse, DescribeDomainsLogResult, DescribeDomainsLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加回看域名
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomLiveStreamRecordConfigResponse> DescribeCustomLiveStreamRecordConfig(DescribeCustomLiveStreamRecordConfigRequest request) {
-            return await new DescribeCustomLiveStreamRecordConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamRecordConfigResponse, DescribeCustomLiveStreamRecordConfigResult, DescribeCustomLiveStreamRecordConfigRequest>(request).ConfigureAwait(false);
+        public AddLiveRestartDomainResponse AddLiveRestartDomain(AddLiveRestartDomainRequest request) {
+            return  new AddLiveRestartDomainExecutor().Client(this).Execute<AddLiveRestartDomainResponse, AddLiveRestartDomainResult, AddLiveRestartDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加回看域名
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveRestartDomainResponse> AddLiveRestartDomain(AddLiveRestartDomainRequest request) {
+            return await new AddLiveRestartDomainExecutor().Client(this).Execute<AddLiveRestartDomainResponse, AddLiveRestartDomainResult, AddLiveRestartDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -502,6 +1828,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  添加流的录制模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamRecordResponse AddLiveStreamRecord(AddLiveStreamRecordRequest request) {
+            return  new AddLiveStreamRecordExecutor().Client(this).Execute<AddLiveStreamRecordResponse, AddLiveStreamRecordResult, AddLiveStreamRecordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加流的录制模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamRecordResponse> AddLiveStreamRecord(AddLiveStreamRecordRequest request) {
+            return await new AddLiveStreamRecordExecutor().Client(this).Execute<AddLiveStreamRecordResponse, AddLiveStreamRecordResult, AddLiveStreamRecordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询转码流数量
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -521,25 +1868,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询域名列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest request) {
-            return  new DescribeLiveDomainsExecutor().Client(this).Execute<DescribeLiveDomainsResponse, DescribeLiveDomainsResult, DescribeLiveDomainsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询域名列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveDomainsResponse> DescribeLiveDomains(DescribeLiveDomainsRequest request) {
-            return await new DescribeLiveDomainsExecutor().Client(this).Execute<DescribeLiveDomainsResponse, DescribeLiveDomainsResult, DescribeLiveDomainsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询指定域名相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -555,31 +1883,6 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveDomainDetailResponse> DescribeLiveDomainDetail(DescribeLiveDomainDetailRequest request) {
             return await new DescribeLiveDomainDetailExecutor().Client(this).Execute<DescribeLiveDomainDetailResponse, DescribeLiveDomainDetailResult, DescribeLiveDomainDetailRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加直播应用名
-        /// - 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
-        /// - 新的应用名可以推流时自动创建
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddLiveAppResponse AddLiveApp(AddLiveAppRequest request) {
-            return  new AddLiveAppExecutor().Client(this).Execute<AddLiveAppResponse, AddLiveAppResult, AddLiveAppRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加直播应用名
-        /// - 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
-        /// - 新的应用名可以推流时自动创建
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddLiveAppResponse> AddLiveApp(AddLiveAppRequest request) {
-            return await new AddLiveAppExecutor().Client(this).Execute<AddLiveAppResponse, AddLiveAppResult, AddLiveAppRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -607,46 +1910,21 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改用户自定义水印模板
-        /// 
+        ///  修改直播截图模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateCustomLiveStreamWatermarkTemplateResponse UpdateCustomLiveStreamWatermarkTemplate(UpdateCustomLiveStreamWatermarkTemplateRequest request) {
-            return  new UpdateCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamWatermarkTemplateResponse, UpdateCustomLiveStreamWatermarkTemplateResult, UpdateCustomLiveStreamWatermarkTemplateRequest>(request);
+        public UpdateCustomLiveStreamSnapshotTemplateResponse UpdateCustomLiveStreamSnapshotTemplate(UpdateCustomLiveStreamSnapshotTemplateRequest request) {
+            return  new UpdateCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamSnapshotTemplateResponse, UpdateCustomLiveStreamSnapshotTemplateResult, UpdateCustomLiveStreamSnapshotTemplateRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改用户自定义水印模板
-        /// 
+        ///  修改直播截图模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateCustomLiveStreamWatermarkTemplateResponse> UpdateCustomLiveStreamWatermarkTemplate(UpdateCustomLiveStreamWatermarkTemplateRequest request) {
-            return await new UpdateCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamWatermarkTemplateResponse, UpdateCustomLiveStreamWatermarkTemplateResult, UpdateCustomLiveStreamWatermarkTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除应用级别水印模板配置
-        /// - 删除应用级别的水印模板配置,重新推流后生效
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteLiveStreamAppWatermarkResponse DeleteLiveStreamAppWatermark(DeleteLiveStreamAppWatermarkRequest request) {
-            return  new DeleteLiveStreamAppWatermarkExecutor().Client(this).Execute<DeleteLiveStreamAppWatermarkResponse, DeleteLiveStreamAppWatermarkResult, DeleteLiveStreamAppWatermarkRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除应用级别水印模板配置
-        /// - 删除应用级别的水印模板配置,重新推流后生效
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteLiveStreamAppWatermarkResponse> DeleteLiveStreamAppWatermark(DeleteLiveStreamAppWatermarkRequest request) {
-            return await new DeleteLiveStreamAppWatermarkExecutor().Client(this).Execute<DeleteLiveStreamAppWatermarkResponse, DeleteLiveStreamAppWatermarkResult, DeleteLiveStreamAppWatermarkRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateCustomLiveStreamSnapshotTemplateResponse> UpdateCustomLiveStreamSnapshotTemplate(UpdateCustomLiveStreamSnapshotTemplateRequest request) {
+            return await new UpdateCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<UpdateCustomLiveStreamSnapshotTemplateResponse, UpdateCustomLiveStreamSnapshotTemplateResult, UpdateCustomLiveStreamSnapshotTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -668,6 +1946,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamWatermarkTemplateResponse> AddCustomLiveStreamWatermarkTemplate(AddCustomLiveStreamWatermarkTemplateRequest request) {
             return await new AddCustomLiveStreamWatermarkTemplateExecutor().Client(this).Execute<AddCustomLiveStreamWatermarkTemplateResponse, AddCustomLiveStreamWatermarkTemplateResult, AddCustomLiveStreamWatermarkTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加流的水印模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamWatermarkResponse AddLiveStreamWatermark(AddLiveStreamWatermarkRequest request) {
+            return  new AddLiveStreamWatermarkExecutor().Client(this).Execute<AddLiveStreamWatermarkResponse, AddLiveStreamWatermarkResult, AddLiveStreamWatermarkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加流的水印模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamWatermarkResponse> AddLiveStreamWatermark(AddLiveStreamWatermarkRequest request) {
+            return await new AddLiveStreamWatermarkExecutor().Client(this).Execute<AddLiveStreamWatermarkResponse, AddLiveStreamWatermarkResult, AddLiveStreamWatermarkRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -764,40 +2063,23 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询直播流播放人数排行
+        ///  获取截图地址
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeLiveStreamPlayerRankingDataResponse DescribeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) {
-            return  new DescribeLiveStreamPlayerRankingDataExecutor().Client(this).Execute<DescribeLiveStreamPlayerRankingDataResponse, DescribeLiveStreamPlayerRankingDataResult, DescribeLiveStreamPlayerRankingDataRequest>(request);
+        public DescribeLiveSnapshotUrlResponse DescribeLiveSnapshotUrl(DescribeLiveSnapshotUrlRequest request) {
+            return  new DescribeLiveSnapshotUrlExecutor().Client(this).Execute<DescribeLiveSnapshotUrlResponse, DescribeLiveSnapshotUrlResult, DescribeLiveSnapshotUrlRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询直播流播放人数排行
+        ///  获取截图地址
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveStreamPlayerRankingDataResponse> DescribeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) {
-            return await new DescribeLiveStreamPlayerRankingDataExecutor().Client(this).Execute<DescribeLiveStreamPlayerRankingDataResponse, DescribeLiveStreamPlayerRankingDataResult, DescribeLiveStreamPlayerRankingDataRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询流分组统计数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveStatisticGroupByStreamResponse DescribeLiveStatisticGroupByStream(DescribeLiveStatisticGroupByStreamRequest request) {
-            return  new DescribeLiveStatisticGroupByStreamExecutor().Client(this).Execute<DescribeLiveStatisticGroupByStreamResponse, DescribeLiveStatisticGroupByStreamResult, DescribeLiveStatisticGroupByStreamRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询流分组统计数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveStatisticGroupByStreamResponse> DescribeLiveStatisticGroupByStream(DescribeLiveStatisticGroupByStreamRequest request) {
-            return await new DescribeLiveStatisticGroupByStreamExecutor().Client(this).Execute<DescribeLiveStatisticGroupByStreamResponse, DescribeLiveStatisticGroupByStreamResult, DescribeLiveStatisticGroupByStreamRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeLiveSnapshotUrlResponse> DescribeLiveSnapshotUrl(DescribeLiveSnapshotUrlRequest request) {
+            return await new DescribeLiveSnapshotUrlExecutor().Client(this).Execute<DescribeLiveSnapshotUrlResponse, DescribeLiveSnapshotUrlResult, DescribeLiveSnapshotUrlRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -844,27 +2126,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置直播录制回调通知
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetLiveStreamRecordNotifyConfigResponse SetLiveStreamRecordNotifyConfig(SetLiveStreamRecordNotifyConfigRequest request) {
-            return  new SetLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<SetLiveStreamRecordNotifyConfigResponse, SetLiveStreamRecordNotifyConfigResult, SetLiveStreamRecordNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置直播录制回调通知
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetLiveStreamRecordNotifyConfigResponse> SetLiveStreamRecordNotifyConfig(SetLiveStreamRecordNotifyConfigRequest request) {
-            return await new SetLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<SetLiveStreamRecordNotifyConfigResponse, SetLiveStreamRecordNotifyConfigResult, SetLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除域名级别录制模板配置
         /// - 删除域名级别录制模板配置,重新推流后生效
         /// 
@@ -907,48 +2168,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加直播截图模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddCustomLiveStreamSnapshotTemplateResponse AddCustomLiveStreamSnapshotTemplate(AddCustomLiveStreamSnapshotTemplateRequest request) {
-            return  new AddCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<AddCustomLiveStreamSnapshotTemplateResponse, AddCustomLiveStreamSnapshotTemplateResult, AddCustomLiveStreamSnapshotTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加直播截图模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddCustomLiveStreamSnapshotTemplateResponse> AddCustomLiveStreamSnapshotTemplate(AddCustomLiveStreamSnapshotTemplateRequest request) {
-            return await new AddCustomLiveStreamSnapshotTemplateExecutor().Client(this).Execute<AddCustomLiveStreamSnapshotTemplateResponse, AddCustomLiveStreamSnapshotTemplateResult, AddCustomLiveStreamSnapshotTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启动域名
-        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartLiveDomainResponse StartLiveDomain(StartLiveDomainRequest request) {
-            return  new StartLiveDomainExecutor().Client(this).Execute<StartLiveDomainResponse, StartLiveDomainResult, StartLiveDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动域名
-        /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartLiveDomainResponse> StartLiveDomain(StartLiveDomainRequest request) {
-            return await new StartLiveDomainExecutor().Client(this).Execute<StartLiveDomainResponse, StartLiveDomainResult, StartLiveDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询系统默认转码模板列表
         /// 
         /// </summary>
@@ -970,46 +2189,21 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户定义水印模板列表
-        /// 
+        ///  查询地域分组统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCustomLiveStreamWatermarkTemplatesResponse DescribeCustomLiveStreamWatermarkTemplates(DescribeCustomLiveStreamWatermarkTemplatesRequest request) {
-            return  new DescribeCustomLiveStreamWatermarkTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkTemplatesResponse, DescribeCustomLiveStreamWatermarkTemplatesResult, DescribeCustomLiveStreamWatermarkTemplatesRequest>(request);
+        public DescribeLiveStatisticGroupByAreaResponse DescribeLiveStatisticGroupByArea(DescribeLiveStatisticGroupByAreaRequest request) {
+            return  new DescribeLiveStatisticGroupByAreaExecutor().Client(this).Execute<DescribeLiveStatisticGroupByAreaResponse, DescribeLiveStatisticGroupByAreaResult, DescribeLiveStatisticGroupByAreaRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询用户定义水印模板列表
-        /// 
+        ///  查询地域分组统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomLiveStreamWatermarkTemplatesResponse> DescribeCustomLiveStreamWatermarkTemplates(DescribeCustomLiveStreamWatermarkTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamWatermarkTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkTemplatesResponse, DescribeCustomLiveStreamWatermarkTemplatesResult, DescribeCustomLiveStreamWatermarkTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加应用转码配置
-        /// - 添加应用级别的转码模板配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddLiveStreamAppTranscodeResponse AddLiveStreamAppTranscode(AddLiveStreamAppTranscodeRequest request) {
-            return  new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加应用转码配置
-        /// - 添加应用级别的转码模板配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddLiveStreamAppTranscodeResponse> AddLiveStreamAppTranscode(AddLiveStreamAppTranscodeRequest request) {
-            return await new AddLiveStreamAppTranscodeExecutor().Client(this).Execute<AddLiveStreamAppTranscodeResponse, AddLiveStreamAppTranscodeResult, AddLiveStreamAppTranscodeRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeLiveStatisticGroupByAreaResponse> DescribeLiveStatisticGroupByArea(DescribeLiveStatisticGroupByAreaRequest request) {
+            return await new DescribeLiveStatisticGroupByAreaExecutor().Client(this).Execute<DescribeLiveStatisticGroupByAreaResponse, DescribeLiveStatisticGroupByAreaResult, DescribeLiveStatisticGroupByAreaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1039,27 +2233,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除截图回调配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteLiveStreamSnapshotNotifyConfigResponse DeleteLiveStreamSnapshotNotifyConfig(DeleteLiveStreamSnapshotNotifyConfigRequest request) {
-            return  new DeleteLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamSnapshotNotifyConfigResponse, DeleteLiveStreamSnapshotNotifyConfigResult, DeleteLiveStreamSnapshotNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除截图回调配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteLiveStreamSnapshotNotifyConfigResponse> DeleteLiveStreamSnapshotNotifyConfig(DeleteLiveStreamSnapshotNotifyConfigRequest request) {
-            return await new DeleteLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamSnapshotNotifyConfigResponse, DeleteLiveStreamSnapshotNotifyConfigResult, DeleteLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查看推流历史记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1079,42 +2252,21 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询时移配置
+        ///  校验域名是否备案
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeLiveTimeshiftConfigsResponse DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
-            return  new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request);
+        public CheckDomainIcpResponse CheckDomainIcp(CheckDomainIcpRequest request) {
+            return  new CheckDomainIcpExecutor().Client(this).Execute<CheckDomainIcpResponse, CheckDomainIcpResult, CheckDomainIcpRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询时移配置
+        ///  校验域名是否备案
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveTimeshiftConfigsResponse> DescribeLiveTimeshiftConfigs(DescribeLiveTimeshiftConfigsRequest request) {
-            return await new DescribeLiveTimeshiftConfigsExecutor().Client(this).Execute<DescribeLiveTimeshiftConfigsResponse, DescribeLiveTimeshiftConfigsResult, DescribeLiveTimeshiftConfigsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加应用级别水印配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddLiveStreamAppWatermarkResponse AddLiveStreamAppWatermark(AddLiveStreamAppWatermarkRequest request) {
-            return  new AddLiveStreamAppWatermarkExecutor().Client(this).Execute<AddLiveStreamAppWatermarkResponse, AddLiveStreamAppWatermarkResult, AddLiveStreamAppWatermarkRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加应用级别水印配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddLiveStreamAppWatermarkResponse> AddLiveStreamAppWatermark(AddLiveStreamAppWatermarkRequest request) {
-            return await new AddLiveStreamAppWatermarkExecutor().Client(this).Execute<AddLiveStreamAppWatermarkResponse, AddLiveStreamAppWatermarkResult, AddLiveStreamAppWatermarkRequest>(request).ConfigureAwait(false);
+        public async Task<CheckDomainIcpResponse> CheckDomainIcp(CheckDomainIcpRequest request) {
+            return await new CheckDomainIcpExecutor().Client(this).Execute<CheckDomainIcpResponse, CheckDomainIcpResult, CheckDomainIcpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1165,6 +2317,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开通直播服务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OpenLiveServiceResponse OpenLiveService(OpenLiveServiceRequest request) {
+            return  new OpenLiveServiceExecutor().Client(this).Execute<OpenLiveServiceResponse, OpenLiveServiceResult, OpenLiveServiceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开通直播服务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OpenLiveServiceResponse> OpenLiveService(OpenLiveServiceRequest request) {
+            return await new OpenLiveServiceExecutor().Client(this).Execute<OpenLiveServiceResponse, OpenLiveServiceResult, OpenLiveServiceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询地域/运营商分组统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1180,25 +2351,6 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStatisticGroupByAreaIspResponse> DescribeLiveStatisticGroupByAreaIsp(DescribeLiveStatisticGroupByAreaIspRequest request) {
             return await new DescribeLiveStatisticGroupByAreaIspExecutor().Client(this).Execute<DescribeLiveStatisticGroupByAreaIspResponse, DescribeLiveStatisticGroupByAreaIspResult, DescribeLiveStatisticGroupByAreaIspRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除APP截图配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteLiveStreamAppSnapshotResponse DeleteLiveStreamAppSnapshot(DeleteLiveStreamAppSnapshotRequest request) {
-            return  new DeleteLiveStreamAppSnapshotExecutor().Client(this).Execute<DeleteLiveStreamAppSnapshotResponse, DeleteLiveStreamAppSnapshotResult, DeleteLiveStreamAppSnapshotRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除APP截图配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteLiveStreamAppSnapshotResponse> DeleteLiveStreamAppSnapshot(DeleteLiveStreamAppSnapshotRequest request) {
-            return await new DeleteLiveStreamAppSnapshotExecutor().Client(this).Execute<DeleteLiveStreamAppSnapshotResponse, DeleteLiveStreamAppSnapshotResult, DeleteLiveStreamAppSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1220,27 +2372,6 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamSnapshotNotifyConfigResponse> DescribeLiveStreamSnapshotNotifyConfig(DescribeLiveStreamSnapshotNotifyConfigRequest request) {
             return await new DescribeLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamSnapshotNotifyConfigResponse, DescribeLiveStreamSnapshotNotifyConfigResult, DescribeLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除录制回调配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteLiveStreamRecordNotifyConfigResponse DeleteLiveStreamRecordNotifyConfig(DeleteLiveStreamRecordNotifyConfigRequest request) {
-            return  new DeleteLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamRecordNotifyConfigResponse, DeleteLiveStreamRecordNotifyConfigResult, DeleteLiveStreamRecordNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除录制回调配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteLiveStreamRecordNotifyConfigResponse> DeleteLiveStreamRecordNotifyConfig(DeleteLiveStreamRecordNotifyConfigRequest request) {
-            return await new DeleteLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamRecordNotifyConfigResponse, DeleteLiveStreamRecordNotifyConfigResult, DeleteLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1291,50 +2422,21 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询直播水印配置
-        /// - 水印模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
-        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
-        /// - 该查询旨在查询域名、应用、流最终生效的水印模板配置,并非各级的模板绑定情况
-        /// 
+        ///  查询推流鉴权配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCustomLiveStreamWatermarkConfigResponse DescribeCustomLiveStreamWatermarkConfig(DescribeCustomLiveStreamWatermarkConfigRequest request) {
-            return  new DescribeCustomLiveStreamWatermarkConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkConfigResponse, DescribeCustomLiveStreamWatermarkConfigResult, DescribeCustomLiveStreamWatermarkConfigRequest>(request);
+        public DescribePublishAuthConfigResponse DescribePublishAuthConfig(DescribePublishAuthConfigRequest request) {
+            return  new DescribePublishAuthConfigExecutor().Client(this).Execute<DescribePublishAuthConfigResponse, DescribePublishAuthConfigResult, DescribePublishAuthConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询直播水印配置
-        /// - 水印模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
-        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
-        /// - 该查询旨在查询域名、应用、流最终生效的水印模板配置,并非各级的模板绑定情况
-        /// 
+        ///  查询推流鉴权配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomLiveStreamWatermarkConfigResponse> DescribeCustomLiveStreamWatermarkConfig(DescribeCustomLiveStreamWatermarkConfigRequest request) {
-            return await new DescribeCustomLiveStreamWatermarkConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamWatermarkConfigResponse, DescribeCustomLiveStreamWatermarkConfigResult, DescribeCustomLiveStreamWatermarkConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加用户自定义直播录制模板
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddCustomLiveStreamRecordTemplateResponse AddCustomLiveStreamRecordTemplate(AddCustomLiveStreamRecordTemplateRequest request) {
-            return  new AddCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<AddCustomLiveStreamRecordTemplateResponse, AddCustomLiveStreamRecordTemplateResult, AddCustomLiveStreamRecordTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加用户自定义直播录制模板
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddCustomLiveStreamRecordTemplateResponse> AddCustomLiveStreamRecordTemplate(AddCustomLiveStreamRecordTemplateRequest request) {
-            return await new AddCustomLiveStreamRecordTemplateExecutor().Client(this).Execute<AddCustomLiveStreamRecordTemplateResponse, AddCustomLiveStreamRecordTemplateResult, AddCustomLiveStreamRecordTemplateRequest>(request).ConfigureAwait(false);
+        public async Task<DescribePublishAuthConfigResponse> DescribePublishAuthConfig(DescribePublishAuthConfigRequest request) {
+            return await new DescribePublishAuthConfigExecutor().Client(this).Execute<DescribePublishAuthConfigResponse, DescribePublishAuthConfigResult, DescribePublishAuthConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1358,40 +2460,46 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询播放鉴权KEY
+        ///  添加流的截图模板配置
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
-            return  new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request);
+        public AddLiveStreamSnapshotResponse AddLiveStreamSnapshot(AddLiveStreamSnapshotRequest request) {
+            return  new AddLiveStreamSnapshotExecutor().Client(this).Execute<AddLiveStreamSnapshotResponse, AddLiveStreamSnapshotResult, AddLiveStreamSnapshotRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询播放鉴权KEY
+        ///  添加流的截图模板配置
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest request) {
-            return await new DescribeLivePlayAuthKeyExecutor().Client(this).Execute<DescribeLivePlayAuthKeyResponse, DescribeLivePlayAuthKeyResult, DescribeLivePlayAuthKeyRequest>(request).ConfigureAwait(false);
+        public async Task<AddLiveStreamSnapshotResponse> AddLiveStreamSnapshot(AddLiveStreamSnapshotRequest request) {
+            return await new AddLiveStreamSnapshotExecutor().Client(this).Execute<AddLiveStreamSnapshotResponse, AddLiveStreamSnapshotResult, AddLiveStreamSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询转码时长数据
+        ///  删除流级别截图模板配置
+        /// - 删除流级别截图模板配置,重新推流后生效
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeLiveTranscodingDurationDataResponse DescribeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) {
-            return  new DescribeLiveTranscodingDurationDataExecutor().Client(this).Execute<DescribeLiveTranscodingDurationDataResponse, DescribeLiveTranscodingDurationDataResult, DescribeLiveTranscodingDurationDataRequest>(request);
+        public DeleteLiveStreamSnapshotResponse DeleteLiveStreamSnapshot(DeleteLiveStreamSnapshotRequest request) {
+            return  new DeleteLiveStreamSnapshotExecutor().Client(this).Execute<DeleteLiveStreamSnapshotResponse, DeleteLiveStreamSnapshotResult, DeleteLiveStreamSnapshotRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询转码时长数据
+        ///  删除流级别截图模板配置
+        /// - 删除流级别截图模板配置,重新推流后生效
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveTranscodingDurationDataResponse> DescribeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) {
-            return await new DescribeLiveTranscodingDurationDataExecutor().Client(this).Execute<DescribeLiveTranscodingDurationDataResponse, DescribeLiveTranscodingDurationDataResult, DescribeLiveTranscodingDurationDataRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteLiveStreamSnapshotResponse> DeleteLiveStreamSnapshot(DeleteLiveStreamSnapshotRequest request) {
+            return await new DeleteLiveStreamSnapshotExecutor().Client(this).Execute<DeleteLiveStreamSnapshotResponse, DeleteLiveStreamSnapshotResult, DeleteLiveStreamSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1415,29 +2523,6 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<InterruptLiveStreamResponse> InterruptLiveStream(InterruptLiveStreamRequest request) {
             return await new InterruptLiveStreamExecutor().Client(this).Execute<InterruptLiveStreamResponse, InterruptLiveStreamResult, InterruptLiveStreamRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除用户自定义转码模板
-        /// - 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteCustomLiveStreamTranscodeTemplateResponse DeleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) {
-            return  new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除用户自定义转码模板
-        /// - 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteCustomLiveStreamTranscodeTemplateResponse> DeleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) {
-            return await new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1467,71 +2552,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户自定义转码模板列表
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCustomLiveStreamTranscodeTemplatesResponse DescribeCustomLiveStreamTranscodeTemplates(DescribeCustomLiveStreamTranscodeTemplatesRequest request) {
-            return  new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户自定义转码模板列表
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomLiveStreamTranscodeTemplatesResponse> DescribeCustomLiveStreamTranscodeTemplates(DescribeCustomLiveStreamTranscodeTemplatesRequest request) {
-            return await new DescribeCustomLiveStreamTranscodeTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamTranscodeTemplatesResponse, DescribeCustomLiveStreamTranscodeTemplatesResult, DescribeCustomLiveStreamTranscodeTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询直播鉴黄张数数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLivePornDataResponse DescribeLivePornData(DescribeLivePornDataRequest request) {
-            return  new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询直播鉴黄张数数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLivePornDataResponse> DescribeLivePornData(DescribeLivePornDataRequest request) {
-            return await new DescribeLivePornDataExecutor().Client(this).Execute<DescribeLivePornDataResponse, DescribeLivePornDataResult, DescribeLivePornDataRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  停用域名
-        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
-        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopLiveDomainResponse StopLiveDomain(StopLiveDomainRequest request) {
-            return  new StopLiveDomainExecutor().Client(this).Execute<StopLiveDomainResponse, StopLiveDomainResult, StopLiveDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  停用域名
-        /// - 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
-        /// - 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopLiveDomainResponse> StopLiveDomain(StopLiveDomainRequest request) {
-            return await new StopLiveDomainExecutor().Client(this).Execute<StopLiveDomainResponse, StopLiveDomainResult, StopLiveDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询转码流播放带宽
         /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
         /// 
@@ -1551,25 +2571,6 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveTranscodeStreamBandwidthResponse> DescribeLiveTranscodeStreamBandwidth(DescribeLiveTranscodeStreamBandwidthRequest request) {
             return await new DescribeLiveTranscodeStreamBandwidthExecutor().Client(this).Execute<DescribeLiveTranscodeStreamBandwidthResponse, DescribeLiveTranscodeStreamBandwidthResult, DescribeLiveTranscodeStreamBandwidthRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询存储空间数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveFileStorageDataResponse DescribeLiveFileStorageData(DescribeLiveFileStorageDataRequest request) {
-            return  new DescribeLiveFileStorageDataExecutor().Client(this).Execute<DescribeLiveFileStorageDataResponse, DescribeLiveFileStorageDataResult, DescribeLiveFileStorageDataRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询存储空间数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveFileStorageDataResponse> DescribeLiveFileStorageData(DescribeLiveFileStorageDataRequest request) {
-            return await new DescribeLiveFileStorageDataExecutor().Client(this).Execute<DescribeLiveFileStorageDataResponse, DescribeLiveFileStorageDataResult, DescribeLiveFileStorageDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1595,46 +2596,6 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询直播中的流的信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest request) {
-            return  new DescribeLiveStreamOnlineListExecutor().Client(this).Execute<DescribeLiveStreamOnlineListResponse, DescribeLiveStreamOnlineListResult, DescribeLiveStreamOnlineListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询直播中的流的信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveStreamOnlineListResponse> DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest request) {
-            return await new DescribeLiveStreamOnlineListExecutor().Client(this).Execute<DescribeLiveStreamOnlineListResponse, DescribeLiveStreamOnlineListResult, DescribeLiveStreamOnlineListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询录制回调配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveStreamRecordNotifyConfigResponse DescribeLiveStreamRecordNotifyConfig(DescribeLiveStreamRecordNotifyConfigRequest request) {
-            return  new DescribeLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamRecordNotifyConfigResponse, DescribeLiveStreamRecordNotifyConfigResult, DescribeLiveStreamRecordNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询录制回调配置
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveStreamRecordNotifyConfigResponse> DescribeLiveStreamRecordNotifyConfig(DescribeLiveStreamRecordNotifyConfigRequest request) {
-            return await new DescribeLiveStreamRecordNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamRecordNotifyConfigResponse, DescribeLiveStreamRecordNotifyConfigResult, DescribeLiveStreamRecordNotifyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询直播流状态回调地址
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1654,84 +2615,21 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加域名截图配置
-        /// - 添加域名级别的截图模板配置
-        /// 
+        ///  设置推流鉴权KEY
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AddLiveStreamDomainSnapshotResponse AddLiveStreamDomainSnapshot(AddLiveStreamDomainSnapshotRequest request) {
-            return  new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request);
+        public SetPublishAuthConfigResponse SetPublishAuthConfig(SetPublishAuthConfigRequest request) {
+            return  new SetPublishAuthConfigExecutor().Client(this).Execute<SetPublishAuthConfigResponse, SetPublishAuthConfigResult, SetPublishAuthConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  添加域名截图配置
-        /// - 添加域名级别的截图模板配置
-        /// 
+        ///  设置推流鉴权KEY
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AddLiveStreamDomainSnapshotResponse> AddLiveStreamDomainSnapshot(AddLiveStreamDomainSnapshotRequest request) {
-            return await new AddLiveStreamDomainSnapshotExecutor().Client(this).Execute<AddLiveStreamDomainSnapshotResponse, AddLiveStreamDomainSnapshotResult, AddLiveStreamDomainSnapshotRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询直播流历史在线人数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveStreamHistoryUserNumResponse DescribeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request) {
-            return  new DescribeLiveStreamHistoryUserNumExecutor().Client(this).Execute<DescribeLiveStreamHistoryUserNumResponse, DescribeLiveStreamHistoryUserNumResult, DescribeLiveStreamHistoryUserNumRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询直播流历史在线人数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveStreamHistoryUserNumResponse> DescribeLiveStreamHistoryUserNum(DescribeLiveStreamHistoryUserNumRequest request) {
-            return await new DescribeLiveStreamHistoryUserNumExecutor().Client(this).Execute<DescribeLiveStreamHistoryUserNumResponse, DescribeLiveStreamHistoryUserNumResult, DescribeLiveStreamHistoryUserNumRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置直播流状态回调地址
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetLiveStreamNotifyConfigResponse SetLiveStreamNotifyConfig(SetLiveStreamNotifyConfigRequest request) {
-            return  new SetLiveStreamNotifyConfigExecutor().Client(this).Execute<SetLiveStreamNotifyConfigResponse, SetLiveStreamNotifyConfigResult, SetLiveStreamNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置直播流状态回调地址
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetLiveStreamNotifyConfigResponse> SetLiveStreamNotifyConfig(SetLiveStreamNotifyConfigRequest request) {
-            return await new SetLiveStreamNotifyConfigExecutor().Client(this).Execute<SetLiveStreamNotifyConfigResponse, SetLiveStreamNotifyConfigResult, SetLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置直播截图回调通知地址
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetLiveStreamSnapshotNotifyConfigResponse SetLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) {
-            return  new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置直播截图回调通知地址
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetLiveStreamSnapshotNotifyConfigResponse> SetLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) {
-            return await new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
+        public async Task<SetPublishAuthConfigResponse> SetPublishAuthConfig(SetPublishAuthConfigRequest request) {
+            return await new SetPublishAuthConfigExecutor().Client(this).Execute<SetPublishAuthConfigResponse, SetPublishAuthConfigResult, SetPublishAuthConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1778,52 +2676,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除直播域名
-        /// - 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
-        ///   deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
+        ///  删除流级别转码模板配置
+        /// - 删除流级别转码模板配置,重新推流后生效
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest request) {
-            return  new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request);
+        public DeleteLiveStreamTranscodeResponse DeleteLiveStreamTranscode(DeleteLiveStreamTranscodeRequest request) {
+            return  new DeleteLiveStreamTranscodeExecutor().Client(this).Execute<DeleteLiveStreamTranscodeResponse, DeleteLiveStreamTranscodeResult, DeleteLiveStreamTranscodeRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除直播域名
-        /// - 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
-        ///   deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
+        ///  删除流级别转码模板配置
+        /// - 删除流级别转码模板配置,重新推流后生效
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteLiveDomainResponse> DeleteLiveDomain(DeleteLiveDomainRequest request) {
-            return await new DeleteLiveDomainExecutor().Client(this).Execute<DeleteLiveDomainResponse, DeleteLiveDomainResult, DeleteLiveDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询推流带宽
-        /// - 查询某个时间段内的推流上行带宽数据
-        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLiveStreamPublishBandwidthDataResponse DescribeLiveStreamPublishBandwidthData(DescribeLiveStreamPublishBandwidthDataRequest request) {
-            return  new DescribeLiveStreamPublishBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamPublishBandwidthDataResponse, DescribeLiveStreamPublishBandwidthDataResult, DescribeLiveStreamPublishBandwidthDataRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询推流带宽
-        /// - 查询某个时间段内的推流上行带宽数据
-        /// - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLiveStreamPublishBandwidthDataResponse> DescribeLiveStreamPublishBandwidthData(DescribeLiveStreamPublishBandwidthDataRequest request) {
-            return await new DescribeLiveStreamPublishBandwidthDataExecutor().Client(this).Execute<DescribeLiveStreamPublishBandwidthDataResponse, DescribeLiveStreamPublishBandwidthDataResult, DescribeLiveStreamPublishBandwidthDataRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteLiveStreamTranscodeResponse> DeleteLiveStreamTranscode(DeleteLiveStreamTranscodeRequest request) {
+            return await new DeleteLiveStreamTranscodeExecutor().Client(this).Execute<DeleteLiveStreamTranscodeResponse, DeleteLiveStreamTranscodeResult, DeleteLiveStreamTranscodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1857,13 +2728,13 @@ namespace JDCloudSDK.Live.Client
         /// - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
         /// - 系统标准转码模板
         ///     ld (h.264/640*360/15f)
-        ///     sd (h.264/960*540/24f)
+        ///     sd (h.264/960*540/25f)
         ///     hd (h.264/1280*720/25f)
         ///     shd (h.264/1920*1080/30f)
-        ///     ld-265 (h-265/640*360/15f)
-        ///     sd-265 (h-265/960*540/24f)
-        ///     hd-265 (h-265/1280*720/25f)
-        ///     shd-265 (h-265/1920*1080/30f)
+        ///     ld-265 (h.265/640*360/15f)
+        ///     sd-265 (h.265/960*540/25f)
+        ///     hd-265 (h.265/1280*720/25f)
+        ///     shd-265 (h.265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1877,38 +2748,19 @@ namespace JDCloudSDK.Live.Client
         /// - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
         /// - 系统标准转码模板
         ///     ld (h.264/640*360/15f)
-        ///     sd (h.264/960*540/24f)
+        ///     sd (h.264/960*540/25f)
         ///     hd (h.264/1280*720/25f)
         ///     shd (h.264/1920*1080/30f)
-        ///     ld-265 (h-265/640*360/15f)
-        ///     sd-265 (h-265/960*540/24f)
-        ///     hd-265 (h-265/1280*720/25f)
-        ///     shd-265 (h-265/1920*1080/30f)
+        ///     ld-265 (h.265/640*360/15f)
+        ///     sd-265 (h.265/960*540/25f)
+        ///     hd-265 (h.265/1280*720/25f)
+        ///     shd-265 (h.265/1920*1080/30f)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamTranscodeTemplateResponse> AddCustomLiveStreamTranscodeTemplate(AddCustomLiveStreamTranscodeTemplateRequest request) {
             return await new AddCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<AddCustomLiveStreamTranscodeTemplateResponse, AddCustomLiveStreamTranscodeTemplateResult, AddCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  恢复直播流推送
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest request) {
-            return  new ResumeLiveStreamExecutor().Client(this).Execute<ResumeLiveStreamResponse, ResumeLiveStreamResult, ResumeLiveStreamRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  恢复直播流推送
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResumeLiveStreamResponse> ResumeLiveStream(ResumeLiveStreamRequest request) {
-            return await new ResumeLiveStreamExecutor().Client(this).Execute<ResumeLiveStreamResponse, ResumeLiveStreamResult, ResumeLiveStreamRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1955,6 +2807,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamAppTranscodeResponse> DeleteLiveStreamAppTranscode(DeleteLiveStreamAppTranscodeRequest request) {
             return await new DeleteLiveStreamAppTranscodeExecutor().Client(this).Execute<DeleteLiveStreamAppTranscodeResponse, DeleteLiveStreamAppTranscodeResult, DeleteLiveStreamAppTranscodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除截图
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveSnapshotsResponse DeleteLiveSnapshots(DeleteLiveSnapshotsRequest request) {
+            return  new DeleteLiveSnapshotsExecutor().Client(this).Execute<DeleteLiveSnapshotsResponse, DeleteLiveSnapshotsResult, DeleteLiveSnapshotsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除截图
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveSnapshotsResponse> DeleteLiveSnapshots(DeleteLiveSnapshotsRequest request) {
+            return await new DeleteLiveSnapshotsExecutor().Client(this).Execute<DeleteLiveSnapshotsResponse, DeleteLiveSnapshotsResult, DeleteLiveSnapshotsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

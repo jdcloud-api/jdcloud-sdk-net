@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Pod.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Pod.Model

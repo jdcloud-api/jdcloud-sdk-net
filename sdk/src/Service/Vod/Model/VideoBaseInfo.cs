@@ -68,6 +68,6 @@ namespace JDCloudSDK.Vod.Model
         ///<summary>
         /// 封面地址
         ///</summary>
-        public string CoverImgUrl{ get; set; }
+        public string CoverUrl{ get; set; }
     }
 }

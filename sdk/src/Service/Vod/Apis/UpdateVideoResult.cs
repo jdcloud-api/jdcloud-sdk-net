@@ -89,11 +89,11 @@ namespace  JDCloudSDK.Vod.Apis
         public List<Snapshot> Snapshots{ get; set; }
 
         ///<summary>
-        /// CreateTime
+        /// 创建时间
         ///</summary>
         public   DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// UpdateTime
+        /// 修改时间
         ///</summary>
         public   DateTime? UpdateTime{ get; set; }
     }

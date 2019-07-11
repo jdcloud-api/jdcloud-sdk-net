@@ -51,22 +51,6 @@ namespace JDCloudSDK.Renewal.Model
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
-        /// 当前页码
-        ///</summary>
-        public int? PageNumber{ get; set; }
-        ///<summary>
-        /// 每页条数
-        ///</summary>
-        public int? PageSize{ get; set; }
-        ///<summary>
-        /// 资源续费状态 0:手动续费资源 1:全部资源 2:自动续费资源,默认全部
-        ///</summary>
-        public int? RenewStatus{ get; set; }
-        ///<summary>
-        /// 到期时间 0:已过期,n:n天内到期,-1:全部,-2:未到期,默认全部
-        ///</summary>
-        public string ExpireTime{ get; set; }
-        ///<summary>
         /// 资源名称
         ///</summary>
         public string InstanceName{ get; set; }
@@ -75,12 +59,28 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 主机绑定的内网ip地址
+        /// 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)
+        ///</summary>
+        public string RenewStatus{ get; set; }
+        ///<summary>
+        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源
+        ///</summary>
+        public string BillingType{ get; set; }
+        ///<summary>
+        /// 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)
+        ///</summary>
+        public string ExpireType{ get; set; }
+        ///<summary>
+        /// 主机绑定的内网IP地址
         ///</summary>
         public string IpAddress{ get; set; }
         ///<summary>
-        /// 资源计费类型 1:按配置,3:包年包月,默认不筛选
+        /// 当前页码，不传默认为1
         ///</summary>
-        public string BillingType{ get; set; }
+        public int? PageNumber{ get; set; }
+        ///<summary>
+        /// 每页条数，不传默认为10
+        ///</summary>
+        public int? PageSize{ get; set; }
     }
 }

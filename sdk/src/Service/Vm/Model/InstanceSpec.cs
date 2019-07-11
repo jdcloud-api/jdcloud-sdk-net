@@ -29,6 +29,7 @@ using System.Text;
 
 using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Vpc.Model;
+using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Vm.Model
@@ -102,5 +103,25 @@ namespace JDCloudSDK.Vm.Model
         /// 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
         public string Description{ get; set; }
+        ///<summary>
+        /// 不使用模板中的密码。
+        /// 仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+        /// 若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+        /// 
+        ///</summary>
+        public bool NoPassword{ get; set; }
+        ///<summary>
+        /// 不使用模板中的密钥。
+        /// 仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+        /// 若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+        /// 
+        ///</summary>
+        public bool NoKeyNames{ get; set; }
+        ///<summary>
+        /// 不使用模板中的弹性公网IP。
+        /// 仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+        /// 若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+        ///</summary>
+        public bool NoElasticIp{ get; set; }
     }
 }

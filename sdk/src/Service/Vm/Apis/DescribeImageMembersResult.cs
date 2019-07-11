@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vm.Apis
     public class DescribeImageMembersResult : JdcloudResult
     {
         ///<summary>
-        /// Pins
+        /// 用户Pin列表
         ///</summary>
         public List<string> Pins{ get; set; }
 

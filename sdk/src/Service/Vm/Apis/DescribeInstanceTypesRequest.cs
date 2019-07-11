@@ -41,11 +41,15 @@ namespace  JDCloudSDK.Vm.Apis
     public class DescribeInstanceTypesRequest : JdcloudRequest
     {
         ///<summary>
+        /// 服务类型，取值为{vm、nc}，vm代表虚机、nc代表原生容器
+        ///</summary>
+        public   string ServiceName{ get; set; }
+        ///<summary>
         /// instanceTypes - 实例规格，精确匹配，支持多个
         /// az - 可用区，精确匹配，支持多个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID

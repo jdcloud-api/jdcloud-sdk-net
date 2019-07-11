@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  音频参数
+    ///  音频参数配置
     /// </summary>
     public class Audio
     {

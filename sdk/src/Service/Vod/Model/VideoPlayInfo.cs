@@ -38,7 +38,7 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// 生成播放信息的任务ID
+        /// 生成播放信息的转码任务ID
         ///</summary>
         public string TaskId{ get; set; }
         ///<summary>
@@ -50,9 +50,9 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public int? MediaType{ get; set; }
         ///<summary>
-        /// 播放信息状态，目前只有完成状态
+        /// 播放信息状态，目前只有正常状态(normal)
         ///</summary>
-        public int? Status{ get; set; }
+        public string Status{ get; set; }
         ///<summary>
         /// CDN地址，原始地址或者鉴权地址
         ///</summary>

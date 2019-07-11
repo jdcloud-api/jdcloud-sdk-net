@@ -38,7 +38,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 磁盘类型，取值范围{premium-hdd, ssd}
+        /// 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>

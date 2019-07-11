@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Vm.Apis
     public class DescribeImageConstraintsBatchResult : JdcloudResult
     {
         ///<summary>
-        /// ImageConstraints
+        /// 镜像限制
         ///</summary>
         public List<ImageConstraint> ImageConstraints{ get; set; }
 

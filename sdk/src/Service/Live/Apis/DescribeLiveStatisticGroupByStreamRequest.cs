@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLiveStatisticGroupByStreamRequest : JdcloudRequest
     {
         ///<summary>
-        /// 推流域名
+        /// 播放域名
         ///Required:true
         ///</summary>
         [Required]

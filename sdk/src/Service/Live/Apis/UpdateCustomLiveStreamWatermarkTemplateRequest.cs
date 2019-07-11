@@ -46,25 +46,44 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   int? Position{ get; set; }
         ///<summary>
+        /// 偏移量单位
+        /// - 取值: percent,pixel
+        /// - percent:按百分比; pixel:像素 默认:pixel
+        /// 
+        ///</summary>
+        public   string OffsetUnit{ get; set; }
+        ///<summary>
         /// x轴偏移量
-        /// - 单位: 像素
+        /// - 取值范围
+        ///   percent: (0,100]
+        ///   pixel: (0,1920]
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int OffsetX{ get; set; }
         ///<summary>
-        /// y轴偏移量:
-        /// - 单位: 像素
+        /// y轴偏移量
+        /// - 取值范围
+        ///   percent: (0,100]
+        ///   pixel: (0,1920]
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   int OffsetY{ get; set; }
         ///<summary>
+        /// 水印大小单位
+        /// - 取值: percent,pixel
+        /// - percent:按百分比; pixel:像素 默认:pixel
+        /// 
+        ///</summary>
+        public   string SizeUnit{ get; set; }
+        ///<summary>
         /// 水印宽度:
-        /// - 取值: [0,1920]
-        /// - 单位: 像素
+        /// - 取值范围
+        ///   percent: (0,100]
+        ///   pixel: (0,1920]
         /// 
         ///Required:true
         ///</summary>
@@ -72,8 +91,9 @@ namespace  JDCloudSDK.Live.Apis
         public   int Width{ get; set; }
         ///<summary>
         /// 水印高度:
-        /// - 取值: [0,1920]
-        /// - 单位: 像素
+        /// - 取值范围
+        ///   percent: (0,100]
+        ///   pixel: (0,1920]
         /// 
         ///Required:true
         ///</summary>

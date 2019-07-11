@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
+using JDCloudSDK.Pod.Model;
 
 namespace JDCloudSDK.Pod.Model
 {

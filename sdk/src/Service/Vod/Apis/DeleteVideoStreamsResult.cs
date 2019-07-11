@@ -37,5 +37,20 @@ namespace  JDCloudSDK.Vod.Apis
     /// </summary>
     public class DeleteVideoStreamsResult : JdcloudResult
     {
+        ///<summary>
+        /// 删除成功的转码任务ID列表
+        ///</summary>
+        public List<double?> OkTaskIds{ get; set; }
+
+        ///<summary>
+        /// 未找到的转码任务ID列表
+        ///</summary>
+        public List<double?> NotFoundTaskIds{ get; set; }
+
+        ///<summary>
+        /// 删除失败的转码任务ID列表
+        ///</summary>
+        public List<double?> FailedTaskIds{ get; set; }
+
     }
 }

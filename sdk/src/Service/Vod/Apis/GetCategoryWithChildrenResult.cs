@@ -54,14 +54,6 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// 创建时间
-        ///</summary>
-        public   DateTime? CreateTime{ get; set; }
-        ///<summary>
-        /// 修改时间
-        ///</summary>
-        public   DateTime? UpdateTime{ get; set; }
-        ///<summary>
         /// Children
         ///</summary>
         public List<object> Children{ get; set; }

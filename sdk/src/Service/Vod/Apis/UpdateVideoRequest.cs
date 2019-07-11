@@ -39,17 +39,13 @@ namespace  JDCloudSDK.Vod.Apis
     public class UpdateVideoRequest : JdcloudRequest
     {
         ///<summary>
-        /// 视频ID
-        ///</summary>
-        public   string Id{ get; set; }
-        ///<summary>
         /// 视频名称
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
         /// 分类ID
         ///</summary>
-        public   long? CategoryId{ get; set; }
+        public   double? CategoryId{ get; set; }
         ///<summary>
         /// 标签
         ///</summary>
@@ -60,7 +56,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string CoverUrl{ get; set; }
         ///<summary>
-        /// 视频描述
+        /// 视频描述信息
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>

@@ -39,18 +39,6 @@ namespace JDCloudSDK.Renewal.Model
     {
 
         ///<summary>
-        /// 资源id列表,英文逗号分隔
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string InstanceIds{ get; set; }
-        ///<summary>
-        /// 自动续费状态 0-关闭自动续费,1-开通或修改自动续费
-        ///Required:true
-        ///</summary>
-        [Required]
-        public int AutoRenewStatus{ get; set; }
-        ///<summary>
         /// 业务线
         ///Required:true
         ///</summary>
@@ -63,16 +51,28 @@ namespace JDCloudSDK.Renewal.Model
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
-        /// 续费周期（autoRenewStatus&#x3D;1时必传）
+        /// 续费时长
         ///</summary>
         public int? TimeSpan{ get; set; }
         ///<summary>
-        /// 时间单位 1-小时 2-天 3-月 4-年（autoRenewStatus&#x3D;1时必传）
+        /// 时间单位(MONTH-月,YEAR-年)
         ///</summary>
-        public int? TimeUnit{ get; set; }
+        public string TimeUnit{ get; set; }
         ///<summary>
-        /// 是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus&#x3D;1时必传）
+        /// 资源ID列表,英文逗号分隔
+        ///Required:true
         ///</summary>
-        public int? AllAutoPay{ get; set; }
+        [Required]
+        public string InstanceIds{ get; set; }
+        ///<summary>
+        /// 自动续费状态(OPEN-开通自动续费,CLOSE-关闭自动续费,MODIFY-修改自动续费)
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string AutoRenewStatus{ get; set; }
+        ///<summary>
+        /// 是否绑定关联资源一并自动续费(AUTO_RENEW-是,UN_AUTO_RENEW-否)
+        ///</summary>
+        public string AllAutoPay{ get; set; }
     }
 }

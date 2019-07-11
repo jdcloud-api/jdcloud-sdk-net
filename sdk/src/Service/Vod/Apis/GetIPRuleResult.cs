@@ -50,13 +50,5 @@ namespace  JDCloudSDK.Vod.Apis
         /// 是否启用该规则
         ///</summary>
         public   bool Enabled{ get; set; }
-        ///<summary>
-        /// CreateTime
-        ///</summary>
-        public   DateTime? CreateTime{ get; set; }
-        ///<summary>
-        /// UpdateTime
-        ///</summary>
-        public   DateTime? UpdateTime{ get; set; }
     }
 }

@@ -33,17 +33,17 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  为一台云主机挂载一块数据盘(云硬盘)，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+    ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
         /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
         /// 
     /// </summary>
     public class AttachDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  为一台云主机挂载一块数据盘(云硬盘)，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+        ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
         /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -53,9 +53,9 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  为一台云主机挂载一块数据盘(云硬盘)，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+        ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
         /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

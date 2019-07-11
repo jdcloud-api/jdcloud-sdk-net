@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Vm.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vm.Apis
 {
@@ -51,9 +51,7 @@ namespace  JDCloudSDK.Vm.Apis
         public   string Name{ get; set; }
         ///<summary>
         /// 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
-        ///Required:true
         ///</summary>
-        [Required]
         public   string Description{ get; set; }
         ///<summary>
         /// 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。

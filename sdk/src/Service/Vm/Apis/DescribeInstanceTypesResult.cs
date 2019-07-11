@@ -40,12 +40,12 @@ namespace  JDCloudSDK.Vm.Apis
     public class DescribeInstanceTypesResult : JdcloudResult
     {
         ///<summary>
-        /// InstanceTypes
+        /// 通用的实例规格
         ///</summary>
         public List<InstanceType> InstanceTypes{ get; set; }
 
         ///<summary>
-        /// SpecificInstanceTypes
+        /// 用户特有的实例规格；需要工单申请
         ///</summary>
         public List<InstanceType> SpecificInstanceTypes{ get; set; }
 

@@ -63,7 +63,7 @@ namespace  JDCloudSDK.Vm.Apis
         /// faultDomain - 错误域，支持多个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID

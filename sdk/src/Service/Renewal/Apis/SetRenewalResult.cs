@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * Renew Management APIs
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Renewal.Apis
 {
 
     /// <summary>
-    ///  开通、取消实例自动续费
+    ///  为一个或多个实例设置自动续费服务。
     /// </summary>
     public class SetRenewalResult : JdcloudResult
     {
         ///<summary>
-        /// 更新成功条数
+        /// 设置成功条数
         ///</summary>
         public   string StringResult{ get; set; }
     }

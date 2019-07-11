@@ -48,11 +48,11 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// 宽度
         ///</summary>
-        public   int? Width{ get; set; }
+        public   string Width{ get; set; }
         ///<summary>
         /// 高度
         ///</summary>
-        public   int? Height{ get; set; }
+        public   string Height{ get; set; }
         ///<summary>
         /// 水印位置
         ///</summary>

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Renewal.Model;
 
 namespace JDCloudSDK.Renewal.Model
 {
@@ -38,53 +39,53 @@ namespace JDCloudSDK.Renewal.Model
     {
 
         ///<summary>
-        /// 到期时间
+        /// 业务线
         ///</summary>
-        public string ExpireTime{ get; set; }
+        public string AppCode{ get; set; }
         ///<summary>
         /// 产品线
         ///</summary>
         public string ServiceCode{ get; set; }
         ///<summary>
-        /// 倒计时
+        /// 资源ID
         ///</summary>
-        public int? LastTime{ get; set; }
+        public string ResourceId{ get; set; }
         ///<summary>
         /// 资源名称
         ///</summary>
         public string ResourceName{ get; set; }
         ///<summary>
-        /// 资源ID
-        ///</summary>
-        public string ResourceId{ get; set; }
-        ///<summary>
         /// 地域
         ///</summary>
-        public string DataCenter{ get; set; }
+        public string Region{ get; set; }
         ///<summary>
-        /// 计费类型
+        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源
         ///</summary>
-        public int? BillingType{ get; set; }
+        public string BillingType{ get; set; }
         ///<summary>
-        /// 是否开通自动续费(0:未开通,1:已开通)
+        /// 资源到期时间
         ///</summary>
-        public int? AutoRenew{ get; set; }
+        public string ExpireTime{ get; set; }
         ///<summary>
-        /// 1:关联包年包月资源一并自动续费 2：关联包年包月资源不自动续费
+        /// 倒计时
         ///</summary>
-        public int? AssociateResource{ get; set; }
+        public int? LastTime{ get; set; }
         ///<summary>
-        /// 续费周期
+        /// 自动续费状态(UNOPENED-未开通,OPENED-已开通)
         ///</summary>
-        public int? RenewTime{ get; set; }
+        public string AutoRenewStatus{ get; set; }
         ///<summary>
-        /// 数据库类型
+        /// 自动续费周期，单位为月
         ///</summary>
-        public string DatabaseType{ get; set; }
+        public string AutoRenewPeriod{ get; set; }
         ///<summary>
-        /// 特殊需求
+        /// 是否绑定关联资源一并续费(BIND-是,UNBIND-否)
         ///</summary>
-        public string Remark{ get; set; }
+        public string AssociateResource{ get; set; }
+        ///<summary>
+        /// 扩展字段，包括数据库类型、资源特殊说明等
+        ///</summary>
+        public string ExtendField{ get; set; }
         ///<summary>
         /// 绑定资源列表
         ///</summary>

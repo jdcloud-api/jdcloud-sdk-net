@@ -58,11 +58,11 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   bool AsDefault{ get; set; }
         ///<summary>
-        /// CreateTime
+        /// 创建时间
         ///</summary>
         public   DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// UpdateTime
+        /// 修改时间
         ///</summary>
         public   DateTime? UpdateTime{ get; set; }
     }

@@ -38,14 +38,19 @@ namespace  JDCloudSDK.Vod.Apis
     public class BatchDeleteVideosResult : JdcloudResult
     {
         ///<summary>
-        /// DeletedVideoIds
+        /// 删除成功的视频ID列表
         ///</summary>
-        public List<string> DeletedVideoIds{ get; set; }
+        public List<string> OkVideoIds{ get; set; }
 
         ///<summary>
-        /// NotFoundVideoIds
+        /// 未找到的视频ID列表
         ///</summary>
         public List<string> NotFoundVideoIds{ get; set; }
+
+        ///<summary>
+        /// 删除失败的视频ID列表
+        ///</summary>
+        public List<string> FailedVideoIds{ get; set; }
 
     }
 }

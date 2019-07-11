@@ -43,10 +43,6 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string HeaderName{ get; set; }
         ///<summary>
-        /// 头参数值
-        ///</summary>
-        public   string HeaderValue{ get; set; }
-        ///<summary>
         /// 头参数类型
         ///</summary>
         public   string HeaderType{ get; set; }

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Vod.Model;
 
 namespace JDCloudSDK.Vod.Model
 {
@@ -57,13 +58,5 @@ namespace JDCloudSDK.Vod.Model
         /// Children
         ///</summary>
         public List<CategoryTreeNode> Children{ get; set; }
-        ///<summary>
-        /// 创建时间
-        ///</summary>
-        public DateTime? CreateTime{ get; set; }
-        ///<summary>
-        /// 修改时间
-        ///</summary>
-        public DateTime? UpdateTime{ get; set; }
     }
 }

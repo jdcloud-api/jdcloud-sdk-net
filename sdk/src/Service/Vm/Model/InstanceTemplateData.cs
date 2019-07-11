@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Vm.Model;
 
 namespace JDCloudSDK.Vm.Model
 {
@@ -64,7 +65,7 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 主网卡信息
         ///</summary>
-        public InstanceTemplateNetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
+        public InstanceTemplateNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
         /// 主网卡主IP关联的弹性IP规格
         ///</summary>

@@ -42,7 +42,7 @@ namespace  JDCloudSDK.Vm.Apis
     public class DescribeImagesResult : JdcloudResult
     {
         ///<summary>
-        /// Images
+        /// 镜像详情
         ///</summary>
         public List<Image> Images{ get; set; }
 

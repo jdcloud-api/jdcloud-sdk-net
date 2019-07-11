@@ -39,11 +39,11 @@ namespace  JDCloudSDK.Vod.Apis
     public class GetVideoPlayInfoResult : JdcloudResult
     {
         ///<summary>
-        /// VideoInfo
+        /// BaseInfo
         ///</summary>
-        public   VideoBaseInfo VideoInfo{ get; set; }
+        public   VideoBaseInfo BaseInfo{ get; set; }
         ///<summary>
-        /// 播放信息列表
+        /// PlayInfoList
         ///</summary>
         public List<VideoPlayInfo> PlayInfoList{ get; set; }
 

@@ -38,6 +38,14 @@ namespace JDCloudSDK.Renewal.Model
     {
 
         ///<summary>
+        /// 业务线
+        ///</summary>
+        public string AppCode{ get; set; }
+        ///<summary>
+        /// 产品线
+        ///</summary>
+        public string ServiceCode{ get; set; }
+        ///<summary>
         /// 资源ID
         ///</summary>
         public string ResourceId{ get; set; }
@@ -46,32 +54,28 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string ResourceName{ get; set; }
         ///<summary>
-        /// 产品线
-        ///</summary>
-        public string ServiceCode{ get; set; }
-        ///<summary>
-        /// 计费类型
-        ///</summary>
-        public int? BillingType{ get; set; }
-        ///<summary>
-        /// 到期时间
-        ///</summary>
-        public string ExpireTime{ get; set; }
-        ///<summary>
         /// 地域
         ///</summary>
-        public string DataCenter{ get; set; }
+        public string Region{ get; set; }
         ///<summary>
-        /// 是否开通自动续费(0:未开通,1:已开通)
+        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源
         ///</summary>
-        public int? AutoRenew{ get; set; }
+        public string BillingType{ get; set; }
+        ///<summary>
+        /// 资源到期时间
+        ///</summary>
+        public string ExpireTime{ get; set; }
         ///<summary>
         /// 倒计时
         ///</summary>
         public int? LastTime{ get; set; }
         ///<summary>
-        /// 关联资源特殊需求
+        /// 自动续费状态(UNOPENED-未开通,OPENED-已开通)
         ///</summary>
-        public string Remark{ get; set; }
+        public string AutoRenewStatus{ get; set; }
+        ///<summary>
+        /// 扩展字段，包括数据库类型、资源特殊说明等
+        ///</summary>
+        public string ExtendField{ get; set; }
     }
 }
