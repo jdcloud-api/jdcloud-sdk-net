@@ -112,7 +112,7 @@ namespace JDCloudSDK.Core.Extensions
             requestModel.ContentType = httpWebRequest.ContentType.ToString();
             requestModel.HttpMethod = requestMethod.ToString().ToUpper();
             var pathRegion = requestUri.GetRequestVersion();
-            if (!string.IsNullOrWhiteSpace(pathRegion))
+            if (!pathRegion.IsNullOrWhiteSpace())
             {
                 requestModel.RegionName = pathRegion;
             }
@@ -122,14 +122,14 @@ namespace JDCloudSDK.Core.Extensions
             }
 
             requestModel.ResourcePath = requestPath;
-            if (!string.IsNullOrWhiteSpace(serviceName))
+            if (!serviceName.IsNullOrWhiteSpace())
             {
                 requestModel.ServiceName = serviceName;
             }
             else
             {
                 serviceName = requestUri.GetServiceName();
-                if (string.IsNullOrWhiteSpace(serviceName))
+                if (serviceName.IsNullOrWhiteSpace())
                 {
                     throw new Exception("service name not config , if you not use default endpoint please config service in sign");
                 }
@@ -146,7 +146,7 @@ namespace JDCloudSDK.Core.Extensions
             }
             foreach (string headerKeyValue in headers.Keys)
             {
-                requestModel.AddHeader(headerKeyValue, string.Join(",", headers.Get(headerKeyValue)));
+                requestModel.AddHeader(headerKeyValue,   headers.Get(headerKeyValue));
             }
             JDCloudSigner jDCloudSigner = new JDCloudSigner();
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
