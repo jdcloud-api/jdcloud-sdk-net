@@ -76,6 +76,15 @@ namespace JDCloudSDK.Core.Extensions
             }
             JDCloudSigner jDCloudSigner = new JDCloudSigner();
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
+            var signedHeader = signedRequestModel.RequestHead;
+            foreach (var key in signedHeader.Keys)
+            {
+                if (httpRequestMessage.Headers.GetValues(key) == null)
+                {
+                    var value = signedHeader[key];
+                    httpRequestMessage.Headers.Add(key, value);
+                }
+            }
             return httpRequestMessage;
         }
     }
