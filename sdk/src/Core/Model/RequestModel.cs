@@ -91,8 +91,10 @@ namespace JDCloudSDK.Core.Model
             {
                 Header = new Dictionary<string, List<string>>();
             }
-
-            List<string> headerValues = Header[key];
+            List<string> headerValues = null;
+            if (Header.ContainsKey(key)) {
+                headerValues = Header[key];
+            } 
             if (headerValues == null)
             {
                 headerValues = new List<string>();

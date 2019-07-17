@@ -35,13 +35,18 @@ namespace JDCloudSDK.Core.Extensions
             string apiVersion = requestUri.GetRequestVersion();
             RequestModel requestModel = new RequestModel();
             requestModel.ApiVersion = apiVersion;
-            using (var contentStream = new MemoryStream()) {
-                requestContent.CopyToAsync(contentStream).RunSynchronously();
-                if (contentStream.Length > 0) {
-                    requestModel.Content = contentStream.ToArray();
+            if (requestContent != null) {
+                using (var contentStream = new MemoryStream())
+                {
+                    requestContent.CopyToAsync(contentStream).RunSynchronously();
+                    if (contentStream.Length > 0)
+                    {
+                        requestModel.Content = contentStream.ToArray();
+                    }
                 }
+
+                requestModel.ContentType = requestContent.Headers.ContentType.ToString();
             }
-            requestModel.ContentType = requestContent.Headers.ContentType.ToString();
             requestModel.HttpMethod = requestMethod.ToString().ToUpper();
             var pathRegion = requestUri.GetRequestVersion();
             if (!string.IsNullOrWhiteSpace(pathRegion)) {
@@ -79,10 +84,10 @@ namespace JDCloudSDK.Core.Extensions
             var signedHeader = signedRequestModel.RequestHead;
             foreach (var key in signedHeader.Keys)
             {
-                if (httpRequestMessage.Headers.GetValues(key) == null)
+                if (!httpRequestMessage.Headers.Contains(key))
                 {
                     var value = signedHeader[key];
-                    httpRequestMessage.Headers.Add(key, value);
+                    httpRequestMessage.Headers.TryAddWithoutValidation(key, value);
                 }
             }
             return httpRequestMessage;

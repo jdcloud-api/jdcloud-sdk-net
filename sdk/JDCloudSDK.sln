@@ -1,11 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9863FCB3-BFA4-4B9C-B8F6-302BA5F660B8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JDCloudSDK.Core", "src\Core\JDCloudSDK.Core.csproj", "{BB7CA472-E6B5-4C2E-8E83-47ECF3A89E82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKTestConsole", "SDKTestConsole\SDKTestConsole.csproj", "{31463366-2D5B-406A-A8AB-4329849356E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +18,17 @@ Global
 		{BB7CA472-E6B5-4C2E-8E83-47ECF3A89E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB7CA472-E6B5-4C2E-8E83-47ECF3A89E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB7CA472-E6B5-4C2E-8E83-47ECF3A89E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31463366-2D5B-406A-A8AB-4329849356E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31463366-2D5B-406A-A8AB-4329849356E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31463366-2D5B-406A-A8AB-4329849356E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31463366-2D5B-406A-A8AB-4329849356E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BB7CA472-E6B5-4C2E-8E83-47ECF3A89E82} = {9863FCB3-BFA4-4B9C-B8F6-302BA5F660B8}
-		EndGlobalSection
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32A9903E-CBA2-4CFF-8469-12146263387F}
 	EndGlobalSection

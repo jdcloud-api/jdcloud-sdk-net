@@ -170,7 +170,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="overrideDate">the sign date override</param>
         /// <param name="signType">the jdcloud sign method type</param>
         /// <returns></returns>
-        public static HttpClient DoSign(this HttpClient httpClient, Credentials credentials,string serviceName= null,string signType = null, DateTime? overrideDate = null)
+        public static HttpClientWrapper DoSign(this HttpClient httpClient, Credentials credentials,string serviceName= null,string signType = null, DateTime? overrideDate = null)
         {
             HttpClientWrapper httpClientWrapper = new HttpClientWrapper(httpClient, credentials, serviceName,signType, overrideDate); 
             return httpClientWrapper;
