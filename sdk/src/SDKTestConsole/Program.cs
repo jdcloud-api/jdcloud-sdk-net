@@ -17,7 +17,7 @@ namespace SDKTestConsole
                 var result = httpResponseMessage.Content.ReadAsStringAsync().Result;
                 Console.WriteLine(result);
             }
-            //Credentials credentials = new Credentials("0E91C3765B78CBD71715F9BF24997AF3", "AF7B13C8010F50F03A52C01458714701");
+            //Credentials credentials = new Credentials("ak", "ak");
             //HttpResponseMessage httpResponseMessage = httpClient.DoSign(credentials, "vm", null, new DateTime(2019, 7, 18, 2, 22, 22)).GetAsync("http://apigw-internal.cn-north-1.jcloudcs.com/v1/regions/cn-north-1/instances").Result;
             //if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.OK)
             //{
