@@ -25,7 +25,6 @@
 
 using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Common.Profile;
 using JDCloudSDK.Core.Http;
 using JDCloudSDK.Disk.Apis;
 using JDCloudSDK.Disk.Model;
@@ -61,7 +60,7 @@ namespace JDCloudSDK.Disk.Client
         /// <param name="credentialsProvider">认证信息</param>
         /// <param name="httpRequestConfig">http 客户端配置信息</param>
         /// <param name="environment">sdk 环境配置信息</param>
-        public DiskClient(CredentialsProvider credentialsProvider, HttpRequestConfig httpRequestConfig, SDKEnvironment environment)
+        public DiskClient(CredentialsProvider credentialsProvider, HttpRequestConfig httpRequestConfig,SDKEnvironment environment)
         {
             this.httpRequestConfig = httpRequestConfig;
             this.credentialsProvider = credentialsProvider;
@@ -73,7 +72,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="httpRequestConfig">http 客户端配置信息</param>
         /// <param name="credentialsProvider">认证信息</param>
-        public DiskClient(CredentialsProvider credentialsProvider, HttpRequestConfig httpRequestConfig)
+        public DiskClient(CredentialsProvider credentialsProvider,HttpRequestConfig httpRequestConfig)
         {
             this.httpRequestConfig = httpRequestConfig;
             this.credentialsProvider = credentialsProvider;
@@ -106,19 +105,14 @@ namespace JDCloudSDK.Disk.Client
         private HttpRequestConfig httpRequestConfig;
 
         /// <summary>
-        /// client config
-        /// </summary>
-        public override ClientProfile ClientProfile { get; set; }
-
-        /// <summary>
         ///  获取证书信息
         ///</summary>
-        public CredentialsProvider CredentialsProvider { get { return credentialsProvider; } }
+        public override CredentialsProvider CredentialsProvider   { get { return credentialsProvider; } }
 
         /// <summary>
         ///  获取http 客户端配置信息
         ///</summary>
-        public HttpRequestConfig HttpRequestConfig { get { return httpRequestConfig; } }
+        public override HttpRequestConfig HttpRequestConfig { get { return httpRequestConfig; } }
 
         /// <summary>
         ///  获取sdk环境配置信息
@@ -157,8 +151,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifySnapshotAttributeResponse> ModifySnapshotAttribute(ModifySnapshotAttributeRequest request)
-        {
+        public async Task<ModifySnapshotAttributeResponse> ModifySnapshotAttribute(ModifySnapshotAttributeRequest request) {
             return await new ModifySnapshotAttributeExecutor().Client(this).Execute<ModifySnapshotAttributeResponse, ModifySnapshotAttributeResult, ModifySnapshotAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -191,8 +184,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateDisksResponse> CreateDisks(CreateDisksRequest request)
-        {
+        public async Task<CreateDisksResponse> CreateDisks(CreateDisksRequest request) {
             return await new CreateDisksExecutor().Client(this).Execute<CreateDisksResponse, CreateDisksResult, CreateDisksRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -217,8 +209,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteSnapshotResponse> DeleteSnapshot(DeleteSnapshotRequest request)
-        {
+        public async Task<DeleteSnapshotResponse> DeleteSnapshot(DeleteSnapshotRequest request) {
             return await new DeleteSnapshotExecutor().Client(this).Execute<DeleteSnapshotResponse, DeleteSnapshotResult, DeleteSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -237,8 +228,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeSnapshotsResponse> DescribeSnapshots(DescribeSnapshotsRequest request)
-        {
+        public async Task<DescribeSnapshotsResponse> DescribeSnapshots(DescribeSnapshotsRequest request) {
             return await new DescribeSnapshotsExecutor().Client(this).Execute<DescribeSnapshotsResponse, DescribeSnapshotsResult, DescribeSnapshotsRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -263,8 +253,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<RestoreDiskResponse> RestoreDisk(RestoreDiskRequest request)
-        {
+        public async Task<RestoreDiskResponse> RestoreDisk(RestoreDiskRequest request) {
             return await new RestoreDiskExecutor().Client(this).Execute<RestoreDiskResponse, RestoreDiskResult, RestoreDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -283,8 +272,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDiskResponse> DescribeDisk(DescribeDiskRequest request)
-        {
+        public async Task<DescribeDiskResponse> DescribeDisk(DescribeDiskRequest request) {
             return await new DescribeDiskExecutor().Client(this).Execute<DescribeDiskResponse, DescribeDiskResult, DescribeDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -307,8 +295,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ExtendDiskResponse> ExtendDisk(ExtendDiskRequest request)
-        {
+        public async Task<ExtendDiskResponse> ExtendDisk(ExtendDiskRequest request) {
             return await new ExtendDiskExecutor().Client(this).Execute<ExtendDiskResponse, ExtendDiskResult, ExtendDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -327,8 +314,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyDiskAttributeResponse> ModifyDiskAttribute(ModifyDiskAttributeRequest request)
-        {
+        public async Task<ModifyDiskAttributeResponse> ModifyDiskAttribute(ModifyDiskAttributeRequest request) {
             return await new ModifyDiskAttributeExecutor().Client(this).Execute<ModifyDiskAttributeResponse, ModifyDiskAttributeResult, ModifyDiskAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -351,8 +337,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest request)
-        {
+        public async Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest request) {
             return await new DescribeDisksExecutor().Client(this).Execute<DescribeDisksResponse, DescribeDisksResult, DescribeDisksRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -377,8 +362,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteDiskResponse> DeleteDisk(DeleteDiskRequest request)
-        {
+        public async Task<DeleteDiskResponse> DeleteDisk(DeleteDiskRequest request) {
             return await new DeleteDiskExecutor().Client(this).Execute<DeleteDiskResponse, DeleteDiskResult, DeleteDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -409,8 +393,7 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateSnapshotResponse> CreateSnapshot(CreateSnapshotRequest request)
-        {
+        public async Task<CreateSnapshotResponse> CreateSnapshot(CreateSnapshotRequest request) {
             return await new CreateSnapshotExecutor().Client(this).Execute<CreateSnapshotResponse, CreateSnapshotResult, CreateSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -429,146 +412,119 @@ namespace JDCloudSDK.Disk.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeSnapshotResponse> DescribeSnapshot(DescribeSnapshotRequest request)
-        {
+        public async Task<DescribeSnapshotResponse> DescribeSnapshot(DescribeSnapshotRequest request) {
             return await new DescribeSnapshotExecutor().Client(this).Execute<DescribeSnapshotResponse, DescribeSnapshotResult, DescribeSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 
-        /// <summary>
-        ///  默认DiskClient 构造器 接口
-        ///</summary>
-        public interface Builder
-        {
-
             /// <summary>
-            /// 设置认证信息参数
-            /// </summary>
-            /// <param name="provider">认证信息提供对象</param>
-            /// <returns>diskClient 构造器</returns>
-            Builder CredentialsProvider(CredentialsProvider provider);
-
-            /// <summary>
-            /// 设置请求环境参数
-            /// </summary>
-            /// <param name="environment">环境参数信息</param>
-            /// <returns>diskClient 构造器</returns>
-            Builder Environment(Core.Client.SDKEnvironment environment);
-
-            /// <summary>
-            /// http 请求配置信息
-            /// </summary>
-            /// <param name="config">http 请求配置信息</param>
-            /// <returns>diskClient 构造器</returns>
-            Builder HttpRequestConfig(HttpRequestConfig config);
-
-            /// <summary>
-            ///  构造DiskClient 对象
+            ///  默认DiskClient 构造器 接口
             ///</summary>
-            DiskClient Build();
-        }
-
-        /// <summary>
-        ///  默认DiskClient 构造器
-        ///</summary>
-        public class DefaultBuilder : Builder
-        {
-            /// <summary>
-            ///  DiskClient service client
-            /// </summary>
-            private DiskClient diskClient;
-
-            /// <summary>
-            ///  默认DiskClient 构造器构造对象
-            ///</summary>
-            public DefaultBuilder()
+            public interface Builder
             {
-                diskClient = new DiskClient();
+
+                /// <summary>
+                /// 设置认证信息参数
+                /// </summary>
+                /// <param name="provider">认证信息提供对象</param>
+                /// <returns>diskClient 构造器</returns>
+                Builder CredentialsProvider(CredentialsProvider provider);
+
+                /// <summary>
+                /// 设置请求环境参数
+                /// </summary>
+                /// <param name="environment">环境参数信息</param>
+                /// <returns>diskClient 构造器</returns>
+                Builder Environment(Core.Client.SDKEnvironment environment);
+
+                /// <summary>
+                /// http 请求配置信息
+                /// </summary>
+                /// <param name="config">http 请求配置信息</param>
+                /// <returns>diskClient 构造器</returns>
+                Builder HttpRequestConfig(HttpRequestConfig config);
+
+                /// <summary>
+                ///  构造DiskClient 对象
+                ///</summary>
+                DiskClient Build();
             }
 
             /// <summary>
-            ///  构造DiskClient 对象
+            ///  默认DiskClient 构造器
             ///</summary>
-            public DiskClient Build()
+            public class DefaultBuilder : Builder
             {
-                if (diskClient.CredentialsProvider == null)
+                /// <summary>
+                ///  DiskClient service client
+                /// </summary>
+                private  DiskClient diskClient;
+
+                /// <summary>
+                ///  默认DiskClient 构造器构造对象
+                ///</summary>
+                public DefaultBuilder()
                 {
-                    //if credentialsProvider not set, try load jdcloud global default  credentials provider
-                    diskClient.credentialsProvider = JdCloud.DefaultInstance.GetCredentialsProvider();
-                    if (diskClient.credentialsProvider == null)
-                    {
-                        throw new ArgumentNullException("DiskClient build error: jdcloud credentials provider not set");
-                    }
-                    diskClient.Credential = diskClient.credentialsProvider.GetCredentials();
+                    diskClient = new DiskClient();
                 }
-                if (diskClient.HttpRequestConfig == null)
+
+                /// <summary>
+                ///  构造DiskClient 对象
+                ///</summary>
+                public DiskClient Build()
                 {
-                    diskClient.httpRequestConfig = JdCloud.DefaultInstance.GetHttpRequestConfig();
-                    if (diskClient.httpRequestConfig == null)
+                    if (diskClient.CredentialsProvider == null)
                     {
+                        //if credentialsProvider not set, try load jdcloud global default  credentials provider
+                        diskClient.credentialsProvider = JdCloud.DefaultInstance.GetCredentialsProvider();
+                        if (diskClient.credentialsProvider == null)
+                        {
+                            throw new ArgumentNullException("DiskClient build error: jdcloud credentials provider not set");
+                        }
+                    }
+                    if (diskClient.HttpRequestConfig == null)
+                    {
+                        diskClient.httpRequestConfig = JdCloud.DefaultInstance.GetHttpRequestConfig();
+                        if (diskClient.httpRequestConfig == null)
+                        {
                         throw new ArgumentNullException("DiskClient build error: http request config not set");
+                        }
                     }
-                    if (diskClient.ClientProfile == null)
-                    {
-                        diskClient.ClientProfile = new ClientProfile();
-
-                    }
-                     
-                        diskClient.ClientProfile.HttpProfile.Timeout = diskClient.httpRequestConfig.RequestTimeout;
-                        diskClient.ClientProfile.HttpProfile.Protocol = diskClient.httpRequestConfig.Protocol.ToString();
-                    
-
+                    return diskClient;
                 }
-                return diskClient;
-            }
 
-            /// <summary>
-            /// 设置认证信息参数
-            /// </summary>
-            /// <param name="provider">认证信息提供对象</param>
-            /// <returns>diskClient 构造器</returns>
-            public Builder CredentialsProvider(CredentialsProvider provider)
-            {
-                diskClient.credentialsProvider = provider;
-
-                diskClient.Credential = diskClient.credentialsProvider.GetCredentials();
-
-                return this;
-            }
-
-            /// <summary>
-            /// 设置请求环境参数
-            /// </summary>
-            /// <param name="environment">环境参数信息</param>
-            /// <returns>diskClient 构造器</returns>
-            public Builder Environment(SDKEnvironment environment)
-            {
-                diskClient.environment = environment;
-                return this;
-            }
-
-            /// <summary>
-            /// http 请求配置信息
-            /// </summary>
-            /// <param name="config">http 请求配置信息</param>
-            /// <returns>diskClient 构造器</returns>
-            public Builder HttpRequestConfig(HttpRequestConfig config)
-            {
-                diskClient.httpRequestConfig = config;
-                if (diskClient.ClientProfile == null)
+                /// <summary>
+                /// 设置认证信息参数
+                /// </summary>
+                /// <param name="provider">认证信息提供对象</param>
+                /// <returns>diskClient 构造器</returns>
+                public Builder CredentialsProvider(CredentialsProvider provider)
                 {
-                    diskClient.ClientProfile = new ClientProfile();
-
+                    diskClient.credentialsProvider = provider;
+                    return this;
                 }
-                if (diskClient.httpRequestConfig.RequestTimeout > diskClient.ClientProfile.HttpProfile.Timeout)
+
+                /// <summary>
+                /// 设置请求环境参数
+                /// </summary>
+                /// <param name="environment">环境参数信息</param>
+                /// <returns>diskClient 构造器</returns>
+                public Builder Environment(SDKEnvironment environment)
                 {
-                    diskClient.ClientProfile.HttpProfile.Timeout = diskClient.httpRequestConfig.RequestTimeout;
-
+                    diskClient.environment = environment;
+                    return this;
                 }
-                diskClient.ClientProfile.HttpProfile.Protocol = diskClient.httpRequestConfig.Protocol.ToString();
-                 
-                return this;
+
+                /// <summary>
+                /// http 请求配置信息
+                /// </summary>
+                /// <param name="config">http 请求配置信息</param>
+                /// <returns>diskClient 构造器</returns>
+                public Builder HttpRequestConfig(HttpRequestConfig config)
+                {
+                    diskClient.httpRequestConfig = config;
+                    return this;
+                }
             }
-        }
     }
 }

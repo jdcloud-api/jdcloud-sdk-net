@@ -73,7 +73,7 @@ namespace JDCloudSDK.Core.Client
         ///  如果Http 请求返回状态不为（OK）200 则返回错误信息，Error内的code 返回 Http 请求的错误码，message 返回服务器返回的异常
         /// </returns>
 #if NET40 || NET35
-        public R Execute<R,R2,T>(T request) where T: JdcloudRequest where R2:JdcloudResult where R : JdcloudResponse<R2>,new()
+        public R Execute<R, R2, T>(T request) where T : JdcloudRequest where R2 : JdcloudResult where R : JdcloudResponse<R2>, new()
 #else
         public async Task<R> Execute<R, R2, T>(T request) where T : JdcloudRequest where R2 : JdcloudResult where R : JdcloudResponse<R2>, new()
 #endif
@@ -168,13 +168,31 @@ namespace JDCloudSDK.Core.Client
                 {
                     using (HttpWebResponse httpWebResponse = (HttpWebResponse)webRequest.GetResponse())
                     {
+                        HttpSDKResponse httpSDKResponse = new HttpSDKResponse();
                         if (httpWebResponse != null)
                         {
+                            httpSDKResponse.StatusCode = (int)httpWebResponse.StatusCode;
+                            if (httpWebResponse.Headers != null && httpWebResponse.Headers.Count > 0)
+                            {
+
+                                for (int i = 0; i < httpWebResponse.Headers.Keys.Count; i++)
+                                {
+                                    var key = httpWebResponse.Headers.Keys[i];
+                                    string[] values = httpWebResponse.Headers.GetValues(key);
+                                    if (values != null && values.Length > 0)
+                                    {
+                                        httpSDKResponse.AddHeader(key, values.ToList());
+                                    }
+
+                                }
+                            }
                             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
                             {
                                 string responseContent = streamReader.ReadToEnd();
+                                httpSDKResponse.ResponseContent = Encoding.UTF8.GetBytes(responseContent);
+
                                 //return new Tuple<HttpStatusCode, string>(httpWebResponse.StatusCode, responseContent);
-                                var jDCloudSdkResult = new JDCloudSdkResult { StatusCode = httpWebResponse.StatusCode, ReturnValue = responseContent };
+                                var jDCloudSdkResult = new JDCloudSdkResult { StatusCode = httpWebResponse.StatusCode, ReturnValue = responseContent, HttpSDKResponse = httpSDKResponse };
                                 return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);
                             }
                         }
@@ -186,11 +204,28 @@ namespace JDCloudSDK.Core.Client
                     {
                         if (exceptionResponce != null)
                         {
+                            HttpSDKResponse httpSDKResponse = new HttpSDKResponse();
                             using (StreamReader streamReader = new StreamReader(exceptionResponce.GetResponseStream()))
                             {
+                                httpSDKResponse.StatusCode = (int)exceptionResponce.StatusCode;
+                                if (exceptionResponce.Headers != null && exceptionResponce.Headers.Count > 0)
+                                {
+
+                                    for (int i = 0; i < exceptionResponce.Headers.Keys.Count; i++)
+                                    {
+                                        var key = exceptionResponce.Headers.Keys[i];
+                                        string[] values = exceptionResponce.Headers.GetValues(key);
+                                        if (values != null && values.Length > 0)
+                                        {
+                                            httpSDKResponse.AddHeader(key, values.ToList());
+                                        }
+
+                                    }
+                                }
                                 string responseContent = streamReader.ReadToEnd();
-                                 var jDCloudSdkResult =  new JDCloudSdkResult { StatusCode = exceptionResponce.StatusCode, ReturnValue = responseContent };
-                                 return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);
+                                httpSDKResponse.ResponseContent = Encoding.UTF8.GetBytes(responseContent);
+                                var jDCloudSdkResult = new JDCloudSdkResult { StatusCode = exceptionResponce.StatusCode, ReturnValue = responseContent };
+                                return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);
                             }
                         }
                     }
@@ -218,7 +253,7 @@ namespace JDCloudSDK.Core.Client
                         }
                     }
                 }
-                if (contentStr.Length > 0)
+                if (!contentStr.IsNullOrWhiteSpace() && contentStr.Length > 0)
                 {
                     if (httpMethod != HttpMethod.Get && httpMethod != HttpMethod.Head && httpMethod != HttpMethod.Delete)
                     {
@@ -246,7 +281,7 @@ namespace JDCloudSDK.Core.Client
             }
             catch (Exception ex)
             {
-                throw new Exception("call sign and Http send request Error",ex);
+                throw new Exception("call sign and Http send request Error", ex);
             }
         }
 
@@ -264,7 +299,9 @@ namespace JDCloudSDK.Core.Client
                         if (!resultStr.IsNullOrWhiteSpace())
 
                         {
-                            return JsonConvert.DeserializeObject<R>(resultStr);
+                            var response = JsonConvert.DeserializeObject<R>(resultStr);
+                            response.HttpResponse = result.HttpSDKResponse;
+                            return response;
                         }
                     }
                     return null;
@@ -280,7 +317,9 @@ namespace JDCloudSDK.Core.Client
                         if (!resultStr.IsNullOrWhiteSpace())
 
                         {
-                            return JsonConvert.DeserializeObject<R>(resultStr);
+                            var response = JsonConvert.DeserializeObject<R>(resultStr);
+                            response.HttpResponse = result.HttpSDKResponse;
+                            return response;
                         }
                     }
                     return new R() { Error = new ServiceError() { Code = (int)result.StatusCode, Message = $"the gateway return {result.StatusCode.ToString() }" } };
@@ -301,12 +340,25 @@ namespace JDCloudSDK.Core.Client
             string result = null;
             try
             {
+                HttpSDKResponse httpSDKResponse = new HttpSDKResponse();
                 if (message != null)
                 {
                     using (message)
                     {
+                        httpSDKResponse.StatusCode = (int)message.StatusCode;
                         if (message.Content != null)
                         {
+                            if (message != null && message.Headers.Count() > 0)
+                            {
+                                foreach (var item in message.Headers)
+                                {
+                                    if (item.Value.Count() > 0)
+                                    {
+                                        httpSDKResponse.AddHeader(item.Key, item.Value.ToList());
+                                    }
+
+                                }
+                            }
                             using (Stream responseStream = await message.Content.ReadAsStreamAsync())
                             {
                                 if (responseStream != null)
@@ -315,6 +367,7 @@ namespace JDCloudSDK.Core.Client
                                     responseStream.Read(responseData, 0, responseData.Length);
                                     if (responseData != null && responseData.Length > 0)
                                     {
+                                        httpSDKResponse.ResponseContent = responseData;
                                         result = Encoding.UTF8.GetString(responseData);
                                     }
                                 }
@@ -322,7 +375,7 @@ namespace JDCloudSDK.Core.Client
                         }
                     }
                 }
-                return new JDCloudSdkResult { StatusCode = message.StatusCode, ReturnValue = result };
+                return new JDCloudSdkResult { StatusCode = message.StatusCode, ReturnValue = result, HttpSDKResponse = httpSDKResponse };
             }
             catch (Exception ex)
             {
@@ -399,11 +452,11 @@ namespace JDCloudSDK.Core.Client
                 foreach (var item in properties)
                 {
 #if NET40 || NET35
-                    
-                    var requiredAttribute =  item.GetCustomAttributes(typeof(RequiredAttribute),false);
-                    if (requiredAttribute != null&& requiredAttribute.Length>0)
+
+                    var requiredAttribute = item.GetCustomAttributes(typeof(RequiredAttribute), false);
+                    if (requiredAttribute != null && requiredAttribute.Length > 0)
                     {
-                        var value = item.GetValue(request,null);
+                        var value = item.GetValue(request, null);
                         if (value == null)
                         {
                             throw new ArgumentNullException($"field {item.Name} can not be null,please set value for it.");

@@ -282,7 +282,37 @@ namespace JDCloudSDK.Core.Utils
         /// <summary>
         /// 返回值
         /// </summary>
-        public String ReturnValue { get; set; }
+        public string ReturnValue { get; set; }
+
+
+        /// <summary>
+        /// response Data
+        /// </summary>
+        public HttpSDKResponse HttpSDKResponse { get; set; }
+
+    }
+
+    /// <summary>
+    /// response Data
+    /// </summary>
+    public class HttpSDKResponse
+    {
+
+        public Dictionary<string, List<string>> Header { get; set; } = new Dictionary<string, List<string>>();
+
+        public byte[] ResponseContent { get; set; }
+
+        public int StatusCode { get; set; }
+
+        public void AddHeader(string key, List<string> value)
+        {
+            if (Header == null)
+            {
+                Header = new Dictionary<string, List<string>>();
+            }
+            Header.Add(key, value);
+        }
+
 
     }
 }

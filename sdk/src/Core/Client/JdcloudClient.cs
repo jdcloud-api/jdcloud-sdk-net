@@ -1,5 +1,6 @@
 ﻿using JDCloudSDK.Core.Auth;
-using JDCloudSDK.Core.Common.Profile;  
+using JDCloudSDK.Core.Common.Profile;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 #if NET40 || NET35
@@ -33,17 +34,46 @@ namespace JDCloudSDK.Core.Client
         public abstract string Version { get; }
 
 
-
+        private ClientProfile _ClientProfile;
 
         /// <summary>
         /// 客户端配置
         /// </summary>
-        public virtual ClientProfile ClientProfile { get; set; }
+        public  ClientProfile ClientProfile {
+            get {
+                if(_ClientProfile == null)
+                {
+                    _ClientProfile = new ClientProfile();
+                    if (HttpRequestConfig != null) {
+                        if (HttpRequestConfig.RequestTimeout > _ClientProfile.HttpProfile.Timeout) {
+                            _ClientProfile.HttpProfile.Timeout = HttpRequestConfig.RequestTimeout;
+                        } 
+                        _ClientProfile.HttpProfile.Protocol = HttpRequestConfig.Protocol.ToString();
+                    }
+                }
+                return _ClientProfile;
+
+            } set {
+                _ClientProfile = value;
+            }
+        }
+
+
+        private Credential _Credential;
 
         /// <summary>
         /// 客户端认证信息
         /// </summary>
-        public virtual Credential Credential { get; set; }
+        public   Credential Credential {
+            get {
+                if (_Credential == null) {
+                    _Credential = CredentialsProvider.GetCredentials();
+                }
+                return _Credential;
+            } set {
+                this._Credential = value;
+            }
+        }
 
 
         /// <summary>
@@ -104,38 +134,41 @@ namespace JDCloudSDK.Core.Client
         {
             get
             {
-                if (this.HttpClient == null)
+                if (HttpClient == null)
                 {
                     if (httpClientHandler == null)
                     {
-                        if (ClientProfile == null || ClientProfile.HttpProfile == null || !String.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy))
+                        if (ClientProfile == null || ClientProfile.HttpProfile == null || !string.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy))
                         {
-                            this.HttpClient = new HttpClient();
+                            HttpClient = new HttpClient();
                         }
                         else
                         {
                             HttpClientHandler httpClientHandler = new HttpClientHandler();
-                            httpClientHandler.UseProxy = true;
-                            httpClientHandler.Proxy = new WebProxy(ClientProfile.HttpProfile.WebProxy);
-                            this.HttpClient = new HttpClient(httpClientHandler);
+                            if (!string.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy)) {
+                                httpClientHandler.UseProxy = true;
+                                httpClientHandler.Proxy = new WebProxy(ClientProfile.HttpProfile.WebProxy);
+
+                            }
+                            HttpClient = new HttpClient(httpClientHandler);
                         }
                     }
                     else
                     {
-                        this.HttpClient = new HttpClient(httpClientHandler);
+                        HttpClient = new HttpClient(httpClientHandler);
                     }
 
                 }
                 else
                 {
-                    this.SDKEnvironment.Endpoint = this.HttpClient.BaseAddress.ToString();
+                    SDKEnvironment.Endpoint = HttpClient.BaseAddress.ToString();
                 }
-                if (this.HttpClient.Timeout == null)
+                if (HttpClient.Timeout == null)
                 {
-                    this.HttpClient.Timeout = TimeSpan.FromSeconds(this.ClientProfile.HttpProfile.Timeout);
-                    this.HttpClient.DefaultRequestHeaders.Connection.Add("keep-alive");
+                    HttpClient.Timeout = TimeSpan.FromSeconds(ClientProfile.HttpProfile.Timeout);
+                    HttpClient.DefaultRequestHeaders.Connection.Add("keep-alive");
                 } 
-                return this.HttpClient;
+                return HttpClient;
             }
         }
 
@@ -156,6 +189,18 @@ namespace JDCloudSDK.Core.Client
         /// </summary>
         /// <returns>获取用户自定义的头信息</returns>
         public Dictionary<string, string> CustomHeader { get; } = new Dictionary<string, string>();
+
+
+        /// <summary>
+        /// 证书信息
+        /// </summary>
+        public abstract CredentialsProvider CredentialsProvider { get; }
+
+
+        /// <summary>
+        /// Http 请求配置信息
+        /// </summary>
+        public abstract HttpRequestConfig HttpRequestConfig { get; }
 
 
     }

@@ -25,7 +25,6 @@
 
 using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Common.Profile;
 using JDCloudSDK.Core.Http;
 using JDCloudSDK.Vm.Apis;
 using JDCloudSDK.Vm.Model;
@@ -61,7 +60,7 @@ namespace JDCloudSDK.Vm.Client
         /// <param name="credentialsProvider">认证信息</param>
         /// <param name="httpRequestConfig">http 客户端配置信息</param>
         /// <param name="environment">sdk 环境配置信息</param>
-        public VmClient(CredentialsProvider credentialsProvider, HttpRequestConfig httpRequestConfig, SDKEnvironment environment)
+        public VmClient(CredentialsProvider credentialsProvider, HttpRequestConfig httpRequestConfig,SDKEnvironment environment)
         {
             this.httpRequestConfig = httpRequestConfig;
             this.credentialsProvider = credentialsProvider;
@@ -73,7 +72,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="httpRequestConfig">http 客户端配置信息</param>
         /// <param name="credentialsProvider">认证信息</param>
-        public VmClient(CredentialsProvider credentialsProvider, HttpRequestConfig httpRequestConfig)
+        public VmClient(CredentialsProvider credentialsProvider,HttpRequestConfig httpRequestConfig)
         {
             this.httpRequestConfig = httpRequestConfig;
             this.credentialsProvider = credentialsProvider;
@@ -108,12 +107,12 @@ namespace JDCloudSDK.Vm.Client
         /// <summary>
         ///  获取证书信息
         ///</summary>
-        public CredentialsProvider CredentialsProvider { get { return credentialsProvider; } }
+        public override CredentialsProvider CredentialsProvider   { get { return credentialsProvider; } }
 
         /// <summary>
         ///  获取http 客户端配置信息
         ///</summary>
-        public HttpRequestConfig HttpRequestConfig { get { return httpRequestConfig; } }
+        public override HttpRequestConfig HttpRequestConfig { get { return httpRequestConfig; } }
 
         /// <summary>
         ///  获取sdk环境配置信息
@@ -154,8 +153,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageMembersResponse> DescribeImageMembers(DescribeImageMembersRequest request)
-        {
+        public async Task<DescribeImageMembersResponse> DescribeImageMembers(DescribeImageMembersRequest request) {
             return await new DescribeImageMembersExecutor().Client(this).Execute<DescribeImageMembersResponse, DescribeImageMembersResult, DescribeImageMembersRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -182,8 +180,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateImageResponse> CreateImage(CreateImageRequest request)
-        {
+        public async Task<CreateImageResponse> CreateImage(CreateImageRequest request) {
             return await new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -300,8 +297,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest request)
-        {
+        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest request) {
             return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -324,8 +320,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request)
-        {
+        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
             return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -348,8 +343,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ShareImageResponse> ShareImage(ShareImageRequest request)
-        {
+        public async Task<ShareImageResponse> ShareImage(ShareImageRequest request) {
             return await new ShareImageExecutor().Client(this).Execute<ShareImageResponse, ShareImageResult, ShareImageRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -370,8 +364,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request)
-        {
+        public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
             return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -392,8 +385,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request)
-        {
+        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
             return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -416,8 +408,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request)
-        {
+        public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
             return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -442,8 +433,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request)
-        {
+        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
             return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -466,8 +456,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageConstraintsResponse> DescribeImageConstraints(DescribeImageConstraintsRequest request)
-        {
+        public async Task<DescribeImageConstraintsResponse> DescribeImageConstraints(DescribeImageConstraintsRequest request) {
             return await new DescribeImageConstraintsExecutor().Client(this).Execute<DescribeImageConstraintsResponse, DescribeImageConstraintsResult, DescribeImageConstraintsRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -490,8 +479,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest request)
-        {
+        public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest request) {
             return await new DescribeInstanceVncUrlExecutor().Client(this).Execute<DescribeInstanceVncUrlResponse, DescribeInstanceVncUrlResult, DescribeInstanceVncUrlRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -520,8 +508,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<RebuildInstanceResponse> RebuildInstance(RebuildInstanceRequest request)
-        {
+        public async Task<RebuildInstanceResponse> RebuildInstance(RebuildInstanceRequest request) {
             return await new RebuildInstanceExecutor().Client(this).Execute<RebuildInstanceResponse, RebuildInstanceResult, RebuildInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -542,8 +529,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UnShareImageResponse> UnShareImage(UnShareImageRequest request)
-        {
+        public async Task<UnShareImageResponse> UnShareImage(UnShareImageRequest request) {
             return await new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -564,8 +550,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttribute(ModifyInstanceAttributeRequest request)
-        {
+        public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
             return await new ModifyInstanceAttributeExecutor().Client(this).Execute<ModifyInstanceAttributeResponse, ModifyInstanceAttributeResult, ModifyInstanceAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -602,8 +587,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ResizeInstanceResponse> ResizeInstance(ResizeInstanceRequest request)
-        {
+        public async Task<ResizeInstanceResponse> ResizeInstance(ResizeInstanceRequest request) {
             return await new ResizeInstanceExecutor().Client(this).Execute<ResizeInstanceResponse, ResizeInstanceResult, ResizeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -626,8 +610,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageConstraintsBatchResponse> DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request)
-        {
+        public async Task<DescribeImageConstraintsBatchResponse> DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
             return await new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -652,8 +635,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AttachDiskResponse> AttachDisk(AttachDiskRequest request)
-        {
+        public async Task<AttachDiskResponse> AttachDisk(AttachDiskRequest request) {
             return await new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -676,8 +658,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstancePasswordResponse> ModifyInstancePassword(ModifyInstancePasswordRequest request)
-        {
+        public async Task<ModifyInstancePasswordResponse> ModifyInstancePassword(ModifyInstancePasswordRequest request) {
             return await new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -700,8 +681,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteImageResponse> DeleteImage(DeleteImageRequest request)
-        {
+        public async Task<DeleteImageResponse> DeleteImage(DeleteImageRequest request) {
             return await new DeleteImageExecutor().Client(this).Execute<DeleteImageResponse, DeleteImageResult, DeleteImageRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -722,8 +702,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypes(DescribeInstanceTypesRequest request)
-        {
+        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypes(DescribeInstanceTypesRequest request) {
             return await new DescribeInstanceTypesExecutor().Client(this).Execute<DescribeInstanceTypesResponse, DescribeInstanceTypesResult, DescribeInstanceTypesRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -752,8 +731,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest request)
-        {
+        public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
             return await new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -774,8 +752,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteKeypairResponse> DeleteKeypair(DeleteKeypairRequest request)
-        {
+        public async Task<DeleteKeypairResponse> DeleteKeypair(DeleteKeypairRequest request) {
             return await new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -796,8 +773,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageResponse> DescribeImage(DescribeImageRequest request)
-        {
+        public async Task<DescribeImageResponse> DescribeImage(DescribeImageRequest request) {
             return await new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -822,8 +798,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DetachNetworkInterfaceResponse> DetachNetworkInterface(DetachNetworkInterfaceRequest request)
-        {
+        public async Task<DetachNetworkInterfaceResponse> DetachNetworkInterface(DetachNetworkInterfaceRequest request) {
             return await new DetachNetworkInterfaceExecutor().Client(this).Execute<DetachNetworkInterfaceResponse, DetachNetworkInterfaceResult, DetachNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -846,8 +821,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ImportKeypairResponse> ImportKeypair(ImportKeypairRequest request)
-        {
+        public async Task<ImportKeypairResponse> ImportKeypair(ImportKeypairRequest request) {
             return await new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -870,8 +844,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CopyImagesResponse> CopyImages(CopyImagesRequest request)
-        {
+        public async Task<CopyImagesResponse> CopyImages(CopyImagesRequest request) {
             return await new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -892,8 +865,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request)
-        {
+        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
             return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -916,8 +888,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request)
-        {
+        public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) {
             return await new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -938,8 +909,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request)
-        {
+        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
             return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -960,8 +930,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest request)
-        {
+        public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest request) {
             return await new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -982,8 +951,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request)
-        {
+        public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
             return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1004,8 +972,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceDiskAttributeResponse> ModifyInstanceDiskAttribute(ModifyInstanceDiskAttributeRequest request)
-        {
+        public async Task<ModifyInstanceDiskAttributeResponse> ModifyInstanceDiskAttribute(ModifyInstanceDiskAttributeRequest request) {
             return await new ModifyInstanceDiskAttributeExecutor().Client(this).Execute<ModifyInstanceDiskAttributeResponse, ModifyInstanceDiskAttributeResult, ModifyInstanceDiskAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1024,8 +991,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstancePrivateIpAddressResponse> DescribeInstancePrivateIpAddress(DescribeInstancePrivateIpAddressRequest request)
-        {
+        public async Task<DescribeInstancePrivateIpAddressResponse> DescribeInstancePrivateIpAddress(DescribeInstancePrivateIpAddressRequest request) {
             return await new DescribeInstancePrivateIpAddressExecutor().Client(this).Execute<DescribeInstancePrivateIpAddressResponse, DescribeInstancePrivateIpAddressResult, DescribeInstancePrivateIpAddressRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1044,8 +1010,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request)
-        {
+        public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
             return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1068,8 +1033,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request)
-        {
+        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
             return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1090,8 +1054,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DetachDiskResponse> DetachDisk(DetachDiskRequest request)
-        {
+        public async Task<DetachDiskResponse> DetachDisk(DetachDiskRequest request) {
             return await new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1118,8 +1081,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request)
-        {
+        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
             return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1142,8 +1104,7 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request)
-        {
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
             return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
@@ -1166,148 +1127,119 @@ namespace JDCloudSDK.Vm.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateKeypairResponse> CreateKeypair(CreateKeypairRequest request)
-        {
+        public async Task<CreateKeypairResponse> CreateKeypair(CreateKeypairRequest request) {
             return await new CreateKeypairExecutor().Client(this).Execute<CreateKeypairResponse, CreateKeypairResult, CreateKeypairRequest>(request).ConfigureAwait(false);
         }
 #endif
 
-        /// <summary>
-        ///  默认VmClient 构造器 接口
-        ///</summary>
-        public interface Builder
-        {
-
             /// <summary>
-            /// 设置认证信息参数
-            /// </summary>
-            /// <param name="provider">认证信息提供对象</param>
-            /// <returns>vmClient 构造器</returns>
-            Builder CredentialsProvider(CredentialsProvider provider);
-
-            /// <summary>
-            /// 设置请求环境参数
-            /// </summary>
-            /// <param name="environment">环境参数信息</param>
-            /// <returns>vmClient 构造器</returns>
-            Builder Environment(Core.Client.SDKEnvironment environment);
-
-            /// <summary>
-            /// http 请求配置信息
-            /// </summary>
-            /// <param name="config">http 请求配置信息</param>
-            /// <returns>vmClient 构造器</returns>
-            Builder HttpRequestConfig(HttpRequestConfig config);
-
-            /// <summary>
-            ///  构造VmClient 对象
+            ///  默认VmClient 构造器 接口
             ///</summary>
-            VmClient Build();
-        }
-
-        /// <summary>
-        ///  默认VmClient 构造器
-        ///</summary>
-        public class DefaultBuilder : Builder
-        {
-            /// <summary>
-            ///  VmClient service client
-            /// </summary>
-            private VmClient vmClient;
-
-            /// <summary>
-            ///  默认VmClient 构造器构造对象
-            ///</summary>
-            public DefaultBuilder()
+            public interface Builder
             {
-                vmClient = new VmClient();
+
+                /// <summary>
+                /// 设置认证信息参数
+                /// </summary>
+                /// <param name="provider">认证信息提供对象</param>
+                /// <returns>vmClient 构造器</returns>
+                Builder CredentialsProvider(CredentialsProvider provider);
+
+                /// <summary>
+                /// 设置请求环境参数
+                /// </summary>
+                /// <param name="environment">环境参数信息</param>
+                /// <returns>vmClient 构造器</returns>
+                Builder Environment(Core.Client.SDKEnvironment environment);
+
+                /// <summary>
+                /// http 请求配置信息
+                /// </summary>
+                /// <param name="config">http 请求配置信息</param>
+                /// <returns>vmClient 构造器</returns>
+                Builder HttpRequestConfig(HttpRequestConfig config);
+
+                /// <summary>
+                ///  构造VmClient 对象
+                ///</summary>
+                VmClient Build();
             }
 
             /// <summary>
-            ///  构造VmClient 对象
+            ///  默认VmClient 构造器
             ///</summary>
-            public VmClient Build()
+            public class DefaultBuilder : Builder
             {
-                if (vmClient.CredentialsProvider == null)
-                {
-                    //if credentialsProvider not set, try load jdcloud global default  credentials provider
-                    vmClient.credentialsProvider = JdCloud.DefaultInstance.GetCredentialsProvider();
-                    if (vmClient.credentialsProvider == null)
-                    {
-                        throw new ArgumentNullException("VmClient build error: jdcloud credentials provider not set");
-                    }
-                    vmClient.Credential = vmClient.credentialsProvider.GetCredentials();
+                /// <summary>
+                ///  VmClient service client
+                /// </summary>
+                private  VmClient vmClient;
 
-                }
-                if (vmClient.HttpRequestConfig == null)
+                /// <summary>
+                ///  默认VmClient 构造器构造对象
+                ///</summary>
+                public DefaultBuilder()
                 {
-                    vmClient.httpRequestConfig = JdCloud.DefaultInstance.GetHttpRequestConfig();
-                    if (vmClient.httpRequestConfig == null)
+                    vmClient = new VmClient();
+                }
+
+                /// <summary>
+                ///  构造VmClient 对象
+                ///</summary>
+                public VmClient Build()
+                {
+                    if (vmClient.CredentialsProvider == null)
                     {
+                        //if credentialsProvider not set, try load jdcloud global default  credentials provider
+                        vmClient.credentialsProvider = JdCloud.DefaultInstance.GetCredentialsProvider();
+                        if (vmClient.credentialsProvider == null)
+                        {
+                            throw new ArgumentNullException("VmClient build error: jdcloud credentials provider not set");
+                        }
+                    }
+                    if (vmClient.HttpRequestConfig == null)
+                    {
+                        vmClient.httpRequestConfig = JdCloud.DefaultInstance.GetHttpRequestConfig();
+                        if (vmClient.httpRequestConfig == null)
+                        {
                         throw new ArgumentNullException("VmClient build error: http request config not set");
+                        }
                     }
-                    if (vmClient.ClientProfile == null)
-                    {
-                        vmClient.ClientProfile = new ClientProfile();
-
-                    }
-                    if (vmClient.httpRequestConfig.RequestTimeout > vmClient.ClientProfile.HttpProfile.Timeout)
-                    {
-                        vmClient.ClientProfile.HttpProfile.Timeout = vmClient.httpRequestConfig.RequestTimeout;
-
-                    }
-                    vmClient.ClientProfile.HttpProfile.Protocol = vmClient.httpRequestConfig.Protocol.ToString();
-
+                    return vmClient;
                 }
-                return vmClient;
-            }
 
-            /// <summary>
-            /// 设置认证信息参数
-            /// </summary>
-            /// <param name="provider">认证信息提供对象</param>
-            /// <returns>vmClient 构造器</returns>
-            public Builder CredentialsProvider(CredentialsProvider provider)
-            {
-                vmClient.credentialsProvider = provider;
-                vmClient.Credential = vmClient.credentialsProvider.GetCredentials();
-
-                return this;
-            }
-
-            /// <summary>
-            /// 设置请求环境参数
-            /// </summary>
-            /// <param name="environment">环境参数信息</param>
-            /// <returns>vmClient 构造器</returns>
-            public Builder Environment(SDKEnvironment environment)
-            {
-                vmClient.environment = environment;
-                return this;
-            }
-
-            /// <summary>
-            /// http 请求配置信息
-            /// </summary>
-            /// <param name="config">http 请求配置信息</param>
-            /// <returns>vmClient 构造器</returns>
-            public Builder HttpRequestConfig(HttpRequestConfig config)
-            {
-                vmClient.httpRequestConfig = config;
-                if (vmClient.ClientProfile == null)
+                /// <summary>
+                /// 设置认证信息参数
+                /// </summary>
+                /// <param name="provider">认证信息提供对象</param>
+                /// <returns>vmClient 构造器</returns>
+                public Builder CredentialsProvider(CredentialsProvider provider)
                 {
-                    vmClient.ClientProfile = new ClientProfile();
-
+                    vmClient.credentialsProvider = provider;
+                    return this;
                 }
-                if (vmClient.httpRequestConfig.RequestTimeout > vmClient.ClientProfile.HttpProfile.Timeout)
+
+                /// <summary>
+                /// 设置请求环境参数
+                /// </summary>
+                /// <param name="environment">环境参数信息</param>
+                /// <returns>vmClient 构造器</returns>
+                public Builder Environment(SDKEnvironment environment)
                 {
-                    vmClient.ClientProfile.HttpProfile.Timeout = vmClient.httpRequestConfig.RequestTimeout;
-
+                    vmClient.environment = environment;
+                    return this;
                 }
-                vmClient.ClientProfile.HttpProfile.Protocol = vmClient.httpRequestConfig.Protocol.ToString();
 
-                return this;
+                /// <summary>
+                /// http 请求配置信息
+                /// </summary>
+                /// <param name="config">http 请求配置信息</param>
+                /// <returns>vmClient 构造器</returns>
+                public Builder HttpRequestConfig(HttpRequestConfig config)
+                {
+                    vmClient.httpRequestConfig = config;
+                    return this;
+                }
             }
-        }
     }
 }

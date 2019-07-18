@@ -72,12 +72,13 @@ namespace JDCloudSDK.Core.Common.Profile
             WebProxy = webProxy;
         }
 #endif
+        private string _Protocol;
         /// <summary>
         /// 请求协议
         /// </summary>
         public string Protocol {
             get {
-                switch (Protocol.ToUpper())
+                switch (_Protocol.Trim().ToUpper())
                 {
                     case "HTTP":
                         return "HTTP";
@@ -86,7 +87,7 @@ namespace JDCloudSDK.Core.Common.Profile
                 }
             }
             set {
-                Protocol = value;
+                _Protocol = value;
             }
         }  
 
