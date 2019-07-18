@@ -1,6 +1,9 @@
 ﻿using System;
 namespace JDCloudSDK.Core.Utils
 {
+    /// <summary>
+    /// the url tools
+    /// </summary>
     public class UrlUtils
     {
         /// <summary>

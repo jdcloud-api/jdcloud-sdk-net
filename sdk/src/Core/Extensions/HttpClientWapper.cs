@@ -21,15 +21,7 @@ namespace JDCloudSDK.Core.Extensions
     /// </summary>
     public class HttpClientWrapper : HttpClient
     {
-
-        private static readonly TimeSpan s_defaultTimeout = TimeSpan.FromSeconds(100);
-        private static readonly TimeSpan s_maxTimeout = TimeSpan.FromMilliseconds(int.MaxValue);
-        private static readonly TimeSpan s_infiniteTimeout = System.Threading.Timeout.InfiniteTimeSpan;
-        private const HttpCompletionOption defaultCompletionOption = HttpCompletionOption.ResponseContentRead;
-
-        private volatile bool _operationStarted;
-        private volatile bool _disposed;
-
+         
         private HttpClient _httpClient;
 
         private Credentials _credentials;

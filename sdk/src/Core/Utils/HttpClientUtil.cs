@@ -25,120 +25,7 @@ namespace JDCloudSDK.Core.Utils
     /// </summary>
     public class HttpClientUtil
     {
-#if NET40 || NET35
 
-        /// <summary>
-        /// Http 请求客户端
-        /// </summary>
-        /// <param name="url"> 请求的url</param>
-        /// <param name="bodyContent">请求的包体内容</param>
-        /// <param name="headers">请求的头信息</param>
-        /// <param name="httpMethod">请求的方法</param>
-        /// <param name="timeoutSeconds">请求的超时时间 单位：秒 默认 10s</param>
-        /// <returns>返回请求结果 Tuple 对象 
-        ///             item1 HttpStatusCode ，
-        ///             item2 http 请求的结果
-        /// </returns>
-        public static JDCloudSdkResult ExecuteHttpRequest(string url, byte[] bodyContent, Dictionary<string, string> headers, string httpMethod, int timeoutSeconds = 10)
-        {
-
-            try
-            {
-                HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
-
-                if (headers != null && headers.Count > 0)
-                {
-                    foreach (var item in headers)
-                    {
-                        if (item.Key.ToLower() == "content-type")
-                        {
-                            webRequest.ContentType = item.Value;
-                        }
-
-                        else if (item.Key.ToLower() == "host")
-                        {
-#if NET40
-                            webRequest.Host = item.Value; 
-#elif NET35
-                            //因为 dotnet3.5 默认不支持设置header 的host 属性，在使用签名的时候需要添加host 属性的信息，因此使用反射设置对象的值 ，会有性能损失。
-                            FieldInfo headersFieldInfo = webRequest.GetType().GetField("_HttpRequestHeaders", System.Reflection.BindingFlags.NonPublic
-                                        | System.Reflection.BindingFlags.Instance
-                                        | System.Reflection.BindingFlags.GetField);
-                            var  requestHeaders =  webRequest.Headers;
-                            CusteredHeaderCollection wssHeaders = new CusteredHeaderCollection(item.Value);
-
-                            foreach (var headersKey in requestHeaders.AllKeys)
-                            {
-                                var value = requestHeaders[headersKey];
-                                wssHeaders.Add(headersKey, value);
-                            }
-                            headersFieldInfo.SetValue(webRequest, wssHeaders);
-                            //webRequest.Proxy = null;
-#endif
-                        }
-                        else if (item.Key.ToLower() == "user-agent")
-                        {
-                            webRequest.UserAgent = item.Value;
-                        }
-                        else
-                        {
-                            webRequest.Headers.Add(item.Key, item.Value);
-                        }
-
-                    }
-                }
-                webRequest.Method = httpMethod;
-                webRequest.Timeout = timeoutSeconds * 1000;
-
-                if (bodyContent != null && bodyContent.Length > 0)
-                {
-                    webRequest.ContentLength = bodyContent.Length;
-                    webRequest.GetRequestStream().Write(bodyContent, 0, bodyContent.Length);
-                }
-                try
-                {
-                    using (HttpWebResponse httpWebResponse = (HttpWebResponse)webRequest.GetResponse())
-                    {
-                        if (httpWebResponse != null)
-                        {
-                            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                            {
-                                string responseContent = streamReader.ReadToEnd();
-                                //return new Tuple<HttpStatusCode, string>(httpWebResponse.StatusCode, responseContent);
-                                return new JDCloudSdkResult { StatusCode = httpWebResponse.StatusCode, ReturnValue = responseContent };
-                            }
-                        }
-                    }
-                }
-                catch (WebException webException)
-                {
-                    using (HttpWebResponse exceptionResponce = (HttpWebResponse)webException.Response)
-                    {
-                        if (exceptionResponce != null)
-                        {
-                            using (StreamReader streamReader = new StreamReader(exceptionResponce.GetResponseStream()))
-                            {
-                                string responseContent = streamReader.ReadToEnd();
-                                return new JDCloudSdkResult { StatusCode = exceptionResponce.StatusCode, ReturnValue = responseContent };
-                                //return new Tuple<HttpStatusCode, string>(exceptionResponce.StatusCode, responseContent);
-                            }
-                        }
-                    }
-                }
-
-                webRequest.Abort();
-                return null;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(" Execute the http request error.", ex);
-            }
-             
-        }
-#else
-   
-
-#endif
         /// <summary>
         /// 进行特别方式的url 编码转换，使用的是url 私有的编码
         /// </summary>
@@ -297,13 +184,27 @@ namespace JDCloudSDK.Core.Utils
     /// </summary>
     public class HttpSDKResponse
     {
-
+        /// <summary>
+        /// the http response headers
+        /// </summary>
         public Dictionary<string, List<string>> Header { get; set; } = new Dictionary<string, List<string>>();
 
+        /// <summary>
+        /// the http response content
+        /// </summary>
         public byte[] ResponseContent { get; set; }
 
+
+        /// <summary>
+        /// the response status code
+        /// </summary>
         public int StatusCode { get; set; }
 
+        /// <summary>
+        /// add the response head to instance
+        /// </summary>
+        /// <param name="key">the header key</param>
+        /// <param name="value">the header value</param>
         public void AddHeader(string key, List<string> value)
         {
             if (Header == null)
