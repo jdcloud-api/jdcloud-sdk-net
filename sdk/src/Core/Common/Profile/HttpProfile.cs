@@ -48,7 +48,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// </summary>
         /// <param name="WebProxy"></param>
         /// <param name="timeout"></param>
-        public HttpProfile(string WebProxy =null,int timeout =0)
+        public HttpProfile(string WebProxy =null,int timeout =15)
         {
             this.WebProxy = WebProxy;
             this.Timeout = timeout;
@@ -93,7 +93,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// <summary>
         /// 请求超时时间
         /// </summary>
-        public int Timeout { get; set; } = 10;
+        public int Timeout { get; set; } = 15;
 
 #if!(NET35||NET40)
 

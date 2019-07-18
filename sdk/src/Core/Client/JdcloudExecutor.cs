@@ -1,6 +1,6 @@
 ﻿using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Core.Common;
-using JDCloudSDK.Core.ServiceModel;
+using JDCloudSDK.Core.Service;
 using JDCloudSDK.Core.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -89,6 +89,7 @@ namespace JDCloudSDK.Core.Client
                 string protocol = JdcloudClient.ClientProfile.HttpProfile.Protocol.ToString();
                 string endPoint = JdcloudClient.SDKEnvironment.Endpoint;
                 string realEndPoint = JdcloudClient.SDKEnvironment.RealEndPoints;
+                int timeout = clientProfile.HttpProfile.Timeout;
                 StringBuilder host = new StringBuilder()
                   .Append(protocol)
                   .Append("://")
@@ -200,7 +201,7 @@ namespace JDCloudSDK.Core.Client
 #else
 
                 // 生成请求header
-                var httpClient = JdcloudClient.HttpClient;
+                var httpClient = JdcloudClient.RequestHttpClient;
                 if (httpClient == null)
                 {
                     httpClient = new System.Net.Http.HttpClient();

@@ -8,7 +8,7 @@ namespace JDCloudSDK.Core.Auth
     /// <summary>
     /// 证书认证参数
     /// </summary>
-    public sealed class Credentials : Credential
+    public   class Credentials : Credential
     {
 
 

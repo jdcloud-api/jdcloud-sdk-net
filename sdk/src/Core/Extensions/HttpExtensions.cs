@@ -2,7 +2,7 @@
 using JDCloudSDK.Core.Auth.Sign;
 using JDCloudSDK.Core.Common;
 using JDCloudSDK.Core.Model;
-using JDCloudSDK.Core.ServiceModel;
+using JDCloudSDK.Core.Service;
 using JDCloudSDK.Core.Utils;
 using Newtonsoft.Json;
 using System;
