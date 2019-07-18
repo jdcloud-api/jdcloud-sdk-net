@@ -50,7 +50,7 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="credentials"></param>
         /// <returns></returns>
         public SignedRequestModel Sign(RequestModel requestModel, Credentials credentials) {
-            string nonceId = Guid.NewGuid().ToString().ToLower();
+            string nonceId = "0040f503-1069-408b-8cce-53855e466e36";//Guid.NewGuid().ToString().ToLower();
             var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
             string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
             string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
@@ -70,6 +70,13 @@ namespace JDCloudSDK.Core.Auth.Sign
             byte[] kService = SignUtil.Sign(requestModel.ServiceName, kRegion, ParameterConstant.SIGN_SHA256);
             byte[] signingKey = SignUtil.Sign(ParameterConstant.JDCLOUD_TERMINATOR, kService, ParameterConstant.SIGN_SHA256);
             byte[] signature = ComputeSignature(stringToSign, signingKey);
+            Console.WriteLine($" kSecret={ BitConverter.ToString(kSecret).Replace("-", "")}");
+            Console.WriteLine($" kDate={ BitConverter.ToString(kDate).Replace("-", "")}");
+            Console.WriteLine($" kRegion={ BitConverter.ToString(kRegion).Replace("-", "")}");
+            Console.WriteLine($" kService={ BitConverter.ToString(kService).Replace("-", "")}");
+            Console.WriteLine($" signingKey={ BitConverter.ToString(signingKey).Replace("-", "")}");
+            Console.WriteLine($" signature={ BitConverter.ToString(signature).Replace("-", "")}");
+
             string signingCredentials = credentials.AccessKeyId + "/" + scope;
             string credential = "Credential=" + signingCredentials;
             string signerHeaders = "SignedHeaders=" + GetSignedHeadersString(requestModel);
@@ -94,7 +101,8 @@ namespace JDCloudSDK.Core.Auth.Sign
             signedRequestModel.RequestNonceId = nonceId; 
             signedRequestModel.SignedHeaders = signHeader;
             signedRequestModel.StringSignature = stringToSign;
-            signedRequestModel.StringToSign = stringToSign; 
+            signedRequestModel.StringToSign = stringToSign;
+            
             return signedRequestModel;
         }
 
@@ -203,11 +211,13 @@ namespace JDCloudSDK.Core.Auth.Sign
             var requestParameters = OrderRequestParameters(requestModel.QueryParameters);
             string path = "";
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(requestModel.Uri.Host);
-            if (requestModel.RequestPort != null && requestModel.RequestPort > 0) {
-                stringBuilder.Append(":").Append(requestModel.RequestPort);
-            }
-            stringBuilder.Append("/");
+          //  stringBuilder.Append(requestModel.Uri.Host);
+          //  if (requestModel.RequestPort != null && requestModel.RequestPort > 0) {
+          //      stringBuilder.Append(":").Append(requestModel.RequestPort);
+          //  }
+            if (!requestModel.ResourcePath.TrimStart().StartsWith("/")) {
+                stringBuilder.Append("/");
+            } 
             stringBuilder.Append(requestModel.ResourcePath);
             path = stringBuilder.ToString();
             string canonicalRequest = new StringBuilder(requestModel.HttpMethod)
@@ -221,10 +231,8 @@ namespace JDCloudSDK.Core.Auth.Sign
                 .Append(GetSignedHeadersString(requestModel))
                 .Append(ParameterConstant.LINE_SEPARATOR)
                 .Append(contentSha256)
-                .ToString();
-
-
-            return string.Empty;
+                .ToString(); 
+            return canonicalRequest;
         }
 
 

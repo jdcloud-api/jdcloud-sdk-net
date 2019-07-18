@@ -197,7 +197,7 @@ namespace JDCloudSDK.Core.Common
         /// <summary>
         /// 时间格式化字符串信息
         /// </summary>
-        public const string DATA_TIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+        public const string DATA_TIME_FORMAT = "yyyyMMdd'T'HHmmss'Z'";
 
 
         /// <summary>
