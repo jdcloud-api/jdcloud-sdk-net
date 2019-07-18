@@ -49,7 +49,7 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="requestModel"></param>
         /// <param name="credentials"></param>
         /// <returns></returns>
-        public SignedRequestModel Sign(RequestModel requestModel, Credentials credentials) {
+        public SignedRequestModel Sign(RequestModel requestModel, Credential credentials) {
             string nonceId = "0040f503-1069-408b-8cce-53855e466e36";//Guid.NewGuid().ToString().ToLower();
             var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
             string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);

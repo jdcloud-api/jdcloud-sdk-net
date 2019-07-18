@@ -10,10 +10,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Text.RegularExpressions; 
-#if NET35 
+using System.Text.RegularExpressions;
+using JDCloudSDK.Core.Extensions;
+using System.IO;
+
+#if NET35 || NET40
+using System.Net;
 #else
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.Net.Http.Headers;
 #endif
 
 namespace JDCloudSDK.Core.Client
@@ -23,7 +29,7 @@ namespace JDCloudSDK.Core.Client
     /// </summary>
     public abstract class JdcloudExecutor
     {
-        
+
 
         /// <summary>
         /// JdcloudClient 对象信息
@@ -86,11 +92,11 @@ namespace JDCloudSDK.Core.Client
                 StringBuilder host = new StringBuilder()
                   .Append(protocol)
                   .Append("://")
-                  .Append(endPoint); 
+                  .Append(endPoint);
                 StringBuilder signingHost = new StringBuilder()
                .Append(protocol)
                .Append("://")
-               .Append(realEndPoint.IsNullOrWhiteSpace()? endPoint : realEndPoint); 
+               .Append(realEndPoint.IsNullOrWhiteSpace() ? endPoint : realEndPoint);
                 StringBuilder path = new StringBuilder()
                 .Append("/")
                 .Append(version)
@@ -103,35 +109,259 @@ namespace JDCloudSDK.Core.Client
                 byte[] bodyContent = null;
                 string contentStr = GetContent(request);
 
- 
+
                 if (!contentStr.IsNullOrWhiteSpace())
- 
+
                 {
                     bodyContent = Encoding.UTF8.GetBytes(contentStr);
                 }
                 string url = host.ToString() + path.ToString() + paramsStr;
-                // 生成请求header
+#if NET35 || NET40
+                HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
 
+                if (JdcloudClient.CustomHeader != null && JdcloudClient.CustomHeader.Count > 0)
+                {
+                    foreach (var item in JdcloudClient.CustomHeader)
+                    {
+                        if (item.Key.ToLower() == "content-type")
+                        {
+                            webRequest.ContentType = item.Value;
+                        }
+
+                        else if (item.Key.ToLower() == "host")
+                        {
+#if NET40
+                            webRequest.Host = item.Value; 
+#elif NET35
+                            //因为 dotnet3.5 默认不支持设置header 的host 属性，在使用签名的时候需要添加host 属性的信息，因此使用反射设置对象的值 ，会有性能损失。
+                            FieldInfo headersFieldInfo = webRequest.GetType().GetField("_HttpRequestHeaders", System.Reflection.BindingFlags.NonPublic
+                                        | System.Reflection.BindingFlags.Instance
+                                        | System.Reflection.BindingFlags.GetField);
+                            var requestHeaders = webRequest.Headers;
+                            CusteredHeaderCollection wssHeaders = new CusteredHeaderCollection(item.Value);
+
+                            foreach (var headersKey in requestHeaders.AllKeys)
+                            {
+                                var value = requestHeaders[headersKey];
+                                wssHeaders.Add(headersKey, value);
+                            }
+                            headersFieldInfo.SetValue(webRequest, wssHeaders);
+                            //webRequest.Proxy = null;
+#endif
+                        }
+                        else if (item.Key.ToLower() == "user-agent")
+                        {
+                            webRequest.UserAgent = item.Value;
+                        }
+                        else
+                        {
+                            webRequest.Headers.Add(item.Key, item.Value);
+                        }
+
+                    }
+                }
+                webRequest.Method = Method;
+                webRequest.Timeout = 15 * 1000;
+                webRequest.DoSign(JdcloudClient.Credential, bodyContent, false, JdcloudClient.ServiceName);
+                try
+                {
+                    using (HttpWebResponse httpWebResponse = (HttpWebResponse)webRequest.GetResponse())
+                    {
+                        if (httpWebResponse != null)
+                        {
+                            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+                            {
+                                string responseContent = streamReader.ReadToEnd();
+                                //return new Tuple<HttpStatusCode, string>(httpWebResponse.StatusCode, responseContent);
+                                var jDCloudSdkResult = new JDCloudSdkResult { StatusCode = httpWebResponse.StatusCode, ReturnValue = responseContent };
+                                return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);
+                            }
+                        }
+                    }
+                }
+                catch (WebException webException)
+                {
+                    using (HttpWebResponse exceptionResponce = (HttpWebResponse)webException.Response)
+                    {
+                        if (exceptionResponce != null)
+                        {
+                            using (StreamReader streamReader = new StreamReader(exceptionResponce.GetResponseStream()))
+                            {
+                                string responseContent = streamReader.ReadToEnd();
+                                 var jDCloudSdkResult =  new JDCloudSdkResult { StatusCode = exceptionResponce.StatusCode, ReturnValue = responseContent };
+                                 return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);
+                            }
+                        }
+                    }
+                }
+
+                webRequest.Abort();
+                return null;
+#else
+
+                // 生成请求header
+                var httpClient = JdcloudClient.HttpClient;
+                if (httpClient == null)
+                {
+                    httpClient = new System.Net.Http.HttpClient();
+                }
+                HttpMethod httpMethod = GetHttpMethod(Method);
+                HttpRequestMessage httpRequestMessage = new HttpRequestMessage(httpMethod, url);
+                if (JdcloudClient.CustomHeader.Count > 0)
+                {
+                    foreach (var item in JdcloudClient.CustomHeader)
+                    {
+                        if (item.Key.ToLower() != "content-type")
+                        {
+                            httpRequestMessage.Headers.TryAddWithoutValidation(item.Key, item.Value);
+                        }
+                    }
+                }
+                if (contentStr.Length > 0)
+                {
+                    if (httpMethod != HttpMethod.Get && httpMethod != HttpMethod.Head && httpMethod != HttpMethod.Delete)
+                    {
+                        using (HttpContent content = new ByteArrayContent(bodyContent == null ? new byte[0] : bodyContent))
+                        {
+                            var contentTypeHeader = JdcloudClient.CustomHeader.Where(p => p.Key.ToLower() == "content-type").FirstOrDefault();
+
+                            if (!default(KeyValuePair<string, string>).Equals(contentTypeHeader))
+                            {
+                                content.Headers.ContentType = new MediaTypeHeaderValue(contentTypeHeader.Value);
+                            }
+                            else
+                            {
+                                content.Headers.ContentType = new MediaTypeHeaderValue(ParameterConstant.MIME_JSON);
+                            }
+                            httpRequestMessage.Content = content;
+                        }
+                    }
+                }
+                var signRequestMessage = httpRequestMessage.DoRequestMessageSign(JdcloudClient.Credential, JdcloudClient.ServiceName, null, null);
+                HttpResponseMessage httpResponseMessage = await httpClient.SendAsync(signRequestMessage).ConfigureAwait(false);
+                JDCloudSdkResult jDCloudSdkResult = await ProcessHttpResponseMessage(httpResponseMessage).ConfigureAwait(false);
+                return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);
+#endif
             }
             catch (Exception ex)
             {
-
+                throw new Exception("call sign and Http send request Error",ex);
             }
-            throw new NotImplementedException();
         }
 
 
-            /// <summary>
-            /// 请求url 参数格式化替换
-            /// </summary>
-            /// <param name="httpUrl">要替换的url</param>
-            /// <param name="request">请求的参数信息</param>
-            /// <returns>替换后的url 信息</returns>
-            public string ReplaceUrl(string httpUrl, JdcloudRequest request)
+        private R ProcessJDcloudRequestResult<R, R2>(JDCloudSdkResult result) where R2 : JdcloudResult where R : JdcloudResponse<R2>, new()
         {
- 
+            if (result != null)
+            {
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    if (result.ReturnValue != null)
+                    {
+                        string resultStr = result.ReturnValue;
+
+                        if (!resultStr.IsNullOrWhiteSpace())
+
+                        {
+                            return JsonConvert.DeserializeObject<R>(resultStr);
+                        }
+                    }
+                    return null;
+
+                }
+                else
+                {
+
+                    if (result.ReturnValue != null && result.ReturnValue.Count() > 0)
+                    {
+                        string resultStr = result.ReturnValue;
+
+                        if (!resultStr.IsNullOrWhiteSpace())
+
+                        {
+                            return JsonConvert.DeserializeObject<R>(resultStr);
+                        }
+                    }
+                    return new R() { Error = new ServiceError() { Code = (int)result.StatusCode, Message = $"the gateway return {result.StatusCode.ToString() }" } };
+                }
+
+            }
+            return null;
+        }
+
+
+#if NET35 || NET40
+#else
+
+
+
+        private async Task<JDCloudSdkResult> ProcessHttpResponseMessage(HttpResponseMessage message)
+        {
+            string result = null;
+            try
+            {
+                if (message != null)
+                {
+                    using (message)
+                    {
+                        if (message.Content != null)
+                        {
+                            using (Stream responseStream = await message.Content.ReadAsStreamAsync())
+                            {
+                                if (responseStream != null)
+                                {
+                                    byte[] responseData = new byte[responseStream.Length];
+                                    responseStream.Read(responseData, 0, responseData.Length);
+                                    if (responseData != null && responseData.Length > 0)
+                                    {
+                                        result = Encoding.UTF8.GetString(responseData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                return new JDCloudSdkResult { StatusCode = message.StatusCode, ReturnValue = result };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(" Execute the http request error.", ex);
+            }
+        }
+        private static HttpMethod GetHttpMethod(string httpMethod)
+        {
+            switch (httpMethod.Trim().ToUpper())
+            {
+                case "GET":
+                    return HttpMethod.Get;
+                case "POST":
+                    return HttpMethod.Post;
+                case "PUT":
+                    return HttpMethod.Put;
+                case "DELETE":
+                    return HttpMethod.Delete;
+                case "HEAD":
+                    return HttpMethod.Head;
+                case "TRACE":
+                    return HttpMethod.Trace;
+                case "OPTIONS":
+                    return HttpMethod.Options;
+                default:
+                    return HttpMethod.Get;
+            }
+        }
+#endif
+        /// <summary>
+        /// 请求url 参数格式化替换
+        /// </summary>
+        /// <param name="httpUrl">要替换的url</param>
+        /// <param name="request">请求的参数信息</param>
+        /// <returns>替换后的url 信息</returns>
+        public string ReplaceUrl(string httpUrl, JdcloudRequest request)
+        {
+
             if (httpUrl.IsNullOrWhiteSpace())
- 
+
             {
                 return string.Empty;
             }
@@ -220,9 +450,9 @@ namespace JDCloudSDK.Core.Client
             {
                 throw new ArgumentNullException("Version not set.");
             }
- 
+
             if (JdcloudClient.SDKEnvironment.Endpoint.IsNullOrWhiteSpace())
- 
+
             {
                 throw new ArgumentNullException("endpoint not set.");
             }
@@ -255,9 +485,9 @@ namespace JDCloudSDK.Core.Client
             if (propertyInfo == null)
             {
                 throw new Exception($"can not get the propertyInfo of {propertyName},please check.");
-            } 
-            object value = CommonUtils.GetPropertyInfoValue(propertyInfo,request);
- 
+            }
+            object value = CommonUtils.GetPropertyInfoValue(propertyInfo, request);
+
             if (value == null)
             {
                 throw new Exception($"field {propertyName} not set.");
@@ -292,7 +522,7 @@ namespace JDCloudSDK.Core.Client
                 contentStr = contentStr.Replace(Environment.NewLine, "").Replace(" ", "");
             }
             return contentStr;
-        } 
+        }
 
         /// <summary>
         /// 获取 url 连接串参数
@@ -324,14 +554,14 @@ namespace JDCloudSDK.Core.Client
                     StringBuilder paramStrBuilder = new StringBuilder();
                     foreach (var item in paramDicOrder)
                     {
-                        string value = HttpClientUtil.UrlEncode(item.Value,false); 
+                        string value = HttpClientUtil.UrlEncode(item.Value, false);
                         paramStrBuilder.Append("&").Append(item.Key).Append("=").Append(item.Value);
                     }
                     paramsStr = paramStrBuilder.ToString();
                 }
- 
+
                 if (!paramsStr.IsNullOrWhiteSpace())
- 
+
                 {
                     return "?" + paramsStr.Substring(1);
                 }
@@ -351,7 +581,7 @@ namespace JDCloudSDK.Core.Client
         /// <returns>query string</returns>
         private Dictionary<string, string> CreateParam(JToken jObject, string superName = "")
         {
-            Dictionary<string, string> dic = new Dictionary<string, string>(); 
+            Dictionary<string, string> dic = new Dictionary<string, string>();
             if (jObject.GetType() == typeof(JArray))
             {
                 var arrayParamDic = ArrayParam(jObject, superName);
@@ -361,7 +591,7 @@ namespace JDCloudSDK.Core.Client
                     {
                         dic.Add(item.Key, item.Value);
                     }
-                } 
+                }
             }
             else
             {
@@ -404,7 +634,7 @@ namespace JDCloudSDK.Core.Client
                         stringBuilder.Append(".");
                         stringBuilder.Append(i + 1);
                         string encodeStr = Regex.Replace(jArrayObject[i].ToString(), "^\"|\"$", "");
-                        string value = HttpClientUtil.UrlEncode(encodeStr,false);
+                        string value = HttpClientUtil.UrlEncode(encodeStr, false);
                         dic.Add(stringBuilder.ToString(), value);
                     }
                     else
@@ -444,9 +674,9 @@ namespace JDCloudSDK.Core.Client
                 string pname = CreateParamKey(superName, name);
                 if (valueJObject.GetType() == typeof(JValue))
                 {
-                    if (valueJObject!=null && !valueJObject.ToString().IsNullOrWhiteSpace())
+                    if (valueJObject != null && !valueJObject.ToString().IsNullOrWhiteSpace())
                     {
-                        
+
                         string encodeStr = Regex.Replace(valueJObject.ToString(), "^\"|\"$", "");
                         string value = HttpClientUtil.UrlEncode(encodeStr, false);
                         dic.Add(pname, value);
@@ -475,11 +705,11 @@ namespace JDCloudSDK.Core.Client
         /// <param name="name">当前字段名称</param>
         /// <returns>query param 的 key值</returns>
         private string CreateParamKey(string superName, string name)
-        { 
+        {
             if (superName.IsNullOrWhiteSpace())
             {
                 return name;
-            } 
+            }
             return $"{superName}.{name}";
         }
     }

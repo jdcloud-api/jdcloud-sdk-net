@@ -25,7 +25,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="signType">the signType now support HMACSHA256</param>
         /// <param name="serviceName">the current http request request serviceName</param>
         /// <returns></returns>
-        public static HttpRequestMessage DoSign(this HttpRequestMessage httpRequestMessage, Credentials credentials,string serviceName = null,string signType = null,DateTime? overWriteDate = null) {
+        public static HttpRequestMessage DoRequestMessageSign(this HttpRequestMessage httpRequestMessage, Credential credentials,string serviceName = null,string signType = null,DateTime? overWriteDate = null) {
             var headers =   httpRequestMessage.Headers;
             var requestUri = httpRequestMessage.RequestUri;
             var queryString = requestUri.Query;

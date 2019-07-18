@@ -1,6 +1,5 @@
 ﻿using JDCloudSDK.Core.Auth;
-using JDCloudSDK.Core.Common.Profile; 
-using JDCloudSDK.Core.Utils;
+using JDCloudSDK.Core.Common.Profile;  
 using System;
 using System.Collections.Generic;
 #if NET40 || NET35
@@ -78,19 +77,19 @@ namespace JDCloudSDK.Core.Client
                     {
                         if (ClientProfile == null || ClientProfile.HttpProfile == null || !String.IsNullOrWhiteSpace(ClientProfile.HttpProfile.WebProxy))
                         {
-                            this.HttpClient = HttpClientUtil.HttpClient(null);
+                            this.HttpClient = new HttpClient();
                         }
                         else
                         {
                             HttpClientHandler httpClientHandler = new HttpClientHandler();
                             httpClientHandler.UseProxy = true;
                             httpClientHandler.Proxy = new WebProxy(ClientProfile.HttpProfile.WebProxy);
-                            this.HttpClient = HttpClientUtil.HttpClient(httpClientHandler);
+                            this.HttpClient = new HttpClient(httpClientHandler);
                         }
                     }
                     else
                     {
-                        this.HttpClient = HttpClientUtil.HttpClient(httpClientHandler);
+                        this.HttpClient = new HttpClient(httpClientHandler);
                     }
 
                 }

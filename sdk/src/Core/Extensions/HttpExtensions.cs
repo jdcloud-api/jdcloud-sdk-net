@@ -38,7 +38,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="overrideDate"></param>
         /// <param name="isWriteBody"></param>
         /// <returns></returns>
-        public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credentials credentials,object bodyContent,bool isWriteBody =false,string serviceName= null,string signType = null, DateTime? overrideDate = null) {
+        public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credential credentials,object bodyContent,bool isWriteBody =false,string serviceName= null,string signType = null, DateTime? overrideDate = null) {
             var byteContent = new byte[0];
             if (bodyContent != null) {
                 if (isWriteBody)

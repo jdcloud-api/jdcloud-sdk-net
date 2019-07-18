@@ -443,7 +443,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
         {
-            request = request.DoSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
             return _httpClient.SendAsync(request);
         }
 
@@ -455,7 +455,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption)
         {
-            request = request.DoSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
             return _httpClient.SendAsync(request, completionOption);
         }
 
@@ -468,7 +468,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
         {
-            request = request.DoSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
             return _httpClient.SendAsync(request, completionOption, cancellationToken);
         } 
 
@@ -488,7 +488,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            request = request.DoSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
             return _httpClient.SendAsync(request, cancellationToken);
         }
     }
