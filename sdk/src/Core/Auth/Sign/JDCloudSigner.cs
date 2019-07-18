@@ -50,7 +50,7 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="credentials"></param>
         /// <returns></returns>
         public SignedRequestModel Sign(RequestModel requestModel, Credential credentials) {
-            string nonceId = "0040f503-1069-408b-8cce-53855e466e36";//Guid.NewGuid().ToString().ToLower();
+            string nonceId =Guid.NewGuid().ToString().ToLower();
             var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
             string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
             string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
@@ -70,12 +70,12 @@ namespace JDCloudSDK.Core.Auth.Sign
             byte[] kService = SignUtil.Sign(requestModel.ServiceName, kRegion, ParameterConstant.SIGN_SHA256);
             byte[] signingKey = SignUtil.Sign(ParameterConstant.JDCLOUD_TERMINATOR, kService, ParameterConstant.SIGN_SHA256);
             byte[] signature = ComputeSignature(stringToSign, signingKey);
-            Console.WriteLine($" kSecret={ BitConverter.ToString(kSecret).Replace("-", "")}");
-            Console.WriteLine($" kDate={ BitConverter.ToString(kDate).Replace("-", "")}");
-            Console.WriteLine($" kRegion={ BitConverter.ToString(kRegion).Replace("-", "")}");
-            Console.WriteLine($" kService={ BitConverter.ToString(kService).Replace("-", "")}");
-            Console.WriteLine($" signingKey={ BitConverter.ToString(signingKey).Replace("-", "")}");
-            Console.WriteLine($" signature={ BitConverter.ToString(signature).Replace("-", "")}");
+           // Console.WriteLine($" kSecret={ BitConverter.ToString(kSecret).Replace("-", "")}");
+           // Console.WriteLine($" kDate={ BitConverter.ToString(kDate).Replace("-", "")}");
+           // Console.WriteLine($" kRegion={ BitConverter.ToString(kRegion).Replace("-", "")}");
+           // Console.WriteLine($" kService={ BitConverter.ToString(kService).Replace("-", "")}");
+           // Console.WriteLine($" signingKey={ BitConverter.ToString(signingKey).Replace("-", "")}");
+           // Console.WriteLine($" signature={ BitConverter.ToString(signature).Replace("-", "")}");
 
             string signingCredentials = credentials.AccessKeyId + "/" + scope;
             string credential = "Credential=" + signingCredentials;
