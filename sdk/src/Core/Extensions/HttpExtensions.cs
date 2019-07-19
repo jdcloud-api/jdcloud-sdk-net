@@ -109,7 +109,9 @@ namespace JDCloudSDK.Core.Extensions
             RequestModel requestModel = new RequestModel();
             requestModel.ApiVersion = apiVersion;
            
-            requestModel.ContentType = httpWebRequest.ContentType.ToString();
+            if (!httpWebRequest.ContentType.IsNullOrWhiteSpace()  ) {
+                requestModel.ContentType = httpWebRequest.ContentType.ToString();
+            } 
             requestModel.HttpMethod = requestMethod.ToString().ToUpper();
             var pathRegion = requestUri.GetRequestVersion();
             if (!pathRegion.IsNullOrWhiteSpace())
