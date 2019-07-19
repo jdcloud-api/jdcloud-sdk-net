@@ -163,7 +163,7 @@ namespace JDCloudSDK.Core.Client
                 }
                 webRequest.Method = Method;
                 webRequest.Timeout = 15 * 1000;
-                webRequest.DoSign(JdcloudClient.Credential, bodyContent, false, JdcloudClient.ServiceName);
+                webRequest.DoSign(JdcloudClient.Credential, JdcloudClient.ServiceName, bodyContent, false);
                 try
                 {
                     using (HttpWebResponse httpWebResponse = (HttpWebResponse)webRequest.GetResponse())
