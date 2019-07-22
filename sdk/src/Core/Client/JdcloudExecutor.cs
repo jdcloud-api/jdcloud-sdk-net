@@ -573,7 +573,7 @@ namespace JDCloudSDK.Core.Client
             if (!contentStr.IsNullOrWhiteSpace())
 
             {
-                contentStr = contentStr.Replace(Environment.NewLine, "").Replace(" ", "");
+                contentStr = contentStr.Replace(Environment.NewLine, "");
             }
             return contentStr;
         }

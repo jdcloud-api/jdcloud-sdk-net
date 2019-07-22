@@ -19,7 +19,7 @@ namespace JDCloudSDK.Core.Utils
         {
             var json = JsonConvert.SerializeObject(
             data,
-            Formatting.Indented,
+            Formatting.None,
             new JsonSerializerSettings { ContractResolver = new JDCloudCamelCasePropertyNamesContractResolver() }
             );
 
