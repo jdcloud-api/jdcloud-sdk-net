@@ -33,7 +33,9 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询 CC 攻击日志详情
+    ///  查询 CC 攻击日志详情.
+        ///         /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        ///         /// 
     /// </summary>
     public class DescribeCCAttackLogDetailsResponse : JdcloudResponse<DescribeCCAttackLogDetailsResult>
     {

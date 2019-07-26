@@ -42,7 +42,13 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string TaskId{ get; set; }
         ///<summary>
-        /// 清晰度规格
+        /// 清晰度规格标记。取值范围：
+        ///   SD - 标清
+        ///   HD - 高清
+        ///   FHD - 超清
+        ///   2K
+        ///   4K
+        /// 
         ///</summary>
         public string Definition{ get; set; }
         ///<summary>
@@ -78,15 +84,15 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string Format{ get; set; }
         ///<summary>
-        /// 宽度
+        /// 视频宽度
         ///</summary>
         public int? Width{ get; set; }
         ///<summary>
-        /// 高度
+        /// 视频高度
         ///</summary>
         public int? Height{ get; set; }
         ///<summary>
-        /// 帧率
+        /// 视频帧率
         ///</summary>
         public string Fps{ get; set; }
         ///<summary>

@@ -45,5 +45,17 @@ namespace JDCloudSDK.Ipanti.Model
         /// 是否绑定
         ///</summary>
         public bool Binded{ get; set; }
+        ///<summary>
+        /// 公网 IP 类型或绑定资源类型:
+        ///   0: 未知类型
+        ///   1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)
+        ///   10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)
+        ///   11: 弹性公网 IP, 绑定了云主机
+        ///   12: 弹性公网 IP, 绑定了负载均衡
+        ///   13: 弹性公网 IP, 绑定了原生容器实例
+        ///   14: 弹性公网 IP, 绑定了原生容器 Pod
+        ///   2: 云物理服务器公网 IP
+        ///</summary>
+        public int? ResourceType{ get; set; }
     }
 }

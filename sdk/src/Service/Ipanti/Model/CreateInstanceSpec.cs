@@ -41,7 +41,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 实例 Id, 升级时必传
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 实例名称, 新购时必传
         ///</summary>
@@ -63,10 +63,8 @@ namespace JDCloudSDK.Ipanti.Model
         /// - 0: IPV4,
         /// - 1: IPV4/IPV6
         /// 
-        ///Required:true
         ///</summary>
-        [Required]
-        public int IpType{ get; set; }
+        public int? IpType{ get; set; }
         ///<summary>
         /// 保底带宽：单位Gbps
         ///Required:true

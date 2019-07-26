@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,14 +28,43 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Vod.Model;
 
 namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询转码模板列表
+    ///  查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+        ///         /// - source 模板来源。枚举值，取值范围为：
+        ///         ///   - system 系统预置
+        ///         ///   - custom 用户自建
+        ///         /// - templateType 模板类型。枚举值，取值范围：
+        ///         ///   - jdchd 京享超清
+        ///         ///   - jdchs 极速转码
+        ///         /// 
     /// </summary>
     public class ListTranscodeTemplatesResult : JdcloudResult
     {
+        ///<summary>
+        /// 当前页码
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 每页数量
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 查询总数
+        ///</summary>
+        public   int? TotalElements{ get; set; }
+        ///<summary>
+        /// 总页数
+        ///</summary>
+        public   int? TotalPages{ get; set; }
+        ///<summary>
+        /// 分页内容
+        ///</summary>
+        public List<TranscodeTemplateObject> Content{ get; set; }
+
     }
 }

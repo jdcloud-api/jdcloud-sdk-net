@@ -38,9 +38,9 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 实例 Id
+        /// 实例 ID
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 实例名称
         ///</summary>
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? Carrier{ get; set; }
         ///<summary>
-        /// 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+        /// 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
         /// - 0: IPV4,
         /// - 1: IPV4/IPV6
         /// 
@@ -77,9 +77,13 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? BusinessBitslimit{ get; set; }
         ///<summary>
-        /// cc阈值大小
+        /// CC 阈值大小
         ///</summary>
         public int? CcThreshold{ get; set; }
+        ///<summary>
+        /// CC 防护峰值, 单位: QPS
+        ///</summary>
+        public int? CcPeakQPS{ get; set; }
         ///<summary>
         /// 非网站类规则数
         ///</summary>
@@ -105,39 +109,60 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string ExpireTime{ get; set; }
         ///<summary>
-        /// 资源id，升级和续费时使用
+        /// 资源 ID, 升级和续费时使用
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
-        /// cc防护模式，0正常、1紧急、2宽松、3自定义
+        /// CC 防护观察者模式.
+        /// - 0: 关闭
+        /// - 1: 开启
+        /// 
+        ///</summary>
+        public int? CcObserveMode{ get; set; }
+        ///<summary>
+        /// CC 防护模式.
+        /// - 0: 正常
+        /// - 1: 紧急
+        /// - 2: 宽松
+        /// - 3: 自定义
+        /// 
         ///</summary>
         public int? CcProtectMode{ get; set; }
         ///<summary>
-        /// cc开关状态，0关闭，1开启
+        /// CC 开关状态.
+        /// - 0: 关闭
+        /// - 1: 开启
+        /// 
         ///</summary>
         public int? CcProtectStatus{ get; set; }
         ///<summary>
-        /// cc防护模式为自定义时的限速大小
+        /// CC 防护模式为自定义时的限速大小
         ///</summary>
         public int? CcSpeedLimit{ get; set; }
         ///<summary>
-        /// cc防护模式为自定义时的限速周期
+        /// CC 防护模式为自定义时的限速周期
         ///</summary>
         public int? CcSpeedPeriod{ get; set; }
         ///<summary>
-        /// ip黑名单列表
+        /// IP 黑名单列表
         ///</summary>
         public List<string> IpBlackList{ get; set; }
         ///<summary>
-        /// ip黑名单状态，0关闭，1开启
+        /// IP 黑名单状态.
+        /// - 0: 关闭
+        /// - 1: 开启
+        /// 
         ///</summary>
         public int? IpBlackStatus{ get; set; }
         ///<summary>
-        /// ip白名单列表
+        /// IP 白名单列表
         ///</summary>
         public List<string> IpWhiteList{ get; set; }
         ///<summary>
-        /// ip白名单状态，0关闭，1开启
+        /// IP 白名单状态.
+        /// - 0: 关闭
+        /// - 1: 开启
+        /// 
         ///</summary>
         public int? IpWhiteStatus{ get; set; }
         ///<summary>

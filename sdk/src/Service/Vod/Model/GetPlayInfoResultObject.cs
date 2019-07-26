@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vod.Model;
 
 namespace JDCloudSDK.Vod.Model
 {
@@ -39,11 +38,11 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// BaseInfo
+        /// 视频基础信息
         ///</summary>
         public VideoBaseInfo BaseInfo{ get; set; }
         ///<summary>
-        /// PlayInfoList
+        /// 视频播放信息列表
         ///</summary>
         public List<VideoPlayInfo> PlayInfoList{ get; set; }
     }

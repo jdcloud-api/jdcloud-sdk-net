@@ -27,24 +27,28 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vod.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  设置域名REFERER访问控制规则配置请求消息体
+    ///  设置CDN域名Referer防盗链规则请求
     /// </summary>
     public class SetRefererRuleRequestObject
     {
 
         ///<summary>
-        /// 规则配置对象
+        /// Referer防盗链规则配置对象
+        ///Required:true
         ///</summary>
-        public Config Config{ get; set; }
+        [Required]
+        public RefererRuleConfigObject Config{ get; set; }
         ///<summary>
         /// 是否启用该规则
+        ///Required:true
         ///</summary>
+        [Required]
         public bool Enabled{ get; set; }
     }
 }

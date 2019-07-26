@@ -29,8 +29,8 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Redis.Model;
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Redis.Apis
 {
@@ -50,7 +50,7 @@ namespace  JDCloudSDK.Redis.Apis
         ///<summary>
         /// 该实例规格的计费信息
         ///</summary>
-        public   ChargeSpec Charge{ get; set; }
+        public   JDCloudSDK.Charge.Model.ChargeSpec Charge{ get; set; }
         ///<summary>
         /// 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
         ///Required:true

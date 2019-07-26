@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///<summary>
         /// 高防实例 ID, 为空则查询所有实例名称
         ///</summary>
-        public   long? Id{ get; set; }
+        public   string Id{ get; set; }
         ///<summary>
         /// 实例名称, 可模糊匹配
         ///</summary>
@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

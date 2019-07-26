@@ -195,7 +195,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+        ///  查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -205,7 +205,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+        ///  查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -235,7 +235,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+        ///  查询基础防护已防护的私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -245,13 +245,32 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+        ///  查询基础防护已防护的私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeElasticIpResourcesResponse> DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
             return await new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询基础防护已防护的托管区 IP 的安全信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCcsIpResourcesResponse DescribeCcsIpResources(DescribeCcsIpResourcesRequest request) {
+            return  new DescribeCcsIpResourcesExecutor().Client(this).Execute<DescribeCcsIpResourcesResponse, DescribeCcsIpResourcesResult, DescribeCcsIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询基础防护已防护的托管区 IP 的安全信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCcsIpResourcesResponse> DescribeCcsIpResources(DescribeCcsIpResourcesRequest request) {
+            return await new DescribeCcsIpResourcesExecutor().Client(this).Execute<DescribeCcsIpResourcesResponse, DescribeCcsIpResourcesResult, DescribeCcsIpResourcesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -315,7 +334,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+        ///  查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -325,7 +344,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+        ///  查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>

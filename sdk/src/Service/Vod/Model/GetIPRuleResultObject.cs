@@ -27,13 +27,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vod.Model;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  获取域名IP访问控制规则配置响应消息体
+    ///  查询CDN域名IP黑名单规则配置
     /// </summary>
     public class GetIPRuleResultObject
     {
@@ -43,9 +42,9 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string RuleType{ get; set; }
         ///<summary>
-        /// 规则配置对象
+        /// IP黑名单规则配置对象
         ///</summary>
-        public Config Config{ get; set; }
+        public IPRuleConfigObject Config{ get; set; }
         ///<summary>
         /// 是否启用该规则
         ///</summary>

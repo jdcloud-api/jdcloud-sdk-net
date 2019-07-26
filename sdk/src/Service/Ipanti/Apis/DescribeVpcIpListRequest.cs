@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询用户的京东云 IP 资源
+    ///  查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
     /// </summary>
     public class DescribeVpcIpListRequest : JdcloudRequest
     {
@@ -47,7 +47,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// Region ID
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

@@ -33,22 +33,22 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+    ///  批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
     /// </summary>
     public class BatchDeleteVideosResult : JdcloudResult
     {
         ///<summary>
-        /// 删除成功的视频ID列表
+        /// 删除成功的视频ID集合
         ///</summary>
         public List<string> OkVideoIds{ get; set; }
 
         ///<summary>
-        /// 未找到的视频ID列表
+        /// 未找到的视频ID集合
         ///</summary>
         public List<string> NotFoundVideoIds{ get; set; }
 
         ///<summary>
-        /// 删除失败的视频ID列表
+        /// 删除失败的视频ID集合
         ///</summary>
         public List<string> FailedVideoIds{ get; set; }
 

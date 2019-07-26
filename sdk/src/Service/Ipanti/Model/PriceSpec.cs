@@ -77,7 +77,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 实例 Id, 升级高防实例查询价格时必传
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 购买防护包时长, 新购高防实例时必传
         /// - timeUnit 为 3 时, 可取值 1-9

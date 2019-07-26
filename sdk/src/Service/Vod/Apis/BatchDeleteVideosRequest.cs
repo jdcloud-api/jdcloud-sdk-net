@@ -28,18 +28,21 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+    ///  批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
     /// </summary>
     public class BatchDeleteVideosRequest : JdcloudRequest
     {
         ///<summary>
-        /// 需要删除的视频ID列表
+        /// 视频ID集合
+        ///Required:true
         ///</summary>
+        [Required]
         public List<string> VideoIds{ get; set; }
 
     }

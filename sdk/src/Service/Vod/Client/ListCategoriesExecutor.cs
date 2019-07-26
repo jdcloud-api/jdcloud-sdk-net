@@ -33,12 +33,14 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  查询分类列表
+    ///  查询分类列表，按照分页方式，返回分类列表信息
+        /// 
     /// </summary>
     public class ListCategoriesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询分类列表接口的Http 请求方法
+        ///  查询分类列表，按照分页方式，返回分类列表信息
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +49,8 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  查询分类列表接口的Http资源请求路径
+        ///  查询分类列表，按照分页方式，返回分类列表信息
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

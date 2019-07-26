@@ -27,20 +27,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vod.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  batchUpdateVideosRequestObject
+    ///  批量修改视频信息请求
     /// </summary>
     public class BatchUpdateVideosRequestObject
     {
 
         ///<summary>
-        /// 批量更新视频的条目列表信息
+        /// 批量更新视频的条目集合
+        ///Required:true
         ///</summary>
-        public List<UpdateVideoBulkItem> Bulk{ get; set; }
+        [Required]
+        public List<BatchUpdateVideosBulkItem> BulkItems{ get; set; }
     }
 }

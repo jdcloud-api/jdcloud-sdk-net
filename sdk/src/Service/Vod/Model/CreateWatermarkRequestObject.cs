@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
@@ -39,23 +40,38 @@ namespace JDCloudSDK.Vod.Model
 
         ///<summary>
         /// 水印名称
+        ///Required:true
         ///</summary>
+        [Required]
         public string Name{ get; set; }
         ///<summary>
         /// 图片地址
+        ///Required:true
         ///</summary>
+        [Required]
         public string ImgUrl{ get; set; }
         ///<summary>
-        /// 宽度
+        /// 水印宽度
+        ///Required:true
         ///</summary>
-        public string Width{ get; set; }
+        [Required]
+        public int Width{ get; set; }
         ///<summary>
-        /// 高度
+        /// 水印高度
+        ///Required:true
         ///</summary>
-        public string Height{ get; set; }
+        [Required]
+        public int Height{ get; set; }
         ///<summary>
-        /// 水印位置
+        /// 水印位置。取值范围：
+        ///   LT - 左上
+        ///   RT - 右上
+        ///   LB - 左下
+        ///   RB - 右下
+        /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public string Position{ get; set; }
         ///<summary>
         /// 偏移单位
@@ -63,11 +79,15 @@ namespace JDCloudSDK.Vod.Model
         public string Unit{ get; set; }
         ///<summary>
         /// 水平偏移
+        ///Required:true
         ///</summary>
-        public int? OffsetX{ get; set; }
+        [Required]
+        public int OffsetX{ get; set; }
         ///<summary>
         /// 竖直偏移
+        ///Required:true
         ///</summary>
-        public int? OffsetY{ get; set; }
+        [Required]
+        public int OffsetY{ get; set; }
     }
 }

@@ -84,6 +84,6 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// geo 拦截地域列表
         ///</summary>
-        public List<GeoBlack> GeoBlackList{ get; set; }
+        public List<Geo> GeoBlackList{ get; set; }
     }
 }

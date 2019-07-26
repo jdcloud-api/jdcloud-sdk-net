@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Vod.Model;
 
 namespace  JDCloudSDK.Vod.Apis
 {
@@ -37,5 +38,26 @@ namespace  JDCloudSDK.Vod.Apis
     /// </summary>
     public class ListVideosResult : JdcloudResult
     {
+        ///<summary>
+        /// 当前页码
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 每页数量
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 查询总数
+        ///</summary>
+        public   int? TotalElements{ get; set; }
+        ///<summary>
+        /// 总页数
+        ///</summary>
+        public   int? TotalPages{ get; set; }
+        ///<summary>
+        /// 分页内容
+        ///</summary>
+        public List<VideoObject> Content{ get; set; }
+
     }
 }

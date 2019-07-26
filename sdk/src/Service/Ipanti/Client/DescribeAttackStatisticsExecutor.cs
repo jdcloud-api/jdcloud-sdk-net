@@ -52,7 +52,7 @@ namespace JDCloudSDK.Ipanti.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/attacklog/describeAttackStatistics";
+            return "/regions/{regionId}/attacklog:describeAttackStatistics";
             }
         }
     }

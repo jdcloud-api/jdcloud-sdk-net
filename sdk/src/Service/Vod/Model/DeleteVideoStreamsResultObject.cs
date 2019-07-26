@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  deleteVideoStreamsResultObject
+    ///  删除视频转码流结果
     /// </summary>
     public class DeleteVideoStreamsResultObject
     {

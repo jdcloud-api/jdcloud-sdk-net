@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  submitTranscodeJobRequestObject
+    ///  提交转码作业请求对象
     /// </summary>
     public class SubmitTranscodeJobRequestObject
     {
@@ -44,10 +44,10 @@ namespace JDCloudSDK.Vod.Model
         ///<summary>
         /// 转码模板ID列表
         ///</summary>
-        public List<string> TemplateIds{ get; set; }
+        public List<double?> TemplateIds{ get; set; }
         ///<summary>
         /// 水印ID列表
         ///</summary>
-        public string WatermarkIds{ get; set; }
+        public List<double?> WatermarkIds{ get; set; }
     }
 }

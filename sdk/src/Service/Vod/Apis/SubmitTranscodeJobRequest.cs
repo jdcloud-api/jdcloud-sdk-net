@@ -44,11 +44,12 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// 转码模板ID列表
         ///</summary>
-        public List<string> TemplateIds{ get; set; }
+        public List<double?> TemplateIds{ get; set; }
 
         ///<summary>
         /// 水印ID列表
         ///</summary>
-        public   string WatermarkIds{ get; set; }
+        public List<double?> WatermarkIds{ get; set; }
+
     }
 }

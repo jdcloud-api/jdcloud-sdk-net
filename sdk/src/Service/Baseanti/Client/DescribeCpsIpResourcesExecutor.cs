@@ -33,13 +33,13 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+    ///  查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
         /// 
     /// </summary>
     public class DescribeCpsIpResourcesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+        ///  查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        ///  查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+        ///  查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

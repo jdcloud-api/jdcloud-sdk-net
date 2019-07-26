@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  batchUpdateVideosResultObject
+    ///  批量修改视频信息结果
     /// </summary>
     public class BatchUpdateVideosResultObject
     {

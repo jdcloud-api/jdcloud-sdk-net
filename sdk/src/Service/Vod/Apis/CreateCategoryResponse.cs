@@ -34,6 +34,7 @@ namespace  JDCloudSDK.Vod.Apis
 
     /// <summary>
     ///  添加分类
+        ///         /// 
     /// </summary>
     public class CreateCategoryResponse : JdcloudResponse<CreateCategoryResult>
     {

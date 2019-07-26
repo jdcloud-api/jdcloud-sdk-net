@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  batchDeleteVideosResultObject
+    ///  批量删除视频结果
     /// </summary>
     public class BatchDeleteVideosResultObject
     {
 
         ///<summary>
-        /// 删除成功的视频ID列表
+        /// 删除成功的视频ID集合
         ///</summary>
         public List<string> OkVideoIds{ get; set; }
         ///<summary>
-        /// 未找到的视频ID列表
+        /// 未找到的视频ID集合
         ///</summary>
         public List<string> NotFoundVideoIds{ get; set; }
         ///<summary>
-        /// 删除失败的视频ID列表
+        /// 删除失败的视频ID集合
         ///</summary>
         public List<string> FailedVideoIds{ get; set; }
     }

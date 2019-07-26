@@ -39,9 +39,13 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeDomainOnlineStreamResult : JdcloudResult
     {
         ///<summary>
-        /// DataList
+        /// StreamList
         ///</summary>
-        public List<PublishOnlineStreamResult> DataList{ get; set; }
+        public List<PublishOnlineStreamResultData> StreamList{ get; set; }
 
+        ///<summary>
+        /// 流数量
+        ///</summary>
+        public   int? Total{ get; set; }
     }
 }

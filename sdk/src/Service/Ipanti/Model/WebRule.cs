@@ -40,19 +40,23 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 规则 Id
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 实例 Id
         ///</summary>
-        public long? InstanceId{ get; set; }
+        public string InstanceId{ get; set; }
         ///<summary>
         /// 子域名
         ///</summary>
         public string Domain{ get; set; }
         ///<summary>
-        /// 规则的 cname
+        /// 规则的 CNAME
         ///</summary>
         public string Cname{ get; set; }
+        ///<summary>
+        /// CNAME 解析状态, 0: 解析异常, 1: 解析正常
+        ///</summary>
+        public int? CnameStatus{ get; set; }
         ///<summary>
         /// Protocol
         ///</summary>
@@ -100,7 +104,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 证书 Id
         ///</summary>
-        public long? CertId{ get; set; }
+        public string CertId{ get; set; }
         ///<summary>
         /// 证书名称
         ///</summary>
@@ -129,8 +133,16 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? CcStatus{ get; set; }
         ///<summary>
-        /// webSocketStatus, 0: 关闭, 1: 开启
+        /// webSocket 状态, 0: 关闭, 1: 开启
         ///</summary>
         public int? WebSocketStatus{ get; set; }
+        ///<summary>
+        /// 黑名单状态, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? BlackListEnable{ get; set; }
+        ///<summary>
+        /// 白名单状态, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? WhiteListEnable{ get; set; }
     }
 }

@@ -51,7 +51,7 @@ namespace  JDCloudSDK.Antipro.Apis
         ///</summary>
         public   int? InstanceId{ get; set; }
         ///<summary>
-        /// 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP
+        /// 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP, 4: 托管区公网 IP
         ///Required:true
         ///</summary>
         [Required]

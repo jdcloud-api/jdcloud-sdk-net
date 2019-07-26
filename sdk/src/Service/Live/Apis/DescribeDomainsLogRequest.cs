@@ -45,13 +45,12 @@ namespace  JDCloudSDK.Live.Apis
         [Required]
         public   string Domains{ get; set; }
         ///<summary>
-        /// 时间间隔，取值(hour，day，fiveMin),不传默认小时
+        /// 时间间隔，取值(hour，day),不传默认小时
+        /// - 按小时（hour）下载时是.log文件
+        /// - 按天（day）下载时是.zip文件
+        /// 
         ///</summary>
         public   string Interval{ get; set; }
-        ///<summary>
-        /// 日志后缀格式，取值（zip，log，gz）,默认值为log
-        ///</summary>
-        public   string LogType{ get; set; }
         ///<summary>
         /// 起始时间
         /// - UTC时间

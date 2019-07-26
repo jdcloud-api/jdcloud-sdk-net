@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -47,25 +47,41 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// Video
+        /// 视频参数配置
         ///</summary>
         public   Video Video{ get; set; }
         ///<summary>
-        /// Audio
+        /// 音频参数配置
         ///</summary>
         public   Audio Audio{ get; set; }
         ///<summary>
-        /// Encapsulation
+        /// 封装配置
         ///</summary>
         public   Encapsulation Encapsulation{ get; set; }
         ///<summary>
-        /// 清晰度规格
+        /// 清晰度规格标记。取值范围：
+        ///   SD - 标清
+        ///   HD - 高清
+        ///   FHD - 超清
+        ///   2K
+        ///   4K
+        /// 
         ///</summary>
         public   string Definition{ get; set; }
         ///<summary>
-        /// 模板来源
+        /// 模板来源。取值范围：
+        ///   system - 系统预置
+        ///   custom - 用户自建
+        /// 
         ///</summary>
         public   string Source{ get; set; }
+        ///<summary>
+        /// 模板类型。取值范围：
+        ///   jdchd - 京享超清
+        ///   jdchs - 极速转码
+        /// 
+        ///</summary>
+        public   string TemplateType{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>

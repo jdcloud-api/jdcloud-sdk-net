@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///<summary>
         /// DataList
         ///</summary>
-        public List<DDosAttackLog> DataList{ get; set; }
+        public List<CCAttackLog> DataList{ get; set; }
 
         ///<summary>
         /// 当前页数量

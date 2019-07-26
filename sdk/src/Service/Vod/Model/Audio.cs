@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Video Transcode Template Management
- * 水印管理
+ * Transcode Template
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -38,20 +38,24 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// 音频编码
+        /// 音频编码。取值范围：aac
         ///</summary>
         public string Codec{ get; set; }
         ///<summary>
-        /// 码率
+        /// 音频目标码率。取值范围：[8，1000]，单位为 Kbps
         ///</summary>
         public int? Bitrate{ get; set; }
         ///<summary>
-        /// 采样率
+        /// 音频采样率。取值范围：8000、11025、12000、16000、22050、24000、32000、44100、48000、64000、88200、96000
         ///</summary>
         public int? SampleRate{ get; set; }
         ///<summary>
-        /// 声道数
+        /// 音频声道数：1、2
         ///</summary>
         public int? Channels{ get; set; }
+        ///<summary>
+        /// 是否开启舒适音频：true、false
+        ///</summary>
+        public bool Comfortable{ get; set; }
     }
 }

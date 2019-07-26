@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Redis.Model
 {
@@ -38,12 +39,16 @@ namespace JDCloudSDK.Redis.Model
     {
 
         ///<summary>
-        /// 缓存Redis主实例所在区域可用区ID
+        /// 缓存Redis主实例所在的可用区ID
+        ///Required:true
         ///</summary>
+        [Required]
         public string Master{ get; set; }
         ///<summary>
-        /// 缓存Redis从实例所在区域可用区ID
+        /// 缓存Redis从实例所在的可用区ID
+        ///Required:true
         ///</summary>
+        [Required]
         public string Slave{ get; set; }
     }
 }

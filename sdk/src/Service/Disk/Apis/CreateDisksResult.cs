@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Disk.Apis
     public class CreateDisksResult : JdcloudResult
     {
         ///<summary>
-        /// DiskIds
+        /// 创建的云硬盘ID列表
         ///</summary>
         public List<string> DiskIds{ get; set; }
 

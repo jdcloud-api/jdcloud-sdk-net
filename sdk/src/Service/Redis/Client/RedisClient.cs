@@ -89,9 +89,9 @@ namespace JDCloudSDK.Redis.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -195,6 +195,25 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCacheInstancesResponse> DescribeCacheInstances(DescribeCacheInstancesRequest request) {
             return await new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询Redis实例的内部集群信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeClusterInfoResponse DescribeClusterInfo(DescribeClusterInfoRequest request) {
+            return  new DescribeClusterInfoExecutor().Client(this).Execute<DescribeClusterInfoResponse, DescribeClusterInfoResult, DescribeClusterInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询Redis实例的内部集群信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeClusterInfoResponse> DescribeClusterInfo(DescribeClusterInfoRequest request) {
+            return await new DescribeClusterInfoExecutor().Client(this).Execute<DescribeClusterInfoResponse, DescribeClusterInfoResult, DescribeClusterInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

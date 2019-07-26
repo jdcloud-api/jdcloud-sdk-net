@@ -53,7 +53,6 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 转发规则
         /// - wrr 带权重的轮询
-        /// - wlc 加权最小连接
         /// - rr  不带权重的轮询
         /// - sh  源地址hash
         /// 

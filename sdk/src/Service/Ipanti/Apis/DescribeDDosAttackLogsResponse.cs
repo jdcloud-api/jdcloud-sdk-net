@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询 DDos 攻击日志
+    ///  查询 DDoS 攻击日志
     /// </summary>
     public class DescribeDDoSAttackLogsResponse : JdcloudResponse<DescribeDDoSAttackLogsResult>
     {

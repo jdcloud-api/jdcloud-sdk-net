@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Disk.Apis
     public class DescribeSnapshotsResult : JdcloudResult
     {
         ///<summary>
-        /// Snapshots
+        /// 查询的快照信息详情列表
         ///</summary>
         public List<Snapshot> Snapshots{ get; set; }
 

@@ -41,6 +41,6 @@ namespace  JDCloudSDK.Redis.Apis
         ///<summary>
         /// Quota
         ///</summary>
-        public   Quota Quota{ get; set; }
+        public   JDCloudSDK.Common.Model.Quota Quota{ get; set; }
     }
 }

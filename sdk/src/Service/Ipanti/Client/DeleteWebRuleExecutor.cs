@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    ///  删除网站规则
+    ///  删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
     /// </summary>
     public class DeleteWebRuleExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除网站规则接口的Http 请求方法
+        ///  删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  删除网站规则接口的Http资源请求路径
+        ///  删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

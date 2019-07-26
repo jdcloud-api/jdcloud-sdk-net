@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,26 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  查询转码模板列表
+    ///  查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+        /// - source 模板来源。枚举值，取值范围为：
+        ///   - system 系统预置
+        ///   - custom 用户自建
+        /// - templateType 模板类型。枚举值，取值范围：
+        ///   - jdchd 京享超清
+        ///   - jdchs 极速转码
+        /// 
     /// </summary>
     public class ListTranscodeTemplatesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询转码模板列表接口的Http 请求方法
+        ///  查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+        /// - source 模板来源。枚举值，取值范围为：
+        ///   - system 系统预置
+        ///   - custom 用户自建
+        /// - templateType 模板类型。枚举值，取值范围：
+        ///   - jdchd 京享超清
+        ///   - jdchs 极速转码
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +61,14 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  查询转码模板列表接口的Http资源请求路径
+        ///  查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+        /// - source 模板来源。枚举值，取值范围为：
+        ///   - system 系统预置
+        ///   - custom 用户自建
+        /// - templateType 模板类型。枚举值，取值范围：
+        ///   - jdchd 京享超清
+        ///   - jdchs 极速转码
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

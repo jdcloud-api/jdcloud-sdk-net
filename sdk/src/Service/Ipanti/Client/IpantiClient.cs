@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ipanti.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Ipanti.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  开启转发规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableBlackListRuleOfForwardRuleResponse EnableBlackListRuleOfForwardRule(EnableBlackListRuleOfForwardRuleRequest request) {
+            return  new EnableBlackListRuleOfForwardRuleExecutor().Client(this).Execute<EnableBlackListRuleOfForwardRuleResponse, EnableBlackListRuleOfForwardRuleResult, EnableBlackListRuleOfForwardRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启转发规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableBlackListRuleOfForwardRuleResponse> EnableBlackListRuleOfForwardRule(EnableBlackListRuleOfForwardRuleRequest request) {
+            return await new EnableBlackListRuleOfForwardRuleExecutor().Client(this).Execute<EnableBlackListRuleOfForwardRuleResponse, EnableBlackListRuleOfForwardRuleResult, EnableBlackListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询告警配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -153,6 +172,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAlarmConfigResponse> DescribeAlarmConfig(DescribeAlarmConfigRequest request) {
             return await new DescribeAlarmConfigExecutor().Client(this).Execute<DescribeAlarmConfigResponse, DescribeAlarmConfigResult, DescribeAlarmConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加实例的 IP 黑白名单, 预定义的 IP 黑白名单绑定到转发规则的黑名单或白名单后生效
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateIpSetResponse CreateIpSet(CreateIpSetRequest request) {
+            return  new CreateIpSetExecutor().Client(this).Execute<CreateIpSetResponse, CreateIpSetResult, CreateIpSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加实例的 IP 黑白名单, 预定义的 IP 黑白名单绑定到转发规则的黑名单或白名单后生效
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateIpSetResponse> CreateIpSet(CreateIpSetRequest request) {
+            return await new CreateIpSetExecutor().Client(this).Execute<CreateIpSetResponse, CreateIpSetResult, CreateIpSetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -176,6 +214,44 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询网站类防护规则的黑名单用量信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWebRuleBlackListUsageResponse DescribeWebRuleBlackListUsage(DescribeWebRuleBlackListUsageRequest request) {
+            return  new DescribeWebRuleBlackListUsageExecutor().Client(this).Execute<DescribeWebRuleBlackListUsageResponse, DescribeWebRuleBlackListUsageResult, DescribeWebRuleBlackListUsageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询网站类防护规则的黑名单用量信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWebRuleBlackListUsageResponse> DescribeWebRuleBlackListUsage(DescribeWebRuleBlackListUsageRequest request) {
+            return await new DescribeWebRuleBlackListUsageExecutor().Client(this).Execute<DescribeWebRuleBlackListUsageResponse, DescribeWebRuleBlackListUsageResult, DescribeWebRuleBlackListUsageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加网站类规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCCProtectionRuleOfWebRuleResponse CreateCCProtectionRuleOfWebRule(CreateCCProtectionRuleOfWebRuleRequest request) {
+            return  new CreateCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<CreateCCProtectionRuleOfWebRuleResponse, CreateCCProtectionRuleOfWebRuleResult, CreateCCProtectionRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加网站类规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCCProtectionRuleOfWebRuleResponse> CreateCCProtectionRuleOfWebRule(CreateCCProtectionRuleOfWebRuleRequest request) {
+            return await new CreateCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<CreateCCProtectionRuleOfWebRuleResponse, CreateCCProtectionRuleOfWebRuleResult, CreateCCProtectionRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  更新实例弹性防护带宽
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -195,78 +271,40 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启实例 IP 白名单
+        ///  查询网站类规则的 CC 防护默认配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableInstanceIpWhiteListResponse EnableInstanceIpWhiteList(EnableInstanceIpWhiteListRequest request) {
-            return  new EnableInstanceIpWhiteListExecutor().Client(this).Execute<EnableInstanceIpWhiteListResponse, EnableInstanceIpWhiteListResult, EnableInstanceIpWhiteListRequest>(request);
+        public DescribeCCProtectionDefaultConfigOfWebRuleResponse DescribeCCProtectionDefaultConfigOfWebRule(DescribeCCProtectionDefaultConfigOfWebRuleRequest request) {
+            return  new DescribeCCProtectionDefaultConfigOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionDefaultConfigOfWebRuleResponse, DescribeCCProtectionDefaultConfigOfWebRuleResult, DescribeCCProtectionDefaultConfigOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启实例 IP 白名单
+        ///  查询网站类规则的 CC 防护默认配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceIpWhiteListResponse> EnableInstanceIpWhiteList(EnableInstanceIpWhiteListRequest request) {
-            return await new EnableInstanceIpWhiteListExecutor().Client(this).Execute<EnableInstanceIpWhiteListResponse, EnableInstanceIpWhiteListResult, EnableInstanceIpWhiteListRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeCCProtectionDefaultConfigOfWebRuleResponse> DescribeCCProtectionDefaultConfigOfWebRule(DescribeCCProtectionDefaultConfigOfWebRuleRequest request) {
+            return await new DescribeCCProtectionDefaultConfigOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionDefaultConfigOfWebRuleResponse, DescribeCCProtectionDefaultConfigOfWebRuleResult, DescribeCCProtectionDefaultConfigOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例 CC 防护的观察者模式
+        ///  修改网站类规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableCCObserverModeResponse DisableCCObserverMode(DisableCCObserverModeRequest request) {
-            return  new DisableCCObserverModeExecutor().Client(this).Execute<DisableCCObserverModeResponse, DisableCCObserverModeResult, DisableCCObserverModeRequest>(request);
+        public ModifyWhiteListRuleOfWebRuleResponse ModifyWhiteListRuleOfWebRule(ModifyWhiteListRuleOfWebRuleRequest request) {
+            return  new ModifyWhiteListRuleOfWebRuleExecutor().Client(this).Execute<ModifyWhiteListRuleOfWebRuleResponse, ModifyWhiteListRuleOfWebRuleResult, ModifyWhiteListRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例 CC 防护的观察者模式
+        ///  修改网站类规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableCCObserverModeResponse> DisableCCObserverMode(DisableCCObserverModeRequest request) {
-            return await new DisableCCObserverModeExecutor().Client(this).Execute<DisableCCObserverModeResponse, DisableCCObserverModeResult, DisableCCObserverModeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  开启 CC 防护每 IP 的限速
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableCCIpLimitResponse EnableCCIpLimit(EnableCCIpLimitRequest request) {
-            return  new EnableCCIpLimitExecutor().Client(this).Execute<EnableCCIpLimitResponse, EnableCCIpLimitResult, EnableCCIpLimitRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  开启 CC 防护每 IP 的限速
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableCCIpLimitResponse> EnableCCIpLimit(EnableCCIpLimitRequest request) {
-            return await new EnableCCIpLimitExecutor().Client(this).Execute<EnableCCIpLimitResponse, EnableCCIpLimitResult, EnableCCIpLimitRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置实例 CC 防护每 IP 限速
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetCCIpLimitResponse SetCCIpLimit(SetCCIpLimitRequest request) {
-            return  new SetCCIpLimitExecutor().Client(this).Execute<SetCCIpLimitResponse, SetCCIpLimitResult, SetCCIpLimitRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置实例 CC 防护每 IP 限速
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetCCIpLimitResponse> SetCCIpLimit(SetCCIpLimitRequest request) {
-            return await new SetCCIpLimitExecutor().Client(this).Execute<SetCCIpLimitResponse, SetCCIpLimitResult, SetCCIpLimitRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyWhiteListRuleOfWebRuleResponse> ModifyWhiteListRuleOfWebRule(ModifyWhiteListRuleOfWebRuleRequest request) {
+            return await new ModifyWhiteListRuleOfWebRuleExecutor().Client(this).Execute<ModifyWhiteListRuleOfWebRuleResponse, ModifyWhiteListRuleOfWebRuleResult, ModifyWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -290,7 +328,140 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除非网站规则
+        ///  开启网站类规则的黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableWebRuleBlackListResponse EnableWebRuleBlackList(EnableWebRuleBlackListRequest request) {
+            return  new EnableWebRuleBlackListExecutor().Client(this).Execute<EnableWebRuleBlackListResponse, EnableWebRuleBlackListResult, EnableWebRuleBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启网站类规则的黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableWebRuleBlackListResponse> EnableWebRuleBlackList(EnableWebRuleBlackListRequest request) {
+            return await new EnableWebRuleBlackListExecutor().Client(this).Execute<EnableWebRuleBlackListResponse, EnableWebRuleBlackListResult, EnableWebRuleBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableBlackListRuleOfWebRuleResponse EnableBlackListRuleOfWebRule(EnableBlackListRuleOfWebRuleRequest request) {
+            return  new EnableBlackListRuleOfWebRuleExecutor().Client(this).Execute<EnableBlackListRuleOfWebRuleResponse, EnableBlackListRuleOfWebRuleResult, EnableBlackListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableBlackListRuleOfWebRuleResponse> EnableBlackListRuleOfWebRule(EnableBlackListRuleOfWebRuleRequest request) {
+            return await new EnableBlackListRuleOfWebRuleExecutor().Client(this).Execute<EnableBlackListRuleOfWebRuleResponse, EnableBlackListRuleOfWebRuleResult, EnableBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的 IP 黑白名单库列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpSetsResponse DescribeIpSets(DescribeIpSetsRequest request) {
+            return  new DescribeIpSetsExecutor().Client(this).Execute<DescribeIpSetsResponse, DescribeIpSetsResult, DescribeIpSetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的 IP 黑白名单库列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpSetsResponse> DescribeIpSets(DescribeIpSetsRequest request) {
+            return await new DescribeIpSetsExecutor().Client(this).Execute<DescribeIpSetsResponse, DescribeIpSetsResult, DescribeIpSetsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableWhiteListRuleOfWebRuleResponse EnableWhiteListRuleOfWebRule(EnableWhiteListRuleOfWebRuleRequest request) {
+            return  new EnableWhiteListRuleOfWebRuleExecutor().Client(this).Execute<EnableWhiteListRuleOfWebRuleResponse, EnableWhiteListRuleOfWebRuleResult, EnableWhiteListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableWhiteListRuleOfWebRuleResponse> EnableWhiteListRuleOfWebRule(EnableWhiteListRuleOfWebRuleRequest request) {
+            return await new EnableWhiteListRuleOfWebRuleExecutor().Client(this).Execute<EnableWhiteListRuleOfWebRuleResponse, EnableWhiteListRuleOfWebRuleResult, EnableWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteWhiteListRuleOfWebRuleResponse DeleteWhiteListRuleOfWebRule(DeleteWhiteListRuleOfWebRuleRequest request) {
+            return  new DeleteWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DeleteWhiteListRuleOfWebRuleResponse, DeleteWhiteListRuleOfWebRuleResult, DeleteWhiteListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteWhiteListRuleOfWebRuleResponse> DeleteWhiteListRuleOfWebRule(DeleteWhiteListRuleOfWebRuleRequest request) {
+            return await new DeleteWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DeleteWhiteListRuleOfWebRuleResponse, DeleteWhiteListRuleOfWebRuleResult, DeleteWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的 IP 黑白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpSetResponse DescribeIpSet(DescribeIpSetRequest request) {
+            return  new DescribeIpSetExecutor().Client(this).Execute<DescribeIpSetResponse, DescribeIpSetResult, DescribeIpSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的 IP 黑白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpSetResponse> DescribeIpSet(DescribeIpSetRequest request) {
+            return await new DescribeIpSetExecutor().Client(this).Execute<DescribeIpSetResponse, DescribeIpSetResult, DescribeIpSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭网站类规则的白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableWebRuleWhiteListResponse DisableWebRuleWhiteList(DisableWebRuleWhiteListRequest request) {
+            return  new DisableWebRuleWhiteListExecutor().Client(this).Execute<DisableWebRuleWhiteListResponse, DisableWebRuleWhiteListResult, DisableWebRuleWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭网站类规则的白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableWebRuleWhiteListResponse> DisableWebRuleWhiteList(DisableWebRuleWhiteListRequest request) {
+            return await new DisableWebRuleWhiteListExecutor().Client(this).Execute<DisableWebRuleWhiteListResponse, DisableWebRuleWhiteListResult, DisableWebRuleWhiteListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除非网站规则, 批量操作时, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +470,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  删除非网站规则
+        ///  删除非网站规则, 批量操作时, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -347,25 +518,6 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例 IP 黑名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceIpBlackListResponse ModifyInstanceIpBlackList(ModifyInstanceIpBlackListRequest request) {
-            return  new ModifyInstanceIpBlackListExecutor().Client(this).Execute<ModifyInstanceIpBlackListResponse, ModifyInstanceIpBlackListResult, ModifyInstanceIpBlackListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置实例 IP 黑名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceIpBlackListResponse> ModifyInstanceIpBlackList(ModifyInstanceIpBlackListRequest request) {
-            return await new ModifyInstanceIpBlackListExecutor().Client(this).Execute<ModifyInstanceIpBlackListResponse, ModifyInstanceIpBlackListResult, ModifyInstanceIpBlackListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  新购或升级高防实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -385,7 +537,28 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询 CC 攻击日志详情
+        ///  查询用户可设置为网站类规则回源 IP 的京东云云物理服务器公网 IP 资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCpsIpListResponse DescribeCpsIpList(DescribeCpsIpListRequest request) {
+            return  new DescribeCpsIpListExecutor().Client(this).Execute<DescribeCpsIpListResponse, DescribeCpsIpListResult, DescribeCpsIpListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户可设置为网站类规则回源 IP 的京东云云物理服务器公网 IP 资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCpsIpListResponse> DescribeCpsIpList(DescribeCpsIpListRequest request) {
+            return await new DescribeCpsIpListExecutor().Client(this).Execute<DescribeCpsIpListResponse, DescribeCpsIpListResult, DescribeCpsIpListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 CC 攻击日志详情.
+        /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -394,7 +567,9 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  查询 CC 攻击日志详情
+        ///  查询 CC 攻击日志详情.
+        /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -442,6 +617,44 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转发规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBlackListRuleOfForwardRuleResponse DescribeBlackListRuleOfForwardRule(DescribeBlackListRuleOfForwardRuleRequest request) {
+            return  new DescribeBlackListRuleOfForwardRuleExecutor().Client(this).Execute<DescribeBlackListRuleOfForwardRuleResponse, DescribeBlackListRuleOfForwardRuleResult, DescribeBlackListRuleOfForwardRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转发规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBlackListRuleOfForwardRuleResponse> DescribeBlackListRuleOfForwardRule(DescribeBlackListRuleOfForwardRuleRequest request) {
+            return await new DescribeBlackListRuleOfForwardRuleExecutor().Client(this).Execute<DescribeBlackListRuleOfForwardRuleResponse, DescribeBlackListRuleOfForwardRuleResult, DescribeBlackListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭网站类规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableCCProtectionRuleOfWebRuleResponse DisableCCProtectionRuleOfWebRule(DisableCCProtectionRuleOfWebRuleRequest request) {
+            return  new DisableCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DisableCCProtectionRuleOfWebRuleResponse, DisableCCProtectionRuleOfWebRuleResult, DisableCCProtectionRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭网站类规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableCCProtectionRuleOfWebRuleResponse> DisableCCProtectionRuleOfWebRule(DisableCCProtectionRuleOfWebRuleRequest request) {
+            return await new DisableCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DisableCCProtectionRuleOfWebRuleResponse, DisableCCProtectionRuleOfWebRuleResult, DisableCCProtectionRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询非网站类转发规则的防护规则 Geo 拦截可设置区域编码
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -461,7 +674,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  网站类规则开启 CC
+        ///  网站类规则开启 CC 防护, 开启后网站类规则已配置的防护规则和 CC 防护配置生效, 若没有配置过 CC 防护, 默认的 CC 防护配置生效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -470,31 +683,12 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  网站类规则开启 CC
+        ///  网站类规则开启 CC 防护, 开启后网站类规则已配置的防护规则和 CC 防护配置生效, 若没有配置过 CC 防护, 默认的 CC 防护配置生效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<EnableWebRuleCCResponse> EnableWebRuleCC(EnableWebRuleCCRequest request) {
             return await new EnableWebRuleCCExecutor().Client(this).Execute<EnableWebRuleCCResponse, EnableWebRuleCCResult, EnableWebRuleCCRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询 CC 自定义默认阈值
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCCDefaultThresholdsResponse DescribeCCDefaultThresholds(DescribeCCDefaultThresholdsRequest request) {
-            return  new DescribeCCDefaultThresholdsExecutor().Client(this).Execute<DescribeCCDefaultThresholdsResponse, DescribeCCDefaultThresholdsResult, DescribeCCDefaultThresholdsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询 CC 自定义默认阈值
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCCDefaultThresholdsResponse> DescribeCCDefaultThresholds(DescribeCCDefaultThresholdsRequest request) {
-            return await new DescribeCCDefaultThresholdsExecutor().Client(this).Execute<DescribeCCDefaultThresholdsResponse, DescribeCCDefaultThresholdsResult, DescribeCCDefaultThresholdsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -518,21 +712,21 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例 CC 防护
+        ///  删除网站规则的 CC 防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceCCResponse ModifyInstanceCC(ModifyInstanceCCRequest request) {
-            return  new ModifyInstanceCCExecutor().Client(this).Execute<ModifyInstanceCCResponse, ModifyInstanceCCResult, ModifyInstanceCCRequest>(request);
+        public DeleteCCProtectionRuleOfWebRuleResponse DeleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) {
+            return  new DeleteCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DeleteCCProtectionRuleOfWebRuleResponse, DeleteCCProtectionRuleOfWebRuleResult, DeleteCCProtectionRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置实例 CC 防护
+        ///  删除网站规则的 CC 防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceCCResponse> ModifyInstanceCC(ModifyInstanceCCRequest request) {
-            return await new ModifyInstanceCCExecutor().Client(this).Execute<ModifyInstanceCCResponse, ModifyInstanceCCResult, ModifyInstanceCCRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteCCProtectionRuleOfWebRuleResponse> DeleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) {
+            return await new DeleteCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DeleteCCProtectionRuleOfWebRuleResponse, DeleteCCProtectionRuleOfWebRuleResult, DeleteCCProtectionRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -594,6 +788,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  关闭网站类规则 CC 观察者模式, 观察模式下, CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableWebRuleCCObserverModeResponse DisableWebRuleCCObserverMode(DisableWebRuleCCObserverModeRequest request) {
+            return  new DisableWebRuleCCObserverModeExecutor().Client(this).Execute<DisableWebRuleCCObserverModeResponse, DisableWebRuleCCObserverModeResult, DisableWebRuleCCObserverModeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭网站类规则 CC 观察者模式, 观察模式下, CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableWebRuleCCObserverModeResponse> DisableWebRuleCCObserverMode(DisableWebRuleCCObserverModeRequest request) {
+            return await new DisableWebRuleCCObserverModeExecutor().Client(this).Execute<DisableWebRuleCCObserverModeResponse, DisableWebRuleCCObserverModeResult, DisableWebRuleCCObserverModeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询某个实例下的非网站转发配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -632,40 +845,59 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭 CC 防护每 IP 的限速
+        ///  修改网站类规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableCCIpLimitResponse DisableCCIpLimit(DisableCCIpLimitRequest request) {
-            return  new DisableCCIpLimitExecutor().Client(this).Execute<DisableCCIpLimitResponse, DisableCCIpLimitResult, DisableCCIpLimitRequest>(request);
+        public ModifyBlackListRuleOfWebRuleResponse ModifyBlackListRuleOfWebRule(ModifyBlackListRuleOfWebRuleRequest request) {
+            return  new ModifyBlackListRuleOfWebRuleExecutor().Client(this).Execute<ModifyBlackListRuleOfWebRuleResponse, ModifyBlackListRuleOfWebRuleResult, ModifyBlackListRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭 CC 防护每 IP 的限速
+        ///  修改网站类规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableCCIpLimitResponse> DisableCCIpLimit(DisableCCIpLimitRequest request) {
-            return await new DisableCCIpLimitExecutor().Client(this).Execute<DisableCCIpLimitResponse, DisableCCIpLimitResult, DisableCCIpLimitRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyBlackListRuleOfWebRuleResponse> ModifyBlackListRuleOfWebRule(ModifyBlackListRuleOfWebRuleRequest request) {
+            return await new ModifyBlackListRuleOfWebRuleExecutor().Client(this).Execute<ModifyBlackListRuleOfWebRuleResponse, ModifyBlackListRuleOfWebRuleResult, ModifyBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例 IP 黑名单
+        ///  删除实例的 IP 黑白名单. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableInstanceIpBlackListResponse DisableInstanceIpBlackList(DisableInstanceIpBlackListRequest request) {
-            return  new DisableInstanceIpBlackListExecutor().Client(this).Execute<DisableInstanceIpBlackListResponse, DisableInstanceIpBlackListResult, DisableInstanceIpBlackListRequest>(request);
+        public DeleteIpSetResponse DeleteIpSet(DeleteIpSetRequest request) {
+            return  new DeleteIpSetExecutor().Client(this).Execute<DeleteIpSetResponse, DeleteIpSetResult, DeleteIpSetRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例 IP 黑名单
+        ///  删除实例的 IP 黑白名单. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableInstanceIpBlackListResponse> DisableInstanceIpBlackList(DisableInstanceIpBlackListRequest request) {
-            return await new DisableInstanceIpBlackListExecutor().Client(this).Execute<DisableInstanceIpBlackListResponse, DisableInstanceIpBlackListResult, DisableInstanceIpBlackListRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteIpSetResponse> DeleteIpSet(DeleteIpSetRequest request) {
+            return await new DeleteIpSetExecutor().Client(this).Execute<DeleteIpSetResponse, DeleteIpSetResult, DeleteIpSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启网站类规则的白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableWebRuleWhiteListResponse EnableWebRuleWhiteList(EnableWebRuleWhiteListRequest request) {
+            return  new EnableWebRuleWhiteListExecutor().Client(this).Execute<EnableWebRuleWhiteListResponse, EnableWebRuleWhiteListResult, EnableWebRuleWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启网站类规则的白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableWebRuleWhiteListResponse> EnableWebRuleWhiteList(EnableWebRuleWhiteListRequest request) {
+            return await new EnableWebRuleWhiteListExecutor().Client(this).Execute<EnableWebRuleWhiteListResponse, EnableWebRuleWhiteListResult, EnableWebRuleWhiteListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -689,21 +921,21 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例 Url 白名单
+        ///  查询网站类防护规则的白名单用量信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableInstanceUrlWhiteListResponse DisableInstanceUrlWhiteList(DisableInstanceUrlWhiteListRequest request) {
-            return  new DisableInstanceUrlWhiteListExecutor().Client(this).Execute<DisableInstanceUrlWhiteListResponse, DisableInstanceUrlWhiteListResult, DisableInstanceUrlWhiteListRequest>(request);
+        public DescribeWebRuleWhiteListUsageResponse DescribeWebRuleWhiteListUsage(DescribeWebRuleWhiteListUsageRequest request) {
+            return  new DescribeWebRuleWhiteListUsageExecutor().Client(this).Execute<DescribeWebRuleWhiteListUsageResponse, DescribeWebRuleWhiteListUsageResult, DescribeWebRuleWhiteListUsageRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例 Url 白名单
+        ///  查询网站类防护规则的白名单用量信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableInstanceUrlWhiteListResponse> DisableInstanceUrlWhiteList(DisableInstanceUrlWhiteListRequest request) {
-            return await new DisableInstanceUrlWhiteListExecutor().Client(this).Execute<DisableInstanceUrlWhiteListResponse, DisableInstanceUrlWhiteListResult, DisableInstanceUrlWhiteListRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeWebRuleWhiteListUsageResponse> DescribeWebRuleWhiteListUsage(DescribeWebRuleWhiteListUsageRequest request) {
+            return await new DescribeWebRuleWhiteListUsageExecutor().Client(this).Execute<DescribeWebRuleWhiteListUsageResponse, DescribeWebRuleWhiteListUsageResult, DescribeWebRuleWhiteListUsageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -727,25 +959,6 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例 Url 白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceUrlWhiteListResponse ModifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) {
-            return  new ModifyInstanceUrlWhiteListExecutor().Client(this).Execute<ModifyInstanceUrlWhiteListResponse, ModifyInstanceUrlWhiteListResult, ModifyInstanceUrlWhiteListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置实例 Url 白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceUrlWhiteListResponse> ModifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) {
-            return await new ModifyInstanceUrlWhiteListExecutor().Client(this).Execute<ModifyInstanceUrlWhiteListResponse, ModifyInstanceUrlWhiteListResult, ModifyInstanceUrlWhiteListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  更新告警配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -765,40 +978,59 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置实例 IP 白名单
+        ///  查询网站类转发规则 Geo 模式的白名单可设置区域编码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceIpWhiteListResponse ModifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) {
-            return  new ModifyInstanceIpWhiteListExecutor().Client(this).Execute<ModifyInstanceIpWhiteListResponse, ModifyInstanceIpWhiteListResult, ModifyInstanceIpWhiteListRequest>(request);
+        public DescribeWebRuleWhiteListGeoAreasResponse DescribeWebRuleWhiteListGeoAreas(DescribeWebRuleWhiteListGeoAreasRequest request) {
+            return  new DescribeWebRuleWhiteListGeoAreasExecutor().Client(this).Execute<DescribeWebRuleWhiteListGeoAreasResponse, DescribeWebRuleWhiteListGeoAreasResult, DescribeWebRuleWhiteListGeoAreasRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置实例 IP 白名单
+        ///  查询网站类转发规则 Geo 模式的白名单可设置区域编码
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceIpWhiteListResponse> ModifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) {
-            return await new ModifyInstanceIpWhiteListExecutor().Client(this).Execute<ModifyInstanceIpWhiteListResponse, ModifyInstanceIpWhiteListResult, ModifyInstanceIpWhiteListRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeWebRuleWhiteListGeoAreasResponse> DescribeWebRuleWhiteListGeoAreas(DescribeWebRuleWhiteListGeoAreasRequest request) {
+            return await new DescribeWebRuleWhiteListGeoAreasExecutor().Client(this).Execute<DescribeWebRuleWhiteListGeoAreasResponse, DescribeWebRuleWhiteListGeoAreasResult, DescribeWebRuleWhiteListGeoAreasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询证书预览信息
+        ///  修改转发规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCertInfoResponse DescribeCertInfo(DescribeCertInfoRequest request) {
-            return  new DescribeCertInfoExecutor().Client(this).Execute<DescribeCertInfoResponse, DescribeCertInfoResult, DescribeCertInfoRequest>(request);
+        public ModifyBlackListRuleOfForwardRuleResponse ModifyBlackListRuleOfForwardRule(ModifyBlackListRuleOfForwardRuleRequest request) {
+            return  new ModifyBlackListRuleOfForwardRuleExecutor().Client(this).Execute<ModifyBlackListRuleOfForwardRuleResponse, ModifyBlackListRuleOfForwardRuleResult, ModifyBlackListRuleOfForwardRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询证书预览信息
+        ///  修改转发规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCertInfoResponse> DescribeCertInfo(DescribeCertInfoRequest request) {
-            return await new DescribeCertInfoExecutor().Client(this).Execute<DescribeCertInfoResponse, DescribeCertInfoResult, DescribeCertInfoRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyBlackListRuleOfForwardRuleResponse> ModifyBlackListRuleOfForwardRule(ModifyBlackListRuleOfForwardRuleRequest request) {
+            return await new ModifyBlackListRuleOfForwardRuleExecutor().Client(this).Execute<ModifyBlackListRuleOfForwardRuleResponse, ModifyBlackListRuleOfForwardRuleResult, ModifyBlackListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭网站类规则的黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableWebRuleBlackListResponse DisableWebRuleBlackList(DisableWebRuleBlackListRequest request) {
+            return  new DisableWebRuleBlackListExecutor().Client(this).Execute<DisableWebRuleBlackListResponse, DisableWebRuleBlackListResult, DisableWebRuleBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭网站类规则的黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableWebRuleBlackListResponse> DisableWebRuleBlackList(DisableWebRuleBlackListRequest request) {
+            return await new DisableWebRuleBlackListExecutor().Client(this).Execute<DisableWebRuleBlackListResponse, DisableWebRuleBlackListResult, DisableWebRuleBlackListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -822,59 +1054,59 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  下载 DDos 攻击日志
+        ///  删除网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DownloadDDoSAttackLogsResponse DownloadDDoSAttackLogs(DownloadDDoSAttackLogsRequest request) {
-            return  new DownloadDDoSAttackLogsExecutor().Client(this).Execute<DownloadDDoSAttackLogsResponse, DownloadDDoSAttackLogsResult, DownloadDDoSAttackLogsRequest>(request);
+        public DeleteBlackListRuleOfWebRuleResponse DeleteBlackListRuleOfWebRule(DeleteBlackListRuleOfWebRuleRequest request) {
+            return  new DeleteBlackListRuleOfWebRuleExecutor().Client(this).Execute<DeleteBlackListRuleOfWebRuleResponse, DeleteBlackListRuleOfWebRuleResult, DeleteBlackListRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  下载 DDos 攻击日志
+        ///  删除网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DownloadDDoSAttackLogsResponse> DownloadDDoSAttackLogs(DownloadDDoSAttackLogsRequest request) {
-            return await new DownloadDDoSAttackLogsExecutor().Client(this).Execute<DownloadDDoSAttackLogsResponse, DownloadDDoSAttackLogsResult, DownloadDDoSAttackLogsRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteBlackListRuleOfWebRuleResponse> DeleteBlackListRuleOfWebRule(DeleteBlackListRuleOfWebRuleRequest request) {
+            return await new DeleteBlackListRuleOfWebRuleExecutor().Client(this).Execute<DeleteBlackListRuleOfWebRuleResponse, DeleteBlackListRuleOfWebRuleResult, DeleteBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启实例 Url 白名单
+        ///  查询网站类规则的 CC 防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableInstanceUrlWhiteListResponse EnableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) {
-            return  new EnableInstanceUrlWhiteListExecutor().Client(this).Execute<EnableInstanceUrlWhiteListResponse, EnableInstanceUrlWhiteListResult, EnableInstanceUrlWhiteListRequest>(request);
+        public DescribeCCProtectionRuleOfWebRuleResponse DescribeCCProtectionRuleOfWebRule(DescribeCCProtectionRuleOfWebRuleRequest request) {
+            return  new DescribeCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionRuleOfWebRuleResponse, DescribeCCProtectionRuleOfWebRuleResult, DescribeCCProtectionRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启实例 Url 白名单
+        ///  查询网站类规则的 CC 防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceUrlWhiteListResponse> EnableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) {
-            return await new EnableInstanceUrlWhiteListExecutor().Client(this).Execute<EnableInstanceUrlWhiteListResponse, EnableInstanceUrlWhiteListResult, EnableInstanceUrlWhiteListRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeCCProtectionRuleOfWebRuleResponse> DescribeCCProtectionRuleOfWebRule(DescribeCCProtectionRuleOfWebRuleRequest request) {
+            return await new DescribeCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionRuleOfWebRuleResponse, DescribeCCProtectionRuleOfWebRuleResult, DescribeCCProtectionRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例 CC 防护
+        ///  关闭网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableInstanceCCResponse DisableInstanceCC(DisableInstanceCCRequest request) {
-            return  new DisableInstanceCCExecutor().Client(this).Execute<DisableInstanceCCResponse, DisableInstanceCCResult, DisableInstanceCCRequest>(request);
+        public DisableBlackListRuleOfWebRuleResponse DisableBlackListRuleOfWebRule(DisableBlackListRuleOfWebRuleRequest request) {
+            return  new DisableBlackListRuleOfWebRuleExecutor().Client(this).Execute<DisableBlackListRuleOfWebRuleResponse, DisableBlackListRuleOfWebRuleResult, DisableBlackListRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例 CC 防护
+        ///  关闭网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableInstanceCCResponse> DisableInstanceCC(DisableInstanceCCRequest request) {
-            return await new DisableInstanceCCExecutor().Client(this).Execute<DisableInstanceCCResponse, DisableInstanceCCResult, DisableInstanceCCRequest>(request).ConfigureAwait(false);
+        public async Task<DisableBlackListRuleOfWebRuleResponse> DisableBlackListRuleOfWebRule(DisableBlackListRuleOfWebRuleRequest request) {
+            return await new DisableBlackListRuleOfWebRuleExecutor().Client(this).Execute<DisableBlackListRuleOfWebRuleResponse, DisableBlackListRuleOfWebRuleResult, DisableBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -898,21 +1130,40 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  下载 CC 攻击日志
+        ///  查询网站类规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DownloadCCAttackLogsResponse DownloadCCAttackLogs(DownloadCCAttackLogsRequest request) {
-            return  new DownloadCCAttackLogsExecutor().Client(this).Execute<DownloadCCAttackLogsResponse, DownloadCCAttackLogsResult, DownloadCCAttackLogsRequest>(request);
+        public DescribeWhiteListRuleOfWebRuleResponse DescribeWhiteListRuleOfWebRule(DescribeWhiteListRuleOfWebRuleRequest request) {
+            return  new DescribeWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DescribeWhiteListRuleOfWebRuleResponse, DescribeWhiteListRuleOfWebRuleResult, DescribeWhiteListRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  下载 CC 攻击日志
+        ///  查询网站类规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DownloadCCAttackLogsResponse> DownloadCCAttackLogs(DownloadCCAttackLogsRequest request) {
-            return await new DownloadCCAttackLogsExecutor().Client(this).Execute<DownloadCCAttackLogsResponse, DownloadCCAttackLogsResult, DownloadCCAttackLogsRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeWhiteListRuleOfWebRuleResponse> DescribeWhiteListRuleOfWebRule(DescribeWhiteListRuleOfWebRuleRequest request) {
+            return await new DescribeWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DescribeWhiteListRuleOfWebRuleResponse, DescribeWhiteListRuleOfWebRuleResult, DescribeWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询网站类规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBlackListRuleOfWebRuleResponse DescribeBlackListRuleOfWebRule(DescribeBlackListRuleOfWebRuleRequest request) {
+            return  new DescribeBlackListRuleOfWebRuleExecutor().Client(this).Execute<DescribeBlackListRuleOfWebRuleResponse, DescribeBlackListRuleOfWebRuleResult, DescribeBlackListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询网站类规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBlackListRuleOfWebRuleResponse> DescribeBlackListRuleOfWebRule(DescribeBlackListRuleOfWebRuleRequest request) {
+            return await new DescribeBlackListRuleOfWebRuleExecutor().Client(this).Execute<DescribeBlackListRuleOfWebRuleResponse, DescribeBlackListRuleOfWebRuleResult, DescribeBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -936,7 +1187,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询 DDos 攻击日志
+        ///  查询 DDoS 攻击日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -945,7 +1196,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  查询 DDos 攻击日志
+        ///  查询 DDoS 攻击日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -955,40 +1206,78 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启实例 CC 防护的观察者模式
+        ///  查询网站类规则的黑名单规则列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableCCObserverModeResponse EnableCCObserverMode(EnableCCObserverModeRequest request) {
-            return  new EnableCCObserverModeExecutor().Client(this).Execute<EnableCCObserverModeResponse, EnableCCObserverModeResult, EnableCCObserverModeRequest>(request);
+        public DescribeBlackListRulesOfWebRuleResponse DescribeBlackListRulesOfWebRule(DescribeBlackListRulesOfWebRuleRequest request) {
+            return  new DescribeBlackListRulesOfWebRuleExecutor().Client(this).Execute<DescribeBlackListRulesOfWebRuleResponse, DescribeBlackListRulesOfWebRuleResult, DescribeBlackListRulesOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启实例 CC 防护的观察者模式
+        ///  查询网站类规则的黑名单规则列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableCCObserverModeResponse> EnableCCObserverMode(EnableCCObserverModeRequest request) {
-            return await new EnableCCObserverModeExecutor().Client(this).Execute<EnableCCObserverModeResponse, EnableCCObserverModeResult, EnableCCObserverModeRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeBlackListRulesOfWebRuleResponse> DescribeBlackListRulesOfWebRule(DescribeBlackListRulesOfWebRuleRequest request) {
+            return await new DescribeBlackListRulesOfWebRuleExecutor().Client(this).Execute<DescribeBlackListRulesOfWebRuleResponse, DescribeBlackListRulesOfWebRuleResult, DescribeBlackListRulesOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启实例 IP 黑名单
+        ///  开启转发规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableInstanceIpBlackListResponse EnableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) {
-            return  new EnableInstanceIpBlackListExecutor().Client(this).Execute<EnableInstanceIpBlackListResponse, EnableInstanceIpBlackListResult, EnableInstanceIpBlackListRequest>(request);
+        public EnableWhiteListRuleOfForwardRuleResponse EnableWhiteListRuleOfForwardRule(EnableWhiteListRuleOfForwardRuleRequest request) {
+            return  new EnableWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<EnableWhiteListRuleOfForwardRuleResponse, EnableWhiteListRuleOfForwardRuleResult, EnableWhiteListRuleOfForwardRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启实例 IP 黑名单
+        ///  开启转发规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceIpBlackListResponse> EnableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) {
-            return await new EnableInstanceIpBlackListExecutor().Client(this).Execute<EnableInstanceIpBlackListResponse, EnableInstanceIpBlackListResult, EnableInstanceIpBlackListRequest>(request).ConfigureAwait(false);
+        public async Task<EnableWhiteListRuleOfForwardRuleResponse> EnableWhiteListRuleOfForwardRule(EnableWhiteListRuleOfForwardRuleRequest request) {
+            return await new EnableWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<EnableWhiteListRuleOfForwardRuleResponse, EnableWhiteListRuleOfForwardRuleResult, EnableWhiteListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableWhiteListRuleOfWebRuleResponse DisableWhiteListRuleOfWebRule(DisableWhiteListRuleOfWebRuleRequest request) {
+            return  new DisableWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DisableWhiteListRuleOfWebRuleResponse, DisableWhiteListRuleOfWebRuleResult, DisableWhiteListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableWhiteListRuleOfWebRuleResponse> DisableWhiteListRuleOfWebRule(DisableWhiteListRuleOfWebRuleRequest request) {
+            return await new DisableWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DisableWhiteListRuleOfWebRuleResponse, DisableWhiteListRuleOfWebRuleResult, DisableWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改转发规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyWhiteListRuleOfForwardRuleResponse ModifyWhiteListRuleOfForwardRule(ModifyWhiteListRuleOfForwardRuleRequest request) {
+            return  new ModifyWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<ModifyWhiteListRuleOfForwardRuleResponse, ModifyWhiteListRuleOfForwardRuleResult, ModifyWhiteListRuleOfForwardRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改转发规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyWhiteListRuleOfForwardRuleResponse> ModifyWhiteListRuleOfForwardRule(ModifyWhiteListRuleOfForwardRuleRequest request) {
+            return await new ModifyWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<ModifyWhiteListRuleOfForwardRuleResponse, ModifyWhiteListRuleOfForwardRuleResult, ModifyWhiteListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1012,26 +1301,64 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭实例 IP 白名单
+        ///  修改网站类规则的 CC 防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DisableInstanceIpWhiteListResponse DisableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) {
-            return  new DisableInstanceIpWhiteListExecutor().Client(this).Execute<DisableInstanceIpWhiteListResponse, DisableInstanceIpWhiteListResult, DisableInstanceIpWhiteListRequest>(request);
+        public ModifyCCProtectionRuleOfWebRuleResponse ModifyCCProtectionRuleOfWebRule(ModifyCCProtectionRuleOfWebRuleRequest request) {
+            return  new ModifyCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<ModifyCCProtectionRuleOfWebRuleResponse, ModifyCCProtectionRuleOfWebRuleResult, ModifyCCProtectionRuleOfWebRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  关闭实例 IP 白名单
+        ///  修改网站类规则的 CC 防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DisableInstanceIpWhiteListResponse> DisableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) {
-            return await new DisableInstanceIpWhiteListExecutor().Client(this).Execute<DisableInstanceIpWhiteListResponse, DisableInstanceIpWhiteListResult, DisableInstanceIpWhiteListRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyCCProtectionRuleOfWebRuleResponse> ModifyCCProtectionRuleOfWebRule(ModifyCCProtectionRuleOfWebRuleRequest request) {
+            return await new ModifyCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<ModifyCCProtectionRuleOfWebRuleResponse, ModifyCCProtectionRuleOfWebRuleResult, ModifyCCProtectionRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  网站类规则禁用 CC
+        ///  查询网站类规则的 CC 防护配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCCProtectionConfigOfWebRuleResponse DescribeCCProtectionConfigOfWebRule(DescribeCCProtectionConfigOfWebRuleRequest request) {
+            return  new DescribeCCProtectionConfigOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionConfigOfWebRuleResponse, DescribeCCProtectionConfigOfWebRuleResult, DescribeCCProtectionConfigOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询网站类规则的 CC 防护配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCCProtectionConfigOfWebRuleResponse> DescribeCCProtectionConfigOfWebRule(DescribeCCProtectionConfigOfWebRuleRequest request) {
+            return await new DescribeCCProtectionConfigOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionConfigOfWebRuleResponse, DescribeCCProtectionConfigOfWebRuleResult, DescribeCCProtectionConfigOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询网站类规则的 CC 防护规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCCProtectionRulesOfWebRuleResponse DescribeCCProtectionRulesOfWebRule(DescribeCCProtectionRulesOfWebRuleRequest request) {
+            return  new DescribeCCProtectionRulesOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionRulesOfWebRuleResponse, DescribeCCProtectionRulesOfWebRuleResult, DescribeCCProtectionRulesOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询网站类规则的 CC 防护规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCCProtectionRulesOfWebRuleResponse> DescribeCCProtectionRulesOfWebRule(DescribeCCProtectionRulesOfWebRuleRequest request) {
+            return await new DescribeCCProtectionRulesOfWebRuleExecutor().Client(this).Execute<DescribeCCProtectionRulesOfWebRuleResponse, DescribeCCProtectionRulesOfWebRuleResult, DescribeCCProtectionRulesOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭网站类规则 CC 防护, 网站类规则的 CC 防护规则和 CC 防护配置失效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1040,12 +1367,31 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  网站类规则禁用 CC
+        ///  关闭网站类规则 CC 防护, 网站类规则的 CC 防护规则和 CC 防护配置失效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DisableWebRuleCCResponse> DisableWebRuleCC(DisableWebRuleCCRequest request) {
             return await new DisableWebRuleCCExecutor().Client(this).Execute<DisableWebRuleCCResponse, DisableWebRuleCCResult, DisableWebRuleCCRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加网站类规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateWhiteListRuleOfWebRuleResponse CreateWhiteListRuleOfWebRule(CreateWhiteListRuleOfWebRuleRequest request) {
+            return  new CreateWhiteListRuleOfWebRuleExecutor().Client(this).Execute<CreateWhiteListRuleOfWebRuleResponse, CreateWhiteListRuleOfWebRuleResult, CreateWhiteListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加网站类规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateWhiteListRuleOfWebRuleResponse> CreateWhiteListRuleOfWebRule(CreateWhiteListRuleOfWebRuleRequest request) {
+            return await new CreateWhiteListRuleOfWebRuleExecutor().Client(this).Execute<CreateWhiteListRuleOfWebRuleResponse, CreateWhiteListRuleOfWebRuleResult, CreateWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1069,6 +1415,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  添加网站类规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateBlackListRuleOfWebRuleResponse CreateBlackListRuleOfWebRule(CreateBlackListRuleOfWebRuleRequest request) {
+            return  new CreateBlackListRuleOfWebRuleExecutor().Client(this).Execute<CreateBlackListRuleOfWebRuleResponse, CreateBlackListRuleOfWebRuleResult, CreateBlackListRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加网站类规则的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateBlackListRuleOfWebRuleResponse> CreateBlackListRuleOfWebRule(CreateBlackListRuleOfWebRuleRequest request) {
+            return await new CreateBlackListRuleOfWebRuleExecutor().Client(this).Execute<CreateBlackListRuleOfWebRuleResponse, CreateBlackListRuleOfWebRuleResult, CreateBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  DDos 防护流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1088,21 +1453,116 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启实例 CC 防护
+        ///  关闭转发规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableInstanceCCResponse EnableInstanceCC(EnableInstanceCCRequest request) {
-            return  new EnableInstanceCCExecutor().Client(this).Execute<EnableInstanceCCResponse, EnableInstanceCCResult, EnableInstanceCCRequest>(request);
+        public DisableBlackListRuleOfForwardRuleResponse DisableBlackListRuleOfForwardRule(DisableBlackListRuleOfForwardRuleRequest request) {
+            return  new DisableBlackListRuleOfForwardRuleExecutor().Client(this).Execute<DisableBlackListRuleOfForwardRuleResponse, DisableBlackListRuleOfForwardRuleResult, DisableBlackListRuleOfForwardRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启实例 CC 防护
+        ///  关闭转发规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableInstanceCCResponse> EnableInstanceCC(EnableInstanceCCRequest request) {
-            return await new EnableInstanceCCExecutor().Client(this).Execute<EnableInstanceCCResponse, EnableInstanceCCResult, EnableInstanceCCRequest>(request).ConfigureAwait(false);
+        public async Task<DisableBlackListRuleOfForwardRuleResponse> DisableBlackListRuleOfForwardRule(DisableBlackListRuleOfForwardRuleRequest request) {
+            return await new DisableBlackListRuleOfForwardRuleExecutor().Client(this).Execute<DisableBlackListRuleOfForwardRuleResponse, DisableBlackListRuleOfForwardRuleResult, DisableBlackListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的 IP 黑白名单用量信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpSetUsageResponse DescribeIpSetUsage(DescribeIpSetUsageRequest request) {
+            return  new DescribeIpSetUsageExecutor().Client(this).Execute<DescribeIpSetUsageResponse, DescribeIpSetUsageResult, DescribeIpSetUsageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的 IP 黑白名单用量信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpSetUsageResponse> DescribeIpSetUsage(DescribeIpSetUsageRequest request) {
+            return await new DescribeIpSetUsageExecutor().Client(this).Execute<DescribeIpSetUsageResponse, DescribeIpSetUsageResult, DescribeIpSetUsageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改网站类规则的 CC 防护配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyCCProtectionConfigOfWebRuleResponse ModifyCCProtectionConfigOfWebRule(ModifyCCProtectionConfigOfWebRuleRequest request) {
+            return  new ModifyCCProtectionConfigOfWebRuleExecutor().Client(this).Execute<ModifyCCProtectionConfigOfWebRuleResponse, ModifyCCProtectionConfigOfWebRuleResult, ModifyCCProtectionConfigOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改网站类规则的 CC 防护配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyCCProtectionConfigOfWebRuleResponse> ModifyCCProtectionConfigOfWebRule(ModifyCCProtectionConfigOfWebRuleRequest request) {
+            return await new ModifyCCProtectionConfigOfWebRuleExecutor().Client(this).Execute<ModifyCCProtectionConfigOfWebRuleResponse, ModifyCCProtectionConfigOfWebRuleResult, ModifyCCProtectionConfigOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭转发规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableWhiteListRuleOfForwardRuleResponse DisableWhiteListRuleOfForwardRule(DisableWhiteListRuleOfForwardRuleRequest request) {
+            return  new DisableWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<DisableWhiteListRuleOfForwardRuleResponse, DisableWhiteListRuleOfForwardRuleResult, DisableWhiteListRuleOfForwardRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭转发规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableWhiteListRuleOfForwardRuleResponse> DisableWhiteListRuleOfForwardRule(DisableWhiteListRuleOfForwardRuleRequest request) {
+            return await new DisableWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<DisableWhiteListRuleOfForwardRuleResponse, DisableWhiteListRuleOfForwardRuleResult, DisableWhiteListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启网站类规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableCCProtectionRuleOfWebRuleResponse EnableCCProtectionRuleOfWebRule(EnableCCProtectionRuleOfWebRuleRequest request) {
+            return  new EnableCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<EnableCCProtectionRuleOfWebRuleResponse, EnableCCProtectionRuleOfWebRuleResult, EnableCCProtectionRuleOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启网站类规则的 CC 防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableCCProtectionRuleOfWebRuleResponse> EnableCCProtectionRuleOfWebRule(EnableCCProtectionRuleOfWebRuleRequest request) {
+            return await new EnableCCProtectionRuleOfWebRuleExecutor().Client(this).Execute<EnableCCProtectionRuleOfWebRuleResponse, EnableCCProtectionRuleOfWebRuleResult, EnableCCProtectionRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询网站类规则的白名单规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWhiteListRulesOfWebRuleResponse DescribeWhiteListRulesOfWebRule(DescribeWhiteListRulesOfWebRuleRequest request) {
+            return  new DescribeWhiteListRulesOfWebRuleExecutor().Client(this).Execute<DescribeWhiteListRulesOfWebRuleResponse, DescribeWhiteListRulesOfWebRuleResult, DescribeWhiteListRulesOfWebRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询网站类规则的白名单规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWhiteListRulesOfWebRuleResponse> DescribeWhiteListRulesOfWebRule(DescribeWhiteListRulesOfWebRuleRequest request) {
+            return await new DescribeWhiteListRulesOfWebRuleExecutor().Client(this).Execute<DescribeWhiteListRulesOfWebRuleResponse, DescribeWhiteListRulesOfWebRuleResult, DescribeWhiteListRulesOfWebRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1126,7 +1586,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户的京东云 IP 资源
+        ///  查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1135,7 +1595,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  查询用户的京东云 IP 资源
+        ///  查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1164,6 +1624,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询网站类转发规则 Geo 模式的黑名单可设置区域编码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWebRuleBlackListGeoAreasResponse DescribeWebRuleBlackListGeoAreas(DescribeWebRuleBlackListGeoAreasRequest request) {
+            return  new DescribeWebRuleBlackListGeoAreasExecutor().Client(this).Execute<DescribeWebRuleBlackListGeoAreasResponse, DescribeWebRuleBlackListGeoAreasResult, DescribeWebRuleBlackListGeoAreasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询网站类转发规则 Geo 模式的黑名单可设置区域编码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWebRuleBlackListGeoAreasResponse> DescribeWebRuleBlackListGeoAreas(DescribeWebRuleBlackListGeoAreasRequest request) {
+            return await new DescribeWebRuleBlackListGeoAreasExecutor().Client(this).Execute<DescribeWebRuleBlackListGeoAreasResponse, DescribeWebRuleBlackListGeoAreasResult, DescribeWebRuleBlackListGeoAreasRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改非网站类转发规则的防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1183,26 +1662,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  下载 CC 攻击日志详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DownloadCCAttackLogDetailsResponse DownloadCCAttackLogDetails(DownloadCCAttackLogDetailsRequest request) {
-            return  new DownloadCCAttackLogDetailsExecutor().Client(this).Execute<DownloadCCAttackLogDetailsResponse, DownloadCCAttackLogDetailsResult, DownloadCCAttackLogDetailsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  下载 CC 攻击日志详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DownloadCCAttackLogDetailsResponse> DownloadCCAttackLogDetails(DownloadCCAttackLogDetailsRequest request) {
-            return await new DownloadCCAttackLogDetailsExecutor().Client(this).Execute<DownloadCCAttackLogDetailsResponse, DownloadCCAttackLogDetailsResult, DownloadCCAttackLogDetailsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站规则
+        ///  删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1211,7 +1671,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  删除网站规则
+        ///  删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1259,6 +1719,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转发规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWhiteListRuleOfForwardRuleResponse DescribeWhiteListRuleOfForwardRule(DescribeWhiteListRuleOfForwardRuleRequest request) {
+            return  new DescribeWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<DescribeWhiteListRuleOfForwardRuleResponse, DescribeWhiteListRuleOfForwardRuleResult, DescribeWhiteListRuleOfForwardRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转发规则的白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWhiteListRuleOfForwardRuleResponse> DescribeWhiteListRuleOfForwardRule(DescribeWhiteListRuleOfForwardRuleRequest request) {
+            return await new DescribeWhiteListRuleOfForwardRuleExecutor().Client(this).Execute<DescribeWhiteListRuleOfForwardRuleResponse, DescribeWhiteListRuleOfForwardRuleResult, DescribeWhiteListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  CC 防护流量报表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1293,6 +1772,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
             return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启网站类规则 CC 观察者模式, 观察模式下，CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableWebRuleCCObserverModeResponse EnableWebRuleCCObserverMode(EnableWebRuleCCObserverModeRequest request) {
+            return  new EnableWebRuleCCObserverModeExecutor().Client(this).Execute<EnableWebRuleCCObserverModeResponse, EnableWebRuleCCObserverModeResult, EnableWebRuleCCObserverModeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启网站类规则 CC 观察者模式, 观察模式下，CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableWebRuleCCObserverModeResponse> EnableWebRuleCCObserverMode(EnableWebRuleCCObserverModeRequest request) {
+            return await new EnableWebRuleCCObserverModeExecutor().Client(this).Execute<EnableWebRuleCCObserverModeResponse, EnableWebRuleCCObserverModeResult, EnableWebRuleCCObserverModeRequest>(request).ConfigureAwait(false);
         }
 #endif
 

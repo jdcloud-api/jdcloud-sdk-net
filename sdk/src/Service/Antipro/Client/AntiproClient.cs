@@ -157,6 +157,25 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询 DDoS 防护包可防护的托管区公网 IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCcsIpResourcesResponse DescribeCcsIpResources(DescribeCcsIpResourcesRequest request) {
+            return  new DescribeCcsIpResourcesExecutor().Client(this).Execute<DescribeCcsIpResourcesResponse, DescribeCcsIpResourcesResult, DescribeCcsIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的托管区公网 IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCcsIpResourcesResponse> DescribeCcsIpResources(DescribeCcsIpResourcesRequest request) {
+            return await new DescribeCcsIpResourcesExecutor().Client(this).Execute<DescribeCcsIpResourcesResponse, DescribeCcsIpResourcesResult, DescribeCcsIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除防护包防护 IP
         /// </summary>
         /// <param name="request">请求参数信息</param>

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
@@ -39,10 +40,13 @@ namespace JDCloudSDK.Vod.Model
 
         ///<summary>
         /// 分类名称
+        ///Required:true
         ///</summary>
+        [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// 父分类ID
+        /// 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+        /// 
         ///</summary>
         public long? ParentId{ get; set; }
         ///<summary>

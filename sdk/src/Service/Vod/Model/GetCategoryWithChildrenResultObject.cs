@@ -54,8 +54,16 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// Children
+        /// 下级分类
         ///</summary>
-        public List<object> Children{ get; set; }
+        public List<SubCategory> Children{ get; set; }
+        ///<summary>
+        /// 创建时间
+        ///</summary>
+        public DateTime? CreateTime{ get; set; }
+        ///<summary>
+        /// 修改时间
+        ///</summary>
+        public DateTime? UpdateTime{ get; set; }
     }
 }

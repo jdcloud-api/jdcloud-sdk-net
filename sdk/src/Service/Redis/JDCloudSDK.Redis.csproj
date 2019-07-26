@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.1.0.1</Version>
+        <Version>1.3.0.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>京东云缓存Redis相关接口</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
@@ -32,6 +32,18 @@
 		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\Charge\JDCloudSDK.Charge.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Charge\JDCloudSDK.Charge.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />
 	</ItemGroup>
 </Project>

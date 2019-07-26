@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  添加域名头参数响应消息体
+    ///  添加域名头参数请求
     /// </summary>
     public class GetHeaderResultObject
     {
@@ -46,7 +46,7 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string HeaderValue{ get; set; }
         ///<summary>
-        /// 头参数类型
+        /// 头参数类型，取值范围：req、resp
         ///</summary>
         public string HeaderType{ get; set; }
     }

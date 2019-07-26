@@ -93,7 +93,7 @@ namespace JDCloudSDK.Disk.Model
         ///<summary>
         /// 云盘是否被暂停（IOPS限制为极低）
         ///</summary>
-        public bool Enable{ get; set; }
+        public bool Enabled{ get; set; }
         ///<summary>
         /// 创建云硬盘时间
         ///</summary>

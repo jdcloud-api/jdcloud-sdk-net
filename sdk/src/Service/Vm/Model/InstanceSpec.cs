@@ -29,7 +29,6 @@ using System.Text;
 
 using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Vpc.Model;
-using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Vm.Model
@@ -99,6 +98,13 @@ namespace JDCloudSDK.Vm.Model
         /// 
         ///</summary>
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+        /// launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+        /// launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+        /// 
+        ///</summary>
+        public List<Userdata> Userdata{ get; set; }
         ///<summary>
         /// 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>

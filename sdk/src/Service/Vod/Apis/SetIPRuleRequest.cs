@@ -35,17 +35,21 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  设置CDN域名IP规则
+    ///  设置CDN域名IP黑名单规则
     /// </summary>
     public class SetIPRuleRequest : JdcloudRequest
     {
         ///<summary>
-        /// 规则配置对象
+        /// IP黑名单规则配置对象
+        ///Required:true
         ///</summary>
-        public   Config Config{ get; set; }
+        [Required]
+        public   IPRuleConfigObject Config{ get; set; }
         ///<summary>
         /// 是否启用该规则
+        ///Required:true
         ///</summary>
+        [Required]
         public   bool Enabled{ get; set; }
         ///<summary>
         /// 域名ID

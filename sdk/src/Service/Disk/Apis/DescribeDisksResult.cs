@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Disk.Apis
     public class DescribeDisksResult : JdcloudResult
     {
         ///<summary>
-        /// Disks
+        /// 查询的云硬盘信息详情列表
         ///</summary>
         public List<JDCloudSDK.Disk.Model.Disk> Disks{ get; set; }
 

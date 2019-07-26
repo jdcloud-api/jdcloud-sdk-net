@@ -42,6 +42,6 @@ namespace  JDCloudSDK.Pod.Apis
         ///<summary>
         /// Logs
         ///</summary>
-        public   Logs Logs{ get; set; }
+        public   JDCloudSDK.Pod.Model.Logs Logs{ get; set; }
     }
 }

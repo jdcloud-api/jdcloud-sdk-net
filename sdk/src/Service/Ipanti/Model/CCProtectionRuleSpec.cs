@@ -75,7 +75,7 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public int BlockType{ get; set; }
         ///<summary>
-        /// 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+        /// 阻断持续时间, 单位为秒, 取值范围[10, 86400]
         ///Required:true
         ///</summary>
         [Required]

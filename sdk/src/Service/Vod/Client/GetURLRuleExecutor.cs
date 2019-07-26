@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  查询CDN域名URL规则
+    ///  查询CDN域名URL鉴权规则配置
     /// </summary>
     public class GetURLRuleExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询CDN域名URL规则接口的Http 请求方法
+        ///  查询CDN域名URL鉴权规则配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  查询CDN域名URL规则接口的Http资源请求路径
+        ///  查询CDN域名URL鉴权规则配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

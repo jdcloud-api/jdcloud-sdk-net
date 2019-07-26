@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vod.Model;
 
 namespace JDCloudSDK.Vod.Model
 {
@@ -39,11 +38,11 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// FlatResult
+        /// 平坦结构结果
         ///</summary>
-        public List<GetCategoryResultObject> FlatResult{ get; set; }
+        public List<CategoryObject> FlatResult{ get; set; }
         ///<summary>
-        /// TreeResult
+        /// 树结构结果
         ///</summary>
         public CategoryTreeNode TreeResult{ get; set; }
     }

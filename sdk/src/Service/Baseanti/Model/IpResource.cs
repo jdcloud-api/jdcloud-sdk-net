@@ -75,9 +75,9 @@ namespace JDCloudSDK.Baseanti.Model
         ///</summary>
         public long? BlackHoleThreshold{ get; set; }
         ///<summary>
-        /// 绑定防护包 ID, 为 0 时表示未绑定防护包
+        /// 绑定防护包 ID, 为空字符串时表示未绑定防护包
         ///</summary>
-        public long? InstanceId{ get; set; }
+        public string InstanceId{ get; set; }
         ///<summary>
         /// 绑定防护包名称, 为空字符串时表示未绑定防护包
         ///</summary>

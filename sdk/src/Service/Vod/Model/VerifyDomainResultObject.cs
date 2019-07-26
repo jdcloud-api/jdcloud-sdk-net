@@ -46,7 +46,7 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public bool Verified{ get; set; }
         ///<summary>
-        /// ICP信息
+        /// ICP备案信息
         ///</summary>
         public string IcpInfo{ get; set; }
     }

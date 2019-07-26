@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Vod.Model;
 
 namespace  JDCloudSDK.Vod.Apis
 {
@@ -37,5 +38,10 @@ namespace  JDCloudSDK.Vod.Apis
     /// </summary>
     public class ListHeadersResult : JdcloudResult
     {
+        ///<summary>
+        /// 头参数列表
+        ///</summary>
+        public List<GetHeaderResultObject> Headers{ get; set; }
+
     }
 }

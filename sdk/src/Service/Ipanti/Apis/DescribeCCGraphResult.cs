@@ -38,17 +38,17 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeCCGraphResult : JdcloudResult
     {
         ///<summary>
-        /// PostProtect
+        /// 防护后 CC 次数
         ///</summary>
         public List<long?> PostProtect{ get; set; }
 
         ///<summary>
-        /// PreProtect
+        /// 防护前 CC 次数
         ///</summary>
         public List<long?> PreProtect{ get; set; }
 
         ///<summary>
-        /// Time
+        /// 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///</summary>
         public List<string> Time{ get; set; }
 

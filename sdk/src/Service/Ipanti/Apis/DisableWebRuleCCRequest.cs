@@ -34,12 +34,12 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  网站类规则禁用 CC
+    ///  关闭网站类规则 CC 防护, 网站类规则的 CC 防护规则和 CC 防护配置失效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
     /// </summary>
     public class DisableWebRuleCCRequest : JdcloudRequest
     {
         ///<summary>
-        /// 区域 Id
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]
@@ -49,12 +49,12 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   long InstanceId{ get; set; }
+        public   string InstanceId{ get; set; }
         ///<summary>
         /// 网站规则 Id
         ///Required:true
         ///</summary>
         [Required]
-        public   long WebRuleId{ get; set; }
+        public   string WebRuleId{ get; set; }
     }
 }

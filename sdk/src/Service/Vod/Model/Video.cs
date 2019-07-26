@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Video Transcode Template Management
- * 水印管理
+ * Transcode Template
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -38,23 +38,23 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// 视频编码
+        /// 视频编码。取值范围：h265、h264
         ///</summary>
         public string Codec{ get; set; }
         ///<summary>
-        /// 码率
+        /// 视频码率。取值范围 [128、10000]，单位为 Kbps
         ///</summary>
         public int? Bitrate{ get; set; }
         ///<summary>
-        /// 帧率
+        /// 视频帧率。取值范围为 [1、60]，单位为 fps
         ///</summary>
         public int? Fps{ get; set; }
         ///<summary>
-        /// 宽度
+        /// 视频输出宽度。取值范围 [128，4096]，取值需为2的倍数
         ///</summary>
         public int? Width{ get; set; }
         ///<summary>
-        /// 高度
+        /// 视频输出高度。取值范围 [128，4096]，取值需为2的倍数
         ///</summary>
         public int? Height{ get; set; }
     }

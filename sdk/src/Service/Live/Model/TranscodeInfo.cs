@@ -45,7 +45,7 @@ namespace JDCloudSDK.Live.Model
         public string VideoCodec{ get; set; }
         ///<summary>
         /// 转码输出的码率值:
-        ///   - 取值: [200,15000]
+        ///   - 取值: [128,15000]
         ///   - 单位: kpbs
         /// 
         ///</summary>
@@ -58,7 +58,7 @@ namespace JDCloudSDK.Live.Model
         public string VideoFrameRate{ get; set; }
         ///<summary>
         /// 转码输出视频宽度:
-        ///   - 取值: [100,3840]
+        ///   - 取值: [128,4096]
         ///   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
         ///   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
         /// 
@@ -66,7 +66,7 @@ namespace JDCloudSDK.Live.Model
         public int? Width{ get; set; }
         ///<summary>
         /// 转码输出视频高度:
-        ///   - 取值: [100,2160]
+        ///   - 取值: [128,4096]
         ///   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
         ///   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
         /// 

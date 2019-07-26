@@ -40,7 +40,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 实例id
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 实例名称
         ///</summary>

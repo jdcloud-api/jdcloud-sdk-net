@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Disk.Model;
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
@@ -66,7 +67,7 @@ namespace  JDCloudSDK.Disk.Apis
         /// encrypted - 云硬盘是否加密，精确匹配，支持单个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID

@@ -53,7 +53,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///<summary>
         /// 高防实例 Id 列表
         ///</summary>
-        public List<long?> InstanceId{ get; set; }
+        public List<string> InstanceId{ get; set; }
 
         ///<summary>
         /// 规则域名列表
@@ -61,7 +61,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         public List<string> SubDomain{ get; set; }
 
         ///<summary>
-        /// 区域 Id
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

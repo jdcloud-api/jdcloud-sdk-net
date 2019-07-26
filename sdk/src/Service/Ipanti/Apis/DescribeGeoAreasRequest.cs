@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeGeoAreasRequest : JdcloudRequest
     {
         ///<summary>
-        /// 区域 Id
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

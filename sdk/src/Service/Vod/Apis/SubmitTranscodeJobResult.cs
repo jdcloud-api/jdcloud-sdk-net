@@ -39,9 +39,9 @@ namespace  JDCloudSDK.Vod.Apis
     public class SubmitTranscodeJobResult : JdcloudResult
     {
         ///<summary>
-        /// Tasks
+        /// 已提交的转码任务
         ///</summary>
-        public List<TranscodeTask> Tasks{ get; set; }
+        public List<SubmittedTranscodeTask> Tasks{ get; set; }
 
     }
 }

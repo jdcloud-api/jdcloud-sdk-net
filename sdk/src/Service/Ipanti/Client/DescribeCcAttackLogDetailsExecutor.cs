@@ -33,12 +33,16 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    ///  查询 CC 攻击日志详情
+    ///  查询 CC 攻击日志详情.
+        /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        /// 
     /// </summary>
     public class DescribeCCAttackLogDetailsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询 CC 攻击日志详情接口的Http 请求方法
+        ///  查询 CC 攻击日志详情.
+        /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +51,14 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  查询 CC 攻击日志详情接口的Http资源请求路径
+        ///  查询 CC 攻击日志详情.
+        /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/attacklog:CCDetail";
+            return "/regions/{regionId}/attacklog:describeCCAttackLogDetails";
             }
         }
     }

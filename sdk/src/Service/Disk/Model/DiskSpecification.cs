@@ -81,5 +81,13 @@ namespace JDCloudSDK.Disk.Model
         /// 最大吞吐量
         ///</summary>
         public int? MaxThroughput{ get; set; }
+        ///<summary>
+        /// 是否开启IOPS可调整
+        ///</summary>
+        public bool ScalableIOPS{ get; set; }
+        ///<summary>
+        /// 最大iops步长
+        ///</summary>
+        public int? MaxStepIOPS{ get; set; }
     }
 }

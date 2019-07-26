@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    ///  查询用户的京东云 IP 资源
+    ///  查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
     /// </summary>
     public class DescribeVpcIpListExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询用户的京东云 IP 资源接口的Http 请求方法
+        ///  查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  查询用户的京东云 IP 资源接口的Http资源请求路径
+        ///  查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

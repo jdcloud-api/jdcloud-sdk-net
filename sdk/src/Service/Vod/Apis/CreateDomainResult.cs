@@ -50,7 +50,19 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Cname{ get; set; }
         ///<summary>
-        /// 域名来源：系统生成 | 用户自建
+        /// 域名状态。取值范围：
+        ///   init - 初始状态
+        ///   configuring - 配置中
+        ///   normal - 正常
+        ///   stopped - 已停用
+        /// 
+        ///</summary>
+        public   string Status{ get; set; }
+        ///<summary>
+        /// 域名来源。取值范围：
+        ///   system - 系统生成
+        ///   custom - 用户自建
+        /// 
         ///</summary>
         public   string Source{ get; set; }
         ///<summary>
@@ -58,11 +70,11 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   bool AsDefault{ get; set; }
         ///<summary>
-        /// CreateTime
+        /// 创建时间
         ///</summary>
         public   DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// UpdateTime
+        /// 修改时间
         ///</summary>
         public   DateTime? UpdateTime{ get; set; }
     }

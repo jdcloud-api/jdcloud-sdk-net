@@ -46,11 +46,13 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 分类级别
+        /// 分类级别。取值范围为 [0, 3]，取值为 0 时为虚拟根节点
+        /// 
         ///</summary>
         public   int? Level{ get; set; }
         ///<summary>
-        /// 父分类ID
+        /// 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+        /// 
         ///</summary>
         public   long? ParentId{ get; set; }
         ///<summary>

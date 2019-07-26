@@ -40,11 +40,11 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 规则id
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 实例id
         ///</summary>
-        public long? InstanceId{ get; set; }
+        public string InstanceId{ get; set; }
         ///<summary>
         /// TCP或UDP
         ///</summary>
@@ -64,7 +64,6 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 转发规则
         /// - wrr 带权重的轮询
-        /// - wlc 加权最小连接
         /// - rr  不带权重的轮询
         /// - sh  源地址hash
         /// 

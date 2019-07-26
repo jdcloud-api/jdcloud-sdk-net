@@ -39,17 +39,17 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// 筛选属性名
+        /// 过滤器属性名
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// 筛选操作符，默认eq
+        /// 过滤器操作符，默认值为 eq
         ///</summary>
         public string Operator{ get; set; }
         ///<summary>
-        /// 筛选值列表
+        /// 过滤器属性值
         ///Required:true
         ///</summary>
         [Required]

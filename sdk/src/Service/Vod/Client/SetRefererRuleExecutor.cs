@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  设置CDN域名Referer规则
+    ///  设置CDN域名Referer防盗链规则
     /// </summary>
     public class SetRefererRuleExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置CDN域名Referer规则接口的Http 请求方法
+        ///  设置CDN域名Referer防盗链规则接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  设置CDN域名Referer规则接口的Http资源请求路径
+        ///  设置CDN域名Referer防盗链规则接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

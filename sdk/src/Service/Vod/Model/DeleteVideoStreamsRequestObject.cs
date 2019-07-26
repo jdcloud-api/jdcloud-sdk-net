@@ -27,19 +27,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  deleteVideoStreamsRequestObject
+    ///  删除视频转码流请求
     /// </summary>
     public class DeleteVideoStreamsRequestObject
     {
 
         ///<summary>
         /// TaskIds
+        ///Required:true
         ///</summary>
+        [Required]
         public List<long?> TaskIds{ get; set; }
     }
 }

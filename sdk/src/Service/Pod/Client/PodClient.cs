@@ -159,27 +159,6 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询 secret 列表。&lt;br&gt; 
         /// 此接口支持分页查询，默认每页20条。
         /// 
@@ -266,6 +245,27 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询单个容器日志
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetContainerLogsResponse GetContainerLogs(GetContainerLogsRequest request) {
+            return  new GetContainerLogsExecutor().Client(this).Execute<GetContainerLogsResponse, GetContainerLogsResult, GetContainerLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个容器日志
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetContainerLogsResponse> GetContainerLogs(GetContainerLogsRequest request) {
+            return await new GetContainerLogsExecutor().Client(this).Execute<GetContainerLogsResponse, GetContainerLogsResult, GetContainerLogsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置TTY大小
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -306,29 +306,69 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  校验镜像与镜像仓库认证信息是否有效。&lt;br&gt;
-        /// 设置 image，如果 secret 不设置，使用 docker 官方镜像可以直接将 image 字段设置为镜像名称，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 同时设置 image 与 secret 时，需要保证该 secret 已经创建成功，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 如果不设置 image，则用于 check secret，需必传 serverAddress 路径，用户名密码可选。&lt;br&gt;
+        ///  修改 pod 的 名称 和 描述。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public VerifyImageAccessResponse VerifyImageAccess(VerifyImageAccessRequest request) {
-            return  new VerifyImageAccessExecutor().Client(this).Execute<VerifyImageAccessResponse, VerifyImageAccessResult, VerifyImageAccessRequest>(request);
+        public ModifyPodAttributeResponse ModifyPodAttribute(ModifyPodAttributeRequest request) {
+            return  new ModifyPodAttributeExecutor().Client(this).Execute<ModifyPodAttributeResponse, ModifyPodAttributeResult, ModifyPodAttributeRequest>(request);
         }
 #else
         /// <summary>
-        ///  校验镜像与镜像仓库认证信息是否有效。&lt;br&gt;
-        /// 设置 image，如果 secret 不设置，使用 docker 官方镜像可以直接将 image 字段设置为镜像名称，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 同时设置 image 与 secret 时，需要保证该 secret 已经创建成功，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 如果不设置 image，则用于 check secret，需必传 serverAddress 路径，用户名密码可选。&lt;br&gt;
+        ///  修改 pod 的 名称 和 描述。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<VerifyImageAccessResponse> VerifyImageAccess(VerifyImageAccessRequest request) {
-            return await new VerifyImageAccessExecutor().Client(this).Execute<VerifyImageAccessResponse, VerifyImageAccessResult, VerifyImageAccessRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyPodAttributeResponse> ModifyPodAttribute(ModifyPodAttributeRequest request) {
+            return await new ModifyPodAttributeExecutor().Client(this).Execute<ModifyPodAttributeResponse, ModifyPodAttributeResult, ModifyPodAttributeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        ///  [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeletePodResponse DeletePod(DeletePodRequest request) {
+            return  new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        ///  [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeletePodResponse> DeletePod(DeletePodRequest request) {
+            return await new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RebuildPodResponse RebuildPod(RebuildPodRequest request) {
+            return  new RebuildPodExecutor().Client(this).Execute<RebuildPodResponse, RebuildPodResult, RebuildPodRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RebuildPodResponse> RebuildPod(RebuildPodRequest request) {
+            return await new RebuildPodExecutor().Client(this).Execute<RebuildPodResponse, RebuildPodResult, RebuildPodRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -348,6 +388,31 @@ namespace JDCloudSDK.Pod.Client
         /// <returns>请求结果信息</returns>
         public async Task<ExecStartResponse> ExecStart(ExecStartRequest request) {
             return await new ExecStartExecutor().Client(this).Execute<ExecStartResponse, ExecStartResult, ExecStartRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  pod 绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一个 pod 只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
+            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  pod 绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+        /// 一个 pod 只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+        /// 如果是黑名单中的用户，会返回错误。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -417,21 +482,23 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询资源和绑定资源
+        ///  创建 exec
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SelectDetailListResponse SelectDetailList(SelectDetailListRequest request) {
-            return  new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request);
+        public ExecCreateResponse ExecCreate(ExecCreateRequest request) {
+            return  new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询资源和绑定资源
+        ///  创建 exec
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SelectDetailListResponse> SelectDetailList(SelectDetailListRequest request) {
-            return await new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request).ConfigureAwait(false);
+        public async Task<ExecCreateResponse> ExecCreate(ExecCreateRequest request) {
+            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -551,180 +618,6 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取 pod 中某个容器的详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DecribeContainerResponse DecribeContainer(DecribeContainerRequest request) {
-            return  new DecribeContainerExecutor().Client(this).Execute<DecribeContainerResponse, DecribeContainerResult, DecribeContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取 pod 中某个容器的详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DecribeContainerResponse> DecribeContainer(DecribeContainerRequest request) {
-            return await new DecribeContainerExecutor().Client(this).Execute<DecribeContainerResponse, DecribeContainerResult, DecribeContainerRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  podName 是否符合命名规范，以及查询指定 podName 区域内是否已经存在。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckPodNameResponse CheckPodName(CheckPodNameRequest request) {
-            return  new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  podName 是否符合命名规范，以及查询指定 podName 区域内是否已经存在。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckPodNameResponse> CheckPodName(CheckPodNameRequest request) {
-            return await new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个容器日志
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetContainerLogsResponse GetContainerLogs(GetContainerLogsRequest request) {
-            return  new GetContainerLogsExecutor().Client(this).Execute<GetContainerLogsResponse, GetContainerLogsResult, GetContainerLogsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个容器日志
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetContainerLogsResponse> GetContainerLogs(GetContainerLogsRequest request) {
-            return await new GetContainerLogsExecutor().Client(this).Execute<GetContainerLogsResponse, GetContainerLogsResult, GetContainerLogsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改 pod 的 名称 和 描述。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyPodAttributeResponse ModifyPodAttribute(ModifyPodAttributeRequest request) {
-            return  new ModifyPodAttributeExecutor().Client(this).Execute<ModifyPodAttributeResponse, ModifyPodAttributeResult, ModifyPodAttributeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改 pod 的 名称 和 描述。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyPodAttributeResponse> ModifyPodAttribute(ModifyPodAttributeRequest request) {
-            return await new ModifyPodAttributeExecutor().Client(this).Execute<ModifyPodAttributeResponse, ModifyPodAttributeResult, ModifyPodAttributeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-        /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        ///  [MFA enabled]
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeletePodResponse DeletePod(DeletePodRequest request) {
-            return  new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-        /// 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        ///  [MFA enabled]
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeletePodResponse> DeletePod(DeletePodRequest request) {
-            return await new DeletePodExecutor().Client(this).Execute<DeletePodResponse, DeletePodResult, DeletePodRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RebuildPodResponse RebuildPod(RebuildPodRequest request) {
-            return  new RebuildPodExecutor().Client(this).Execute<RebuildPodResponse, RebuildPodResult, RebuildPodRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RebuildPodResponse> RebuildPod(RebuildPodRequest request) {
-            return await new RebuildPodExecutor().Client(this).Execute<RebuildPodResponse, RebuildPodResult, RebuildPodRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  pod 绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
-        /// 一个 pod 只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        /// 如果是黑名单中的用户，会返回错误。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
-            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  pod 绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
-        /// 一个 pod 只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-        /// 如果是黑名单中的用户，会返回错误。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建 exec
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExecCreateResponse ExecCreate(ExecCreateRequest request) {
-            return  new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建 exec
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExecCreateResponse> ExecCreate(ExecCreateRequest request) {
-            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  停止处于运行状态的单个实例，处于任务执行中的 pod 无法启动。
         /// 
         /// </summary>
@@ -767,6 +660,25 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取 pod 中某个容器的详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DecribeContainerResponse DecribeContainer(DecribeContainerRequest request) {
+            return  new DecribeContainerExecutor().Client(this).Execute<DecribeContainerResponse, DecribeContainerResult, DecribeContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取 pod 中某个容器的详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DecribeContainerResponse> DecribeContainer(DecribeContainerRequest request) {
+            return await new DecribeContainerExecutor().Client(this).Execute<DecribeContainerResponse, DecribeContainerResult, DecribeContainerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除单个 secret
         /// 
         /// </summary>
@@ -784,6 +696,27 @@ namespace JDCloudSDK.Pod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
             return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  podName 是否符合命名规范，以及查询指定 podName 区域内是否已经存在。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckPodNameResponse CheckPodName(CheckPodNameRequest request) {
+            return  new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  podName 是否符合命名规范，以及查询指定 podName 区域内是否已经存在。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckPodNameResponse> CheckPodName(CheckPodNameRequest request) {
+            return await new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 

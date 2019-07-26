@@ -75,7 +75,7 @@ namespace JDCloudSDK.Antipro.Model
         ///</summary>
         public long? BalckHoleThreshold{ get; set; }
         ///<summary>
-        /// 绑定防护包 ID, 为 0 时表示未绑定防护包
+        /// 绑定防护包 ID, 为空字符时表示未绑定防护包
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>

@@ -38,12 +38,12 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeFwdGraphResult : JdcloudResult
     {
         ///<summary>
-        /// ForwardRecord
+        /// 转发流量列表
         ///</summary>
         public List<double?> ForwardRecord{ get; set; }
 
         ///<summary>
-        /// Time
+        /// 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///</summary>
         public List<string> Time{ get; set; }
 

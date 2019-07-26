@@ -105,7 +105,7 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public long DatagramRangeMax{ get; set; }
         ///<summary>
-        /// geo 拦截地域编码列表, 可设置编码列表由 describeGeoAreas 接口查询可得
+        /// geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
         ///</summary>
         public List<string> GeoBlackList{ get; set; }
     }

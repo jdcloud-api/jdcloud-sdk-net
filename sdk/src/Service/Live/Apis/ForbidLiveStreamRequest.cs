@@ -56,5 +56,9 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         [Required]
         public   string StreamName{ get; set; }
+        ///<summary>
+        /// 禁流时长,单位:s 0表示永久禁流;大于0为限时禁流,超过时长自动解禁
+        ///</summary>
+        public   long? ForbidTime{ get; set; }
     }
 }

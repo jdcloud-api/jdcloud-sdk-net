@@ -64,7 +64,7 @@ namespace  JDCloudSDK.Live.Apis
         public   string VideoCodec{ get; set; }
         ///<summary>
         /// 转码输出的码率值
-        /// - 取值范围: [1,15000]
+        /// - 取值范围: [128,15000]
         /// - 单位: kpbs
         /// 
         ///Required:true
@@ -81,7 +81,7 @@ namespace  JDCloudSDK.Live.Apis
         public   string VideoFrameRate{ get; set; }
         ///<summary>
         /// 转码输出视频宽度
-        /// - 取值: [128,3840]
+        /// - 取值: [128,4096]
         /// - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
         /// - 如果(width,height)都不设置，则按源流大小输出转码
         /// 
@@ -89,7 +89,7 @@ namespace  JDCloudSDK.Live.Apis
         public   int? Width{ get; set; }
         ///<summary>
         /// 转码输出视频高度
-        /// - 取值: [128,2160]
+        /// - 取值: [128,4096]
         /// - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
         /// - 如果(width,height)都不设置，则按源流大小输出转码
         /// 

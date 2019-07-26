@@ -3,9 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Authors>JDCloud API Gateway</Authors>
-        <Company>JDCloud.com</Company>
-        <Version>1.0.9.1</Version>
+        <Version>1.0.11.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>视频直播相关接口</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
@@ -14,8 +12,10 @@
         <PackageIconUrl>https://www.jdcloud.com/static/img/favicon.ico</PackageIconUrl>
         <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReleaseNotes>https://github.com/jdcloud-api/jdcloud-sdk-net/blob/master/sdk/src/Service/Live/ChangeLog.md</PackageReleaseNotes>
+        <PackageReleaseNotes>视频直播相关接口</PackageReleaseNotes>
         <PackageOutputPath>..\..\..\Release\nuget</PackageOutputPath>
+        <Authors>JDCloud API Gateway</Authors>
+        <Company>JDCloud.com</Company>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)|$(TargetFramework)'=='Debug|AnyCPU|netstandard2.0'">

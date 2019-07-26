@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  删除视频码流信息
+    ///  删除视频转码流
     /// </summary>
     public class DeleteVideoStreamsResponse : JdcloudResponse<DeleteVideoStreamsResult>
     {

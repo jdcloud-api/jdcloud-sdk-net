@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询CDN域名URL规则
+    ///  查询CDN域名URL鉴权规则配置
     /// </summary>
     public class GetURLRuleRequest : JdcloudRequest
     {

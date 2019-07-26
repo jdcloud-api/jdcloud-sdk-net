@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Pod.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Pod.Model
@@ -84,7 +83,7 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        /// pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+        /// pod内容器的/etc/resolv.conf配置
         ///</summary>
         public DnsConfig DnsConfig{ get; set; }
         ///<summary>

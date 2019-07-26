@@ -38,17 +38,17 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeDDoSGraphResult : JdcloudResult
     {
         ///<summary>
-        /// PreProtect
+        /// 防护前 DDoS 流量
         ///</summary>
         public List<double?> PreProtect{ get; set; }
 
         ///<summary>
-        /// PostProtect
+        /// 防护后 DDoS 流量
         ///</summary>
         public List<double?> PostProtect{ get; set; }
 
         ///<summary>
-        /// Time
+        /// 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///</summary>
         public List<string> Time{ get; set; }
 

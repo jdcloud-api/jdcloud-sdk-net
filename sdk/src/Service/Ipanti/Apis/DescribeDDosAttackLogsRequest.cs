@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询 DDos 攻击日志
+    ///  查询 DDoS 攻击日志
     /// </summary>
     public class DescribeDDoSAttackLogsRequest : JdcloudRequest
     {
@@ -61,10 +61,10 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///<summary>
         /// 高防实例 ID
         ///</summary>
-        public List<long?> InstanceId{ get; set; }
+        public List<string> InstanceId{ get; set; }
 
         ///<summary>
-        /// 区域 Id
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

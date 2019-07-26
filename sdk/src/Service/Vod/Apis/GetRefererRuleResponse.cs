@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询CDN域名Referer规则
+    ///  查询CDN域名Referer防盗链规则配置
     /// </summary>
     public class GetRefererRuleResponse : JdcloudResponse<GetRefererRuleResult>
     {

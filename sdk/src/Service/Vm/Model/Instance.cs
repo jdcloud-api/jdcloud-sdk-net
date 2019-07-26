@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Charge.Model;
 using JDCloudSDK.Disk.Model;
 

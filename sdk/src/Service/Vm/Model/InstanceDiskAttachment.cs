@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Disk.Model;
 
 namespace JDCloudSDK.Vm.Model

@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询CDN域名Referer规则
+    ///  查询CDN域名Referer防盗链规则配置
     /// </summary>
     public class GetRefererRuleResult : JdcloudResult
     {
@@ -43,9 +43,9 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string RuleType{ get; set; }
         ///<summary>
-        /// 规则配置对象
+        /// Referer防盗链规则配置对象
         ///</summary>
-        public   Config Config{ get; set; }
+        public   RefererRuleConfigObject Config{ get; set; }
         ///<summary>
         /// 是否启用该规则
         ///</summary>

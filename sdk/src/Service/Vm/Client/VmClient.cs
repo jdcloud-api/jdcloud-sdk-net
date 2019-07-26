@@ -376,27 +376,6 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改配额，此接口为内部接口，支持：云主机、镜像、密钥、模板
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改配额，此接口为内部接口，支持：云主机、镜像、密钥、模板
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
         /// 
         /// </summary>
@@ -827,29 +806,6 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  内部接口。&lt;br&gt;
-        /// 镜像转换，只支持镜像从localDisk转换到cloudDisk类型，只允许操作您的个人私有镜像。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ConvertImageResponse ConvertImage(ConvertImageRequest request) {
-            return  new ConvertImageExecutor().Client(this).Execute<ConvertImageResponse, ConvertImageResult, ConvertImageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  内部接口。&lt;br&gt;
-        /// 镜像转换，只支持镜像从localDisk转换到cloudDisk类型，只允许操作您的个人私有镜像。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ConvertImageResponse> ConvertImage(ConvertImageRequest request) {
-            return await new ConvertImageExecutor().Client(this).Execute<ConvertImageResponse, ConvertImageResult, ConvertImageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除ssh密钥对。
         /// 
         /// </summary>
@@ -1154,6 +1110,27 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询镜像导入任务详情
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImageTasksResponse ImageTasks(ImageTasksRequest request) {
+            return  new ImageTasksExecutor().Client(this).Execute<ImageTasksResponse, ImageTasksResult, ImageTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询镜像导入任务详情
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImageTasksResponse> ImageTasks(ImageTasksRequest request) {
+            return await new ImageTasksExecutor().Client(this).Execute<ImageTasksResponse, ImageTasksResult, ImageTasksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  批量查询云主机状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1213,6 +1190,27 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DetachDiskResponse> DetachDisk(DetachDiskRequest request) {
             return await new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导入镜像，将外部镜像导入到京东云中
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImportImageResponse ImportImage(ImportImageRequest request) {
+            return  new ImportImageExecutor().Client(this).Execute<ImportImageResponse, ImportImageResult, ImportImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导入镜像，将外部镜像导入到京东云中
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImportImageResponse> ImportImage(ImportImageRequest request) {
+            return await new ImportImageExecutor().Client(this).Execute<ImportImageResponse, ImportImageResult, ImportImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1305,27 +1303,6 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<VerifyInstanceTemplateResponse> VerifyInstanceTemplate(VerifyInstanceTemplateRequest request) {
             return await new VerifyInstanceTemplateExecutor().Client(this).Execute<VerifyInstanceTemplateResponse, VerifyInstanceTemplateResult, VerifyInstanceTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户本地系统盘大小配置。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserLocalSysDiskResponse DescribeUserLocalSysDisk(DescribeUserLocalSysDiskRequest request) {
-            return  new DescribeUserLocalSysDiskExecutor().Client(this).Execute<DescribeUserLocalSysDiskResponse, DescribeUserLocalSysDiskResult, DescribeUserLocalSysDiskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户本地系统盘大小配置。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserLocalSysDiskResponse> DescribeUserLocalSysDisk(DescribeUserLocalSysDiskRequest request) {
-            return await new DescribeUserLocalSysDiskExecutor().Client(this).Execute<DescribeUserLocalSysDiskResponse, DescribeUserLocalSysDiskResult, DescribeUserLocalSysDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 

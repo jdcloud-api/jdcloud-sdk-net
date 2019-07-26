@@ -38,11 +38,11 @@ namespace  JDCloudSDK.Vod.Apis
     public class ListWatermarksRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认值为1
+        /// 页码；默认值为 1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认值为10；取值范围[10, 100]
+        /// 分页大小；默认值为 10；取值范围 [10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
     }

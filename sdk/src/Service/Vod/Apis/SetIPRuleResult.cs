@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  设置CDN域名IP规则
+    ///  设置CDN域名IP黑名单规则
     /// </summary>
     public class SetIPRuleResult : JdcloudResult
     {

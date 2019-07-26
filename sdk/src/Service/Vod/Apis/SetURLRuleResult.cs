@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  设置CDN域名URL规则
+    ///  设置CDN域名URL鉴权规则
     /// </summary>
     public class SetURLRuleResult : JdcloudResult
     {

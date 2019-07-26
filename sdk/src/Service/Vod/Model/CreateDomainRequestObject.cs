@@ -27,19 +27,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  创建域名请求信息
+    ///  创建域名请求
     /// </summary>
     public class CreateDomainRequestObject
     {
 
         ///<summary>
         /// 域名名称
+        ///Required:true
         ///</summary>
+        [Required]
         public string Name{ get; set; }
     }
 }

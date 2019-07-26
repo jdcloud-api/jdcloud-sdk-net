@@ -53,16 +53,16 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///<summary>
         /// 高防实例 ID
         ///</summary>
-        public List<long?> InstanceId{ get; set; }
+        public List<string> InstanceId{ get; set; }
 
         ///<summary>
-        /// 攻击类型, 0 为 DDos, 1 为 CC
+        /// 攻击类型, 0 为 DDoS, 1 为 CC
         ///Required:true
         ///</summary>
         [Required]
         public   int Type{ get; set; }
         ///<summary>
-        /// 区域 Id
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

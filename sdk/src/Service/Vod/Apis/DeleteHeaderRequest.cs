@@ -39,12 +39,24 @@ namespace  JDCloudSDK.Vod.Apis
     public class DeleteHeaderRequest : JdcloudRequest
     {
         ///<summary>
-        /// 头参数名
+        /// 头参数名。当前支持的访问头参数取值范围：
+        ///   Content-Disposition
+        ///   Content-Language
+        ///   Expires
+        ///   Access-Control-Allow-Origin
+        ///   Access-Control-Allow-Methods
+        ///   Access-Control-Max-Age
+        ///   Access-Control-Expose-Headers
+        /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public   string HeaderName{ get; set; }
         ///<summary>
-        /// 头参数类型
+        /// 头参数类型，取值范围：req、resp
+        ///Required:true
         ///</summary>
+        [Required]
         public   string HeaderType{ get; set; }
         ///<summary>
         /// 域名ID

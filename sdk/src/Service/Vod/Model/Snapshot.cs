@@ -46,11 +46,11 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string ImgUrl{ get; set; }
         ///<summary>
-        /// 宽度
+        /// 截图宽度
         ///</summary>
         public int? Width{ get; set; }
         ///<summary>
-        /// 高度
+        /// 截图高度
         ///</summary>
         public int? Height{ get; set; }
     }

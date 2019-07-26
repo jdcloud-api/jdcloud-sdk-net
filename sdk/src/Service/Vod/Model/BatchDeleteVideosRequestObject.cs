@@ -27,19 +27,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  batchDeleteVideosRequestObject
+    ///  批量删除视频请求
     /// </summary>
     public class BatchDeleteVideosRequestObject
     {
 
         ///<summary>
-        /// 需要删除的视频ID列表
+        /// 视频ID集合
+        ///Required:true
         ///</summary>
+        [Required]
         public List<string> VideoIds{ get; set; }
     }
 }

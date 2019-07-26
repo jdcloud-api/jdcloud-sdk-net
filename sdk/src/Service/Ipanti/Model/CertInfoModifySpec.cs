@@ -43,7 +43,7 @@ namespace JDCloudSDK.Ipanti.Model
         /// - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
         /// 
         ///</summary>
-        public long? CertId{ get; set; }
+        public string CertId{ get; set; }
         ///<summary>
         /// 证书内容
         ///</summary>

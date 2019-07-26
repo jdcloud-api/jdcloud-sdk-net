@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+    ///  批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
     /// </summary>
     public class BatchDeleteVideosExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息接口的Http 请求方法
+        ///  批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息接口的Http资源请求路径
+        ///  批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -34,7 +34,9 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询 CC 攻击日志详情
+    ///  查询 CC 攻击日志详情.
+        ///         /// - 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+        ///         /// 
     /// </summary>
     public class DescribeCCAttackLogDetailsRequest : JdcloudRequest
     {
@@ -60,17 +62,19 @@ namespace  JDCloudSDK.Ipanti.Apis
         public   string EndTime{ get; set; }
         ///<summary>
         /// 高防实例 ID
-        ///Required:true
         ///</summary>
-        [Required]
-        public   long InstanceId{ get; set; }
+        public   string InstanceId{ get; set; }
         ///<summary>
-        /// 子域名
+        /// 查询的子域名，只有选中某一个实例后才能多选子域名
         ///</summary>
         public List<string> SubDomain{ get; set; }
 
         ///<summary>
-        /// 区域 Id
+        /// CC 攻击记录Id
+        ///</summary>
+        public   string AttackId{ get; set; }
+        ///<summary>
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]

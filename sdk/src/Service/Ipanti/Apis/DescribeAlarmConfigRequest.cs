@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeAlarmConfigRequest : JdcloudRequest
     {
         ///<summary>
-        /// Region ID
+        /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>
         [Required]
@@ -49,6 +49,6 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   long InstanceId{ get; set; }
+        public   string InstanceId{ get; set; }
     }
 }

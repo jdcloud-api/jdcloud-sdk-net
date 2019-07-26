@@ -47,15 +47,20 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string ImgUrl{ get; set; }
         ///<summary>
-        /// 宽度
+        /// 水印宽度
         ///</summary>
-        public   string Width{ get; set; }
+        public   int? Width{ get; set; }
         ///<summary>
-        /// 高度
+        /// 水印高度
         ///</summary>
-        public   string Height{ get; set; }
+        public   int? Height{ get; set; }
         ///<summary>
-        /// 水印位置
+        /// 水印位置。取值范围：
+        ///   LT - 左上
+        ///   RT - 右上
+        ///   LB - 左下
+        ///   RB - 右下
+        /// 
         ///</summary>
         public   string Position{ get; set; }
         ///<summary>

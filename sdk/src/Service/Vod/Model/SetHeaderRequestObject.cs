@@ -27,27 +27,42 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vod.Model
 {
 
     /// <summary>
-    ///  设置域名头参数请求消息体
+    ///  设置域名头参数请求
     /// </summary>
     public class SetHeaderRequestObject
     {
 
         ///<summary>
-        /// 头参数名
+        /// 头参数名。当前支持的访问头参数取值范围：
+        ///   Content-Disposition
+        ///   Content-Language
+        ///   Expires
+        ///   Access-Control-Allow-Origin
+        ///   Access-Control-Allow-Methods
+        ///   Access-Control-Max-Age
+        ///   Access-Control-Expose-Headers
+        /// 
+        ///Required:true
         ///</summary>
+        [Required]
         public string HeaderName{ get; set; }
         ///<summary>
         /// 头参数值
+        ///Required:true
         ///</summary>
+        [Required]
         public string HeaderValue{ get; set; }
         ///<summary>
-        /// 头参数类型
+        /// 头参数类型，取值范围：req、resp
+        ///Required:true
         ///</summary>
+        [Required]
         public string HeaderType{ get; set; }
     }
 }

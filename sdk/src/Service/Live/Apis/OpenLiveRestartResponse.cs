@@ -34,6 +34,11 @@ namespace  JDCloudSDK.Live.Apis
 
     /// <summary>
     ///  开启回看
+        ///         /// 1、直播回看文件格式仅支持m3u8。
+        ///         /// 2、回看时长用户可以配置，最大支持7天，即用户请求回看内容，最多可以请求最近7天的直播回看内容。
+        ///         /// 3、域名格式：http://{restartDomain}/{appName}/{streamName}/index.m3u8?starttime&#x3D;1527756680&amp;endtime&#x3D;1527760280 (unix时间戳)
+        ///         /// 4、starttime-endtime最长可支持24小时，可跨天
+        ///         /// 
     /// </summary>
     public class OpenLiveRestartResponse : JdcloudResponse<OpenLiveRestartResult>
     {

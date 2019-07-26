@@ -32,9 +32,9 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    ///  dDosAttackLog
+    ///  dDoSAttackLog
     /// </summary>
-    public class DDosAttackLog
+    public class DDoSAttackLog
     {
 
         ///<summary>
@@ -60,7 +60,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// 高防实例id
         ///</summary>
-        public long? InstanceId{ get; set; }
+        public string InstanceId{ get; set; }
         ///<summary>
         /// 高防实例名称
         ///</summary>

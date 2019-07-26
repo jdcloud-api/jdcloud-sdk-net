@@ -39,9 +39,9 @@ namespace  JDCloudSDK.Vod.Apis
     public class BatchSubmitTranscodeJobsRequest : JdcloudRequest
     {
         ///<summary>
-        /// Jobs
+        /// BulkItems
         ///</summary>
-        public List<SubmitTranscodeJobRequestObject> Jobs{ get; set; }
+        public List<SubmitTranscodeJobRequestObject> BulkItems{ get; set; }
 
     }
 }

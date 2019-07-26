@@ -43,7 +43,8 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 父分类ID
+        /// 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+        /// 
         ///</summary>
         public   long? ParentId{ get; set; }
         ///<summary>

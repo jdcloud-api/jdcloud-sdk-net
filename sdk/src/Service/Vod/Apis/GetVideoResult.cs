@@ -55,15 +55,20 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string CoverUrl{ get; set; }
         ///<summary>
-        /// 视频状态
+        /// 视频状态。取值范围：
+        ///   transcoding - 转码中
+        ///   transcode_failed - 转码失败
+        ///   normal - 正常
+        ///   uploaded - 上传完成（未转码）
+        /// 
         ///</summary>
         public   string Status{ get; set; }
         ///<summary>
-        /// 文件大小，单位字节
+        /// 文件大小，单位为 Byte
         ///</summary>
         public   long? FileSize{ get; set; }
         ///<summary>
-        /// 文件校验和
+        /// 文件MD5校验和
         ///</summary>
         public   string Checksum{ get; set; }
         ///<summary>
@@ -71,7 +76,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   long? Duration{ get; set; }
         ///<summary>
-        /// 标签
+        /// 标签集合
         ///</summary>
         public List<string> Tags{ get; set; }
 
@@ -84,7 +89,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string CategoryName{ get; set; }
         ///<summary>
-        /// Snapshots
+        /// 转码截图
         ///</summary>
         public List<Snapshot> Snapshots{ get; set; }
 

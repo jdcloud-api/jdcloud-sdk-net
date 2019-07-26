@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Redis.Apis
     public class DescribeCacheInstancesResult : JdcloudResult
     {
         ///<summary>
-        /// CacheInstances
+        /// 分页后的实例列表
         ///</summary>
         public List<CacheInstance> CacheInstances{ get; set; }
 

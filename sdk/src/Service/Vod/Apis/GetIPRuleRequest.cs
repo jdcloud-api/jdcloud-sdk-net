@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询CDN域名IP规则
+    ///  查询CDN域名IP黑名单规则配置
     /// </summary>
     public class GetIPRuleRequest : JdcloudRequest
     {

@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Antipro.Model;
 
 namespace JDCloudSDK.Antipro.Model
 {

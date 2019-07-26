@@ -34,14 +34,14 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  查询 DDos 攻击日志
+    ///  查询 DDoS 攻击日志
     /// </summary>
     public class DescribeDDoSAttackLogsResult : JdcloudResult
     {
         ///<summary>
         /// DataList
         ///</summary>
-        public List<DDosAttackLog> DataList{ get; set; }
+        public List<DDoSAttackLog> DataList{ get; set; }
 
         ///<summary>
         /// 当前页数量

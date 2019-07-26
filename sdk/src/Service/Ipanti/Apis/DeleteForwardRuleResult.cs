@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  删除非网站规则
+    ///  删除非网站规则, 批量操作时, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
     /// </summary>
     public class DeleteForwardRuleResult : JdcloudResult
     {

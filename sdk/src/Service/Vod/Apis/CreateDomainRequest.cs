@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vod.Apis
 {
@@ -39,7 +40,9 @@ namespace  JDCloudSDK.Vod.Apis
     {
         ///<summary>
         /// 域名名称
+        ///Required:true
         ///</summary>
+        [Required]
         public   string Name{ get; set; }
     }
 }

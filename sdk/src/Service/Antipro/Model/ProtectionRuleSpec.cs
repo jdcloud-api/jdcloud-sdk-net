@@ -83,7 +83,16 @@ namespace JDCloudSDK.Antipro.Model
         public long? DatagramRangeMax{ get; set; }
         ///<summary>
         /// geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
+        /// 
         ///</summary>
         public List<string> GeoBlackList{ get; set; }
+        ///<summary>
+        /// IP 黑名单列表
+        ///</summary>
+        public List<string> IpBlackList{ get; set; }
+        ///<summary>
+        /// IP 白名单列表
+        ///</summary>
+        public List<string> IpWhiteList{ get; set; }
     }
 }

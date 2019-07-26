@@ -40,15 +40,15 @@ namespace JDCloudSDK.Ipanti.Model
         ///<summary>
         /// CC 防护规则 ID
         ///</summary>
-        public long? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// CC 防护规则对应的网站规则 ID
         ///</summary>
-        public long? WebRuleId{ get; set; }
+        public string WebRuleId{ get; set; }
         ///<summary>
         /// CC 防护规则对应的实例 ID
         ///</summary>
-        public long? InstanceId{ get; set; }
+        public string InstanceId{ get; set; }
         ///<summary>
         /// CC 防护规则名称, 30 字符以内
         ///</summary>
@@ -78,7 +78,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? BlockType{ get; set; }
         ///<summary>
-        /// 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+        /// 阻断持续时间, 单位为秒, 取值范围[10, 86400]
         ///</summary>
         public long? BlockTime{ get; set; }
     }

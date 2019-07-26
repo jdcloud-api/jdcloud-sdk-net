@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// Tasks
         ///</summary>
-        public List<TranscodeTask> Tasks{ get; set; }
+        public List<SubmittedTranscodeTask> Tasks{ get; set; }
 
     }
 }

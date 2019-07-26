@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Antipro.Model;
 
 namespace JDCloudSDK.Antipro.Model
 {
@@ -82,5 +81,13 @@ namespace JDCloudSDK.Antipro.Model
         /// geo 拦截地域列表
         ///</summary>
         public List<GeoBlack> GeoBlackList{ get; set; }
+        ///<summary>
+        /// IP 黑名单列表
+        ///</summary>
+        public List<string> IpBlackList{ get; set; }
+        ///<summary>
+        /// IP 白名单列表
+        ///</summary>
+        public List<string> IpWhiteList{ get; set; }
     }
 }

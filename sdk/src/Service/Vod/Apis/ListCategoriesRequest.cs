@@ -34,16 +34,17 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询分类列表
+    ///  查询分类列表，按照分页方式，返回分类列表信息
+        ///         /// 
     /// </summary>
     public class ListCategoriesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认值为1
+        /// 页码；默认值为 1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认值为10；取值范围[10, 100]
+        /// 分页大小；默认值为 10；取值范围 [10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

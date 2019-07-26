@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  删除视频码流信息
+    ///  删除视频转码流
     /// </summary>
     public class DeleteVideoStreamsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除视频码流信息接口的Http 请求方法
+        ///  删除视频转码流接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  删除视频码流信息接口的Http资源请求路径
+        ///  删除视频转码流接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
