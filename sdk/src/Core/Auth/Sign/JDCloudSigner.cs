@@ -346,7 +346,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             try
             {
                 byte[] content = requestModel.Content;
-                if (content != null && content.Length>0)
+                if (content == null || content.Length<=0)
                 {
                     content = new byte[0];
                 }
