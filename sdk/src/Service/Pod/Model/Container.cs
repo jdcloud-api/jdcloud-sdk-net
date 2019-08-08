@@ -32,7 +32,7 @@ namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  container 详情
+    ///  容器详情
     /// </summary>
     public class Container
     {
@@ -42,49 +42,49 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+        /// 容器执行的命令。
         ///</summary>
         public List<string> Command{ get; set; }
         ///<summary>
-        /// 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+        /// 容器执行命令的参数。
         ///</summary>
         public List<string> Args{ get; set; }
         ///<summary>
-        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+        /// 容器执行的环境变量。
         ///</summary>
-        public List<EnvSpec> Env{ get; set; }
+        public List<Env> Env{ get; set; }
         ///<summary>
-        /// 镜像名称 &lt;/br&gt; 容器镜像名字。 nginx:latest。长度范围：[1-500] 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
+        /// 容器镜像名称。
         ///</summary>
         public string Image{ get; set; }
         ///<summary>
-        /// 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+        /// 容器镜像仓库认证信息。
         ///</summary>
         public string Secret{ get; set; }
         ///<summary>
-        /// 容器是否分配tty。默认不分配
+        /// 容器是否分配tty。
         ///</summary>
         public bool Tty{ get; set; }
         ///<summary>
-        /// 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
+        /// 容器的工作目录。
         ///</summary>
         public string WorkingDir{ get; set; }
         ///<summary>
         /// 容器存活探针配置
         ///</summary>
-        public ProbeSpec LivenessProbe{ get; set; }
+        public Probe LivenessProbe{ get; set; }
         ///<summary>
         /// 容器服务就绪探针配置
         ///</summary>
-        public ProbeSpec ReadinessProbe{ get; set; }
+        public Probe ReadinessProbe{ get; set; }
         ///<summary>
         /// 容器计算资源配置
         ///</summary>
-        public ResourceRequestsSpec Resources{ get; set; }
+        public ResourceRequests Resources{ get; set; }
         ///<summary>
         /// 容器计算资源配置
         ///</summary>
-        public CloudDiskSpec SystemDisk{ get; set; }
+        public CloudDisk SystemDisk{ get; set; }
         ///<summary>
         /// 容器计算资源配置
         ///</summary>

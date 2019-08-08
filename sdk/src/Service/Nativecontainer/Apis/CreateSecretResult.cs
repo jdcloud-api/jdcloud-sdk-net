@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Nativecontainer.Apis
 {
 
     /// <summary>
-    ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+    ///  创建一个 secret，用于存放镜像仓库认证信息。
         ///         /// 
     /// </summary>
     public class CreateSecretResult : JdcloudResult

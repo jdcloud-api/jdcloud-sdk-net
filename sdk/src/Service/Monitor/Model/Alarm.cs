@@ -70,6 +70,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string MetricName{ get; set; }
         ///<summary>
+        /// NoticeLevel
+        ///</summary>
+        public NoticeLevel NoticeLevel{ get; set; }
+        ///<summary>
         /// 通知周期 单位：小时
         ///</summary>
         public long? NoticePeriod{ get; set; }
@@ -94,6 +98,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
+        /// 规则名称
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 报警规则对应的产品
         ///</summary>
         public string ServiceCode{ get; set; }
@@ -117,5 +125,21 @@ namespace JDCloudSDK.Monitor.Model
         /// 报警值
         ///</summary>
         public double? Value{ get; set; }
+        ///<summary>
+        /// 回调content
+        ///</summary>
+        public string WebHookContent{ get; set; }
+        ///<summary>
+        /// webHook协议
+        ///</summary>
+        public string WebHookProtocol{ get; set; }
+        ///<summary>
+        /// 回调secret，用户请求签名，防伪造
+        ///</summary>
+        public string WebHookSecret{ get; set; }
+        ///<summary>
+        /// 回调url
+        ///</summary>
+        public string WebHookUrl{ get; set; }
     }
 }

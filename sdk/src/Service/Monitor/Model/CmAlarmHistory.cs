@@ -118,6 +118,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public long? RuleId{ get; set; }
         ///<summary>
+        /// 规则名称
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 报警规则对应的产品
         ///</summary>
         public string ServiceCode{ get; set; }

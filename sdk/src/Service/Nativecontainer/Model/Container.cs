@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Nativecontainer.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model
@@ -84,7 +83,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public string Image{ get; set; }
         ///<summary>
-        /// secret引用的名称
+        /// 镜像仓库认证信息名称
         ///</summary>
         public string Secret{ get; set; }
         ///<summary>

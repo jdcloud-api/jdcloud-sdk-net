@@ -34,13 +34,13 @@ namespace JDCloudSDK.Nativecontainer.Model
 {
 
     /// <summary>
-    ///  磁盘分类  cloud： 基于云硬盘的卷  root volume只能是cloud类型
+    ///  指定挂载的Volume
     /// </summary>
     public class VolumeMountSpec
     {
 
         ///<summary>
-        /// 磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型
+        /// 磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型
         ///Required:true
         ///</summary>
         [Required]
@@ -62,7 +62,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public DiskSpec CloudDiskSpec{ get; set; }
         ///<summary>
-        /// 云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType
+        /// 云硬盘ID，使用已有的云硬盘，必须同时指定fsType
         ///</summary>
         public string CloudDiskId{ get; set; }
         ///<summary>

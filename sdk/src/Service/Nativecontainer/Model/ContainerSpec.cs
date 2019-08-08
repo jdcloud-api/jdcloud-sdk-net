@@ -28,14 +28,13 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
-using JDCloudSDK.Nativecontainer.Model;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model
 {
 
     /// <summary>
-    ///  指定挂载的Volume
+    ///  容器规格
     /// </summary>
     public class ContainerSpec
     {
@@ -61,7 +60,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///<summary>
         /// 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
         ///</summary>
-        public List<HostAlias> HostAliases{ get; set; }
+        public List<HostAliasSpec> HostAliases{ get; set; }
         ///<summary>
         /// 主机名，规范请参考说明文档；默认容器ID
         ///</summary>
@@ -75,17 +74,17 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public List<string> Args{ get; set; }
         ///<summary>
-        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
         ///</summary>
         public List<EnvVar> Envs{ get; set; }
         ///<summary>
-        /// 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+        /// 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
         ///Required:true
         ///</summary>
         [Required]
         public string Image{ get; set; }
         ///<summary>
-        /// secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+        /// 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
         ///</summary>
         public string Secret{ get; set; }
         ///<summary>

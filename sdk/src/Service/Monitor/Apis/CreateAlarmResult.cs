@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Monitor.Apis
     public class CreateAlarmResult : JdcloudResult
     {
         ///<summary>
-        /// AlarmIdList
+        /// 创建成功的规则id列表
         ///</summary>
         public List<string> AlarmIdList{ get; set; }
 

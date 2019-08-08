@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
-using JDCloudSDK.Nativecontainer.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model
 {

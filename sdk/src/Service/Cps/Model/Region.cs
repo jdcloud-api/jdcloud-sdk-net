@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 
 using Newtonsoft.Json;
-using JDCloudSDK.Cps.Model;
 
 namespace JDCloudSDK.Cps.Model
 {

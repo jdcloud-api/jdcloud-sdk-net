@@ -68,6 +68,6 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// Tags
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
     }
 }

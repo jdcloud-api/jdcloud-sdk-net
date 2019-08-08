@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器
+    ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
     /// </summary>
     public class StopInstanceResponse : JdcloudResponse<StopInstanceResult>
     {

@@ -39,14 +39,6 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
-        ///</summary>
-        public string Address{ get; set; }
-        ///<summary>
-        /// 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-        ///</summary>
-        public long? Frequency{ get; set; }
-        ///<summary>
         /// http body：选择探测类型为1&#x3D;http时有效，最长不超过1024字节
         ///</summary>
         public string HttpBody{ get; set; }
@@ -59,30 +51,18 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public List<KeyValue> HttpHeader{ get; set; }
         ///<summary>
+        /// http探测方法,可选值：1:get、2:post、3:head
+        ///</summary>
+        public long? HttpType{ get; set; }
+        ///<summary>
         /// task名称，不允许重复，长度不超过32字符，只允许中英文、数字、下划线_、中划线-, [0-9][a-z] [A-Z] [- _ ]
         ///</summary>
         public string Name{ get; set; }
-        ///<summary>
-        /// 探测端口，探测类型为telnet时必填，取值范围 [1-65535]，http类型忽略该参数
-        ///</summary>
-        public long? Port{ get; set; }
         ///<summary>
         /// 探测源（发起对探测目标探测的云主机，需安装相应的agent才能探测）
         ///Required:true
         ///</summary>
         [Required]
         public List<Probe> Probes{ get; set; }
-        ///<summary>
-        /// 探测目标id：该探测对象的uuid，任务类型为2：rds、3：redis时必填，
-        ///</summary>
-        public string TargetId{ get; set; }
-        ///<summary>
-        /// 探测目标region：该探测对象所在region，任务类型为2：rds、3：redis时必填
-        ///</summary>
-        public string TargetRegion{ get; set; }
-        ///<summary>
-        /// 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-        ///</summary>
-        public long? Timeout{ get; set; }
     }
 }

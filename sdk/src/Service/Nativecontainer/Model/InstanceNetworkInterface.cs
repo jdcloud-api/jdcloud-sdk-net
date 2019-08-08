@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Nativecontainer.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model
 {
@@ -50,6 +49,10 @@ namespace JDCloudSDK.Nativecontainer.Model
         /// 虚拟网络ID
         ///</summary>
         public string VpcId{ get; set; }
+        ///<summary>
+        /// 子网ID
+        ///</summary>
+        public string SubnetId{ get; set; }
         ///<summary>
         /// 描述
         ///</summary>

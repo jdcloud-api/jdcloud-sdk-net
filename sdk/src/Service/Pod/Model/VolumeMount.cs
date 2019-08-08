@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,19 +38,15 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 必须使用pod volume名称
-        ///Required:true
+        /// 挂载的云盘在pod中的名称。
         ///</summary>
-        [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
-        ///Required:true
+        /// 容器内挂载点。
         ///</summary>
-        [Required]
         public string MountPath{ get; set; }
         ///<summary>
-        /// 是否以只读方式挂载。默认 读写模式
+        /// 是否以只读方式挂载。
         ///</summary>
         public bool ReadOnly{ get; set; }
     }

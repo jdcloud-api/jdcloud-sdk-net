@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Nativecontainer.Model
 {
@@ -40,15 +39,11 @@ namespace JDCloudSDK.Nativecontainer.Model
 
         ///<summary>
         /// 域名列表
-        ///Required:true
         ///</summary>
-        [Required]
         public List<string> Hostnames{ get; set; }
         ///<summary>
         /// IP地址
-        ///Required:true
         ///</summary>
-        [Required]
         public string Ip{ get; set; }
     }
 }

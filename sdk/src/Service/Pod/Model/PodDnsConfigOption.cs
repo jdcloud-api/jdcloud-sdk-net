@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -40,9 +39,7 @@ namespace JDCloudSDK.Pod.Model
 
         ///<summary>
         /// 长度范围：[1-63]，需满足linux resolver限制
-        ///Required:true
         ///</summary>
-        [Required]
         public string Name{ get; set; }
         ///<summary>
         /// 长度范围：[0-100]，仅限timeout, attempts, ndots

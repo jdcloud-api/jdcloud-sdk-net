@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Pod.Apis
 {
 
     /// <summary>
-    ///  修改 pod 的 名称 和 描述。
+    ///  修改 pod 的描述。
         ///         /// 
     /// </summary>
     public class ModifyPodAttributeResult : JdcloudResult

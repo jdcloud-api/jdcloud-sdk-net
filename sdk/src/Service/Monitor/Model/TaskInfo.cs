@@ -46,6 +46,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Address{ get; set; }
         ///<summary>
+        /// 该task状态[true:被删除]
+        ///</summary>
+        public bool Deleted{ get; set; }
+        ///<summary>
         /// 任务状态[false：己禁用，true：己启用]
         ///</summary>
         public bool Enabled{ get; set; }

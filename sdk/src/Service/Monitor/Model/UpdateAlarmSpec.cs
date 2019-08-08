@@ -53,7 +53,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string WebHookContent{ get; set; }
         ///<summary>
-        /// webHook协议
+        /// webHook协议，目前支持http，https
         ///</summary>
         public string WebHookProtocol{ get; set; }
         ///<summary>
@@ -61,7 +61,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string WebHookSecret{ get; set; }
         ///<summary>
-        /// 回调url
+        /// 回调url，例如http://www.jdcloud.com
         ///</summary>
         public string WebHookUrl{ get; set; }
     }

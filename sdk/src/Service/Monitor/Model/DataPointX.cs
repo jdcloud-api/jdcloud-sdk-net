@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 数据维度，数据类型为map类型，最多五个标签，尽量不传或少传。总长度不大于255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 秒级时间戳，早于当前时间30天的不能写入；建议的上报时间戳：上报时间间隔的整数倍，如上报间隔为5s，则建议上报的时间戳为 timestamp &#x3D; current timestamp - (current timestamp % time interval) &#x3D; 1487647187 - （1487647187 % 5） &#x3D; 1487647187 -2 &#x3D; 1487647185
         ///Required:true

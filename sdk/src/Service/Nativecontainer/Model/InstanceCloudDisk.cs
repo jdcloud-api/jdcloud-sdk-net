@@ -54,7 +54,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 磁盘类型，取值为 ssd, premium-hdd 之一
+        /// 磁盘类型
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>

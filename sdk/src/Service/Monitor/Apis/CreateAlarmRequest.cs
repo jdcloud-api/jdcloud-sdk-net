@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Monitor.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Monitor.Apis
 {
@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Monitor.Apis
         [Required]
         public   CreateAlarmParam CreateAlarmSpec{ get; set; }
         ///<summary>
-        /// 地域 Id
+        /// 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
         ///Required:true
         ///</summary>
         [Required]

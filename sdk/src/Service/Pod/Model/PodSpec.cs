@@ -76,33 +76,33 @@ namespace JDCloudSDK.Pod.Model
         ///<summary>
         /// pod内容器的/etc/resolv.conf配置
         ///</summary>
-        public DnsConfig DnsConfig{ get; set; }
+        public DnsConfigSpec DnsConfig{ get; set; }
         ///<summary>
         /// 容器日志配置信息；默认会在本地分配10MB的存储空间
         ///</summary>
-        public LogConfig LogConfig{ get; set; }
+        public LogConfigSpec LogConfig{ get; set; }
         ///<summary>
         /// 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
         ///</summary>
-        public List<HostAlias> HostAliases{ get; set; }
+        public List<HostAliasSpec> HostAliases{ get; set; }
         ///<summary>
-        /// 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+        /// Pod的volume列表，可以挂载到container上。长度范围：[0,7]
         ///</summary>
-        public List<Volume> Volumes{ get; set; }
+        public List<VolumeSpec> Volumes{ get; set; }
         ///<summary>
-        /// 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+        /// Pod的容器列表，至少一个容器。长度范围[1,8]
         ///Required:true
         ///</summary>
         [Required]
         public List<ContainerSpec> Containers{ get; set; }
         ///<summary>
-        /// 预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
+        /// 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
         ///</summary>
         public ChargeSpec Charge{ get; set; }
         ///<summary>
         /// 主网卡主IP关联的弹性IP规格
         ///</summary>
-        public ElasticIp ElasticIp{ get; set; }
+        public ElasticIpSpec ElasticIp{ get; set; }
         ///<summary>
         /// 主网卡配置信息
         ///Required:true

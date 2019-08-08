@@ -27,31 +27,30 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Nc.Model;
 
 namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  机密数据
+    ///  镜像仓库认证信息
     /// </summary>
     public class Secret
     {
 
         ///<summary>
-        /// 机密数据名称
+        /// 镜像仓库认证信息名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
+        /// 镜像仓库认证信息类型
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 镜像仓库认证信息创建时间
         ///</summary>
         public string CreatedAt{ get; set; }
         ///<summary>
-        /// 机密的数据
+        /// 镜像仓库认证信息数据
         ///</summary>
         public DockerRegistryData Data{ get; set; }
     }

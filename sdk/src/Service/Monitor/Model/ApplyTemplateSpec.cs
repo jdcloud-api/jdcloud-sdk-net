@@ -61,6 +61,10 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public List<string> ResourceIds{ get; set; }
         ///<summary>
+        /// 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 资源类型
         ///Required:true
         ///</summary>
@@ -69,7 +73,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 标签组，模板下面规则对应的tags，与resourceIds一一对应
         ///</summary>
-        public List<Dictionary<string,string>> TagsArray{ get; set; }
+        public List<Dictionary<String,string>> TagsArray{ get; set; }
         ///<summary>
         /// 模板类型，1表示默认模板，2表示用户自定义模板
         ///Required:true

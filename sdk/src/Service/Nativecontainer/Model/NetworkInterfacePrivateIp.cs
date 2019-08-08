@@ -42,7 +42,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        /// 私有IP的IPV4地址
+        /// 弹性IP实例ID
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>

@@ -38,15 +38,15 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// Last time we probed the condition.
+        /// 最后一次探测状态的时间
         ///</summary>
         public string LastProbeTime{ get; set; }
         ///<summary>
-        /// Last time the condition transitioned from one status to another.
+        /// 最后一次改变状态的时间
         ///</summary>
         public string LastTransitionTime{ get; set; }
         ///<summary>
-        /// Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+        /// 最后一次状态改变的简要原因
         ///</summary>
         public string Reason{ get; set; }
         ///<summary>
@@ -54,11 +54,11 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// Human-readable message indicating details about last transition.
+        /// 最后一次状态改变的信息
         ///</summary>
         public string Message{ get; set; }
         ///<summary>
-        /// Type is the type of the condition. Currently only Ready.
+        /// 状态的条件。目前仅限 Ready.
         ///</summary>
         public string ConditionType{ get; set; }
     }

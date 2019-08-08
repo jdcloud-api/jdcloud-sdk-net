@@ -38,19 +38,31 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 云盘id，使用已有云盘
+        /// 云盘ID。
         ///</summary>
         public string VolumeId{ get; set; }
         ///<summary>
-        /// 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+        /// 云盘快照ID。
+        ///</summary>
+        public string SnapshotId{ get; set; }
+        ///<summary>
+        /// 云盘类型：hdd.std1,ssd.gp1,ssd.io1。
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        /// 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs
+        /// 云盘size,单位 GB。
+        ///</summary>
+        public int? SizeGB{ get; set; }
+        ///<summary>
+        /// 指定volume文件系统类型，目前支持[xfs, ext4]。
         ///</summary>
         public string FsType{ get; set; }
         ///<summary>
-        /// 是否随pod删除。默认：true
+        /// 云盘的 iops 值，目前只有 ssd.io1 类型有效。
+        ///</summary>
+        public int? Iops{ get; set; }
+        ///<summary>
+        /// 是否随pod删除。
         ///</summary>
         public bool AutoDelete{ get; set; }
     }

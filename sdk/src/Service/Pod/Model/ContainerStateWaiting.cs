@@ -32,7 +32,7 @@ namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  pod 中的 contianer 状态
+    ///  容器等待的详细信息
     /// </summary>
     public class ContainerStateWaiting
     {

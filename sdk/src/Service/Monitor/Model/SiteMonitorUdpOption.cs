@@ -42,9 +42,17 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string ReqContent{ get; set; }
         ///<summary>
+        /// ReqContentType
+        ///</summary>
+        public string ReqContentType{ get; set; }
+        ///<summary>
         /// ResCheck
         ///</summary>
         public string ResCheck{ get; set; }
+        ///<summary>
+        /// ResCheckType
+        ///</summary>
+        public string ResCheckType{ get; set; }
         ///<summary>
         /// Timeout
         ///</summary>

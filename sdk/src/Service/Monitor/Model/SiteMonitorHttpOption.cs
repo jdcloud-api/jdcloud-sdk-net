@@ -40,11 +40,11 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// Cookie
         ///</summary>
-        public Dictionary<string,string> Cookie{ get; set; }
+        public Dictionary<String,string> Cookie{ get; set; }
         ///<summary>
         /// Header
         ///</summary>
-        public Dictionary<string,string> Header{ get; set; }
+        public Dictionary<String,string> Header{ get; set; }
         ///<summary>
         /// Method
         ///</summary>

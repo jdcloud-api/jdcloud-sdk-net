@@ -62,6 +62,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Enabled{ get; set; }
         ///<summary>
+        /// FtpOption
+        ///</summary>
+        public SiteMonitorFtpOption FtpOption{ get; set; }
+        ///<summary>
         /// HawkeyeId
         ///</summary>
         public long? HawkeyeId{ get; set; }
@@ -90,21 +94,25 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Port{ get; set; }
         ///<summary>
+        /// SmtpOption
+        ///</summary>
+        public SiteMonitorSmtpOption SmtpOption{ get; set; }
+        ///<summary>
         /// Source
         ///</summary>
         public List<SiteMonitorSource> Source{ get; set; }
         ///<summary>
         /// Stats
         ///</summary>
-        public Dictionary<string,object> Stats{ get; set; }
+        public Dictionary<String,object> Stats{ get; set; }
+        ///<summary>
+        /// TaskType
+        ///</summary>
+        public string TaskType{ get; set; }
         ///<summary>
         /// TcpOption
         ///</summary>
         public SiteMonitorTcpOption TcpOption{ get; set; }
-        ///<summary>
-        /// Type
-        ///</summary>
-        public string Type{ get; set; }
         ///<summary>
         /// UdpOption
         ///</summary>

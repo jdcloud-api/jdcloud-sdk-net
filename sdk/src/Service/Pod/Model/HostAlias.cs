@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,18 +38,13 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 域名列表。&lt;br&gt;
-        /// eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
+        /// 域名列表。
         /// 
-        ///Required:true
         ///</summary>
-        [Required]
         public List<string> Hostnames{ get; set; }
         ///<summary>
-        /// ipv4信息；eg &quot;127.0.0.1&quot;
-        ///Required:true
+        /// ipv4地址。
         ///</summary>
-        [Required]
         public string Ip{ get; set; }
     }
 }

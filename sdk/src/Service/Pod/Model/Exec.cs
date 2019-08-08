@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,10 +38,8 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 执行的命令,总长度256个字符。 s
-        ///Required:true
+        /// 执行的命令。
         ///</summary>
-        [Required]
         public List<string> Command{ get; set; }
     }
 }

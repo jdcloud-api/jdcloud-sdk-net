@@ -89,9 +89,9 @@ namespace JDCloudSDK.Monitor.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -176,6 +176,25 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  概览页产品线信息接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeServicesResponse DescribeServices(DescribeServicesRequest request) {
+            return  new DescribeServicesExecutor().Client(this).Execute<DescribeServicesResponse, DescribeServicesResult, DescribeServicesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  概览页产品线信息接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeServicesResponse> DescribeServices(DescribeServicesRequest request) {
+            return await new DescribeServicesExecutor().Client(this).Execute<DescribeServicesResponse, DescribeServicesResult, DescribeServicesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询规则的报警联系人
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -197,12 +216,17 @@ namespace JDCloudSDK.Monitor.Client
         /// <summary>
         ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. alarmId
-        /// 2. serviceCode
-        /// 2.1 serviceCode + resourceId
-        /// 2.2 serviceCode + resourceIds
-        /// 3. serviceCodes
-        /// 4. 用户所有规则
+        /// 1：alarmIds不为空
+        /// 2：alarmId不为空
+        /// 3：serviceCode不为空
+        /// 3.1：serviceCode + resourceId
+        /// 3.2: serviceCode + resourceIds
+        /// 3.3: serviceCode + ruleName
+        /// 4：serviceCodes不为空
+        /// 4.1：serviceCode + resourceId
+        /// 4.2: serviceCode + resourceIds
+        /// 4.3: serviceCode + ruleName
+        /// 5: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -213,12 +237,17 @@ namespace JDCloudSDK.Monitor.Client
         /// <summary>
         ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. alarmId
-        /// 2. serviceCode
-        /// 2.1 serviceCode + resourceId
-        /// 2.2 serviceCode + resourceIds
-        /// 3. serviceCodes
-        /// 4. 用户所有规则
+        /// 1：alarmIds不为空
+        /// 2：alarmId不为空
+        /// 3：serviceCode不为空
+        /// 3.1：serviceCode + resourceId
+        /// 3.2: serviceCode + resourceIds
+        /// 3.3: serviceCode + ruleName
+        /// 4：serviceCodes不为空
+        /// 4.1：serviceCode + resourceId
+        /// 4.2: serviceCode + resourceIds
+        /// 4.3: serviceCode + ruleName
+        /// 5: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -266,7 +295,7 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量删除规则
+        ///  删除规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -275,7 +304,7 @@ namespace JDCloudSDK.Monitor.Client
         }
 #else
         /// <summary>
-        ///  批量删除规则
+        ///  删除规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -344,12 +373,17 @@ namespace JDCloudSDK.Monitor.Client
         /// <summary>
         ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. alarmId
-        /// 2. serviceCode
-        /// 2.1 serviceCode + resourceId
-        /// 2.2 serviceCode + resourceIds
-        /// 3. serviceCodes
-        /// 4. 用户所有规则
+        /// 1：alarmIds不为空
+        /// 2：alarmId不为空
+        /// 3：serviceCode不为空
+        /// 3.1：serviceCode + resourceId
+        /// 3.2: serviceCode + resourceIds
+        /// 3.3: serviceCode + ruleName
+        /// 4：serviceCodes不为空
+        /// 4.1：serviceCode + resourceId
+        /// 4.2: serviceCode + resourceIds
+        /// 4.3: serviceCode + ruleName
+        /// 5: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -360,12 +394,17 @@ namespace JDCloudSDK.Monitor.Client
         /// <summary>
         ///  查询报警历史
         /// 检索条件组合优先级从高到低为
-        /// 1. alarmId
-        /// 2. serviceCode
-        /// 2.1 serviceCode + resourceId
-        /// 2.2 serviceCode + resourceIds
-        /// 3. serviceCodes
-        /// 4. 用户所有规则
+        /// 1：alarmIds不为空
+        /// 2：alarmId不为空
+        /// 3：serviceCode不为空
+        /// 3.1：serviceCode + resourceId
+        /// 3.2: serviceCode + resourceIds
+        /// 3.3: serviceCode + ruleName
+        /// 4：serviceCodes不为空
+        /// 4.1：serviceCode + resourceId
+        /// 4.2: serviceCode + resourceIds
+        /// 4.3: serviceCode + ruleName
+        /// 5: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -433,12 +472,17 @@ namespace JDCloudSDK.Monitor.Client
 #if NET40||NET35
         /// <summary>
         ///  查询规则, 查询参数组合及优先级从高到低为：
-        /// 1：alarmId不为空
-        /// 2：serviceCode不为空
-        /// 2.1：serviceCode + resourceId
-        /// 2.2: serviceCode + resourceIds
-        /// 3：serviceCodes不为空
-        /// 4: 所有规则
+        /// 1：alarmIds不为空
+        /// 2：alarmId不为空
+        /// 3：serviceCode不为空
+        /// 3.1：serviceCode + resourceId
+        /// 3.2: serviceCode + resourceIds
+        /// 3.3: serviceCode + ruleName
+        /// 4：serviceCodes不为空
+        /// 4.1：serviceCode + resourceId
+        /// 4.2: serviceCode + resourceIds
+        /// 4.3: serviceCode + ruleName
+        /// 5: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -448,12 +492,17 @@ namespace JDCloudSDK.Monitor.Client
 #else
         /// <summary>
         ///  查询规则, 查询参数组合及优先级从高到低为：
-        /// 1：alarmId不为空
-        /// 2：serviceCode不为空
-        /// 2.1：serviceCode + resourceId
-        /// 2.2: serviceCode + resourceIds
-        /// 3：serviceCodes不为空
-        /// 4: 所有规则
+        /// 1：alarmIds不为空
+        /// 2：alarmId不为空
+        /// 3：serviceCode不为空
+        /// 3.1：serviceCode + resourceId
+        /// 3.2: serviceCode + resourceIds
+        /// 3.3: serviceCode + ruleName
+        /// 4：serviceCodes不为空
+        /// 4.1：serviceCode + resourceId
+        /// 4.2: serviceCode + resourceIds
+        /// 4.3: serviceCode + ruleName
+        /// 5: 所有规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

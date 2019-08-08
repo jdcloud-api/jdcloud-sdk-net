@@ -34,7 +34,8 @@ namespace  JDCloudSDK.Nativecontainer.Apis
 {
 
     /// <summary>
-    ///  修改容器的 名称 和 描述。
+    ///  修改容器的 名称 和 描述。&lt;br&gt;
+        ///         /// name 和 description 必须要指定一个
         ///         /// 
     /// </summary>
     public class ModifyContainerAttributeRequest : JdcloudRequest
@@ -44,7 +45,7 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 容器描述；和description必须要指定一个
+        /// 容器描述
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>

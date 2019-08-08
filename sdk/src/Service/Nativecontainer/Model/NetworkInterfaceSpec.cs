@@ -45,7 +45,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 可用区，用户的默认可用区
+        /// 可用区，用户的默认可用区，暂不支持
         ///Required:true
         ///</summary>
         [Required]
@@ -63,11 +63,11 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public int? SecondaryIpCount{ get; set; }
         ///<summary>
-        /// 安全组ID列表
+        /// 要绑定的安全组ID列表，最多指定5个安全组
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
         ///<summary>
-        /// PortSecurity，取值为0或者1，默认为1
+        /// 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
         ///</summary>
         public bool SanityCheck{ get; set; }
         ///<summary>

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  重启单台云物理服务器，只能重启running状态的服务器
+    ///  重启单台云物理服务器，只能重启running状态的服务器 [MFA enabled]
     /// </summary>
     public class RestartInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  重启单台云物理服务器，只能重启running状态的服务器接口的Http 请求方法
+        ///  重启单台云物理服务器，只能重启running状态的服务器 [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  重启单台云物理服务器，只能重启running状态的服务器接口的Http资源请求路径
+        ///  重启单台云物理服务器，只能重启running状态的服务器 [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

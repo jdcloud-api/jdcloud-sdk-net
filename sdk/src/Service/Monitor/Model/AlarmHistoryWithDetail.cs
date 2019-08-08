@@ -42,6 +42,14 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public List<DescribedNoticeContacts> Contacts{ get; set; }
         ///<summary>
+        /// 告警持续次数
+        ///</summary>
+        public long? DurationTimes{ get; set; }
+        ///<summary>
+        /// 告警持续时间，单位分钟
+        ///</summary>
+        public long? NoticeDurationTime{ get; set; }
+        ///<summary>
         /// 用于前端显示的‘触发告警级别’。从低到高分别为‘普通’, ‘紧急’, ‘严重’
         ///</summary>
         public string NoticeLevel{ get; set; }

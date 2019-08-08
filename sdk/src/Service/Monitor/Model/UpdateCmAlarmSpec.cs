@@ -79,6 +79,10 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public long Period{ get; set; }
         ///<summary>
+        /// 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 产品名称
         ///Required:true
         ///</summary>

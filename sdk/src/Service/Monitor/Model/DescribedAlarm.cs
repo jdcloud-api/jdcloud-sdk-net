@@ -94,6 +94,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
+        /// 规则名称
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 产品线编码
         ///</summary>
         public string ServiceCode{ get; set; }
@@ -104,7 +108,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 标签
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 告警阈值
         ///</summary>
@@ -113,5 +117,21 @@ namespace JDCloudSDK.Monitor.Model
         /// 告警次数
         ///</summary>
         public long? Times{ get; set; }
+        ///<summary>
+        /// 回调content
+        ///</summary>
+        public string WebHookContent{ get; set; }
+        ///<summary>
+        /// webHook协议
+        ///</summary>
+        public string WebHookProtocol{ get; set; }
+        ///<summary>
+        /// 回调secret，用户请求签名，防伪造
+        ///</summary>
+        public string WebHookSecret{ get; set; }
+        ///<summary>
+        /// 回调url
+        ///</summary>
+        public string WebHookUrl{ get; set; }
     }
 }

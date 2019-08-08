@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,16 +38,12 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// volume名字，必须是DNS_LABEL，在一个Pod是唯一的。
-        ///Required:true
+        /// volume名字，在一个Pod唯一。
         ///</summary>
-        [Required]
         public string Name{ get; set; }
         ///<summary>
         /// 提供给Pod的cloud disk.
-        ///Required:true
         ///</summary>
-        [Required]
         public JDCloudVolumeSource JdcloudDisk{ get; set; }
     }
 }

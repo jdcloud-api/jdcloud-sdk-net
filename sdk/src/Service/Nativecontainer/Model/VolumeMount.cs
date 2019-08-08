@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Nativecontainer.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model
 {
@@ -39,7 +38,7 @@ namespace JDCloudSDK.Nativecontainer.Model
     {
 
         ///<summary>
-        /// 环境变量名称
+        /// 磁盘分类
         ///</summary>
         public string Category{ get; set; }
         ///<summary>

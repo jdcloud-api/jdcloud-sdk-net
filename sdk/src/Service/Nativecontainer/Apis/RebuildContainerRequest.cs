@@ -51,19 +51,21 @@ namespace  JDCloudSDK.Nativecontainer.Apis
     {
         ///<summary>
         /// 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+        ///Required:true
         ///</summary>
+        [Required]
         public   string Image{ get; set; }
         ///<summary>
-        /// secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+        /// 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
         ///</summary>
         public   string Secret{ get; set; }
         ///<summary>
-        /// 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+        /// 容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]
         ///</summary>
         public List<string> Command{ get; set; }
 
         ///<summary>
-        /// 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+        /// 容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]
         ///</summary>
         public List<string> Args{ get; set; }
 
@@ -72,11 +74,11 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///</summary>
         public   bool Tty{ get; set; }
         ///<summary>
-        /// 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
+        /// 容器的工作目录。如果不指定，默认是根目录（/），必须是绝对路径。字符长度范围：[0-1024]
         ///</summary>
         public   string WorkingDir{ get; set; }
         ///<summary>
-        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
         ///</summary>
         public List<EnvVar> Envs{ get; set; }
 

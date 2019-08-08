@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cps.Apis
 {
 
     /// <summary>
-    ///  重启单台云物理服务器，只能重启running状态的服务器
+    ///  重启单台云物理服务器，只能重启running状态的服务器 [MFA enabled]
     /// </summary>
     public class RestartInstanceResponse : JdcloudResponse<RestartInstanceResult>
     {

@@ -29,7 +29,6 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Pod.Model;
-using JDCloudSDK.Nc.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Pod.Apis
@@ -61,8 +60,10 @@ namespace  JDCloudSDK.Pod.Apis
         /// value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; &lt;br&gt;
         /// 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
         /// 
+        ///Required:true
         ///</summary>
-        public   JDCloudSDK.Nc.Model.DockerRegistryData Data{ get; set; }
+        [Required]
+        public   DockerRegistryData Data{ get; set; }
         ///<summary>
         /// Region ID
         ///Required:true

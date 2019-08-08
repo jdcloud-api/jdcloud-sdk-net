@@ -33,13 +33,13 @@ namespace JDCloudSDK.Nativecontainer.Client
 {
 
     /// <summary>
-    ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+    ///  创建一个 secret，用于存放镜像仓库认证信息。
         /// 
     /// </summary>
     public class CreateSecretExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        ///  创建一个 secret，用于存放镜像仓库认证信息。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Nativecontainer.Client
             }
         }
         /// <summary>
-        ///  创建一个 secret，用于存放镜像仓库机密相关信息。
+        ///  创建一个 secret，用于存放镜像仓库认证信息。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

@@ -32,29 +32,29 @@ namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  pod 中的 contianer 状态
+    ///  容器终止的详细信息
     /// </summary>
     public class ContainerStateTerminated
     {
 
         ///<summary>
-        /// 容器被termination的信号。
+        /// 容器被终止的信号。
         ///</summary>
         public int? Signal{ get; set; }
         ///<summary>
-        /// 容器被termination的退出码。
+        /// 容器被终止的退出码。
         ///</summary>
         public int? ExitCode{ get; set; }
         ///<summary>
-        /// （简要）容器被termination的原因。
+        /// （简要）容器被终止的原因。
         ///</summary>
         public string Reason{ get; set; }
         ///<summary>
-        /// 容器被termination的详细信息。
+        /// 容器被终止的详细信息。
         ///</summary>
         public string Message{ get; set; }
         ///<summary>
-        /// 容器被termination的时间。
+        /// 容器被终止的时间。
         ///</summary>
         public string FinishedAt{ get; set; }
         ///<summary>

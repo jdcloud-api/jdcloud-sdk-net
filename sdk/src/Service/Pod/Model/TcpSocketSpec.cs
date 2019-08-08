@@ -39,7 +39,7 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 范围：[1-65535]
+        /// 端口号，范围：[1-65535]
         ///Required:true
         ///</summary>
         [Required]

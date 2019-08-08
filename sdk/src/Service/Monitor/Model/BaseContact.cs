@@ -39,13 +39,13 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 联系人id
+        /// 联系人id。  注：ReferenceType&#x3D;2时，联系人id请填0
         ///Required:true
         ///</summary>
         [Required]
         public long ReferenceId{ get; set; }
         ///<summary>
-        /// 联系人id类型：0,联系人分组id;1,联系人id
+        /// 联系人id类型：0,联系人分组id;1,联系人id，2，pin帐号主联系人
         ///Required:true
         ///</summary>
         [Required]

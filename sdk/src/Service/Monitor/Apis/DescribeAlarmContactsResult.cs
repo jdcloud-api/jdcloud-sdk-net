@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Monitor.Apis
     public class DescribeAlarmContactsResult : JdcloudResult
     {
         ///<summary>
-        /// ContactsList
+        /// 报警联系人列表
         ///</summary>
         public List<DescribedNoticeContacts> ContactsList{ get; set; }
 

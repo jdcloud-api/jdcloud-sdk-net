@@ -52,6 +52,6 @@ namespace JDCloudSDK.Ossopenapi.Model
         ///<summary>
         /// 设置指定http header参数，类型为Map\&lt;String, String&gt;
         ///</summary>
-        public Dictionary<string,string> SetHeaders{ get; set; }
+        public Dictionary<String,string> SetHeaders{ get; set; }
     }
 }

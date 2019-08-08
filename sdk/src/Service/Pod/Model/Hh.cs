@@ -27,28 +27,23 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  hh
+    ///  httpHeader
     /// </summary>
     public class Hh
     {
 
         ///<summary>
-        /// http header key，需满足http的规则
-        ///Required:true
+        /// http header 键
         ///</summary>
-        [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// 容器探活方式
-        ///Required:true
+        /// http header 值
         ///</summary>
-        [Required]
         public string Value{ get; set; }
     }
 }

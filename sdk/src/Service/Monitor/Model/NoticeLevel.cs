@@ -49,6 +49,6 @@ namespace JDCloudSDK.Monitor.Model
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<string,double?> Levels{ get; set; }
+        public Dictionary<String,double?> Levels{ get; set; }
     }
 }

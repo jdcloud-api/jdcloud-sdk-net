@@ -138,6 +138,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public long? RootRuleId{ get; set; }
         ///<summary>
+        /// 规则名称
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// rutye 1:经典监控  5：自定义监控   6：站点监控 7：可用性监控
         ///</summary>
         public long? RuleType{ get; set; }
@@ -156,7 +160,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// tags
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// tagsNonGrouping
         ///</summary>

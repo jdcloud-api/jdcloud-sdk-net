@@ -38,23 +38,23 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 容器启动多长时\间后，触发探针。默认10秒；范围:[0-300]
+        /// 容器启动多久后触发探针。
         ///</summary>
         public int? InitialDelaySeconds{ get; set; }
         ///<summary>
-        /// 探测的时间间隔。默认值 10秒，范围:[1-300]
+        /// 探测的时间间隔。
         ///</summary>
         public int? PeriodSeconds{ get; set; }
         ///<summary>
-        /// 探测的超时时间。默认值 1秒；范围:[1-300]
+        /// 探测的超时时间。
         ///</summary>
         public int? TimeoutSeconds{ get; set; }
         ///<summary>
-        /// 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+        /// 在成功状态后，连续探活失败的次数，认为探活失败。
         ///</summary>
         public int? FailureThreshold{ get; set; }
         ///<summary>
-        /// 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+        /// 在失败状态后，连续探活成功的次数，认为探活成功。
         ///</summary>
         public int? SuccessThreshold{ get; set; }
         ///<summary>
@@ -62,11 +62,11 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public Exec Exec{ get; set; }
         ///<summary>
-        /// 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。
+        /// 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于 200 且小于 400，则认为诊断成功。
         ///</summary>
         public Hg HttpGet{ get; set; }
         ///<summary>
-        /// 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
+        /// 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则认为诊断成功。
         ///</summary>
         public TcpSocket TcpSocket{ get; set; }
     }

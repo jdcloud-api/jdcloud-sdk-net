@@ -32,21 +32,21 @@ namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  pod 中的 contianer 状态
+    ///  容器的状态信息
     /// </summary>
     public class ContainerState
     {
 
         ///<summary>
-        /// 容器running的详细信息
+        /// 容器运行的详细信息
         ///</summary>
         public ContainerStateRunning Running{ get; set; }
         ///<summary>
-        /// 容器Terminated的详细信息
+        /// 容器终止的详细信息
         ///</summary>
         public ContainerStateTerminated Terminated{ get; set; }
         ///<summary>
-        /// 容器waiting的详细信息
+        /// 容器等待的详细信息
         ///</summary>
         public ContainerStateWaiting Waiting{ get; set; }
     }

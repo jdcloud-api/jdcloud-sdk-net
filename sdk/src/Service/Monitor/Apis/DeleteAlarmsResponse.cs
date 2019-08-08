@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    ///  批量删除规则
+    ///  删除规则
     /// </summary>
     public class DeleteAlarmsResponse : JdcloudResponse<DeleteAlarmsResult>
     {

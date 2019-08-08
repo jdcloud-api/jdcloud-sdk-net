@@ -33,13 +33,13 @@ namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  container 规格
+    ///  容器规格
     /// </summary>
     public class ContainerSpec
     {
 
         ///<summary>
-        /// 容器名称
+        /// 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
         ///Required:true
         ///</summary>
         [Required]
@@ -53,12 +53,12 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public List<string> Args{ get; set; }
         ///<summary>
-        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+        /// 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。数组范围：[0-100]
         ///</summary>
         public List<EnvSpec> Env{ get; set; }
         ///<summary>
         /// 镜像名称 &lt;/br&gt;
-        /// 容器镜像名字。 nginx:latest。长度范围：[1-500]
+        /// 容器镜像名字。 nginx:latest。长度范围：[1-639]
         /// 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
         /// 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
         /// 
@@ -67,7 +67,7 @@ namespace JDCloudSDK.Pod.Model
         [Required]
         public string Image{ get; set; }
         ///<summary>
-        /// 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+        /// 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
         ///</summary>
         public string Secret{ get; set; }
         ///<summary>
@@ -97,8 +97,8 @@ namespace JDCloudSDK.Pod.Model
         [Required]
         public CloudDiskSpec SystemDisk{ get; set; }
         ///<summary>
-        /// 容器计算资源配置
+        /// 云盘挂载信息
         ///</summary>
-        public List<VolumeMount> VolumeMounts{ get; set; }
+        public List<VolumeMountSpec> VolumeMounts{ get; set; }
     }
 }

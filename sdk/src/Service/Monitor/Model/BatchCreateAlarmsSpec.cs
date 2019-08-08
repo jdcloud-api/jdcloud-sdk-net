@@ -63,6 +63,10 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public List<string> ResourceIds{ get; set; }
         ///<summary>
+        /// 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 规则类型, 1表示资源监控，6表示站点监控，默认为1
         ///</summary>
         public long? RuleType{ get; set; }
@@ -95,7 +99,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string WebHookContent{ get; set; }
         ///<summary>
-        /// webHook协议
+        /// webHook协议，目前支持http，https
         ///</summary>
         public string WebHookProtocol{ get; set; }
         ///<summary>
@@ -103,7 +107,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string WebHookSecret{ get; set; }
         ///<summary>
-        /// 回调url
+        /// 回调url，例如http://www.jdcloud.com
         ///</summary>
         public string WebHookUrl{ get; set; }
     }

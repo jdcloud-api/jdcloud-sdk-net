@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,7 +40,9 @@ namespace JDCloudSDK.Pod.Model
 
         ///<summary>
         /// Tag键
+        ///Required:true
         ///</summary>
+        [Required]
         public string Key{ get; set; }
         ///<summary>
         /// Tag值

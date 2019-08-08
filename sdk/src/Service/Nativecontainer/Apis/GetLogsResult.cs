@@ -42,6 +42,6 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///<summary>
         /// Logs
         ///</summary>
-        public   Logs Logs{ get; set; }
+        public   JDCloudSDK.Nativecontainer.Model.Logs Logs{ get; set; }
     }
 }

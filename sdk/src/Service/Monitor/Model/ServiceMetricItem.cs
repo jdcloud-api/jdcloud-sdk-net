@@ -53,5 +53,9 @@ namespace JDCloudSDK.Monitor.Model
         /// Name
         ///</summary>
         public string Name{ get; set; }
+        ///<summary>
+        /// ServiceCode
+        ///</summary>
+        public string ServiceCode{ get; set; }
     }
 }

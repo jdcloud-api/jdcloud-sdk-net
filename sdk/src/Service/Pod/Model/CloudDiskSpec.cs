@@ -38,7 +38,7 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 云盘id，使用已有云盘
+        /// 云盘ID，指定使用已有云盘
         ///</summary>
         public string VolumeId{ get; set; }
         ///<summary>
@@ -46,11 +46,11 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 云盘快照id，根据云盘快照创建云盘。
+        /// 云盘快照ID，根据云盘快照创建云盘。
         ///</summary>
-        public string Snapshot{ get; set; }
+        public string SnapshotId{ get; set; }
         ///<summary>
-        /// 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+        /// 云盘类型：hdd.std1,ssd.gp1,ssd.io1
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>

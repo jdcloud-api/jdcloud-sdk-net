@@ -38,15 +38,15 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// ResourceId
+        /// 资源id
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
-        /// RuleCount
+        /// 规则个数
         ///</summary>
         public long? RuleCount{ get; set; }
         ///<summary>
-        /// State
+        /// 资源的规则状态。1：正常、 2：报警、4：数据不足 -1:没有规则 -2:未启用
         ///</summary>
         public long? State{ get; set; }
     }

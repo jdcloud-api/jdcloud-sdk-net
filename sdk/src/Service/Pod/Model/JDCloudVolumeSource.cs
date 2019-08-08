@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -43,15 +42,11 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string VolumeId{ get; set; }
         ///<summary>
-        /// 云盘名称
-        ///</summary>
-        public string Name{ get; set; }
-        ///<summary>
         /// 云盘快照id，根据云盘快照创建云盘。
         ///</summary>
-        public string Snapshot{ get; set; }
+        public string SnapshotId{ get; set; }
         ///<summary>
-        /// 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+        /// 云盘类型：hdd.std1,ssd.gp1,ssd.io1
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
@@ -60,9 +55,7 @@ namespace JDCloudSDK.Pod.Model
         public int? SizeGB{ get; set; }
         ///<summary>
         /// 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs
-        ///Required:true
         ///</summary>
-        [Required]
         public string FsType{ get; set; }
         ///<summary>
         /// 随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ossopenapi.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,25 @@ namespace JDCloudSDK.Ossopenapi.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  根据type获取指定bucket用量数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetSingleBucketCapacityResponse GetSingleBucketCapacity(GetSingleBucketCapacityRequest request) {
+            return  new GetSingleBucketCapacityExecutor().Client(this).Execute<GetSingleBucketCapacityResponse, GetSingleBucketCapacityResult, GetSingleBucketCapacityRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据type获取指定bucket用量数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetSingleBucketCapacityResponse> GetSingleBucketCapacity(GetSingleBucketCapacityRequest request) {
+            return await new GetSingleBucketCapacityExecutor().Client(this).Execute<GetSingleBucketCapacityResponse, GetSingleBucketCapacityResult, GetSingleBucketCapacityRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  获取回源配置

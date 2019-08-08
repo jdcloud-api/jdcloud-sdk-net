@@ -39,7 +39,7 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
+        /// 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
         ///</summary>
         public string AggrType{ get; set; }
         ///<summary>
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string DownSampleType{ get; set; }
         ///<summary>
-        /// 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+        /// 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
         /// in: query
         ///</summary>
         public string EndTime{ get; set; }
@@ -74,12 +74,12 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
-        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
         /// in: query
         ///</summary>
         public string StartTime{ get; set; }
         ///<summary>
-        /// 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+        /// 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
         /// in: query
         ///</summary>
         public List<TagFilter> Tags{ get; set; }

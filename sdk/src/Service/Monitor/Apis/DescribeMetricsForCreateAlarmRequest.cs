@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1
@@ -41,5 +41,9 @@ namespace  JDCloudSDK.Monitor.Apis
         /// 资源的类型，取值vm, lb, ip, database 等
         ///</summary>
         public   string ServiceCode{ get; set; }
+        ///<summary>
+        /// metric类型，取值0、1；默认值：0（常规指标，用于控制台创建报警规则）、1（其它）
+        ///</summary>
+        public   long? Type{ get; set; }
     }
 }

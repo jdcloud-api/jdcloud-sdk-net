@@ -38,20 +38,17 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
-        /// eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素符合IPv4格式。
+        /// DNS服务器IP地址列表。
         /// 
         ///</summary>
         public List<string> Nameservers{ get; set; }
         ///<summary>
-        /// DNS搜索域列表，用于主机名查找。&lt;br&gt;
-        /// eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
+        /// DNS搜索域列表，用于主机名查找。
         /// 
         ///</summary>
         public List<string> Searches{ get; set; }
         ///<summary>
-        /// DNS解析器选项列表。&lt;br&gt;
-        /// eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
+        /// DNS解析器选项列表。
         ///</summary>
         public List<PodDnsConfigOption> Options{ get; set; }
     }

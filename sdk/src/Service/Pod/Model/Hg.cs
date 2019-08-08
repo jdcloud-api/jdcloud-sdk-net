@@ -27,40 +27,34 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
 
     /// <summary>
-    ///  hg
+    ///  httpGet
     /// </summary>
     public class Hg
     {
 
         ///<summary>
-        /// 默认值： http；可选值 http, https
+        /// 默认值：http。
         ///</summary>
         public string Scheme{ get; set; }
         ///<summary>
-        /// 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式
+        /// 连接到pod的host信息。
         ///</summary>
         public string Host{ get; set; }
         ///<summary>
-        /// 范围：[1-65535]
-        ///Required:true
+        /// 端口号。
         ///</summary>
-        [Required]
-        public int Port{ get; set; }
+        public int? Port{ get; set; }
         ///<summary>
-        /// HTTP的路径。范围：[1-256]
-        ///Required:true
+        /// HTTP的路径。
         ///</summary>
-        [Required]
         public string Path{ get; set; }
         ///<summary>
-        /// 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
-        /// 如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
+        /// 自定义Http headers
         ///</summary>
         public List<Hh> HttpHeader{ get; set; }
     }

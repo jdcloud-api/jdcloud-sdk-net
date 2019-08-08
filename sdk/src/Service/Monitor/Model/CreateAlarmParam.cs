@@ -86,7 +86,7 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string Operation{ get; set; }
         ///<summary>
-        /// 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，15，30，60
+        /// 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，10,15，30，60
         ///Required:true
         ///</summary>
         [Required]
@@ -98,6 +98,10 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public List<string> ResourceIds{ get; set; }
         ///<summary>
+        /// 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        ///</summary>
+        public string RuleName{ get; set; }
+        ///<summary>
         /// 产品名称
         ///Required:true
         ///</summary>
@@ -106,7 +110,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 多值标签
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 报警阈值，目前只开放数值类型功能
         ///Required:true
@@ -124,7 +128,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string WebHookContent{ get; set; }
         ///<summary>
-        /// webHook协议
+        /// webHook协议，目前支持http，https
         ///</summary>
         public string WebHookProtocol{ get; set; }
         ///<summary>
@@ -132,7 +136,7 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string WebHookSecret{ get; set; }
         ///<summary>
-        /// 回调url
+        /// 回调url，例如http://www.jdcloud.com
         ///</summary>
         public string WebHookUrl{ get; set; }
     }

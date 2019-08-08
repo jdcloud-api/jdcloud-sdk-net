@@ -58,7 +58,9 @@ namespace JDCloudSDK.Monitor.Model
         public string DownSample{ get; set; }
         ///<summary>
         /// 监控项
+        ///Required:true
         ///</summary>
+        [Required]
         public string Metric{ get; set; }
         ///<summary>
         /// 监控项ID
@@ -81,7 +83,7 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string Operation{ get; set; }
         ///<summary>
-        /// 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，15，30，60
+        /// 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，10,15，30，60
         ///Required:true
         ///</summary>
         [Required]
@@ -95,7 +97,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 多值标签
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 报警阈值，目前只开放数值类型功能
         ///Required:true

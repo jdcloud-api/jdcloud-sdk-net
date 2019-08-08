@@ -56,7 +56,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 分组下metric对应的tags
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 分组的webCode
         ///</summary>

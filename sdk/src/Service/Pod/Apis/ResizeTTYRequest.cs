@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 原生容器
- * container 相关接口
+ * Container
+ * Pod中容器的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,14 +40,18 @@ namespace  JDCloudSDK.Pod.Apis
     {
         ///<summary>
         /// tty row，取值范围：[10, 2000]
+        ///Required:true
         ///</summary>
-        public   int? Height{ get; set; }
+        [Required]
+        public   int Height{ get; set; }
         ///<summary>
         /// tty column，取值范围：[10, 1000]
+        ///Required:true
         ///</summary>
-        public   int? Width{ get; set; }
+        [Required]
+        public   int Width{ get; set; }
         ///<summary>
-        /// tty column，取值范围：[10, 1000]
+        /// exec ID
         ///</summary>
         public   string ExecId{ get; set; }
         ///<summary>

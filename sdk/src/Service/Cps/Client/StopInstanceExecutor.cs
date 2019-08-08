@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cps.Client
 {
 
     /// <summary>
-    ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器
+    ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
     /// </summary>
     public class StopInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器接口的Http 请求方法
+        ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cps.Client
             }
         }
         /// <summary>
-        ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器接口的Http资源请求路径
+        ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

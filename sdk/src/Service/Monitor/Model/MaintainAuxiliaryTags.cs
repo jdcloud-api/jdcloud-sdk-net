@@ -61,11 +61,17 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public List<string> ResourceIds{ get; set; }
         ///<summary>
-        /// 资源的产品线
+        /// 资源的产品线，要对哪个产品线的资源打标签
         ///Required:true
         ///</summary>
         [Required]
         public string ServiceCode{ get; set; }
+        ///<summary>
+        /// 打标签操作所属产品线的serviceCode
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string SrcServiceCode{ get; set; }
         ///<summary>
         /// Tags
         ///Required:true

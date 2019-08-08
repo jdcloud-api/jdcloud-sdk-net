@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Nativecontainer.Model
@@ -40,10 +41,12 @@ namespace JDCloudSDK.Nativecontainer.Model
 
         ///<summary>
         /// 弹性公网IP的限速 单位：MB
+        ///Required:true
         ///</summary>
-        public int? BandwidthMbps{ get; set; }
+        [Required]
+        public int BandwidthMbps{ get; set; }
         ///<summary>
-        /// IP服务商，取值为bgp或no_bg
+        /// IP服务商，取值为bgp或no_bgp
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 原生容器
- * container 相关接口
+ * Container
+ * Pod中容器的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,13 +33,13 @@ namespace JDCloudSDK.Pod.Client
 {
 
     /// <summary>
-    ///  查询单个容器日志
+    ///  将容器连接到本地标准输入输出
         /// 
     /// </summary>
     public class AttachExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询单个容器日志
+        ///  将容器连接到本地标准输入输出
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Pod.Client
             }
         }
         /// <summary>
-        ///  查询单个容器日志
+        ///  将容器连接到本地标准输入输出
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

@@ -45,10 +45,6 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string Address{ get; set; }
         ///<summary>
-        /// 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-        ///</summary>
-        public long? Frequency{ get; set; }
-        ///<summary>
         /// http body：选择探测类型为1&#x3D;http时有效，最长不超过1024字节
         /// in: query
         ///</summary>
@@ -103,9 +99,5 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         [Required]
         public long TaskType{ get; set; }
-        ///<summary>
-        /// 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-        ///</summary>
-        public long? Timeout{ get; set; }
     }
 }

@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,14 +38,8 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 连接到pod的host信息，默认使用pod_ip
+        /// 端口号，范围：[1-65535]
         ///</summary>
-        public string Host{ get; set; }
-        ///<summary>
-        /// 范围：[1-65535]
-        ///Required:true
-        ///</summary>
-        [Required]
-        public int Port{ get; set; }
+        public int? Port{ get; set; }
     }
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -42,7 +42,9 @@ namespace  JDCloudSDK.Pod.Apis
     {
         ///<summary>
         /// 重置容器相关参数
+        ///Required:true
         ///</summary>
+        [Required]
         public List<RebuildContainerSpec> Containers{ get; set; }
 
         ///<summary>

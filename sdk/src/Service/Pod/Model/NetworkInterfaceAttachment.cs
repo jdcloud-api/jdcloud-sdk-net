@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Nc.Model;
 
 namespace JDCloudSDK.Pod.Model
 {
@@ -39,7 +38,7 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 指明删除pod时是否删除网卡，默认True；当前只能是True
+        /// 指明删除pod时是否删除网卡。
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>

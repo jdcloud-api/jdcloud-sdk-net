@@ -55,7 +55,7 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string WebHookContent{ get; set; }
         ///<summary>
-        /// webHook协议
+        /// webHook协议，目前支持http，https
         ///</summary>
         public   string WebHookProtocol{ get; set; }
         ///<summary>
@@ -63,11 +63,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string WebHookSecret{ get; set; }
         ///<summary>
-        /// 回调url
+        /// 回调url，例如http://www.jdcloud.com
         ///</summary>
         public   string WebHookUrl{ get; set; }
         ///<summary>
-        /// 地域 Id
+        /// 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
         ///Required:true
         ///</summary>
         [Required]

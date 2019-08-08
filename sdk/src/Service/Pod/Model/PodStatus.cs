@@ -50,11 +50,11 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string Message{ get; set; }
         ///<summary>
-        /// IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
+        /// 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
         ///</summary>
         public string PodIP{ get; set; }
         ///<summary>
-        /// Current service state of pod.
+        /// 目前pod的状态。
         ///</summary>
         public List<PodCondition> Conditions{ get; set; }
         ///<summary>

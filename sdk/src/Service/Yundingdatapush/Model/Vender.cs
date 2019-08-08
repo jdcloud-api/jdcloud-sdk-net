@@ -51,10 +51,10 @@ namespace JDCloudSDK.Yundingdatapush.Model
         [Required]
         public string YdRdsInstanceId{ get; set; }
         ///<summary>
-        /// 商家PIN
+        /// 商家ID
         ///Required:true
         ///</summary>
         [Required]
-        public string VenderPin{ get; set; }
+        public string VenderId{ get; set; }
     }
 }

@@ -63,6 +63,12 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
+        /// 打标签操作所属产品线的serviceCode
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string SrcServiceCode{ get; set; }
+        ///<summary>
         /// 标签名称。调用此API前需要与云监控确认可以使用的标签名称
         ///Required:true
         ///</summary>

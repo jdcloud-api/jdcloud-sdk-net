@@ -108,7 +108,7 @@ namespace JDCloudSDK.Monitor.Model
         ///<summary>
         /// 多值标签
         ///</summary>
-        public Dictionary<string,string> Tags{ get; set; }
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 阈值
         ///</summary>

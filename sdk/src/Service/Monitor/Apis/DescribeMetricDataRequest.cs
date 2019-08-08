@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1
@@ -48,11 +48,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string DownSampleType{ get; set; }
         ///<summary>
-        /// 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
         ///</summary>
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+        /// 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>
@@ -60,7 +60,7 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string TimeInterval{ get; set; }
         ///<summary>
-        /// 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+        /// 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
         ///</summary>
         public List<TagFilter> Tags{ get; set; }
 

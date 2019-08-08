@@ -33,13 +33,15 @@ namespace JDCloudSDK.Nativecontainer.Client
 {
 
     /// <summary>
-    ///  修改容器的 名称 和 描述。
+    ///  修改容器的 名称 和 描述。&lt;br&gt;
+        /// name 和 description 必须要指定一个
         /// 
     /// </summary>
     public class ModifyContainerAttributeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改容器的 名称 和 描述。
+        ///  修改容器的 名称 和 描述。&lt;br&gt;
+        /// name 和 description 必须要指定一个
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +51,8 @@ namespace JDCloudSDK.Nativecontainer.Client
             }
         }
         /// <summary>
-        ///  修改容器的 名称 和 描述。
+        ///  修改容器的 名称 和 描述。&lt;br&gt;
+        /// name 和 description 必须要指定一个
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

@@ -38,6 +38,10 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
+        /// GroupTree
+        ///</summary>
+        public GroupTree GroupTree{ get; set; }
+        ///<summary>
         /// 产品线下的分组信息
         ///</summary>
         public List<GroupInfo> MetricGroup{ get; set; }

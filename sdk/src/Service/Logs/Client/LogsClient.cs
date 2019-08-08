@@ -138,6 +138,25 @@ namespace JDCloudSDK.Logs.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询日志主题基本信息。如配置了采集配置，将返回采集配置的UID
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLogtopicResponse DescribeLogtopic(DescribeLogtopicRequest request) {
+            return  new DescribeLogtopicExecutor().Client(this).Execute<DescribeLogtopicResponse, DescribeLogtopicResult, DescribeLogtopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志主题基本信息。如配置了采集配置，将返回采集配置的UID
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLogtopicResponse> DescribeLogtopic(DescribeLogtopicRequest request) {
+            return await new DescribeLogtopicExecutor().Client(this).Execute<DescribeLogtopicResponse, DescribeLogtopicResult, DescribeLogtopicRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  返回特定有效期的证书
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -153,6 +172,139 @@ namespace JDCloudSDK.Logs.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLogdCAResponse> DescribeLogdCA(DescribeLogdCARequest request) {
             return await new DescribeLogdCAExecutor().Client(this).Execute<DescribeLogdCAResponse, DescribeLogdCAResult, DescribeLogdCARequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询日志集详情。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLogsetResponse DescribeLogset(DescribeLogsetRequest request) {
+            return  new DescribeLogsetExecutor().Client(this).Execute<DescribeLogsetResponse, DescribeLogsetResult, DescribeLogsetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志集详情。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLogsetResponse> DescribeLogset(DescribeLogsetRequest request) {
+            return await new DescribeLogsetExecutor().Client(this).Execute<DescribeLogsetResponse, DescribeLogsetResult, DescribeLogsetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询当前实例的采集配置列表：此接口会生成agent心跳监控数据，用以表征agent的可用性。请求中若添加了X-Jdcloud-Logs-md5的header，将按照md5的方式处理返回值。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceCollectConfsResponse DescribeInstanceCollectConfs(DescribeInstanceCollectConfsRequest request) {
+            return  new DescribeInstanceCollectConfsExecutor().Client(this).Execute<DescribeInstanceCollectConfsResponse, DescribeInstanceCollectConfsResult, DescribeInstanceCollectConfsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询当前实例的采集配置列表：此接口会生成agent心跳监控数据，用以表征agent的可用性。请求中若添加了X-Jdcloud-Logs-md5的header，将按照md5的方式处理返回值。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceCollectConfsResponse> DescribeInstanceCollectConfs(DescribeInstanceCollectConfsRequest request) {
+            return await new DescribeInstanceCollectConfsExecutor().Client(this).Execute<DescribeInstanceCollectConfsResponse, DescribeInstanceCollectConfsResult, DescribeInstanceCollectConfsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除日志主题。其采集配置与采集实例配置将一并删除。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLogtopicResponse DeleteLogtopic(DeleteLogtopicRequest request) {
+            return  new DeleteLogtopicExecutor().Client(this).Execute<DeleteLogtopicResponse, DeleteLogtopicResult, DeleteLogtopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除日志主题。其采集配置与采集实例配置将一并删除。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLogtopicResponse> DeleteLogtopic(DeleteLogtopicRequest request) {
+            return await new DeleteLogtopicExecutor().Client(this).Execute<DeleteLogtopicResponse, DeleteLogtopicResult, DeleteLogtopicRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询采集配置的实例列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCollectResourcesResponse DescribeCollectResources(DescribeCollectResourcesRequest request) {
+            return  new DescribeCollectResourcesExecutor().Client(this).Execute<DescribeCollectResourcesResponse, DescribeCollectResourcesResult, DescribeCollectResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询采集配置的实例列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCollectResourcesResponse> DescribeCollectResources(DescribeCollectResourcesRequest request) {
+            return await new DescribeCollectResourcesExecutor().Client(this).Execute<DescribeCollectResourcesResponse, DescribeCollectResourcesResult, DescribeCollectResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新日志主题。日志主题名称不可更新。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateLogtopicResponse UpdateLogtopic(UpdateLogtopicRequest request) {
+            return  new UpdateLogtopicExecutor().Client(this).Execute<UpdateLogtopicResponse, UpdateLogtopicResult, UpdateLogtopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新日志主题。日志主题名称不可更新。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateLogtopicResponse> UpdateLogtopic(UpdateLogtopicRequest request) {
+            return await new UpdateLogtopicExecutor().Client(this).Execute<UpdateLogtopicResponse, UpdateLogtopicResult, UpdateLogtopicRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLogsetsResponse DescribeLogsets(DescribeLogsetsRequest request) {
+            return  new DescribeLogsetsExecutor().Client(this).Execute<DescribeLogsetsResponse, DescribeLogsetsResult, DescribeLogsetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLogsetsResponse> DescribeLogsets(DescribeLogsetsRequest request) {
+            return await new DescribeLogsetsExecutor().Client(this).Execute<DescribeLogsetsResponse, DescribeLogsetsResult, DescribeLogsetsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新采集配置。若传入的实例列表不为空，将覆盖之前的所有实例，而非新增。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCollectInfoResponse UpdateCollectInfo(UpdateCollectInfoRequest request) {
+            return  new UpdateCollectInfoExecutor().Client(this).Execute<UpdateCollectInfoResponse, UpdateCollectInfoResult, UpdateCollectInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新采集配置。若传入的实例列表不为空，将覆盖之前的所有实例，而非新增。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCollectInfoResponse> UpdateCollectInfo(UpdateCollectInfoRequest request) {
+            return await new UpdateCollectInfoExecutor().Client(this).Execute<UpdateCollectInfoResponse, UpdateCollectInfoResult, UpdateCollectInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -176,21 +328,154 @@ namespace JDCloudSDK.Logs.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询当前实例的采集配置列表：此接口会生成agent心跳监控数据，用以表征agent的可用性。请求中若添加了X-Jdcloud-Logs-md5的header，将按照md5的方式处理返回值。
+        ///  采集配置的基本信息。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeInstanceCollectConfsResponse DescribeInstanceCollectConfs(DescribeInstanceCollectConfsRequest request) {
-            return  new DescribeInstanceCollectConfsExecutor().Client(this).Execute<DescribeInstanceCollectConfsResponse, DescribeInstanceCollectConfsResult, DescribeInstanceCollectConfsRequest>(request);
+        public DescribeCollectInfoResponse DescribeCollectInfo(DescribeCollectInfoRequest request) {
+            return  new DescribeCollectInfoExecutor().Client(this).Execute<DescribeCollectInfoResponse, DescribeCollectInfoResult, DescribeCollectInfoRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询当前实例的采集配置列表：此接口会生成agent心跳监控数据，用以表征agent的可用性。请求中若添加了X-Jdcloud-Logs-md5的header，将按照md5的方式处理返回值。
+        ///  采集配置的基本信息。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceCollectConfsResponse> DescribeInstanceCollectConfs(DescribeInstanceCollectConfsRequest request) {
-            return await new DescribeInstanceCollectConfsExecutor().Client(this).Execute<DescribeInstanceCollectConfsResponse, DescribeInstanceCollectConfsResult, DescribeInstanceCollectConfsRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeCollectInfoResponse> DescribeCollectInfo(DescribeCollectInfoRequest request) {
+            return await new DescribeCollectInfoExecutor().Client(this).Execute<DescribeCollectInfoResponse, DescribeCollectInfoResult, DescribeCollectInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建日志集。名称不可重复。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLogsetResponse CreateLogset(CreateLogsetRequest request) {
+            return  new CreateLogsetExecutor().Client(this).Execute<CreateLogsetResponse, CreateLogsetResult, CreateLogsetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建日志集。名称不可重复。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLogsetResponse> CreateLogset(CreateLogsetRequest request) {
+            return await new CreateLogsetExecutor().Client(this).Execute<CreateLogsetResponse, CreateLogsetResult, CreateLogsetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新日志集。日志集名称不可更新。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateLogsetResponse UpdateLogset(UpdateLogsetRequest request) {
+            return  new UpdateLogsetExecutor().Client(this).Execute<UpdateLogsetResponse, UpdateLogsetResult, UpdateLogsetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新日志集。日志集名称不可更新。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateLogsetResponse> UpdateLogset(UpdateLogsetRequest request) {
+            return await new UpdateLogsetExecutor().Client(this).Execute<UpdateLogsetResponse, UpdateLogsetResult, UpdateLogsetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询日志主题列表，支持按照名称模糊查询。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLogtopicsResponse DescribeLogtopics(DescribeLogtopicsRequest request) {
+            return  new DescribeLogtopicsExecutor().Client(this).Execute<DescribeLogtopicsResponse, DescribeLogtopicsResult, DescribeLogtopicsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志主题列表，支持按照名称模糊查询。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLogtopicsResponse> DescribeLogtopics(DescribeLogtopicsRequest request) {
+            return await new DescribeLogtopicsExecutor().Client(this).Execute<DescribeLogtopicsResponse, DescribeLogtopicsResult, DescribeLogtopicsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCollectInfoResponse CreateCollectInfo(CreateCollectInfoRequest request) {
+            return  new CreateCollectInfoExecutor().Client(this).Execute<CreateCollectInfoResponse, CreateCollectInfoResult, CreateCollectInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCollectInfoResponse> CreateCollectInfo(CreateCollectInfoRequest request) {
+            return await new CreateCollectInfoExecutor().Client(this).Execute<CreateCollectInfoResponse, CreateCollectInfoResult, CreateCollectInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLogsetResponse DeleteLogset(DeleteLogsetRequest request) {
+            return  new DeleteLogsetExecutor().Client(this).Execute<DeleteLogsetResponse, DeleteLogsetResult, DeleteLogsetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLogsetResponse> DeleteLogset(DeleteLogsetRequest request) {
+            return await new DeleteLogsetExecutor().Client(this).Execute<DeleteLogsetResponse, DeleteLogsetResult, DeleteLogsetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  增量更新采集实例列表。更新的动作支持 add 、 remove
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCollectResourcesResponse UpdateCollectResources(UpdateCollectResourcesRequest request) {
+            return  new UpdateCollectResourcesExecutor().Client(this).Execute<UpdateCollectResourcesResponse, UpdateCollectResourcesResult, UpdateCollectResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  增量更新采集实例列表。更新的动作支持 add 、 remove
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCollectResourcesResponse> UpdateCollectResources(UpdateCollectResourcesRequest request) {
+            return await new UpdateCollectResourcesExecutor().Client(this).Execute<UpdateCollectResourcesResponse, UpdateCollectResourcesResult, UpdateCollectResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建日志主题，不可与当前日志集下现有日志主题重名。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLogtopicResponse CreateLogtopic(CreateLogtopicRequest request) {
+            return  new CreateLogtopicExecutor().Client(this).Execute<CreateLogtopicResponse, CreateLogtopicResult, CreateLogtopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建日志主题，不可与当前日志集下现有日志主题重名。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLogtopicResponse> CreateLogtopic(CreateLogtopicRequest request) {
+            return await new CreateLogtopicExecutor().Client(this).Execute<CreateLogtopicResponse, CreateLogtopicResult, CreateLogtopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 
