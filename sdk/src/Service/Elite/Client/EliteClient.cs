@@ -176,6 +176,25 @@ namespace JDCloudSDK.Elite.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询交付信息接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public JdxQueryDeliveryInfoResponse JdxQueryDeliveryInfo(JdxQueryDeliveryInfoRequest request) {
+            return  new JdxQueryDeliveryInfoExecutor().Client(this).Execute<JdxQueryDeliveryInfoResponse, JdxQueryDeliveryInfoResult, JdxQueryDeliveryInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询交付信息接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<JdxQueryDeliveryInfoResponse> JdxQueryDeliveryInfo(JdxQueryDeliveryInfoRequest request) {
+            return await new JdxQueryDeliveryInfoExecutor().Client(this).Execute<JdxQueryDeliveryInfoResponse, JdxQueryDeliveryInfoResult, JdxQueryDeliveryInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取云存服务信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -214,21 +233,21 @@ namespace JDCloudSDK.Elite.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  确认交付
+        ///  下单接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ConfirmSaleServiceDeliveryResponse ConfirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) {
-            return  new ConfirmSaleServiceDeliveryExecutor().Client(this).Execute<ConfirmSaleServiceDeliveryResponse, ConfirmSaleServiceDeliveryResult, ConfirmSaleServiceDeliveryRequest>(request);
+        public JdxCreateOrderResponse JdxCreateOrder(JdxCreateOrderRequest request) {
+            return  new JdxCreateOrderExecutor().Client(this).Execute<JdxCreateOrderResponse, JdxCreateOrderResult, JdxCreateOrderRequest>(request);
         }
 #else
         /// <summary>
-        ///  确认交付
+        ///  下单接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ConfirmSaleServiceDeliveryResponse> ConfirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) {
-            return await new ConfirmSaleServiceDeliveryExecutor().Client(this).Execute<ConfirmSaleServiceDeliveryResponse, ConfirmSaleServiceDeliveryResult, ConfirmSaleServiceDeliveryRequest>(request).ConfigureAwait(false);
+        public async Task<JdxCreateOrderResponse> JdxCreateOrder(JdxCreateOrderRequest request) {
+            return await new JdxCreateOrderExecutor().Client(this).Execute<JdxCreateOrderResponse, JdxCreateOrderResult, JdxCreateOrderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -248,6 +267,44 @@ namespace JDCloudSDK.Elite.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetSaleServiceByDeliverNumberResponse> GetSaleServiceByDeliverNumber(GetSaleServiceByDeliverNumberRequest request) {
             return await new GetSaleServiceByDeliverNumberExecutor().Client(this).Execute<GetSaleServiceByDeliverNumberResponse, GetSaleServiceByDeliverNumberResult, GetSaleServiceByDeliverNumberRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  输出商品接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public JdxQueryProductResponse JdxQueryProduct(JdxQueryProductRequest request) {
+            return  new JdxQueryProductExecutor().Client(this).Execute<JdxQueryProductResponse, JdxQueryProductResult, JdxQueryProductRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  输出商品接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<JdxQueryProductResponse> JdxQueryProduct(JdxQueryProductRequest request) {
+            return await new JdxQueryProductExecutor().Client(this).Execute<JdxQueryProductResponse, JdxQueryProductResult, JdxQueryProductRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  确认交付
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfirmSaleServiceDeliveryResponse ConfirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) {
+            return  new ConfirmSaleServiceDeliveryExecutor().Client(this).Execute<ConfirmSaleServiceDeliveryResponse, ConfirmSaleServiceDeliveryResult, ConfirmSaleServiceDeliveryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  确认交付
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfirmSaleServiceDeliveryResponse> ConfirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) {
+            return await new ConfirmSaleServiceDeliveryExecutor().Client(this).Execute<ConfirmSaleServiceDeliveryResponse, ConfirmSaleServiceDeliveryResult, ConfirmSaleServiceDeliveryRequest>(request).ConfigureAwait(false);
         }
 #endif
 

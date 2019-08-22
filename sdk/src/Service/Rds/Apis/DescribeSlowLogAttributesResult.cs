@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeSlowLogAttributesResult : JdcloudResult
     {
         ///<summary>
-        /// SlowLogsAttributes
+        /// 慢日志信息
         ///</summary>
         public List<SlowLogAttributes> SlowLogsAttributes{ get; set; }
 

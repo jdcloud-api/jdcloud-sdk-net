@@ -38,12 +38,12 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeAuditOptionsResult : JdcloudResult
     {
         ///<summary>
-        /// AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
+        /// Enabled
         ///</summary>
         public List<string> Enabled{ get; set; }
 
         ///<summary>
-        /// AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
+        /// Disabled
         ///</summary>
         public List<string> Disabled{ get; set; }
 

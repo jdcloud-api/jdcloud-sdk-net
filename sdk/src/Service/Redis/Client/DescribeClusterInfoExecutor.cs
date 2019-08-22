@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  查询Redis实例的内部集群信息
+    ///  查询Redis实例的集群内部信息
     /// </summary>
     public class DescribeClusterInfoExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询Redis实例的内部集群信息接口的Http 请求方法
+        ///  查询Redis实例的集群内部信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  查询Redis实例的内部集群信息接口的Http资源请求路径
+        ///  查询Redis实例的集群内部信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

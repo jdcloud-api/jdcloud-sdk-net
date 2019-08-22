@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Rds.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Rds.Apis
 {

@@ -99,6 +99,10 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
+        /// 实例跨地域备份服务开启相关信息
+        ///</summary>
+        public List<BackupSynchronicityAbstract> BackupSynchronicity{ get; set; }
+        ///<summary>
         /// 计费配置
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }

@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeParametersResult : JdcloudResult
     {
         ///<summary>
-        /// Parameters
+        /// 实例配置参数列表
         ///</summary>
         public List<DBInstanceParameter> Parameters{ get; set; }
 

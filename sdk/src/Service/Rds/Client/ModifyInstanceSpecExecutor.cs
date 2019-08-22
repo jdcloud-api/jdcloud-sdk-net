@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+    ///  实例扩容，支持升级实例的CPU，内存及磁盘。
     /// </summary>
     public class ModifyInstanceSpecExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  实例扩容，支持升级实例的CPU，内存及磁盘。接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  实例扩容，支持升级实例的CPU，内存及磁盘。接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

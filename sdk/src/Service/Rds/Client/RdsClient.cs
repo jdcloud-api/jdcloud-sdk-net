@@ -89,9 +89,9 @@ namespace JDCloudSDK.Rds.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -286,6 +286,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
             return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AlterTableWithOnlineDDLResponse AlterTableWithOnlineDDL(AlterTableWithOnlineDDLRequest request) {
+            return  new AlterTableWithOnlineDDLExecutor().Client(this).Execute<AlterTableWithOnlineDDLResponse, AlterTableWithOnlineDDLResult, AlterTableWithOnlineDDLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AlterTableWithOnlineDDLResponse> AlterTableWithOnlineDDL(AlterTableWithOnlineDDLRequest request) {
+            return await new AlterTableWithOnlineDDLExecutor().Client(this).Execute<AlterTableWithOnlineDDLResponse, AlterTableWithOnlineDDLResult, AlterTableWithOnlineDDLRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -632,7 +651,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+        ///  实例扩容，支持升级实例的CPU，内存及磁盘。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -641,7 +660,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+        ///  实例扩容，支持升级实例的CPU，内存及磁盘。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -704,6 +723,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterGroupAttachedInstancesResponse> DescribeParameterGroupAttachedInstances(DescribeParameterGroupAttachedInstancesRequest request) {
             return await new DescribeParameterGroupAttachedInstancesExecutor().Client(this).Execute<DescribeParameterGroupAttachedInstancesResponse, DescribeParameterGroupAttachedInstancesResult, DescribeParameterGroupAttachedInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看当前实例是否开启TDE
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTdeResponse DescribeTde(DescribeTdeRequest request) {
+            return  new DescribeTdeExecutor().Client(this).Execute<DescribeTdeResponse, DescribeTdeResult, DescribeTdeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看当前实例是否开启TDE
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTdeResponse> DescribeTde(DescribeTdeRequest request) {
+            return await new DescribeTdeExecutor().Client(this).Execute<DescribeTdeResponse, DescribeTdeResult, DescribeTdeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -879,6 +917,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开启数据库的TDE功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableTdeResponse EnableTde(EnableTdeRequest request) {
+            return  new EnableTdeExecutor().Client(this).Execute<EnableTdeResponse, EnableTdeResult, EnableTdeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启数据库的TDE功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableTdeResponse> EnableTde(EnableTdeRequest request) {
+            return await new EnableTdeExecutor().Client(this).Execute<EnableTdeResponse, EnableTdeResult, EnableTdeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -932,6 +989,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeActiveQueryPerformanceResponse> DescribeActiveQueryPerformance(DescribeActiveQueryPerformanceRequest request) {
             return await new DescribeActiveQueryPerformanceExecutor().Client(this).Execute<DescribeActiveQueryPerformanceResponse, DescribeActiveQueryPerformanceResult, DescribeActiveQueryPerformanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSuperAccountResponse CreateSuperAccount(CreateSuperAccountRequest request) {
+            return  new CreateSuperAccountExecutor().Client(this).Execute<CreateSuperAccountResponse, CreateSuperAccountResult, CreateSuperAccountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSuperAccountResponse> CreateSuperAccount(CreateSuperAccountRequest request) {
+            return await new CreateSuperAccountExecutor().Client(this).Execute<CreateSuperAccountResponse, CreateSuperAccountResult, CreateSuperAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1008,6 +1084,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
             return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置日志文件的下载链接过期时间，重新生成 PostgreSQL 的日志文件下载地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateLogDownloadURLInternalResponse UpdateLogDownloadURLInternal(UpdateLogDownloadURLInternalRequest request) {
+            return  new UpdateLogDownloadURLInternalExecutor().Client(this).Execute<UpdateLogDownloadURLInternalResponse, UpdateLogDownloadURLInternalResult, UpdateLogDownloadURLInternalRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置日志文件的下载链接过期时间，重新生成 PostgreSQL 的日志文件下载地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateLogDownloadURLInternalResponse> UpdateLogDownloadURLInternal(UpdateLogDownloadURLInternalRequest request) {
+            return await new UpdateLogDownloadURLInternalExecutor().Client(this).Execute<UpdateLogDownloadURLInternalResponse, UpdateLogDownloadURLInternalResult, UpdateLogDownloadURLInternalRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1221,7 +1316,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1230,7 +1325,7 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1335,7 +1430,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+        ///  使用实例的全量备份覆盖恢复当前实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1344,12 +1439,31 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+        ///  使用实例的全量备份覆盖恢复当前实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
             return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取 PostgreSQL 的日志文件列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLogsResponse DescribeLogs(DescribeLogsRequest request) {
+            return  new DescribeLogsExecutor().Client(this).Execute<DescribeLogsResponse, DescribeLogsResult, DescribeLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取 PostgreSQL 的日志文件列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLogsResponse> DescribeLogs(DescribeLogsRequest request) {
+            return await new DescribeLogsExecutor().Client(this).Execute<DescribeLogsResponse, DescribeLogsResult, DescribeLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

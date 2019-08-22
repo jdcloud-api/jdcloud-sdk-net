@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class RestoreDatabaseFromFileRequest : JdcloudRequest
     {
         ///<summary>
-        /// 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
+        /// 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
         ///</summary>
         public   string SharedFileGid{ get; set; }
         ///<summary>

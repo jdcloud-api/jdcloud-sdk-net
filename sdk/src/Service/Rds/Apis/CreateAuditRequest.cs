@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class CreateAuditRequest : JdcloudRequest
     {
         ///<summary>
-        /// 要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等&lt;br&gt;各个数据库版本支持的审计选项可以通过接口[getAuditOptions](./getAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档
+        /// 要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等&lt;br&gt;各个数据库版本支持的审计选项可以通过接口[describeAuditOptions](./describeAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档
         ///Required:true
         ///</summary>
         [Required]

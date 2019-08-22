@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeWhiteListResult : JdcloudResult
     {
         ///<summary>
-        /// WhiteLists
+        /// 白名单列表
         ///</summary>
         public List<WhiteList> WhiteLists{ get; set; }
 

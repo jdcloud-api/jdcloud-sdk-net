@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+    ///  实例扩容，支持升级实例的CPU，内存及磁盘。
     /// </summary>
     public class ModifyInstanceSpecResult : JdcloudResult
     {

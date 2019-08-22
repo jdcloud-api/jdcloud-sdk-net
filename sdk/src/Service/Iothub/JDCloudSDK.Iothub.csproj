@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net35;net40;net45;net46;net47;net48</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>JDCloud API Gateway</Authors>
+        <Company>JDCloud.com</Company>
         <Version>0.6.6.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>API related to IoT Hub</Description>

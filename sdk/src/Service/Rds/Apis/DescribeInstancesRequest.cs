@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Rds.Apis
@@ -55,6 +56,7 @@ namespace  JDCloudSDK.Rds.Apis
         /// engineVersion, 支持operator选项：eq
         /// instanceStatus, 支持operator选项：eq
         /// chargeMode, 支持operator选项：eq
+        /// vpcId, 支持operator选项：eq
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
