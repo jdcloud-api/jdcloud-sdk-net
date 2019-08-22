@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40;net45;net46;net47;net35</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net40;net45;net46;net47;net35;net48</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Configurations>Debug;Release;</Configurations>
     <Version>0.2.8</Version>
