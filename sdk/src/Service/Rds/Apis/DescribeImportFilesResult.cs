@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeImportFilesResult : JdcloudResult
     {
         ///<summary>
-        /// ImportFiles
+        /// 导入文件的集合
         ///</summary>
         public List<ImportFile> ImportFiles{ get; set; }
 

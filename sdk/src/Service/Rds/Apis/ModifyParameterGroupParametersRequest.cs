@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Rds.Model;
 using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Rds.Apis
@@ -43,7 +44,7 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public List<Array> Parameters{ get; set; }
+        public List<Parameter> Parameters{ get; set; }
 
         ///<summary>
         /// Region ID

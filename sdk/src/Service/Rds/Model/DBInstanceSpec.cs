@@ -62,7 +62,7 @@ namespace JDCloudSDK.Rds.Model
         [Required]
         public string InstanceClass{ get; set; }
         ///<summary>
-        /// 磁盘大小，单位GB
+        /// 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
         ///Required:true
         ///</summary>
         [Required]
@@ -99,6 +99,10 @@ namespace JDCloudSDK.Rds.Model
         /// 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string InstanceStorageType{ get; set; }
+        ///<summary>
+        /// 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+        ///</summary>
+        public string InstancePort{ get; set; }
         ///<summary>
         /// 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
         ///</summary>

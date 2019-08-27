@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeQueryPerformanceResult : JdcloudResult
     {
         ///<summary>
-        /// QueryPerformanceResult
+        /// 查询性能统计结果集
         ///</summary>
         public List<QueryPerformanceResult> QueryPerformanceResult{ get; set; }
 

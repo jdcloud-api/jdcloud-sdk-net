@@ -87,7 +87,7 @@ namespace JDCloudSDK.Redis.Model
         [Required]
         public int BackupStatus{ get; set; }
         ///<summary>
-        /// 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
+        /// 备份文件下载地址（已废弃，调用获取备份文件下载地址接口获取）
         ///Required:true
         ///</summary>
         [Required]

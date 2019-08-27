@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+    ///  使用实例的全量备份覆盖恢复当前实例
     /// </summary>
     public class RestoreInstanceRequest : JdcloudRequest
     {

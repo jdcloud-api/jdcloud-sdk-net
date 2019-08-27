@@ -138,21 +138,21 @@ namespace JDCloudSDK.Redis.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询账户的缓存Redis配额信息
+        ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest request) {
-            return  new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
+        public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
+            return  new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询账户的缓存Redis配额信息
+        ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
-            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
+            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -180,78 +180,59 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+        ///  创建并执行缓存Redis实例的备份任务，只能为手动备份，可设置备份文件名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCacheInstancesResponse DescribeCacheInstances(DescribeCacheInstancesRequest request) {
-            return  new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request);
+        public CreateBackupResponse CreateBackup(CreateBackupRequest request) {
+            return  new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+        ///  创建并执行缓存Redis实例的备份任务，只能为手动备份，可设置备份文件名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCacheInstancesResponse> DescribeCacheInstances(DescribeCacheInstancesRequest request) {
-            return await new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request).ConfigureAwait(false);
+        public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
+            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询Redis实例的内部集群信息
+        ///  查看缓存Redis实例的当前配置参数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeClusterInfoResponse DescribeClusterInfo(DescribeClusterInfoRequest request) {
-            return  new DescribeClusterInfoExecutor().Client(this).Execute<DescribeClusterInfoResponse, DescribeClusterInfoResult, DescribeClusterInfoRequest>(request);
+        public DescribeInstanceConfigResponse DescribeInstanceConfig(DescribeInstanceConfigRequest request) {
+            return  new DescribeInstanceConfigExecutor().Client(this).Execute<DescribeInstanceConfigResponse, DescribeInstanceConfigResult, DescribeInstanceConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询Redis实例的内部集群信息
+        ///  查看缓存Redis实例的当前配置参数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeClusterInfoResponse> DescribeClusterInfo(DescribeClusterInfoRequest request) {
-            return await new DescribeClusterInfoExecutor().Client(this).Execute<DescribeClusterInfoResponse, DescribeClusterInfoResult, DescribeClusterInfoRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeInstanceConfigResponse> DescribeInstanceConfig(DescribeInstanceConfigRequest request) {
+            return await new DescribeInstanceConfigExecutor().Client(this).Execute<DescribeInstanceConfigResponse, DescribeInstanceConfigResult, DescribeInstanceConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改缓存Redis实例的资源名称或描述，二者至少选一
+        ///  查询缓存Redis实例的自动备份策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyCacheInstanceAttributeResponse ModifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) {
-            return  new ModifyCacheInstanceAttributeExecutor().Client(this).Execute<ModifyCacheInstanceAttributeResponse, ModifyCacheInstanceAttributeResult, ModifyCacheInstanceAttributeRequest>(request);
+        public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
+            return  new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改缓存Redis实例的资源名称或描述，二者至少选一
+        ///  查询缓存Redis实例的自动备份策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyCacheInstanceAttributeResponse> ModifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) {
-            return await new ModifyCacheInstanceAttributeExecutor().Client(this).Execute<ModifyCacheInstanceAttributeResponse, ModifyCacheInstanceAttributeResult, ModifyCacheInstanceAttributeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询缓存Redis实例的详细信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCacheInstanceResponse DescribeCacheInstance(DescribeCacheInstanceRequest request) {
-            return  new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询缓存Redis实例的详细信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCacheInstanceResponse> DescribeCacheInstance(DescribeCacheInstanceRequest request) {
-            return await new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
+            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -300,25 +281,6 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询某区域下的缓存Redis实例规格列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceClassResponse DescribeInstanceClass(DescribeInstanceClassRequest request) {
-            return  new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询某区域下的缓存Redis实例规格列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceClassResponse> DescribeInstanceClass(DescribeInstanceClassRequest request) {
-            return await new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         /// 
         /// </summary>
@@ -336,6 +298,196 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateCacheInstanceResponse> CreateCacheInstance(CreateCacheInstanceRequest request) {
             return await new CreateCacheInstanceExecutor().Client(this).Execute<CreateCacheInstanceResponse, CreateCacheInstanceResult, CreateCacheInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  恢复缓存Redis实例的某次备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
+            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  恢复缓存Redis实例的某次备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询账户的缓存Redis配额信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest request) {
+            return  new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询账户的缓存Redis配额信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
+            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取缓存Redis实例的备份文件临时下载地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDownloadUrlResponse DescribeDownloadUrl(DescribeDownloadUrlRequest request) {
+            return  new DescribeDownloadUrlExecutor().Client(this).Execute<DescribeDownloadUrlResponse, DescribeDownloadUrlResult, DescribeDownloadUrlRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取缓存Redis实例的备份文件临时下载地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDownloadUrlResponse> DescribeDownloadUrl(DescribeDownloadUrlRequest request) {
+            return await new DescribeDownloadUrlExecutor().Client(this).Execute<DescribeDownloadUrlResponse, DescribeDownloadUrlResult, DescribeDownloadUrlRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCacheInstancesResponse DescribeCacheInstances(DescribeCacheInstancesRequest request) {
+            return  new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCacheInstancesResponse> DescribeCacheInstances(DescribeCacheInstancesRequest request) {
+            return await new DescribeCacheInstancesExecutor().Client(this).Execute<DescribeCacheInstancesResponse, DescribeCacheInstancesResult, DescribeCacheInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询Redis实例的集群内部信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeClusterInfoResponse DescribeClusterInfo(DescribeClusterInfoRequest request) {
+            return  new DescribeClusterInfoExecutor().Client(this).Execute<DescribeClusterInfoResponse, DescribeClusterInfoResult, DescribeClusterInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询Redis实例的集群内部信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeClusterInfoResponse> DescribeClusterInfo(DescribeClusterInfoRequest request) {
+            return await new DescribeClusterInfoExecutor().Client(this).Execute<DescribeClusterInfoResponse, DescribeClusterInfoResult, DescribeClusterInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改缓存Redis实例的资源名称或描述，二者至少选一
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyCacheInstanceAttributeResponse ModifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) {
+            return  new ModifyCacheInstanceAttributeExecutor().Client(this).Execute<ModifyCacheInstanceAttributeResponse, ModifyCacheInstanceAttributeResult, ModifyCacheInstanceAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改缓存Redis实例的资源名称或描述，二者至少选一
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyCacheInstanceAttributeResponse> ModifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) {
+            return await new ModifyCacheInstanceAttributeExecutor().Client(this).Execute<ModifyCacheInstanceAttributeResponse, ModifyCacheInstanceAttributeResult, ModifyCacheInstanceAttributeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询缓存Redis实例的备份结果（备份文件列表），可分页、可指定起止时间或备份任务ID
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request) {
+            return  new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询缓存Redis实例的备份结果（备份文件列表），可分页、可指定起止时间或备份任务ID
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupsResponse> DescribeBackups(DescribeBackupsRequest request) {
+            return await new DescribeBackupsExecutor().Client(this).Execute<DescribeBackupsResponse, DescribeBackupsResult, DescribeBackupsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询缓存Redis实例的详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCacheInstanceResponse DescribeCacheInstance(DescribeCacheInstanceRequest request) {
+            return  new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询缓存Redis实例的详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCacheInstanceResponse> DescribeCacheInstance(DescribeCacheInstanceRequest request) {
+            return await new DescribeCacheInstanceExecutor().Client(this).Execute<DescribeCacheInstanceResponse, DescribeCacheInstanceResult, DescribeCacheInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改缓存Redis实例的配置参数，支持部分参数修改
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceConfigResponse ModifyInstanceConfig(ModifyInstanceConfigRequest request) {
+            return  new ModifyInstanceConfigExecutor().Client(this).Execute<ModifyInstanceConfigResponse, ModifyInstanceConfigResult, ModifyInstanceConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改缓存Redis实例的配置参数，支持部分参数修改
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfig(ModifyInstanceConfigRequest request) {
+            return await new ModifyInstanceConfigExecutor().Client(this).Execute<ModifyInstanceConfigResponse, ModifyInstanceConfigResult, ModifyInstanceConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询某区域下的缓存Redis实例规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceClassResponse DescribeInstanceClass(DescribeInstanceClassRequest request) {
+            return  new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询某区域下的缓存Redis实例规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceClassResponse> DescribeInstanceClass(DescribeInstanceClassRequest request) {
+            return await new DescribeInstanceClassExecutor().Client(this).Execute<DescribeInstanceClassResponse, DescribeInstanceClassResult, DescribeInstanceClassRequest>(request).ConfigureAwait(false);
         }
 #endif
 

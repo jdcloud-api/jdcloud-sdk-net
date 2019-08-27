@@ -99,15 +99,15 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 参数组的ID
+        /// 参数组的ID&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string ParameterGroupId{ get; set; }
         ///<summary>
-        /// 参数组的名称
+        /// 参数组的名称&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string ParameterGroupName{ get; set; }
         ///<summary>
-        /// 参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+        /// 参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string ParameterStatus{ get; set; }
         ///<summary>
@@ -123,11 +123,11 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstancePort{ get; set; }
         ///<summary>
-        /// 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+        /// 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string ConnectionMode{ get; set; }
         ///<summary>
-        /// 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+        /// 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string AuditStatus{ get; set; }
         ///<summary>
@@ -143,11 +143,11 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        /// MySQL只读实例对应的主实例ID
+        /// MySQL只读实例对应的主实例ID&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public string SourceInstanceId{ get; set; }
         ///<summary>
-        /// 只读实例ID列表
+        /// 只读实例ID列表&lt;br&gt;- 仅支持MySQL
         ///</summary>
         public List<string> RoInstanceIds{ get; set; }
         ///<summary>

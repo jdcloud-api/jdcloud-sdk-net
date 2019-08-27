@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeErrorLogsResult : JdcloudResult
     {
         ///<summary>
-        /// ErrorLogs
+        /// 错误日志文件的集合
         ///</summary>
         public List<ErrorLog> ErrorLogs{ get; set; }
 

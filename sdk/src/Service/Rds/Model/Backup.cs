@@ -80,6 +80,6 @@ namespace JDCloudSDK.Rds.Model
         ///<summary>
         /// 整个备份集大小，单位：Byte
         ///</summary>
-        public int? BackupSizeByte{ get; set; }
+        public long? BackupSizeByte{ get; set; }
     }
 }

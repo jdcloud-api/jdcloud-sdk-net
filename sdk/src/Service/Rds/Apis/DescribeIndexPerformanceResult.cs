@@ -39,12 +39,12 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeIndexPerformanceResult : JdcloudResult
     {
         ///<summary>
-        /// MissingIndexResult
+        /// 当queryType为Missing时，返回结果集为MissingIndexResult&lt;br&gt;当queryType为其他值时，该字段为空
         ///</summary>
         public List<MissingIndexResult> MissingIndexResult{ get; set; }
 
         ///<summary>
-        /// IndexPerformanceResult
+        /// 当queryType为Missing时，该字段为空&lt;br&gt;当queryType为其他值时，返回IndexPerformanceResult
         ///</summary>
         public List<IndexPerformanceResult> IndexPerformanceResult{ get; set; }
 

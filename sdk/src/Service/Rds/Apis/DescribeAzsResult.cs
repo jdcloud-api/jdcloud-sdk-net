@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeAzsResult : JdcloudResult
     {
         ///<summary>
-        /// Azs
+        /// 可用区的ID的列表
         ///</summary>
         public List<string> Azs{ get; set; }
 

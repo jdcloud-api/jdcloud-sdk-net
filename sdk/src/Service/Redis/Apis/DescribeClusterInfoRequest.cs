@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  查询Redis实例的内部集群信息
+    ///  查询Redis实例的集群内部信息
     /// </summary>
     public class DescribeClusterInfoRequest : JdcloudRequest
     {

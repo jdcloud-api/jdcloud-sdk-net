@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeAuditResult : JdcloudResult
     {
         ///<summary>
-        /// 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
+        /// Enabled
         ///</summary>
         public List<string> Enabled{ get; set; }
 

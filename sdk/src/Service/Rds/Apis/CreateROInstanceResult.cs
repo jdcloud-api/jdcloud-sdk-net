@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class CreateROInstanceResult : JdcloudResult
     {
         ///<summary>
-        /// 新创建的只读实例ID
+        /// 新创建的只读实例ID的列表
         ///</summary>
         public List<string> RoInstanceId{ get; set; }
 

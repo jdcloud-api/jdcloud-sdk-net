@@ -39,7 +39,7 @@ namespace JDCloudSDK.Redis.Model
     {
 
         ///<summary>
-        /// 资源Id（即实例id）
+        /// 资源id（即实例id）
         ///Required:true
         ///</summary>
         [Required]

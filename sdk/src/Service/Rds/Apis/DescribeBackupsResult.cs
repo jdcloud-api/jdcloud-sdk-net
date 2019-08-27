@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeBackupsResult : JdcloudResult
     {
         ///<summary>
-        /// Backup
+        /// 备份集合
         ///</summary>
         public List<Backup> Backup{ get; set; }
 

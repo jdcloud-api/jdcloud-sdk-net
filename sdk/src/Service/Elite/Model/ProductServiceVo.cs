@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Elite.Model;
 
 namespace JDCloudSDK.Elite.Model
 {
@@ -46,6 +45,18 @@ namespace JDCloudSDK.Elite.Model
         /// 订单号
         ///</summary>
         public string OrderNumber{ get; set; }
+        ///<summary>
+        /// 购买人
+        ///</summary>
+        public string BuyerPin{ get; set; }
+        ///<summary>
+        /// 映射编号
+        ///</summary>
+        public string MappingCode{ get; set; }
+        ///<summary>
+        /// 是否支持自动交付：0表示不支持，1表示支持
+        ///</summary>
+        public int? SupportAutoDeliver{ get; set; }
         ///<summary>
         /// 产品ID
         ///</summary>

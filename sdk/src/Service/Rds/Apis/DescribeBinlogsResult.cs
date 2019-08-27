@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   int? TotalCount{ get; set; }
         ///<summary>
-        /// Binlogs
+        /// 备份集合
         ///</summary>
         public List<Binlog> Binlogs{ get; set; }
 

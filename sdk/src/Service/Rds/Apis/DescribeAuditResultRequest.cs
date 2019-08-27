@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Common.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Rds.Apis
 {
@@ -73,7 +73,7 @@ namespace  JDCloudSDK.Rds.Apis
         /// operation
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
