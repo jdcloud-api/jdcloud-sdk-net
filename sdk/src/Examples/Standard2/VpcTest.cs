@@ -69,6 +69,30 @@ namespace JDCloudSDK.Test.Standard2
         }
 
         [Fact]
+        public void TestAddNetworkSecurityGroup() {
+            VpcClient vpcClient = GetVpcClient();
+            AddNetworkSecurityGroupRulesRequest addNetworkSecurityGroupRulesRequest = new AddNetworkSecurityGroupRulesRequest();
+            addNetworkSecurityGroupRulesRequest.RegionId = "cn-north-1";
+            addNetworkSecurityGroupRulesRequest.NetworkSecurityGroupId = "sg-77av9y3jbr";
+            var addSecurityGroupRuleList = new List<AddSecurityGroupRules>();
+
+            AddSecurityGroupRules addSecurityGroupRules = new AddSecurityGroupRules();
+            addSecurityGroupRules.Direction = 0;
+            addSecurityGroupRules.Description = "test";
+            addSecurityGroupRules.FromPort = 8080;
+            addSecurityGroupRules.Protocol = 6;
+            addSecurityGroupRules.ToPort = 8080;
+            addSecurityGroupRules.AddressPrefix = "0.0.0.0/0";
+            
+            addSecurityGroupRuleList.Add(addSecurityGroupRules);
+            
+            addNetworkSecurityGroupRulesRequest.NetworkSecurityGroupRuleSpecs = addSecurityGroupRuleList;
+            var response = vpcClient.AddNetworkSecurityGroupRules(addNetworkSecurityGroupRulesRequest).Result;
+            _output.WriteLine(JsonConvert.SerializeObject(response));
+
+        }
+
+        [Fact]
         public void TestVpcDeleteElasticIp()
         {
             VpcClient vpcClient = GetVpcClient();
