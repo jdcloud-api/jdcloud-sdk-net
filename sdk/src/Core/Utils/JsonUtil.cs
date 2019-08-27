@@ -15,12 +15,12 @@ namespace JDCloudSDK.Core.Utils
         /// </summary>
         /// <param name="data">要进行转换的对象</param>
         /// <returns>对象转换为小驼峰格式的json 字符串</returns>
-        public static string ObjectToJson(Object data)
+        public static string ObjectToJson(object data)
         {
             var json = JsonConvert.SerializeObject(
             data,
             Formatting.None,
-            new JsonSerializerSettings { ContractResolver = new JDCloudCamelCasePropertyNamesContractResolver() }
+            new JsonSerializerSettings { ContractResolver = new JDCloudCamelCasePropertyNamesContractResolver(), Converters = { new CustomerDoubleConvert() ,new CustomerDoubleNullConvert() } }
             );
 
             return json;
