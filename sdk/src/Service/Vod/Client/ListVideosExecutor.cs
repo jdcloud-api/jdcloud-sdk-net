@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Video
- * 视频资源管理相关接口
+ * 音视频管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,24 @@ namespace JDCloudSDK.Vod.Client
 {
 
     /// <summary>
-    ///  查询视频列表信息
+    ///  查询视频列表信息。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - status[eq] 按视频状态精确查询
+        ///   - categoryId[eq] 按分类ID精确查询
+        ///   - videoId[eq] 按视频ID精确查询
+        ///   - name[eq] 按视频名称精确查询
+        /// 
     /// </summary>
     public class ListVideosExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询视频列表信息接口的Http 请求方法
+        ///  查询视频列表信息。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - status[eq] 按视频状态精确查询
+        ///   - categoryId[eq] 按分类ID精确查询
+        ///   - videoId[eq] 按视频ID精确查询
+        ///   - name[eq] 按视频名称精确查询
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +59,13 @@ namespace JDCloudSDK.Vod.Client
             }
         }
         /// <summary>
-        ///  查询视频列表信息接口的Http资源请求路径
+        ///  查询视频列表信息。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - status[eq] 按视频状态精确查询
+        ///   - categoryId[eq] 按分类ID精确查询
+        ///   - videoId[eq] 按视频ID精确查询
+        ///   - name[eq] 按视频名称精确查询
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

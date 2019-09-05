@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 转码模板管理
+ * 转码模板管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -43,7 +43,8 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   long? Id{ get; set; }
         ///<summary>
-        /// 模板名称
+        /// 模板名称。长度不超过128个字符。UTF-8编码。
+        /// 
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>

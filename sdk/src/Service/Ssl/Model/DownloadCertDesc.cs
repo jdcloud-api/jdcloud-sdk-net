@@ -57,5 +57,21 @@ namespace JDCloudSDK.Ssl.Model
         /// 对私钥文件使用sha256算法计算的摘要信息
         ///</summary>
         public string Digest{ get; set; }
+        ///<summary>
+        /// 中间证书
+        ///</summary>
+        public string CaCertFile{ get; set; }
+        ///<summary>
+        /// 证书应用服务器类型
+        ///</summary>
+        public string ServerType{ get; set; }
+        ///<summary>
+        /// 证书加密密码
+        ///</summary>
+        public string CertEncryptePassword{ get; set; }
+        ///<summary>
+        /// 域名
+        ///</summary>
+        public string CommonName{ get; set; }
     }
 }

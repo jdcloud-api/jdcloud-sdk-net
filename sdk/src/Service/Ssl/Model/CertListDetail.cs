@@ -81,5 +81,13 @@ namespace JDCloudSDK.Ssl.Model
         /// 是否允许被下载,0-&gt;不允许,1-&gt;允许
         ///</summary>
         public int? Downloadable{ get; set; }
+        ///<summary>
+        /// 是否允许被更新,0-&gt;不允许,1-&gt;允许
+        ///</summary>
+        public int? Updateable{ get; set; }
+        ///<summary>
+        /// 证书状态
+        ///</summary>
+        public int? CertStatus{ get; set; }
     }
 }

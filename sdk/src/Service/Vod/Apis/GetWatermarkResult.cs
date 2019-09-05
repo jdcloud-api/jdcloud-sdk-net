@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Watermark
- * 水印管理
+ * 水印管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -42,7 +42,8 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   long? Id{ get; set; }
         ///<summary>
-        /// 水印名称
+        /// 水印名称。只支持中英文、数字。长度不超过128个字符。UTF-8编码。
+        /// 
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
@@ -50,34 +51,57 @@ namespace  JDCloudSDK.Vod.Apis
         ///</summary>
         public   string ImgUrl{ get; set; }
         ///<summary>
-        /// 水印宽度
+        /// 水印宽度。
+        /// 当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+        /// 当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+        /// 
         ///</summary>
-        public   int? Width{ get; set; }
+        public   string Width{ get; set; }
         ///<summary>
-        /// 水印高度
+        /// 水印高度。
+        /// 当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+        /// 当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+        /// 
         ///</summary>
-        public   int? Height{ get; set; }
+        public   string Height{ get; set; }
+        ///<summary>
+        /// 尺寸单位。取值范围：
+        ///   pixel - 像素
+        ///   percent - 百分比
+        /// 默认值为 pixel
+        /// 
+        ///</summary>
+        public   string SizeUnit{ get; set; }
         ///<summary>
         /// 水印位置。取值范围：
         ///   LT - 左上
         ///   RT - 右上
         ///   LB - 左下
         ///   RB - 右下
-        /// 
         ///</summary>
         public   string Position{ get; set; }
         ///<summary>
-        /// 偏移单位，目前仅支持像素
+        /// 水平偏移。
+        /// 当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+        /// 当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+        /// 
         ///</summary>
-        public   string Unit{ get; set; }
+        public   string OffsetX{ get; set; }
         ///<summary>
-        /// 水平偏移
+        /// 竖直偏移。
+        /// 当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+        /// 当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+        /// 
         ///</summary>
-        public   int? OffsetX{ get; set; }
+        public   string OffsetY{ get; set; }
         ///<summary>
-        /// 竖直偏移
+        /// 偏移单位。取值范围：
+        ///   pixel - 像素
+        ///   percent - 百分比
+        /// 默认值为 pixel
+        /// 
         ///</summary>
-        public   int? OffsetY{ get; set; }
+        public   string OffsetUnit{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ssl.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.1.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.1.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,40 +138,21 @@ namespace JDCloudSDK.Ssl.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  下载证书 [MFA enabled]
+        ///  更新证书 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DownloadCertResponse DownloadCert(DownloadCertRequest request) {
-            return  new DownloadCertExecutor().Client(this).Execute<DownloadCertResponse, DownloadCertResult, DownloadCertRequest>(request);
+        public UpdateCertResponse UpdateCert(UpdateCertRequest request) {
+            return  new UpdateCertExecutor().Client(this).Execute<UpdateCertResponse, UpdateCertResult, UpdateCertRequest>(request);
         }
 #else
         /// <summary>
-        ///  下载证书 [MFA enabled]
+        ///  更新证书 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DownloadCertResponse> DownloadCert(DownloadCertRequest request) {
-            return await new DownloadCertExecutor().Client(this).Execute<DownloadCertResponse, DownloadCertResult, DownloadCertRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看证书列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCertsResponse DescribeCerts(DescribeCertsRequest request) {
-            return  new DescribeCertsExecutor().Client(this).Execute<DescribeCertsResponse, DescribeCertsResult, DescribeCertsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看证书列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCertsResponse> DescribeCerts(DescribeCertsRequest request) {
-            return await new DescribeCertsExecutor().Client(this).Execute<DescribeCertsResponse, DescribeCertsResult, DescribeCertsRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateCertResponse> UpdateCert(UpdateCertRequest request) {
+            return await new UpdateCertExecutor().Client(this).Execute<UpdateCertResponse, UpdateCertResult, UpdateCertRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -229,6 +210,63 @@ namespace JDCloudSDK.Ssl.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCertsResponse> DeleteCerts(DeleteCertsRequest request) {
             return await new DeleteCertsExecutor().Client(this).Execute<DeleteCertsResponse, DeleteCertsResult, DeleteCertsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  下载证书 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DownloadCertResponse DownloadCert(DownloadCertRequest request) {
+            return  new DownloadCertExecutor().Client(this).Execute<DownloadCertResponse, DownloadCertResult, DownloadCertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  下载证书 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DownloadCertResponse> DownloadCert(DownloadCertRequest request) {
+            return await new DownloadCertExecutor().Client(this).Execute<DownloadCertResponse, DownloadCertResult, DownloadCertRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看证书列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCertsResponse DescribeCerts(DescribeCertsRequest request) {
+            return  new DescribeCertsExecutor().Client(this).Execute<DescribeCertsResponse, DescribeCertsResult, DescribeCertsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看证书列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCertsResponse> DescribeCerts(DescribeCertsRequest request) {
+            return await new DescribeCertsExecutor().Client(this).Execute<DescribeCertsResponse, DescribeCertsResult, DescribeCertsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改证书名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCertNameResponse UpdateCertName(UpdateCertNameRequest request) {
+            return  new UpdateCertNameExecutor().Client(this).Execute<UpdateCertNameResponse, UpdateCertNameResult, UpdateCertNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改证书名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCertNameResponse> UpdateCertName(UpdateCertNameRequest request) {
+            return await new UpdateCertNameExecutor().Client(this).Execute<UpdateCertNameResponse, UpdateCertNameResult, UpdateCertNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 

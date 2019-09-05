@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Category
- * 媒资分类相关接口
+ * 分类管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,8 +34,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  查询分类列表，按照分页方式，返回分类列表信息
-        ///         /// 
+    ///  查询分类列表。按照分页方式，返回分类列表信息。
     /// </summary>
     public class ListCategoriesResult : JdcloudResult
     {

@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Ssl.Apis
     public class DescribeCertsResult : JdcloudResult
     {
         ///<summary>
-        /// CertListDetails
+        /// 证书列表详情
         ///</summary>
         public List<CertListDetail> CertListDetails{ get; set; }
 

@@ -39,6 +39,14 @@ namespace  JDCloudSDK.Ssl.Apis
     public class DescribeCertRequest : JdcloudRequest
     {
         ///<summary>
+        /// 第几页，从1开始计数
+        ///</summary>
+        public   int? PageNumber{ get; set; }
+        ///<summary>
+        /// 每页显示的数目
+        ///</summary>
+        public   int? PageSize{ get; set; }
+        ///<summary>
         /// 证书 Id
         ///Required:true
         ///</summary>

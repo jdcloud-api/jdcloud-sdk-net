@@ -138,6 +138,25 @@ namespace JDCloudSDK.Vod.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  批量提交质检作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchSubmitQualityDetectionJobsResponse BatchSubmitQualityDetectionJobs(BatchSubmitQualityDetectionJobsRequest request) {
+            return  new BatchSubmitQualityDetectionJobsExecutor().Client(this).Execute<BatchSubmitQualityDetectionJobsResponse, BatchSubmitQualityDetectionJobsResult, BatchSubmitQualityDetectionJobsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量提交质检作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchSubmitQualityDetectionJobsResponse> BatchSubmitQualityDetectionJobs(BatchSubmitQualityDetectionJobsRequest request) {
+            return await new BatchSubmitQualityDetectionJobsExecutor().Client(this).Execute<BatchSubmitQualityDetectionJobsResponse, BatchSubmitQualityDetectionJobsResult, BatchSubmitQualityDetectionJobsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除转码模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -153,44 +172,6 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteTranscodeTemplateResponse> DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest request) {
             return await new DeleteTranscodeTemplateExecutor().Client(this).Execute<DeleteTranscodeTemplateResponse, DeleteTranscodeTemplateResult, DeleteTranscodeTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取视频播放信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetVideoPlayInfoResponse GetVideoPlayInfo(GetVideoPlayInfoRequest request) {
-            return  new GetVideoPlayInfoExecutor().Client(this).Execute<GetVideoPlayInfoResponse, GetVideoPlayInfoResult, GetVideoPlayInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取视频播放信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetVideoPlayInfoResponse> GetVideoPlayInfo(GetVideoPlayInfoRequest request) {
-            return await new GetVideoPlayInfoExecutor().Client(this).Execute<GetVideoPlayInfoResponse, GetVideoPlayInfoResult, GetVideoPlayInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除域名访问头参数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteHeaderResponse DeleteHeader(DeleteHeaderRequest request) {
-            return  new DeleteHeaderExecutor().Client(this).Execute<DeleteHeaderResponse, DeleteHeaderResult, DeleteHeaderRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除域名访问头参数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteHeaderResponse> DeleteHeader(DeleteHeaderRequest request) {
-            return await new DeleteHeaderExecutor().Client(this).Execute<DeleteHeaderResponse, DeleteHeaderResult, DeleteHeaderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -252,44 +233,6 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateCategoryResponse UpdateCategory(UpdateCategoryRequest request) {
-            return  new UpdateCategoryExecutor().Client(this).Execute<UpdateCategoryResponse, UpdateCategoryResult, UpdateCategoryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateCategoryResponse> UpdateCategory(UpdateCategoryRequest request) {
-            return await new UpdateCategoryExecutor().Client(this).Execute<UpdateCategoryResponse, UpdateCategoryResult, UpdateCategoryRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置CDN域名Referer防盗链规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetRefererRuleResponse SetRefererRule(SetRefererRuleRequest request) {
-            return  new SetRefererRuleExecutor().Client(this).Execute<SetRefererRuleResponse, SetRefererRuleResult, SetRefererRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置CDN域名Referer防盗链规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetRefererRuleResponse> SetRefererRule(SetRefererRuleRequest request) {
-            return await new SetRefererRuleExecutor().Client(this).Execute<SetRefererRuleResponse, SetRefererRuleResult, SetRefererRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询CDN域名URL鉴权规则配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -305,44 +248,6 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetURLRuleResponse> GetURLRule(GetURLRuleRequest request) {
             return await new GetURLRuleExecutor().Client(this).Execute<GetURLRuleResponse, GetURLRuleResult, GetURLRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询CDN域名Referer防盗链规则配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetRefererRuleResponse GetRefererRule(GetRefererRuleRequest request) {
-            return  new GetRefererRuleExecutor().Client(this).Execute<GetRefererRuleResponse, GetRefererRuleResult, GetRefererRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询CDN域名Referer防盗链规则配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetRefererRuleResponse> GetRefererRule(GetRefererRuleRequest request) {
-            return await new GetRefererRuleExecutor().Client(this).Execute<GetRefererRuleResponse, GetRefererRuleResult, GetRefererRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request) {
-            return  new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest request) {
-            return await new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -404,34 +309,10 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加分类
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateCategoryResponse CreateCategory(CreateCategoryRequest request) {
-            return  new CreateCategoryExecutor().Client(this).Execute<CreateCategoryResponse, CreateCategoryResult, CreateCategoryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加分类
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateCategoryResponse> CreateCategory(CreateCategoryRequest request) {
-            return await new CreateCategoryExecutor().Client(this).Execute<CreateCategoryResponse, CreateCategoryResult, CreateCategoryRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
-        /// - source 模板来源。枚举值，取值范围为：
-        ///   - system 系统预置
-        ///   - custom 用户自建
-        /// - templateType 模板类型。枚举值，取值范围：
-        ///   - jdchd 京享超清
-        ///   - jdchs 极速转码
+        ///  查询转码模板列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - source[eq] 按模板来源精确查询
+        ///   - templateType[eq] 按模板类型精确查询
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -441,38 +322,16 @@ namespace JDCloudSDK.Vod.Client
         }
 #else
         /// <summary>
-        ///  查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
-        /// - source 模板来源。枚举值，取值范围为：
-        ///   - system 系统预置
-        ///   - custom 用户自建
-        /// - templateType 模板类型。枚举值，取值范围：
-        ///   - jdchd 京享超清
-        ///   - jdchs 极速转码
+        ///  查询转码模板列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - source[eq] 按模板来源精确查询
+        ///   - templateType[eq] 按模板类型精确查询
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ListTranscodeTemplatesResponse> ListTranscodeTemplates(ListTranscodeTemplatesRequest request) {
             return await new ListTranscodeTemplatesExecutor().Client(this).Execute<ListTranscodeTemplatesResponse, ListTranscodeTemplatesResult, ListTranscodeTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询水印列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListWatermarksResponse ListWatermarks(ListWatermarksRequest request) {
-            return  new ListWatermarksExecutor().Client(this).Execute<ListWatermarksResponse, ListWatermarksResult, ListWatermarksRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询水印列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListWatermarksResponse> ListWatermarks(ListWatermarksRequest request) {
-            return await new ListWatermarksExecutor().Client(this).Execute<ListWatermarksResponse, ListWatermarksResult, ListWatermarksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -534,44 +393,6 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置域名访问头参数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetHeaderResponse SetHeader(SetHeaderRequest request) {
-            return  new SetHeaderExecutor().Client(this).Execute<SetHeaderResponse, SetHeaderResult, SetHeaderRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置域名访问头参数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetHeaderResponse> SetHeader(SetHeaderRequest request) {
-            return await new SetHeaderExecutor().Client(this).Execute<SetHeaderResponse, SetHeaderResult, SetHeaderRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  刷新视频上传地址和凭证
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RefreshVideoUploadTaskResponse RefreshVideoUploadTask(RefreshVideoUploadTaskRequest request) {
-            return  new RefreshVideoUploadTaskExecutor().Client(this).Execute<RefreshVideoUploadTaskResponse, RefreshVideoUploadTaskResult, RefreshVideoUploadTaskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  刷新视频上传地址和凭证
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RefreshVideoUploadTaskResponse> RefreshVideoUploadTask(RefreshVideoUploadTaskRequest request) {
-            return await new RefreshVideoUploadTaskExecutor().Client(this).Execute<RefreshVideoUploadTaskResponse, RefreshVideoUploadTaskResult, RefreshVideoUploadTaskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  提交转码作业
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -610,40 +431,23 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询单个视频信息
+        ///  查询质测模板列表。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetVideoResponse GetVideo(GetVideoRequest request) {
-            return  new GetVideoExecutor().Client(this).Execute<GetVideoResponse, GetVideoResult, GetVideoRequest>(request);
+        public ListQualityDetectionTemplatesResponse ListQualityDetectionTemplates(ListQualityDetectionTemplatesRequest request) {
+            return  new ListQualityDetectionTemplatesExecutor().Client(this).Execute<ListQualityDetectionTemplatesResponse, ListQualityDetectionTemplatesResult, ListQualityDetectionTemplatesRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询单个视频信息
+        ///  查询质测模板列表。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetVideoResponse> GetVideo(GetVideoRequest request) {
-            return await new GetVideoExecutor().Client(this).Execute<GetVideoResponse, GetVideoResult, GetVideoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询视频列表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListVideosResponse ListVideos(ListVideosRequest request) {
-            return  new ListVideosExecutor().Client(this).Execute<ListVideosResponse, ListVideosResult, ListVideosRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询视频列表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListVideosResponse> ListVideos(ListVideosRequest request) {
-            return await new ListVideosExecutor().Client(this).Execute<ListVideosResponse, ListVideosResult, ListVideosRequest>(request).ConfigureAwait(false);
+        public async Task<ListQualityDetectionTemplatesResponse> ListQualityDetectionTemplates(ListQualityDetectionTemplatesRequest request) {
+            return await new ListQualityDetectionTemplatesExecutor().Client(this).Execute<ListQualityDetectionTemplatesResponse, ListQualityDetectionTemplatesResult, ListQualityDetectionTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -686,21 +490,21 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加水印
+        ///  修改质检模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateWatermarkResponse CreateWatermark(CreateWatermarkRequest request) {
-            return  new CreateWatermarkExecutor().Client(this).Execute<CreateWatermarkResponse, CreateWatermarkResult, CreateWatermarkRequest>(request);
+        public UpdateQualityDetectionTemplateResponse UpdateQualityDetectionTemplate(UpdateQualityDetectionTemplateRequest request) {
+            return  new UpdateQualityDetectionTemplateExecutor().Client(this).Execute<UpdateQualityDetectionTemplateResponse, UpdateQualityDetectionTemplateResult, UpdateQualityDetectionTemplateRequest>(request);
         }
 #else
         /// <summary>
-        ///  添加水印
+        ///  修改质检模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateWatermarkResponse> CreateWatermark(CreateWatermarkRequest request) {
-            return await new CreateWatermarkExecutor().Client(this).Execute<CreateWatermarkResponse, CreateWatermarkResult, CreateWatermarkRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateQualityDetectionTemplateResponse> UpdateQualityDetectionTemplate(UpdateQualityDetectionTemplateRequest request) {
+            return await new UpdateQualityDetectionTemplateExecutor().Client(this).Execute<UpdateQualityDetectionTemplateResponse, UpdateQualityDetectionTemplateResult, UpdateQualityDetectionTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -720,63 +524,6 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainResponse> GetDomain(GetDomainRequest request) {
             return await new GetDomainExecutor().Client(this).Execute<GetDomainResponse, GetDomainResult, GetDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVideoResponse DeleteVideo(DeleteVideoRequest request) {
-            return  new DeleteVideoExecutor().Client(this).Execute<DeleteVideoResponse, DeleteVideoResult, DeleteVideoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVideoResponse> DeleteVideo(DeleteVideoRequest request) {
-            return await new DeleteVideoExecutor().Client(this).Execute<DeleteVideoResponse, DeleteVideoResult, DeleteVideoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询CDN域名IP黑名单规则配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetIPRuleResponse GetIPRule(GetIPRuleRequest request) {
-            return  new GetIPRuleExecutor().Client(this).Execute<GetIPRuleResponse, GetIPRuleResult, GetIPRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询CDN域名IP黑名单规则配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetIPRuleResponse> GetIPRule(GetIPRuleRequest request) {
-            return await new GetIPRuleExecutor().Client(this).Execute<GetIPRuleResponse, GetIPRuleResult, GetIPRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableDomainResponse EnableDomain(EnableDomainRequest request) {
-            return  new EnableDomainExecutor().Client(this).Execute<EnableDomainResponse, EnableDomainResult, EnableDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableDomainResponse> EnableDomain(EnableDomainRequest request) {
-            return await new EnableDomainExecutor().Client(this).Execute<EnableDomainResponse, EnableDomainResult, EnableDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -815,25 +562,6 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteVideoStreamsResponse> DeleteVideoStreams(DeleteVideoStreamsRequest request) {
             return await new DeleteVideoStreamsExecutor().Client(this).Execute<DeleteVideoStreamsResponse, DeleteVideoStreamsResult, DeleteVideoStreamsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建转码模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
-            return  new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建转码模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateTranscodeTemplateResponse> CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
-            return await new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -933,27 +661,6 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询分类列表，按照分页方式，返回分类列表信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListCategoriesResponse ListCategories(ListCategoriesRequest request) {
-            return  new ListCategoriesExecutor().Client(this).Execute<ListCategoriesResponse, ListCategoriesResult, ListCategoriesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询分类列表，按照分页方式，返回分类列表信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListCategoriesResponse> ListCategories(ListCategoriesRequest request) {
-            return await new ListCategoriesExecutor().Client(this).Execute<ListCategoriesResponse, ListCategoriesResult, ListCategoriesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除分类
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -969,6 +676,455 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCategoryResponse> DeleteCategory(DeleteCategoryRequest request) {
             return await new DeleteCategoryExecutor().Client(this).Execute<DeleteCategoryResponse, DeleteCategoryResult, DeleteCategoryRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取视频播放信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVideoPlayInfoResponse GetVideoPlayInfo(GetVideoPlayInfoRequest request) {
+            return  new GetVideoPlayInfoExecutor().Client(this).Execute<GetVideoPlayInfoResponse, GetVideoPlayInfoResult, GetVideoPlayInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取视频播放信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVideoPlayInfoResponse> GetVideoPlayInfo(GetVideoPlayInfoRequest request) {
+            return await new GetVideoPlayInfoExecutor().Client(this).Execute<GetVideoPlayInfoResponse, GetVideoPlayInfoResult, GetVideoPlayInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除域名访问头参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteHeaderResponse DeleteHeader(DeleteHeaderRequest request) {
+            return  new DeleteHeaderExecutor().Client(this).Execute<DeleteHeaderResponse, DeleteHeaderResult, DeleteHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名访问头参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteHeaderResponse> DeleteHeader(DeleteHeaderRequest request) {
+            return await new DeleteHeaderExecutor().Client(this).Execute<DeleteHeaderResponse, DeleteHeaderResult, DeleteHeaderRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改分类
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCategoryResponse UpdateCategory(UpdateCategoryRequest request) {
+            return  new UpdateCategoryExecutor().Client(this).Execute<UpdateCategoryResponse, UpdateCategoryResult, UpdateCategoryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改分类
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCategoryResponse> UpdateCategory(UpdateCategoryRequest request) {
+            return await new UpdateCategoryExecutor().Client(this).Execute<UpdateCategoryResponse, UpdateCategoryResult, UpdateCategoryRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置CDN域名Referer防盗链规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetRefererRuleResponse SetRefererRule(SetRefererRuleRequest request) {
+            return  new SetRefererRuleExecutor().Client(this).Execute<SetRefererRuleResponse, SetRefererRuleResult, SetRefererRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置CDN域名Referer防盗链规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetRefererRuleResponse> SetRefererRule(SetRefererRuleRequest request) {
+            return await new SetRefererRuleExecutor().Client(this).Execute<SetRefererRuleResponse, SetRefererRuleResult, SetRefererRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateQualityDetectionTemplateResponse CreateQualityDetectionTemplate(CreateQualityDetectionTemplateRequest request) {
+            return  new CreateQualityDetectionTemplateExecutor().Client(this).Execute<CreateQualityDetectionTemplateResponse, CreateQualityDetectionTemplateResult, CreateQualityDetectionTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateQualityDetectionTemplateResponse> CreateQualityDetectionTemplate(CreateQualityDetectionTemplateRequest request) {
+            return await new CreateQualityDetectionTemplateExecutor().Client(this).Execute<CreateQualityDetectionTemplateResponse, CreateQualityDetectionTemplateResult, CreateQualityDetectionTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询CDN域名Referer防盗链规则配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetRefererRuleResponse GetRefererRule(GetRefererRuleRequest request) {
+            return  new GetRefererRuleExecutor().Client(this).Execute<GetRefererRuleResponse, GetRefererRuleResult, GetRefererRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询CDN域名Referer防盗链规则配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetRefererRuleResponse> GetRefererRule(GetRefererRuleRequest request) {
+            return await new GetRefererRuleExecutor().Client(this).Execute<GetRefererRuleResponse, GetRefererRuleResult, GetRefererRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetQualityDetectionTemplateResponse GetQualityDetectionTemplate(GetQualityDetectionTemplateRequest request) {
+            return  new GetQualityDetectionTemplateExecutor().Client(this).Execute<GetQualityDetectionTemplateResponse, GetQualityDetectionTemplateResult, GetQualityDetectionTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetQualityDetectionTemplateResponse> GetQualityDetectionTemplate(GetQualityDetectionTemplateRequest request) {
+            return await new GetQualityDetectionTemplateExecutor().Client(this).Execute<GetQualityDetectionTemplateResponse, GetQualityDetectionTemplateResult, GetQualityDetectionTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除域名。执行该操作，需确保域名已被停用。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request) {
+            return  new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名。执行该操作，需确保域名已被停用。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest request) {
+            return await new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加分类
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCategoryResponse CreateCategory(CreateCategoryRequest request) {
+            return  new CreateCategoryExecutor().Client(this).Execute<CreateCategoryResponse, CreateCategoryResult, CreateCategoryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加分类
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCategoryResponse> CreateCategory(CreateCategoryRequest request) {
+            return await new CreateCategoryExecutor().Client(this).Execute<CreateCategoryResponse, CreateCategoryResult, CreateCategoryRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询水印列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListWatermarksResponse ListWatermarks(ListWatermarksRequest request) {
+            return  new ListWatermarksExecutor().Client(this).Execute<ListWatermarksResponse, ListWatermarksResult, ListWatermarksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询水印列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListWatermarksResponse> ListWatermarks(ListWatermarksRequest request) {
+            return await new ListWatermarksExecutor().Client(this).Execute<ListWatermarksResponse, ListWatermarksResult, ListWatermarksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询CDN域名SSL配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetHttpSslResponse GetHttpSsl(GetHttpSslRequest request) {
+            return  new GetHttpSslExecutor().Client(this).Execute<GetHttpSslResponse, GetHttpSslResult, GetHttpSslRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询CDN域名SSL配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetHttpSslResponse> GetHttpSsl(GetHttpSslRequest request) {
+            return await new GetHttpSslExecutor().Client(this).Execute<GetHttpSslResponse, GetHttpSslResult, GetHttpSslRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置域名访问头参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHeaderResponse SetHeader(SetHeaderRequest request) {
+            return  new SetHeaderExecutor().Client(this).Execute<SetHeaderResponse, SetHeaderResult, SetHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置域名访问头参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHeaderResponse> SetHeader(SetHeaderRequest request) {
+            return await new SetHeaderExecutor().Client(this).Execute<SetHeaderResponse, SetHeaderResult, SetHeaderRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  刷新视频上传地址和凭证
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RefreshVideoUploadTaskResponse RefreshVideoUploadTask(RefreshVideoUploadTaskRequest request) {
+            return  new RefreshVideoUploadTaskExecutor().Client(this).Execute<RefreshVideoUploadTaskResponse, RefreshVideoUploadTaskResult, RefreshVideoUploadTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  刷新视频上传地址和凭证
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RefreshVideoUploadTaskResponse> RefreshVideoUploadTask(RefreshVideoUploadTaskRequest request) {
+            return await new RefreshVideoUploadTaskExecutor().Client(this).Execute<RefreshVideoUploadTaskResponse, RefreshVideoUploadTaskResult, RefreshVideoUploadTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个视频信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVideoResponse GetVideo(GetVideoRequest request) {
+            return  new GetVideoExecutor().Client(this).Execute<GetVideoResponse, GetVideoResult, GetVideoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个视频信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVideoResponse> GetVideo(GetVideoRequest request) {
+            return await new GetVideoExecutor().Client(this).Execute<GetVideoResponse, GetVideoResult, GetVideoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频列表信息。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - status[eq] 按视频状态精确查询
+        ///   - categoryId[eq] 按分类ID精确查询
+        ///   - videoId[eq] 按视频ID精确查询
+        ///   - name[eq] 按视频名称精确查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListVideosResponse ListVideos(ListVideosRequest request) {
+            return  new ListVideosExecutor().Client(this).Execute<ListVideosResponse, ListVideosResult, ListVideosRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频列表信息。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - status[eq] 按视频状态精确查询
+        ///   - categoryId[eq] 按分类ID精确查询
+        ///   - videoId[eq] 按视频ID精确查询
+        ///   - name[eq] 按视频名称精确查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListVideosResponse> ListVideos(ListVideosRequest request) {
+            return await new ListVideosExecutor().Client(this).Execute<ListVideosResponse, ListVideosResult, ListVideosRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加水印
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateWatermarkResponse CreateWatermark(CreateWatermarkRequest request) {
+            return  new CreateWatermarkExecutor().Client(this).Execute<CreateWatermarkResponse, CreateWatermarkResult, CreateWatermarkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加水印
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateWatermarkResponse> CreateWatermark(CreateWatermarkRequest request) {
+            return await new CreateWatermarkExecutor().Client(this).Execute<CreateWatermarkResponse, CreateWatermarkResult, CreateWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVideoResponse DeleteVideo(DeleteVideoRequest request) {
+            return  new DeleteVideoExecutor().Client(this).Execute<DeleteVideoResponse, DeleteVideoResult, DeleteVideoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVideoResponse> DeleteVideo(DeleteVideoRequest request) {
+            return await new DeleteVideoExecutor().Client(this).Execute<DeleteVideoResponse, DeleteVideoResult, DeleteVideoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  提交质检作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SubmitQualityDetectionJobResponse SubmitQualityDetectionJob(SubmitQualityDetectionJobRequest request) {
+            return  new SubmitQualityDetectionJobExecutor().Client(this).Execute<SubmitQualityDetectionJobResponse, SubmitQualityDetectionJobResult, SubmitQualityDetectionJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  提交质检作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SubmitQualityDetectionJobResponse> SubmitQualityDetectionJob(SubmitQualityDetectionJobRequest request) {
+            return await new SubmitQualityDetectionJobExecutor().Client(this).Execute<SubmitQualityDetectionJobResponse, SubmitQualityDetectionJobResult, SubmitQualityDetectionJobRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询CDN域名IP黑名单规则配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetIPRuleResponse GetIPRule(GetIPRuleRequest request) {
+            return  new GetIPRuleExecutor().Client(this).Execute<GetIPRuleResponse, GetIPRuleResult, GetIPRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询CDN域名IP黑名单规则配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetIPRuleResponse> GetIPRule(GetIPRuleRequest request) {
+            return await new GetIPRuleExecutor().Client(this).Execute<GetIPRuleResponse, GetIPRuleResult, GetIPRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableDomainResponse EnableDomain(EnableDomainRequest request) {
+            return  new EnableDomainExecutor().Client(this).Execute<EnableDomainResponse, EnableDomainResult, EnableDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableDomainResponse> EnableDomain(EnableDomainRequest request) {
+            return await new EnableDomainExecutor().Client(this).Execute<EnableDomainResponse, EnableDomainResult, EnableDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置CDN域名SSL配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHttpSslResponse SetHttpSsl(SetHttpSslRequest request) {
+            return  new SetHttpSslExecutor().Client(this).Execute<SetHttpSslResponse, SetHttpSslResult, SetHttpSslRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置CDN域名SSL配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHttpSslResponse> SetHttpSsl(SetHttpSslRequest request) {
+            return await new SetHttpSslExecutor().Client(this).Execute<SetHttpSslResponse, SetHttpSslResult, SetHttpSslRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
+            return  new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTranscodeTemplateResponse> CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
+            return await new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询分类列表。按照分页方式，返回分类列表信息。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListCategoriesResponse ListCategories(ListCategoriesRequest request) {
+            return  new ListCategoriesExecutor().Client(this).Execute<ListCategoriesResponse, ListCategoriesResult, ListCategoriesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询分类列表。按照分页方式，返回分类列表信息。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListCategoriesResponse> ListCategories(ListCategoriesRequest request) {
+            return await new ListCategoriesExecutor().Client(this).Execute<ListCategoriesResponse, ListCategoriesResult, ListCategoriesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1007,6 +1163,25 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisableDomainResponse> DisableDomain(DisableDomainRequest request) {
             return await new DisableDomainExecutor().Client(this).Execute<DisableDomainResponse, DisableDomainResult, DisableDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteQualityDetectionTemplateResponse DeleteQualityDetectionTemplate(DeleteQualityDetectionTemplateRequest request) {
+            return  new DeleteQualityDetectionTemplateExecutor().Client(this).Execute<DeleteQualityDetectionTemplateResponse, DeleteQualityDetectionTemplateResult, DeleteQualityDetectionTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteQualityDetectionTemplateResponse> DeleteQualityDetectionTemplate(DeleteQualityDetectionTemplateRequest request) {
+            return await new DeleteQualityDetectionTemplateExecutor().Client(this).Execute<DeleteQualityDetectionTemplateResponse, DeleteQualityDetectionTemplateResult, DeleteQualityDetectionTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 

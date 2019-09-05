@@ -58,9 +58,13 @@ namespace JDCloudSDK.Ssl.Model
         ///</summary>
         public string CertType{ get; set; }
         ///<summary>
-        /// 域名个数
+        /// 域名的个数
         ///</summary>
         public int? DomainCount{ get; set; }
+        ///<summary>
+        /// 泛域名的个数
+        ///</summary>
+        public int? WildcardDomainCount{ get; set; }
         ///<summary>
         /// 证书年限
         ///</summary>
@@ -80,7 +84,7 @@ namespace JDCloudSDK.Ssl.Model
         ///<summary>
         /// RecordValidate
         ///</summary>
-        public object RecordValidate{ get; set; }
+        public RecordValidate RecordValidate{ get; set; }
         ///<summary>
         /// 公司名称
         ///</summary>
@@ -97,5 +101,9 @@ namespace JDCloudSDK.Ssl.Model
         /// 联系人邮箱
         ///</summary>
         public string Email{ get; set; }
+        ///<summary>
+        /// 自动DNS验证结果信息
+        ///</summary>
+        public string ErrorMessage{ get; set; }
     }
 }

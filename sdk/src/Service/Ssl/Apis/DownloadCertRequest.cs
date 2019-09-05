@@ -39,10 +39,16 @@ namespace  JDCloudSDK.Ssl.Apis
     public class DownloadCertRequest : JdcloudRequest
     {
         ///<summary>
-        /// 证书 Id
+        /// 证书Id,以逗号分隔多个Id
         ///Required:true
         ///</summary>
         [Required]
         public   string CertId{ get; set; }
+        ///<summary>
+        /// 证书应用的服务器类型(Nginx Apache Tomcat IIS Other)
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string ServerType{ get; set; }
     }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Video
- * 视频资源管理相关接口
+ * 音视频管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,17 +40,17 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// 删除成功的转码任务ID列表
         ///</summary>
-        public List<double?> OkTaskIds{ get; set; }
+        public List<long?> OkTaskIds{ get; set; }
 
         ///<summary>
         /// 未找到的转码任务ID列表
         ///</summary>
-        public List<double?> NotFoundTaskIds{ get; set; }
+        public List<long?> NotFoundTaskIds{ get; set; }
 
         ///<summary>
         /// 删除失败的转码任务ID列表
         ///</summary>
-        public List<double?> FailedTaskIds{ get; set; }
+        public List<long?> FailedTaskIds{ get; set; }
 
     }
 }

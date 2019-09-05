@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Task
- * 媒体处理 - 视频转码
+ * 视频转码任务相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -44,12 +44,12 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// 转码模板ID列表
         ///</summary>
-        public List<double?> TemplateIds{ get; set; }
+        public List<long?> TemplateIds{ get; set; }
 
         ///<summary>
         /// 水印ID列表
         ///</summary>
-        public List<double?> WatermarkIds{ get; set; }
+        public List<long?> WatermarkIds{ get; set; }
 
     }
 }

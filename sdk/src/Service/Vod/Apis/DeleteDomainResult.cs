@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Domain
- * 域名管理
+ * 域名配置相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Vod.Apis
 {
 
     /// <summary>
-    ///  删除域名
+    ///  删除域名。执行该操作，需确保域名已被停用。
     /// </summary>
     public class DeleteDomainResult : JdcloudResult
     {

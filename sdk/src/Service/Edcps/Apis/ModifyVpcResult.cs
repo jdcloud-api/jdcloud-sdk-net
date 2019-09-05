@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Common definitions and parameters
- * 公共实体与参数定义
+ * 分布式云物理服务器
+ * 分布式云物理服务器私有网络操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,32 +26,22 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Edcps.Model;
 
-namespace JDCloudSDK.Vod.Model
+namespace  JDCloudSDK.Edcps.Apis
 {
 
     /// <summary>
-    ///  pageProperties
+    ///  修改私有网络
+        ///         /// 
     /// </summary>
-    public class PageProperties
+    public class ModifyVpcResult : JdcloudResult
     {
-
         ///<summary>
-        /// 当前页码
+        /// 私有网络详细信息
         ///</summary>
-        public int? PageNumber{ get; set; }
-        ///<summary>
-        /// 每页数量
-        ///</summary>
-        public int? PageSize{ get; set; }
-        ///<summary>
-        /// 查询总数
-        ///</summary>
-        public int? TotalElements{ get; set; }
-        ///<summary>
-        /// 总页数
-        ///</summary>
-        public int? TotalPages{ get; set; }
+        public   JDCloudSDK.Edcps.Model.Vpc Vpc{ get; set; }
     }
 }

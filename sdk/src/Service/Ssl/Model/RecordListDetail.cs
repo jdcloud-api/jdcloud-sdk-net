@@ -78,8 +78,16 @@ namespace JDCloudSDK.Ssl.Model
         ///</summary>
         public int? DomainCount{ get; set; }
         ///<summary>
+        /// 购买泛域名数量
+        ///</summary>
+        public int? WildcardDomainCount{ get; set; }
+        ///<summary>
         /// 备用域名
         ///</summary>
         public List<string> DnsNames{ get; set; }
+        ///<summary>
+        /// 证书Id
+        ///</summary>
+        public string CertId{ get; set; }
     }
 }

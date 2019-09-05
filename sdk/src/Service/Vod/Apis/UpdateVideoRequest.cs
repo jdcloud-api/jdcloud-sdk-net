@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Video
- * 视频资源管理相关接口
+ * 音视频管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// 分类ID
         ///</summary>
-        public   double? CategoryId{ get; set; }
+        public   long? CategoryId{ get; set; }
         ///<summary>
         /// 标签
         ///</summary>

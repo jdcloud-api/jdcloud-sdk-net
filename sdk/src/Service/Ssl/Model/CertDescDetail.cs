@@ -74,6 +74,10 @@ namespace JDCloudSDK.Ssl.Model
         ///</summary>
         public string Digest{ get; set; }
         ///<summary>
+        /// 绑定信息的总数量
+        ///</summary>
+        public int? TotalCount{ get; set; }
+        ///<summary>
         /// 证书关联信息
         ///</summary>
         public List<CertBindInfo> UsedBy{ get; set; }

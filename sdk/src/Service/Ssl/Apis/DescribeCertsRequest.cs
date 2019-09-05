@@ -49,5 +49,9 @@ namespace  JDCloudSDK.Ssl.Apis
         /// 域名，支持按照域名检索证书
         ///</summary>
         public   string DomainName{ get; set; }
+        ///<summary>
+        /// 证书id/别名
+        ///</summary>
+        public   string CertIds{ get; set; }
     }
 }
