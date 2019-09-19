@@ -50,9 +50,9 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public long? NormalRuleCount{ get; set; }
         ///<summary>
-        /// 报警联系人列表
+        /// 产品标识
         ///</summary>
-        public string ServiceCode{ get; set; }
+        public string Product{ get; set; }
         ///<summary>
         /// 监控规则 总数
         ///</summary>

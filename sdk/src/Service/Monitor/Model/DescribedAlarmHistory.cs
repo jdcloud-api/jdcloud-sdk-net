@@ -38,13 +38,17 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// Alarm
+        /// 报警规则ID
         ///</summary>
-        public DescribedAlarm Alarm{ get; set; }
+        public string AlarmId{ get; set; }
         ///<summary>
-        /// 告警联系人
+        /// 资源维度
         ///</summary>
-        public List<DescribedNoticeContacts> Contacts{ get; set; }
+        public string Dimension{ get; set; }
+        ///<summary>
+        /// 资源维度名称
+        ///</summary>
+        public string DimensionName{ get; set; }
         ///<summary>
         /// 告警持续次数
         ///</summary>
@@ -54,6 +58,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public long? NoticeDurationTime{ get; set; }
         ///<summary>
+        /// 用于前端显示的‘触发告警级别’。从低到高分别为‘普通’, ‘紧急’, ‘严重’
+        ///</summary>
+        public string NoticeLevel{ get; set; }
+        ///<summary>
         /// 触发的告警级别。从低到高分别为‘common’, ‘critical’, ‘fatal’
         ///</summary>
         public string NoticeLevelTriggered{ get; set; }
@@ -61,6 +69,38 @@ namespace JDCloudSDK.Monitor.Model
         /// 告警时间
         ///</summary>
         public DateTime? NoticeTime{ get; set; }
+        ///<summary>
+        /// 资源类型
+        ///</summary>
+        public string Product{ get; set; }
+        ///<summary>
+        /// 资源类型名称
+        ///</summary>
+        public string ProductName{ get; set; }
+        ///<summary>
+        /// 告警通知人
+        ///</summary>
+        public List<NoticeReceiver> Receivers{ get; set; }
+        ///<summary>
+        /// 资源Id
+        ///</summary>
+        public string ResourceId{ get; set; }
+        ///<summary>
+        /// Rule
+        ///</summary>
+        public BasicRuleDetail Rule{ get; set; }
+        ///<summary>
+        /// 规则类型
+        ///</summary>
+        public string RuleType{ get; set; }
+        ///<summary>
+        /// 告警类型  1-告警恢复  2-告警 4-数据不足
+        ///</summary>
+        public long? Status{ get; set; }
+        ///<summary>
+        /// 资源tags
+        ///</summary>
+        public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
         /// 告警值
         ///</summary>

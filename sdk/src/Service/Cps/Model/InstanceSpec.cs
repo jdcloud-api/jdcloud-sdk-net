@@ -124,10 +124,8 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 密码
-        ///Required:true
+        /// 密码，不传值会随机生成密码
         ///</summary>
-        [Required]
         public string Password{ get; set; }
         ///<summary>
         /// 购买数量
@@ -135,6 +133,14 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         [Required]
         public int Count{ get; set; }
+        ///<summary>
+        /// 可执行脚本Base64编码后的内容，支持shell和python脚本
+        ///</summary>
+        public string UserData{ get; set; }
+        ///<summary>
+        /// 密钥对id
+        ///</summary>
+        public string KeypairId{ get; set; }
         ///<summary>
         /// 计费配置
         ///Required:true

@@ -62,21 +62,9 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string StickySession{ get; set; }
         ///<summary>
-        /// 会话保持超时时间，单位s
-        ///</summary>
-        public int? StickySessionTimeout{ get; set; }
-        ///<summary>
-        /// 会话类型
-        ///</summary>
-        public string CookieType{ get; set; }
-        ///<summary>
         /// 获取真实ip
         ///</summary>
         public string RealIp{ get; set; }
-        ///<summary>
-        /// 证书ID
-        ///</summary>
-        public string CertificateId{ get; set; }
         ///<summary>
         /// 状态
         ///</summary>
@@ -89,10 +77,6 @@ namespace JDCloudSDK.Cps.Model
         /// 描述
         ///</summary>
         public string Description{ get; set; }
-        ///<summary>
-        /// HTTP扩展头部
-        ///</summary>
-        public List<string> Headers{ get; set; }
         ///<summary>
         /// 健康检查状态，取值on|off
         ///</summary>
@@ -113,14 +97,6 @@ namespace JDCloudSDK.Cps.Model
         /// 健康检查结果为fail的阈值
         ///</summary>
         public int? UnhealthyThreshold{ get; set; }
-        ///<summary>
-        /// 健康检查的URI
-        ///</summary>
-        public string HealthCheckUri{ get; set; }
-        ///<summary>
-        /// 健康检查正常的HTTP状态码
-        ///</summary>
-        public string HealthCheckHttpCode{ get; set; }
         ///<summary>
         /// 健康检查ip
         ///</summary>

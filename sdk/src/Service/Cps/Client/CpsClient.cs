@@ -488,6 +488,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryKeypairResponse QueryKeypair(QueryKeypairRequest request) {
+            return  new QueryKeypairExecutor().Client(this).Execute<QueryKeypairResponse, QueryKeypairResult, QueryKeypairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryKeypairResponse> QueryKeypair(QueryKeypairRequest request) {
+            return await new QueryKeypairExecutor().Client(this).Execute<QueryKeypairResponse, QueryKeypairResult, QueryKeypairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询云物理服务器地域列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -560,6 +579,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest request) {
             return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询密钥对列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryKeypairsResponse QueryKeypairs(QueryKeypairsRequest request) {
+            return  new QueryKeypairsExecutor().Client(this).Execute<QueryKeypairsResponse, QueryKeypairsResult, QueryKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryKeypairsResponse> QueryKeypairs(QueryKeypairsRequest request) {
+            return await new QueryKeypairsExecutor().Client(this).Execute<QueryKeypairsResponse, QueryKeypairsResult, QueryKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -834,6 +872,27 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  重置云物理服务器密码
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
+            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置云物理服务器密码
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  绑定弹性公网IP
         /// 
         /// </summary>
@@ -971,6 +1030,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateKeypairsResponse CreateKeypairs(CreateKeypairsRequest request) {
+            return  new CreateKeypairsExecutor().Client(this).Execute<CreateKeypairsResponse, CreateKeypairsResult, CreateKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateKeypairsResponse> CreateKeypairs(CreateKeypairsRequest request) {
+            return await new CreateKeypairsExecutor().Client(this).Execute<CreateKeypairsResponse, CreateKeypairsResult, CreateKeypairsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  移除后端服务器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -986,6 +1064,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<RemoveServerResponse> RemoveServer(RemoveServerRequest request) {
             return await new RemoveServerExecutor().Client(this).Execute<RemoveServerResponse, RemoveServerResult, RemoveServerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导入密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImportKeypairsResponse ImportKeypairs(ImportKeypairsRequest request) {
+            return  new ImportKeypairsExecutor().Client(this).Execute<ImportKeypairsResponse, ImportKeypairsResult, ImportKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导入密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImportKeypairsResponse> ImportKeypairs(ImportKeypairsRequest request) {
+            return await new ImportKeypairsExecutor().Client(this).Execute<ImportKeypairsResponse, ImportKeypairsResult, ImportKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1300,6 +1397,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
             return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteKeypairsResponse DeleteKeypairs(DeleteKeypairsRequest request) {
+            return  new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteKeypairsResponse> DeleteKeypairs(DeleteKeypairsRequest request) {
+            return await new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

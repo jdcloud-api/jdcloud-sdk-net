@@ -38,24 +38,16 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// metric单位
+        /// metric 单位
         ///</summary>
         public string CalculateUnit{ get; set; }
         ///<summary>
-        /// metric
-        ///</summary>
-        public string Metric{ get; set; }
-        ///<summary>
-        /// metricID
-        ///</summary>
-        public long? MetricId{ get; set; }
-        ///<summary>
-        /// metric中文显示名称
+        /// metric名称
         ///</summary>
         public string MetricName{ get; set; }
         ///<summary>
-        /// 资源的类型
+        /// metric uid
         ///</summary>
-        public string ServiceCode{ get; set; }
+        public string MetricUid{ get; set; }
     }
 }

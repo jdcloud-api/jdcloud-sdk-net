@@ -155,6 +155,14 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string PublicIpv6{ get; set; }
         ///<summary>
+        /// 密钥对id
+        ///</summary>
+        public string KeypairId{ get; set; }
+        ///<summary>
+        /// agent状态
+        ///</summary>
+        public string AgentStatus{ get; set; }
+        ///<summary>
         /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }

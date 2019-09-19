@@ -70,6 +70,10 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string SubnetId{ get; set; }
         ///<summary>
+        /// 密钥对ID
+        ///</summary>
+        public   string KeypairId{ get; set; }
+        ///<summary>
         /// 是否启用外网, yes/no
         ///</summary>
         public   string EnableInternet{ get; set; }

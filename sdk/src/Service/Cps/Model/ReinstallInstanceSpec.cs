@@ -84,5 +84,13 @@ namespace JDCloudSDK.Cps.Model
         /// 主机名
         ///</summary>
         public string Hostname{ get; set; }
+        ///<summary>
+        /// 可执行脚本Base64编码后的内容，支持shell和python脚本
+        ///</summary>
+        public string UserData{ get; set; }
+        ///<summary>
+        /// 秘钥对id
+        ///</summary>
+        public string KeypairId{ get; set; }
     }
 }

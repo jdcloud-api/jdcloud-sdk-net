@@ -39,11 +39,15 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
+        /// 聚合方式，可选值参考:sum、avg、min、max
         ///</summary>
         public string AggrType{ get; set; }
         ///<summary>
-        /// 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
+        /// 资源的维度。当serviceCode下存在多个维度时，查询数据必须指定相应的维度
+        ///</summary>
+        public string Dimension{ get; set; }
+        ///<summary>
+        /// 采样方式，可选值参考：sum、avg、last、min、max
         ///</summary>
         public string DownSampleType{ get; set; }
         ///<summary>
@@ -68,10 +72,8 @@ namespace JDCloudSDK.Monitor.Model
         [Required]
         public string ResourceId{ get; set; }
         ///<summary>
-        /// 资源的类型，取值vm, lb, ip, database 等
-        ///Required:true
+        /// 资源的类型，取值vm, lb, ip, database 等,&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
         ///</summary>
-        [Required]
         public string ServiceCode{ get; set; }
         ///<summary>
         /// 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）

@@ -70,7 +70,7 @@ namespace  JDCloudSDK.Cps.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+        /// 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]

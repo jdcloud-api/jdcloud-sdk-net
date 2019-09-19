@@ -39,30 +39,56 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 通知联系人
+        /// 告警通知联系人
         ///</summary>
-        public List<BaseContact> Contacts{ get; set; }
+        public List<BaseContact> BaseContact{ get; set; }
         ///<summary>
-        /// Rule
+        /// 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
+        ///</summary>
+        public string Dimension{ get; set; }
+        ///<summary>
+        /// 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+        ///</summary>
+        public long? Enabled{ get; set; }
+        ///<summary>
+        /// 通知策略
+        ///</summary>
+        public List<NoticeOption> NoticeOption{ get; set; }
+        ///<summary>
+        /// 资源类型, 可用的资源类型列表请使用 describeProductsForAlarm接口查询。
         ///Required:true
         ///</summary>
         [Required]
-        public BaseRule Rule{ get; set; }
+        public string Product{ get; set; }
         ///<summary>
-        /// 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
+        /// ResourceOption
+        ///Required:true
         ///</summary>
-        public string WebHookContent{ get; set; }
+        [Required]
+        public ResourceOption ResourceOption{ get; set; }
         ///<summary>
-        /// webHook协议，目前支持http，https
+        /// 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        ///Required:true
         ///</summary>
-        public string WebHookProtocol{ get; set; }
+        [Required]
+        public string RuleName{ get; set; }
         ///<summary>
-        /// 回调secret，用户请求签名，防伪造
+        /// RuleOption
+        ///Required:true
         ///</summary>
-        public string WebHookSecret{ get; set; }
+        [Required]
+        public RuleOption RuleOption{ get; set; }
         ///<summary>
-        /// 回调url，例如http://www.jdcloud.com
+        /// 规则类型, 默认为resourceMonitor
         ///</summary>
-        public string WebHookUrl{ get; set; }
+        public string RuleType{ get; set; }
+        ///<summary>
+        /// 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)
+        ///</summary>
+        public Dictionary<String,string> Tags{ get; set; }
+        ///<summary>
+        /// WebHookOption
+        ///</summary>
+        public WebHookOption WebHookOption{ get; set; }
     }
 }

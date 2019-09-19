@@ -38,12 +38,20 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// RuleCnt     int64  &#x60;json:&quot;ruleCnt&quot; xorm:&quot;cnt&quot;&#x60;
+        /// 维度
+        ///</summary>
+        public string Dimension{ get; set; }
+        ///<summary>
+        /// 产品类型
+        ///</summary>
+        public string Product{ get; set; }
+        ///<summary>
+        /// Region
+        ///</summary>
+        public string Region{ get; set; }
+        ///<summary>
+        /// ResourceId
         ///</summary>
         public string ResourceId{ get; set; }
-        ///<summary>
-        /// ServiceCode
-        ///</summary>
-        public string ServiceCode{ get; set; }
     }
 }

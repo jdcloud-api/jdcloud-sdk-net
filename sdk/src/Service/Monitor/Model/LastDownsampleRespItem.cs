@@ -46,6 +46,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
+        /// Tags
+        ///</summary>
+        public Dictionary<String,string> Tags{ get; set; }
+        ///<summary>
         /// Value
         ///</summary>
         public object Value{ get; set; }

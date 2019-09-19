@@ -50,10 +50,6 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string GroupName{ get; set; }
         ///<summary>
-        /// 分组内的metric列表
-        ///</summary>
-        public List<string> Metrics{ get; set; }
-        ///<summary>
         /// 分组下metric对应的tags
         ///</summary>
         public Dictionary<String,string> Tags{ get; set; }
