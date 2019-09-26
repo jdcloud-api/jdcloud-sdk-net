@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询播放鉴权KEY
+    ///  查询(直播or时移)播放鉴权KEY
     /// </summary>
     public class DescribeLivePlayAuthKeyResult : JdcloudResult
     {
@@ -42,14 +42,14 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   string PlayDomain{ get; set; }
         ///<summary>
-        /// 播放鉴权状态
+        /// (直播or时移)播放鉴权状态
         ///   on: 开启
         ///   off: 关闭
         /// 
         ///</summary>
         public   string AuthStatus{ get; set; }
         ///<summary>
-        /// 播放鉴权key
+        /// (直播or时移)播放鉴权key
         ///</summary>
         public   string AuthKey{ get; set; }
     }

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询播放鉴权KEY
+    ///  查询(直播or时移)播放鉴权KEY
     /// </summary>
     public class DescribeLivePlayAuthKeyResponse : JdcloudResponse<DescribeLivePlayAuthKeyResult>
     {

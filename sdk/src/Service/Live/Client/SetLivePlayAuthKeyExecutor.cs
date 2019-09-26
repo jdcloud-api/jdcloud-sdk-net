@@ -33,12 +33,12 @@ namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  设置播放鉴权KEY
+    ///  设置(直播or时移)播放鉴权KEY
     /// </summary>
     public class SetLivePlayAuthKeyExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置播放鉴权KEY接口的Http 请求方法
+        ///  设置(直播or时移)播放鉴权KEY接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Live.Client
             }
         }
         /// <summary>
-        ///  设置播放鉴权KEY接口的Http资源请求路径
+        ///  设置(直播or时移)播放鉴权KEY接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

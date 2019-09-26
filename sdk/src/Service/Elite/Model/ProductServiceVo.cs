@@ -46,6 +46,14 @@ namespace JDCloudSDK.Elite.Model
         ///</summary>
         public string OrderNumber{ get; set; }
         ///<summary>
+        /// 订单类型
+        ///</summary>
+        public int? OrderType{ get; set; }
+        ///<summary>
+        /// 订单类型名称
+        ///</summary>
+        public string OrderTypeName{ get; set; }
+        ///<summary>
         /// 购买人
         ///</summary>
         public string BuyerPin{ get; set; }
