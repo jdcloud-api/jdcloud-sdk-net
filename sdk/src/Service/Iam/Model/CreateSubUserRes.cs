@@ -50,6 +50,10 @@ namespace JDCloudSDK.Iam.Model
         ///</summary>
         public string Email{ get; set; }
         ///<summary>
+        /// 手机号码
+        ///</summary>
+        public string Phone{ get; set; }
+        ///<summary>
         /// accessKey
         ///</summary>
         public string AccessKey{ get; set; }

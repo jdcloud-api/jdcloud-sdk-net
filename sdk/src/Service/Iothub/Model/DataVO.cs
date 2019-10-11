@@ -74,20 +74,32 @@ namespace JDCloudSDK.Iothub.Model
         ///</summary>
         public string PriDomain{ get; set; }
         ///<summary>
-        /// 实例状态[0-创建中，1-运行中，2-停止]
+        /// IoT Hub实例状态[10~100为创建中,0或1-运行中,2-欠费停服,3-待删除]
         ///</summary>
-        public string Status{ get; set; }
-        ///<summary>
-        /// 资费形式
-        ///</summary>
-        public string Feetype{ get; set; }
+        public int? Status{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>
-        public string CreateTime{ get; set; }
+        public int? CreateTime{ get; set; }
+        ///<summary>
+        /// 实例到期时间
+        ///</summary>
+        public int? EndTime{ get; set; }
+        ///<summary>
+        /// 最大在线设备数
+        ///</summary>
+        public int? MaxDevices{ get; set; }
+        ///<summary>
+        /// 最大消息条数
+        ///</summary>
+        public int? MaxMessage{ get; set; }
         ///<summary>
         /// 实例编号
         ///</summary>
         public string InstanceId{ get; set; }
+        ///<summary>
+        /// 实例类型[0-独享，1-共享]
+        ///</summary>
+        public string InstanceType{ get; set; }
     }
 }

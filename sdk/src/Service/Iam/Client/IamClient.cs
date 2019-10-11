@@ -138,25 +138,6 @@ namespace JDCloudSDK.Iam.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询子用户策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSubUserPermissionsResponse DescribeSubUserPermissions(DescribeSubUserPermissionsRequest request) {
-            return  new DescribeSubUserPermissionsExecutor().Client(this).Execute<DescribeSubUserPermissionsResponse, DescribeSubUserPermissionsResult, DescribeSubUserPermissionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询子用户策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubUserPermissionsResponse> DescribeSubUserPermissions(DescribeSubUserPermissionsRequest request) {
-            return await new DescribeSubUserPermissionsExecutor().Client(this).Execute<DescribeSubUserPermissionsResponse, DescribeSubUserPermissionsResult, DescribeSubUserPermissionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除子用户信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -176,44 +157,6 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdatePermissionResponse UpdatePermission(UpdatePermissionRequest request) {
-            return  new UpdatePermissionExecutor().Client(this).Execute<UpdatePermissionResponse, UpdatePermissionResult, UpdatePermissionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdatePermissionResponse> UpdatePermission(UpdatePermissionRequest request) {
-            return await new UpdatePermissionExecutor().Client(this).Execute<UpdatePermissionResponse, UpdatePermissionResult, UpdatePermissionRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  为子用户绑定策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AttachSubUserPolicyResponse AttachSubUserPolicy(AttachSubUserPolicyRequest request) {
-            return  new AttachSubUserPolicyExecutor().Client(this).Execute<AttachSubUserPolicyResponse, AttachSubUserPolicyResult, AttachSubUserPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为子用户绑定策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AttachSubUserPolicyResponse> AttachSubUserPolicy(AttachSubUserPolicyRequest request) {
-            return await new AttachSubUserPolicyExecutor().Client(this).Execute<AttachSubUserPolicyResponse, AttachSubUserPolicyResult, AttachSubUserPolicyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询用户组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -229,25 +172,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeGroupsResponse> DescribeGroups(DescribeGroupsRequest request) {
             return await new DescribeGroupsExecutor().Client(this).Execute<DescribeGroupsResponse, DescribeGroupsResult, DescribeGroupsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询子用户列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSubUsersResponse DescribeSubUsers(DescribeSubUsersRequest request) {
-            return  new DescribeSubUsersExecutor().Client(this).Execute<DescribeSubUsersResponse, DescribeSubUsersResult, DescribeSubUsersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询子用户列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubUsersResponse> DescribeSubUsers(DescribeSubUsersRequest request) {
-            return await new DescribeSubUsersExecutor().Client(this).Execute<DescribeSubUsersResponse, DescribeSubUsersResult, DescribeSubUsersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -309,25 +233,6 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  禁用子用户的AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableSubUserAccessKeyResponse DisableSubUserAccessKey(DisableSubUserAccessKeyRequest request) {
-            return  new DisableSubUserAccessKeyExecutor().Client(this).Execute<DisableSubUserAccessKeyResponse, DisableSubUserAccessKeyResult, DisableSubUserAccessKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  禁用子用户的AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableSubUserAccessKeyResponse> DisableSubUserAccessKey(DisableSubUserAccessKeyRequest request) {
-            return await new DisableSubUserAccessKeyExecutor().Client(this).Execute<DisableSubUserAccessKeyResponse, DisableSubUserAccessKeyResult, DisableSubUserAccessKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  为角色绑定策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -347,25 +252,6 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribePoliciesResponse DescribePolicies(DescribePoliciesRequest request) {
-            return  new DescribePoliciesExecutor().Client(this).Execute<DescribePoliciesResponse, DescribePoliciesResult, DescribePoliciesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribePoliciesResponse> DescribePolicies(DescribePoliciesRequest request) {
-            return await new DescribePoliciesExecutor().Client(this).Execute<DescribePoliciesResponse, DescribePoliciesResult, DescribePoliciesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询子用户所属的所有组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -381,44 +267,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubUserGroupsResponse> DescribeSubUserGroups(DescribeSubUserGroupsRequest request) {
             return await new DescribeSubUserGroupsExecutor().Client(this).Execute<DescribeSubUserGroupsResponse, DescribeSubUserGroupsResult, DescribeSubUserGroupsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribePermissionsResponse DescribePermissions(DescribePermissionsRequest request) {
-            return  new DescribePermissionsExecutor().Client(this).Execute<DescribePermissionsResponse, DescribePermissionsResult, DescribePermissionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribePermissionsResponse> DescribePermissions(DescribePermissionsRequest request) {
-            return await new DescribePermissionsExecutor().Client(this).Execute<DescribePermissionsResponse, DescribePermissionsResult, DescribePermissionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreatePolicyResponse CreatePolicy(CreatePolicyRequest request) {
-            return  new CreatePolicyExecutor().Client(this).Execute<CreatePolicyResponse, CreatePolicyResult, CreatePolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreatePolicyResponse> CreatePolicy(CreatePolicyRequest request) {
-            return await new CreatePolicyExecutor().Client(this).Execute<CreatePolicyResponse, CreatePolicyResult, CreatePolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -480,44 +328,6 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询角色授权策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeRolePoliciesResponse DescribeRolePolicies(DescribeRolePoliciesRequest request) {
-            return  new DescribeRolePoliciesExecutor().Client(this).Execute<DescribeRolePoliciesResponse, DescribeRolePoliciesResult, DescribeRolePoliciesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询角色授权策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeRolePoliciesResponse> DescribeRolePolicies(DescribeRolePoliciesRequest request) {
-            return await new DescribeRolePoliciesExecutor().Client(this).Execute<DescribeRolePoliciesResponse, DescribeRolePoliciesResult, DescribeRolePoliciesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteUserAccessKeyResponse DeleteUserAccessKey(DeleteUserAccessKeyRequest request) {
-            return  new DeleteUserAccessKeyExecutor().Client(this).Execute<DeleteUserAccessKeyResponse, DeleteUserAccessKeyResult, DeleteUserAccessKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteUserAccessKeyResponse> DeleteUserAccessKey(DeleteUserAccessKeyRequest request) {
-            return await new DeleteUserAccessKeyExecutor().Client(this).Execute<DeleteUserAccessKeyResponse, DeleteUserAccessKeyResult, DeleteUserAccessKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  启用主账号AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -533,25 +343,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnabledUserAccessKeyResponse> EnabledUserAccessKey(EnabledUserAccessKeyRequest request) {
             return await new EnabledUserAccessKeyExecutor().Client(this).Execute<EnabledUserAccessKeyResponse, EnabledUserAccessKeyResult, EnabledUserAccessKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  为子用户解绑策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DetachSubUserPolicyResponse DetachSubUserPolicy(DetachSubUserPolicyRequest request) {
-            return  new DetachSubUserPolicyExecutor().Client(this).Execute<DetachSubUserPolicyResponse, DetachSubUserPolicyResult, DetachSubUserPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为子用户解绑策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DetachSubUserPolicyResponse> DetachSubUserPolicy(DetachSubUserPolicyRequest request) {
-            return await new DetachSubUserPolicyExecutor().Client(this).Execute<DetachSubUserPolicyResponse, DetachSubUserPolicyResult, DetachSubUserPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -594,6 +385,367 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询子用户绑定的策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAttachedSubUserPoliciesResponse DescribeAttachedSubUserPolicies(DescribeAttachedSubUserPoliciesRequest request) {
+            return  new DescribeAttachedSubUserPoliciesExecutor().Client(this).Execute<DescribeAttachedSubUserPoliciesResponse, DescribeAttachedSubUserPoliciesResult, DescribeAttachedSubUserPoliciesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子用户绑定的策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAttachedSubUserPoliciesResponse> DescribeAttachedSubUserPolicies(DescribeAttachedSubUserPoliciesRequest request) {
+            return await new DescribeAttachedSubUserPoliciesExecutor().Client(this).Execute<DescribeAttachedSubUserPoliciesResponse, DescribeAttachedSubUserPoliciesResult, DescribeAttachedSubUserPoliciesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改策略文档
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest request) {
+            return  new UpdatePolicyExecutor().Client(this).Execute<UpdatePolicyResponse, UpdatePolicyResult, UpdatePolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改策略文档
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdatePolicyResponse> UpdatePolicy(UpdatePolicyRequest request) {
+            return await new UpdatePolicyExecutor().Client(this).Execute<UpdatePolicyResponse, UpdatePolicyResult, UpdatePolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加子用户到用户组中
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddSubUserToGroupResponse AddSubUserToGroup(AddSubUserToGroupRequest request) {
+            return  new AddSubUserToGroupExecutor().Client(this).Execute<AddSubUserToGroupResponse, AddSubUserToGroupResult, AddSubUserToGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加子用户到用户组中
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddSubUserToGroupResponse> AddSubUserToGroup(AddSubUserToGroupRequest request) {
+            return await new AddSubUserToGroupExecutor().Client(this).Execute<AddSubUserToGroupResponse, AddSubUserToGroupResult, AddSubUserToGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建用户组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateGroupResponse CreateGroup(CreateGroupRequest request) {
+            return  new CreateGroupExecutor().Client(this).Execute<CreateGroupResponse, CreateGroupResult, CreateGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建用户组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateGroupResponse> CreateGroup(CreateGroupRequest request) {
+            return await new CreateGroupExecutor().Client(this).Execute<CreateGroupResponse, CreateGroupResult, CreateGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除子用户的AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSubUserAccessKeyResponse DeleteSubUserAccessKey(DeleteSubUserAccessKeyRequest request) {
+            return  new DeleteSubUserAccessKeyExecutor().Client(this).Execute<DeleteSubUserAccessKeyResponse, DeleteSubUserAccessKeyResult, DeleteSubUserAccessKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除子用户的AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSubUserAccessKeyResponse> DeleteSubUserAccessKey(DeleteSubUserAccessKeyRequest request) {
+            return await new DeleteSubUserAccessKeyExecutor().Client(this).Execute<DeleteSubUserAccessKeyResponse, DeleteSubUserAccessKeyResult, DeleteSubUserAccessKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为角色绑定策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AttachRolePolicyResponse AttachRolePolicy(AttachRolePolicyRequest request) {
+            return  new AttachRolePolicyExecutor().Client(this).Execute<AttachRolePolicyResponse, AttachRolePolicyResult, AttachRolePolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为角色绑定策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AttachRolePolicyResponse> AttachRolePolicy(AttachRolePolicyRequest request) {
+            return await new AttachRolePolicyExecutor().Client(this).Execute<AttachRolePolicyResponse, AttachRolePolicyResult, AttachRolePolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  禁用主账号AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisabledUserAccessKeyResponse DisabledUserAccessKey(DisabledUserAccessKeyRequest request) {
+            return  new DisabledUserAccessKeyExecutor().Client(this).Execute<DisabledUserAccessKeyResponse, DisabledUserAccessKeyResult, DisabledUserAccessKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用主账号AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisabledUserAccessKeyResponse> DisabledUserAccessKey(DisabledUserAccessKeyRequest request) {
+            return await new DisabledUserAccessKeyExecutor().Client(this).Execute<DisabledUserAccessKeyResponse, DisabledUserAccessKeyResult, DisabledUserAccessKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建角色
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRoleResponse CreateRole(CreateRoleRequest request) {
+            return  new CreateRoleExecutor().Client(this).Execute<CreateRoleResponse, CreateRoleResult, CreateRoleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建角色
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRoleResponse> CreateRole(CreateRoleRequest request) {
+            return await new CreateRoleExecutor().Client(this).Execute<CreateRoleResponse, CreateRoleResult, CreateRoleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子用户策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubUserPermissionsResponse DescribeSubUserPermissions(DescribeSubUserPermissionsRequest request) {
+            return  new DescribeSubUserPermissionsExecutor().Client(this).Execute<DescribeSubUserPermissionsResponse, DescribeSubUserPermissionsResult, DescribeSubUserPermissionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子用户策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubUserPermissionsResponse> DescribeSubUserPermissions(DescribeSubUserPermissionsRequest request) {
+            return await new DescribeSubUserPermissionsExecutor().Client(this).Execute<DescribeSubUserPermissionsResponse, DescribeSubUserPermissionsResult, DescribeSubUserPermissionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdatePermissionResponse UpdatePermission(UpdatePermissionRequest request) {
+            return  new UpdatePermissionExecutor().Client(this).Execute<UpdatePermissionResponse, UpdatePermissionResult, UpdatePermissionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdatePermissionResponse> UpdatePermission(UpdatePermissionRequest request) {
+            return await new UpdatePermissionExecutor().Client(this).Execute<UpdatePermissionResponse, UpdatePermissionResult, UpdatePermissionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为子用户绑定策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AttachSubUserPolicyResponse AttachSubUserPolicy(AttachSubUserPolicyRequest request) {
+            return  new AttachSubUserPolicyExecutor().Client(this).Execute<AttachSubUserPolicyResponse, AttachSubUserPolicyResult, AttachSubUserPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为子用户绑定策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AttachSubUserPolicyResponse> AttachSubUserPolicy(AttachSubUserPolicyRequest request) {
+            return await new AttachSubUserPolicyExecutor().Client(this).Execute<AttachSubUserPolicyResponse, AttachSubUserPolicyResult, AttachSubUserPolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子用户列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubUsersResponse DescribeSubUsers(DescribeSubUsersRequest request) {
+            return  new DescribeSubUsersExecutor().Client(this).Execute<DescribeSubUsersResponse, DescribeSubUsersResult, DescribeSubUsersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子用户列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubUsersResponse> DescribeSubUsers(DescribeSubUsersRequest request) {
+            return await new DescribeSubUsersExecutor().Client(this).Execute<DescribeSubUsersResponse, DescribeSubUsersResult, DescribeSubUsersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  禁用子用户的AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableSubUserAccessKeyResponse DisableSubUserAccessKey(DisableSubUserAccessKeyRequest request) {
+            return  new DisableSubUserAccessKeyExecutor().Client(this).Execute<DisableSubUserAccessKeyResponse, DisableSubUserAccessKeyResult, DisableSubUserAccessKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用子用户的AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableSubUserAccessKeyResponse> DisableSubUserAccessKey(DisableSubUserAccessKeyRequest request) {
+            return await new DisableSubUserAccessKeyExecutor().Client(this).Execute<DisableSubUserAccessKeyResponse, DisableSubUserAccessKeyResult, DisableSubUserAccessKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribePoliciesResponse DescribePolicies(DescribePoliciesRequest request) {
+            return  new DescribePoliciesExecutor().Client(this).Execute<DescribePoliciesResponse, DescribePoliciesResult, DescribePoliciesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribePoliciesResponse> DescribePolicies(DescribePoliciesRequest request) {
+            return await new DescribePoliciesExecutor().Client(this).Execute<DescribePoliciesResponse, DescribePoliciesResult, DescribePoliciesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribePermissionsResponse DescribePermissions(DescribePermissionsRequest request) {
+            return  new DescribePermissionsExecutor().Client(this).Execute<DescribePermissionsResponse, DescribePermissionsResult, DescribePermissionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribePermissionsResponse> DescribePermissions(DescribePermissionsRequest request) {
+            return await new DescribePermissionsExecutor().Client(this).Execute<DescribePermissionsResponse, DescribePermissionsResult, DescribePermissionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreatePolicyResponse CreatePolicy(CreatePolicyRequest request) {
+            return  new CreatePolicyExecutor().Client(this).Execute<CreatePolicyResponse, CreatePolicyResult, CreatePolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreatePolicyResponse> CreatePolicy(CreatePolicyRequest request) {
+            return await new CreatePolicyExecutor().Client(this).Execute<CreatePolicyResponse, CreatePolicyResult, CreatePolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询角色授权策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRolePoliciesResponse DescribeRolePolicies(DescribeRolePoliciesRequest request) {
+            return  new DescribeRolePoliciesExecutor().Client(this).Execute<DescribeRolePoliciesResponse, DescribeRolePoliciesResult, DescribeRolePoliciesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询角色授权策略列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRolePoliciesResponse> DescribeRolePolicies(DescribeRolePoliciesRequest request) {
+            return await new DescribeRolePoliciesExecutor().Client(this).Execute<DescribeRolePoliciesResponse, DescribeRolePoliciesResult, DescribeRolePoliciesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteUserAccessKeyResponse DeleteUserAccessKey(DeleteUserAccessKeyRequest request) {
+            return  new DeleteUserAccessKeyExecutor().Client(this).Execute<DeleteUserAccessKeyResponse, DeleteUserAccessKeyResult, DeleteUserAccessKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除AccessKey
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteUserAccessKeyResponse> DeleteUserAccessKey(DeleteUserAccessKeyRequest request) {
+            return await new DeleteUserAccessKeyExecutor().Client(this).Execute<DeleteUserAccessKeyResponse, DeleteUserAccessKeyResult, DeleteUserAccessKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为子用户解绑策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DetachSubUserPolicyResponse DetachSubUserPolicy(DetachSubUserPolicyRequest request) {
+            return  new DetachSubUserPolicyExecutor().Client(this).Execute<DetachSubUserPolicyResponse, DetachSubUserPolicyResult, DetachSubUserPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为子用户解绑策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DetachSubUserPolicyResponse> DetachSubUserPolicy(DetachSubUserPolicyRequest request) {
+            return await new DetachSubUserPolicyExecutor().Client(this).Execute<DetachSubUserPolicyResponse, DetachSubUserPolicyResult, DetachSubUserPolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询主账号AccessKey列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -628,25 +780,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<AttachGroupPolicyResponse> AttachGroupPolicy(AttachGroupPolicyRequest request) {
             return await new AttachGroupPolicyExecutor().Client(this).Execute<AttachGroupPolicyResponse, AttachGroupPolicyResult, AttachGroupPolicyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询子用户绑定的策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAttachedSubUserPoliciesResponse DescribeAttachedSubUserPolicies(DescribeAttachedSubUserPoliciesRequest request) {
-            return  new DescribeAttachedSubUserPoliciesExecutor().Client(this).Execute<DescribeAttachedSubUserPoliciesResponse, DescribeAttachedSubUserPoliciesResult, DescribeAttachedSubUserPoliciesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询子用户绑定的策略列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAttachedSubUserPoliciesResponse> DescribeAttachedSubUserPolicies(DescribeAttachedSubUserPoliciesRequest request) {
-            return await new DescribeAttachedSubUserPoliciesExecutor().Client(this).Execute<DescribeAttachedSubUserPoliciesResponse, DescribeAttachedSubUserPoliciesResult, DescribeAttachedSubUserPoliciesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -746,25 +879,6 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加子用户到用户组中
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddSubUserToGroupResponse AddSubUserToGroup(AddSubUserToGroupRequest request) {
-            return  new AddSubUserToGroupExecutor().Client(this).Execute<AddSubUserToGroupResponse, AddSubUserToGroupResult, AddSubUserToGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加子用户到用户组中
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddSubUserToGroupResponse> AddSubUserToGroup(AddSubUserToGroupRequest request) {
-            return await new AddSubUserToGroupExecutor().Client(this).Execute<AddSubUserToGroupResponse, AddSubUserToGroupResult, AddSubUserToGroupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改角色内置policy
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -799,25 +913,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRolesResponse> DescribeRoles(DescribeRolesRequest request) {
             return await new DescribeRolesExecutor().Client(this).Execute<DescribeRolesResponse, DescribeRolesResult, DescribeRolesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建用户组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateGroupResponse CreateGroup(CreateGroupRequest request) {
-            return  new CreateGroupExecutor().Client(this).Execute<CreateGroupResponse, CreateGroupResult, CreateGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建用户组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateGroupResponse> CreateGroup(CreateGroupRequest request) {
-            return await new CreateGroupExecutor().Client(this).Execute<CreateGroupResponse, CreateGroupResult, CreateGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -898,63 +993,6 @@ namespace JDCloudSDK.Iam.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除子用户的AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteSubUserAccessKeyResponse DeleteSubUserAccessKey(DeleteSubUserAccessKeyRequest request) {
-            return  new DeleteSubUserAccessKeyExecutor().Client(this).Execute<DeleteSubUserAccessKeyResponse, DeleteSubUserAccessKeyResult, DeleteSubUserAccessKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除子用户的AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteSubUserAccessKeyResponse> DeleteSubUserAccessKey(DeleteSubUserAccessKeyRequest request) {
-            return await new DeleteSubUserAccessKeyExecutor().Client(this).Execute<DeleteSubUserAccessKeyResponse, DeleteSubUserAccessKeyResult, DeleteSubUserAccessKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  为角色绑定策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AttachRolePolicyResponse AttachRolePolicy(AttachRolePolicyRequest request) {
-            return  new AttachRolePolicyExecutor().Client(this).Execute<AttachRolePolicyResponse, AttachRolePolicyResult, AttachRolePolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为角色绑定策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AttachRolePolicyResponse> AttachRolePolicy(AttachRolePolicyRequest request) {
-            return await new AttachRolePolicyExecutor().Client(this).Execute<AttachRolePolicyResponse, AttachRolePolicyResult, AttachRolePolicyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  禁用主账号AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisabledUserAccessKeyResponse DisabledUserAccessKey(DisabledUserAccessKeyRequest request) {
-            return  new DisabledUserAccessKeyExecutor().Client(this).Execute<DisabledUserAccessKeyResponse, DisabledUserAccessKeyResult, DisabledUserAccessKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  禁用主账号AccessKey
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisabledUserAccessKeyResponse> DisabledUserAccessKey(DisabledUserAccessKeyRequest request) {
-            return await new DisabledUserAccessKeyExecutor().Client(this).Execute<DisabledUserAccessKeyResponse, DisabledUserAccessKeyResult, DisabledUserAccessKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建主账号AccessKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1008,25 +1046,6 @@ namespace JDCloudSDK.Iam.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableSubUserAccessKeyResponse> EnableSubUserAccessKey(EnableSubUserAccessKeyRequest request) {
             return await new EnableSubUserAccessKeyExecutor().Client(this).Execute<EnableSubUserAccessKeyResponse, EnableSubUserAccessKeyResult, EnableSubUserAccessKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建角色
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateRoleResponse CreateRole(CreateRoleRequest request) {
-            return  new CreateRoleExecutor().Client(this).Execute<CreateRoleResponse, CreateRoleResult, CreateRoleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建角色
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateRoleResponse> CreateRole(CreateRoleRequest request) {
-            return await new CreateRoleExecutor().Client(this).Execute<CreateRoleResponse, CreateRoleResult, CreateRoleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

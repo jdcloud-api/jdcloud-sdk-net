@@ -46,6 +46,10 @@ namespace JDCloudSDK.Elite.Model
         ///</summary>
         public string OrderNumber{ get; set; }
         ///<summary>
+        /// 续费订单所关联的新购订单号，该字段只针对续费单有效，新购单该字段为null
+        ///</summary>
+        public string RefOrderNumber{ get; set; }
+        ///<summary>
         /// 订单类型
         ///</summary>
         public int? OrderType{ get; set; }

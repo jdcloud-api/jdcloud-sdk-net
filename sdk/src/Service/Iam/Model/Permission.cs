@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Iam.Model
 {
@@ -60,7 +61,8 @@ namespace JDCloudSDK.Iam.Model
         ///<summary>
         /// 权限版本号
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
         ///<summary>
         /// 权限内容
         ///</summary>

@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iam.Apis
 {
@@ -43,7 +44,8 @@ namespace  JDCloudSDK.Iam.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 权限id
         ///Required:true

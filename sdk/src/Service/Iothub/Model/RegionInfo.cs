@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Iothub.Model
 {
@@ -40,7 +41,8 @@ namespace JDCloudSDK.Iothub.Model
         ///<summary>
         /// region编号
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// region名称
         ///</summary>
