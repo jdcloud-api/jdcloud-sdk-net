@@ -38,7 +38,11 @@ Install-Package JDCloudSDK.Vm -Version 1.2.0.1
 
 ```powershell
 dotnet add package JDCloudSDK.Vm --version 1.2.0.1
-```
+```  
+
+您还可以下载SDK的源码直接添加到项目中或者编译为DLL再引用到项目中。  
+
+SDK使用中的任何问题，欢迎您在[SDK使用问题反馈页面](https://github.com/jdcloud-api/jdcloud-sdk-net/issues)交流
 
 请选择自己需要使用的模块安装。
 
@@ -105,6 +109,33 @@ namespace JDCloudSDK.ConsoleTest
 
 ```csharp
 vmClient.SetCustomHeader("x-jdcloud-security-token","xxx");
+```  
+如果需要设置访问点，配置超时等，请参考下面的例子：  
+
+```csharp
+
+//1.设置accessKey和secretKey
+string accessKeyId = "";
+string secretAccessKey = "";
+CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
+//2.构建请求终结点配置
+SDKEnvironment sdkEnvironment = new SDKEnvironment("nativecontainer.internal.cn-north-1.jdcloud-api.com");
+//3.创建XXXClient
+VmClient vmClient = new VmClient.DefaultBuilder()
+        .CredentialsProvider(credentialsProvider)
+        .Environment(sdkEnvironment) //指定非默认的Endpoint
+        .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50))  // 设置请求http schema HTTP or HTTPS ,50 为超时时间默认为秒
+        .Build();
+
 ```
 
+如果要读取请求response的各种信息（例如某一个header的值），可按照如下方式：  
 
+```csharp
+ Dictionary<string,List<string>> headers = response.HttpResponse.Header;
+if (headers.ContainsKey("headerKey")) {
+    List<string> headerValue = headers["headerKey"];
+}
+```  
+
+更多调用示例参考[SDK使用Demo](https://github.com/jdcloud-api/jdcloud-sdk-net/tree/master/sdk/src/Examples)
