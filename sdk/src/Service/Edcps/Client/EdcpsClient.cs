@@ -89,9 +89,9 @@ namespace JDCloudSDK.Edcps.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -174,6 +174,25 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
             return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateKeypairsResponse CreateKeypairs(CreateKeypairsRequest request) {
+            return  new CreateKeypairsExecutor().Client(this).Execute<CreateKeypairsResponse, CreateKeypairsResult, CreateKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateKeypairsResponse> CreateKeypairs(CreateKeypairsRequest request) {
+            return await new CreateKeypairsExecutor().Client(this).Execute<CreateKeypairsResponse, CreateKeypairsResult, CreateKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -437,6 +456,44 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询弹性公网IP库存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpStockResponse DescribeElasticIpStock(DescribeElasticIpStockRequest request) {
+            return  new DescribeElasticIpStockExecutor().Client(this).Execute<DescribeElasticIpStockResponse, DescribeElasticIpStockResult, DescribeElasticIpStockRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性公网IP库存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpStockResponse> DescribeElasticIpStock(DescribeElasticIpStockRequest request) {
+            return await new DescribeElasticIpStockExecutor().Client(this).Execute<DescribeElasticIpStockResponse, DescribeElasticIpStockResult, DescribeElasticIpStockRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导入密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImportKeypairsResponse ImportKeypairs(ImportKeypairsRequest request) {
+            return  new ImportKeypairsExecutor().Client(this).Execute<ImportKeypairsResponse, ImportKeypairsResult, ImportKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导入密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImportKeypairsResponse> ImportKeypairs(ImportKeypairsRequest request) {
+            return await new ImportKeypairsExecutor().Client(this).Execute<ImportKeypairsResponse, ImportKeypairsResult, ImportKeypairsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询子网详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -456,27 +513,21 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  升级分布式云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
-        /// - 不支持未启用外网的服务器升级带宽
-        /// - 外网带宽不支持降级
-        /// 
+        ///  查询链路类型列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyBandwidthResponse ModifyBandwidth(ModifyBandwidthRequest request) {
-            return  new ModifyBandwidthExecutor().Client(this).Execute<ModifyBandwidthResponse, ModifyBandwidthResult, ModifyBandwidthRequest>(request);
+        public DescribeLineTypesResponse DescribeLineTypes(DescribeLineTypesRequest request) {
+            return  new DescribeLineTypesExecutor().Client(this).Execute<DescribeLineTypesResponse, DescribeLineTypesResult, DescribeLineTypesRequest>(request);
         }
 #else
         /// <summary>
-        ///  升级分布式云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
-        /// - 不支持未启用外网的服务器升级带宽
-        /// - 外网带宽不支持降级
-        /// 
+        ///  查询链路类型列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyBandwidthResponse> ModifyBandwidth(ModifyBandwidthRequest request) {
-            return await new ModifyBandwidthExecutor().Client(this).Execute<ModifyBandwidthResponse, ModifyBandwidthResult, ModifyBandwidthRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeLineTypesResponse> DescribeLineTypes(DescribeLineTypesRequest request) {
+            return await new DescribeLineTypesExecutor().Client(this).Execute<DescribeLineTypesResponse, DescribeLineTypesResult, DescribeLineTypesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -500,6 +551,44 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询密钥对列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeypairsResponse DescribeKeypairs(DescribeKeypairsRequest request) {
+            return  new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
+            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeypairResponse DescribeKeypair(DescribeKeypairRequest request) {
+            return  new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeypairResponse> DescribeKeypair(DescribeKeypairRequest request) {
+            return await new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  绑定弹性公网IP
         /// 
         /// </summary>
@@ -517,6 +606,25 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
             return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询分布式云物理服务器库存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDeviceStockResponse DescribeDeviceStock(DescribeDeviceStockRequest request) {
+            return  new DescribeDeviceStockExecutor().Client(this).Execute<DescribeDeviceStockResponse, DescribeDeviceStockResult, DescribeDeviceStockRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询分布式云物理服务器库存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDeviceStockResponse> DescribeDeviceStock(DescribeDeviceStockRequest request) {
+            return await new DescribeDeviceStockExecutor().Client(this).Execute<DescribeDeviceStockResponse, DescribeDeviceStockResult, DescribeDeviceStockRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -593,6 +701,25 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询可用的私有IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAvailablePrivateIpResponse DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
+            return  new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用的私有IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAvailablePrivateIpResponse> DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
+            return await new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询分布式云物理服务器名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -608,25 +735,6 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceNameResponse> DescribeInstanceName(DescribeInstanceNameRequest request) {
             return await new DescribeInstanceNameExecutor().Client(this).Execute<DescribeInstanceNameResponse, DescribeInstanceNameResult, DescribeInstanceNameRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询分布式分布式云物理服务器地域列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryEdCPSRegionsResponse QueryEdCPSRegions(QueryEdCPSRegionsRequest request) {
-            return  new QueryEdCPSRegionsExecutor().Client(this).Execute<QueryEdCPSRegionsResponse, QueryEdCPSRegionsResult, QueryEdCPSRegionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询分布式分布式云物理服务器地域列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryEdCPSRegionsResponse> QueryEdCPSRegions(QueryEdCPSRegionsRequest request) {
-            return await new QueryEdCPSRegionsExecutor().Client(this).Execute<QueryEdCPSRegionsResponse, QueryEdCPSRegionsResult, QueryEdCPSRegionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -686,6 +794,25 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
             return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteKeypairsResponse DeleteKeypairs(DeleteKeypairsRequest request) {
+            return  new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteKeypairsResponse> DeleteKeypairs(DeleteKeypairsRequest request) {
+            return await new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -827,6 +954,25 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ApplyElasticIpsResponse> ApplyElasticIps(ApplyElasticIpsRequest request) {
             return await new ApplyElasticIpsExecutor().Client(this).Execute<ApplyElasticIpsResponse, ApplyElasticIpsResult, ApplyElasticIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询分布式分布式云物理服务器地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeEdCPSRegionsResponse DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
+            return  new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询分布式分布式云物理服务器地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeEdCPSRegionsResponse> DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
+            return await new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 

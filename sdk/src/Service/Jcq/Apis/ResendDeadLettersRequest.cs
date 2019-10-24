@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Jcq.Apis
 {
@@ -47,7 +48,8 @@ namespace  JDCloudSDK.Jcq.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// topic 名称
         ///Required:true

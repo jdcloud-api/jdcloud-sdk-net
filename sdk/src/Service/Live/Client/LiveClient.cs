@@ -89,9 +89,9 @@ namespace JDCloudSDK.Live.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -201,6 +201,48 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<OpenLiveRestartResponse> OpenLiveRestart(OpenLiveRestartRequest request) {
             return await new OpenLiveRestartExecutor().Client(this).Execute<OpenLiveRestartResponse, OpenLiveRestartResult, OpenLiveRestartRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加应用质量检测配置
+        /// - 添加应用级别的质量检测模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamAppQualityDetectionResponse AddLiveStreamAppQualityDetection(AddLiveStreamAppQualityDetectionRequest request) {
+            return  new AddLiveStreamAppQualityDetectionExecutor().Client(this).Execute<AddLiveStreamAppQualityDetectionResponse, AddLiveStreamAppQualityDetectionResult, AddLiveStreamAppQualityDetectionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加应用质量检测配置
+        /// - 添加应用级别的质量检测模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamAppQualityDetectionResponse> AddLiveStreamAppQualityDetection(AddLiveStreamAppQualityDetectionRequest request) {
+            return await new AddLiveStreamAppQualityDetectionExecutor().Client(this).Execute<AddLiveStreamAppQualityDetectionResponse, AddLiveStreamAppQualityDetectionResult, AddLiveStreamAppQualityDetectionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加直播质量检测模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddCustomLiveStreamQualityDetectionTemplateResponse AddCustomLiveStreamQualityDetectionTemplate(AddCustomLiveStreamQualityDetectionTemplateRequest request) {
+            return  new AddCustomLiveStreamQualityDetectionTemplateExecutor().Client(this).Execute<AddCustomLiveStreamQualityDetectionTemplateResponse, AddCustomLiveStreamQualityDetectionTemplateResult, AddCustomLiveStreamQualityDetectionTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加直播质量检测模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddCustomLiveStreamQualityDetectionTemplateResponse> AddCustomLiveStreamQualityDetectionTemplate(AddCustomLiveStreamQualityDetectionTemplateRequest request) {
+            return await new AddCustomLiveStreamQualityDetectionTemplateExecutor().Client(this).Execute<AddCustomLiveStreamQualityDetectionTemplateResponse, AddCustomLiveStreamQualityDetectionTemplateResult, AddCustomLiveStreamQualityDetectionTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -982,6 +1024,29 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  添加域名质量检测配置
+        /// - 添加域名级别的质量检测模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamDomainQualityDetectionResponse AddLiveStreamDomainQualityDetection(AddLiveStreamDomainQualityDetectionRequest request) {
+            return  new AddLiveStreamDomainQualityDetectionExecutor().Client(this).Execute<AddLiveStreamDomainQualityDetectionResponse, AddLiveStreamDomainQualityDetectionResult, AddLiveStreamDomainQualityDetectionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加域名质量检测配置
+        /// - 添加域名级别的质量检测模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamDomainQualityDetectionResponse> AddLiveStreamDomainQualityDetection(AddLiveStreamDomainQualityDetectionRequest request) {
+            return await new AddLiveStreamDomainQualityDetectionExecutor().Client(this).Execute<AddLiveStreamDomainQualityDetectionResponse, AddLiveStreamDomainQualityDetectionResult, AddLiveStreamDomainQualityDetectionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除直播域名
         /// - 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
         ///   deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
@@ -1097,6 +1162,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCustomLiveStreamSnapshotConfigResponse> DescribeCustomLiveStreamSnapshotConfig(DescribeCustomLiveStreamSnapshotConfigRequest request) {
             return await new DescribeCustomLiveStreamSnapshotConfigExecutor().Client(this).Execute<DescribeCustomLiveStreamSnapshotConfigResponse, DescribeCustomLiveStreamSnapshotConfigResult, DescribeCustomLiveStreamSnapshotConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询质量检测模板绑定
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeQualityDetectionBindingResponse DescribeQualityDetectionBinding(DescribeQualityDetectionBindingRequest request) {
+            return  new DescribeQualityDetectionBindingExecutor().Client(this).Execute<DescribeQualityDetectionBindingResponse, DescribeQualityDetectionBindingResult, DescribeQualityDetectionBindingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询质量检测模板绑定
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeQualityDetectionBindingResponse> DescribeQualityDetectionBinding(DescribeQualityDetectionBindingRequest request) {
+            return await new DescribeQualityDetectionBindingExecutor().Client(this).Execute<DescribeQualityDetectionBindingResponse, DescribeQualityDetectionBindingResult, DescribeQualityDetectionBindingRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1262,6 +1348,29 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除直播质量检测模板
+        /// - 删除质量检测模板前,请先删除此模板相关的质量检测配置,否则无法删除
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCustomLiveStreamQualityDetectionTemplateResponse DeleteCustomLiveStreamQualityDetectionTemplate(DeleteCustomLiveStreamQualityDetectionTemplateRequest request) {
+            return  new DeleteCustomLiveStreamQualityDetectionTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamQualityDetectionTemplateResponse, DeleteCustomLiveStreamQualityDetectionTemplateResult, DeleteCustomLiveStreamQualityDetectionTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除直播质量检测模板
+        /// - 删除质量检测模板前,请先删除此模板相关的质量检测配置,否则无法删除
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCustomLiveStreamQualityDetectionTemplateResponse> DeleteCustomLiveStreamQualityDetectionTemplate(DeleteCustomLiveStreamQualityDetectionTemplateRequest request) {
+            return await new DeleteCustomLiveStreamQualityDetectionTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamQualityDetectionTemplateResponse, DeleteCustomLiveStreamQualityDetectionTemplateResult, DeleteCustomLiveStreamQualityDetectionTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  关闭时移
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1340,6 +1449,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainWatermarkResponse> AddLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) {
             return await new AddLiveStreamDomainWatermarkExecutor().Client(this).Execute<AddLiveStreamDomainWatermarkResponse, AddLiveStreamDomainWatermarkResult, AddLiveStreamDomainWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播质量检测回调通知地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveStreamQualityDetectionNotifyConfigResponse SetLiveStreamQualityDetectionNotifyConfig(SetLiveStreamQualityDetectionNotifyConfigRequest request) {
+            return  new SetLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<SetLiveStreamQualityDetectionNotifyConfigResponse, SetLiveStreamQualityDetectionNotifyConfigResult, SetLiveStreamQualityDetectionNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播质量检测回调通知地址
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveStreamQualityDetectionNotifyConfigResponse> SetLiveStreamQualityDetectionNotifyConfig(SetLiveStreamQualityDetectionNotifyConfigRequest request) {
+            return await new SetLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<SetLiveStreamQualityDetectionNotifyConfigResponse, SetLiveStreamQualityDetectionNotifyConfigResult, SetLiveStreamQualityDetectionNotifyConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1428,6 +1558,29 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveRestartDomainResponse> AddLiveRestartDomain(AddLiveRestartDomainRequest request) {
             return await new AddLiveRestartDomainExecutor().Client(this).Execute<AddLiveRestartDomainResponse, AddLiveRestartDomainResult, AddLiveRestartDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除域名质量检测配置
+        /// - 删除域名级别的质量检测模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamDomainQualityDetectionResponse DeleteLiveStreamDomainQualityDetection(DeleteLiveStreamDomainQualityDetectionRequest request) {
+            return  new DeleteLiveStreamDomainQualityDetectionExecutor().Client(this).Execute<DeleteLiveStreamDomainQualityDetectionResponse, DeleteLiveStreamDomainQualityDetectionResult, DeleteLiveStreamDomainQualityDetectionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名质量检测配置
+        /// - 删除域名级别的质量检测模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamDomainQualityDetectionResponse> DeleteLiveStreamDomainQualityDetection(DeleteLiveStreamDomainQualityDetectionRequest request) {
+            return await new DeleteLiveStreamDomainQualityDetectionExecutor().Client(this).Execute<DeleteLiveStreamDomainQualityDetectionResponse, DeleteLiveStreamDomainQualityDetectionResult, DeleteLiveStreamDomainQualityDetectionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1663,6 +1816,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除质量检测回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamQualityDetectionNotifyConfigResponse DeleteLiveStreamQualityDetectionNotifyConfig(DeleteLiveStreamQualityDetectionNotifyConfigRequest request) {
+            return  new DeleteLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamQualityDetectionNotifyConfigResponse, DeleteLiveStreamQualityDetectionNotifyConfigResult, DeleteLiveStreamQualityDetectionNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除质量检测回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamQualityDetectionNotifyConfigResponse> DeleteLiveStreamQualityDetectionNotifyConfig(DeleteLiveStreamQualityDetectionNotifyConfigRequest request) {
+            return await new DeleteLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamQualityDetectionNotifyConfigResponse, DeleteLiveStreamQualityDetectionNotifyConfigResult, DeleteLiveStreamQualityDetectionNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询直播截图张数数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1701,6 +1875,29 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamDomainTranscodeResponse> DeleteLiveStreamDomainTranscode(DeleteLiveStreamDomainTranscodeRequest request) {
             return await new DeleteLiveStreamDomainTranscodeExecutor().Client(this).Execute<DeleteLiveStreamDomainTranscodeResponse, DeleteLiveStreamDomainTranscodeResult, DeleteLiveStreamDomainTranscodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除应用级别质量检测模板配置
+        /// - 删除应用级别质量检测模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamAppQualityDetectionResponse DeleteLiveStreamAppQualityDetection(DeleteLiveStreamAppQualityDetectionRequest request) {
+            return  new DeleteLiveStreamAppQualityDetectionExecutor().Client(this).Execute<DeleteLiveStreamAppQualityDetectionResponse, DeleteLiveStreamAppQualityDetectionResult, DeleteLiveStreamAppQualityDetectionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除应用级别质量检测模板配置
+        /// - 删除应用级别质量检测模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamAppQualityDetectionResponse> DeleteLiveStreamAppQualityDetection(DeleteLiveStreamAppQualityDetectionRequest request) {
+            return await new DeleteLiveStreamAppQualityDetectionExecutor().Client(this).Execute<DeleteLiveStreamAppQualityDetectionResponse, DeleteLiveStreamAppQualityDetectionResult, DeleteLiveStreamAppQualityDetectionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1982,6 +2179,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询质量检测回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamQualityDetectionNotifyConfigResponse DescribeLiveStreamQualityDetectionNotifyConfig(DescribeLiveStreamQualityDetectionNotifyConfigRequest request) {
+            return  new DescribeLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamQualityDetectionNotifyConfigResponse, DescribeLiveStreamQualityDetectionNotifyConfigResult, DescribeLiveStreamQualityDetectionNotifyConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询质量检测回调配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamQualityDetectionNotifyConfigResponse> DescribeLiveStreamQualityDetectionNotifyConfig(DescribeLiveStreamQualityDetectionNotifyConfigRequest request) {
+            return await new DescribeLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamQualityDetectionNotifyConfigResponse, DescribeLiveStreamQualityDetectionNotifyConfigResult, DescribeLiveStreamQualityDetectionNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  中断直播流推送
         /// - 中断操作1秒后可以继续推流
         /// 
@@ -2070,6 +2288,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamInfoResponse> DescribeLiveStreamInfo(DescribeLiveStreamInfoRequest request) {
             return await new DescribeLiveStreamInfoExecutor().Client(this).Execute<DescribeLiveStreamInfoResponse, DescribeLiveStreamInfoResult, DescribeLiveStreamInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播质量检测模板列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomLiveStreamQualityDetectionTemplatesResponse DescribeCustomLiveStreamQualityDetectionTemplates(DescribeCustomLiveStreamQualityDetectionTemplatesRequest request) {
+            return  new DescribeCustomLiveStreamQualityDetectionTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamQualityDetectionTemplatesResponse, DescribeCustomLiveStreamQualityDetectionTemplatesResult, DescribeCustomLiveStreamQualityDetectionTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播质量检测模板列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomLiveStreamQualityDetectionTemplatesResponse> DescribeCustomLiveStreamQualityDetectionTemplates(DescribeCustomLiveStreamQualityDetectionTemplatesRequest request) {
+            return await new DescribeCustomLiveStreamQualityDetectionTemplatesExecutor().Client(this).Execute<DescribeCustomLiveStreamQualityDetectionTemplatesResponse, DescribeCustomLiveStreamQualityDetectionTemplatesResult, DescribeCustomLiveStreamQualityDetectionTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

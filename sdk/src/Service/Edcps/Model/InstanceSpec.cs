@@ -106,9 +106,13 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public string LineType{ get; set; }
         ///<summary>
-        /// 外网带宽, 范围[1,200] 单位Mbps
+        /// 外网带宽, 范围[1,10240] 单位Mbps
         ///</summary>
         public int? Bandwidth{ get; set; }
+        ///<summary>
+        /// 额外上行带宽, 范围[0,10240] 单位Mbps
+        ///</summary>
+        public int? ExtraUplinkBandwidth{ get; set; }
         ///<summary>
         /// 云物理服务器名称
         ///Required:true
@@ -133,6 +137,10 @@ namespace JDCloudSDK.Edcps.Model
         /// 可执行脚本Base64编码后的内容，支持shell和python脚本
         ///</summary>
         public string UserData{ get; set; }
+        ///<summary>
+        /// 密钥对id
+        ///</summary>
+        public string KeypairId{ get; set; }
         ///<summary>
         /// 计费配置
         ///Required:true

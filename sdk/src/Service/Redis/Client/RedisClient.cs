@@ -89,9 +89,9 @@ namespace JDCloudSDK.Redis.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -277,6 +277,25 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<ResetCacheInstancePasswordResponse> ResetCacheInstancePassword(ResetCacheInstancePasswordRequest request) {
             return await new ResetCacheInstancePasswordExecutor().Client(this).Execute<ResetCacheInstancePasswordResponse, ResetCacheInstancePasswordResult, ResetCacheInstancePasswordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取缓存Redis实例的慢查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest request) {
+            return  new DescribeSlowLogExecutor().Client(this).Execute<DescribeSlowLogResponse, DescribeSlowLogResult, DescribeSlowLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取缓存Redis实例的慢查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSlowLogResponse> DescribeSlowLog(DescribeSlowLogRequest request) {
+            return await new DescribeSlowLogExecutor().Client(this).Execute<DescribeSlowLogResponse, DescribeSlowLogResult, DescribeSlowLogRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Jcq.Apis
     public class ResendDeadLettersResult : JdcloudResult
     {
         ///<summary>
-        /// 重发成功的消息id列表
+        /// MessageIds
         ///</summary>
         public List<string> MessageIds{ get; set; }
 

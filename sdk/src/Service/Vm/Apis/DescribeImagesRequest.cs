@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Vm.Apis
 {
@@ -42,7 +43,7 @@ namespace  JDCloudSDK.Vm.Apis
     public class DescribeImagesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
+        /// 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
         ///</summary>
         public   string ImageSource{ get; set; }
         ///<summary>
@@ -58,6 +59,10 @@ namespace  JDCloudSDK.Vm.Apis
         /// 镜像支持的系统盘类型，[localDisk,cloudDisk]
         ///</summary>
         public   string RootDeviceType{ get; set; }
+        ///<summary>
+        /// 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+        ///</summary>
+        public   string LaunchPermission{ get; set; }
         ///<summary>
         /// &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
         ///</summary>
@@ -75,6 +80,7 @@ namespace  JDCloudSDK.Vm.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

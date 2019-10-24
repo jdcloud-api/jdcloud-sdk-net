@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Jcq.Apis
     public class DescribeConsumerGroupIdsResult : JdcloudResult
     {
         ///<summary>
-        /// consumerGroupId列表
+        /// ConsumerGroupIds
         ///</summary>
         public List<string> ConsumerGroupIds{ get; set; }
 

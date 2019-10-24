@@ -130,5 +130,17 @@ namespace JDCloudSDK.Domainservice.Model
         ///</summary>
         [Required]
         public int SwitchRecoverRule{ get; set; }
+        ///<summary>
+        /// 探测请求携带自定义头域及其域值列表
+        ///</summary>
+        public List<HttpHeader> RequestHeaders{ get; set; }
+        ///<summary>
+        /// 探测响应Body体中包含的字符串
+        ///</summary>
+        public string ResponseBodyMatch{ get; set; }
+        ///<summary>
+        /// 探测响应码范围列表
+        ///</summary>
+        public List<HttpResponseCodeRange> ResponseCodeRanges{ get; set; }
     }
 }

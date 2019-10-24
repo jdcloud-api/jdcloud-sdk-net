@@ -86,6 +86,14 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
+        /// 该镜像所有者的用户PIN
+        ///</summary>
+        public string OwnerPin{ get; set; }
+        ///<summary>
+        /// 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+        ///</summary>
+        public string LaunchPermission{ get; set; }
+        ///<summary>
         /// 镜像系统盘配置
         ///</summary>
         public InstanceDiskAttachment SystemDisk{ get; set; }

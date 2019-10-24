@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Edcps.Apis
 {
@@ -74,6 +75,10 @@ namespace  JDCloudSDK.Edcps.Apis
         ///</summary>
         public   string EnableInternet{ get; set; }
         ///<summary>
+        /// 密钥对id
+        ///</summary>
+        public   string KeypairId{ get; set; }
+        ///<summary>
         /// instanceId - 分布式云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
         /// privateIp - 分布式云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
         /// status - 分布式云物理服务器状态，参考分布式云物理服务器状态，精确匹配，支持多个
@@ -82,10 +87,11 @@ namespace  JDCloudSDK.Edcps.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+        /// 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Jcq.Apis
 {
@@ -45,11 +46,24 @@ namespace  JDCloudSDK.Jcq.Apis
         [Required]
         public   string ConsumerGroupId{ get; set; }
         ///<summary>
+        /// 消息隐藏时间单位秒
+        ///</summary>
+        public   int? MessageInvisibleTimeInSeconds{ get; set; }
+        ///<summary>
+        /// 是否开启死信队列[true, false]
+        ///</summary>
+        public   bool DlqEnable{ get; set; }
+        ///<summary>
+        /// 最大重试次数dlqEnable为true必填,范围[0,16]
+        ///</summary>
+        public   int? MaxRetryTimes{ get; set; }
+        ///<summary>
         /// 所在区域的Region ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// topic 名称
         ///Required:true

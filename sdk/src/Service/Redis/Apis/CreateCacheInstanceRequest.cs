@@ -31,6 +31,7 @@ using JDCloudSDK.Core.Service;
 using JDCloudSDK.Redis.Model;
 using JDCloudSDK.Charge.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Redis.Apis
 {
@@ -42,13 +43,13 @@ namespace  JDCloudSDK.Redis.Apis
     public class CreateCacheInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        /// 创建实例时输入的信息
+        /// 创建实例时指定的信息
         ///Required:true
         ///</summary>
         [Required]
         public   CacheInstanceSpec CacheInstance{ get; set; }
         ///<summary>
-        /// 该实例规格的计费信息
+        /// 实例的计费类型
         ///</summary>
         public   JDCloudSDK.Charge.Model.ChargeSpec Charge{ get; set; }
         ///<summary>
@@ -56,6 +57,7 @@ namespace  JDCloudSDK.Redis.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

@@ -52,18 +52,10 @@ namespace JDCloudSDK.Live.Model
         ///<summary>
         /// 模板名称
         ///</summary>
-        public string TemplateName{ get; set; }
+        public string Template{ get; set; }
         ///<summary>
-        /// 录制周期
+        /// 检测项列表
         ///</summary>
-        public int? RecordPeriod{ get; set; }
-        ///<summary>
-        /// 录制格式
-        ///</summary>
-        public int? RecordFileType{ get; set; }
-        ///<summary>
-        /// 创建时间
-        ///</summary>
-        public string CreateTime{ get; set; }
+        public string Modules{ get; set; }
     }
 }

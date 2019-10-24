@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Jcq.Apis
     public class DeleteDeadLettersResult : JdcloudResult
     {
         ///<summary>
-        /// 被删除的消息的id列表
+        /// MessageIds
         ///</summary>
         public List<string> MessageIds{ get; set; }
 

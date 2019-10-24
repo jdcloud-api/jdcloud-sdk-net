@@ -39,11 +39,11 @@ namespace  JDCloudSDK.Redis.Apis
     public class CreateCacheInstanceResult : JdcloudResult
     {
         ///<summary>
-        /// 创建实例后生成的实例ID
+        /// 实例ID
         ///</summary>
         public   string CacheInstanceId{ get; set; }
         ///<summary>
-        /// 创建实例后生成的订单编号
+        /// 订单编号
         ///</summary>
         public   string OrderNum{ get; set; }
     }

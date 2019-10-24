@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Edcps.Apis
 {
@@ -46,17 +47,22 @@ namespace  JDCloudSDK.Edcps.Apis
         ///</summary>
         public   string ClientToken{ get; set; }
         ///<summary>
-        /// 带宽，单位Mbps，取值范围[1,200]
+        /// 带宽，单位Mbps，取值范围[1,10240]
         ///Required:true
         ///</summary>
         [Required]
         public   int Bandwidth{ get; set; }
         ///<summary>
-        /// 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+        /// 额外上行带宽，单位Mbps，取值范围[0,10240]
+        ///</summary>
+        public   int? ExtraUplinkBandwidth{ get; set; }
+        ///<summary>
+        /// 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 弹性公网IPID
         ///Required:true

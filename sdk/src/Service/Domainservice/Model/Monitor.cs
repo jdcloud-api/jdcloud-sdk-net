@@ -169,5 +169,25 @@ namespace JDCloudSDK.Domainservice.Model
         /// 使用记录，host_value 0，ip_backup_01 1，ip_backup_02 2，cname_backup 3
         ///</summary>
         public int? UsedType{ get; set; }
+        ///<summary>
+        /// 备用地址及其状态列表
+        ///</summary>
+        public List<BackupAddressesInfo> BackupAddressList{ get; set; }
+        ///<summary>
+        /// 探测请求携带自定义头域及其域值列表
+        ///</summary>
+        public List<HttpHeader> RequestHeaders{ get; set; }
+        ///<summary>
+        /// 探测响应Body体中包含的字符串
+        ///</summary>
+        public string ResponseBodyMatch{ get; set; }
+        ///<summary>
+        /// 探测响应码范围列表
+        ///</summary>
+        public List<HttpResponseCodeRange> ResponseCodeRanges{ get; set; }
+        ///<summary>
+        /// 正在使用的有效解析地址
+        ///</summary>
+        public string EffectAddr{ get; set; }
     }
 }

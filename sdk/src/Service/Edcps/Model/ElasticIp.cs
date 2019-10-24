@@ -57,6 +57,10 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public int? Bandwidth{ get; set; }
         ///<summary>
+        /// 额外上行带宽, 单位Mbps
+        ///</summary>
+        public int? ExtraUplinkBandwidth{ get; set; }
+        ///<summary>
         /// 链路类型
         ///</summary>
         public string LineType{ get; set; }

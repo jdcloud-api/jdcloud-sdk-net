@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Jcq.Apis
 {
@@ -47,7 +48,7 @@ namespace  JDCloudSDK.Jcq.Apis
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 每页数
+        /// 分页大小；默认为10；取值范围[10, 100]
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
@@ -55,6 +56,7 @@ namespace  JDCloudSDK.Jcq.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

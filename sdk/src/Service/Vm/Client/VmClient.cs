@@ -89,9 +89,9 @@ namespace JDCloudSDK.Vm.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -155,60 +155,6 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeImageMembersResponse> DescribeImageMembers(DescribeImageMembersRequest request) {
             return await new DescribeImageMembersExecutor().Client(this).Execute<DescribeImageMembersResponse, DescribeImageMembersResult, DescribeImageMembersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
-        /// 如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
-        /// 如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
-        /// 如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateInstanceTemplateResponse CreateInstanceTemplate(CreateInstanceTemplateRequest request) {
-            return  new CreateInstanceTemplateExecutor().Client(this).Execute<CreateInstanceTemplateResponse, CreateInstanceTemplateResult, CreateInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
-        /// 如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
-        /// 如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
-        /// 如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceTemplateResponse> CreateInstanceTemplate(CreateInstanceTemplateRequest request) {
-            return await new CreateInstanceTemplateExecutor().Client(this).Execute<CreateInstanceTemplateResponse, CreateInstanceTemplateResult, CreateInstanceTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
-        /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-        /// 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
-        /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateImageResponse CreateImage(CreateImageRequest request) {
-            return  new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
-        /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-        /// 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
-        /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateImageResponse> CreateImage(CreateImageRequest request) {
-            return await new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -330,29 +276,6 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
-        /// 一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
-            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
-        /// 一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
         /// 整机镜像目前不支持共享。
         /// 
@@ -372,6 +295,529 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<ShareImageResponse> ShareImage(ShareImageRequest request) {
             return await new ShareImageExecutor().Client(this).Execute<ShareImageResponse, ShareImageResult, ShareImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+        /// 只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartInstanceResponse StartInstance(StartInstanceRequest request) {
+            return  new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+        /// 只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
+            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  撤销社区镜像，只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UnReleaseImageResponse UnReleaseImage(UnReleaseImageRequest request) {
+            return  new UnReleaseImageExecutor().Client(this).Execute<UnReleaseImageResponse, UnReleaseImageResult, UnReleaseImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  撤销社区镜像，只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UnReleaseImageResponse> UnReleaseImage(UnReleaseImageRequest request) {
+            return await new UnReleaseImageExecutor().Client(this).Execute<UnReleaseImageResponse, UnReleaseImageResult, UnReleaseImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  取消共享镜像，只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UnShareImageResponse UnShareImage(UnShareImageRequest request) {
+            return  new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  取消共享镜像，只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UnShareImageResponse> UnShareImage(UnShareImageRequest request) {
+            return await new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeImageConstraintsBatchResponse DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
+            return  new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询镜像的实例规格限制。&lt;br&gt;
+        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeImageConstraintsBatchResponse> DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
+            return await new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改一个启动模板的信息，包括名称、描述
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateInstanceTemplateResponse UpdateInstanceTemplate(UpdateInstanceTemplateRequest request) {
+            return  new UpdateInstanceTemplateExecutor().Client(this).Execute<UpdateInstanceTemplateResponse, UpdateInstanceTemplateResult, UpdateInstanceTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改一个启动模板的信息，包括名称、描述
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateInstanceTemplateResponse> UpdateInstanceTemplate(UpdateInstanceTemplateRequest request) {
+            return await new UpdateInstanceTemplateExecutor().Client(this).Execute<UpdateInstanceTemplateResponse, UpdateInstanceTemplateResult, UpdateInstanceTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+        /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
+        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AttachDiskResponse AttachDisk(AttachDiskRequest request) {
+            return  new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+        /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
+        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AttachDiskResponse> AttachDisk(AttachDiskRequest request) {
+            return await new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+        /// 修改密码后，需要重启云主机后生效。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstancePasswordResponse ModifyInstancePassword(ModifyInstancePasswordRequest request) {
+            return  new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+        /// 修改密码后，需要重启云主机后生效。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstancePasswordResponse> ModifyInstancePassword(ModifyInstancePasswordRequest request) {
+            return await new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  云主机绑定一块弹性网卡。&lt;br&gt;
+        /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
+        /// 弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
+        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
+        /// 弹性网卡与云主机必须在相同vpc下。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AttachNetworkInterfaceResponse AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
+            return  new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  云主机绑定一块弹性网卡。&lt;br&gt;
+        /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
+        /// 弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
+        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
+        /// 弹性网卡与云主机必须在相同vpc下。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
+            return await new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除ssh密钥对。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteKeypairResponse DeleteKeypair(DeleteKeypairRequest request) {
+            return  new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除ssh密钥对。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteKeypairResponse> DeleteKeypair(DeleteKeypairRequest request) {
+            return await new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询镜像详情。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeImageResponse DescribeImage(DescribeImageRequest request) {
+            return  new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询镜像详情。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeImageResponse> DescribeImage(DescribeImageRequest request) {
+            return await new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
+        /// 若传入已存在的密钥名称，会返回错误。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImportKeypairResponse ImportKeypair(ImportKeypairRequest request) {
+            return  new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
+        /// 若传入已存在的密钥名称，会返回错误。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImportKeypairResponse> ImportKeypair(ImportKeypairRequest request) {
+            return await new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
+        /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CopyImagesResponse CopyImages(CopyImagesRequest request) {
+            return  new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
+        /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CopyImagesResponse> CopyImages(CopyImagesRequest request) {
+            return await new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询一台云主机的详细信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest request) {
+            return  new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询一台云主机的详细信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
+            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
+        /// 不能修改主网卡。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceNetworkAttributeResponse ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) {
+            return  new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
+        /// 不能修改主网卡。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) {
+            return await new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeQuotasResponse DescribeQuotas(DescribeQuotasRequest request) {
+            return  new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
+            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest request) {
+            return  new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest request) {
+            return await new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RebootInstanceResponse RebootInstance(RebootInstanceRequest request) {
+            return  new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
+            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量查询密钥对。&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeypairsResponse DescribeKeypairs(DescribeKeypairsRequest request) {
+            return  new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询密钥对。&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
+            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DetachDiskResponse DetachDisk(DetachDiskRequest request) {
+            return  new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DetachDiskResponse> DetachDisk(DetachDiskRequest request) {
+            return await new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导入镜像，将外部镜像导入到京东云中
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImportImageResponse ImportImage(ImportImageRequest request) {
+            return  new ImportImageExecutor().Client(this).Execute<ImportImageResponse, ImportImageResult, ImportImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导入镜像，将外部镜像导入到京东云中
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImportImageResponse> ImportImage(ImportImageRequest request) {
+            return await new ImportImageExecutor().Client(this).Execute<ImportImageResponse, ImportImageResult, ImportImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
+        /// 如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
+        /// 如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
+        /// 如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstanceTemplateResponse CreateInstanceTemplate(CreateInstanceTemplateRequest request) {
+            return  new CreateInstanceTemplateExecutor().Client(this).Execute<CreateInstanceTemplateResponse, CreateInstanceTemplateResult, CreateInstanceTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
+        /// 如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
+        /// 如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
+        /// 如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstanceTemplateResponse> CreateInstanceTemplate(CreateInstanceTemplateRequest request) {
+            return await new CreateInstanceTemplateExecutor().Client(this).Execute<CreateInstanceTemplateResponse, CreateInstanceTemplateResult, CreateInstanceTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
+        /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
+        /// 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
+        /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateImageResponse CreateImage(CreateImageRequest request) {
+            return  new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
+        /// 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
+        /// 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
+        /// 调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateImageResponse> CreateImage(CreateImageRequest request) {
+            return await new CreateImageExecutor().Client(this).Execute<CreateImageResponse, CreateImageResult, CreateImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
+        /// 一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
+            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
+        /// 一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -414,29 +860,6 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
             return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
-        /// 只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartInstanceResponse StartInstance(StartInstanceRequest request) {
-            return  new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
-        /// 只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
-            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -562,23 +985,23 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  取消共享镜像，只允许操作您的个人私有镜像。
+        ///  发布社区镜像，只允许操作您的个人私有镜像。发布为社区镜像后会撤销共享关系。&lt;br&gt;
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UnShareImageResponse UnShareImage(UnShareImageRequest request) {
-            return  new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request);
+        public ReleaseImageResponse ReleaseImage(ReleaseImageRequest request) {
+            return  new ReleaseImageExecutor().Client(this).Execute<ReleaseImageResponse, ReleaseImageResult, ReleaseImageRequest>(request);
         }
 #else
         /// <summary>
-        ///  取消共享镜像，只允许操作您的个人私有镜像。
+        ///  发布社区镜像，只允许操作您的个人私有镜像。发布为社区镜像后会撤销共享关系。&lt;br&gt;
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UnShareImageResponse> UnShareImage(UnShareImageRequest request) {
-            return await new UnShareImageExecutor().Client(this).Execute<UnShareImageResponse, UnShareImageResult, UnShareImageRequest>(request).ConfigureAwait(false);
+        public async Task<ReleaseImageResponse> ReleaseImage(ReleaseImageRequest request) {
+            return await new ReleaseImageExecutor().Client(this).Execute<ReleaseImageResponse, ReleaseImageResult, ReleaseImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -641,98 +1064,6 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量查询镜像的实例规格限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeImageConstraintsBatchResponse DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
-            return  new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量查询镜像的实例规格限制。&lt;br&gt;
-        /// 通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageConstraintsBatchResponse> DescribeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) {
-            return await new DescribeImageConstraintsBatchExecutor().Client(this).Execute<DescribeImageConstraintsBatchResponse, DescribeImageConstraintsBatchResult, DescribeImageConstraintsBatchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改一个启动模板的信息，包括名称、描述
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateInstanceTemplateResponse UpdateInstanceTemplate(UpdateInstanceTemplateRequest request) {
-            return  new UpdateInstanceTemplateExecutor().Client(this).Execute<UpdateInstanceTemplateResponse, UpdateInstanceTemplateResult, UpdateInstanceTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改一个启动模板的信息，包括名称、描述
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateInstanceTemplateResponse> UpdateInstanceTemplate(UpdateInstanceTemplateRequest request) {
-            return await new UpdateInstanceTemplateExecutor().Client(this).Execute<UpdateInstanceTemplateResponse, UpdateInstanceTemplateResult, UpdateInstanceTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
-        /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AttachDiskResponse AttachDisk(AttachDiskRequest request) {
-            return  new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
-        /// 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-        /// 本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AttachDiskResponse> AttachDisk(AttachDiskRequest request) {
-            return await new AttachDiskExecutor().Client(this).Execute<AttachDiskResponse, AttachDiskResult, AttachDiskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-        /// 修改密码后，需要重启云主机后生效。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstancePasswordResponse ModifyInstancePassword(ModifyInstancePasswordRequest request) {
-            return  new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-        /// 修改密码后，需要重启云主机后生效。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstancePasswordResponse> ModifyInstancePassword(ModifyInstancePasswordRequest request) {
-            return await new ModifyInstancePasswordExecutor().Client(this).Execute<ModifyInstancePasswordResponse, ModifyInstancePasswordResult, ModifyInstancePasswordRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
         /// 若镜像已共享给其他用户，需先取消共享才可删除。
         /// 
@@ -773,77 +1104,6 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypes(DescribeInstanceTypesRequest request) {
             return await new DescribeInstanceTypesExecutor().Client(this).Execute<DescribeInstanceTypesResponse, DescribeInstanceTypesResult, DescribeInstanceTypesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  云主机绑定一块弹性网卡。&lt;br&gt;
-        /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
-        /// 弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
-        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
-        /// 弹性网卡与云主机必须在相同vpc下。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AttachNetworkInterfaceResponse AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
-            return  new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  云主机绑定一块弹性网卡。&lt;br&gt;
-        /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
-        /// 弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
-        /// 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
-        /// 弹性网卡与云主机必须在相同vpc下。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
-            return await new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除ssh密钥对。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteKeypairResponse DeleteKeypair(DeleteKeypairRequest request) {
-            return  new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除ssh密钥对。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteKeypairResponse> DeleteKeypair(DeleteKeypairRequest request) {
-            return await new DeleteKeypairExecutor().Client(this).Execute<DeleteKeypairResponse, DeleteKeypairResult, DeleteKeypairRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询镜像详情。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeImageResponse DescribeImage(DescribeImageRequest request) {
-            return  new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询镜像详情。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeImageResponse> DescribeImage(DescribeImageRequest request) {
-            return await new DescribeImageExecutor().Client(this).Execute<DescribeImageResponse, DescribeImageResult, DescribeImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -894,73 +1154,6 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
-        /// 若传入已存在的密钥名称，会返回错误。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImportKeypairResponse ImportKeypair(ImportKeypairRequest request) {
-            return  new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
-        /// 若传入已存在的密钥名称，会返回错误。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImportKeypairResponse> ImportKeypair(ImportKeypairRequest request) {
-            return await new ImportKeypairExecutor().Client(this).Execute<ImportKeypairResponse, ImportKeypairResult, ImportKeypairRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-        /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CopyImagesResponse CopyImages(CopyImagesRequest request) {
-            return  new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-        /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CopyImagesResponse> CopyImages(CopyImagesRequest request) {
-            return await new CopyImagesExecutor().Client(this).Execute<CopyImagesResponse, CopyImagesResult, CopyImagesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询一台云主机的详细信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest request) {
-            return  new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询一台云主机的详细信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
-            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询启动模板列表
         /// 
         /// </summary>
@@ -978,92 +1171,6 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceTemplatesResponse> DescribeInstanceTemplates(DescribeInstanceTemplatesRequest request) {
             return await new DescribeInstanceTemplatesExecutor().Client(this).Execute<DescribeInstanceTemplatesResponse, DescribeInstanceTemplatesResult, DescribeInstanceTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
-        /// 不能修改主网卡。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceNetworkAttributeResponse ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) {
-            return  new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
-        /// 不能修改主网卡。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) {
-            return await new ModifyInstanceNetworkAttributeExecutor().Client(this).Execute<ModifyInstanceNetworkAttributeResponse, ModifyInstanceNetworkAttributeResult, ModifyInstanceNetworkAttributeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeQuotasResponse DescribeQuotas(DescribeQuotasRequest request) {
-            return  new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
-            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest request) {
-            return  new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest request) {
-            return await new ModifyImageAttributeExecutor().Client(this).Execute<ModifyImageAttributeResponse, ModifyImageAttributeResult, ModifyImageAttributeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RebootInstanceResponse RebootInstance(RebootInstanceRequest request) {
-            return  new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RebootInstanceResponse> RebootInstance(RebootInstanceRequest request) {
-            return await new RebootInstanceExecutor().Client(this).Execute<RebootInstanceResponse, RebootInstanceResult, RebootInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1146,71 +1253,6 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest request) {
             return await new DescribeInstanceStatusExecutor().Client(this).Execute<DescribeInstanceStatusResponse, DescribeInstanceStatusResult, DescribeInstanceStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  批量查询密钥对。&lt;br&gt;
-        /// 此接口支持分页查询，默认每页20条。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeKeypairsResponse DescribeKeypairs(DescribeKeypairsRequest request) {
-            return  new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量查询密钥对。&lt;br&gt;
-        /// 此接口支持分页查询，默认每页20条。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
-            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DetachDiskResponse DetachDisk(DetachDiskRequest request) {
-            return  new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DetachDiskResponse> DetachDisk(DetachDiskRequest request) {
-            return await new DetachDiskExecutor().Client(this).Execute<DetachDiskResponse, DetachDiskResult, DetachDiskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  导入镜像，将外部镜像导入到京东云中
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImportImageResponse ImportImage(ImportImageRequest request) {
-            return  new ImportImageExecutor().Client(this).Execute<ImportImageResponse, ImportImageResult, ImportImageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  导入镜像，将外部镜像导入到京东云中
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImportImageResponse> ImportImage(ImportImageRequest request) {
-            return await new ImportImageExecutor().Client(this).Execute<ImportImageResponse, ImportImageResult, ImportImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

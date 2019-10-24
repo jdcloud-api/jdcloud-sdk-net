@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Edcps.Apis
 {
@@ -47,11 +48,12 @@ namespace  JDCloudSDK.Edcps.Apis
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+        /// 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 子网ID
         ///Required:true

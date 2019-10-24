@@ -89,9 +89,9 @@ namespace JDCloudSDK.Jcq.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,139 @@ namespace JDCloudSDK.Jcq.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  死信队列列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListDeadLettersResponse ListDeadLetters(ListDeadLettersRequest request) {
+            return  new ListDeadLettersExecutor().Client(this).Execute<ListDeadLettersResponse, ListDeadLettersResult, ListDeadLettersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  死信队列列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListDeadLettersResponse> ListDeadLetters(ListDeadLettersRequest request) {
+            return await new ListDeadLettersExecutor().Client(this).Execute<ListDeadLettersResponse, ListDeadLettersResult, ListDeadLettersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  死信消息数(按照用户或者consumerGroupId)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDeadLetterNumbersResponse DescribeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) {
+            return  new DescribeDeadLetterNumbersExecutor().Client(this).Execute<DescribeDeadLetterNumbersResponse, DescribeDeadLetterNumbersResult, DescribeDeadLetterNumbersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  死信消息数(按照用户或者consumerGroupId)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDeadLetterNumbersResponse> DescribeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) {
+            return await new DescribeDeadLetterNumbersExecutor().Client(this).Execute<DescribeDeadLetterNumbersResponse, DescribeDeadLetterNumbersResult, DescribeDeadLetterNumbersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  清除消息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CleanMessagesResponse CleanMessages(CleanMessagesRequest request) {
+            return  new CleanMessagesExecutor().Client(this).Execute<CleanMessagesResponse, CleanMessagesResult, CleanMessagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  清除消息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CleanMessagesResponse> CleanMessages(CleanMessagesRequest request) {
+            return await new CleanMessagesExecutor().Client(this).Execute<CleanMessagesResponse, CleanMessagesResult, CleanMessagesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除单个topic
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTopicResponse DeleteTopic(DeleteTopicRequest request) {
+            return  new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除单个topic
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request) {
+            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重发死信消息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResendDeadLettersResponse ResendDeadLetters(ResendDeadLettersRequest request) {
+            return  new ResendDeadLettersExecutor().Client(this).Execute<ResendDeadLettersResponse, ResendDeadLettersResult, ResendDeadLettersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重发死信消息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResendDeadLettersResponse> ResendDeadLetters(ResendDeadLettersRequest request) {
+            return await new ResendDeadLettersExecutor().Client(this).Execute<ResendDeadLettersResponse, ResendDeadLettersResult, ResendDeadLettersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看接入点接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAccessPointResponse DescribeAccessPoint(DescribeAccessPointRequest request) {
+            return  new DescribeAccessPointExecutor().Client(this).Execute<DescribeAccessPointResponse, DescribeAccessPointResult, DescribeAccessPointRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看接入点接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAccessPointResponse> DescribeAccessPoint(DescribeAccessPointRequest request) {
+            return await new DescribeAccessPointExecutor().Client(this).Execute<DescribeAccessPointResponse, DescribeAccessPointResult, DescribeAccessPointRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询topic列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest request) {
+            return  new DescribeTopicsExecutor().Client(this).Execute<DescribeTopicsResponse, DescribeTopicsResult, DescribeTopicsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询topic列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTopicsResponse> DescribeTopics(DescribeTopicsRequest request) {
+            return await new DescribeTopicsExecutor().Client(this).Execute<DescribeTopicsResponse, DescribeTopicsResult, DescribeTopicsRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  删除当前topic对目标用户授权的权限
@@ -214,44 +347,6 @@ namespace JDCloudSDK.Jcq.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  死信队列列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListDeadLettersResponse ListDeadLetters(ListDeadLettersRequest request) {
-            return  new ListDeadLettersExecutor().Client(this).Execute<ListDeadLettersResponse, ListDeadLettersResult, ListDeadLettersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  死信队列列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListDeadLettersResponse> ListDeadLetters(ListDeadLettersRequest request) {
-            return await new ListDeadLettersExecutor().Client(this).Execute<ListDeadLettersResponse, ListDeadLettersResult, ListDeadLettersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  死信消息数(按照用户或者consumerGroupId)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDeadLetterNumbersResponse DescribeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) {
-            return  new DescribeDeadLetterNumbersExecutor().Client(this).Execute<DescribeDeadLetterNumbersResponse, DescribeDeadLetterNumbersResult, DescribeDeadLetterNumbersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  死信消息数(按照用户或者consumerGroupId)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDeadLetterNumbersResponse> DescribeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) {
-            return await new DescribeDeadLetterNumbersExecutor().Client(this).Execute<DescribeDeadLetterNumbersResponse, DescribeDeadLetterNumbersResult, DescribeDeadLetterNumbersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建订阅
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -271,59 +366,21 @@ namespace JDCloudSDK.Jcq.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  清除消息
+        ///  查询消息轨迹
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CleanMessagesResponse CleanMessages(CleanMessagesRequest request) {
-            return  new CleanMessagesExecutor().Client(this).Execute<CleanMessagesResponse, CleanMessagesResult, CleanMessagesRequest>(request);
+        public DescribeMessageTraceResponse DescribeMessageTrace(DescribeMessageTraceRequest request) {
+            return  new DescribeMessageTraceExecutor().Client(this).Execute<DescribeMessageTraceResponse, DescribeMessageTraceResult, DescribeMessageTraceRequest>(request);
         }
 #else
         /// <summary>
-        ///  清除消息
+        ///  查询消息轨迹
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CleanMessagesResponse> CleanMessages(CleanMessagesRequest request) {
-            return await new CleanMessagesExecutor().Client(this).Execute<CleanMessagesResponse, CleanMessagesResult, CleanMessagesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除单个topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteTopicResponse DeleteTopic(DeleteTopicRequest request) {
-            return  new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除单个topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest request) {
-            return await new DeleteTopicExecutor().Client(this).Execute<DeleteTopicResponse, DeleteTopicResult, DeleteTopicRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重发死信消息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResendDeadLettersResponse ResendDeadLetters(ResendDeadLettersRequest request) {
-            return  new ResendDeadLettersExecutor().Client(this).Execute<ResendDeadLettersResponse, ResendDeadLettersResult, ResendDeadLettersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重发死信消息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResendDeadLettersResponse> ResendDeadLetters(ResendDeadLettersRequest request) {
-            return await new ResendDeadLettersExecutor().Client(this).Execute<ResendDeadLettersResponse, ResendDeadLettersResult, ResendDeadLettersRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeMessageTraceResponse> DescribeMessageTrace(DescribeMessageTraceRequest request) {
+            return await new DescribeMessageTraceExecutor().Client(this).Execute<DescribeMessageTraceResponse, DescribeMessageTraceResult, DescribeMessageTraceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -347,21 +404,21 @@ namespace JDCloudSDK.Jcq.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看接入点接口
+        ///  修改订阅
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeAccessPointResponse DescribeAccessPoint(DescribeAccessPointRequest request) {
-            return  new DescribeAccessPointExecutor().Client(this).Execute<DescribeAccessPointResponse, DescribeAccessPointResult, DescribeAccessPointRequest>(request);
+        public ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest request) {
+            return  new ModifySubscriptionAttributeExecutor().Client(this).Execute<ModifySubscriptionAttributeResponse, ModifySubscriptionAttributeResult, ModifySubscriptionAttributeRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看接入点接口
+        ///  修改订阅
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeAccessPointResponse> DescribeAccessPoint(DescribeAccessPointRequest request) {
-            return await new DescribeAccessPointExecutor().Client(this).Execute<DescribeAccessPointResponse, DescribeAccessPointResult, DescribeAccessPointRequest>(request).ConfigureAwait(false);
+        public async Task<ModifySubscriptionAttributeResponse> ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest request) {
+            return await new ModifySubscriptionAttributeExecutor().Client(this).Execute<ModifySubscriptionAttributeResponse, ModifySubscriptionAttributeResult, ModifySubscriptionAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -442,25 +499,6 @@ namespace JDCloudSDK.Jcq.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询topic列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest request) {
-            return  new DescribeTopicsExecutor().Client(this).Execute<DescribeTopicsResponse, DescribeTopicsResult, DescribeTopicsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询topic列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeTopicsResponse> DescribeTopics(DescribeTopicsRequest request) {
-            return await new DescribeTopicsExecutor().Client(this).Execute<DescribeTopicsResponse, DescribeTopicsResult, DescribeTopicsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  订阅列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -495,6 +533,25 @@ namespace JDCloudSDK.Jcq.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeMessageResponse> DescribeMessage(DescribeMessageRequest request) {
             return await new DescribeMessageExecutor().Client(this).Execute<DescribeMessageResponse, DescribeMessageResult, DescribeMessageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据businessId查询消息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMessagesByBusinessIdResponse DescribeMessagesByBusinessId(DescribeMessagesByBusinessIdRequest request) {
+            return  new DescribeMessagesByBusinessIdExecutor().Client(this).Execute<DescribeMessagesByBusinessIdResponse, DescribeMessagesByBusinessIdResult, DescribeMessagesByBusinessIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据businessId查询消息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMessagesByBusinessIdResponse> DescribeMessagesByBusinessId(DescribeMessagesByBusinessIdRequest request) {
+            return await new DescribeMessagesByBusinessIdExecutor().Client(this).Execute<DescribeMessagesByBusinessIdResponse, DescribeMessagesByBusinessIdResult, DescribeMessagesByBusinessIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

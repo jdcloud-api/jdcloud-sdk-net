@@ -62,7 +62,7 @@ namespace JDCloudSDK.Domainservice.Model
         ///</summary>
         public string PackName{ get; set; }
         ///<summary>
-        /// 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5
+        /// 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5，域名探测错误:7，域名未注册:8，注册局暂停解析:9
         ///</summary>
         public string ResolvingStatus{ get; set; }
         ///<summary>
@@ -77,5 +77,13 @@ namespace JDCloudSDK.Domainservice.Model
         /// 域名的锁定状态，0:未锁定， 1:已锁定
         ///</summary>
         public int? LockStatus{ get; set; }
+        ///<summary>
+        /// 主域名当前的Nameserver列表
+        ///</summary>
+        public List<string> ProbeNsList{ get; set; }
+        ///<summary>
+        /// 主域名应该设置的Nameserver列表
+        ///</summary>
+        public List<string> DefNsList{ get; set; }
     }
 }

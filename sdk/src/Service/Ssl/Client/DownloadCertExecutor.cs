@@ -43,7 +43,7 @@ namespace JDCloudSDK.Ssl.Client
         public override  string Method
         {
             get {
-                return "POST";
+                return "GET";
             }
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace JDCloudSDK.Ssl.Client
         public override string Url
         {
             get {
-            return "/sslCert:download";
+            return "/sslCert/{certId}:download";
             }
         }
     }

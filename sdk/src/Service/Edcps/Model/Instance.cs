@@ -79,6 +79,10 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public int? Bandwidth{ get; set; }
         ///<summary>
+        /// 额外上行带宽, 单位Mbps
+        ///</summary>
+        public int? ExtraUplinkBandwidth{ get; set; }
+        ///<summary>
         /// 镜像类型, 如 standard
         ///</summary>
         public string ImageType{ get; set; }
@@ -154,6 +158,14 @@ namespace JDCloudSDK.Edcps.Model
         /// 公网IPv6
         ///</summary>
         public string PublicIpv6{ get; set; }
+        ///<summary>
+        /// 密钥对id
+        ///</summary>
+        public string KeypairId{ get; set; }
+        ///<summary>
+        /// agent状态
+        ///</summary>
+        public string AgentStatus{ get; set; }
         ///<summary>
         /// 计费信息
         ///</summary>

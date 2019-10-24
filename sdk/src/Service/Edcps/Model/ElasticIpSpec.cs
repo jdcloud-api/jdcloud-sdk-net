@@ -40,11 +40,15 @@ namespace JDCloudSDK.Edcps.Model
     {
 
         ///<summary>
-        /// 带宽, 范围[1,200] 单位Mbps
+        /// 带宽, 范围[1,10240] 单位Mbps
         ///Required:true
         ///</summary>
         [Required]
         public int Bandwidth{ get; set; }
+        ///<summary>
+        /// 额外上行带宽, 范围[0,10240] 单位Mbps
+        ///</summary>
+        public int? ExtraUplinkBandwidth{ get; set; }
         ///<summary>
         /// 购买数量
         ///Required:true
