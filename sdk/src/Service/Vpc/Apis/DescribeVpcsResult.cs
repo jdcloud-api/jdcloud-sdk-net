@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeVpcsResult : JdcloudResult
     {
         ///<summary>
-        /// Vpcs
+        /// Vpc资源信息列表
         ///</summary>
         public List<JDCloudSDK.Vpc.Model.Vpc> Vpcs{ get; set; }
 

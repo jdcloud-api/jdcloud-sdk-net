@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeNetworkAclsResult : JdcloudResult
     {
         ///<summary>
-        /// NetworkAcls
+        /// networkAcl资源信息列表
         ///</summary>
         public List<NetworkAcl> NetworkAcls{ get; set; }
 

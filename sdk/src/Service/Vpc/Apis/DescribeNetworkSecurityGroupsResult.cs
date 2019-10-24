@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeNetworkSecurityGroupsResult : JdcloudResult
     {
         ///<summary>
-        /// NetworkSecurityGroups
+        /// 安全组资源信息列表
         ///</summary>
         public List<NetworkSecurityGroup> NetworkSecurityGroups{ get; set; }
 

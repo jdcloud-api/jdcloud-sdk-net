@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Vpc.Apis
 {
@@ -55,13 +56,14 @@ namespace  JDCloudSDK.Vpc.Apis
         /// role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡），支持单个
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

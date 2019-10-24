@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeVpcPeeringsResult : JdcloudResult
     {
         ///<summary>
-        /// VpcPeerings
+        /// VpcPeering资源信息列表
         ///</summary>
         public List<VpcPeering> VpcPeerings{ get; set; }
 

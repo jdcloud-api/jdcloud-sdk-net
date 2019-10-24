@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Vpc.Apis
 {
@@ -40,7 +41,9 @@ namespace  JDCloudSDK.Vpc.Apis
     {
         ///<summary>
         /// 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+        ///Required:true
         ///</summary>
+        [Required]
         public List<string> SubnetIds{ get; set; }
 
         ///<summary>
@@ -48,7 +51,8 @@ namespace  JDCloudSDK.Vpc.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// RouteTable ID
         ///Required:true

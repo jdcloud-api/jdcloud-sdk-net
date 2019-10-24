@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeNetworkInterfacesResult : JdcloudResult
     {
         ///<summary>
-        /// NetworkInterfaces
+        /// networkInterface资源信息列表
         ///</summary>
         public List<NetworkInterface> NetworkInterfaces{ get; set; }
 

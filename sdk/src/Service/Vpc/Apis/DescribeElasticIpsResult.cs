@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeElasticIpsResult : JdcloudResult
     {
         ///<summary>
-        /// ElasticIps
+        /// elasticIp资源信息列表
         ///</summary>
         public List<ElasticIp> ElasticIps{ get; set; }
 

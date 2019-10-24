@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class DescribeRouteTablesResult : JdcloudResult
     {
         ///<summary>
-        /// RouteTables
+        /// 路由表资源信息列表
         ///</summary>
         public List<RouteTable> RouteTables{ get; set; }
 
