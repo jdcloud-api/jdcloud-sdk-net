@@ -474,8 +474,38 @@ namespace JDCloudSDK.Core.Auth.Sign
             return stringBuilder.ToString();
         }
 
+        public SignedRequestModel Sign(string requestUrl, string serviceName, string httpRequestMethod, string regionName, string apiVersion, Credential credentials,
+            byte[] content = null,
+            string contentType = "application/json",
+        Dictionary<string, List<string>> header = null, DateTime? overrddenDate = null)
+        {
+            RequestModel requestModel = new RequestModel();
+            requestModel.ServiceName = serviceName;
+            requestModel.RegionName = regionName;
+            if (header != null && header.Count > 0) {
+                requestModel.Header.Concat(header).ToDictionary(k => k.Key, v => v.Value);
+            }
+            requestModel.Content = content;
+            requestModel.ContentType = contentType;
+            requestModel.HttpMethod = httpRequestMethod;
+            requestModel.OverrddenDate = overrddenDate;
+            requestModel.ApiVersion = apiVersion;
+            requestModel.SignType = ParameterConstant.SIGN_SHA256;
+            Uri uri = new Uri(requestUrl);
+            requestModel.Uri = uri;// uri.Host
+            var queryString = uri.Query;
+            var requestPath = uri.AbsolutePath;
+            requestModel.QueryParameters = queryString;
 
-
+            if (!(uri.Scheme.ToLower() == "http" && uri.Port == 80) &&
+               !(uri.Scheme.ToLower() == "https" && uri.Port == 443))
+            {
+                requestModel.RequestPort = uri.Port;
+            }
+            requestModel.ResourcePath = requestPath;
+            return Sign(requestModel, credentials);
+            
+        }
     }
 
 }
