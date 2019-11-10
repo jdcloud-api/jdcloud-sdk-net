@@ -77,6 +77,11 @@ namespace JDCloudSDK.Core.Model
         /// </summary>
         public int? RequestPort { get; set; }
 
+        /// <summary>
+        /// the request nonce id
+        /// </summary>
+        public string NonceId { get; set; } 
+
 
 
         /// <summary>

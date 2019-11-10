@@ -170,7 +170,7 @@ namespace DotNetCoreTest
             string secretAccessKey = "";
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
             //2.构建请求终结点配置
-            SDKEnvironment sdkEnvironment = new SDKEnvironment("nativecontainer.internal.cn-north-1.jdcloud-api.com");
+            SDKEnvironment sdkEnvironment = new SDKEnvironment("nativecontainer.i nternal.cn-north-1.jdcloud-api.com");
             //3.创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                     .CredentialsProvider(credentialsProvider)

@@ -489,24 +489,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/lishijun1/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\lishijun1\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "0.1.0",
     "restore": {
-      "projectUniqueName": "/Users/lishijun1/Documents/cshapworkspace/jdcloud-sdk-dotnet-dev/sdk/src/Core/JDCloudSDK.Core.csproj",
+      "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
       "projectName": "JDCloudSDK.Core",
-      "projectPath": "/Users/lishijun1/Documents/cshapworkspace/jdcloud-sdk-dotnet-dev/sdk/src/Core/JDCloudSDK.Core.csproj",
-      "packagesPath": "/Users/lishijun1/.nuget/packages/",
-      "outputPath": "/Users/lishijun1/Documents/cshapworkspace/jdcloud-sdk-dotnet-dev/sdk/src/Core/obj/",
+      "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
+      "packagesPath": "C:\\Users\\lishijun1\\.nuget\\packages\\",
+      "outputPath": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/lishijun1/.config/NuGet/NuGet.Config"
+        "C:\\Users\\lishijun1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net35",
@@ -515,6 +516,7 @@
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -545,11 +547,7 @@
             "version": "[11.0.2, )"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
->>>>>>> f37b3ecd0a8fb271c39782008e4f810287045952
       },
       "net40": {
         "dependencies": {
@@ -558,11 +556,7 @@
             "version": "[11.0.2, )"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
->>>>>>> f37b3ecd0a8fb271c39782008e4f810287045952
       },
       "net45": {
         "dependencies": {
@@ -583,11 +577,7 @@
             "version": "[4.5.3, )"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
->>>>>>> f37b3ecd0a8fb271c39782008e4f810287045952
       },
       "netstandard2.0": {
         "dependencies": {
@@ -616,11 +606,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
->>>>>>> f37b3ecd0a8fb271c39782008e4f810287045952
       }
     }
   }

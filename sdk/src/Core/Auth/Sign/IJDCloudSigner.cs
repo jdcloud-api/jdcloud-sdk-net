@@ -20,9 +20,10 @@ namespace JDCloudSDK.Core.Auth.Sign
         SignedRequestModel Sign(RequestModel requestModel, Credential credentials);
 
 
-        SignedRequestModel Sign(string requestUrl, string serviceName, string httpRequestMethod,
+        SignedRequestModel Sign(string host,string port ,string path,string queryString, string serviceName, 
+            string httpRequestMethod,
             string regionName, string apiVersion, Credential credentials,  byte[] content, 
-            string contentType, Dictionary<string, List<string>> header, DateTime? overrddenDate = null);
+            string contentType, Dictionary<string, List<string>> header,string nonceId, DateTime? overrddenDate = null);
 
     }
 }
