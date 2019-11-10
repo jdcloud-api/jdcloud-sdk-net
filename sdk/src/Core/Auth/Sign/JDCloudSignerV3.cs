@@ -175,7 +175,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             requestModel.HttpMethod = httpRequestMethod;
             requestModel.OverrddenDate = overrddenDate;
             requestModel.ApiVersion = apiVersion;
-            requestModel.SignType = ParameterConstant.SIGN_SHA256;
+            requestModel.SignType = JDCloudSignVersionType.JDCloud_V3;
             path = path.StartsWith("/") ? path : "/" + path;
             queryString = queryString.StartsWith("?") ? queryString : "?" + queryString;
             int portValue = 0;

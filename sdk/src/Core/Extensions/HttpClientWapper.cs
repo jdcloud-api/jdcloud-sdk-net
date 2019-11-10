@@ -1,5 +1,6 @@
 ﻿using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Extensions;
+using JDCloudSDK.Core.Model;
 
 #if NET35 || NET40
 #else
@@ -30,7 +31,7 @@ namespace JDCloudSDK.Core.Extensions
 
         private Version _defalutRequestVersion = HttpVersion.Version11;
 
-        private string _signType;
+        private JDCloudSignVersionType _signType;
 
         private DateTime? _overWriteDate;
 
@@ -66,7 +67,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="credentials"></param>
         /// <param name="overWriteDate">sign data override</param>
         /// <param name="signType">the sign method type</param>
-        public HttpClientWrapper(HttpClient httpClient, Credentials credentials, string serviceName = null, string signType = null, DateTime? overWriteDate = null)
+        public HttpClientWrapper(HttpClient httpClient, Credentials credentials, string serviceName = null, JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overWriteDate = null)
         {
 
             this._httpClient = httpClient;
@@ -435,7 +436,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
         {
-            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _overWriteDate, _signType );
             return _httpClient.SendAsync(request);
         }
 
@@ -447,7 +448,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption)
         {
-            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _overWriteDate,_signType );
             return _httpClient.SendAsync(request, completionOption);
         }
 
@@ -460,7 +461,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public new Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
         {
-            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _overWriteDate, _signType);
             return _httpClient.SendAsync(request, completionOption, cancellationToken);
         } 
 
@@ -480,7 +481,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            request = request.DoRequestMessageSign(_credentials, _serviceName, _signType, _overWriteDate);
+            request = request.DoRequestMessageSign(_credentials, _serviceName, _overWriteDate, _signType);
             return _httpClient.SendAsync(request, cancellationToken);
         }
     }

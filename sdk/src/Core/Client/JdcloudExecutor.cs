@@ -273,7 +273,7 @@ namespace JDCloudSDK.Core.Client
                         }
                     }
                 }
-                var signRequestMessage = httpRequestMessage.DoRequestMessageSign(JdcloudClient.Credential, JdcloudClient.ServiceName, null, null);
+                var signRequestMessage = httpRequestMessage.DoRequestMessageSign(JdcloudClient.Credential, JdcloudClient.ServiceName, null);
                 HttpResponseMessage httpResponseMessage = await httpClient.SendAsync(signRequestMessage).ConfigureAwait(false);
                 JDCloudSdkResult jDCloudSdkResult = await ProcessHttpResponseMessage(httpResponseMessage).ConfigureAwait(false);
                 return ProcessJDcloudRequestResult<R, R2>(jDCloudSdkResult);

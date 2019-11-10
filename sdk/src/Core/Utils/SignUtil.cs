@@ -1,4 +1,6 @@
-﻿using JDCloudSDK.Core.Common;
+﻿using JDCloudSDK.Core.Auth.Sign;
+using JDCloudSDK.Core.Common;
+using JDCloudSDK.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -11,6 +13,24 @@ namespace JDCloudSDK.Core.Utils
     /// </summary>
     public class SignUtil
     {
+
+        /// <summary>
+        /// get signer
+        /// </summary>
+        /// <param name="jDCloudSignVersionType"></param>
+        /// <returns></returns>
+        public static IJDCloudSigner GetJDCloudSigner(JDCloudSignVersionType jDCloudSignVersionType)
+        {
+            switch (jDCloudSignVersionType)
+            {
+                case JDCloudSignVersionType.JDCloud_V2:
+                    return new JDCloudSigner();
+                case JDCloudSignVersionType.JDCloud_V3:
+                    return new JDCloudSignerV3();
+                default:
+                    return new JDCloudSignerV3();
+            }
+        }
 
 
         /// <summary>

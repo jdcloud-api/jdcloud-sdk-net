@@ -1,8 +1,9 @@
-﻿#if!(NET35||NET40)
+﻿#if !(NET35 || NET40)
 using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Auth.Sign;
 using JDCloudSDK.Core.Common;
 using JDCloudSDK.Core.Model;
+using JDCloudSDK.Core.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +27,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="serviceName">the current http request request serviceName</param>
         /// <returns></returns>
         public static HttpRequestMessage DoRequestMessageSign(this HttpRequestMessage httpRequestMessage, Credential credentials,
-            string serviceName = null, JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overWriteDate = null) {
+            string serviceName = null,  DateTime? overWriteDate = null, JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2) {
             var headers =   httpRequestMessage.Headers;
             var requestUri = httpRequestMessage.RequestUri;
             var queryString = requestUri.Query;
@@ -81,7 +82,7 @@ namespace JDCloudSDK.Core.Extensions
             foreach (var headerKeyValue in headers) {
                 requestModel.AddHeader(headerKeyValue.Key, string.Join(",", headerKeyValue.Value));
             }
-            IJDCloudSigner jDCloudSigner = GetJDCloudSigner(signType);
+            IJDCloudSigner jDCloudSigner = SignUtil.GetJDCloudSigner(signType);
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
             var signedHeader = signedRequestModel.RequestHead;
             foreach (var key in signedHeader.Keys)
@@ -95,21 +96,7 @@ namespace JDCloudSDK.Core.Extensions
             return httpRequestMessage;
         }
 
-        /// <summary>
-        /// get signer
-        /// </summary>
-        /// <param name="jDCloudSignVersionType"></param>
-        /// <returns></returns>
-        private static IJDCloudSigner GetJDCloudSigner(JDCloudSignVersionType jDCloudSignVersionType) {
-            switch (jDCloudSignVersionType) {
-                case JDCloudSignVersionType.JDCloud_V2:
-                    return new JDCloudSigner();
-                case JDCloudSignVersionType.JDCloud_V3:
-                    return new JDCloudSignerV3();
-                default:
-                    return new JDCloudSignerV3();
-            }
-        } 
+        
     }
 }
 #endif

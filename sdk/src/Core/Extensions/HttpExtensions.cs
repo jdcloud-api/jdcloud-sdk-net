@@ -38,7 +38,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="overrideDate"></param>
         /// <param name="isWriteBody"></param>
         /// <returns></returns>
-        public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credential credentials, string serviceName = null, object bodyContent = null,bool isWriteBody =false,string signType = null, DateTime? overrideDate = null) {
+        public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credential credentials, string serviceName = null, object bodyContent = null,bool isWriteBody =false,JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overrideDate = null) {
             var byteContent = new byte[0];
             if (bodyContent != null) {
                 if (isWriteBody)
@@ -137,7 +137,7 @@ namespace JDCloudSDK.Core.Extensions
                 }
                 requestModel.ServiceName = serviceName;
             }
-            requestModel.SignType = ParameterConstant.SIGN_SHA256;
+            requestModel.SignType = signType;
             requestModel.Uri = requestUri;
             requestModel.QueryParameters = queryString;
             requestModel.OverrddenDate = overrideDate;
@@ -150,7 +150,7 @@ namespace JDCloudSDK.Core.Extensions
             {
                 requestModel.AddHeader(headerKeyValue,   headers.Get(headerKeyValue));
             }
-            JDCloudSigner jDCloudSigner = new JDCloudSigner();
+            IJDCloudSigner jDCloudSigner = SignUtil.GetJDCloudSigner(signType);
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
             var signedHeader = signedRequestModel.RequestHead;
             foreach(var key in signedHeader.Keys) {
@@ -172,7 +172,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="overrideDate">the sign date override</param>
         /// <param name="signType">the jdcloud sign method type</param>
         /// <returns></returns>
-        public static HttpClientWrapper DoSign(this HttpClient httpClient, Credentials credentials,string serviceName= null,string signType = null, DateTime? overrideDate = null)
+        public static HttpClientWrapper DoSign(this HttpClient httpClient, Credentials credentials,string serviceName= null,JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overrideDate = null)
         {
             HttpClientWrapper httpClientWrapper = new HttpClientWrapper(httpClient, credentials, serviceName,signType, overrideDate); 
             return httpClientWrapper;

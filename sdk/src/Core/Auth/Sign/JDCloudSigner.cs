@@ -322,7 +322,7 @@ namespace JDCloudSDK.Core.Auth.Sign
           
             //需要构造scope
             string scope = scopeBuilder.ToString();
-            string stringToSign = new StringBuilder(requestModel.SignType)
+            string stringToSign = new StringBuilder(ParameterConstant.SIGN_SHA256)
                   .Append(ParameterConstant.LINE_SEPARATOR)
                   .Append(requestModel.Header[ParameterConstant.X_JDCLOUD_DATE][0])
                   .Append(ParameterConstant.LINE_SEPARATOR)
@@ -389,9 +389,26 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
 
             return requestModel;
-        } 
-        
+        }
 
+        /// <summary>
+        /// sign with all param 
+        /// </summary>
+        /// <param name="host"> request host</param>
+        /// <param name="port"> request port</param>
+        /// <param name="path"> request path</param>
+        /// <param name="queryString">request query string</param>
+        /// <param name="serviceName">the request service name</param>
+        /// <param name="httpRequestMethod">the request http method</param>
+        /// <param name="regionName">the source region name</param>
+        /// <param name="apiVersion">the api version</param>
+        /// <param name="credentials">the jdcloud credentials</param>
+        /// <param name="content">the request body content</param>
+        /// <param name="contentType">the request body content type</param>
+        /// <param name="header">the request header</param>
+        /// <param name="nonceId">the request nonce id</param>
+        /// <param name="overrddenDate">the sgin overrdden date</param>
+        /// <returns></returns>
         public SignedRequestModel Sign(string host, string port, string path, string queryString, 
             string serviceName, string httpRequestMethod, string regionName, string apiVersion, Credential credentials,
             byte[] content = null,
@@ -410,7 +427,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             requestModel.HttpMethod = httpRequestMethod;
             requestModel.OverrddenDate = overrddenDate;
             requestModel.ApiVersion = apiVersion;
-            requestModel.SignType = ParameterConstant.SIGN_SHA256;
+            requestModel.SignType = JDCloudSignVersionType.JDCloud_V2;
             path = path.StartsWith("/") ? path : "/" + path;
             queryString = queryString.StartsWith("?") ? queryString : "?" + queryString;
             int portValue = 0;

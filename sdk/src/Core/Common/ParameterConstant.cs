@@ -246,8 +246,13 @@ namespace JDCloudSDK.Core.Common
         /// </summary>
         public const string DEFAULT_REGION = "cn-north-1";
 
+        /// <summary>
+        /// jdcloud sign version 2 string
+        /// </summary>
         public const string SIGN_VERSION_2 = "JDCLOUD_V2";
-
+        /// <summary>
+        /// jdcloud sign version 3 string
+        /// </summary>
         public const string SIGN_VERSION_3 = "JDCLOUD_V3";
     }
 }
