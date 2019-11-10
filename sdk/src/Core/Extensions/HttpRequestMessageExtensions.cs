@@ -25,7 +25,8 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="signType">the signType now support HMACSHA256</param>
         /// <param name="serviceName">the current http request request serviceName</param>
         /// <returns></returns>
-        public static HttpRequestMessage DoRequestMessageSign(this HttpRequestMessage httpRequestMessage, Credential credentials,string serviceName = null,string signType = null,DateTime? overWriteDate = null) {
+        public static HttpRequestMessage DoRequestMessageSign(this HttpRequestMessage httpRequestMessage, Credential credentials,
+            string serviceName = null, JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overWriteDate = null) {
             var headers =   httpRequestMessage.Headers;
             var requestUri = httpRequestMessage.RequestUri;
             var queryString = requestUri.Query;
@@ -68,10 +69,11 @@ namespace JDCloudSDK.Core.Extensions
                 }
                 requestModel.ServiceName = serviceName;
             } 
-            requestModel.SignType = ParameterConstant.SIGN_SHA256;
+            requestModel.SignType = signType;
             requestModel.Uri = requestUri;
             requestModel.QueryParameters = queryString;
             requestModel.OverrddenDate = overWriteDate;
+
             if (!(requestUri.Scheme.ToLower() == "http" && requestUri.Port == 80) &&
                 !(requestUri.Scheme.ToLower() == "https" && requestUri.Port == 443)) {
                 requestModel.RequestPort = requestUri.Port;
@@ -79,7 +81,7 @@ namespace JDCloudSDK.Core.Extensions
             foreach (var headerKeyValue in headers) {
                 requestModel.AddHeader(headerKeyValue.Key, string.Join(",", headerKeyValue.Value));
             }
-            JDCloudSigner jDCloudSigner = new JDCloudSigner();
+            IJDCloudSigner jDCloudSigner = GetJDCloudSigner(signType);
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
             var signedHeader = signedRequestModel.RequestHead;
             foreach (var key in signedHeader.Keys)
@@ -92,6 +94,22 @@ namespace JDCloudSDK.Core.Extensions
             }
             return httpRequestMessage;
         }
+
+        /// <summary>
+        /// get signer
+        /// </summary>
+        /// <param name="jDCloudSignVersionType"></param>
+        /// <returns></returns>
+        private static IJDCloudSigner GetJDCloudSigner(JDCloudSignVersionType jDCloudSignVersionType) {
+            switch (jDCloudSignVersionType) {
+                case JDCloudSignVersionType.JDCloud_V2:
+                    return new JDCloudSigner();
+                case JDCloudSignVersionType.JDCloud_V3:
+                    return new JDCloudSignerV3();
+                default:
+                    return new JDCloudSignerV3();
+            }
+        } 
     }
 }
 #endif

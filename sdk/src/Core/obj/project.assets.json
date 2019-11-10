@@ -489,24 +489,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lishijun1\\.nuget\\packages\\": {},
+    "C:\\Users\\lishijun\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "0.1.0",
     "restore": {
-      "projectUniqueName": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
+      "projectUniqueName": "H:\\githubcode\\JDCloudSDK\\dev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
       "projectName": "JDCloudSDK.Core",
-      "projectPath": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
-      "packagesPath": "C:\\Users\\lishijun1\\.nuget\\packages\\",
-      "outputPath": "D:\\csharpworkspace\\JDCloudSDK\\githubdev\\sdk\\src\\Core\\obj\\",
+      "projectPath": "H:\\githubcode\\JDCloudSDK\\dev\\sdk\\src\\Core\\JDCloudSDK.Core.csproj",
+      "packagesPath": "C:\\Users\\lishijun\\.nuget\\packages\\",
+      "outputPath": "H:\\githubcode\\JDCloudSDK\\dev\\sdk\\src\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lishijun1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lishijun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

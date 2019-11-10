@@ -53,7 +53,7 @@ namespace JDCloudSDK.Core.Model
         /// <summary>
         /// 签名方法
         /// </summary>
-        public string SignType { get; set; }
+        public JDCloudSignVersionType SignType { get; set; }
 
 
         /// <summary>
