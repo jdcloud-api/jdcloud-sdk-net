@@ -154,21 +154,28 @@ namespace DotNetCoreTest
             request.InstanceId = "i-zjjyo8hz89";
             var vmClient = GetVmClient();
             var response = vmClient.DescribeInstance(request).Result;
+            Dictionary<string,List<string>> headers = response.HttpResponse.Header;
+            if (headers.ContainsKey("headerKey")) {
+                List<string> headerValue = headers["headerKey"];
+            }
+            
             _output.WriteLine(JsonConvert.SerializeObject(response));
         } 
 
 
         public VmClient GetVmClient()
         {
-            //1. 设置accessKey和secretKey
+            //1.设置accessKey和secretKey
             string accessKeyId = "";
             string secretAccessKey = "";
             CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
-        
-            //2. 创建XXXClient
+            //2.构建请求终结点配置
+            SDKEnvironment sdkEnvironment = new SDKEnvironment("nativecontainer.internal.cn-north-1.jdcloud-api.com");
+            //3.创建XXXClient
             VmClient vmClient = new VmClient.DefaultBuilder()
                     .CredentialsProvider(credentialsProvider)
-                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50)) 
+                    .Environment(sdkEnvironment) //指定非默认的Endpoint
+                    .HttpRequestConfig(new HttpRequestConfig(Protocol.HTTP, 50))  // 设置请求http schema HTTP or HTTPS ,50 为超时时间默认为秒
                     .Build();
             return vmClient;
         }
