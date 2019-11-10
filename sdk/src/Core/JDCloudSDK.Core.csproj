@@ -26,12 +26,10 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
-    <PackageReference Include="System.Memory">
-      <Version>4.5.3</Version>
+    <PackageReference Include="System.Memory" Version="4.5.3">
     </PackageReference>
     <PackageReference Include="System.Net.Http" Version="4.3.3" />
-    <PackageReference Include="System.Threading.Tasks.Extensions">
-      <Version>4.5.3</Version>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.3">
     </PackageReference>
     <Reference Include="System.Web" />
   </ItemGroup>
@@ -39,8 +37,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.Threading.Tasks.Extensions">
-      <Version>4.5.3</Version>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.3">
     </PackageReference>
   </ItemGroup>
 

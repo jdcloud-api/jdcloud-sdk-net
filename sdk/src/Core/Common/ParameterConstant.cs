@@ -240,5 +240,9 @@ namespace JDCloudSDK.Core.Common
         /// the sdk default request region
         /// </summary>
         public const string DEFAULT_REGION = "cn-north-1";
+
+        public const string SIGN_VERSION_2 = "JDCLOUD_V2";
+
+        public const string SIGN_VERSION_3 = "JDCLOUD_V3";
     }
 }
