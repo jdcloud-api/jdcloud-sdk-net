@@ -22,4 +22,10 @@
     <ProjectReference Include="..\..\..\Service\Vpc\JDCloudSDK.Vpc.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestCase.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
