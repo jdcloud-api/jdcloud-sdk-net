@@ -51,14 +51,22 @@ namespace JDCloudSDK.Core.Auth.Sign
             string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
             string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
             string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName);
-            var requestHeader = requestModel.Header;
+            var requestHeader = ProcessRequestHeaderKeyToLower(requestModel.Header);
             requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
                               new List<string> { formattedSigningDateTime });
             requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE,
                               new List<string> { nonceId });
-            var contentSHA256 = SignUtil.CalculateContentHash(requestModel.Content);
-
-
+            var contentSHA256 = "";
+            if (requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_CONTENT_SHA256)) {
+                List<string> contentSha256Value = requestHeader[ParameterConstant.X_JDCLOUD_CONTENT_SHA256];
+                if (contentSha256Value != null && contentSha256Value.Count > 0) {
+                    contentSHA256 = contentSha256Value[0];
+                }
+                
+            }
+            if (contentSHA256.IsNullOrWhiteSpace()) {
+                contentSHA256 = SignUtil.CalculateContentHash(requestModel.Content);
+            }  
             string queryParams = ProcessQueryString(requestModel.QueryParameters);
             string requestPath = ProcessRequestPath(requestModel.ResourcePath);
             string requestMethod = ProcessRequestMethod(requestModel.HttpMethod);
@@ -229,6 +237,28 @@ namespace JDCloudSDK.Core.Auth.Sign
             string[] signHeaderKey = needSignHeaders.Keys.ToArray();
             string signHeader = string.Join(";", signHeaderKey); 
             return signHeader; 
+        }
+
+        /// <summary>
+        /// process request header key to lower
+        /// </summary>
+        /// <param name="header"></param>
+        /// <returns></returns>
+        public static Dictionary<string, List<string>> ProcessRequestHeaderKeyToLower(Dictionary<string, List<string>> header) {
+            if (header == null)
+            {
+                return null;
+            }
+            else if(header.Count == 0){
+                return header;
+            } 
+            Dictionary<string, List<string>> result = new Dictionary<string, List<string>>();
+
+            foreach (var item in header) {
+                result.Add(item.Key.ToLower(), item.Value);
+            
+            } 
+            return result;
         }
 
         /// <summary>

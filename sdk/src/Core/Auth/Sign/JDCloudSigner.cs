@@ -68,7 +68,19 @@ namespace JDCloudSDK.Core.Auth.Sign
                               new List<string> { formattedSigningDateTime } );
             requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE, 
                               new List<string> { nonceId });
-            var contentSHA256 = SignUtil.CalculateContentHash(requestModel.Content);
+            var contentSHA256 = "";
+            if (requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_CONTENT_SHA256))
+            {
+                List<string> contentSha256Value = requestHeader[ParameterConstant.X_JDCLOUD_CONTENT_SHA256];
+                if (contentSha256Value != null && contentSha256Value.Count > 0)
+                {
+                    contentSHA256 = contentSha256Value[0];
+                } 
+            }
+            if (contentSHA256.IsNullOrWhiteSpace())
+            {
+                contentSHA256 = SignUtil.CalculateContentHash(requestModel.Content);
+            }
             var requestParameters = OrderRequestParameters(requestModel.QueryParameters);
             string path = "";
             StringBuilder stringBuilder = new StringBuilder();
