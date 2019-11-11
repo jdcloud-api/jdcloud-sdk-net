@@ -31,7 +31,7 @@ namespace JDCloudSDK.Core.Extensions
 
         private Version _defalutRequestVersion = HttpVersion.Version11;
 
-        private JDCloudSignVersionType _signType;
+        private JDCloudSignVersionType? _signType;
 
         private DateTime? _overWriteDate;
 
@@ -67,7 +67,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="credentials"></param>
         /// <param name="overWriteDate">sign data override</param>
         /// <param name="signType">the sign method type</param>
-        public HttpClientWrapper(HttpClient httpClient, Credentials credentials, string serviceName = null, JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overWriteDate = null)
+        public HttpClientWrapper(HttpClient httpClient, Credentials credentials, string serviceName = null, JDCloudSignVersionType? signType = null, DateTime? overWriteDate = null)
         {
 
             this._httpClient = httpClient;

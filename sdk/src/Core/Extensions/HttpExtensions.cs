@@ -1,6 +1,7 @@
 ﻿using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Auth.Sign;
 using JDCloudSDK.Core.Common;
+using JDCloudSDK.Core.Config;
 using JDCloudSDK.Core.Model;
 using JDCloudSDK.Core.Service;
 using JDCloudSDK.Core.Utils;
@@ -38,7 +39,7 @@ namespace JDCloudSDK.Core.Extensions
         /// <param name="overrideDate"></param>
         /// <param name="isWriteBody"></param>
         /// <returns></returns>
-        public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credential credentials, string serviceName = null, object bodyContent = null,bool isWriteBody =false,JDCloudSignVersionType signType = JDCloudSignVersionType.JDCloud_V2, DateTime? overrideDate = null) {
+        public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credential credentials, string serviceName = null, object bodyContent = null,bool isWriteBody =false,JDCloudSignVersionType? signType = null, DateTime? overrideDate = null) {
             var byteContent = new byte[0];
             if (bodyContent != null) {
                 if (isWriteBody)
@@ -137,7 +138,12 @@ namespace JDCloudSDK.Core.Extensions
                 }
                 requestModel.ServiceName = serviceName;
             }
-            requestModel.SignType = signType;
+            JDCloudSignVersionType jDCloudSignVersionType = GlobalConfig.GetInstance().SignVersionType;
+            if (signType != null&&signType.HasValue)
+            {
+                jDCloudSignVersionType = signType.Value;
+            }
+            requestModel.SignType = jDCloudSignVersionType; 
             requestModel.Uri = requestUri;
             requestModel.QueryParameters = queryString;
             requestModel.OverrddenDate = overrideDate;
@@ -150,7 +156,7 @@ namespace JDCloudSDK.Core.Extensions
             {
                 requestModel.AddHeader(headerKeyValue,   headers.Get(headerKeyValue));
             }
-            IJDCloudSigner jDCloudSigner = SignUtil.GetJDCloudSigner(signType);
+            IJDCloudSigner jDCloudSigner = SignUtil.GetJDCloudSigner(jDCloudSignVersionType);
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
             var signedHeader = signedRequestModel.RequestHead;
             foreach(var key in signedHeader.Keys) {
