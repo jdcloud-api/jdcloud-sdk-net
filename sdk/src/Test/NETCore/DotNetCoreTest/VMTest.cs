@@ -25,7 +25,7 @@ namespace DotNetCoreTest
             _output = output;
         }
 
-        [Fact]
+      //  [Fact]
         public void TestCreateInstance()
         {
             InstanceSpec instanceSpec = new InstanceSpec();
@@ -95,7 +95,7 @@ namespace DotNetCoreTest
 
         }
 
-        [Fact]
+       // [Fact]
         public void TestStopInstance()
         {
             var vmClient = GetVmClient();
@@ -110,7 +110,7 @@ namespace DotNetCoreTest
             _output.WriteLine(JsonConvert.SerializeObject(response));
         }
 
-        [Fact]
+       // [Fact]
         public void TestDeleteInstance()
         {
             var vmClient = GetVmClient();
@@ -121,7 +121,7 @@ namespace DotNetCoreTest
             _output.WriteLine(JsonConvert.SerializeObject(response));
         }
 
-        [Fact]
+       // [Fact]
         public void TestDescriptionInstances()
         {
              var vmClient = GetVmClient();
@@ -146,7 +146,7 @@ namespace DotNetCoreTest
             _output.WriteLine(JsonConvert.SerializeObject(response));
         }
 
-        [Fact]
+      //  [Fact]
         public void TestDescriptionInstance()
         {
             DescribeInstanceRequest request = new DescribeInstanceRequest();

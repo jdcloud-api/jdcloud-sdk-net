@@ -41,6 +41,17 @@ namespace JDCloudSDK.Core.Auth.Sign
             if (requestModel.NonceId.IsNullOrWhiteSpace())
             {
                 nonceId = Guid.NewGuid().ToString().ToLower();
+            } else if (requestModel.Header!=null && 
+                requestModel.Header.Count>0&& 
+                requestModel.Header.Keys.Any(p=>p.ToLower() == ParameterConstant.X_JDCLOUD_NONCE)) {
+                List<string> headValues = requestModel.Header.Where(p => p.Key.ToLower() == ParameterConstant.X_JDCLOUD_NONCE).First().Value;
+                if (headValues != null && headValues.Count > 0)
+                {
+                    nonceId = headValues[0];
+                }
+                else {
+                    nonceId = Guid.NewGuid().ToString().ToLower();
+                } 
             }
             else
             {
