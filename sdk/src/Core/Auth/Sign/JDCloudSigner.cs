@@ -62,7 +62,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
             string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
             string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
-            string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName);
+            string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName,ParameterConstant.JDCLOUD_TERMINATOR);
             var requestHeader = requestModel.Header;
             requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
                               new List<string> { formattedSigningDateTime } );
@@ -94,7 +94,7 @@ namespace JDCloudSDK.Core.Auth.Sign
                 requestModel.HttpMethod.ToUpper()
                 ,GetCanonicalizedHeaderString(requestModel),
                 GetSignedHeadersString(requestModel), contentSHA256);
-            var stringToSign = SignUtil.CreateStringToSign(canonicalRequest, formattedSigningDateTime, scope);
+            var stringToSign = SignUtil.CreateStringToSign(canonicalRequest, formattedSigningDateTime, scope, ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM);
 
             byte[] kSecret = System.Text.Encoding.UTF8.GetBytes($"JDCLOUD2{credentials.SecretAccessKey}");
             byte[] kDate =SignUtil.Sign(formattedSigningDate, kSecret, ParameterConstant.SIGN_SHA256);
@@ -311,39 +311,7 @@ namespace JDCloudSDK.Core.Auth.Sign
 
 
 
-        /// <summary>
-        ///  获得待计算签名的字符串
-        /// </summary>
-        /// <param name="canonicalRequest">canonicalRequest 字符串</param>
-        /// <param name="requestModel">需要签名的参数信息</param>
-        /// <returns>计算签名的字符串</returns>
-        private string CreateStringToSign(string canonicalRequest,
-                                     RequestModel requestModel)
-        {
-
-            string formatDate = requestModel.OverrddenDate == null || !requestModel.OverrddenDate.HasValue ?
-               DateTime.UtcNow.ToString(ParameterConstant.HEADER_DATA_FORMAT) : requestModel.OverrddenDate.Value.ToString(ParameterConstant.HEADER_DATA_FORMAT);
-            StringBuilder scopeBuilder = new StringBuilder();
-            scopeBuilder.Append(formatDate)
-                .Append("/")
-                .Append(requestModel.RegionName)
-                .Append("/")
-                .Append(requestModel.ServiceName)
-                .Append("/")
-                .Append(ParameterConstant.JDCLOUD_TERMINATOR);
-          
-            //需要构造scope
-            string scope = scopeBuilder.ToString();
-            string stringToSign = new StringBuilder(ParameterConstant.SIGN_SHA256)
-                  .Append(ParameterConstant.LINE_SEPARATOR)
-                  .Append(requestModel.Header[ParameterConstant.X_JDCLOUD_DATE][0])
-                  .Append(ParameterConstant.LINE_SEPARATOR)
-                  .Append(scope)
-                  .Append(ParameterConstant.LINE_SEPARATOR)
-                  .Append(StringUtils.ByteToHex(SignUtil.SignHash(canonicalRequest), true))
-                  .ToString();
-            return stringToSign;
-        }
+       
 
 
     

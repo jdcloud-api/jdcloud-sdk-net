@@ -38,13 +38,14 @@ namespace JDCloudSDK.Core.Auth.Sign
         {
 
             string nonceId = "";
+            var requestHeader = ProcessRequestHeaderKeyToLower(requestModel.Header);
             if (requestModel.NonceId.IsNullOrWhiteSpace())
             {
                 nonceId = Guid.NewGuid().ToString().ToLower();
-            } else if (requestModel.Header!=null && 
-                requestModel.Header.Count>0&& 
-                requestModel.Header.Keys.Any(p=>p.ToLower() == ParameterConstant.X_JDCLOUD_NONCE)) {
-                List<string> headValues = requestModel.Header.Where(p => p.Key.ToLower() == ParameterConstant.X_JDCLOUD_NONCE).First().Value;
+            } else if (requestHeader != null &&
+                requestHeader.Count>0&&
+                requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_NONCE.ToLower())) {
+                List<string> headValues = requestHeader[ParameterConstant.X_JDCLOUD_NONCE.ToLower()];
                 if (headValues != null && headValues.Count > 0)
                 {
                     nonceId = headValues[0];
@@ -58,15 +59,51 @@ namespace JDCloudSDK.Core.Auth.Sign
                 nonceId = requestModel.NonceId;
             }
 
-            var signDate = requestModel.OverrddenDate == null ? DateTime.Now : requestModel.OverrddenDate.Value;
-            string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
-            string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
-            string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName);
-            var requestHeader = ProcessRequestHeaderKeyToLower(requestModel.Header);
+            DateTime? signDate = null;
+            if (requestHeader != null &&
+                requestHeader.Count > 0 &&
+                requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_DATE.ToLower()))
+            {
+                List<string> headerValues = requestHeader[ParameterConstant.X_JDCLOUD_DATE.ToLower()];
+                if (headerValues != null && headerValues.Count > 0)
+                {
+                    string dateString = headerValues[0];
+                    if (!dateString.IsNullOrWhiteSpace())
+                    {
+                        var tryParseDate = DateTime.Now;
+                        if (DateTime.TryParseExact(dateString, ParameterConstant.DATA_TIME_FORMAT,
+                            CultureInfo.GetCultureInfo("en-US"), System.Globalization.DateTimeStyles.None,
+                                   out tryParseDate))
+                        {
+                            signDate = tryParseDate;
+                        }
+                    }
+                }
+            }
+            else {
+                if (requestModel.OverrddenDate != null && requestModel.OverrddenDate.HasValue)
+                {
+                    signDate = requestModel.OverrddenDate.Value;
+                }
+            }
+            if (signDate == null||!signDate.HasValue) {
+                signDate = DateTime.UtcNow;
+            } 
+            string formattedSigningDateTime = signDate.Value.ToString(ParameterConstant.DATA_TIME_FORMAT);
+            string formattedSigningDate = signDate.Value.ToString(ParameterConstant.HEADER_DATA_FORMAT);
+            string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName,ParameterConstant.JDCLOUD_TERMINATOR_V3);
+            
             requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
                               new List<string> { formattedSigningDateTime });
             requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE,
                               new List<string> { nonceId });
+            if (requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_ALGORITHM.ToLower()))
+            {
+                requestHeader[ParameterConstant.X_JDCLOUD_ALGORITHM.ToLower()] = new List<string> { ParameterConstant.JDCLOUD3_SIGNING_ALGORITHM_V3 };
+            }
+            else {
+                requestHeader.Add(ParameterConstant.X_JDCLOUD_ALGORITHM.ToLower(), new List<string> { ParameterConstant.JDCLOUD3_SIGNING_ALGORITHM_V3 });
+            }
             var contentSHA256 = "";
             if (requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_CONTENT_SHA256)) {
                 List<string> contentSha256Value = requestHeader[ParameterConstant.X_JDCLOUD_CONTENT_SHA256];
@@ -85,13 +122,13 @@ namespace JDCloudSDK.Core.Auth.Sign
             string signHeaderString = GetSignedHeadersString(processHeader);
             string signHeaderKeyString = GetSignedHeadersKeyString(processHeader);
             var canonicalRequest = SignUtil.CreateCanonicalRequest(queryParams, requestPath, requestMethod, signHeaderString, signHeaderKeyString, contentSHA256);
-            var stringToSign = SignUtil.CreateStringToSign(canonicalRequest, formattedSigningDateTime, scope);
+            var stringToSign = SignUtil.CreateStringToSign(canonicalRequest, formattedSigningDateTime, scope,ParameterConstant.JDCLOUD3_SIGNING_ALGORITHM_V3);
 
             byte[] kSecret = System.Text.Encoding.UTF8.GetBytes($"JDCLOUD3{credentials.SecretAccessKey}");
             byte[] kDate = SignUtil.Sign(formattedSigningDate, kSecret, ParameterConstant.SIGN_SHA256);
             byte[] kRegion = SignUtil.Sign(requestModel.RegionName, kDate, ParameterConstant.SIGN_SHA256);
             byte[] kService = SignUtil.Sign(requestModel.ServiceName, kRegion, ParameterConstant.SIGN_SHA256);
-            byte[] signingKey = SignUtil.Sign(ParameterConstant.JDCLOUD_TERMINATOR, kService, ParameterConstant.SIGN_SHA256);
+            byte[] signingKey = SignUtil.Sign(ParameterConstant.JDCLOUD_TERMINATOR_V3, kService, ParameterConstant.SIGN_SHA256);
             byte[] signature = SignUtil.ComputeSignature(stringToSign, signingKey);
             // Console.WriteLine($" kSecret={ BitConverter.ToString(kSecret).Replace("-", "")}");
             // Console.WriteLine($" kDate={ BitConverter.ToString(kDate).Replace("-", "")}");
@@ -105,7 +142,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             string signerHeaders = "SignedHeaders=" + signHeaderKeyString;
             string signatureHeader = "Signature=" + StringUtils.ByteToHex(signature, true);
 
-            var signHeader = new StringBuilder().Append(ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM_V3)
+            var signHeader = new StringBuilder().Append(ParameterConstant.JDCLOUD3_SIGNING_ALGORITHM_V3)
                     .Append(" ")
                     .Append(credential)
                     .Append(", ")
@@ -266,8 +303,15 @@ namespace JDCloudSDK.Core.Auth.Sign
             Dictionary<string, List<string>> result = new Dictionary<string, List<string>>();
 
             foreach (var item in header) {
-                result.Add(item.Key.ToLower(), item.Value);
-            
+                if (result.ContainsKey(item.Key.ToLower()))
+                {
+                    if (result[item.Key.ToLower()] != item.Value) {
+                         result[item.Key.ToLower()].AddRange(item.Value);
+                    }
+                }
+                else {
+                    result.Add(item.Key.ToLower(), item.Value);
+                } 
             } 
             return result;
         }
@@ -335,7 +379,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             if (queryString.StartsWith("?")) {
                 queryString = queryString.Remove(0,1);
             }
-            queryString = queryString.Replace("+", " ");
+           
             var queryStringArray = queryString.Split('&'); 
             List<QueryParam> queryParamList = new List<QueryParam>();
             if(queryStringArray!=null && queryStringArray.Length > 0)
@@ -346,19 +390,23 @@ namespace JDCloudSDK.Core.Auth.Sign
                         if (paramKV != null&& paramKV.Length>0) {
                             if (paramKV.Length == 1&& ! paramKV[0].IsNullOrWhiteSpace())
                             {
-                                string value = JDCloudSignV3Util.UnescapeDataStringRfc3986(paramKV[0]);
-                                QueryParam queryParam = new QueryParam {Key = JDCloudSignV3Util.EscapeUriDataStringRfc3986(value),Value=string.Empty };
+                                // queryString = queryString.Replace("+", " ");
+                                string keyValue = paramKV[0].Replace("+", " ");
+                                keyValue = JDCloudSignV3Util.UnescapeDataStringRfc3986(keyValue);
+                                QueryParam queryParam = new QueryParam {Key = JDCloudSignV3Util.EscapeUriDataStringRfc3986(keyValue),Value=string.Empty };
                                 queryParamList.Add(queryParam);
                             }
                             else if (paramKV.Length == 2 && !paramKV[0].IsNullOrWhiteSpace()) {
-                                string key = JDCloudSignV3Util.UnescapeDataStringRfc3986(paramKV[0]);
-                                string value = JDCloudSignV3Util.UnescapeDataStringRfc3986(paramKV[1]);
-                                QueryParam queryParam = new QueryParam { Key = JDCloudSignV3Util.EscapeUriDataStringRfc3986(key),
+                                string keyValue = paramKV[0].Replace("+", " ");
+                                keyValue = JDCloudSignV3Util.UnescapeDataStringRfc3986(keyValue);
+                                string value =  paramKV[1].Replace("+", " ");
+                                value = JDCloudSignV3Util.UnescapeDataStringRfc3986(value);
+                                QueryParam queryParam = new QueryParam { Key = JDCloudSignV3Util.EscapeUriDataStringRfc3986(keyValue),
                                     Value = JDCloudSignV3Util.EscapeUriDataStringRfc3986(value) };
                                 queryParamList.Add(queryParam);
                             }
                             else {
-                                if (!paramKV[0].IsNullOrWhiteSpace()) {
+                                if (paramKV[0]!=null&&paramKV[0]!=string.Empty) {
 
                                     string key = JDCloudSignV3Util.UnescapeDataStringRfc3986(paramKV[0]);
                                     string queryParamValue = string.Join("=", paramKV.Skip(1).Take(paramKV.Length - 1).ToArray());
@@ -408,14 +456,20 @@ namespace JDCloudSDK.Core.Auth.Sign
 
         private static string ProcessRequestPath(string requestPath) {
             var path = requestPath.Replace("+", " ");
-            var pathArray = path.Split('/');
-            var pathDecodeArray = pathArray.Select(p => JDCloudSignV3Util.UnescapeDataStringRfc3986(p)).ToList();
-            var pathList = pathDecodeArray.Select(p => JDCloudSignV3Util.EscapeUriDataStringRfc3986(p)).ToList();
+            var decodePath = JDCloudSignV3Util.UnescapeDataStringRfc3986(path);
+            var pathArray = decodePath.Split('/');
+            //var pathDecodeArray = pathArray.Select(p => JDCloudSignV3Util.UnescapeDataStringRfc3986(p)).ToList();
+            var pathList = pathArray.Select(p => JDCloudSignV3Util.EscapeUriDataStringRfc3986(p)).ToList();
+
             pathList.RemoveAll(p => p.Equals(string.Empty));
+           
             path = string.Join("/", pathList.ToArray());
             if (!path.StartsWith("/"))
             {
                 path = $"/{path}";
+            }
+            if (requestPath.TrimEnd().EndsWith("/")|| requestPath.TrimEnd().EndsWith("%2F")) {
+                path = $"{path}/";
             }
             return path;
         }

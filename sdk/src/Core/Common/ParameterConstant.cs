@@ -150,7 +150,7 @@ namespace JDCloudSDK.Core.Common
         /// <summary>
         /// JDCLOUD v3 签名算法
         /// </summary>
-        public const string JDCLOUD2_SIGNING_ALGORITHM_V3 = "JDCLOUD3-HMAC-SHA256";
+        public const string JDCLOUD3_SIGNING_ALGORITHM_V3 = "JDCLOUD3-HMAC-SHA256";
 
         /// <summary>
         /// 请求逾期时间
@@ -182,6 +182,11 @@ namespace JDCloudSDK.Core.Common
         /// </summary>
         public const string JDCLOUD_TERMINATOR = "jdcloud2_request";
 
+
+        /// <summary>
+        /// jdcloud3_request
+        /// </summary>
+        public const string JDCLOUD_TERMINATOR_V3 = "jdcloud3_request";
         /// <summary>
         /// Host
         /// </summary>

@@ -33,6 +33,8 @@ namespace JDCloudSDK.Core.Utils
         }
 
 
+        
+
         /// <summary>
         /// 
         /// </summary>
@@ -68,11 +70,12 @@ namespace JDCloudSDK.Core.Utils
         /// <param name="canonicalRequest">canonicalRequest 字符串</param>
         /// <param name="formattedSigningDateTime">签名时间信息</param>
         /// <param name="scope">签名 scope 信息</param>
+        /// <param name="signingAlgorithm">jd cloud signing algorithm</param>
         /// <returns>计算签名的字符串</returns>
         public static string CreateStringToSign(string canonicalRequest,
-                                     string formattedSigningDateTime, string scope)
+                                     string formattedSigningDateTime, string scope,string signingAlgorithm)
         {
-            string stringToSign = new StringBuilder(ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM)
+            string stringToSign = new StringBuilder(signingAlgorithm)
                   .Append(ParameterConstant.LINE_SEPARATOR)
                   .Append(formattedSigningDateTime)
                   .Append(ParameterConstant.LINE_SEPARATOR)
@@ -127,8 +130,9 @@ namespace JDCloudSDK.Core.Utils
         /// <param name="dateStamp">日期戳</param>
         /// <param name="serviceName">服务名</param>
         /// <param name="regionName">区域名</param>
+        /// <param name="jdcloudTerminator">jdcloud terminator</param>
         /// <returns>Scope 字符串</returns>
-        public static string GenerateScope(string dateStamp, string serviceName, string regionName)
+        public static string GenerateScope(string dateStamp, string serviceName, string regionName,string jdcloudTerminator)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append(dateStamp)
@@ -137,7 +141,7 @@ namespace JDCloudSDK.Core.Utils
                 .Append("/")
                 .Append(serviceName)
                 .Append("/")
-                .Append(ParameterConstant.JDCLOUD_TERMINATOR);
+                .Append(jdcloudTerminator);
             return stringBuilder.ToString();
         }
         /// <summary>
