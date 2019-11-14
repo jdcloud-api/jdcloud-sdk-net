@@ -336,12 +336,15 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <returns></returns>
         private RequestModel AddContentTypeHeader(RequestModel requestModel)
         {
-            if (requestModel.ContentType.IsNullOrWhiteSpace())
-            {
-                requestModel.ContentType = ParameterConstant.MIME_JSON;
+            if(!requestModel.Header.Any(p=>p.Key.ToLower() == ParameterConstant.CONTENT_TYPE.ToLower())){ 
+                if (requestModel.ContentType.IsNullOrWhiteSpace())
+                {
+                    requestModel.ContentType = ParameterConstant.MIME_JSON;
+                }
+                
+                requestModel.AddHeader(ParameterConstant.CONTENT_TYPE, requestModel.ContentType);
             }
-            requestModel.AddHeader(ParameterConstant.CONTENT_TYPE, requestModel.ContentType);
-
+ 
             return requestModel;
         }
 
