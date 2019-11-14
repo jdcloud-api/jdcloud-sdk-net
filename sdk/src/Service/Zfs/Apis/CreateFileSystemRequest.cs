@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Zfs.Apis
 {
@@ -58,10 +59,15 @@ namespace  JDCloudSDK.Zfs.Apis
         [Required]
         public   string ClientToken{ get; set; }
         ///<summary>
+        /// 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
+        ///</summary>
+        public   string FileSystemType{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

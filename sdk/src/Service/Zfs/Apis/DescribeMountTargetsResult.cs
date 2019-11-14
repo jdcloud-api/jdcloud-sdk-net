@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Zfs.Apis
     public class DescribeMountTargetsResult : JdcloudResult
     {
         ///<summary>
-        /// MountTargets
+        /// 挂载目标信息列表
         ///</summary>
         public List<MountTarget> MountTargets{ get; set; }
 

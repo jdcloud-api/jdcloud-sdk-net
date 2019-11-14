@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+    ///  创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费
     /// </summary>
     public class CreateROInstanceRequest : JdcloudRequest
     {
@@ -91,7 +92,8 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true

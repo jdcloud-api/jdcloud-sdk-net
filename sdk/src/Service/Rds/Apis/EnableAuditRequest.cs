@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  仅支持MySQL实例开启数据库审计
+    ///  仅支持MySQL实例开启数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
     /// </summary>
     public class EnableAuditRequest : JdcloudRequest
     {
@@ -43,7 +44,8 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  拷贝参数组&lt;br&gt;- 仅支持MySQL
+    ///  拷贝参数组
     /// </summary>
     public class CopyParameterGroupExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  拷贝参数组&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  拷贝参数组接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  拷贝参数组&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  拷贝参数组接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

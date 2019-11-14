@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Renewal.Model;
 
 namespace JDCloudSDK.Renewal.Model
 {

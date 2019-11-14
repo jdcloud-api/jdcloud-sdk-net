@@ -81,6 +81,10 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
+        /// 别名IP id
+        ///</summary>
+        public string AliasIpId{ get; set; }
+        ///<summary>
         /// 计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }

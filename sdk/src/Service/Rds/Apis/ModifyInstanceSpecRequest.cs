@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
@@ -51,11 +52,20 @@ namespace  JDCloudSDK.Rds.Apis
         [Required]
         public   int NewInstanceStorageGB{ get; set; }
         ///<summary>
+        /// 存储类型，如果不指定，默认会采用实例原存储类型.
+        ///</summary>
+        public   string NewInstanceStorageType{ get; set; }
+        ///<summary>
+        /// 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
+        ///</summary>
+        public   bool StorageEncrypted{ get; set; }
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true

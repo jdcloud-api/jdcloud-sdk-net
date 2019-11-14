@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL
+    ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
     /// </summary>
     public class DescribeBinlogDownloadURLExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -71,7 +71,7 @@ namespace JDCloudSDK.Renewal.Model
         [Required]
         public string AutoRenewStatus{ get; set; }
         ///<summary>
-        /// 是否绑定关联资源一并自动续费(AUTO_RENEW-是,UN_AUTO_RENEW-否)
+        /// 是否绑定关联资源一并开通自动续费(UNBIND：不绑定，BIND：绑定)
         ///</summary>
         public string AllAutoPay{ get; set; }
     }

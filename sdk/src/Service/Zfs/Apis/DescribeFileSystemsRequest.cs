@@ -28,8 +28,10 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Zfs.Model;
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Zfs.Apis
 {
@@ -50,18 +52,24 @@ namespace  JDCloudSDK.Zfs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// Tag筛选条件
+        ///</summary>
+        public List<JDCloudSDK.Zfs.Model.TagFilter> Tags{ get; set; }
+
+        ///<summary>
         /// fileSystemId - 文件系统ID，精确匹配，支持多个
         /// name - 文件系统名称，模糊匹配，支持单个
         /// status - 文件系统状态，精确匹配，支持多个 FileSystem Status/creating、available、in-use
         /// 
         ///</summary>
-        public List<Filter> Filters{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

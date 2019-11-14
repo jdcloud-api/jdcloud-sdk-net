@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除一个RDS实例或者MySQL的只读实例。删除MySQL主实例时，会同时将对应的MySQL只读实例也删除 [MFA enabled]
+    ///  删除一个RDS实例或者MySQL/PostgreSQL的只读实例。删除MySQL/PostgreSQL主实例时，会同时将对应的MySQL/PostgreSQL只读实例也删除 [MFA enabled]
     /// </summary>
     public class DeleteInstanceRequest : JdcloudRequest
     {
@@ -43,7 +44,8 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true

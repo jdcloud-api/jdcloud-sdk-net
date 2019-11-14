@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Renewal.Model;
 
 namespace JDCloudSDK.Renewal.Model
 {
@@ -59,7 +58,7 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源
+        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
         ///</summary>
         public string BillingType{ get; set; }
         ///<summary>
@@ -71,7 +70,7 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public int? LastTime{ get; set; }
         ///<summary>
-        /// 自动续费状态(UNOPENED-未开通,OPENED-已开通)
+        /// 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
         ///</summary>
         public string AutoRenewStatus{ get; set; }
         ///<summary>
@@ -79,7 +78,7 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string AutoRenewPeriod{ get; set; }
         ///<summary>
-        /// 是否绑定关联资源一并续费(BIND-是,UNBIND-否)
+        /// 是否绑定关联资源一并开通自动续费(AUTO_RENEW:关联包年包月资源一并自动续费 UN_AUTO_RENEW：关联包年包月资源不自动续费)
         ///</summary>
         public string AssociateResource{ get; set; }
         ///<summary>

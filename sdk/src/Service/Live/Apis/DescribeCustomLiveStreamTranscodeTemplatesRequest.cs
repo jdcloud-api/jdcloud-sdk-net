@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Common.Model;
+using JDCloudSDK.Live.Model;
 
 namespace  JDCloudSDK.Live.Apis
 {
@@ -58,7 +58,7 @@ namespace  JDCloudSDK.Live.Apis
         ///   - 如果为空,则表示查询该用下所有自定义的转码模板
         /// 
         ///</summary>
-        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+        public List<Filter> Filters{ get; set; }
 
     }
 }

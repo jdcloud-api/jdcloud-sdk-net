@@ -46,11 +46,11 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   int? RetentionPeriod{ get; set; }
         ///<summary>
-        /// 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
+        /// 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
         ///</summary>
         public   int? CycleMode{ get; set; }
         ///<summary>
-        /// 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **SQL Server不支持**&lt;br&gt;- **MySQL支持**
+        /// 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
         ///</summary>
         public   string BackupBinlog{ get; set; }
     }

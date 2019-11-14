@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+    ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL/PostgreSQL只读实例详细信息
     /// </summary>
     public class DescribeInstanceAttributesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息接口的Http 请求方法
+        ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL/PostgreSQL只读实例详细信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息接口的Http资源请求路径
+        ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL/PostgreSQL只读实例详细信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

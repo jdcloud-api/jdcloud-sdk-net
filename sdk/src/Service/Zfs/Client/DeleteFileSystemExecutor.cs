@@ -34,13 +34,13 @@ namespace JDCloudSDK.Zfs.Client
 
     /// <summary>
     ///  -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-        /// 
+        ///  [MFA enabled]
     /// </summary>
     public class DeleteFileSystemExecutor : JdcloudExecutor
     {
         /// <summary>
         ///  -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-        /// 接口的Http 请求方法
+        ///  [MFA enabled]接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Zfs.Client
         }
         /// <summary>
         ///  -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-        /// 接口的Http资源请求路径
+        ///  [MFA enabled]接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

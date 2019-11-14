@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  删除参数组&lt;br&gt;- 仅支持MySQL
+    ///  删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class DeleteParameterGroupExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除参数组&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  删除参数组&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

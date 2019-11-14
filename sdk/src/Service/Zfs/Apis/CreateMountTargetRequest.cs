@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Zfs.Apis
 {
@@ -60,9 +61,7 @@ namespace  JDCloudSDK.Zfs.Apis
         public   string VpcId{ get; set; }
         ///<summary>
         /// 安全组id
-        ///Required:true
         ///</summary>
-        [Required]
         public   string SecurityGroupId{ get; set; }
         ///<summary>
         /// 幂等性参数(只支持数字、大小写字母，且不能超过64字符)
@@ -75,6 +74,7 @@ namespace  JDCloudSDK.Zfs.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

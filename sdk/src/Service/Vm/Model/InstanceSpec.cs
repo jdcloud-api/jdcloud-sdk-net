@@ -30,6 +30,7 @@ using System.Text;
 using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Vpc.Model;
 using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Disk.Model;
 
 namespace JDCloudSDK.Vm.Model
 {
@@ -127,7 +128,12 @@ namespace JDCloudSDK.Vm.Model
         /// 不使用模板中的弹性公网IP。
         /// 仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
         /// 若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+        /// 
         ///</summary>
         public bool NoElasticIp{ get; set; }
+        ///<summary>
+        /// 用户普通标签集合
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
     }
 }

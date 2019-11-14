@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  创建一个参数组&lt;br&gt;- 仅支持MySQL
+    ///  创建一个参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class CreateParameterGroupResult : JdcloudResult
     {

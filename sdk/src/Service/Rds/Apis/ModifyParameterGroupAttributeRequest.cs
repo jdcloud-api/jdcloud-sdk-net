@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  修改参数组名称，描述&lt;br&gt;- 仅支持MySQL
+    ///  修改参数组名称，描述&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class ModifyParameterGroupAttributeRequest : JdcloudRequest
     {
@@ -53,7 +54,8 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// Parameter Group ID
         ///Required:true

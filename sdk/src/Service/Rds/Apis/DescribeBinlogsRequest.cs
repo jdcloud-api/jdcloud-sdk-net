@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+    ///  获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
     /// </summary>
     public class DescribeBinlogsRequest : JdcloudRequest
     {
@@ -59,7 +60,8 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// RDS 实例ID，唯一标识一个RDS实例
         ///Required:true

@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Rds.Apis
 {
@@ -43,7 +44,7 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   string FileName{ get; set; }
         ///<summary>
-        /// 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时。&lt;br&gt;- MySQL：不支持该参数，只能是默认值&lt;br&gt;- SQL Server：支持
+        /// 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
         ///</summary>
         public   string UrlExpirationSecond{ get; set; }
         ///<summary>
@@ -51,7 +52,8 @@ namespace  JDCloudSDK.Rds.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 备份ID
         ///Required:true

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL
+    ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class ModifyParameterGroupParametersExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  修改参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+    ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL/PostgreSQL只读实例详细信息
     /// </summary>
     public class DescribeInstanceAttributesResponse : JdcloudResponse<DescribeInstanceAttributesResult>
     {

@@ -57,6 +57,14 @@ namespace JDCloudSDK.Edcps.Model
         [Required]
         public string Cidr{ get; set; }
         ///<summary>
+        /// 子网的次要cidr
+        ///</summary>
+        public string SecondaryCidr{ get; set; }
+        ///<summary>
+        /// 子网的次要cidr名称
+        ///</summary>
+        public string SecondaryCidrName{ get; set; }
+        ///<summary>
         /// 名称
         ///Required:true
         ///</summary>

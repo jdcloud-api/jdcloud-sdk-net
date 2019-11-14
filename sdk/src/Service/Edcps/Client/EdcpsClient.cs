@@ -178,6 +178,451 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询弹性公网IP列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpsResponse DescribeElasticIps(DescribeElasticIpsRequest request) {
+            return  new DescribeElasticIpsExecutor().Client(this).Execute<DescribeElasticIpsResponse, DescribeElasticIpsResult, DescribeElasticIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性公网IP列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpsResponse> DescribeElasticIps(DescribeElasticIpsRequest request) {
+            return await new DescribeElasticIpsExecutor().Client(this).Execute<DescribeElasticIpsResponse, DescribeElasticIpsResult, DescribeElasticIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询分布式云物理服务器支持的操作系统
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeOSResponse DescribeOS(DescribeOSRequest request) {
+            return  new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询分布式云物理服务器支持的操作系统
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeOSResponse> DescribeOS(DescribeOSRequest request) {
+            return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询分布式云物理服务器实例类型
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDeviceTypesResponse DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
+            return  new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询分布式云物理服务器实例类型
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDeviceTypesResponse> DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
+            return await new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除别名IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteAliasIpResponse DeleteAliasIp(DeleteAliasIpRequest request) {
+            return  new DeleteAliasIpExecutor().Client(this).Execute<DeleteAliasIpResponse, DeleteAliasIpResult, DeleteAliasIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除别名IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteAliasIpResponse> DeleteAliasIp(DeleteAliasIpRequest request) {
+            return await new DeleteAliasIpExecutor().Client(this).Execute<DeleteAliasIpResponse, DeleteAliasIpResult, DeleteAliasIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改弹性公网IP带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyElasticIpBandwidthResponse ModifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) {
+            return  new ModifyElasticIpBandwidthExecutor().Client(this).Execute<ModifyElasticIpBandwidthResponse, ModifyElasticIpBandwidthResult, ModifyElasticIpBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改弹性公网IP带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyElasticIpBandwidthResponse> ModifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) {
+            return await new ModifyElasticIpBandwidthExecutor().Client(this).Execute<ModifyElasticIpBandwidthResponse, ModifyElasticIpBandwidthResult, ModifyElasticIpBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个分布式云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceRaidResponse DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
+            return  new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个分布式云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceRaidResponse> DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
+            return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除私有网络
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVpcResponse DeleteVpc(DeleteVpcRequest request) {
+            return  new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除私有网络
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest request) {
+            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子网详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
+            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子网详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询别名IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAliasIpsResponse DescribeAliasIps(DescribeAliasIpsRequest request) {
+            return  new DescribeAliasIpsExecutor().Client(this).Execute<DescribeAliasIpsResponse, DescribeAliasIpsResult, DescribeAliasIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询别名IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAliasIpsResponse> DescribeAliasIps(DescribeAliasIpsRequest request) {
+            return await new DescribeAliasIpsExecutor().Client(this).Execute<DescribeAliasIpsResponse, DescribeAliasIpsResult, DescribeAliasIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询链路类型列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLineTypesResponse DescribeLineTypes(DescribeLineTypesRequest request) {
+            return  new DescribeLineTypesExecutor().Client(this).Execute<DescribeLineTypesResponse, DescribeLineTypesResult, DescribeLineTypesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询链路类型列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLineTypesResponse> DescribeLineTypes(DescribeLineTypesRequest request) {
+            return await new DescribeLineTypesExecutor().Client(this).Execute<DescribeLineTypesResponse, DescribeLineTypesResult, DescribeLineTypesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询密钥对列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeypairsResponse DescribeKeypairs(DescribeKeypairsRequest request) {
+            return  new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
+            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeypairResponse DescribeKeypair(DescribeKeypairRequest request) {
+            return  new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeypairResponse> DescribeKeypair(DescribeKeypairRequest request) {
+            return await new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  绑定弹性公网IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
+            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  绑定弹性公网IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
+            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询次要CIDR列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSecondaryCidrsResponse DescribeSecondaryCidrs(DescribeSecondaryCidrsRequest request) {
+            return  new DescribeSecondaryCidrsExecutor().Client(this).Execute<DescribeSecondaryCidrsResponse, DescribeSecondaryCidrsResult, DescribeSecondaryCidrsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询次要CIDR列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSecondaryCidrsResponse> DescribeSecondaryCidrs(DescribeSecondaryCidrsRequest request) {
+            return await new DescribeSecondaryCidrsExecutor().Client(this).Execute<DescribeSecondaryCidrsResponse, DescribeSecondaryCidrsResult, DescribeSecondaryCidrsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一台或多台指定配置的分布式云物理服务器&lt;br/&gt;
+        /// - 地域与可用区&lt;br/&gt;
+        ///   - 调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域与可用区&lt;br/&gt;
+        /// - 实例类型&lt;br/&gt;
+        ///   - 调用接口（describeDeviceTypes）获取物理实例类型列表&lt;br/&gt;
+        ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
+        /// - 操作系统&lt;br/&gt;
+        ///   - 可调用接口（describeOS）获取分布式云物理服务器支持的操作系统列表&lt;br/&gt;
+        /// - 存储&lt;br/&gt;
+        ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
+        /// - 网络&lt;br/&gt;
+        ///   - 网络类型目前支持vpc&lt;br/&gt;
+        ///   - 线路目前支持联通un、电信ct、移动cm&lt;br/&gt;
+        ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
+        /// - 其他&lt;br/&gt;
+        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
+        ///   - 密码设置参考公共参数规范&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstancesResponse CreateInstances(CreateInstancesRequest request) {
+            return  new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一台或多台指定配置的分布式云物理服务器&lt;br/&gt;
+        /// - 地域与可用区&lt;br/&gt;
+        ///   - 调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域与可用区&lt;br/&gt;
+        /// - 实例类型&lt;br/&gt;
+        ///   - 调用接口（describeDeviceTypes）获取物理实例类型列表&lt;br/&gt;
+        ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
+        /// - 操作系统&lt;br/&gt;
+        ///   - 可调用接口（describeOS）获取分布式云物理服务器支持的操作系统列表&lt;br/&gt;
+        /// - 存储&lt;br/&gt;
+        ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
+        /// - 网络&lt;br/&gt;
+        ///   - 网络类型目前支持vpc&lt;br/&gt;
+        ///   - 线路目前支持联通un、电信ct、移动cm&lt;br/&gt;
+        ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
+        /// - 其他&lt;br/&gt;
+        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
+        ///   - 密码设置参考公共参数规范&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest request) {
+            return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可用的私有IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAvailablePrivateIpResponse DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
+            return  new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用的私有IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAvailablePrivateIpResponse> DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
+            return await new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重置分布式云物理服务器密码
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
+            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置分布式云物理服务器密码
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询弹性公网IP详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpResponse DescribeElasticIp(DescribeElasticIpRequest request) {
+            return  new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性公网IP详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
+            return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteKeypairsResponse DeleteKeypairs(DeleteKeypairsRequest request) {
+            return  new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除密钥对
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteKeypairsResponse> DeleteKeypairs(DeleteKeypairsRequest request) {
+            return await new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  对单台分布式云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopInstanceResponse StopInstance(StopInstanceRequest request) {
+            return  new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对单台分布式云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
+            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询分布式分布式云物理服务器地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeEdCPSRegionsResponse DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
+            return  new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询分布式分布式云物理服务器地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeEdCPSRegionsResponse> DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
+            return await new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建密钥对
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -258,6 +703,29 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除单台云物理物理服务器，只能删除运行running、停止stopped、错误error状态的服务器&lt;br/&gt;
+        /// 不能删除没有计费信息的服务器&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request) {
+            return  new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除单台云物理物理服务器，只能删除运行running、停止stopped、错误error状态的服务器&lt;br/&gt;
+        /// 不能删除没有计费信息的服务器&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
+            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -273,48 +741,6 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifySubnetResponse> ModifySubnet(ModifySubnetRequest request) {
             return await new ModifySubnetExecutor().Client(this).Execute<ModifySubnetResponse, ModifySubnetResult, ModifySubnetRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询弹性公网IP列表&lt;br/&gt;
-        /// 支持分页查询，默认每页20条&lt;br/&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeElasticIpsResponse DescribeElasticIps(DescribeElasticIpsRequest request) {
-            return  new DescribeElasticIpsExecutor().Client(this).Execute<DescribeElasticIpsResponse, DescribeElasticIpsResult, DescribeElasticIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询弹性公网IP列表&lt;br/&gt;
-        /// 支持分页查询，默认每页20条&lt;br/&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeElasticIpsResponse> DescribeElasticIps(DescribeElasticIpsRequest request) {
-            return await new DescribeElasticIpsExecutor().Client(this).Execute<DescribeElasticIpsResponse, DescribeElasticIpsResult, DescribeElasticIpsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询分布式云物理服务器支持的操作系统
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOSResponse DescribeOS(DescribeOSRequest request) {
-            return  new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询分布式云物理服务器支持的操作系统
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOSResponse> DescribeOS(DescribeOSRequest request) {
-            return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -338,61 +764,23 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询分布式云物理服务器实例类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDeviceTypesResponse DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
-            return  new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询分布式云物理服务器实例类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDeviceTypesResponse> DescribeDeviceTypes(DescribeDeviceTypesRequest request) {
-            return await new DescribeDeviceTypesExecutor().Client(this).Execute<DescribeDeviceTypesResponse, DescribeDeviceTypesResult, DescribeDeviceTypesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改弹性公网IP带宽
+        ///  删除弹性公网IP
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyElasticIpBandwidthResponse ModifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) {
-            return  new ModifyElasticIpBandwidthExecutor().Client(this).Execute<ModifyElasticIpBandwidthResponse, ModifyElasticIpBandwidthResult, ModifyElasticIpBandwidthRequest>(request);
+        public DeleteelasticIpResponse DeleteelasticIp(DeleteelasticIpRequest request) {
+            return  new DeleteelasticIpExecutor().Client(this).Execute<DeleteelasticIpResponse, DeleteelasticIpResult, DeleteelasticIpRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改弹性公网IP带宽
+        ///  删除弹性公网IP
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyElasticIpBandwidthResponse> ModifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) {
-            return await new ModifyElasticIpBandwidthExecutor().Client(this).Execute<ModifyElasticIpBandwidthResponse, ModifyElasticIpBandwidthResult, ModifyElasticIpBandwidthRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个分布式云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceRaidResponse DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
-            return  new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个分布式云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceRaidResponse> DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
-            return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteelasticIpResponse> DeleteelasticIp(DeleteelasticIpRequest request) {
+            return await new DeleteelasticIpExecutor().Client(this).Execute<DeleteelasticIpResponse, DeleteelasticIpResult, DeleteelasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -435,27 +823,6 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除私有网络
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteVpcResponse DeleteVpc(DeleteVpcRequest request) {
-            return  new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除私有网络
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest request) {
-            return await new DeleteVpcExecutor().Client(this).Execute<DeleteVpcResponse, DeleteVpcResult, DeleteVpcRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询弹性公网IP库存
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -494,44 +861,6 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询子网详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
-            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询子网详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
-            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询链路类型列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLineTypesResponse DescribeLineTypes(DescribeLineTypesRequest request) {
-            return  new DescribeLineTypesExecutor().Client(this).Execute<DescribeLineTypesResponse, DescribeLineTypesResult, DescribeLineTypesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询链路类型列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLineTypesResponse> DescribeLineTypes(DescribeLineTypesRequest request) {
-            return await new DescribeLineTypesExecutor().Client(this).Execute<DescribeLineTypesResponse, DescribeLineTypesResult, DescribeLineTypesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  对单台分布式云物理服务器执行开机操作，只能启动stopped状态的服务器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -551,61 +880,21 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询密钥对列表
+        ///  添加次要CIDR
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeKeypairsResponse DescribeKeypairs(DescribeKeypairsRequest request) {
-            return  new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
+        public CreateSecondaryCidrResponse CreateSecondaryCidr(CreateSecondaryCidrRequest request) {
+            return  new CreateSecondaryCidrExecutor().Client(this).Execute<CreateSecondaryCidrResponse, CreateSecondaryCidrResult, CreateSecondaryCidrRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询密钥对列表
+        ///  添加次要CIDR
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
-            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询密钥对详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeKeypairResponse DescribeKeypair(DescribeKeypairRequest request) {
-            return  new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询密钥对详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeKeypairResponse> DescribeKeypair(DescribeKeypairRequest request) {
-            return await new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  绑定弹性公网IP
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AssociateElasticIpResponse AssociateElasticIp(AssociateElasticIpRequest request) {
-            return  new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  绑定弹性公网IP
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AssociateElasticIpResponse> AssociateElasticIp(AssociateElasticIpRequest request) {
-            return await new AssociateElasticIpExecutor().Client(this).Execute<AssociateElasticIpResponse, AssociateElasticIpResult, AssociateElasticIpRequest>(request).ConfigureAwait(false);
+        public async Task<CreateSecondaryCidrResponse> CreateSecondaryCidr(CreateSecondaryCidrRequest request) {
+            return await new CreateSecondaryCidrExecutor().Client(this).Execute<CreateSecondaryCidrResponse, CreateSecondaryCidrResult, CreateSecondaryCidrRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -648,78 +937,6 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建一台或多台指定配置的分布式云物理服务器&lt;br/&gt;
-        /// - 地域与可用区&lt;br/&gt;
-        ///   - 调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域与可用区&lt;br/&gt;
-        /// - 实例类型&lt;br/&gt;
-        ///   - 调用接口（describeDeviceTypes）获取物理实例类型列表&lt;br/&gt;
-        ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
-        /// - 操作系统&lt;br/&gt;
-        ///   - 可调用接口（describeOS）获取分布式云物理服务器支持的操作系统列表&lt;br/&gt;
-        /// - 存储&lt;br/&gt;
-        ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
-        /// - 网络&lt;br/&gt;
-        ///   - 网络类型目前支持vpc&lt;br/&gt;
-        ///   - 线路目前支持联通un、电信ct、移动cm&lt;br/&gt;
-        ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
-        /// - 其他&lt;br/&gt;
-        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
-        ///   - 密码设置参考公共参数规范&lt;br/&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateInstancesResponse CreateInstances(CreateInstancesRequest request) {
-            return  new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一台或多台指定配置的分布式云物理服务器&lt;br/&gt;
-        /// - 地域与可用区&lt;br/&gt;
-        ///   - 调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域与可用区&lt;br/&gt;
-        /// - 实例类型&lt;br/&gt;
-        ///   - 调用接口（describeDeviceTypes）获取物理实例类型列表&lt;br/&gt;
-        ///   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
-        /// - 操作系统&lt;br/&gt;
-        ///   - 可调用接口（describeOS）获取分布式云物理服务器支持的操作系统列表&lt;br/&gt;
-        /// - 存储&lt;br/&gt;
-        ///   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
-        /// - 网络&lt;br/&gt;
-        ///   - 网络类型目前支持vpc&lt;br/&gt;
-        ///   - 线路目前支持联通un、电信ct、移动cm&lt;br/&gt;
-        ///   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
-        /// - 其他&lt;br/&gt;
-        ///   - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
-        ///   - 密码设置参考公共参数规范&lt;br/&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest request) {
-            return await new CreateInstancesExecutor().Client(this).Execute<CreateInstancesResponse, CreateInstancesResult, CreateInstancesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询可用的私有IP列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAvailablePrivateIpResponse DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
-            return  new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询可用的私有IP列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAvailablePrivateIpResponse> DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
-            return await new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询分布式云物理服务器名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -735,27 +952,6 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceNameResponse> DescribeInstanceName(DescribeInstanceNameRequest request) {
             return await new DescribeInstanceNameExecutor().Client(this).Execute<DescribeInstanceNameResponse, DescribeInstanceNameResult, DescribeInstanceNameRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重置分布式云物理服务器密码
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
-            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置分布式云物理服务器密码
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -779,40 +975,21 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询弹性公网IP详情
+        ///  添加别名IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeElasticIpResponse DescribeElasticIp(DescribeElasticIpRequest request) {
-            return  new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request);
+        public CreateAliasIpResponse CreateAliasIp(CreateAliasIpRequest request) {
+            return  new CreateAliasIpExecutor().Client(this).Execute<CreateAliasIpResponse, CreateAliasIpResult, CreateAliasIpRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询弹性公网IP详情
+        ///  添加别名IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
-            return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除密钥对
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteKeypairsResponse DeleteKeypairs(DeleteKeypairsRequest request) {
-            return  new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除密钥对
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteKeypairsResponse> DeleteKeypairs(DeleteKeypairsRequest request) {
-            return await new DeleteKeypairsExecutor().Client(this).Execute<DeleteKeypairsResponse, DeleteKeypairsResult, DeleteKeypairsRequest>(request).ConfigureAwait(false);
+        public async Task<CreateAliasIpResponse> CreateAliasIp(CreateAliasIpRequest request) {
+            return await new CreateAliasIpExecutor().Client(this).Execute<CreateAliasIpResponse, CreateAliasIpResult, CreateAliasIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -918,25 +1095,6 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  对单台分布式云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopInstanceResponse StopInstance(StopInstanceRequest request) {
-            return  new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  对单台分布式云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
-            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  申请弹性公网IP
         /// 
         /// </summary>
@@ -958,21 +1116,21 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询分布式分布式云物理服务器地域列表
+        ///  删除次要CIDR
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeEdCPSRegionsResponse DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
-            return  new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request);
+        public DeleteSecondaryCidrResponse DeleteSecondaryCidr(DeleteSecondaryCidrRequest request) {
+            return  new DeleteSecondaryCidrExecutor().Client(this).Execute<DeleteSecondaryCidrResponse, DeleteSecondaryCidrResult, DeleteSecondaryCidrRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询分布式分布式云物理服务器地域列表
+        ///  删除次要CIDR
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeEdCPSRegionsResponse> DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
-            return await new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteSecondaryCidrResponse> DeleteSecondaryCidr(DeleteSecondaryCidrRequest request) {
+            return await new DeleteSecondaryCidrExecutor().Client(this).Execute<DeleteSecondaryCidrResponse, DeleteSecondaryCidrResult, DeleteSecondaryCidrRequest>(request).ConfigureAwait(false);
         }
 #endif
 

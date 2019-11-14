@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+    ///  获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
     /// </summary>
     public class DescribeBinlogsResponse : JdcloudResponse<DescribeBinlogsResult>
     {

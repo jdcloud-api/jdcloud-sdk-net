@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  删除参数组&lt;br&gt;- 仅支持MySQL
+    ///  删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class DeleteParameterGroupResponse : JdcloudResponse<DeleteParameterGroupResult>
     {

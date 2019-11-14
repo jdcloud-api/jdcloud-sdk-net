@@ -147,5 +147,9 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         [Required]
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 别名ip配置
+        ///</summary>
+        public List<AliasIpInfo> AliasIps{ get; set; }
     }
 }

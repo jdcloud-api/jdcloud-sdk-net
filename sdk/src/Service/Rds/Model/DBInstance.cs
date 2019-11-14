@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Rds.Model
@@ -77,7 +78,8 @@ namespace JDCloudSDK.Rds.Model
         ///<summary>
         /// 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
@@ -95,6 +97,14 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceStatus{ get; set; }
         ///<summary>
+        /// 实例公网域名&lt;br&gt;- 仅支持MySQL
+        ///</summary>
+        public string PublicDomainName{ get; set; }
+        ///<summary>
+        /// 实例内网域名&lt;br&gt;- 仅支持MySQL
+        ///</summary>
+        public string InternalDomainName{ get; set; }
+        ///<summary>
         /// 实例创建时间
         ///</summary>
         public string CreateTime{ get; set; }
@@ -111,7 +121,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public List<Tag> Tags{ get; set; }
         ///<summary>
-        /// MySQL只读实例对应的主实例ID
+        /// MySQL、PostgreSQL只读实例对应的主实例ID
         ///</summary>
         public string SourceInstanceId{ get; set; }
     }

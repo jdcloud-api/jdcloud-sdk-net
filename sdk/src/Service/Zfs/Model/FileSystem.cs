@@ -62,6 +62,10 @@ namespace JDCloudSDK.Zfs.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
+        /// 文件系统类型(通用型:gp1,容量型:std1)
+        ///</summary>
+        public string FileSystemType{ get; set; }
+        ///<summary>
         /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
@@ -69,5 +73,9 @@ namespace JDCloudSDK.Zfs.Model
         /// dns名称
         ///</summary>
         public string DnsName{ get; set; }
+        ///<summary>
+        /// Tag信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

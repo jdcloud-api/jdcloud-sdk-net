@@ -89,9 +89,9 @@ namespace JDCloudSDK.Renewal.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v2";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -191,25 +191,6 @@ namespace JDCloudSDK.Renewal.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryInstanceResponse> QueryInstance(QueryInstanceRequest request) {
             return await new QueryInstanceExecutor().Client(this).Execute<QueryInstanceResponse, QueryInstanceResult, QueryInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询已过期资源详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeExpiredResourcesResponse DescribeExpiredResources(DescribeExpiredResourcesRequest request) {
-            return  new DescribeExpiredResourcesExecutor().Client(this).Execute<DescribeExpiredResourcesResponse, DescribeExpiredResourcesResult, DescribeExpiredResourcesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询已过期资源详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeExpiredResourcesResponse> DescribeExpiredResources(DescribeExpiredResourcesRequest request) {
-            return await new DescribeExpiredResourcesExecutor().Client(this).Execute<DescribeExpiredResourcesResponse, DescribeExpiredResourcesResult, DescribeExpiredResourcesRequest>(request).ConfigureAwait(false);
         }
 #endif
 

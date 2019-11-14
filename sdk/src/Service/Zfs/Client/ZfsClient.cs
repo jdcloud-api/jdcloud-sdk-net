@@ -89,9 +89,9 @@ namespace JDCloudSDK.Zfs.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -246,7 +246,7 @@ namespace JDCloudSDK.Zfs.Client
 #if NET40||NET35
         /// <summary>
         ///  -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -256,7 +256,7 @@ namespace JDCloudSDK.Zfs.Client
 #else
         /// <summary>
         ///  -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-        /// 
+        ///  [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

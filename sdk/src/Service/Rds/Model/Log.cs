@@ -40,7 +40,7 @@ namespace JDCloudSDK.Rds.Model
         ///<summary>
         /// 日志文件id
         ///</summary>
-        public int? Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 日志文件名称
         ///</summary>

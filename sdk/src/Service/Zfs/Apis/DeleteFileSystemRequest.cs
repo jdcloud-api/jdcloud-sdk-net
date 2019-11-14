@@ -29,13 +29,14 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Zfs.Apis
 {
 
     /// <summary>
     ///  -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-        ///         /// 
+        ///         ///  [MFA enabled]
     /// </summary>
     public class DeleteFileSystemRequest : JdcloudRequest
     {
@@ -44,7 +45,8 @@ namespace  JDCloudSDK.Zfs.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 文件系统ID
         ///Required:true

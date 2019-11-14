@@ -58,7 +58,7 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源
+        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
         ///</summary>
         public string BillingType{ get; set; }
         ///<summary>
@@ -70,7 +70,7 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public int? LastTime{ get; set; }
         ///<summary>
-        /// 自动续费状态(UNOPENED-未开通,OPENED-已开通)
+        /// 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
         ///</summary>
         public string AutoRenewStatus{ get; set; }
         ///<summary>

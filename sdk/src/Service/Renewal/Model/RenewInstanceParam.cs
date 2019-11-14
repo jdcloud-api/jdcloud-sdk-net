@@ -69,11 +69,11 @@ namespace JDCloudSDK.Renewal.Model
         [Required]
         public string InstanceIds{ get; set; }
         ///<summary>
-        /// 续费至统一续费到期日(YES-是,NO-否)
+        /// 是否统一到期日续费(YES-是,NO-否)，默认为NO
         ///</summary>
         public string UnifyDate{ get; set; }
         ///<summary>
-        /// 是否自动支付
+        /// 是否自动支付，默认为true，外部用户调用时只能传true
         ///</summary>
         public bool AutoPay{ get; set; }
         ///<summary>

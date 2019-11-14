@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  获取 PostgreSQL 的日志文件列表
+    ///  获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
     /// </summary>
     public class DescribeLogsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  获取 PostgreSQL 的日志文件列表接口的Http 请求方法
+        ///  获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  获取 PostgreSQL 的日志文件列表接口的Http资源请求路径
+        ///  获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取 PostgreSQL 的日志文件列表
+    ///  获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
     /// </summary>
     public class DescribeLogsResponse : JdcloudResponse<DescribeLogsResult>
     {

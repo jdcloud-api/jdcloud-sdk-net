@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 using JDCloudSDK.Charge.Model;
 
 namespace JDCloudSDK.Rds.Model
@@ -85,7 +86,8 @@ namespace JDCloudSDK.Rds.Model
         ///<summary>
         /// 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
         ///</summary>

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+    ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class DescribeParameterGroupsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

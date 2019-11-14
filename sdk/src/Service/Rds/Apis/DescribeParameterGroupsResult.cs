@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+    ///  获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class DescribeParameterGroupsResult : JdcloudResult
     {

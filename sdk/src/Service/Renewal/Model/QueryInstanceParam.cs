@@ -59,15 +59,15 @@ namespace JDCloudSDK.Renewal.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)
+        /// 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)，默认为全部
         ///</summary>
         public string RenewStatus{ get; set; }
         ///<summary>
-        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源
+        /// 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部计费类型的资源
         ///</summary>
         public string BillingType{ get; set; }
         ///<summary>
-        /// 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)
+        /// 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)，默认为全部
         ///</summary>
         public string ExpireType{ get; set; }
         ///<summary>

@@ -266,6 +266,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开启P2P
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OpenLiveP2pResponse OpenLiveP2p(OpenLiveP2pRequest request) {
+            return  new OpenLiveP2pExecutor().Client(this).Execute<OpenLiveP2pResponse, OpenLiveP2pResult, OpenLiveP2pRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启P2P
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OpenLiveP2pResponse> OpenLiveP2p(OpenLiveP2pRequest request) {
+            return await new OpenLiveP2pExecutor().Client(this).Execute<OpenLiveP2pResponse, OpenLiveP2pResult, OpenLiveP2pRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询用户自定义直播录制模板列表
         /// 
         /// </summary>
@@ -755,6 +776,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询P2P配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveP2pConfigsResponse DescribeLiveP2pConfigs(DescribeLiveP2pConfigsRequest request) {
+            return  new DescribeLiveP2pConfigsExecutor().Client(this).Execute<DescribeLiveP2pConfigsResponse, DescribeLiveP2pConfigsResult, DescribeLiveP2pConfigsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询P2P配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveP2pConfigsResponse> DescribeLiveP2pConfigs(DescribeLiveP2pConfigsRequest request) {
+            return await new DescribeLiveP2pConfigsExecutor().Client(this).Execute<DescribeLiveP2pConfigsResponse, DescribeLiveP2pConfigsResult, DescribeLiveP2pConfigsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询转码时长数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1043,6 +1083,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainQualityDetectionResponse> AddLiveStreamDomainQualityDetection(AddLiveStreamDomainQualityDetectionRequest request) {
             return await new AddLiveStreamDomainQualityDetectionExecutor().Client(this).Execute<AddLiveStreamDomainQualityDetectionResponse, AddLiveStreamDomainQualityDetectionResult, AddLiveStreamDomainQualityDetectionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭P2P
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CloseLiveP2pResponse CloseLiveP2p(CloseLiveP2pRequest request) {
+            return  new CloseLiveP2pExecutor().Client(this).Execute<CloseLiveP2pResponse, CloseLiveP2pResult, CloseLiveP2pRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭P2P
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CloseLiveP2pResponse> CloseLiveP2p(CloseLiveP2pRequest request) {
+            return await new CloseLiveP2pExecutor().Client(this).Execute<CloseLiveP2pResponse, CloseLiveP2pResult, CloseLiveP2pRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1562,6 +1621,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询直播回看播放证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveRestartDomainCertificateResponse DescribeLiveRestartDomainCertificate(DescribeLiveRestartDomainCertificateRequest request) {
+            return  new DescribeLiveRestartDomainCertificateExecutor().Client(this).Execute<DescribeLiveRestartDomainCertificateResponse, DescribeLiveRestartDomainCertificateResult, DescribeLiveRestartDomainCertificateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播回看播放证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveRestartDomainCertificateResponse> DescribeLiveRestartDomainCertificate(DescribeLiveRestartDomainCertificateRequest request) {
+            return await new DescribeLiveRestartDomainCertificateExecutor().Client(this).Execute<DescribeLiveRestartDomainCertificateResponse, DescribeLiveRestartDomainCertificateResult, DescribeLiveRestartDomainCertificateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除域名质量检测配置
         /// - 删除域名级别的质量检测模板配置,重新推流后生效
         /// 
@@ -1833,6 +1911,29 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamQualityDetectionNotifyConfigResponse> DeleteLiveStreamQualityDetectionNotifyConfig(DeleteLiveStreamQualityDetectionNotifyConfigRequest request) {
             return await new DeleteLiveStreamQualityDetectionNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamQualityDetectionNotifyConfigResponse, DeleteLiveStreamQualityDetectionNotifyConfigResult, DeleteLiveStreamQualityDetectionNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播回看证书
+        /// -- 设置成功之后30分钟以内生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveRestartDomainCertificateResponse SetLiveRestartDomainCertificate(SetLiveRestartDomainCertificateRequest request) {
+            return  new SetLiveRestartDomainCertificateExecutor().Client(this).Execute<SetLiveRestartDomainCertificateResponse, SetLiveRestartDomainCertificateResult, SetLiveRestartDomainCertificateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播回看证书
+        /// -- 设置成功之后30分钟以内生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveRestartDomainCertificateResponse> SetLiveRestartDomainCertificate(SetLiveRestartDomainCertificateRequest request) {
+            return await new SetLiveRestartDomainCertificateExecutor().Client(this).Execute<SetLiveRestartDomainCertificateResponse, SetLiveRestartDomainCertificateResult, SetLiveRestartDomainCertificateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

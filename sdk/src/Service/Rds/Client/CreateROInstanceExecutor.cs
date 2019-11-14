@@ -33,12 +33,12 @@ namespace JDCloudSDK.Rds.Client
 {
 
     /// <summary>
-    ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+    ///  创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费
     /// </summary>
     public class CreateROInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL接口的Http 请求方法
+        ///  创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Rds.Client
             }
         }
         /// <summary>
-        ///  创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL接口的Http资源请求路径
+        ///  创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

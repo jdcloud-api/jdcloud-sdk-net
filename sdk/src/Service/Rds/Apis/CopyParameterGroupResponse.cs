@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  拷贝参数组&lt;br&gt;- 仅支持MySQL
+    ///  拷贝参数组
     /// </summary>
     public class CopyParameterGroupResponse : JdcloudResponse<CopyParameterGroupResult>
     {

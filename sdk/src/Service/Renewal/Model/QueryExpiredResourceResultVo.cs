@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Renewal.Model
 {
@@ -60,7 +61,8 @@ namespace JDCloudSDK.Renewal.Model
         ///<summary>
         /// 资源所在区域
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// 计费类型
         ///</summary>

@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Rds.Apis
 {
 
     /// <summary>
-    ///  查看参数组的参数&lt;br&gt;- 仅支持MySQL
+    ///  查看参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
     /// </summary>
     public class DescribeParameterGroupParametersResponse : JdcloudResponse<DescribeParameterGroupParametersResult>
     {

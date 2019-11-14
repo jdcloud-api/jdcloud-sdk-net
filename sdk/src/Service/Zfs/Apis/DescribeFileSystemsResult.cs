@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Zfs.Apis
     public class DescribeFileSystemsResult : JdcloudResult
     {
         ///<summary>
-        /// FileSystems
+        /// 文件系统信息列表
         ///</summary>
         public List<FileSystem> FileSystems{ get; set; }
 
