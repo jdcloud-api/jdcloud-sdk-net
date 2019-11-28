@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Kubernetes.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
@@ -76,14 +77,15 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///<summary>
         /// kubernetes的版本
         ///</summary>
-        public override  string Version{ get; set; }
+        [JsonProperty("version")]
+        public   string VersionValue{ get; set; }
         ///<summary>
         /// 集群所在的az
         ///</summary>
         public List<string> Azs{ get; set; }
 
         ///<summary>
-        /// pod 创建参数
+        /// 集群节点组
         ///Required:true
         ///</summary>
         [Required]
@@ -107,14 +109,20 @@ namespace  JDCloudSDK.Kubernetes.Apis
         [Required]
         public   string SecretKey{ get; set; }
         ///<summary>
-        /// 是否启用用户自定义监控，默认不启用
+        /// deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
         ///</summary>
         public   bool UserMetrics{ get; set; }
+        ///<summary>
+        /// 集群组件配置
+        ///</summary>
+        public List<AddonConfigSpec> AddonsConfig{ get; set; }
+
         ///<summary>
         /// 地域 ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

@@ -82,6 +82,18 @@ namespace JDCloudSDK.Iotcore.Model
         ///</summary>
         public int? CreateTime{ get; set; }
         ///<summary>
+        /// 实例到期时间
+        ///</summary>
+        public int? EndTime{ get; set; }
+        ///<summary>
+        /// 最大在线设备数
+        ///</summary>
+        public int? MaxDevices{ get; set; }
+        ///<summary>
+        /// 最大消息条数
+        ///</summary>
+        public int? MaxMessage{ get; set; }
+        ///<summary>
         /// 实例编号
         ///</summary>
         public string InstanceId{ get; set; }

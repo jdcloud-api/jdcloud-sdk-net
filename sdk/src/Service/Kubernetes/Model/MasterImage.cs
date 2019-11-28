@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Kubernetes.Model;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
@@ -63,11 +62,11 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public int? Visibility{ get; set; }
         ///<summary>
-        /// 默认ndoe镜像编码
+        /// 默认节点镜像编码
         ///</summary>
         public string DefaultNodeImageCode{ get; set; }
         ///<summary>
-        /// node 节点的配置
+        /// 工作节点镜像
         ///</summary>
         public List<NodeImage> NodeImages{ get; set; }
     }

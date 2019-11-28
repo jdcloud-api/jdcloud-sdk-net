@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kms.Apis
 {
@@ -53,6 +54,7 @@ namespace  JDCloudSDK.Kms.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string Version{ get; set; }
+        [JsonProperty("version")]
+        public   string VersionValue{ get; set; }
     }
 }

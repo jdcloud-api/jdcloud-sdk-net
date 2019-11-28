@@ -27,13 +27,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Kubernetes.Model;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
 
     /// <summary>
-    ///  描述节点配置信息
+    ///  工作节点配置信息
     /// </summary>
     public class NodeConfig
     {
@@ -47,15 +46,27 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 云盘系统盘的大小  单位(GB)
+        /// 云主机SSH密钥对名称
+        ///</summary>
+        public List<string> KeyNames{ get; set; }
+        ///<summary>
+        /// 云主机磁盘类型
+        ///</summary>
+        public string SystemDiskCategory{ get; set; }
+        ///<summary>
+        /// 云主机云盘系统盘大小  单位(GB)
         ///</summary>
         public int? SystemDiskSize{ get; set; }
         ///<summary>
-        /// 云盘系统盘的大小[ssd,premium-hdd]
+        /// 云主机云盘系统盘类型
         ///</summary>
         public string SystemDiskType{ get; set; }
         ///<summary>
-        /// Node的信息
+        /// 云主机云盘 iops，仅限 ssd 类型云盘有效
+        ///</summary>
+        public int? SystemDiskIops{ get; set; }
+        ///<summary>
+        /// 工作节点组标签
         ///</summary>
         public List<LabelSpec> Labels{ get; set; }
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  回滚未升级完的节点组
+    ///  回滚未升级完的工作节点组
     /// </summary>
     public class RollbackNodeGroupUpgradeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  回滚未升级完的节点组接口的Http 请求方法
+        ///  回滚未升级完的工作节点组接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  回滚未升级完的节点组接口的Http资源请求路径
+        ///  回滚未升级完的工作节点组接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

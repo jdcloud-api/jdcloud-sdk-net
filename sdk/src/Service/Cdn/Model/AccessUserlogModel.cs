@@ -38,20 +38,12 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
-        /// 日志下载url地址
+        /// 域名
         ///</summary>
-        public string LogUrl{ get; set; }
+        public string Domain{ get; set; }
         ///<summary>
-        /// 日志大小，单位：Byte（字节）
+        /// 日志对象
         ///</summary>
-        public long? LogSize{ get; set; }
-        ///<summary>
-        /// 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
-        ///</summary>
-        public string StartTime{ get; set; }
-        ///<summary>
-        /// 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
-        ///</summary>
-        public string EndTime{ get; set; }
+        public List<DomainlogModel> Urls{ get; set; }
     }
 }

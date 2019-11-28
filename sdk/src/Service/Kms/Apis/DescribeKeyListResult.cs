@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Kms.Apis
     public class DescribeKeyListResult : JdcloudResult
     {
         ///<summary>
-        /// KeyList
+        /// Key列表
         ///</summary>
         public List<KeyInfo> KeyList{ get; set; }
 

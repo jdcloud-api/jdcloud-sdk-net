@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
@@ -54,13 +55,15 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   string Verison{ get; set; }
+        [JsonProperty("version")]
+        public   string VersionValue{ get; set; }
         ///<summary>
         /// 地域 ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 集群 ID
         ///Required:true

@@ -27,59 +27,64 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Kubernetes.Model;
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
 
     /// <summary>
-    ///  描述节点组配置信息
+    ///  描述工作节点组配置信息
     /// </summary>
     public class NodeGroup
     {
 
         ///<summary>
-        /// 集群id
+        /// 集群 id
         ///</summary>
         public string ClusterId{ get; set; }
         ///<summary>
-        /// node group id
+        /// 工作节点组 id
         ///</summary>
         public string NodeGroupId{ get; set; }
         ///<summary>
-        /// 名称
+        /// 工作节点组名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 描述
+        /// 工作节点组描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// Node的信息
+        /// 工作节点组配置信息
         ///</summary>
         public NodeConfig NodeConfig{ get; set; }
         ///<summary>
-        /// k8s中的node的版本
+        /// 工作节点版本
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
         ///<summary>
-        /// node所属的网络信息
+        /// 工作节点所属的网络信息
         ///</summary>
         public NodeNetwork NodeNetwork{ get; set; }
         ///<summary>
-        /// 当前node数量
+        /// 当前工作节点数量
         ///</summary>
         public int? CurrentCount{ get; set; }
         ///<summary>
-        /// 期望的node数量
+        /// 期望的工作节点数量
         ///</summary>
         public int? ExpectCount{ get; set; }
         ///<summary>
-        /// node group的ag id ，通过agid可以查询该node group下的实例
+        /// 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
         ///</summary>
         public string AgId{ get; set; }
         ///<summary>
-        /// node group的ag id对应的实例模板
+        /// 工作节点组所在的 az
+        ///</summary>
+        public List<string> Azs{ get; set; }
+        ///<summary>
+        /// 工作节点组的 ag 对应的实例模板
         ///</summary>
         public string InstanceTemplateId{ get; set; }
         ///<summary>
@@ -101,7 +106,11 @@ namespace JDCloudSDK.Kubernetes.Model
         ///<summary>
         /// 是否开启自动修复
         ///</summary>
-        public string AutoRepair{ get; set; }
+        public bool AutoRepair{ get; set; }
+        ///<summary>
+        /// 控制节点操作进度
+        ///</summary>
+        public NodeGroupProgress Progress{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>

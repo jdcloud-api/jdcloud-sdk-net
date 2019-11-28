@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  cluster 摘除 nodeGroup 并删除 nodeGroup
+    ///  集群摘除工作节点组并删除工作节点组
     /// </summary>
     public class DeleteNodeGroupRequest : JdcloudRequest
     {
@@ -43,9 +44,10 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 节点组 ID
+        /// 工作节点组 ID
         ///Required:true
         ///</summary>
         [Required]

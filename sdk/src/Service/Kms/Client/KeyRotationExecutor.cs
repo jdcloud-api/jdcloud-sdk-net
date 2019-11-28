@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kms.Client
 {
 
     /// <summary>
-    ///  立即轮换密钥，自动轮换周期顺延
+    ///  立即轮换密钥，自动轮换周期顺延-支持对称密钥
     /// </summary>
     public class KeyRotationExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  立即轮换密钥，自动轮换周期顺延接口的Http 请求方法
+        ///  立即轮换密钥，自动轮换周期顺延-支持对称密钥接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kms.Client
             }
         }
         /// <summary>
-        ///  立即轮换密钥，自动轮换周期顺延接口的Http资源请求路径
+        ///  立即轮换密钥，自动轮换周期顺延-支持对称密钥接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

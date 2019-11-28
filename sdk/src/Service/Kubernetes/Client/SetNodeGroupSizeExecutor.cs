@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  调整节点组实例数量
+    ///  调整工作节点组实例数量
     /// </summary>
     public class SetNodeGroupSizeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  调整节点组实例数量接口的Http 请求方法
+        ///  调整工作节点组实例数量接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  调整节点组实例数量接口的Http资源请求路径
+        ///  调整工作节点组实例数量接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Iotcore.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v2";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -176,6 +176,25 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  新建产品Topic
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateProductTopicResponse CreateProductTopic(CreateProductTopicRequest request) {
+            return  new CreateProductTopicExecutor().Client(this).Execute<CreateProductTopicResponse, CreateProductTopicResult, CreateProductTopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  新建产品Topic
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateProductTopicResponse> CreateProductTopic(CreateProductTopicRequest request) {
+            return await new CreateProductTopicExecutor().Client(this).Execute<CreateProductTopicResponse, CreateProductTopicResult, CreateProductTopicRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -248,6 +267,25 @@ namespace JDCloudSDK.Iotcore.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeThingShadowResponse> DescribeThingShadow(DescribeThingShadowRequest request) {
             return await new DescribeThingShadowExecutor().Client(this).Execute<DescribeThingShadowResponse, DescribeThingShadowResult, DescribeThingShadowRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设备Topic调用
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public InvokeThingTopicResponse InvokeThingTopic(InvokeThingTopicRequest request) {
+            return  new InvokeThingTopicExecutor().Client(this).Execute<InvokeThingTopicResponse, InvokeThingTopicResult, InvokeThingTopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设备Topic调用
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<InvokeThingTopicResponse> InvokeThingTopic(InvokeThingTopicRequest request) {
+            return await new InvokeThingTopicExecutor().Client(this).Execute<InvokeThingTopicResponse, InvokeThingTopicResult, InvokeThingTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Kms.Apis
     public class DescribeSecretListResult : JdcloudResult
     {
         ///<summary>
-        /// SecretList
+        /// Secret列表
         ///</summary>
         public List<SecretInfo> SecretList{ get; set; }
 

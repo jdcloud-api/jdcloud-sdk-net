@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  设置用户自定义监控状态
+    ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
     /// </summary>
     public class SetUserMetricsResponse : JdcloudResponse<SetUserMetricsResult>
     {

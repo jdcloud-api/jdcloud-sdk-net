@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  设置用户自定义监控状态
+    ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
     /// </summary>
     public class SetUserMetricsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置用户自定义监控状态接口的Http 请求方法
+        ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  设置用户自定义监控状态接口的Http资源请求路径
+        ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

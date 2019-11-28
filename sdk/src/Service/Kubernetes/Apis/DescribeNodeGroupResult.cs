@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  查询单个节点组详情
+    ///  查询单个工作节点组详情
     /// </summary>
     public class DescribeNodeGroupResult : JdcloudResult
     {

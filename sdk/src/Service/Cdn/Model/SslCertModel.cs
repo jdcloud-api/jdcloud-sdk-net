@@ -40,7 +40,7 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// 证书Id
         ///</summary>
-        public string CertId{ get; set; }
+        public string SslCertId{ get; set; }
         ///<summary>
         /// 证书名称
         ///</summary>
@@ -56,11 +56,11 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// 开始时间
         ///</summary>
-        public DateTime? StartTime{ get; set; }
+        public DateTime? SslCertStartTime{ get; set; }
         ///<summary>
         /// 结束时间
         ///</summary>
-        public DateTime? EndTime{ get; set; }
+        public DateTime? SslCertEndTime{ get; set; }
         ///<summary>
         /// 是否允许被删除,1允许,0不允许
         ///</summary>
@@ -70,16 +70,8 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string Digest{ get; set; }
         ///<summary>
-        /// 证书别名
+        /// 绑定的域名
         ///</summary>
-        public string AliasName{ get; set; }
-        ///<summary>
-        /// 域名
-        ///</summary>
-        public List<string> DnsNames{ get; set; }
-        ///<summary>
-        /// 是否允许被下载,0-&gt;不允许,1-&gt;允许
-        ///</summary>
-        public int? Downloadable{ get; set; }
+        public List<string> RelatedDomains{ get; set; }
     }
 }

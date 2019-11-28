@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  设置节点组的自动修复
+    ///  设置工作节点组的自动修复
     /// </summary>
     public class SetAutoRepairExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置节点组的自动修复接口的Http 请求方法
+        ///  设置工作节点组的自动修复接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  设置节点组的自动修复接口的Http资源请求路径
+        ///  设置工作节点组的自动修复接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

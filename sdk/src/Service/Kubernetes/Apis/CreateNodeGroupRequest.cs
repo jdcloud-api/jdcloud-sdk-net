@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,13 +30,14 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Kubernetes.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  创建k8s的nodeGroup
-        ///         /// 要求集群状态为running
+    ///  创建工作节点组&lt;br&gt;
+        ///         /// - 要求集群状态为running
         ///         /// 
     /// </summary>
     public class CreateNodeGroupRequest : JdcloudRequest
@@ -52,37 +53,42 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// node group所属的cluster
+        /// 工作节点所属的集群
         ///Required:true
         ///</summary>
         [Required]
         public   string ClusterId{ get; set; }
         ///<summary>
-        /// 节点组配置
+        /// 工作节点配置信息
         ///Required:true
         ///</summary>
         [Required]
         public   NodeConfigSpec NodeConfig{ get; set; }
         ///<summary>
-        /// nodeGroup初始化大小
+        /// 工作节点组的 az，必须为集群az的子集，默认为集群az
+        ///</summary>
+        public List<string> Azs{ get; set; }
+
+        ///<summary>
+        /// 工作节点组初始化大小
         ///Required:true
         ///</summary>
         [Required]
         public   int InitialNodeCount{ get; set; }
         ///<summary>
-        /// k8s运行的vpc
+        /// 工作节点组初始化大小运行的VPC
         ///Required:true
         ///</summary>
         [Required]
         public   string VpcId{ get; set; }
         ///<summary>
-        /// k8s的node的cidr
+        /// 工作节点组的cidr
         ///Required:true
         ///</summary>
         [Required]
         public   string NodeCidr{ get; set; }
         ///<summary>
-        /// 是否开启 node group 的自动修复，默认关闭
+        /// 是否开启工作节点组的自动修复，默认关闭
         ///</summary>
         public   bool AutoRepair{ get; set; }
         ///<summary>
@@ -90,6 +96,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

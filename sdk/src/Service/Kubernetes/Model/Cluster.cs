@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Kubernetes.Model;
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
@@ -53,7 +53,8 @@ namespace JDCloudSDK.Kubernetes.Model
         ///<summary>
         /// kubernetes的版本
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
         ///<summary>
         /// 集群所在的az
         ///</summary>
@@ -91,11 +92,11 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public string AccessKey{ get; set; }
         ///<summary>
-        /// BasicAuth
+        /// 基本验证方式
         ///</summary>
         public bool BasicAuth{ get; set; }
         ///<summary>
-        /// ClientCertificate
+        /// 证书验证方式
         ///</summary>
         public bool ClientCertificate{ get; set; }
         ///<summary>
@@ -111,8 +112,28 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public string DashboardPort{ get; set; }
         ///<summary>
-        /// 用户是否启用集群自定义监控
+        /// deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
         ///</summary>
         public bool UserMetrics{ get; set; }
+        ///<summary>
+        /// 集群组件配置信息
+        ///</summary>
+        public List<AddonConfig> AddonsConfig{ get; set; }
+        ///<summary>
+        /// 是否开启集群自动升级，true 表示开启，false 表示未开启
+        ///</summary>
+        public bool AutoUpgrade{ get; set; }
+        ///<summary>
+        /// 配置集群维护策略
+        ///</summary>
+        public MaintenanceWindow MaintenanceWindow{ get; set; }
+        ///<summary>
+        /// 集群升级计划信息, 仅展示最新一条升级计划信息
+        ///</summary>
+        public UpgradePlan UpgradePlan{ get; set; }
+        ///<summary>
+        /// 控制节点操作进度
+        ///</summary>
+        public MaintenanceWindow MasterProgress{ get; set; }
     }
 }

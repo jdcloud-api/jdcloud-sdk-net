@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ossopenapi.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,6 +157,101 @@ namespace JDCloudSDK.Ossopenapi.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据bucket名称获取该bucket下的同步任务列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListHistoricalReplicatTasksResponse ListHistoricalReplicatTasks(ListHistoricalReplicatTasksRequest request) {
+            return  new ListHistoricalReplicatTasksExecutor().Client(this).Execute<ListHistoricalReplicatTasksResponse, ListHistoricalReplicatTasksResult, ListHistoricalReplicatTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据bucket名称获取该bucket下的同步任务列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListHistoricalReplicatTasksResponse> ListHistoricalReplicatTasks(ListHistoricalReplicatTasksRequest request) {
+            return await new ListHistoricalReplicatTasksExecutor().Client(this).Execute<ListHistoricalReplicatTasksResponse, ListHistoricalReplicatTasksResult, ListHistoricalReplicatTasksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据bucket名称获取该bucket下的同步任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetHistoricalReplicatTaskResponse GetHistoricalReplicatTask(GetHistoricalReplicatTaskRequest request) {
+            return  new GetHistoricalReplicatTaskExecutor().Client(this).Execute<GetHistoricalReplicatTaskResponse, GetHistoricalReplicatTaskResult, GetHistoricalReplicatTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据bucket名称获取该bucket下的同步任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetHistoricalReplicatTaskResponse> GetHistoricalReplicatTask(GetHistoricalReplicatTaskRequest request) {
+            return await new GetHistoricalReplicatTaskExecutor().Client(this).Execute<GetHistoricalReplicatTaskResponse, GetHistoricalReplicatTaskResult, GetHistoricalReplicatTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除回源配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBackSourceConfigurationResponse DeleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) {
+            return  new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除回源配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBackSourceConfigurationResponse> DeleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) {
+            return await new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止bucket名称获取该bucket下的同步任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AbortHistoricalReplicatTaskResponse AbortHistoricalReplicatTask(AbortHistoricalReplicatTaskRequest request) {
+            return  new AbortHistoricalReplicatTaskExecutor().Client(this).Execute<AbortHistoricalReplicatTaskResponse, AbortHistoricalReplicatTaskResult, AbortHistoricalReplicatTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止bucket名称获取该bucket下的同步任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AbortHistoricalReplicatTaskResponse> AbortHistoricalReplicatTask(AbortHistoricalReplicatTaskRequest request) {
+            return await new AbortHistoricalReplicatTaskExecutor().Client(this).Execute<AbortHistoricalReplicatTaskResponse, AbortHistoricalReplicatTaskResult, AbortHistoricalReplicatTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建历史同步任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateHistoricalReplicatTaskResponse CreateHistoricalReplicatTask(CreateHistoricalReplicatTaskRequest request) {
+            return  new CreateHistoricalReplicatTaskExecutor().Client(this).Execute<CreateHistoricalReplicatTaskResponse, CreateHistoricalReplicatTaskResult, CreateHistoricalReplicatTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建历史同步任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateHistoricalReplicatTaskResponse> CreateHistoricalReplicatTask(CreateHistoricalReplicatTaskRequest request) {
+            return await new CreateHistoricalReplicatTaskExecutor().Client(this).Execute<CreateHistoricalReplicatTaskResponse, CreateHistoricalReplicatTaskResult, CreateHistoricalReplicatTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取回源配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -191,25 +286,6 @@ namespace JDCloudSDK.Ossopenapi.Client
         /// <returns>请求结果信息</returns>
         public async Task<PutBackSourceConfigurationResponse> PutBackSourceConfiguration(PutBackSourceConfigurationRequest request) {
             return await new PutBackSourceConfigurationExecutor().Client(this).Execute<PutBackSourceConfigurationResponse, PutBackSourceConfigurationResult, PutBackSourceConfigurationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除回源配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteBackSourceConfigurationResponse DeleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) {
-            return  new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除回源配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteBackSourceConfigurationResponse> DeleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) {
-            return await new DeleteBackSourceConfigurationExecutor().Client(this).Execute<DeleteBackSourceConfigurationResponse, DeleteBackSourceConfigurationResult, DeleteBackSourceConfigurationRequest>(request).ConfigureAwait(false);
         }
 #endif
 

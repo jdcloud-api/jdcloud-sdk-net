@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Iotcore.Model
 {
@@ -75,6 +76,7 @@ namespace JDCloudSDK.Iotcore.Model
         public string PriDomain{ get; set; }
         ///<summary>
         /// IoT Hub实例状态
+        /// PREPARING-准备资源 |
         /// BUILDING-创建中 |
         /// RUNNING-运行中 |
         /// SUSPENDING-暂停使用
@@ -100,7 +102,8 @@ namespace JDCloudSDK.Iotcore.Model
         ///<summary>
         /// IoT Hub实例所属Region编号
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// IoT Hub实例所属Region名称
         ///</summary>

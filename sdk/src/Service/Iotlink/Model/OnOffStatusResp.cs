@@ -46,6 +46,10 @@ namespace JDCloudSDK.Iotlink.Model
         ///</summary>
         public string Msisdn{ get; set; }
         ///<summary>
+        /// 物联网卡imsi
+        ///</summary>
+        public string Imsi{ get; set; }
+        ///<summary>
         /// 终端的开关机状态(00:关机;01:开机;02:该运营商不支持查询;03:未知)
         ///</summary>
         public string Status{ get; set; }

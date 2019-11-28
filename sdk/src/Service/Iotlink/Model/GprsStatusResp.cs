@@ -46,6 +46,10 @@ namespace JDCloudSDK.Iotlink.Model
         ///</summary>
         public string Msisdn{ get; set; }
         ///<summary>
+        /// 物联网卡imsi
+        ///</summary>
+        public string Imsi{ get; set; }
+        ///<summary>
         /// GPRS在线状态(00:离线;01:在线;02:该运营商不支持查询;03:未知)
         ///</summary>
         public string Onlinestatus{ get; set; }

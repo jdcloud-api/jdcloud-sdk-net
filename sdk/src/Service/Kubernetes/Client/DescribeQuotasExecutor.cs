@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  查询(k8s 集群)配额
+    ///  查询 kubernetes 集群配额
     /// </summary>
     public class DescribeQuotasExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询(k8s 集群)配额接口的Http 请求方法
+        ///  查询 kubernetes 集群配额接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  查询(k8s 集群)配额接口的Http资源请求路径
+        ///  查询 kubernetes 集群配额接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

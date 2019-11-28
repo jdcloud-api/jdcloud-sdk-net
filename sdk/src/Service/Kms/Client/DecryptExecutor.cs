@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kms.Client
 {
 
     /// <summary>
-    ///  使用密钥对数据进行解密
+    ///  使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
     /// </summary>
     public class DecryptExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  使用密钥对数据进行解密接口的Http 请求方法
+        ///  使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kms.Client
             }
         }
         /// <summary>
-        ///  使用密钥对数据进行解密接口的Http资源请求路径
+        ///  使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

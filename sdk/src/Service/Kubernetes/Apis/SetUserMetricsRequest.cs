@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  设置用户自定义监控状态
+    ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
     /// </summary>
     public class SetUserMetricsRequest : JdcloudRequest
     {
@@ -47,7 +48,8 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 集群 ID
         ///Required:true

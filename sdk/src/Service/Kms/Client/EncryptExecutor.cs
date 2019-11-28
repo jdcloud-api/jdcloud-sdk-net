@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kms.Client
 {
 
     /// <summary>
-    ///  使用密钥对数据进行加密
+    ///  使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节
     /// </summary>
     public class EncryptExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  使用密钥对数据进行加密接口的Http 请求方法
+        ///  使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kms.Client
             }
         }
         /// <summary>
-        ///  使用密钥对数据进行加密接口的Http资源请求路径
+        ///  使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

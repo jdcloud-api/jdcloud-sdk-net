@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Billing.Model;
 
 namespace JDCloudSDK.Billing.Model
 {
@@ -94,6 +93,10 @@ namespace JDCloudSDK.Billing.Model
         /// 订单开始时间
         ///</summary>
         public string StartTime{ get; set; }
+        ///<summary>
+        /// 临时升配结束时间,临时升配时必传
+        ///</summary>
+        public string EndTime{ get; set; }
         ///<summary>
         /// 自然单列表
         ///</summary>

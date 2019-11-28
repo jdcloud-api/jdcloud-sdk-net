@@ -30,12 +30,13 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  查询(k8s 集群)配额
+    ///  查询 kubernetes 集群配额
     /// </summary>
     public class DescribeQuotasRequest : JdcloudRequest
     {
@@ -50,6 +51,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

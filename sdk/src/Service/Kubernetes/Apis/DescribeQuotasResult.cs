@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  查询(k8s 集群)配额
+    ///  查询 kubernetes 集群配额
     /// </summary>
     public class DescribeQuotasResult : JdcloudResult
     {

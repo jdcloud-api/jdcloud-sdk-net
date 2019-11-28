@@ -268,8 +268,12 @@ namespace JDCloudSDK.Core.Client
                     i++; 
 
                     string fieldName = item.Groups[1].Value;
+                    var paramValue = GetRequestValue(fieldName, request);
 
-                    httpUrl = httpUrl.Replace(item.Value, GetRequestValue(fieldName,request));
+                    if (!string.IsNullOrEmpty(paramValue)) {
+                        paramValue = Uri.EscapeUriString(paramValue);
+                    } 
+                    httpUrl = httpUrl.Replace(item.Value, paramValue);
                 }
             }
             return httpUrl;

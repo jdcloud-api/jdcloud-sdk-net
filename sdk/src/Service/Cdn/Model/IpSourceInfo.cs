@@ -38,15 +38,15 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
-        /// Master
+        /// 1：主；2：备
         ///</summary>
         public int? Master{ get; set; }
         ///<summary>
-        /// Ip
+        /// 回源IP
         ///</summary>
         public string Ip{ get; set; }
         ///<summary>
-        /// Ratio
+        /// 占比
         ///</summary>
         public double? Ratio{ get; set; }
     }

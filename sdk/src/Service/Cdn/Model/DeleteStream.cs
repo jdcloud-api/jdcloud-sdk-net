@@ -45,5 +45,9 @@ namespace JDCloudSDK.Cdn.Model
         /// 封禁推流的app
         ///</summary>
         public string App{ get; set; }
+        ///<summary>
+        /// PublishIp
+        ///</summary>
+        public string PublishIp{ get; set; }
     }
 }

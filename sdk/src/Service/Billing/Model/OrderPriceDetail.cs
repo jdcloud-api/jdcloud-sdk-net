@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Billing.Model;
 
 namespace JDCloudSDK.Billing.Model
 {
@@ -123,7 +122,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        /// 变配明细（1-升配补差价，2-降配延时）
+        /// 变配明细（1-升配补差价，2-降配延时，3-临时升配）
         ///</summary>
         public int? ProcessType{ get; set; }
         ///<summary>

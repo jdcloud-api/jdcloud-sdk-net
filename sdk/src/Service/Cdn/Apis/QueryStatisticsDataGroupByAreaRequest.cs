@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 统计查询类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -77,5 +77,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 分组依据
         ///</summary>
         public   string GroupBy{ get; set; }
+        ///<summary>
+        /// 查询协议，可选值:[http,https,all],传空默认返回全部协议汇总后的数据
+        ///</summary>
+        public   string Scheme{ get; set; }
     }
 }

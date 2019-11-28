@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
@@ -51,6 +52,10 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
+        /// 设备状态
+        ///</summary>
+        public   int? Status{ get; set; }
+        ///<summary>
         /// 设备归属的实例ID
         ///Required:true
         ///</summary>
@@ -61,7 +66,8 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 设备Id
         ///Required:true

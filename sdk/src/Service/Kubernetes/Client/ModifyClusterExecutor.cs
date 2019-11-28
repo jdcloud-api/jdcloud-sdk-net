@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  修改集群的 名称 和 描述。
+    ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
     /// </summary>
     public class ModifyClusterExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改集群的 名称 和 描述。接口的Http 请求方法
+        ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  修改集群的 名称 和 描述。接口的Http资源请求路径
+        ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

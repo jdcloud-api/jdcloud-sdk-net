@@ -101,5 +101,9 @@ namespace  JDCloudSDK.Iotcore.Apis
         /// 设备厂商
         ///</summary>
         public   string Manufacturer{ get; set; }
+        ///<summary>
+        /// 动态注册,0:关闭，1:开启
+        ///</summary>
+        public   int? DynamicRegister{ get; set; }
     }
 }

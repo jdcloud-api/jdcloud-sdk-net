@@ -68,7 +68,7 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// RealFps
         ///</summary>
-        public long? RealFps{ get; set; }
+        public double? RealFps{ get; set; }
         ///<summary>
         /// UploadSpeed
         ///</summary>

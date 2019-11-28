@@ -58,10 +58,6 @@ namespace JDCloudSDK.Iotcore.Model
         ///</summary>
         public int? Status{ get; set; }
         ///<summary>
-        /// 产品Key
-        ///</summary>
-        public string ProductKey{ get; set; }
-        ///<summary>
         /// 设备标识符
         ///</summary>
         public string Identifier{ get; set; }
@@ -90,9 +86,17 @@ namespace JDCloudSDK.Iotcore.Model
         ///</summary>
         public long? UpdatedTime{ get; set; }
         ///<summary>
+        /// 产品Key
+        ///</summary>
+        public string ProductKey{ get; set; }
+        ///<summary>
         /// 产品名称
         ///</summary>
         public string ProductName{ get; set; }
+        ///<summary>
+        /// 产品秘钥
+        ///</summary>
+        public string ProductSecret{ get; set; }
         ///<summary>
         /// 设备型号
         ///</summary>
@@ -101,5 +105,9 @@ namespace JDCloudSDK.Iotcore.Model
         /// 设备厂商
         ///</summary>
         public string Manufacturer{ get; set; }
+        ///<summary>
+        /// 是否开启动态注册,0:关闭,1:开启，开启动态注册的设备认证类型为一型一密，否则为一机一密
+        ///</summary>
+        public int? DynamicRegister{ get; set; }
     }
 }

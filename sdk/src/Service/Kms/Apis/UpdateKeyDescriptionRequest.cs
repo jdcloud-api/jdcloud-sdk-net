@@ -35,7 +35,9 @@ namespace  JDCloudSDK.Kms.Apis
 {
 
     /// <summary>
-    ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
+    ///  -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+        ///         /// -   修改非对称密钥配置，包括key的名称、用途等。
+        ///         /// 
     /// </summary>
     public class UpdateKeyDescriptionRequest : JdcloudRequest
     {

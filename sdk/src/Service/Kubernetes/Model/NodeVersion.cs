@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
@@ -40,7 +41,8 @@ namespace JDCloudSDK.Kubernetes.Model
         ///<summary>
         /// 节点版本号
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
         ///<summary>
         /// 镜像操作系统
         ///</summary>

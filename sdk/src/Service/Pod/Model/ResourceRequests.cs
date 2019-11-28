@@ -33,6 +33,8 @@ namespace JDCloudSDK.Pod.Model
 
     /// <summary>
     ///  容器计算资源信息
+        ///   - 容器必需的 CPU 展示为 0m 时，实际按照 2m 处理
+        /// 
     /// </summary>
     public class ResourceRequests
     {

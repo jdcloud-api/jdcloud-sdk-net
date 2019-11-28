@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  cluster 摘除 nodeGroup 并删除 nodeGroup
+    ///  集群摘除工作节点组并删除工作节点组
     /// </summary>
     public class DeleteNodeGroupResponse : JdcloudResponse<DeleteNodeGroupResult>
     {

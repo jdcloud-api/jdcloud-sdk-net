@@ -50,5 +50,9 @@ namespace JDCloudSDK.Kms.Model
         ///</summary>
         [Required]
         public string KeyDesc{ get; set; }
+        ///<summary>
+        /// 密钥类型： 1: rsa-2048, 0: aes-256，default: aes-256
+        ///</summary>
+        public int? KeyType{ get; set; }
     }
 }

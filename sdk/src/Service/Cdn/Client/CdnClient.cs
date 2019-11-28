@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cdn.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,25 +157,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询统计数据并进行汇总加和
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryMixTrafficGroupSumResponse QueryMixTrafficGroupSum(QueryMixTrafficGroupSumRequest request) {
-            return  new QueryMixTrafficGroupSumExecutor().Client(this).Execute<QueryMixTrafficGroupSumResponse, QueryMixTrafficGroupSumResult, QueryMixTrafficGroupSumRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询统计数据并进行汇总加和
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryMixTrafficGroupSumResponse> QueryMixTrafficGroupSum(QueryMixTrafficGroupSumRequest request) {
-            return await new QueryMixTrafficGroupSumExecutor().Client(this).Execute<QueryMixTrafficGroupSumResponse, QueryMixTrafficGroupSumResult, QueryMixTrafficGroupSumRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询域名组详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -191,6 +172,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainGroupDetailResponse> QueryDomainGroupDetail(QueryDomainGroupDetailRequest request) {
             return await new QueryDomainGroupDetailExecutor().Client(this).Execute<QueryDomainGroupDetailResponse, QueryDomainGroupDetailResult, QueryDomainGroupDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询WAF黑名单开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryWafBlackRuleSwitchResponse QueryWafBlackRuleSwitch(QueryWafBlackRuleSwitchRequest request) {
+            return  new QueryWafBlackRuleSwitchExecutor().Client(this).Execute<QueryWafBlackRuleSwitchResponse, QueryWafBlackRuleSwitchResult, QueryWafBlackRuleSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询WAF黑名单开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryWafBlackRuleSwitchResponse> QueryWafBlackRuleSwitch(QueryWafBlackRuleSwitchRequest request) {
+            return await new QueryWafBlackRuleSwitchExecutor().Client(this).Execute<QueryWafBlackRuleSwitchResponse, QueryWafBlackRuleSwitchResult, QueryWafBlackRuleSwitchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -214,59 +214,78 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询oss存储域名
+        ///  设置是否开启过滤参数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryOssBucketsResponse QueryOssBuckets(QueryOssBucketsRequest request) {
-            return  new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request);
+        public OperateLiveDomainIgnoreQueryStringResponse OperateLiveDomainIgnoreQueryString(OperateLiveDomainIgnoreQueryStringRequest request) {
+            return  new OperateLiveDomainIgnoreQueryStringExecutor().Client(this).Execute<OperateLiveDomainIgnoreQueryStringResponse, OperateLiveDomainIgnoreQueryStringResult, OperateLiveDomainIgnoreQueryStringRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询oss存储域名
+        ///  设置是否开启过滤参数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryOssBucketsResponse> QueryOssBuckets(QueryOssBucketsRequest request) {
-            return await new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request).ConfigureAwait(false);
+        public async Task<OperateLiveDomainIgnoreQueryStringResponse> OperateLiveDomainIgnoreQueryString(OperateLiveDomainIgnoreQueryStringRequest request) {
+            return await new OperateLiveDomainIgnoreQueryStringExecutor().Client(this).Execute<OperateLiveDomainIgnoreQueryStringResponse, OperateLiveDomainIgnoreQueryStringResult, OperateLiveDomainIgnoreQueryStringRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询ip黑名单
+        ///  禁用WAF黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryIpBlackListResponse QueryIpBlackList(QueryIpBlackListRequest request) {
-            return  new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request);
+        public DisableWafBlackRulesResponse DisableWafBlackRules(DisableWafBlackRulesRequest request) {
+            return  new DisableWafBlackRulesExecutor().Client(this).Execute<DisableWafBlackRulesResponse, DisableWafBlackRulesResult, DisableWafBlackRulesRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询ip黑名单
+        ///  禁用WAF黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryIpBlackListResponse> QueryIpBlackList(QueryIpBlackListRequest request) {
-            return await new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request).ConfigureAwait(false);
+        public async Task<DisableWafBlackRulesResponse> DisableWafBlackRules(DisableWafBlackRulesRequest request) {
+            return await new DisableWafBlackRulesExecutor().Client(this).Execute<DisableWafBlackRulesResponse, DisableWafBlackRulesResult, DisableWafBlackRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置直播域名回源host
+        ///  查询web防护开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetLiveDomainBackSourceHostResponse SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
-            return  new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request);
+        public QueryWebProtectSettingsResponse QueryWebProtectSettings(QueryWebProtectSettingsRequest request) {
+            return  new QueryWebProtectSettingsExecutor().Client(this).Execute<QueryWebProtectSettingsResponse, QueryWebProtectSettingsResult, QueryWebProtectSettingsRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置直播域名回源host
+        ///  查询web防护开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetLiveDomainBackSourceHostResponse> SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
-            return await new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request).ConfigureAwait(false);
+        public async Task<QueryWebProtectSettingsResponse> QueryWebProtectSettings(QueryWebProtectSettingsRequest request) {
+            return await new QueryWebProtectSettingsExecutor().Client(this).Execute<QueryWebProtectSettingsResponse, QueryWebProtectSettingsResult, QueryWebProtectSettingsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询geo地域
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryGeoAreasResponse QueryGeoAreas(QueryGeoAreasRequest request) {
+            return  new QueryGeoAreasExecutor().Client(this).Execute<QueryGeoAreasResponse, QueryGeoAreasResult, QueryGeoAreasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询geo地域
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryGeoAreasResponse> QueryGeoAreas(QueryGeoAreasRequest request) {
+            return await new QueryGeoAreasExecutor().Client(this).Execute<QueryGeoAreasResponse, QueryGeoAreasResult, QueryGeoAreasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -290,21 +309,21 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置转协议
+        ///  查询域名配置状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetProtocolConvertResponse SetProtocolConvert(SetProtocolConvertRequest request) {
-            return  new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request);
+        public QueryDomainConfigStatusResponse QueryDomainConfigStatus(QueryDomainConfigStatusRequest request) {
+            return  new QueryDomainConfigStatusExecutor().Client(this).Execute<QueryDomainConfigStatusResponse, QueryDomainConfigStatusResult, QueryDomainConfigStatusRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置转协议
+        ///  查询域名配置状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetProtocolConvertResponse> SetProtocolConvert(SetProtocolConvertRequest request) {
-            return await new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request).ConfigureAwait(false);
+        public async Task<QueryDomainConfigStatusResponse> QueryDomainConfigStatus(QueryDomainConfigStatusRequest request) {
+            return await new QueryDomainConfigStatusExecutor().Client(this).Execute<QueryDomainConfigStatusResponse, QueryDomainConfigStatusResult, QueryDomainConfigStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -347,44 +366,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询加速域名接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetDomainListResponse GetDomainList(GetDomainListRequest request) {
-            return  new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询加速域名接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetDomainListResponse> GetDomainList(GetDomainListRequest request) {
-            return await new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置域名refer防盗链
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetLiveDomainReferResponse SetLiveDomainRefer(SetLiveDomainReferRequest request) {
-            return  new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置域名refer防盗链
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetLiveDomainReferResponse> SetLiveDomainRefer(SetLiveDomainReferRequest request) {
-            return await new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  设置ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -404,116 +385,40 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置忽略参数
+        ///  修改指定的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetIgnoreQueryStringResponse SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
-            return  new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request);
+        public UpdateWafWhiteRuleResponse UpdateWafWhiteRule(UpdateWafWhiteRuleRequest request) {
+            return  new UpdateWafWhiteRuleExecutor().Client(this).Execute<UpdateWafWhiteRuleResponse, UpdateWafWhiteRuleResult, UpdateWafWhiteRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置忽略参数
+        ///  修改指定的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetIgnoreQueryStringResponse> SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
-            return await new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateWafWhiteRuleResponse> UpdateWafWhiteRule(UpdateWafWhiteRuleRequest request) {
+            return await new UpdateWafWhiteRuleExecutor().Client(this).Execute<UpdateWafWhiteRuleResponse, UpdateWafWhiteRuleResult, UpdateWafWhiteRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量删除域名组
+        ///  更新域名配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public BatchDeleteDomainGroupResponse BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
-            return  new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request);
+        public SetDomainConfigResponse SetDomainConfig(SetDomainConfigRequest request) {
+            return  new SetDomainConfigExecutor().Client(this).Execute<SetDomainConfigResponse, SetDomainConfigResult, SetDomainConfigRequest>(request);
         }
 #else
         /// <summary>
-        ///  批量删除域名组
+        ///  更新域名配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<BatchDeleteDomainGroupResponse> BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
-            return await new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置userAgent信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetUserAgentConfigResponse SetUserAgentConfig(SetUserAgentConfigRequest request) {
-            return  new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置userAgent信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetUserAgentConfigResponse> SetUserAgentConfig(SetUserAgentConfigRequest request) {
-            return await new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置直播域名回源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetLiveDomainBackSourceResponse SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
-            return  new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置直播域名回源信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetLiveDomainBackSourceResponse> SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
-            return await new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置协议跟随回源
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetFollowSourceProtocolResponse SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
-            return  new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置协议跟随回源
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetFollowSourceProtocolResponse> SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
-            return await new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看证书列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetSslCertListResponse GetSslCertList(GetSslCertListRequest request) {
-            return  new GetSslCertListExecutor().Client(this).Execute<GetSslCertListResponse, GetSslCertListResult, GetSslCertListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看证书列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetSslCertListResponse> GetSslCertList(GetSslCertListRequest request) {
-            return await new GetSslCertListExecutor().Client(this).Execute<GetSslCertListResponse, GetSslCertListResult, GetSslCertListRequest>(request).ConfigureAwait(false);
+        public async Task<SetDomainConfigResponse> SetDomainConfig(SetDomainConfigRequest request) {
+            return await new SetDomainConfigExecutor().Client(this).Execute<SetDomainConfigResponse, SetDomainConfigResult, SetDomainConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -556,6 +461,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  分地域运营商带宽查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryBandWithAreaResponse QueryBandWithArea(QueryBandWithAreaRequest request) {
+            return  new QueryBandWithAreaExecutor().Client(this).Execute<QueryBandWithAreaResponse, QueryBandWithAreaResult, QueryBandWithAreaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分地域运营商带宽查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryBandWithAreaResponse> QueryBandWithArea(QueryBandWithAreaRequest request) {
+            return await new QueryBandWithAreaExecutor().Client(this).Execute<QueryBandWithAreaResponse, QueryBandWithAreaResult, QueryBandWithAreaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置url鉴权
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -594,63 +518,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建点播加速域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateDomainResponse CreateDomain(CreateDomainRequest request) {
-            return  new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建点播加速域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest request) {
-            return await new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询域名配置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDomainConfigResponse QueryDomainConfig(QueryDomainConfigRequest request) {
-            return  new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询域名配置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDomainConfigResponse> QueryDomainConfig(QueryDomainConfigRequest request) {
-            return await new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置视频拖拽
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetVideoDraftResponse SetVideoDraft(SetVideoDraftRequest request) {
-            return  new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置视频拖拽
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetVideoDraftResponse> SetVideoDraft(SetVideoDraftRequest request) {
-            return await new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  设置直播域名ip黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -666,6 +533,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainIpBlackListResponse> SetLiveDomainIpBlackList(SetLiveDomainIpBlackListRequest request) {
             return await new SetLiveDomainIpBlackListExecutor().Client(this).Execute<SetLiveDomainIpBlackListResponse, SetLiveDomainIpBlackListResult, SetLiveDomainIpBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置CC 防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCCProtectSwitchResponse SetCCProtectSwitch(SetCCProtectSwitchRequest request) {
+            return  new SetCCProtectSwitchExecutor().Client(this).Execute<SetCCProtectSwitchResponse, SetCCProtectSwitchResult, SetCCProtectSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置CC 防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCCProtectSwitchResponse> SetCCProtectSwitch(SetCCProtectSwitchRequest request) {
+            return await new SetCCProtectSwitchExecutor().Client(this).Execute<SetCCProtectSwitchResponse, SetCCProtectSwitchResult, SetCCProtectSwitchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -689,25 +575,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  泛域名共享缓存
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public OperateShareCacheResponse OperateShareCache(OperateShareCacheRequest request) {
-            return  new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  泛域名共享缓存
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<OperateShareCacheResponse> OperateShareCache(OperateShareCacheRequest request) {
-            return await new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询直播域名app列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -727,78 +594,40 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  分地区及运营商查询统计数据
+        ///  禁用WAF白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryMixStatisticsWithAreaDataResponse QueryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) {
-            return  new QueryMixStatisticsWithAreaDataExecutor().Client(this).Execute<QueryMixStatisticsWithAreaDataResponse, QueryMixStatisticsWithAreaDataResult, QueryMixStatisticsWithAreaDataRequest>(request);
+        public DisableWafWhiteRulesResponse DisableWafWhiteRules(DisableWafWhiteRulesRequest request) {
+            return  new DisableWafWhiteRulesExecutor().Client(this).Execute<DisableWafWhiteRulesResponse, DisableWafWhiteRulesResult, DisableWafWhiteRulesRequest>(request);
         }
 #else
         /// <summary>
-        ///  分地区及运营商查询统计数据
+        ///  禁用WAF白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryMixStatisticsWithAreaDataResponse> QueryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) {
-            return await new QueryMixStatisticsWithAreaDataExecutor().Client(this).Execute<QueryMixStatisticsWithAreaDataResponse, QueryMixStatisticsWithAreaDataResult, QueryMixStatisticsWithAreaDataRequest>(request).ConfigureAwait(false);
+        public async Task<DisableWafWhiteRulesResponse> DisableWafWhiteRules(DisableWafWhiteRulesRequest request) {
+            return await new DisableWafWhiteRulesExecutor().Client(this).Execute<DisableWafWhiteRulesResponse, DisableWafWhiteRulesResult, DisableWafWhiteRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启或关闭ip黑名单
+        ///  新增一条黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public OperateLiveDomainIpBlackListResponse OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
-            return  new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request);
+        public CreateWafBlackRuleResponse CreateWafBlackRule(CreateWafBlackRuleRequest request) {
+            return  new CreateWafBlackRuleExecutor().Client(this).Execute<CreateWafBlackRuleResponse, CreateWafBlackRuleResult, CreateWafBlackRuleRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启或关闭ip黑名单
+        ///  新增一条黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<OperateLiveDomainIpBlackListResponse> OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
-            return await new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询统计数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryStatisticsDataResponse QueryStatisticsData(QueryStatisticsDataRequest request) {
-            return  new QueryStatisticsDataExecutor().Client(this).Execute<QueryStatisticsDataResponse, QueryStatisticsDataResult, QueryStatisticsDataRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询统计数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsDataResponse> QueryStatisticsData(QueryStatisticsDataRequest request) {
-            return await new QueryStatisticsDataExecutor().Client(this).Execute<QueryStatisticsDataResponse, QueryStatisticsDataResult, QueryStatisticsDataRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查找地域运营商列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryAreaIspListResponse QueryAreaIspList(QueryAreaIspListRequest request) {
-            return  new QueryAreaIspListExecutor().Client(this).Execute<QueryAreaIspListResponse, QueryAreaIspListResult, QueryAreaIspListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查找地域运营商列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryAreaIspListResponse> QueryAreaIspList(QueryAreaIspListRequest request) {
-            return await new QueryAreaIspListExecutor().Client(this).Execute<QueryAreaIspListResponse, QueryAreaIspListResult, QueryAreaIspListRequest>(request).ConfigureAwait(false);
+        public async Task<CreateWafBlackRuleResponse> CreateWafBlackRule(CreateWafBlackRuleRequest request) {
+            return await new CreateWafBlackRuleExecutor().Client(this).Execute<CreateWafBlackRuleResponse, CreateWafBlackRuleResult, CreateWafBlackRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -818,6 +647,44 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateDomainGroupResponse> CreateDomainGroup(CreateDomainGroupRequest request) {
             return await new CreateDomainGroupExecutor().Client(this).Execute<CreateDomainGroupResponse, CreateDomainGroupResult, CreateDomainGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询web防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryWebProtectSwitchResponse QueryWebProtectSwitch(QueryWebProtectSwitchRequest request) {
+            return  new QueryWebProtectSwitchExecutor().Client(this).Execute<QueryWebProtectSwitchResponse, QueryWebProtectSwitchResult, QueryWebProtectSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询web防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryWebProtectSwitchResponse> QueryWebProtectSwitch(QueryWebProtectSwitchRequest request) {
+            return await new QueryWebProtectSwitchExecutor().Client(this).Execute<QueryWebProtectSwitchResponse, QueryWebProtectSwitchResult, QueryWebProtectSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询攻击来源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public WafQueryPvForAreaAndIpResponse WafQueryPvForAreaAndIp(WafQueryPvForAreaAndIpRequest request) {
+            return  new WafQueryPvForAreaAndIpExecutor().Client(this).Execute<WafQueryPvForAreaAndIpResponse, WafQueryPvForAreaAndIpResult, WafQueryPvForAreaAndIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询攻击来源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<WafQueryPvForAreaAndIpResponse> WafQueryPvForAreaAndIp(WafQueryPvForAreaAndIpRequest request) {
+            return await new WafQueryPvForAreaAndIpExecutor().Client(this).Execute<WafQueryPvForAreaAndIpResponse, WafQueryPvForAreaAndIpResult, WafQueryPvForAreaAndIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -879,25 +746,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询默认http header头部参数列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDefaultHttpHeaderKeyResponse QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
-            return  new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询默认http header头部参数列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDefaultHttpHeaderKeyResponse> QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
-            return await new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询加速域名详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -913,6 +761,1317 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetDomainDetailResponse> GetDomainDetail(GetDomainDetailRequest request) {
             return await new GetDomainDetailExecutor().Client(this).Execute<GetDomainDetailResponse, GetDomainDetailResult, GetDomainDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置网络防护层规则总开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetNetProtectionRulesSwitchResponse SetNetProtectionRulesSwitch(SetNetProtectionRulesSwitchRequest request) {
+            return  new SetNetProtectionRulesSwitchExecutor().Client(this).Execute<SetNetProtectionRulesSwitchResponse, SetNetProtectionRulesSwitchResult, SetNetProtectionRulesSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置网络防护层规则总开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetNetProtectionRulesSwitchResponse> SetNetProtectionRulesSwitch(SetNetProtectionRulesSwitchRequest request) {
+            return await new SetNetProtectionRulesSwitchExecutor().Client(this).Execute<SetNetProtectionRulesSwitchResponse, SetNetProtectionRulesSwitchResult, SetNetProtectionRulesSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  攻击记录查询
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SearchAttackLogResponse SearchAttackLog(SearchAttackLogRequest request) {
+            return  new SearchAttackLogExecutor().Client(this).Execute<SearchAttackLogResponse, SearchAttackLogResult, SearchAttackLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  攻击记录查询
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SearchAttackLogResponse> SearchAttackLog(SearchAttackLogRequest request) {
+            return await new SearchAttackLogExecutor().Client(this).Execute<SearchAttackLogResponse, SearchAttackLogResult, SearchAttackLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsDataGroupByAreaResponse QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
+            return  new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsDataGroupByAreaResponse> QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
+            return await new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置URL鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainAccessKeyResponse SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
+            return  new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置URL鉴权
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainAccessKeyResponse> SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
+            return await new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询WAF黑名单规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QuerywafBlackRulesResponse QuerywafBlackRules(QuerywafBlackRulesRequest request) {
+            return  new QuerywafBlackRulesExecutor().Client(this).Execute<QuerywafBlackRulesResponse, QuerywafBlackRulesResult, QuerywafBlackRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询WAF黑名单规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QuerywafBlackRulesResponse> QuerywafBlackRules(QuerywafBlackRulesRequest request) {
+            return await new QuerywafBlackRulesExecutor().Client(this).Execute<QuerywafBlackRulesResponse, QuerywafBlackRulesResult, QuerywafBlackRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除禁播流
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteForbiddenStreamResponse DeleteForbiddenStream(DeleteForbiddenStreamRequest request) {
+            return  new DeleteForbiddenStreamExecutor().Client(this).Execute<DeleteForbiddenStreamResponse, DeleteForbiddenStreamResult, DeleteForbiddenStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除禁播流
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteForbiddenStreamResponse> DeleteForbiddenStream(DeleteForbiddenStreamRequest request) {
+            return await new DeleteForbiddenStreamExecutor().Client(this).Execute<DeleteForbiddenStreamResponse, DeleteForbiddenStreamResult, DeleteForbiddenStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置WAF白名单开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetWafWhiteRuleSwitchResponse SetWafWhiteRuleSwitch(SetWafWhiteRuleSwitchRequest request) {
+            return  new SetWafWhiteRuleSwitchExecutor().Client(this).Execute<SetWafWhiteRuleSwitchResponse, SetWafWhiteRuleSwitchResult, SetWafWhiteRuleSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置WAF白名单开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetWafWhiteRuleSwitchResponse> SetWafWhiteRuleSwitch(SetWafWhiteRuleSwitchRequest request) {
+            return await new SetWafWhiteRuleSwitchExecutor().Client(this).Execute<SetWafWhiteRuleSwitchResponse, SetWafWhiteRuleSwitchResult, SetWafWhiteRuleSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置IP白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetPushIpWhiteListResponse SetPushIpWhiteList(SetPushIpWhiteListRequest request) {
+            return  new SetPushIpWhiteListExecutor().Client(this).Execute<SetPushIpWhiteListResponse, SetPushIpWhiteListResult, SetPushIpWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置IP白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetPushIpWhiteListResponse> SetPushIpWhiteList(SetPushIpWhiteListRequest request) {
+            return await new SetPushIpWhiteListExecutor().Client(this).Execute<SetPushIpWhiteListResponse, SetPushIpWhiteListResult, SetPushIpWhiteListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据taskIds查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryRefreshTaskByIdsResponse QueryRefreshTaskByIds(QueryRefreshTaskByIdsRequest request) {
+            return  new QueryRefreshTaskByIdsExecutor().Client(this).Execute<QueryRefreshTaskByIdsResponse, QueryRefreshTaskByIdsResult, QueryRefreshTaskByIdsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据taskIds查询刷新预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryRefreshTaskByIdsResponse> QueryRefreshTaskByIds(QueryRefreshTaskByIdsRequest request) {
+            return await new QueryRefreshTaskByIdsExecutor().Client(this).Execute<QueryRefreshTaskByIdsResponse, QueryRefreshTaskByIdsResult, QueryRefreshTaskByIdsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsDataGroupSumResponse QueryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) {
+            return  new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsDataGroupSumResponse> QueryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) {
+            return await new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  带宽查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryBandResponse QueryBand(QueryBandRequest request) {
+            return  new QueryBandExecutor().Client(this).Execute<QueryBandResponse, QueryBandResult, QueryBandRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  带宽查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryBandResponse> QueryBand(QueryBandRequest request) {
+            return await new QueryBandExecutor().Client(this).Execute<QueryBandResponse, QueryBandResult, QueryBandRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加httpHeader
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHttpHeaderResponse SetHttpHeader(SetHttpHeaderRequest request) {
+            return  new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加httpHeader
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHttpHeaderResponse> SetHttpHeader(SetHttpHeaderRequest request) {
+            return await new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取所有上层节点的ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckWhetherIpBelongToJCloudResponse CheckWhetherIpBelongToJCloud(CheckWhetherIpBelongToJCloudRequest request) {
+            return  new CheckWhetherIpBelongToJCloudExecutor().Client(this).Execute<CheckWhetherIpBelongToJCloudResponse, CheckWhetherIpBelongToJCloudResult, CheckWhetherIpBelongToJCloudRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取所有上层节点的ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckWhetherIpBelongToJCloudResponse> CheckWhetherIpBelongToJCloud(CheckWhetherIpBelongToJCloudRequest request) {
+            return await new CheckWhetherIpBelongToJCloudExecutor().Client(this).Execute<CheckWhetherIpBelongToJCloudResponse, CheckWhetherIpBelongToJCloudResult, CheckWhetherIpBelongToJCloudRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveStatisticsDataResponse QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
+            return  new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveStatisticsDataResponse> QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
+            return await new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置回源鉴权信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetOriginAuthenticationResponse SetOriginAuthentication(SetOriginAuthenticationRequest request) {
+            return  new SetOriginAuthenticationExecutor().Client(this).Execute<SetOriginAuthenticationResponse, SetOriginAuthenticationResult, SetOriginAuthenticationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置回源鉴权信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetOriginAuthenticationResponse> SetOriginAuthentication(SetOriginAuthenticationRequest request) {
+            return await new SetOriginAuthenticationExecutor().Client(this).Execute<SetOriginAuthenticationResponse, SetOriginAuthenticationResult, SetOriginAuthenticationRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量域名查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainsLogResponse QueryDomainsLog(QueryDomainsLogRequest request) {
+            return  new QueryDomainsLogExecutor().Client(this).Execute<QueryDomainsLogResponse, QueryDomainsLogResult, QueryDomainsLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量域名查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainsLogResponse> QueryDomainsLog(QueryDomainsLogRequest request) {
+            return await new QueryDomainsLogExecutor().Client(this).Execute<QueryDomainsLogResponse, QueryDomainsLogResult, QueryDomainsLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableCCProtectRuleResponse EnableCCProtectRule(EnableCCProtectRuleRequest request) {
+            return  new EnableCCProtectRuleExecutor().Client(this).Execute<EnableCCProtectRuleResponse, EnableCCProtectRuleResult, EnableCCProtectRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableCCProtectRuleResponse> EnableCCProtectRule(EnableCCProtectRuleRequest request) {
+            return await new EnableCCProtectRuleExecutor().Client(this).Execute<EnableCCProtectRuleResponse, EnableCCProtectRuleResult, EnableCCProtectRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置域名refer
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetReferResponse SetRefer(SetReferRequest request) {
+            return  new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置域名refer
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetReferResponse> SetRefer(SetReferRequest request) {
+            return await new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播域名详情v1
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveDomainDetailResponse QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
+            return  new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播域名详情v1
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveDomainDetailResponse> QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
+            return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询waf ip黑名单配置状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryIpBlackSettingStatusResponse QueryIpBlackSettingStatus(QueryIpBlackSettingStatusRequest request) {
+            return  new QueryIpBlackSettingStatusExecutor().Client(this).Execute<QueryIpBlackSettingStatusResponse, QueryIpBlackSettingStatusResult, QueryIpBlackSettingStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询waf ip黑名单配置状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryIpBlackSettingStatusResponse> QueryIpBlackSettingStatus(QueryIpBlackSettingStatusRequest request) {
+            return await new QueryIpBlackSettingStatusExecutor().Client(this).Execute<QueryIpBlackSettingStatusResponse, QueryIpBlackSettingStatusResult, QueryIpBlackSettingStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLiveDomainPrefecthTaskResponse CreateLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) {
+            return  new CreateLiveDomainPrefecthTaskExecutor().Client(this).Execute<CreateLiveDomainPrefecthTaskResponse, CreateLiveDomainPrefecthTaskResult, CreateLiveDomainPrefecthTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLiveDomainPrefecthTaskResponse> CreateLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) {
+            return await new CreateLiveDomainPrefecthTaskExecutor().Client(this).Execute<CreateLiveDomainPrefecthTaskResponse, CreateLiveDomainPrefecthTaskResult, CreateLiveDomainPrefecthTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询TOP IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsTopIpResponse QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
+            return  new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询TOP IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsTopIpResponse> QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
+            return await new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询攻击记录详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public WafQueryAttackDetailsResponse WafQueryAttackDetails(WafQueryAttackDetailsRequest request) {
+            return  new WafQueryAttackDetailsExecutor().Client(this).Execute<WafQueryAttackDetailsResponse, WafQueryAttackDetailsResult, WafQueryAttackDetailsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询攻击记录详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<WafQueryAttackDetailsResponse> WafQueryAttackDetails(WafQueryAttackDetailsRequest request) {
+            return await new WafQueryAttackDetailsExecutor().Client(this).Execute<WafQueryAttackDetailsResponse, WafQueryAttackDetailsResult, WafQueryAttackDetailsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止源站监控
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopMonitorResponse StopMonitor(StopMonitorRequest request) {
+            return  new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止源站监控
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopMonitorResponse> StopMonitor(StopMonitorRequest request) {
+            return await new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询http header头
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryHttpHeaderResponse QueryHttpHeader(QueryHttpHeaderRequest request) {
+            return  new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询http header头
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryHttpHeaderResponse> QueryHttpHeader(QueryHttpHeaderRequest request) {
+            return await new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询waf地域信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryWafRegionsResponse QueryWafRegions(QueryWafRegionsRequest request) {
+            return  new QueryWafRegionsExecutor().Client(this).Execute<QueryWafRegionsResponse, QueryWafRegionsResult, QueryWafRegionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询waf地域信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryWafRegionsResponse> QueryWafRegions(QueryWafRegionsRequest request) {
+            return await new QueryWafRegionsExecutor().Client(this).Execute<QueryWafRegionsResponse, QueryWafRegionsResult, QueryWafRegionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播域名详情v2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveDomainDetailV2Response QueryLiveDomainDetailV2(QueryLiveDomainDetailV2Request request) {
+            return  new QueryLiveDomainDetailV2Executor().Client(this).Execute<QueryLiveDomainDetailV2Response, QueryLiveDomainDetailV2Result, QueryLiveDomainDetailV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播域名详情v2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveDomainDetailV2Response> QueryLiveDomainDetailV2(QueryLiveDomainDetailV2Request request) {
+            return await new QueryLiveDomainDetailV2Executor().Client(this).Execute<QueryLiveDomainDetailV2Response, QueryLiveDomainDetailV2Result, QueryLiveDomainDetailV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建刷新预热回调任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRefreshTaskForCallbackV2Response CreateRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) {
+            return  new CreateRefreshTaskForCallbackV2Executor().Client(this).Execute<CreateRefreshTaskForCallbackV2Response, CreateRefreshTaskForCallbackV2Result, CreateRefreshTaskForCallbackV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  创建刷新预热回调任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRefreshTaskForCallbackV2Response> CreateRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) {
+            return await new CreateRefreshTaskForCallbackV2Executor().Client(this).Execute<CreateRefreshTaskForCallbackV2Response, CreateRefreshTaskForCallbackV2Result, CreateRefreshTaskForCallbackV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询WAF总开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryWafWhiteRuleSwitchResponse QueryWafWhiteRuleSwitch(QueryWafWhiteRuleSwitchRequest request) {
+            return  new QueryWafWhiteRuleSwitchExecutor().Client(this).Execute<QueryWafWhiteRuleSwitchResponse, QueryWafWhiteRuleSwitchResult, QueryWafWhiteRuleSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询WAF总开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryWafWhiteRuleSwitchResponse> QueryWafWhiteRuleSwitch(QueryWafWhiteRuleSwitchRequest request) {
+            return await new QueryWafWhiteRuleSwitchExecutor().Client(this).Execute<QueryWafWhiteRuleSwitchResponse, QueryWafWhiteRuleSwitchResult, QueryWafWhiteRuleSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  新增一条CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCCProtectRuleResponse CreateCCProtectRule(CreateCCProtectRuleRequest request) {
+            return  new CreateCCProtectRuleExecutor().Client(this).Execute<CreateCCProtectRuleResponse, CreateCCProtectRuleResult, CreateCCProtectRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  新增一条CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCCProtectRuleResponse> CreateCCProtectRule(CreateCCProtectRuleRequest request) {
+            return await new CreateCCProtectRuleExecutor().Client(this).Execute<CreateCCProtectRuleResponse, CreateCCProtectRuleResult, CreateCCProtectRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLivePrefetchTaskResponse QueryLivePrefetchTask(QueryLivePrefetchTaskRequest request) {
+            return  new QueryLivePrefetchTaskExecutor().Client(this).Execute<QueryLivePrefetchTaskResponse, QueryLivePrefetchTaskResult, QueryLivePrefetchTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播预热任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLivePrefetchTaskResponse> QueryLivePrefetchTask(QueryLivePrefetchTaskRequest request) {
+            return await new QueryLivePrefetchTaskExecutor().Client(this).Execute<QueryLivePrefetchTaskResponse, QueryLivePrefetchTaskResult, QueryLivePrefetchTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  新增一条白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateWafWhiteRuleResponse CreateWafWhiteRule(CreateWafWhiteRuleRequest request) {
+            return  new CreateWafWhiteRuleExecutor().Client(this).Execute<CreateWafWhiteRuleResponse, CreateWafWhiteRuleResult, CreateWafWhiteRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  新增一条白名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateWafWhiteRuleResponse> CreateWafWhiteRule(CreateWafWhiteRuleRequest request) {
+            return await new CreateWafWhiteRuleExecutor().Client(this).Execute<CreateWafWhiteRuleResponse, CreateWafWhiteRuleResult, CreateWafWhiteRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询WAF白名单规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QuerywafWhiteRulesResponse QuerywafWhiteRules(QuerywafWhiteRulesRequest request) {
+            return  new QuerywafWhiteRulesExecutor().Client(this).Execute<QuerywafWhiteRulesResponse, QuerywafWhiteRulesResult, QuerywafWhiteRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询WAF白名单规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QuerywafWhiteRulesResponse> QuerywafWhiteRules(QuerywafWhiteRulesRequest request) {
+            return await new QuerywafWhiteRulesExecutor().Client(this).Execute<QuerywafWhiteRulesResponse, QuerywafWhiteRulesResult, QuerywafWhiteRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置http协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHttpTypeResponse SetHttpType(SetHttpTypeRequest request) {
+            return  new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置http协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
+            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainLogResponse QueryDomainLog(QueryDomainLogRequest request) {
+            return  new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainLogResponse> QueryDomainLog(QueryDomainLogRequest request) {
+            return await new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryMixTrafficGroupSumResponse QueryMixTrafficGroupSum(QueryMixTrafficGroupSumRequest request) {
+            return  new QueryMixTrafficGroupSumExecutor().Client(this).Execute<QueryMixTrafficGroupSumResponse, QueryMixTrafficGroupSumResult, QueryMixTrafficGroupSumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据并进行汇总加和
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryMixTrafficGroupSumResponse> QueryMixTrafficGroupSum(QueryMixTrafficGroupSumRequest request) {
+            return await new QueryMixTrafficGroupSumExecutor().Client(this).Execute<QueryMixTrafficGroupSumResponse, QueryMixTrafficGroupSumResult, QueryMixTrafficGroupSumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询oss存储域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryOssBucketsResponse QueryOssBuckets(QueryOssBucketsRequest request) {
+            return  new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询oss存储域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryOssBucketsResponse> QueryOssBuckets(QueryOssBucketsRequest request) {
+            return await new QueryOssBucketsExecutor().Client(this).Execute<QueryOssBucketsResponse, QueryOssBucketsResult, QueryOssBucketsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  攻击类型统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryAttackTypeCountResponse QueryAttackTypeCount(QueryAttackTypeCountRequest request) {
+            return  new QueryAttackTypeCountExecutor().Client(this).Execute<QueryAttackTypeCountResponse, QueryAttackTypeCountResult, QueryAttackTypeCountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  攻击类型统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryAttackTypeCountResponse> QueryAttackTypeCount(QueryAttackTypeCountRequest request) {
+            return await new QueryAttackTypeCountExecutor().Client(this).Execute<QueryAttackTypeCountResponse, QueryAttackTypeCountResult, QueryAttackTypeCountRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryIpBlackListResponse QueryIpBlackList(QueryIpBlackListRequest request) {
+            return  new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryIpBlackListResponse> QueryIpBlackList(QueryIpBlackListRequest request) {
+            return await new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播域名回源host
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainBackSourceHostResponse SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
+            return  new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播域名回源host
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainBackSourceHostResponse> SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
+            return await new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置转协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetProtocolConvertResponse SetProtocolConvert(SetProtocolConvertRequest request) {
+            return  new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置转协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetProtocolConvertResponse> SetProtocolConvert(SetProtocolConvertRequest request) {
+            return await new SetProtocolConvertExecutor().Client(this).Execute<SetProtocolConvertResponse, SetProtocolConvertResult, SetProtocolConvertRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询CC防护规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryCCProtectRulesResponse QueryCCProtectRules(QueryCCProtectRulesRequest request) {
+            return  new QueryCCProtectRulesExecutor().Client(this).Execute<QueryCCProtectRulesResponse, QueryCCProtectRulesResult, QueryCCProtectRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询CC防护规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryCCProtectRulesResponse> QueryCCProtectRules(QueryCCProtectRulesRequest request) {
+            return await new QueryCCProtectRulesExecutor().Client(this).Execute<QueryCCProtectRulesResponse, QueryCCProtectRulesResult, QueryCCProtectRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询加速域名接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetDomainListResponse GetDomainList(GetDomainListRequest request) {
+            return  new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询加速域名接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetDomainListResponse> GetDomainList(GetDomainListRequest request) {
+            return await new GetDomainListExecutor().Client(this).Execute<GetDomainListResponse, GetDomainListResult, GetDomainListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置域名refer防盗链
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainReferResponse SetLiveDomainRefer(SetLiveDomainReferRequest request) {
+            return  new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置域名refer防盗链
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainReferResponse> SetLiveDomainRefer(SetLiveDomainReferRequest request) {
+            return await new SetLiveDomainReferExecutor().Client(this).Execute<SetLiveDomainReferResponse, SetLiveDomainReferResult, SetLiveDomainReferRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置忽略参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetIgnoreQueryStringResponse SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
+            return  new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置忽略参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetIgnoreQueryStringResponse> SetIgnoreQueryString(SetIgnoreQueryStringRequest request) {
+            return await new SetIgnoreQueryStringExecutor().Client(this).Execute<SetIgnoreQueryStringResponse, SetIgnoreQueryStringResult, SetIgnoreQueryStringRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量删除域名组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDeleteDomainGroupResponse BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
+            return  new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除域名组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDeleteDomainGroupResponse> BatchDeleteDomainGroup(BatchDeleteDomainGroupRequest request) {
+            return await new BatchDeleteDomainGroupExecutor().Client(this).Execute<BatchDeleteDomainGroupResponse, BatchDeleteDomainGroupResult, BatchDeleteDomainGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置userAgent信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetUserAgentConfigResponse SetUserAgentConfig(SetUserAgentConfigRequest request) {
+            return  new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置userAgent信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetUserAgentConfigResponse> SetUserAgentConfig(SetUserAgentConfigRequest request) {
+            return await new SetUserAgentConfigExecutor().Client(this).Execute<SetUserAgentConfigResponse, SetUserAgentConfigResult, SetUserAgentConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置网络防护层规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetNetProtectionRulesResponse SetNetProtectionRules(SetNetProtectionRulesRequest request) {
+            return  new SetNetProtectionRulesExecutor().Client(this).Execute<SetNetProtectionRulesResponse, SetNetProtectionRulesResult, SetNetProtectionRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置网络防护层规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetNetProtectionRulesResponse> SetNetProtectionRules(SetNetProtectionRulesRequest request) {
+            return await new SetNetProtectionRulesExecutor().Client(this).Execute<SetNetProtectionRulesResponse, SetNetProtectionRulesResult, SetNetProtectionRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置直播域名回源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetLiveDomainBackSourceResponse SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
+            return  new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置直播域名回源信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetLiveDomainBackSourceResponse> SetLiveDomainBackSource(SetLiveDomainBackSourceRequest request) {
+            return await new SetLiveDomainBackSourceExecutor().Client(this).Execute<SetLiveDomainBackSourceResponse, SetLiveDomainBackSourceResult, SetLiveDomainBackSourceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置协议跟随回源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetFollowSourceProtocolResponse SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
+            return  new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置协议跟随回源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetFollowSourceProtocolResponse> SetFollowSourceProtocol(SetFollowSourceProtocolRequest request) {
+            return await new SetFollowSourceProtocolExecutor().Client(this).Execute<SetFollowSourceProtocolResponse, SetFollowSourceProtocolResult, SetFollowSourceProtocolRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置推流中断超时时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetPublishNormalTimeoutResponse SetPublishNormalTimeout(SetPublishNormalTimeoutRequest request) {
+            return  new SetPublishNormalTimeoutExecutor().Client(this).Execute<SetPublishNormalTimeoutResponse, SetPublishNormalTimeoutResult, SetPublishNormalTimeoutRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置推流中断超时时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetPublishNormalTimeoutResponse> SetPublishNormalTimeout(SetPublishNormalTimeoutRequest request) {
+            return await new SetPublishNormalTimeoutExecutor().Client(this).Execute<SetPublishNormalTimeoutResponse, SetPublishNormalTimeoutResult, SetPublishNormalTimeoutRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看证书列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetSslCertListResponse GetSslCertList(GetSslCertListRequest request) {
+            return  new GetSslCertListExecutor().Client(this).Execute<GetSslCertListResponse, GetSslCertListResult, GetSslCertListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看证书列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetSslCertListResponse> GetSslCertList(GetSslCertListRequest request) {
+            return await new GetSslCertListExecutor().Client(this).Execute<GetSslCertListResponse, GetSslCertListResult, GetSslCertListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建点播加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDomainResponse CreateDomain(CreateDomainRequest request) {
+            return  new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建点播加速域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest request) {
+            return await new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名配置信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainConfigResponse QueryDomainConfig(QueryDomainConfigRequest request) {
+            return  new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名配置信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainConfigResponse> QueryDomainConfig(QueryDomainConfigRequest request) {
+            return await new QueryDomainConfigExecutor().Client(this).Execute<QueryDomainConfigResponse, QueryDomainConfigResult, QueryDomainConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置视频拖拽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetVideoDraftResponse SetVideoDraft(SetVideoDraftRequest request) {
+            return  new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置视频拖拽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetVideoDraftResponse> SetVideoDraft(SetVideoDraftRequest request) {
+            return await new SetVideoDraftExecutor().Client(this).Execute<SetVideoDraftResponse, SetVideoDraftResult, SetVideoDraftRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  绑定推流域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BindPublishDomainResponse BindPublishDomain(BindPublishDomainRequest request) {
+            return  new BindPublishDomainExecutor().Client(this).Execute<BindPublishDomainResponse, BindPublishDomainResult, BindPublishDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  绑定推流域名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BindPublishDomainResponse> BindPublishDomain(BindPublishDomainRequest request) {
+            return await new BindPublishDomainExecutor().Client(this).Execute<BindPublishDomainResponse, BindPublishDomainResult, BindPublishDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询CC 防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryCCProtectSwitchResponse QueryCCProtectSwitch(QueryCCProtectSwitchRequest request) {
+            return  new QueryCCProtectSwitchExecutor().Client(this).Execute<QueryCCProtectSwitchResponse, QueryCCProtectSwitchResult, QueryCCProtectSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询CC 防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryCCProtectSwitchResponse> QueryCCProtectSwitch(QueryCCProtectSwitchRequest request) {
+            return await new QueryCCProtectSwitchExecutor().Client(this).Execute<QueryCCProtectSwitchResponse, QueryCCProtectSwitchResult, QueryCCProtectSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建直播域名V2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLiveDomainResponse CreateLiveDomain(CreateLiveDomainRequest request) {
+            return  new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建直播域名V2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLiveDomainResponse> CreateLiveDomain(CreateLiveDomainRequest request) {
+            return await new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置web防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateWebProtectSettingsResponse UpdateWebProtectSettings(UpdateWebProtectSettingsRequest request) {
+            return  new UpdateWebProtectSettingsExecutor().Client(this).Execute<UpdateWebProtectSettingsResponse, UpdateWebProtectSettingsResult, UpdateWebProtectSettingsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置web防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateWebProtectSettingsResponse> UpdateWebProtectSettings(UpdateWebProtectSettingsRequest request) {
+            return await new UpdateWebProtectSettingsExecutor().Client(this).Execute<UpdateWebProtectSettingsResponse, UpdateWebProtectSettingsResult, UpdateWebProtectSettingsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  泛域名共享缓存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateShareCacheResponse OperateShareCache(OperateShareCacheRequest request) {
+            return  new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  泛域名共享缓存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateShareCacheResponse> OperateShareCache(OperateShareCacheRequest request) {
+            return await new OperateShareCacheExecutor().Client(this).Execute<OperateShareCacheResponse, OperateShareCacheResult, OperateShareCacheRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用WAF白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableWafWhiteRulesResponse EnableWafWhiteRules(EnableWafWhiteRulesRequest request) {
+            return  new EnableWafWhiteRulesExecutor().Client(this).Execute<EnableWafWhiteRulesResponse, EnableWafWhiteRulesResult, EnableWafWhiteRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用WAF白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableWafWhiteRulesResponse> EnableWafWhiteRules(EnableWafWhiteRulesRequest request) {
+            return await new EnableWafWhiteRulesExecutor().Client(this).Execute<EnableWafWhiteRulesResponse, EnableWafWhiteRulesResult, EnableWafWhiteRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryMixStatisticsWithAreaDataResponse QueryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) {
+            return  new QueryMixStatisticsWithAreaDataExecutor().Client(this).Execute<QueryMixStatisticsWithAreaDataResponse, QueryMixStatisticsWithAreaDataResult, QueryMixStatisticsWithAreaDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分地区及运营商查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryMixStatisticsWithAreaDataResponse> QueryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) {
+            return await new QueryMixStatisticsWithAreaDataExecutor().Client(this).Execute<QueryMixStatisticsWithAreaDataResponse, QueryMixStatisticsWithAreaDataResult, QueryMixStatisticsWithAreaDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置web防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetWebProtectSwitchResponse SetWebProtectSwitch(SetWebProtectSwitchRequest request) {
+            return  new SetWebProtectSwitchExecutor().Client(this).Execute<SetWebProtectSwitchResponse, SetWebProtectSwitchResult, SetWebProtectSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置web防护开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetWebProtectSwitchResponse> SetWebProtectSwitch(SetWebProtectSwitchRequest request) {
+            return await new SetWebProtectSwitchExecutor().Client(this).Execute<SetWebProtectSwitchResponse, SetWebProtectSwitchResult, SetWebProtectSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启或关闭ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateLiveDomainIpBlackListResponse OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
+            return  new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启或关闭ip黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateLiveDomainIpBlackListResponse> OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
+            return await new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStatisticsDataResponse QueryStatisticsData(QueryStatisticsDataRequest request) {
+            return  new QueryStatisticsDataExecutor().Client(this).Execute<QueryStatisticsDataResponse, QueryStatisticsDataResult, QueryStatisticsDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询统计数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStatisticsDataResponse> QueryStatisticsData(QueryStatisticsDataRequest request) {
+            return await new QueryStatisticsDataExecutor().Client(this).Execute<QueryStatisticsDataResponse, QueryStatisticsDataResult, QueryStatisticsDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查找地域运营商列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryAreaIspListResponse QueryAreaIspList(QueryAreaIspListRequest request) {
+            return  new QueryAreaIspListExecutor().Client(this).Execute<QueryAreaIspListResponse, QueryAreaIspListResult, QueryAreaIspListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查找地域运营商列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryAreaIspListResponse> QueryAreaIspList(QueryAreaIspListRequest request) {
+            return await new QueryAreaIspListExecutor().Client(this).Execute<QueryAreaIspListResponse, QueryAreaIspListResult, QueryAreaIspListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除ccProtectRule
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCCProtectRuleResponse DeleteCCProtectRule(DeleteCCProtectRuleRequest request) {
+            return  new DeleteCCProtectRuleExecutor().Client(this).Execute<DeleteCCProtectRuleResponse, DeleteCCProtectRuleResult, DeleteCCProtectRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除ccProtectRule
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCCProtectRuleResponse> DeleteCCProtectRule(DeleteCCProtectRuleRequest request) {
+            return await new DeleteCCProtectRuleExecutor().Client(this).Execute<DeleteCCProtectRuleResponse, DeleteCCProtectRuleResult, DeleteCCProtectRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置WAF黑名单开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetWafBlackRuleSwitchResponse SetWafBlackRuleSwitch(SetWafBlackRuleSwitchRequest request) {
+            return  new SetWafBlackRuleSwitchExecutor().Client(this).Execute<SetWafBlackRuleSwitchResponse, SetWafBlackRuleSwitchResult, SetWafBlackRuleSwitchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置WAF黑名单开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetWafBlackRuleSwitchResponse> SetWafBlackRuleSwitch(SetWafBlackRuleSwitchRequest request) {
+            return await new SetWafBlackRuleSwitchExecutor().Client(this).Execute<SetWafBlackRuleSwitchResponse, SetWafBlackRuleSwitchResult, SetWafBlackRuleSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询默认http header头部参数列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDefaultHttpHeaderKeyResponse QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
+            return  new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询默认http header头部参数列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDefaultHttpHeaderKeyResponse> QueryDefaultHttpHeaderKey(QueryDefaultHttpHeaderKeyRequest request) {
+            return await new QueryDefaultHttpHeaderKeyExecutor().Client(this).Execute<QueryDefaultHttpHeaderKeyResponse, QueryDefaultHttpHeaderKeyResult, QueryDefaultHttpHeaderKeyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -993,6 +2152,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询总请求量与攻击请求量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public WafQueryPvResponse WafQueryPv(WafQueryPvRequest request) {
+            return  new WafQueryPvExecutor().Client(this).Execute<WafQueryPvResponse, WafQueryPvResult, WafQueryPvRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询总请求量与攻击请求量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<WafQueryPvResponse> WafQueryPv(WafQueryPvRequest request) {
+            return await new WafQueryPvExecutor().Client(this).Execute<WafQueryPvResponse, WafQueryPvResult, WafQueryPvRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询回源302跳转信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1031,25 +2209,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  分地区及运营商查询统计数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryStatisticsDataGroupByAreaResponse QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
-            return  new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  分地区及运营商查询统计数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsDataGroupByAreaResponse> QueryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) {
-            return await new QueryStatisticsDataGroupByAreaExecutor().Client(this).Execute<QueryStatisticsDataGroupByAreaResponse, QueryStatisticsDataGroupByAreaResult, QueryStatisticsDataGroupByAreaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除缓存规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1069,21 +2228,21 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置URL鉴权
+        ///  查询网络防护层规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetLiveDomainAccessKeyResponse SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
-            return  new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request);
+        public QueryNetProtectionRulesSwitchResponse QueryNetProtectionRulesSwitch(QueryNetProtectionRulesSwitchRequest request) {
+            return  new QueryNetProtectionRulesSwitchExecutor().Client(this).Execute<QueryNetProtectionRulesSwitchResponse, QueryNetProtectionRulesSwitchResult, QueryNetProtectionRulesSwitchRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置URL鉴权
+        ///  查询网络防护层规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetLiveDomainAccessKeyResponse> SetLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) {
-            return await new SetLiveDomainAccessKeyExecutor().Client(this).Execute<SetLiveDomainAccessKeyResponse, SetLiveDomainAccessKeyResult, SetLiveDomainAccessKeyRequest>(request).ConfigureAwait(false);
+        public async Task<QueryNetProtectionRulesSwitchResponse> QueryNetProtectionRulesSwitch(QueryNetProtectionRulesSwitchRequest request) {
+            return await new QueryNetProtectionRulesSwitchExecutor().Client(this).Execute<QueryNetProtectionRulesSwitchResponse, QueryNetProtectionRulesSwitchResult, QueryNetProtectionRulesSwitchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1126,44 +2285,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除禁播流
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteForbiddenStreamResponse DeleteForbiddenStream(DeleteForbiddenStreamRequest request) {
-            return  new DeleteForbiddenStreamExecutor().Client(this).Execute<DeleteForbiddenStreamResponse, DeleteForbiddenStreamResult, DeleteForbiddenStreamRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除禁播流
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteForbiddenStreamResponse> DeleteForbiddenStream(DeleteForbiddenStreamRequest request) {
-            return await new DeleteForbiddenStreamExecutor().Client(this).Execute<DeleteForbiddenStreamResponse, DeleteForbiddenStreamResult, DeleteForbiddenStreamRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据taskIds查询刷新预热任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryRefreshTaskByIdsResponse QueryRefreshTaskByIds(QueryRefreshTaskByIdsRequest request) {
-            return  new QueryRefreshTaskByIdsExecutor().Client(this).Execute<QueryRefreshTaskByIdsResponse, QueryRefreshTaskByIdsResult, QueryRefreshTaskByIdsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据taskIds查询刷新预热任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryRefreshTaskByIdsResponse> QueryRefreshTaskByIds(QueryRefreshTaskByIdsRequest request) {
-            return await new QueryRefreshTaskByIdsExecutor().Client(this).Execute<QueryRefreshTaskByIdsResponse, QueryRefreshTaskByIdsResult, QueryRefreshTaskByIdsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询协议跟随回源
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1179,44 +2300,6 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryFollowSourceProtocolResponse> QueryFollowSourceProtocol(QueryFollowSourceProtocolRequest request) {
             return await new QueryFollowSourceProtocolExecutor().Client(this).Execute<QueryFollowSourceProtocolResponse, QueryFollowSourceProtocolResult, QueryFollowSourceProtocolRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询统计数据并进行汇总加和
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryStatisticsDataGroupSumResponse QueryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) {
-            return  new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询统计数据并进行汇总加和
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsDataGroupSumResponse> QueryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) {
-            return await new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加httpHeader
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetHttpHeaderResponse SetHttpHeader(SetHttpHeaderRequest request) {
-            return  new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加httpHeader
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetHttpHeaderResponse> SetHttpHeader(SetHttpHeaderRequest request) {
-            return await new SetHttpHeaderExecutor().Client(this).Execute<SetHttpHeaderResponse, SetHttpHeaderResult, SetHttpHeaderRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1278,78 +2361,59 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询统计数据
+        ///  查询关联域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryLiveStatisticsDataResponse QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
-            return  new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request);
+        public DescribebindedDomainsResponse DescribebindedDomains(DescribebindedDomainsRequest request) {
+            return  new DescribebindedDomainsExecutor().Client(this).Execute<DescribebindedDomainsResponse, DescribebindedDomainsResult, DescribebindedDomainsRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询统计数据
+        ///  查询关联域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryLiveStatisticsDataResponse> QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
-            return await new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request).ConfigureAwait(false);
+        public async Task<DescribebindedDomainsResponse> DescribebindedDomains(DescribebindedDomainsRequest request) {
+            return await new DescribebindedDomainsExecutor().Client(this).Execute<DescribebindedDomainsResponse, DescribebindedDomainsResult, DescribebindedDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量域名查询日志
+        ///  查询WAF总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryDomainsLogResponse QueryDomainsLog(QueryDomainsLogRequest request) {
-            return  new QueryDomainsLogExecutor().Client(this).Execute<QueryDomainsLogResponse, QueryDomainsLogResult, QueryDomainsLogRequest>(request);
+        public QueryWafSwitchResponse QueryWafSwitch(QueryWafSwitchRequest request) {
+            return  new QueryWafSwitchExecutor().Client(this).Execute<QueryWafSwitchResponse, QueryWafSwitchResult, QueryWafSwitchRequest>(request);
         }
 #else
         /// <summary>
-        ///  批量域名查询日志
+        ///  查询WAF总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryDomainsLogResponse> QueryDomainsLog(QueryDomainsLogRequest request) {
-            return await new QueryDomainsLogExecutor().Client(this).Execute<QueryDomainsLogResponse, QueryDomainsLogResult, QueryDomainsLogRequest>(request).ConfigureAwait(false);
+        public async Task<QueryWafSwitchResponse> QueryWafSwitch(QueryWafSwitchRequest request) {
+            return await new QueryWafSwitchExecutor().Client(this).Execute<QueryWafSwitchResponse, QueryWafSwitchResult, QueryWafSwitchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置域名refer
+        ///  查询全部推流域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetReferResponse SetRefer(SetReferRequest request) {
-            return  new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request);
+        public DescribePublishDomainsResponse DescribePublishDomains(DescribePublishDomainsRequest request) {
+            return  new DescribePublishDomainsExecutor().Client(this).Execute<DescribePublishDomainsResponse, DescribePublishDomainsResult, DescribePublishDomainsRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置域名refer
+        ///  查询全部推流域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetReferResponse> SetRefer(SetReferRequest request) {
-            return await new SetReferExecutor().Client(this).Execute<SetReferResponse, SetReferResult, SetReferRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询直播域名详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryLiveDomainDetailResponse QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
-            return  new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询直播域名详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryLiveDomainDetailResponse> QueryLiveDomainDetail(QueryLiveDomainDetailRequest request) {
-            return await new QueryLiveDomainDetailExecutor().Client(this).Execute<QueryLiveDomainDetailResponse, QueryLiveDomainDetailResult, QueryLiveDomainDetailRequest>(request).ConfigureAwait(false);
+        public async Task<DescribePublishDomainsResponse> DescribePublishDomains(DescribePublishDomainsRequest request) {
+            return await new DescribePublishDomainsExecutor().Client(this).Execute<DescribePublishDomainsResponse, DescribePublishDomainsResult, DescribePublishDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1373,40 +2437,21 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建直播预热任务
+        ///  查询网络防护层规则接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateLiveDomainPrefecthTaskResponse CreateLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) {
-            return  new CreateLiveDomainPrefecthTaskExecutor().Client(this).Execute<CreateLiveDomainPrefecthTaskResponse, CreateLiveDomainPrefecthTaskResult, CreateLiveDomainPrefecthTaskRequest>(request);
+        public QueryNetProtectionRulesResponse QueryNetProtectionRules(QueryNetProtectionRulesRequest request) {
+            return  new QueryNetProtectionRulesExecutor().Client(this).Execute<QueryNetProtectionRulesResponse, QueryNetProtectionRulesResult, QueryNetProtectionRulesRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建直播预热任务
+        ///  查询网络防护层规则接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateLiveDomainPrefecthTaskResponse> CreateLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) {
-            return await new CreateLiveDomainPrefecthTaskExecutor().Client(this).Execute<CreateLiveDomainPrefecthTaskResponse, CreateLiveDomainPrefecthTaskResult, CreateLiveDomainPrefecthTaskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询TOP IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryStatisticsTopIpResponse QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
-            return  new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询TOP IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryStatisticsTopIpResponse> QueryStatisticsTopIp(QueryStatisticsTopIpRequest request) {
-            return await new QueryStatisticsTopIpExecutor().Client(this).Execute<QueryStatisticsTopIpResponse, QueryStatisticsTopIpResult, QueryStatisticsTopIpRequest>(request).ConfigureAwait(false);
+        public async Task<QueryNetProtectionRulesResponse> QueryNetProtectionRules(QueryNetProtectionRulesRequest request) {
+            return await new QueryNetProtectionRulesExecutor().Client(this).Execute<QueryNetProtectionRulesResponse, QueryNetProtectionRulesResult, QueryNetProtectionRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1430,21 +2475,78 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  停止源站监控
+        ///  DDOS攻击报表接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public StopMonitorResponse StopMonitor(StopMonitorRequest request) {
-            return  new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request);
+        public QueryDdosGraphResponse QueryDdosGraph(QueryDdosGraphRequest request) {
+            return  new QueryDdosGraphExecutor().Client(this).Execute<QueryDdosGraphResponse, QueryDdosGraphResult, QueryDdosGraphRequest>(request);
         }
 #else
         /// <summary>
-        ///  停止源站监控
+        ///  DDOS攻击报表接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<StopMonitorResponse> StopMonitor(StopMonitorRequest request) {
-            return await new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request).ConfigureAwait(false);
+        public async Task<QueryDdosGraphResponse> QueryDdosGraph(QueryDdosGraphRequest request) {
+            return await new QueryDdosGraphExecutor().Client(this).Execute<QueryDdosGraphResponse, QueryDdosGraphResult, QueryDdosGraphRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除WAF黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteWafBlackRulesResponse DeleteWafBlackRules(DeleteWafBlackRulesRequest request) {
+            return  new DeleteWafBlackRulesExecutor().Client(this).Execute<DeleteWafBlackRulesResponse, DeleteWafBlackRulesResult, DeleteWafBlackRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除WAF黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteWafBlackRulesResponse> DeleteWafBlackRules(DeleteWafBlackRulesRequest request) {
+            return await new DeleteWafBlackRulesExecutor().Client(this).Execute<DeleteWafBlackRulesResponse, DeleteWafBlackRulesResult, DeleteWafBlackRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改指定的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateWafBlackRuleResponse UpdateWafBlackRule(UpdateWafBlackRuleRequest request) {
+            return  new UpdateWafBlackRuleExecutor().Client(this).Execute<UpdateWafBlackRuleResponse, UpdateWafBlackRuleResult, UpdateWafBlackRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改指定的黑名单规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateWafBlackRuleResponse> UpdateWafBlackRule(UpdateWafBlackRuleRequest request) {
+            return await new UpdateWafBlackRuleExecutor().Client(this).Execute<UpdateWafBlackRuleResponse, UpdateWafBlackRuleResult, UpdateWafBlackRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启用WAF黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableWafBlackRulesResponse EnableWafBlackRules(EnableWafBlackRulesRequest request) {
+            return  new EnableWafBlackRulesExecutor().Client(this).Execute<EnableWafBlackRulesResponse, EnableWafBlackRulesResult, EnableWafBlackRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启用WAF黑名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableWafBlackRulesResponse> EnableWafBlackRules(EnableWafBlackRulesRequest request) {
+            return await new EnableWafBlackRulesExecutor().Client(this).Execute<EnableWafBlackRulesResponse, EnableWafBlackRulesResult, EnableWafBlackRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1468,6 +2570,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  禁用CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableCCProtectRuleResponse DisableCCProtectRule(DisableCCProtectRuleRequest request) {
+            return  new DisableCCProtectRuleExecutor().Client(this).Execute<DisableCCProtectRuleResponse, DisableCCProtectRuleResult, DisableCCProtectRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  禁用CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableCCProtectRuleResponse> DisableCCProtectRule(DisableCCProtectRuleRequest request) {
+            return await new DisableCCProtectRuleExecutor().Client(this).Execute<DisableCCProtectRuleResponse, DisableCCProtectRuleResult, DisableCCProtectRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建刷新预热回调任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1487,21 +2608,21 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询http header头
+        ///  设置转推域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryHttpHeaderResponse QueryHttpHeader(QueryHttpHeaderRequest request) {
-            return  new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request);
+        public ModifyLiveDomainForwardCustomVhostResponse ModifyLiveDomainForwardCustomVhost(ModifyLiveDomainForwardCustomVhostRequest request) {
+            return  new ModifyLiveDomainForwardCustomVhostExecutor().Client(this).Execute<ModifyLiveDomainForwardCustomVhostResponse, ModifyLiveDomainForwardCustomVhostResult, ModifyLiveDomainForwardCustomVhostRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询http header头
+        ///  设置转推域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryHttpHeaderResponse> QueryHttpHeader(QueryHttpHeaderRequest request) {
-            return await new QueryHttpHeaderExecutor().Client(this).Execute<QueryHttpHeaderResponse, QueryHttpHeaderResult, QueryHttpHeaderRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyLiveDomainForwardCustomVhostResponse> ModifyLiveDomainForwardCustomVhost(ModifyLiveDomainForwardCustomVhostRequest request) {
+            return await new ModifyLiveDomainForwardCustomVhostExecutor().Client(this).Execute<ModifyLiveDomainForwardCustomVhostResponse, ModifyLiveDomainForwardCustomVhostResult, ModifyLiveDomainForwardCustomVhostRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1525,40 +2646,21 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建刷新预热回调任务
+        ///  设置转推鉴权信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateRefreshTaskForCallbackV2Response CreateRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) {
-            return  new CreateRefreshTaskForCallbackV2Executor().Client(this).Execute<CreateRefreshTaskForCallbackV2Response, CreateRefreshTaskForCallbackV2Result, CreateRefreshTaskForCallbackV2Request>(request);
+        public SetForwardAuthenticationResponse SetForwardAuthentication(SetForwardAuthenticationRequest request) {
+            return  new SetForwardAuthenticationExecutor().Client(this).Execute<SetForwardAuthenticationResponse, SetForwardAuthenticationResult, SetForwardAuthenticationRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建刷新预热回调任务
+        ///  设置转推鉴权信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateRefreshTaskForCallbackV2Response> CreateRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) {
-            return await new CreateRefreshTaskForCallbackV2Executor().Client(this).Execute<CreateRefreshTaskForCallbackV2Response, CreateRefreshTaskForCallbackV2Result, CreateRefreshTaskForCallbackV2Request>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询直播预热任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryLivePrefetchTaskResponse QueryLivePrefetchTask(QueryLivePrefetchTaskRequest request) {
-            return  new QueryLivePrefetchTaskExecutor().Client(this).Execute<QueryLivePrefetchTaskResponse, QueryLivePrefetchTaskResult, QueryLivePrefetchTaskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询直播预热任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryLivePrefetchTaskResponse> QueryLivePrefetchTask(QueryLivePrefetchTaskRequest request) {
-            return await new QueryLivePrefetchTaskExecutor().Client(this).Execute<QueryLivePrefetchTaskResponse, QueryLivePrefetchTaskResult, QueryLivePrefetchTaskRequest>(request).ConfigureAwait(false);
+        public async Task<SetForwardAuthenticationResponse> SetForwardAuthentication(SetForwardAuthenticationRequest request) {
+            return await new SetForwardAuthenticationExecutor().Client(this).Execute<SetForwardAuthenticationResponse, SetForwardAuthenticationResult, SetForwardAuthenticationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1578,6 +2680,44 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryLiveTrafficGroupSumResponse> QueryLiveTrafficGroupSum(QueryLiveTrafficGroupSumRequest request) {
             return await new QueryLiveTrafficGroupSumExecutor().Client(this).Execute<QueryLiveTrafficGroupSumResponse, QueryLiveTrafficGroupSumResult, QueryLiveTrafficGroupSumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除WAF白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteWafWhiteRulesResponse DeleteWafWhiteRules(DeleteWafWhiteRulesRequest request) {
+            return  new DeleteWafWhiteRulesExecutor().Client(this).Execute<DeleteWafWhiteRulesResponse, DeleteWafWhiteRulesResult, DeleteWafWhiteRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除WAF白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteWafWhiteRulesResponse> DeleteWafWhiteRules(DeleteWafWhiteRulesRequest request) {
+            return await new DeleteWafWhiteRulesExecutor().Client(this).Execute<DeleteWafWhiteRulesResponse, DeleteWafWhiteRulesResult, DeleteWafWhiteRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCCProtectRuleResponse UpdateCCProtectRule(UpdateCCProtectRuleRequest request) {
+            return  new UpdateCCProtectRuleExecutor().Client(this).Execute<UpdateCCProtectRuleResponse, UpdateCCProtectRuleResult, UpdateCCProtectRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改CC防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCCProtectRuleResponse> UpdateCCProtectRule(UpdateCCProtectRuleRequest request) {
+            return await new UpdateCCProtectRuleExecutor().Client(this).Execute<UpdateCCProtectRuleResponse, UpdateCCProtectRuleResult, UpdateCCProtectRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1639,40 +2779,40 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置http协议
+        ///  设置WAF总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetHttpTypeResponse SetHttpType(SetHttpTypeRequest request) {
-            return  new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
+        public SetWafSwitchResponse SetWafSwitch(SetWafSwitchRequest request) {
+            return  new SetWafSwitchExecutor().Client(this).Execute<SetWafSwitchResponse, SetWafSwitchResult, SetWafSwitchRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置http协议
+        ///  设置WAF总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
-            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request).ConfigureAwait(false);
+        public async Task<SetWafSwitchResponse> SetWafSwitch(SetWafSwitchRequest request) {
+            return await new SetWafSwitchExecutor().Client(this).Execute<SetWafSwitchResponse, SetWafSwitchResult, SetWafSwitchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询日志
+        ///  设置推流中断通知方式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryDomainLogResponse QueryDomainLog(QueryDomainLogRequest request) {
-            return  new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request);
+        public SetStreamNotifyInfoResponse SetStreamNotifyInfo(SetStreamNotifyInfoRequest request) {
+            return  new SetStreamNotifyInfoExecutor().Client(this).Execute<SetStreamNotifyInfoResponse, SetStreamNotifyInfoResult, SetStreamNotifyInfoRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询日志
+        ///  设置推流中断通知方式
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryDomainLogResponse> QueryDomainLog(QueryDomainLogRequest request) {
-            return await new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request).ConfigureAwait(false);
+        public async Task<SetStreamNotifyInfoResponse> SetStreamNotifyInfo(SetStreamNotifyInfoRequest request) {
+            return await new SetStreamNotifyInfoExecutor().Client(this).Execute<SetStreamNotifyInfoResponse, SetStreamNotifyInfoResult, SetStreamNotifyInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

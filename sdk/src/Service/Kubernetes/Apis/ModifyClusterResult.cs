@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  修改集群的 名称 和 描述。
+    ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
     /// </summary>
     public class ModifyClusterResult : JdcloudResult
     {

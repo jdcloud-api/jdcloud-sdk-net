@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,12 +31,13 @@ using JDCloudSDK.Core.Service;
 using JDCloudSDK.Kubernetes.Model;
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  查询节点组列表
+    ///  查询工作节点组列表
     /// </summary>
     public class DescribeNodeGroupsRequest : JdcloudRequest
     {
@@ -54,10 +55,10 @@ namespace  JDCloudSDK.Kubernetes.Apis
         public List<JDCloudSDK.Kubernetes.Model.TagFilter> Tags{ get; set; }
 
         ///<summary>
-        /// name - 节点组名称，模糊匹配，支持单个      
-        /// id - 节点组 id，支持多个     
-        /// clusterId - 根据clusterId查询        
-        /// clusterName - 根据名称查询 cluster             
+        /// name - 节点组名称，模糊匹配，支持单个
+        /// id - 节点组 id，支持多个
+        /// clusterId - 根据 clusterId 查询
+        /// clusterName - 根据 cluster 名称查询
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
@@ -67,6 +68,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

@@ -37,5 +37,9 @@ namespace  JDCloudSDK.Kms.Apis
     /// </summary>
     public class CreateSecretResult : JdcloudResult
     {
+        ///<summary>
+        /// secretId
+        ///</summary>
+        public   string SecretId{ get; set; }
     }
 }

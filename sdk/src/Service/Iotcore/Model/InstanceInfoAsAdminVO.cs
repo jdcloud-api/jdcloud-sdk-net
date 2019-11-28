@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Iotcore.Model
 {
@@ -96,7 +97,8 @@ namespace JDCloudSDK.Iotcore.Model
         ///<summary>
         /// IoT Hub实例所属Region编号
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// IoT Hub实例所属Region名称
         ///</summary>
@@ -143,6 +145,7 @@ namespace JDCloudSDK.Iotcore.Model
         ///   1-IOTHUB_RUNNING
         ///   2-IOTHUB_SUSPEND
         ///   3-IOTHUB_TO_BE_DELETED
+        ///   4-IOTHUB_UPDATING
         ///   11-CREATE_PARAMETER_GROUP_SUCCESS
         ///   12-CREATE_PARAMETER_GROUP_FAIL
         ///   13-CREATE_AGENT_SUCCESS

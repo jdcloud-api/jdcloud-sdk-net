@@ -46,6 +46,10 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string App{ get; set; }
         ///<summary>
+        /// 封禁的IP
+        ///</summary>
+        public string PublishIp{ get; set; }
+        ///<summary>
         /// 禁播类型:forever永不禁播limit限时禁播
         ///</summary>
         public string ForbiddenType{ get; set; }

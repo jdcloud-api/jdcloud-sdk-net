@@ -125,5 +125,13 @@ namespace JDCloudSDK.Billing.Model
         /// 退款单号
         ///</summary>
         public string RefundNo{ get; set; }
+        ///<summary>
+        /// 优惠后金额
+        ///</summary>
+        public double? ActualFee{ get; set; }
+        ///<summary>
+        /// 规格名称
+        ///</summary>
+        public string FormulaName{ get; set; }
     }
 }

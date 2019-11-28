@@ -65,5 +65,13 @@ namespace JDCloudSDK.Iotcore.Model
         /// 创建时间
         ///</summary>
         public long? CreatedTime{ get; set; }
+        ///<summary>
+        /// 记录ID
+        ///</summary>
+        public string MsgId{ get; set; }
+        ///<summary>
+        /// 失败原因
+        ///</summary>
+        public string Message{ get; set; }
     }
 }

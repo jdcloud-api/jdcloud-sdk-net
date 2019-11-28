@@ -29,12 +29,13 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  修改集群的 名称 和 描述。
+    ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
     /// </summary>
     public class ModifyClusterRequest : JdcloudRequest
     {
@@ -43,7 +44,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 集群 name 和 description 必须要指定一个
+        /// 集群描述
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
@@ -51,7 +52,8 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 集群 ID
         ///Required:true

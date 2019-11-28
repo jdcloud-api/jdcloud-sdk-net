@@ -33,12 +33,16 @@ namespace JDCloudSDK.Kms.Client
 {
 
     /// <summary>
-    ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
+    ///  -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+        /// -   修改非对称密钥配置，包括key的名称、用途等。
+        /// 
     /// </summary>
     public class UpdateKeyDescriptionExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等接口的Http 请求方法
+        ///  -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+        /// -   修改非对称密钥配置，包括key的名称、用途等。
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +51,9 @@ namespace JDCloudSDK.Kms.Client
             }
         }
         /// <summary>
-        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等接口的Http资源请求路径
+        ///  -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+        /// -   修改非对称密钥配置，包括key的名称、用途等。
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

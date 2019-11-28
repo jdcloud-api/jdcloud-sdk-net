@@ -28,13 +28,12 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
-using JDCloudSDK.Kubernetes.Model;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
 
     /// <summary>
-    ///  描述节点组配置信息
+    ///  描述工作节点组配置信息
     /// </summary>
     public class NodeGroupSpec
     {
@@ -50,25 +49,29 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// Node的信息
+        /// 工作节点组的信息
         ///Required:true
         ///</summary>
         [Required]
         public NodeConfigSpec NodeConfig{ get; set; }
         ///<summary>
-        /// nodeGroup初始化大小，至少为1个
+        /// 工作节点组的 az，必须为集群az的子集，默认为集群az
+        ///</summary>
+        public List<string> Azs{ get; set; }
+        ///<summary>
+        /// 工作节点组初始化大小，至少为1个
         ///Required:true
         ///</summary>
         [Required]
         public int InitialNodeCount{ get; set; }
         ///<summary>
-        /// k8s运行的vpc
+        /// 工作节点组运行的vpc
         ///Required:true
         ///</summary>
         [Required]
         public string VpcId{ get; set; }
         ///<summary>
-        /// k8s的node的cidr
+        /// 工作节点组的cidr
         ///</summary>
         public string NodeCidr{ get; set; }
         ///<summary>

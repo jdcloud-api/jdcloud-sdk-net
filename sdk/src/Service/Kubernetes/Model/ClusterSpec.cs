@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
-using JDCloudSDK.Kubernetes.Model;
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
@@ -60,7 +60,8 @@ namespace JDCloudSDK.Kubernetes.Model
         ///<summary>
         /// kubernetes的版本,默认1.8
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
         ///<summary>
         /// 集群所在的az
         ///Required:true

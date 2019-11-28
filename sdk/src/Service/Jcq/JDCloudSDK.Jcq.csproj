@@ -11,7 +11,7 @@
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageProjectUrl>https://docs.jdcloud.com/cn/sdk/dotnet</PackageProjectUrl>
-        <PackageIconUrl>https://www.jdcloud.com/static/img/favicon.ico</PackageIconUrl>
+        <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/jdcloud-api</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>jcq相关接口</PackageReleaseNotes>
@@ -29,6 +29,9 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="../../../icon/icon.png" Pack="true" PackagePath="\"/>
     </ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Common\JDCloudSDK.Common.csproj" />

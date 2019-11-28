@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Nativecontainer.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Nativecontainer.Apis
 {
@@ -53,7 +54,7 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///         ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
         ///         ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
         ///         ///   - 正则表达式
-        ///         ///     - &#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
+        ///         ///     - ^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$
         ///         /// - 网络配置
         ///         ///   - 指定主网卡配置信息
         ///         ///     - 必须指定vpcId、subnetId、securityGroupIds
@@ -119,6 +120,7 @@ namespace  JDCloudSDK.Nativecontainer.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

@@ -37,5 +37,9 @@ namespace  JDCloudSDK.Kms.Apis
     /// </summary>
     public class CreateKeyResult : JdcloudResult
     {
+        ///<summary>
+        /// 创建的密钥ID
+        ///</summary>
+        public   string KeyId{ get; set; }
     }
 }

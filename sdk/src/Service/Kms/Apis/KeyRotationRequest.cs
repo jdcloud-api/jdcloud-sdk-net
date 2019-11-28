@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Kms.Apis
 {
 
     /// <summary>
-    ///  立即轮换密钥，自动轮换周期顺延
+    ///  立即轮换密钥，自动轮换周期顺延-支持对称密钥
     /// </summary>
     public class KeyRotationRequest : JdcloudRequest
     {

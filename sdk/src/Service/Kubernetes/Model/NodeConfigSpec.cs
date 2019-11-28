@@ -28,13 +28,13 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
-using JDCloudSDK.Kubernetes.Model;
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Kubernetes.Model
 {
 
     /// <summary>
-    ///  描述节点配置信息
+    ///  工作节点配置信息
     /// </summary>
     public class NodeConfigSpec
     {
@@ -46,23 +46,24 @@ namespace JDCloudSDK.Kubernetes.Model
         [Required]
         public string InstanceType{ get; set; }
         ///<summary>
-        /// 镜像信息
+        /// 工作节点版本，不指定则使用默认版本
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
         ///<summary>
-        /// 云盘系统盘的大小  单位(GB)
-        ///Required:true
+        /// 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
         ///</summary>
-        [Required]
-        public int SystemDiskSize{ get; set; }
+        public string Password{ get; set; }
         ///<summary>
-        /// 云盘系统盘的大小[ssd,premium-hdd]
-        ///Required:true
+        /// 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
         ///</summary>
-        [Required]
-        public string SystemDiskType{ get; set; }
+        public List<string> KeyNames{ get; set; }
         ///<summary>
-        /// Node的信息
+        /// 云主机系统盘配置信息
+        ///</summary>
+        public DiskSpec SystemDisk{ get; set; }
+        ///<summary>
+        /// 工作节点组标签，最多支持 10 个
         ///</summary>
         public List<LabelSpec> Labels{ get; set; }
     }

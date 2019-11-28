@@ -89,9 +89,9 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,7 +138,7 @@ namespace JDCloudSDK.Kubernetes.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  cluster 摘除 nodeGroup 并删除 nodeGroup
+        ///  集群摘除工作节点组并删除工作节点组
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 #else
         /// <summary>
-        ///  cluster 摘除 nodeGroup 并删除 nodeGroup
+        ///  集群摘除工作节点组并删除工作节点组
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -157,45 +157,7 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询节点版本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNodeVersionResponse DescribeNodeVersion(DescribeNodeVersionRequest request) {
-            return  new DescribeNodeVersionExecutor().Client(this).Execute<DescribeNodeVersionResponse, DescribeNodeVersionResult, DescribeNodeVersionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询节点版本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNodeVersionResponse> DescribeNodeVersion(DescribeNodeVersionRequest request) {
-            return await new DescribeNodeVersionExecutor().Client(this).Execute<DescribeNodeVersionResponse, DescribeNodeVersionResult, DescribeNodeVersionRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  回滚未升级完的节点组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RollbackNodeGroupUpgradeResponse RollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) {
-            return  new RollbackNodeGroupUpgradeExecutor().Client(this).Execute<RollbackNodeGroupUpgradeResponse, RollbackNodeGroupUpgradeResult, RollbackNodeGroupUpgradeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  回滚未升级完的节点组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RollbackNodeGroupUpgradeResponse> RollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) {
-            return await new RollbackNodeGroupUpgradeExecutor().Client(this).Execute<RollbackNodeGroupUpgradeResponse, RollbackNodeGroupUpgradeResult, RollbackNodeGroupUpgradeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询节点组列表
+        ///  查询工作节点组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -204,31 +166,12 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 #else
         /// <summary>
-        ///  查询节点组列表
+        ///  查询工作节点组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeNodeGroupsResponse> DescribeNodeGroups(DescribeNodeGroupsRequest request) {
             return await new DescribeNodeGroupsExecutor().Client(this).Execute<DescribeNodeGroupsResponse, DescribeNodeGroupsResult, DescribeNodeGroupsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  终止升级
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AbortUpgradeResponse AbortUpgrade(AbortUpgradeRequest request) {
-            return  new AbortUpgradeExecutor().Client(this).Execute<AbortUpgradeResponse, AbortUpgradeResult, AbortUpgradeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  终止升级
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AbortUpgradeResponse> AbortUpgrade(AbortUpgradeRequest request) {
-            return await new AbortUpgradeExecutor().Client(this).Execute<AbortUpgradeResponse, AbortUpgradeResult, AbortUpgradeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -252,8 +195,27 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建k8s的nodeGroup
-        /// 要求集群状态为running
+        ///  设置集群组件
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetAddonsResponse SetAddons(SetAddonsRequest request) {
+            return  new SetAddonsExecutor().Client(this).Execute<SetAddonsResponse, SetAddonsResult, SetAddonsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置集群组件
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetAddonsResponse> SetAddons(SetAddonsRequest request) {
+            return await new SetAddonsExecutor().Client(this).Execute<SetAddonsResponse, SetAddonsResult, SetAddonsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建工作节点组&lt;br&gt;
+        /// - 要求集群状态为running
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -263,33 +225,14 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 #else
         /// <summary>
-        ///  创建k8s的nodeGroup
-        /// 要求集群状态为running
+        ///  创建工作节点组&lt;br&gt;
+        /// - 要求集群状态为running
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<CreateNodeGroupResponse> CreateNodeGroup(CreateNodeGroupRequest request) {
             return await new CreateNodeGroupExecutor().Client(this).Execute<CreateNodeGroupResponse, CreateNodeGroupResult, CreateNodeGroupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询可升级的控制节点版本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUpgradableMasterVersionsResponse DescribeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) {
-            return  new DescribeUpgradableMasterVersionsExecutor().Client(this).Execute<DescribeUpgradableMasterVersionsResponse, DescribeUpgradableMasterVersionsResult, DescribeUpgradableMasterVersionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询可升级的控制节点版本
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUpgradableMasterVersionsResponse> DescribeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) {
-            return await new DescribeUpgradableMasterVersionsExecutor().Client(this).Execute<DescribeUpgradableMasterVersionsResponse, DescribeUpgradableMasterVersionsResult, DescribeUpgradableMasterVersionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -313,7 +256,7 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改节点组的 名称 和 描述
+        ///  修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -322,7 +265,7 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 #else
         /// <summary>
-        ///  修改节点组的 名称 和 描述
+        ///  修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -332,7 +275,7 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置用户自定义监控状态
+        ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -341,12 +284,240 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 #else
         /// <summary>
-        ///  设置用户自定义监控状态
+        ///  Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<SetUserMetricsResponse> SetUserMetrics(SetUserMetricsRequest request) {
             return await new SetUserMetricsExecutor().Client(this).Execute<SetUserMetricsResponse, SetUserMetricsResult, SetUserMetricsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  调整工作节点组实例数量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetNodeGroupSizeResponse SetNodeGroupSize(SetNodeGroupSizeRequest request) {
+            return  new SetNodeGroupSizeExecutor().Client(this).Execute<SetNodeGroupSizeResponse, SetNodeGroupSizeResult, SetNodeGroupSizeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  调整工作节点组实例数量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetNodeGroupSizeResponse> SetNodeGroupSize(SetNodeGroupSizeRequest request) {
+            return await new SetNodeGroupSizeExecutor().Client(this).Execute<SetNodeGroupSizeResponse, SetNodeGroupSizeResult, SetNodeGroupSizeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 kubernetes 集群服务配置信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeServerConfigResponse DescribeServerConfig(DescribeServerConfigRequest request) {
+            return  new DescribeServerConfigExecutor().Client(this).Execute<DescribeServerConfigResponse, DescribeServerConfigResult, DescribeServerConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 kubernetes 集群服务配置信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeServerConfigResponse> DescribeServerConfig(DescribeServerConfigRequest request) {
+            return await new DescribeServerConfigExecutor().Client(this).Execute<DescribeServerConfigResponse, DescribeServerConfigResult, DescribeServerConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  触发升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpgradeClusterResponse UpgradeCluster(UpgradeClusterRequest request) {
+            return  new UpgradeClusterExecutor().Client(this).Execute<UpgradeClusterResponse, UpgradeClusterResult, UpgradeClusterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  触发升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpgradeClusterResponse> UpgradeCluster(UpgradeClusterRequest request) {
+            return await new UpgradeClusterExecutor().Client(this).Execute<UpgradeClusterResponse, UpgradeClusterResult, UpgradeClusterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询版本信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeVersionsResponse DescribeVersions(DescribeVersionsRequest request) {
+            return  new DescribeVersionsExecutor().Client(this).Execute<DescribeVersionsResponse, DescribeVersionsResult, DescribeVersionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询版本信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeVersionsResponse> DescribeVersions(DescribeVersionsRequest request) {
+            return await new DescribeVersionsExecutor().Client(this).Execute<DescribeVersionsResponse, DescribeVersionsResult, DescribeVersionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置工作节点组的自动修复
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetAutoRepairResponse SetAutoRepair(SetAutoRepairRequest request) {
+            return  new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置工作节点组的自动修复
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetAutoRepairResponse> SetAutoRepair(SetAutoRepairRequest request) {
+            return await new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 kubernetes 集群配额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeQuotasResponse DescribeQuotas(DescribeQuotasRequest request) {
+            return  new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 kubernetes 集群配额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
+            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个工作节点组详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNodeGroupResponse DescribeNodeGroup(DescribeNodeGroupRequest request) {
+            return  new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个工作节点组详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNodeGroupResponse> DescribeNodeGroup(DescribeNodeGroupRequest request) {
+            return await new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询集群操作进度
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProgressResponse DescribeProgress(DescribeProgressRequest request) {
+            return  new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询集群操作进度
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProgressResponse> DescribeProgress(DescribeProgressRequest request) {
+            return await new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNodeVersionResponse DescribeNodeVersion(DescribeNodeVersionRequest request) {
+            return  new DescribeNodeVersionExecutor().Client(this).Execute<DescribeNodeVersionResponse, DescribeNodeVersionResult, DescribeNodeVersionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNodeVersionResponse> DescribeNodeVersion(DescribeNodeVersionRequest request) {
+            return await new DescribeNodeVersionExecutor().Client(this).Execute<DescribeNodeVersionResponse, DescribeNodeVersionResult, DescribeNodeVersionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  回滚未升级完的工作节点组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RollbackNodeGroupUpgradeResponse RollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) {
+            return  new RollbackNodeGroupUpgradeExecutor().Client(this).Execute<RollbackNodeGroupUpgradeResponse, RollbackNodeGroupUpgradeResult, RollbackNodeGroupUpgradeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  回滚未升级完的工作节点组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RollbackNodeGroupUpgradeResponse> RollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) {
+            return await new RollbackNodeGroupUpgradeExecutor().Client(this).Execute<RollbackNodeGroupUpgradeResponse, RollbackNodeGroupUpgradeResult, RollbackNodeGroupUpgradeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  终止升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AbortUpgradeResponse AbortUpgrade(AbortUpgradeRequest request) {
+            return  new AbortUpgradeExecutor().Client(this).Execute<AbortUpgradeResponse, AbortUpgradeResult, AbortUpgradeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  终止升级
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AbortUpgradeResponse> AbortUpgrade(AbortUpgradeRequest request) {
+            return await new AbortUpgradeExecutor().Client(this).Execute<AbortUpgradeResponse, AbortUpgradeResult, AbortUpgradeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可升级的控制节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUpgradableMasterVersionsResponse DescribeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) {
+            return  new DescribeUpgradableMasterVersionsExecutor().Client(this).Execute<DescribeUpgradableMasterVersionsResponse, DescribeUpgradableMasterVersionsResult, DescribeUpgradableMasterVersionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可升级的控制节点版本
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUpgradableMasterVersionsResponse> DescribeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) {
+            return await new DescribeUpgradableMasterVersionsExecutor().Client(this).Execute<DescribeUpgradableMasterVersionsResponse, DescribeUpgradableMasterVersionsResult, DescribeUpgradableMasterVersionsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -421,25 +592,6 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  调整节点组实例数量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetNodeGroupSizeResponse SetNodeGroupSize(SetNodeGroupSizeRequest request) {
-            return  new SetNodeGroupSizeExecutor().Client(this).Execute<SetNodeGroupSizeResponse, SetNodeGroupSizeResult, SetNodeGroupSizeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  调整节点组实例数量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetNodeGroupSizeResponse> SetNodeGroupSize(SetNodeGroupSizeRequest request) {
-            return await new SetNodeGroupSizeExecutor().Client(this).Execute<SetNodeGroupSizeResponse, SetNodeGroupSizeResult, SetNodeGroupSizeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询单个集群详情。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -459,26 +611,7 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询(k8s 集群)服务配置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeServerConfigResponse DescribeServerConfig(DescribeServerConfigRequest request) {
-            return  new DescribeServerConfigExecutor().Client(this).Execute<DescribeServerConfigResponse, DescribeServerConfigResult, DescribeServerConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询(k8s 集群)服务配置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeServerConfigResponse> DescribeServerConfig(DescribeServerConfigRequest request) {
-            return await new DescribeServerConfigExecutor().Client(this).Execute<DescribeServerConfigResponse, DescribeServerConfigResult, DescribeServerConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改集群的 名称 和 描述。
+        ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -487,88 +620,12 @@ namespace JDCloudSDK.Kubernetes.Client
         }
 #else
         /// <summary>
-        ///  修改集群的 名称 和 描述。
+        ///  修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyClusterResponse> ModifyCluster(ModifyClusterRequest request) {
             return await new ModifyClusterExecutor().Client(this).Execute<ModifyClusterResponse, ModifyClusterResult, ModifyClusterRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  触发升级
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpgradeClusterResponse UpgradeCluster(UpgradeClusterRequest request) {
-            return  new UpgradeClusterExecutor().Client(this).Execute<UpgradeClusterResponse, UpgradeClusterResult, UpgradeClusterRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  触发升级
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpgradeClusterResponse> UpgradeCluster(UpgradeClusterRequest request) {
-            return await new UpgradeClusterExecutor().Client(this).Execute<UpgradeClusterResponse, UpgradeClusterResult, UpgradeClusterRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询版本信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeVersionsResponse DescribeVersions(DescribeVersionsRequest request) {
-            return  new DescribeVersionsExecutor().Client(this).Execute<DescribeVersionsResponse, DescribeVersionsResult, DescribeVersionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询版本信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeVersionsResponse> DescribeVersions(DescribeVersionsRequest request) {
-            return await new DescribeVersionsExecutor().Client(this).Execute<DescribeVersionsResponse, DescribeVersionsResult, DescribeVersionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置节点组的自动修复
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetAutoRepairResponse SetAutoRepair(SetAutoRepairRequest request) {
-            return  new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置节点组的自动修复
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetAutoRepairResponse> SetAutoRepair(SetAutoRepairRequest request) {
-            return await new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询(k8s 集群)配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeQuotasResponse DescribeQuotas(DescribeQuotasRequest request) {
-            return  new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询(k8s 集群)配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest request) {
-            return await new DescribeQuotasExecutor().Client(this).Execute<DescribeQuotasResponse, DescribeQuotasResult, DescribeQuotasRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -588,44 +645,6 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest request) {
             return await new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个节点组详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNodeGroupResponse DescribeNodeGroup(DescribeNodeGroupRequest request) {
-            return  new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个节点组详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNodeGroupResponse> DescribeNodeGroup(DescribeNodeGroupRequest request) {
-            return await new DescribeNodeGroupExecutor().Client(this).Execute<DescribeNodeGroupResponse, DescribeNodeGroupResult, DescribeNodeGroupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询集群操作进度
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProgressResponse DescribeProgress(DescribeProgressRequest request) {
-            return  new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询集群操作进度
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProgressResponse> DescribeProgress(DescribeProgressRequest request) {
-            return await new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request).ConfigureAwait(false);
         }
 #endif
 

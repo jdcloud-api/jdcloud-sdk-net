@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
@@ -48,7 +49,8 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///<summary>
         /// 设备影子版本
         ///</summary>
-        public   int? Version{ get; set; }
+        [JsonProperty("version")]
+        public   int? VersionValue{ get; set; }
         ///<summary>
         /// 设备影子更新时间
         ///</summary>

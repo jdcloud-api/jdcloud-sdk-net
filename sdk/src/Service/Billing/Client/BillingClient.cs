@@ -89,9 +89,9 @@ namespace JDCloudSDK.Billing.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,25 @@ namespace JDCloudSDK.Billing.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  查询计费价格信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CalculateTotalPriceResponse CalculateTotalPrice(CalculateTotalPriceRequest request) {
+            return  new CalculateTotalPriceExecutor().Client(this).Execute<CalculateTotalPriceResponse, CalculateTotalPriceResult, CalculateTotalPriceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询计费价格信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CalculateTotalPriceResponse> CalculateTotalPrice(CalculateTotalPriceRequest request) {
+            return await new CalculateTotalPriceExecutor().Client(this).Execute<CalculateTotalPriceResponse, CalculateTotalPriceResult, CalculateTotalPriceRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  查询账单资源汇总数据

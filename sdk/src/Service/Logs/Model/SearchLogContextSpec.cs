@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Logs.Model
 {
@@ -38,24 +39,32 @@ namespace JDCloudSDK.Logs.Model
     {
 
         ///<summary>
-        /// 查询anchor，基于该值偏移进行上下文检索
+        /// 查询anchor,基于该值偏移进行上下文检索
+        ///Required:true
         ///</summary>
+        [Required]
         public List<object> Anchor{ get; set; }
         ///<summary>
-        /// 搜索方向， 默认both, 可取值: up，down, both
+        /// 搜索方向,默认both,可取值:up,down,both
         ///</summary>
         public string Direction{ get; set; }
         ///<summary>
-        /// 日志记录ID，系统日志必填
+        /// 日志记录ID
+        ///Required:true
         ///</summary>
+        [Required]
         public string Id{ get; set; }
         ///<summary>
         /// 查看上下文行数大小，最大支持200
+        ///Required:true
         ///</summary>
-        public string LineSize{ get; set; }
+        [Required]
+        public long LineSize{ get; set; }
         ///<summary>
         /// 查询日志时返回的时间戳
+        ///Required:true
         ///</summary>
-        public long? Time{ get; set; }
+        [Required]
+        public long Time{ get; set; }
     }
 }

@@ -45,7 +45,7 @@ namespace JDCloudSDK.Kms.Model
         [Required]
         public KeyDescCfg KeyDescCfg{ get; set; }
         ///<summary>
-        /// 密钥轮换配置
+        /// 对称密钥的轮换配置；非对称密钥的操作，不支持该配置
         ///Required:true
         ///</summary>
         [Required]

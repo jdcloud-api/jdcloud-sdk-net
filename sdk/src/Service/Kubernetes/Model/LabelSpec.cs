@@ -33,7 +33,7 @@ namespace JDCloudSDK.Kubernetes.Model
 {
 
     /// <summary>
-    ///  描述配置信息
+    ///  工作节点组标签
     /// </summary>
     public class LabelSpec
     {

@@ -89,13 +89,13 @@ namespace JDCloudSDK.Iotlink.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
-        private const string defaultEndpoint = "openapi.myiot.jdcloud.com";
+        private const string defaultEndpoint = "iotlink.jdcloud-api.com";
         private const string serviceName = "iotlink";
         private const string userAgent = userAgentPrefix + "/" + ClientVersion + " " + serviceName + "/" + apiVersion;
 

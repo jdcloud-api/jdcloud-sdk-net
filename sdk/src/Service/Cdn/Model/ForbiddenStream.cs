@@ -46,7 +46,11 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string App{ get; set; }
         ///<summary>
-        /// 禁播类型:forever永不禁播limit限时禁播
+        /// 禁播Ip
+        ///</summary>
+        public string PublishIp{ get; set; }
+        ///<summary>
+        /// 禁播类型:forever永不禁播limit限时禁播stop剔流
         ///</summary>
         public string ForbiddenType{ get; set; }
         ///<summary>
@@ -57,5 +61,13 @@ namespace JDCloudSDK.Cdn.Model
         /// 禁播类型说明
         ///</summary>
         public string ForbiddenTypeDesc{ get; set; }
+        ///<summary>
+        /// 开始禁播时间
+        ///</summary>
+        public string StartTime{ get; set; }
+        ///<summary>
+        /// 结束禁播时间
+        ///</summary>
+        public string EndTime{ get; set; }
     }
 }

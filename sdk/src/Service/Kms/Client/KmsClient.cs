@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD 密钥管理服务(Key Management Service) API
+ * 密钥管理服务
  * 基于硬件保护密钥的安全数据托管服务
  *
  * OpenAPI spec version: v1
@@ -39,7 +39,7 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Kms.Client
 {
     /// <summary>
-    ///  JDCLOUD 密钥管理服务(Key Management Service) API
+    ///  密钥管理服务
     ///  基于硬件保护密钥的安全数据托管服务
     ///  Kms Api 客户端
     ///</summary>
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Kms.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,25 @@ namespace JDCloudSDK.Kms.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  获取非对称密钥的公钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest request) {
+            return  new GetPublicKeyExecutor().Client(this).Execute<GetPublicKeyResponse, GetPublicKeyResult, GetPublicKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取非对称密钥的公钥
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetPublicKeyResponse> GetPublicKey(GetPublicKeyRequest request) {
+            return await new GetPublicKeyExecutor().Client(this).Execute<GetPublicKeyResponse, GetPublicKeyResult, GetPublicKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  获取密钥列表
@@ -233,7 +252,7 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  使用密钥对数据进行加密
+        ///  使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -242,7 +261,7 @@ namespace JDCloudSDK.Kms.Client
         }
 #else
         /// <summary>
-        ///  使用密钥对数据进行加密
+        ///  使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +385,9 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
+        ///  -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+        /// -   修改非对称密钥配置，包括key的名称、用途等。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,12 +396,33 @@ namespace JDCloudSDK.Kms.Client
         }
 #else
         /// <summary>
-        ///  修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
+        ///  -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+        /// -   修改非对称密钥配置，包括key的名称、用途等。
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<UpdateKeyDescriptionResponse> UpdateKeyDescription(UpdateKeyDescriptionRequest request) {
             return await new UpdateKeyDescriptionExecutor().Client(this).Execute<UpdateKeyDescriptionResponse, UpdateKeyDescriptionResult, UpdateKeyDescriptionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  使用非对称密钥的私钥签名,签名算法仅支持RSA_PKCS1_PADDING填充方式,最大签名数据长度为4K字节
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SignResponse Sign(SignRequest request) {
+            return  new SignExecutor().Client(this).Execute<SignResponse, SignResult, SignRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  使用非对称密钥的私钥签名,签名算法仅支持RSA_PKCS1_PADDING填充方式,最大签名数据长度为4K字节
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SignResponse> Sign(SignRequest request) {
+            return await new SignExecutor().Client(this).Execute<SignResponse, SignResult, SignRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -400,6 +442,25 @@ namespace JDCloudSDK.Kms.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecretVersionListResponse> DescribeSecretVersionList(DescribeSecretVersionListRequest request) {
             return await new DescribeSecretVersionListExecutor().Client(this).Execute<DescribeSecretVersionListResponse, DescribeSecretVersionListResult, DescribeSecretVersionListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  使用非对称密钥的公钥验证签名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ValidateResponse Validate(ValidateRequest request) {
+            return  new ValidateExecutor().Client(this).Execute<ValidateResponse, ValidateResult, ValidateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  使用非对称密钥的公钥验证签名
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ValidateResponse> Validate(ValidateRequest request) {
+            return await new ValidateExecutor().Client(this).Execute<ValidateResponse, ValidateResult, ValidateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -499,7 +560,7 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  立即轮换密钥，自动轮换周期顺延
+        ///  立即轮换密钥，自动轮换周期顺延-支持对称密钥
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -508,7 +569,7 @@ namespace JDCloudSDK.Kms.Client
         }
 #else
         /// <summary>
-        ///  立即轮换密钥，自动轮换周期顺延
+        ///  立即轮换密钥，自动轮换周期顺延-支持对称密钥
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -575,7 +636,7 @@ namespace JDCloudSDK.Kms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  使用密钥对数据进行解密
+        ///  使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -584,7 +645,7 @@ namespace JDCloudSDK.Kms.Client
         }
 #else
         /// <summary>
-        ///  使用密钥对数据进行解密
+        ///  使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

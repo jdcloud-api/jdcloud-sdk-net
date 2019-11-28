@@ -125,5 +125,9 @@ namespace JDCloudSDK.Billing.Model
         /// 欠费金额
         ///</summary>
         public double? ArrearFee{ get; set; }
+        ///<summary>
+        /// 标签明细
+        ///</summary>
+        public List<ResourceTagVo> TagDetails{ get; set; }
     }
 }

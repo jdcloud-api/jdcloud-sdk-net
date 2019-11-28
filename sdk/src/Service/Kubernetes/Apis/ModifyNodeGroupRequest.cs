@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,21 +29,22 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  修改节点组的 名称 和 描述
+    ///  修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
     /// </summary>
     public class ModifyNodeGroupRequest : JdcloudRequest
     {
         ///<summary>
-        /// 节点组名称
+        /// 工作节点组名称
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 集群 name 和 description 必须要指定一个
+        /// 工作节点组描述
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
@@ -51,9 +52,10 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 节点组 ID
+        /// 工作节点组 ID
         ///Required:true
         ///</summary>
         [Required]

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 直播域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  查询直播域名详情
+    ///  查询直播域名详情v1
     /// </summary>
     public class QueryLiveDomainDetailExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询直播域名详情接口的Http 请求方法
+        ///  查询直播域名详情v1接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +47,12 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  查询直播域名详情接口的Http资源请求路径
+        ///  查询直播域名详情v1接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/liveDomain/{domain}";
+            return "/liveDomains/{domain}";
             }
         }
     }

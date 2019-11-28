@@ -32,13 +32,13 @@ namespace JDCloudSDK.Kubernetes.Model
 {
 
     /// <summary>
-    ///  节点组进度
+    ///  工作节点组进度
     /// </summary>
     public class NodeGroupProgress
     {
 
         ///<summary>
-        /// 节点组 id
+        /// 工作节点组 id
         ///</summary>
         public string NodeGroupId{ get; set; }
         ///<summary>
@@ -46,11 +46,11 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public string Action{ get; set; }
         ///<summary>
-        /// 总node个数
+        /// 总工作节点个数
         ///</summary>
         public int? TotalCount{ get; set; }
         ///<summary>
-        /// 升级完成node个数
+        /// 升级完成工作节点个数
         ///</summary>
         public int? UpdatedCount{ get; set; }
     }

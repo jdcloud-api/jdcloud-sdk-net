@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -101,5 +101,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// OssSource
         ///</summary>
         public   string OssSource{ get; set; }
+        ///<summary>
+        /// 加速区域 (mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
+        ///</summary>
+        public   string AccelerateRegion{ get; set; }
     }
 }

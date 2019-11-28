@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -58,6 +58,10 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
         ///</summary>
         public   string Type{ get; set; }
+        ///<summary>
+        /// 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
+        ///</summary>
+        public   string AccelerateRegion{ get; set; }
         ///<summary>
         /// 标签过滤条件
         ///</summary>

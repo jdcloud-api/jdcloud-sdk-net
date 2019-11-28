@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Logs.Model
 {
@@ -72,6 +73,7 @@ namespace JDCloudSDK.Logs.Model
         ///<summary>
         /// version: v1
         ///</summary>
-        public string Version{ get; set; }
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
     }
 }

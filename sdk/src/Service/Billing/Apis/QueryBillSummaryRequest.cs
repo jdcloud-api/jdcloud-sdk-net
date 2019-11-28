@@ -28,7 +28,9 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Billing.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Billing.Apis
 {
@@ -64,6 +66,11 @@ namespace  JDCloudSDK.Billing.Apis
         public List<string> ResourceIds{ get; set; }
 
         ///<summary>
+        /// 标签
+        ///</summary>
+        public List<Tags> Tags{ get; set; }
+
+        ///<summary>
         /// pageIndex
         ///</summary>
         public   int? PageIndex{ get; set; }
@@ -76,6 +83,7 @@ namespace  JDCloudSDK.Billing.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

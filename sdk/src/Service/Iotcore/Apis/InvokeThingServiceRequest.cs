@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
@@ -40,12 +41,18 @@ namespace  JDCloudSDK.Iotcore.Apis
     {
         ///<summary>
         /// 服务名称
+        ///Required:true
         ///</summary>
+        [Required]
         public   string Name{ get; set; }
         ///<summary>
         /// 输入参数,object的key为参数名称，value为参数值
         ///</summary>
         public   object Input{ get; set; }
+        ///<summary>
+        /// 回调spring的bean的名称
+        ///</summary>
+        public   string CallbackBeanName{ get; set; }
         ///<summary>
         /// 设备归属的实例ID
         ///Required:true
@@ -57,7 +64,8 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 设备唯一标识
         ///Required:true

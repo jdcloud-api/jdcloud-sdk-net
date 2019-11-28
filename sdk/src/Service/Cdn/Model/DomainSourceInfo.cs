@@ -38,15 +38,15 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
-        /// Priority
+        /// 优先级（1-10）
         ///</summary>
         public int? Priority{ get; set; }
         ///<summary>
-        /// SourceHost
+        /// 回源host
         ///</summary>
         public string SourceHost{ get; set; }
         ///<summary>
-        /// Domain
+        /// 回源域名
         ///</summary>
         public string Domain{ get; set; }
     }

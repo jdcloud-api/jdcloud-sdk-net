@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Kms.Apis
 {
 
     /// <summary>
-    ///  使用密钥对数据进行解密
+    ///  使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
     /// </summary>
     public class DecryptRequest : JdcloudRequest
     {

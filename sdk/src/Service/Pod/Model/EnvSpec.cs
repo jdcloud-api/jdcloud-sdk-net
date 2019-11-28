@@ -39,7 +39,7 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;[a-zA-Z0-9]*$&#x60;。
+        /// 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
         ///Required:true
         ///</summary>
         [Required]

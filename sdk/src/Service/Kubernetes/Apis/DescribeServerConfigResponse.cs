@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
 {
 
     /// <summary>
-    ///  查询(k8s 集群)服务配置信息
+    ///  查询 kubernetes 集群服务配置信息
     /// </summary>
     public class DescribeServerConfigResponse : JdcloudResponse<DescribeServerConfigResult>
     {

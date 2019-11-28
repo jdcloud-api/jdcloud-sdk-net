@@ -62,6 +62,10 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
+        /// WafStatus
+        ///</summary>
+        public string WafStatus{ get; set; }
+        ///<summary>
         /// Type
         ///</summary>
         public string Type{ get; set; }
@@ -69,6 +73,10 @@ namespace JDCloudSDK.Cdn.Model
         /// AuditStatus
         ///</summary>
         public string AuditStatus{ get; set; }
+        ///<summary>
+        /// AccelerateRegion
+        ///</summary>
+        public string AccelerateRegion{ get; set; }
         ///<summary>
         /// Tags
         ///</summary>

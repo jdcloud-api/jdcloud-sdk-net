@@ -145,5 +145,9 @@ namespace JDCloudSDK.Billing.Model
         /// 资源名称
         ///</summary>
         public string ResourceName{ get; set; }
+        ///<summary>
+        /// 标签明细
+        ///</summary>
+        public List<ResourceTagVo> TagDetails{ get; set; }
     }
 }

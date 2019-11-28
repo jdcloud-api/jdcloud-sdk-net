@@ -38,11 +38,11 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 容器必需的计算资源
+        /// 容器必需的计算资源，例：300m，1000m
         ///</summary>
         public string Cpu{ get; set; }
         ///<summary>
-        /// 容器使用计算资源上限
+        /// 容器使用计算资源上限，例：1024Mi，16384Mi
         ///</summary>
         public string MemoryMB{ get; set; }
     }

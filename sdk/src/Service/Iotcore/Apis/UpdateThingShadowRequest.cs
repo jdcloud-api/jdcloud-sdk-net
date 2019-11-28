@@ -28,8 +28,8 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
@@ -52,20 +52,21 @@ namespace  JDCloudSDK.Iotcore.Apis
         /// 当取值达到最大值2147483647(2的31次方-1)时，请求中的主动更新版本号应为-1
         /// 
         ///</summary>
-        [JsonProperty("version") ]
-        public int? VersionValue { get; set; }
+        [JsonProperty("version")]
+        public   int? VersionValue{ get; set; }
         ///<summary>
         /// 设备归属的实例ID
         ///Required:true
         ///</summary>
         [Required]
-        public string InstanceId{ get; set; }
+        public   string InstanceId{ get; set; }
         ///<summary>
         /// 设备归属的实例所在区域
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 设备唯一标识
         ///Required:true

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 统计查询类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Cdn.Model;
 
 namespace  JDCloudSDK.Cdn.Apis
 {
@@ -41,7 +40,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// Domains
         ///</summary>
-        public List<String> Domains{ get; set; }
+        public List<string> Domains{ get; set; }
 
         ///<summary>
         /// 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z

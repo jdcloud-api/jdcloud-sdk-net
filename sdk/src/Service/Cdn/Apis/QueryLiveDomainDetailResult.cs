@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 直播域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询直播域名详情
+    ///  查询直播域名详情v1
     /// </summary>
     public class QueryLiveDomainDetailResult : JdcloudResult
     {
@@ -265,5 +265,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// SslCertEndTime
         ///</summary>
         public   string SslCertEndTime{ get; set; }
+        ///<summary>
+        /// AccelerateRegion
+        ///</summary>
+        public   string AccelerateRegion{ get; set; }
     }
 }

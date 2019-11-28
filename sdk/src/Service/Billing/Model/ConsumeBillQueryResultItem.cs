@@ -141,5 +141,9 @@ namespace JDCloudSDK.Billing.Model
         /// 规格
         ///</summary>
         public string FormulaStr{ get; set; }
+        ///<summary>
+        /// 标签明细
+        ///</summary>
+        public List<ResourceTagVo> TagDetails{ get; set; }
     }
 }

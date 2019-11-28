@@ -89,9 +89,9 @@ namespace JDCloudSDK.Nativecontainer.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -243,6 +243,37 @@ namespace JDCloudSDK.Nativecontainer.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteContainerResponse> DeleteContainer(DeleteContainerRequest request) {
             return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  调整原生容器实例类型配置。
+        /// - 原生容器状态为停止;
+        /// - 支持升配、降配；**不支持原有规格**
+        /// - 计费类型不变
+        ///     - 包年包月：需要计算配置差价，如果所选配置价格高，需要补齐到期前的差价，到期时间不变；如果所选配置价格低，需要延长到期时间
+        ///     - 按配置：按照所选规格，进行计费
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResizeContainerResponse ResizeContainer(ResizeContainerRequest request) {
+            return  new ResizeContainerExecutor().Client(this).Execute<ResizeContainerResponse, ResizeContainerResult, ResizeContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  调整原生容器实例类型配置。
+        /// - 原生容器状态为停止;
+        /// - 支持升配、降配；**不支持原有规格**
+        /// - 计费类型不变
+        ///     - 包年包月：需要计算配置差价，如果所选配置价格高，需要补齐到期前的差价，到期时间不变；如果所选配置价格低，需要延长到期时间
+        ///     - 按配置：按照所选规格，进行计费
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResizeContainerResponse> ResizeContainer(ResizeContainerRequest request) {
+            return await new ResizeContainerExecutor().Client(this).Execute<ResizeContainerResponse, ResizeContainerResult, ResizeContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -476,7 +507,7 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
         ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
         ///   - 正则表达式
-        ///     - &#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
+        ///     - ^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$
         /// - 网络配置
         ///   - 指定主网卡配置信息
         ///     - 必须指定vpcId、subnetId、securityGroupIds
@@ -544,7 +575,7 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
         ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
         ///   - 正则表达式
-        ///     - &#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
+        ///     - ^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$
         /// - 网络配置
         ///   - 指定主网卡配置信息
         ///     - 必须指定vpcId、subnetId、securityGroupIds

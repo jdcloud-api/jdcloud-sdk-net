@@ -46,6 +46,10 @@ namespace JDCloudSDK.Iotlink.Model
         ///</summary>
         public string Msisdn{ get; set; }
         ///<summary>
+        /// 物联网卡imsi
+        ///</summary>
+        public string Imsi{ get; set; }
+        ///<summary>
         /// 生命周期状态(00:可激活;01:已激活;02:已停用;03:已失效;04:未知;05:可测试)
         ///</summary>
         public string Status{ get; set; }

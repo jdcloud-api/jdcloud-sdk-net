@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Kubernetes.Client
 {
 
     /// <summary>
-    ///  cluster 摘除 nodeGroup 并删除 nodeGroup
+    ///  集群摘除工作节点组并删除工作节点组
     /// </summary>
     public class DeleteNodeGroupExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  cluster 摘除 nodeGroup 并删除 nodeGroup接口的Http 请求方法
+        ///  集群摘除工作节点组并删除工作节点组接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Kubernetes.Client
             }
         }
         /// <summary>
-        ///  cluster 摘除 nodeGroup 并删除 nodeGroup接口的Http资源请求路径
+        ///  集群摘除工作节点组并删除工作节点组接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
