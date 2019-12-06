@@ -19,8 +19,8 @@ namespace JDCloudSDK.Core.Auth.Sign
 
         private static readonly string[] NOT_SIGN_REQUEST_HEAD = { "cache-control","content-type","content-length",
             "host","expect","max-forwards","pragma","range","te","if-match","if-none-match","if-modified-since","if-unmodified-since","if-range",
-            "accept","authorization","proxy-authorization","from","referer","user-agent","x-jdcloud-request-id"};
-
+            "accept","authorization","proxy-authorization","from","referer","user-agent","x-jdcloud-request-id","connection"};
+        private static readonly string[] NOT_SIGN_REQUEST_HEAD_START = { "x-b3-" };
         /// <summary>
         /// signer v3 code
         /// </summary>
@@ -355,7 +355,8 @@ namespace JDCloudSDK.Core.Auth.Sign
                 foreach (var item in header) {
                     if (!item.Key.IsNullOrWhiteSpace()) {
                         string key = item.Key.ToLower().Trim();
-                        if (!NOT_SIGN_REQUEST_HEAD.Contains(key)) {
+                        if (!NOT_SIGN_REQUEST_HEAD.Contains(key)&&
+                            !NOT_SIGN_REQUEST_HEAD_START.Any(p=>key.Trim().StartsWith(p))) {
                             result.Add(key, item.Value.Trim());
                         }
                     }
