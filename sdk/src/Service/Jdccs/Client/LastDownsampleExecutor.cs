@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jdccs.Client
 {
 
     /// <summary>
-    ///  查看某资源的最后一个监控数据点
+    ///  查看某资源的最后一个监控数据点（目前只支持机柜电流）
     /// </summary>
     public class LastDownsampleExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查看某资源的最后一个监控数据点接口的Http 请求方法
+        ///  查看某资源的最后一个监控数据点（目前只支持机柜电流）接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jdccs.Client
             }
         }
         /// <summary>
-        ///  查看某资源的最后一个监控数据点接口的Http资源请求路径
+        ///  查看某资源的最后一个监控数据点（目前只支持机柜电流）接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

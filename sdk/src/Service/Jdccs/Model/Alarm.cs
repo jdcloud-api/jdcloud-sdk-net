@@ -32,11 +32,19 @@ namespace JDCloudSDK.Jdccs.Model
 {
 
     /// <summary>
-    ///  机柜
+    ///  报警规则
     /// </summary>
-    public class Cabinet
+    public class Alarm
     {
 
+        ///<summary>
+        /// 规则实例ID
+        ///</summary>
+        public string AlarmId{ get; set; }
+        ///<summary>
+        /// 规则名称
+        ///</summary>
+        public string Name{ get; set; }
         ///<summary>
         /// 机房英文标识
         ///</summary>
@@ -46,56 +54,56 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string IdcName{ get; set; }
         ///<summary>
-        /// 机柜Id
+        /// 资源类型 bandwidth:带宽
         ///</summary>
-        public string CabinetId{ get; set; }
+        public string ResourceType{ get; set; }
         ///<summary>
-        /// 机柜编码
+        /// 资源ID
         ///</summary>
-        public string CabinetNo{ get; set; }
+        public string ResourceId{ get; set; }
         ///<summary>
-        /// 房间号
+        /// 资源名称
         ///</summary>
-        public string RoomNo{ get; set; }
+        public string ResourceName{ get; set; }
         ///<summary>
-        /// 机柜空间(U)
+        /// 监控项英文标识
         ///</summary>
-        public int? CabinetSpace{ get; set; }
+        public string Metric{ get; set; }
         ///<summary>
-        /// 额定电流(A)
+        /// 监控项名称
         ///</summary>
-        public int? CabinetPower{ get; set; }
+        public string MetricName{ get; set; }
         ///<summary>
-        /// 机柜类型 formal:正式机柜 reserved:预留机柜
+        /// 统计周期（单位：分钟）
         ///</summary>
-        public string CabinetType{ get; set; }
+        public int? Period{ get; set; }
         ///<summary>
-        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+        /// 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
         ///</summary>
-        public string CabinetOpenStatus{ get; set; }
+        public string StatisticMethod{ get; set; }
         ///<summary>
-        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
         ///</summary>
-        public string CabinetOpenTime{ get; set; }
+        public string Operator{ get; set; }
         ///<summary>
-        /// 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 阈值
         ///</summary>
-        public string StartTime{ get; set; }
+        public double? Threshold{ get; set; }
         ///<summary>
-        /// 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 连续多少次后报警
         ///</summary>
-        public string EndTime{ get; set; }
+        public int? Times{ get; set; }
         ///<summary>
-        /// 设备数量
+        /// 通知周期 单位：小时
         ///</summary>
-        public int? DeviceNum{ get; set; }
+        public int? NoticePeriod{ get; set; }
         ///<summary>
-        /// 占用U数(U)
+        /// 规则状态 disabled:禁用 enabled:启用
         ///</summary>
-        public int? RackUOccupy{ get; set; }
+        public string Status{ get; set; }
         ///<summary>
-        /// 空闲U数(U)
+        /// Switchboard
         ///</summary>
-        public int? RackUFree{ get; set; }
+        public List<object> Switchboard{ get; set; }
     }
 }

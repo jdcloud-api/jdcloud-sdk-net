@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Resource API
- * 云托管服务的资源API
+ * Monitor API
+ * 云托管服务的监控API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -23,27 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-
-namespace  JDCloudSDK.Jdccs.Apis
+namespace JDCloudSDK.Jdccs.Client
 {
 
     /// <summary>
-    ///  查询IDC机房列表
+    ///  查询带宽（出口）流量（资源）详情
     /// </summary>
-    public class DescribeIdcsRequest : JdcloudRequest
+    public class DescribeBandwidthTrafficExecutor : JdcloudExecutor
     {
-        ///<summary>
-        /// 页码, 默认为1
-        ///</summary>
-        public   int? PageNumber{ get; set; }
-        ///<summary>
-        /// 分页大小，默认为20
-        ///</summary>
-        public   int? PageSize{ get; set; }
+        /// <summary>
+        ///  查询带宽（出口）流量（资源）详情接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "GET";
+            }
+        }
+        /// <summary>
+        ///  查询带宽（出口）流量（资源）详情接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/idcs/{idc}/bandwidthTraffics/{bandwidthId}";
+            }
+        }
     }
 }

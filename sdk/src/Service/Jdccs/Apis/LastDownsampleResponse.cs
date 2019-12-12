@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Jdccs.Apis
 {
 
     /// <summary>
-    ///  查看某资源的最后一个监控数据点
+    ///  查看某资源的最后一个监控数据点（目前只支持机柜电流）
     /// </summary>
     public class LastDownsampleResponse : JdcloudResponse<LastDownsampleResult>
     {

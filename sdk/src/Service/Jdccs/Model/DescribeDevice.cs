@@ -32,9 +32,9 @@ namespace JDCloudSDK.Jdccs.Model
 {
 
     /// <summary>
-    ///  机柜
+    ///  设备
     /// </summary>
-    public class Cabinet
+    public class DescribeDevice
     {
 
         ///<summary>
@@ -46,56 +46,44 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string IdcName{ get; set; }
         ///<summary>
-        /// 机柜Id
+        /// 设备Id
         ///</summary>
-        public string CabinetId{ get; set; }
+        public string DeviceId{ get; set; }
+        ///<summary>
+        /// 设备SN号
+        ///</summary>
+        public string SnNo{ get; set; }
         ///<summary>
         /// 机柜编码
         ///</summary>
         public string CabinetNo{ get; set; }
         ///<summary>
-        /// 房间号
+        /// 所在U位
         ///</summary>
-        public string RoomNo{ get; set; }
+        public string RackUIndex{ get; set; }
         ///<summary>
-        /// 机柜空间(U)
+        /// U数（U）
         ///</summary>
-        public int? CabinetSpace{ get; set; }
+        public int? UNum{ get; set; }
         ///<summary>
-        /// 额定电流(A)
+        /// 品牌
         ///</summary>
-        public int? CabinetPower{ get; set; }
+        public string Brand{ get; set; }
         ///<summary>
-        /// 机柜类型 formal:正式机柜 reserved:预留机柜
+        /// 型号
         ///</summary>
-        public string CabinetType{ get; set; }
+        public string Model{ get; set; }
         ///<summary>
-        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+        /// 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
         ///</summary>
-        public string CabinetOpenStatus{ get; set; }
+        public string DeviceType{ get; set; }
         ///<summary>
-        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 资产归属 own:自备 lease:租赁
         ///</summary>
-        public string CabinetOpenTime{ get; set; }
+        public string AssetBelong{ get; set; }
         ///<summary>
-        /// 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 资产状态 inWarehouse:已入库 launched:已上架
         ///</summary>
-        public string StartTime{ get; set; }
-        ///<summary>
-        /// 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-        ///</summary>
-        public string EndTime{ get; set; }
-        ///<summary>
-        /// 设备数量
-        ///</summary>
-        public int? DeviceNum{ get; set; }
-        ///<summary>
-        /// 占用U数(U)
-        ///</summary>
-        public int? RackUOccupy{ get; set; }
-        ///<summary>
-        /// 空闲U数(U)
-        ///</summary>
-        public int? RackUFree{ get; set; }
+        public string AssetStatus{ get; set; }
     }
 }

@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Jdccs.Apis
     public class DescribeMetricDataRequest : JdcloudRequest
     {
         ///<summary>
-        /// 资源的uuid
+        /// 资源ID
         ///Required:true
         ///</summary>
         [Required]
@@ -61,7 +61,7 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   string TimeInterval{ get; set; }
         ///<summary>
-        /// 机房名称（英文标识）
+        /// IDC机房ID
         ///Required:true
         ///</summary>
         [Required]

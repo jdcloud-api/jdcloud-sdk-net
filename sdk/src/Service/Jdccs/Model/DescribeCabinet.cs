@@ -34,7 +34,7 @@ namespace JDCloudSDK.Jdccs.Model
     /// <summary>
     ///  机柜
     /// </summary>
-    public class Cabinet
+    public class DescribeCabinet
     {
 
         ///<summary>
@@ -85,17 +85,5 @@ namespace JDCloudSDK.Jdccs.Model
         /// 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
         ///</summary>
         public string EndTime{ get; set; }
-        ///<summary>
-        /// 设备数量
-        ///</summary>
-        public int? DeviceNum{ get; set; }
-        ///<summary>
-        /// 占用U数(U)
-        ///</summary>
-        public int? RackUOccupy{ get; set; }
-        ///<summary>
-        /// 空闲U数(U)
-        ///</summary>
-        public int? RackUFree{ get; set; }
     }
 }

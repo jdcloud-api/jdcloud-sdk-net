@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Resource API
- * 云托管服务的资源API
+ * Monitor API
+ * 云托管服务的监控API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,22 +28,32 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Jdccs.Model;
 
 namespace  JDCloudSDK.Jdccs.Apis
 {
 
     /// <summary>
-    ///  查询IDC机房列表
+    ///  查询带宽（出口）流量列表
     /// </summary>
-    public class DescribeIdcsRequest : JdcloudRequest
+    public class DescribeBandwidthTrafficsResult : JdcloudResult
     {
         ///<summary>
-        /// 页码, 默认为1
+        /// 带宽（出口）流量列表
+        ///</summary>
+        public List<DescribeBandwidthTraffic> BandwidthTraffics{ get; set; }
+
+        ///<summary>
+        /// 页码
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小，默认为20
+        /// 分页大小
         ///</summary>
         public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 总数量
+        ///</summary>
+        public   int? TotalCount{ get; set; }
     }
 }

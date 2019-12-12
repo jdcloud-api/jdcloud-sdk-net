@@ -40,11 +40,11 @@ namespace  JDCloudSDK.Jdccs.Apis
     public class DescribeRoomsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码, 默认为1, 取值范围：[1,∞)
+        /// 页码, 默认为1
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小，默认为20，取值范围：[10,100]
+        /// 分页大小，默认为20
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
@@ -54,7 +54,7 @@ namespace  JDCloudSDK.Jdccs.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// IDC机房id
+        /// IDC机房ID
         ///Required:true
         ///</summary>
         [Required]

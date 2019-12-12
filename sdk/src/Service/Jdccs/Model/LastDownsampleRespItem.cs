@@ -42,7 +42,7 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Metric{ get; set; }
         ///<summary>
-        /// 资源的uuid
+        /// 资源ID
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
