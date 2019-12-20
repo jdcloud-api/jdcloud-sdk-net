@@ -2,6 +2,7 @@
 # 简介
 
 [![Build status](https://ci.appveyor.com/api/projects/status/wtkrtxbmts44eg5o/branch/master?svg=true)](https://ci.appveyor.com/project/lishjun01/jdcloud-sdk-net/branch/master)
+[![VM Version](https://img.shields.io/nuget/v/JDCloudSDK.Vm?label=VM%20Version)](https://img.shields.io/nuget/v/JDCloudSDK.Vm?label=VM%20Version)
 
 
 &emsp;&emsp;欢迎使用京东云开发者 .NET 工具套件（.NET SDK）。使用京东云 .NET SDK，您无需复杂编程就可以访问京东云提供的各种服务。    
