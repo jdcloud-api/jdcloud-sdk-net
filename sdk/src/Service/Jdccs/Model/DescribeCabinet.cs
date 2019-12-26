@@ -78,12 +78,16 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string CabinetOpenTime{ get; set; }
         ///<summary>
-        /// 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
         ///</summary>
-        public string StartTime{ get; set; }
+        public string ExpireTime{ get; set; }
         ///<summary>
-        /// 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
         ///</summary>
-        public string EndTime{ get; set; }
+        public string ReserveStartTime{ get; set; }
+        ///<summary>
+        /// 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        ///</summary>
+        public string ReserveEndTime{ get; set; }
     }
 }

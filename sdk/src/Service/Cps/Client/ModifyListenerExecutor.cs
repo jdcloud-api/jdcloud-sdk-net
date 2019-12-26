@@ -52,7 +52,7 @@ namespace JDCloudSDK.Cps.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/listeners/{listenerId}:modifylistenerAttributes";
+            return "/regions/{regionId}/listeners/{listenerId}:modifyListenerAttributes";
             }
         }
     }

@@ -37,5 +37,9 @@ namespace  JDCloudSDK.Yundingdatapush.Apis
     /// </summary>
     public class DeleteDatapushVenderResult : JdcloudResult
     {
+        ///<summary>
+        /// 操作是否成功
+        ///</summary>
+        public   bool Success{ get; set; }
     }
 }

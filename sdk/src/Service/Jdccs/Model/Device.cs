@@ -74,6 +74,14 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Model{ get; set; }
         ///<summary>
+        /// 系统IP
+        ///</summary>
+        public string SysIp{ get; set; }
+        ///<summary>
+        /// 管理IP
+        ///</summary>
+        public string ManageIp{ get; set; }
+        ///<summary>
         /// 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
         ///</summary>
         public string DeviceType{ get; set; }
@@ -82,32 +90,24 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string AssetBelong{ get; set; }
         ///<summary>
-        /// 资产状态 inWarehouse:已入库 launched:已上架
+        /// 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
         ///</summary>
         public string AssetStatus{ get; set; }
         ///<summary>
-        /// CPU逻辑核数(核)
+        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        ///</summary>
+        public string DeviceOpenTime{ get; set; }
+        ///<summary>
+        /// CPU
         ///</summary>
         public string CpuCore{ get; set; }
         ///<summary>
-        /// 内存总容量(GB)
+        /// 内存
         ///</summary>
         public string Memory{ get; set; }
         ///<summary>
-        /// 硬盘总容量(GB)
+        /// 磁盘
         ///</summary>
         public string Disk{ get; set; }
-        ///<summary>
-        /// 网卡带宽(Mbps)
-        ///</summary>
-        public string NetworkCardBandwidth{ get; set; }
-        ///<summary>
-        /// 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-        ///</summary>
-        public string StartTime{ get; set; }
-        ///<summary>
-        /// 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-        ///</summary>
-        public string EndTime{ get; set; }
     }
 }

@@ -41,6 +41,6 @@ namespace  JDCloudSDK.Edcps.Apis
         ///<summary>
         /// 密钥对详细信息
         ///</summary>
-        public   Keypair Server{ get; set; }
+        public   Keypair Keypair{ get; set; }
     }
 }

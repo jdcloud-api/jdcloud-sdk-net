@@ -33,12 +33,12 @@ namespace JDCloudSDK.Yundingdatapush.Client
 {
 
     /// <summary>
-    ///  查询开通数据推送的数据库实例
+    ///  查询已绑定数据推送的数据库实例
     /// </summary>
     public class DescribeRdsInstancesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询开通数据推送的数据库实例接口的Http 请求方法
+        ///  查询已绑定数据推送的数据库实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Yundingdatapush.Client
             }
         }
         /// <summary>
-        ///  查询开通数据推送的数据库实例接口的Http资源请求路径
+        ///  查询已绑定数据推送的数据库实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -157,6 +157,25 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  从工作节点组中删除指定实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteNodeInstancesResponse DeleteNodeInstances(DeleteNodeInstancesRequest request) {
+            return  new DeleteNodeInstancesExecutor().Client(this).Execute<DeleteNodeInstancesResponse, DeleteNodeInstancesResult, DeleteNodeInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  从工作节点组中删除指定实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteNodeInstancesResponse> DeleteNodeInstances(DeleteNodeInstancesRequest request) {
+            return await new DeleteNodeInstancesExecutor().Client(this).Execute<DeleteNodeInstancesResponse, DeleteNodeInstancesResult, DeleteNodeInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询工作节点组列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -385,6 +404,25 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetAutoRepairResponse> SetAutoRepair(SetAutoRepairRequest request) {
             return await new SetAutoRepairExecutor().Client(this).Execute<SetAutoRepairResponse, SetAutoRepairResult, SetAutoRepairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置工作节点组自动扩容
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetNodeGroupCAResponse SetNodeGroupCA(SetNodeGroupCARequest request) {
+            return  new SetNodeGroupCAExecutor().Client(this).Execute<SetNodeGroupCAResponse, SetNodeGroupCAResult, SetNodeGroupCARequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置工作节点组自动扩容
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetNodeGroupCAResponse> SetNodeGroupCA(SetNodeGroupCARequest request) {
+            return await new SetNodeGroupCAExecutor().Client(this).Execute<SetNodeGroupCAResponse, SetNodeGroupCAResult, SetNodeGroupCARequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

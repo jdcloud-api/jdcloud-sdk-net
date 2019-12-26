@@ -39,9 +39,9 @@ namespace  JDCloudSDK.Edcps.Apis
     public class DescribeKeypairsResult : JdcloudResult
     {
         ///<summary>
-        /// Servers
+        /// Keypairs
         ///</summary>
-        public List<Keypair> Servers{ get; set; }
+        public List<Keypair> Keypairs{ get; set; }
 
         ///<summary>
         /// 页码；默认为1

@@ -59,5 +59,9 @@ namespace JDCloudSDK.Kubernetes.Model
         /// node 节点的配置
         ///</summary>
         public List<NodeVersion> NodeVersions{ get; set; }
+        ///<summary>
+        /// node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+        ///</summary>
+        public string NodeOsTypes{ get; set; }
     }
 }

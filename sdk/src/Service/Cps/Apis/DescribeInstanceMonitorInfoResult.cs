@@ -39,8 +39,9 @@ namespace  JDCloudSDK.Cps.Apis
     public class DescribeInstanceMonitorInfoResult : JdcloudResult
     {
         ///<summary>
-        /// 云物理服务器监控信息
+        /// MetricDatas
         ///</summary>
-        public   MetricData MetricDatas{ get; set; }
+        public List<MetricData> MetricDatas{ get; set; }
+
     }
 }

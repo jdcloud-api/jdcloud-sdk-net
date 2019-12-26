@@ -75,12 +75,15 @@ namespace  JDCloudSDK.Edcps.Apis
         ///</summary>
         public   string EnableInternet{ get; set; }
         ///<summary>
+        /// 内网ip
+        ///</summary>
+        public   string PrivateIp{ get; set; }
+        ///<summary>
         /// 密钥对id
         ///</summary>
         public   string KeypairId{ get; set; }
         ///<summary>
         /// instanceId - 分布式云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
-        /// privateIp - 分布式云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
         /// status - 分布式云物理服务器状态，参考分布式云物理服务器状态，精确匹配，支持多个
         /// 
         ///</summary>

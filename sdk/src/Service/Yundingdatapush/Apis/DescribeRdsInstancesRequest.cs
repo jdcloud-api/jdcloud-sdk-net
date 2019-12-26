@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Yundingdatapush.Apis
 {
 
     /// <summary>
-    ///  查询开通数据推送的数据库实例
+    ///  查询已绑定数据推送的数据库实例
     /// </summary>
     public class DescribeRdsInstancesRequest : JdcloudRequest
     {

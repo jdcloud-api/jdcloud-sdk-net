@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Cps.Apis
 {
@@ -45,11 +46,12 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string ClientToken{ get; set; }
         ///<summary>
-        /// 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+        /// 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 负载均衡实例ID
         ///Required:true

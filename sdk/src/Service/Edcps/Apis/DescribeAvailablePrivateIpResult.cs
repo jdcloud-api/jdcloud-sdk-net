@@ -37,5 +37,10 @@ namespace  JDCloudSDK.Edcps.Apis
     /// </summary>
     public class DescribeAvailablePrivateIpResult : JdcloudResult
     {
+        ///<summary>
+        /// 可用私有IP集合
+        ///</summary>
+        public List<string> AvailablePrivateIps{ get; set; }
+
     }
 }

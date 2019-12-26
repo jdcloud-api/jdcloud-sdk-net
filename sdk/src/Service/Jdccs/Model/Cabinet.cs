@@ -78,13 +78,17 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string CabinetOpenTime{ get; set; }
         ///<summary>
-        /// 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
         ///</summary>
-        public string StartTime{ get; set; }
+        public string ExpireTime{ get; set; }
         ///<summary>
-        /// 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
         ///</summary>
-        public string EndTime{ get; set; }
+        public string ReserveStartTime{ get; set; }
+        ///<summary>
+        /// 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        ///</summary>
+        public string ReserveEndTime{ get; set; }
         ///<summary>
         /// 设备数量
         ///</summary>
@@ -97,5 +101,9 @@ namespace JDCloudSDK.Jdccs.Model
         /// 空闲U数(U)
         ///</summary>
         public int? RackUFree{ get; set; }
+        ///<summary>
+        /// 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性（目前仅支持包年包月）
+        ///</summary>
+        public int? BillingType{ get; set; }
     }
 }

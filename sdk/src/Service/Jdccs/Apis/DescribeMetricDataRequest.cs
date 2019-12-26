@@ -61,6 +61,14 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   string TimeInterval{ get; set; }
         ///<summary>
+        /// 交换机IP，指定ip时须同时指定port
+        ///</summary>
+        public   string Ip{ get; set; }
+        ///<summary>
+        /// 端口，指定port时须同时指定ip
+        ///</summary>
+        public   string Port{ get; set; }
+        ///<summary>
         /// IDC机房ID
         ///Required:true
         ///</summary>

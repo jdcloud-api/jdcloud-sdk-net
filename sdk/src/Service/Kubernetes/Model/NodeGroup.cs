@@ -112,6 +112,10 @@ namespace JDCloudSDK.Kubernetes.Model
         ///</summary>
         public NodeGroupProgress Progress{ get; set; }
         ///<summary>
+        /// 自动伸缩配置
+        ///</summary>
+        public CAConfig CaConfig{ get; set; }
+        ///<summary>
         /// 创建时间
         ///</summary>
         public string CreatedTime{ get; set; }

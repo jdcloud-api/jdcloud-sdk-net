@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Cps.Apis
 {
@@ -54,6 +55,10 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string Status{ get; set; }
         ///<summary>
+        /// 是否包含负载均衡
+        ///</summary>
+        public   string IncludeLB{ get; set; }
+        ///<summary>
         /// elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
         /// elasticIp - 弹性公网IP，精确匹配，支持多个
         /// 
@@ -65,6 +70,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

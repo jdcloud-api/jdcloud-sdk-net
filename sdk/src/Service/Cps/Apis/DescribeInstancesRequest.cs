@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Cps.Apis
 {
@@ -78,8 +79,11 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string EnableInternet{ get; set; }
         ///<summary>
+        /// 内网ip
+        ///</summary>
+        public   string PrivateIp{ get; set; }
+        ///<summary>
         /// instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
-        /// privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
         /// status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
         /// 
         ///</summary>
@@ -90,6 +94,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

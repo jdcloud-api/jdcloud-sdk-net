@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Yundingdatapush.Model
 {
@@ -44,7 +45,8 @@ namespace JDCloudSDK.Yundingdatapush.Model
         ///<summary>
         /// 地域
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// 所属私有网络ID
         ///</summary>

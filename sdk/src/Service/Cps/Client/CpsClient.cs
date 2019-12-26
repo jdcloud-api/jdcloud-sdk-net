@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cps.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,25 @@ namespace JDCloudSDK.Cps.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  查询后端服务器列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeServersResponse DescribeServers(DescribeServersRequest request) {
+            return  new DescribeServersExecutor().Client(this).Execute<DescribeServersResponse, DescribeServersResult, DescribeServersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询后端服务器列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeServersResponse> DescribeServers(DescribeServersRequest request) {
+            return await new DescribeServersExecutor().Client(this).Execute<DescribeServersResponse, DescribeServersResult, DescribeServersRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  查询子网详情
@@ -191,25 +210,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<AssociateElasticIpLBResponse> AssociateElasticIpLB(AssociateElasticIpLBRequest request) {
             return await new AssociateElasticIpLBExecutor().Client(this).Execute<AssociateElasticIpLBResponse, AssociateElasticIpLBResult, AssociateElasticIpLBRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询监听器详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryListenerResponse QueryListener(QueryListenerRequest request) {
-            return  new QueryListenerExecutor().Client(this).Execute<QueryListenerResponse, QueryListenerResult, QueryListenerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询监听器详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryListenerResponse> QueryListener(QueryListenerRequest request) {
-            return await new QueryListenerExecutor().Client(this).Execute<QueryListenerResponse, QueryListenerResult, QueryListenerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -315,6 +315,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeypairResponse DescribeKeypair(DescribeKeypairRequest request) {
+            return  new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询密钥对详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeypairResponse> DescribeKeypair(DescribeKeypairRequest request) {
+            return await new DescribeKeypairExecutor().Client(this).Execute<DescribeKeypairResponse, DescribeKeypairResult, DescribeKeypairRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -353,6 +372,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询虚拟服务器组列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeServerGroupsResponse DescribeServerGroups(DescribeServerGroupsRequest request) {
+            return  new DescribeServerGroupsExecutor().Client(this).Execute<DescribeServerGroupsResponse, DescribeServerGroupsResult, DescribeServerGroupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询虚拟服务器组列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeServerGroupsResponse> DescribeServerGroups(DescribeServerGroupsRequest request) {
+            return await new DescribeServerGroupsExecutor().Client(this).Execute<DescribeServerGroupsResponse, DescribeServerGroupsResult, DescribeServerGroupsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改私有网络
         /// 
         /// </summary>
@@ -374,25 +412,6 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询负载均衡实例详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryLoadBalancerResponse QueryLoadBalancer(QueryLoadBalancerRequest request) {
-            return  new QueryLoadBalancerExecutor().Client(this).Execute<QueryLoadBalancerResponse, QueryLoadBalancerResult, QueryLoadBalancerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询负载均衡实例详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryLoadBalancerResponse> QueryLoadBalancer(QueryLoadBalancerRequest request) {
-            return await new QueryLoadBalancerExecutor().Client(this).Execute<QueryLoadBalancerResponse, QueryLoadBalancerResult, QueryLoadBalancerRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询云物理服务器名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -408,25 +427,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceNameResponse> DescribeInstanceName(DescribeInstanceNameRequest request) {
             return await new DescribeInstanceNameExecutor().Client(this).Execute<DescribeInstanceNameResponse, DescribeInstanceNameResult, DescribeInstanceNameRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询后端服务器列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryServersResponse QueryServers(QueryServersRequest request) {
-            return  new QueryServersExecutor().Client(this).Execute<QueryServersResponse, QueryServersResult, QueryServersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询后端服务器列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryServersResponse> QueryServers(QueryServersRequest request) {
-            return await new QueryServersExecutor().Client(this).Execute<QueryServersResponse, QueryServersResult, QueryServersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -488,21 +488,21 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询密钥对详情
+        ///  查询监听器
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryKeypairResponse QueryKeypair(QueryKeypairRequest request) {
-            return  new QueryKeypairExecutor().Client(this).Execute<QueryKeypairResponse, QueryKeypairResult, QueryKeypairRequest>(request);
+        public DescribeListenersResponse DescribeListeners(DescribeListenersRequest request) {
+            return  new DescribeListenersExecutor().Client(this).Execute<DescribeListenersResponse, DescribeListenersResult, DescribeListenersRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询密钥对详情
+        ///  查询监听器
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryKeypairResponse> QueryKeypair(QueryKeypairRequest request) {
-            return await new QueryKeypairExecutor().Client(this).Execute<QueryKeypairResponse, QueryKeypairResult, QueryKeypairRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeListenersResponse> DescribeListeners(DescribeListenersRequest request) {
+            return await new DescribeListenersExecutor().Client(this).Execute<DescribeListenersResponse, DescribeListenersResult, DescribeListenersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -522,25 +522,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRegionesResponse> DescribeRegiones(DescribeRegionesRequest request) {
             return await new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询负载均衡实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryLoadBalancersResponse QueryLoadBalancers(QueryLoadBalancersRequest request) {
-            return  new QueryLoadBalancersExecutor().Client(this).Execute<QueryLoadBalancersResponse, QueryLoadBalancersResult, QueryLoadBalancersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询负载均衡实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryLoadBalancersResponse> QueryLoadBalancers(QueryLoadBalancersRequest request) {
-            return await new QueryLoadBalancersExecutor().Client(this).Execute<QueryLoadBalancersResponse, QueryLoadBalancersResult, QueryLoadBalancersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -587,8 +568,8 @@ namespace JDCloudSDK.Cps.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryKeypairsResponse QueryKeypairs(QueryKeypairsRequest request) {
-            return  new QueryKeypairsExecutor().Client(this).Execute<QueryKeypairsResponse, QueryKeypairsResult, QueryKeypairsRequest>(request);
+        public DescribeKeypairsResponse DescribeKeypairs(DescribeKeypairsRequest request) {
+            return  new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request);
         }
 #else
         /// <summary>
@@ -596,8 +577,8 @@ namespace JDCloudSDK.Cps.Client
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryKeypairsResponse> QueryKeypairs(QueryKeypairsRequest request) {
-            return await new QueryKeypairsExecutor().Client(this).Execute<QueryKeypairsResponse, QueryKeypairsResult, QueryKeypairsRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeKeypairsResponse> DescribeKeypairs(DescribeKeypairsRequest request) {
+            return await new DescribeKeypairsExecutor().Client(this).Execute<DescribeKeypairsResponse, DescribeKeypairsResult, DescribeKeypairsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -661,25 +642,6 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询路由表列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryRouteTablesResponse QueryRouteTables(QueryRouteTablesRequest request) {
-            return  new QueryRouteTablesExecutor().Client(this).Execute<QueryRouteTablesResponse, QueryRouteTablesResult, QueryRouteTablesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询路由表列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryRouteTablesResponse> QueryRouteTables(QueryRouteTablesRequest request) {
-            return await new QueryRouteTablesExecutor().Client(this).Execute<QueryRouteTablesResponse, QueryRouteTablesResult, QueryRouteTablesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改负载均衡实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -714,6 +676,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<StartLoadBalancerResponse> StartLoadBalancer(StartLoadBalancerRequest request) {
             return await new StartLoadBalancerExecutor().Client(this).Execute<StartLoadBalancerResponse, StartLoadBalancerResult, StartLoadBalancerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询路由表列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest request) {
+            return  new DescribeRouteTablesExecutor().Client(this).Execute<DescribeRouteTablesResponse, DescribeRouteTablesResult, DescribeRouteTablesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询路由表列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRouteTablesResponse> DescribeRouteTables(DescribeRouteTablesRequest request) {
+            return await new DescribeRouteTablesExecutor().Client(this).Execute<DescribeRouteTablesResponse, DescribeRouteTablesResult, DescribeRouteTablesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -796,25 +777,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceMonitorInfoResponse> DescribeInstanceMonitorInfo(DescribeInstanceMonitorInfoRequest request) {
             return await new DescribeInstanceMonitorInfoExecutor().Client(this).Execute<DescribeInstanceMonitorInfoResponse, DescribeInstanceMonitorInfoResult, DescribeInstanceMonitorInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询虚拟服务器组列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryServerGroupsResponse QueryServerGroups(QueryServerGroupsRequest request) {
-            return  new QueryServerGroupsExecutor().Client(this).Execute<QueryServerGroupsResponse, QueryServerGroupsResult, QueryServerGroupsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询虚拟服务器组列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryServerGroupsResponse> QueryServerGroups(QueryServerGroupsRequest request) {
-            return await new QueryServerGroupsExecutor().Client(this).Execute<QueryServerGroupsResponse, QueryServerGroupsResult, QueryServerGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -914,6 +876,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询监听器详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeListenerResponse DescribeListener(DescribeListenerRequest request) {
+            return  new DescribeListenerExecutor().Client(this).Execute<DescribeListenerResponse, DescribeListenerResult, DescribeListenerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询监听器详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeListenerResponse> DescribeListener(DescribeListenerRequest request) {
+            return await new DescribeListenerExecutor().Client(this).Execute<DescribeListenerResponse, DescribeListenerResult, DescribeListenerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -967,25 +948,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubnetsResponse> DescribeSubnets(DescribeSubnetsRequest request) {
             return await new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询路由表详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryRouteTableResponse QueryRouteTable(QueryRouteTableRequest request) {
-            return  new QueryRouteTableExecutor().Client(this).Execute<QueryRouteTableResponse, QueryRouteTableResult, QueryRouteTableRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询路由表详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryRouteTableResponse> QueryRouteTable(QueryRouteTableRequest request) {
-            return await new QueryRouteTableExecutor().Client(this).Execute<QueryRouteTableResponse, QueryRouteTableResult, QueryRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1125,40 +1087,21 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询负载均衡地域列表
+        ///  查询负载均衡实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryCPSLBRegionsResponse QueryCPSLBRegions(QueryCPSLBRegionsRequest request) {
-            return  new QueryCPSLBRegionsExecutor().Client(this).Execute<QueryCPSLBRegionsResponse, QueryCPSLBRegionsResult, QueryCPSLBRegionsRequest>(request);
+        public DescribeLoadBalancersResponse DescribeLoadBalancers(DescribeLoadBalancersRequest request) {
+            return  new DescribeLoadBalancersExecutor().Client(this).Execute<DescribeLoadBalancersResponse, DescribeLoadBalancersResult, DescribeLoadBalancersRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询负载均衡地域列表
+        ///  查询负载均衡实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryCPSLBRegionsResponse> QueryCPSLBRegions(QueryCPSLBRegionsRequest request) {
-            return await new QueryCPSLBRegionsExecutor().Client(this).Execute<QueryCPSLBRegionsResponse, QueryCPSLBRegionsResult, QueryCPSLBRegionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询虚拟服务器组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryServerGroupResponse QueryServerGroup(QueryServerGroupRequest request) {
-            return  new QueryServerGroupExecutor().Client(this).Execute<QueryServerGroupResponse, QueryServerGroupResult, QueryServerGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询虚拟服务器组
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryServerGroupResponse> QueryServerGroup(QueryServerGroupRequest request) {
-            return await new QueryServerGroupExecutor().Client(this).Execute<QueryServerGroupResponse, QueryServerGroupResult, QueryServerGroupRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeLoadBalancersResponse> DescribeLoadBalancers(DescribeLoadBalancersRequest request) {
+            return await new DescribeLoadBalancersExecutor().Client(this).Execute<DescribeLoadBalancersResponse, DescribeLoadBalancersResult, DescribeLoadBalancersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1178,6 +1121,44 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
             return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询负载均衡地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCPSLBRegionsResponse DescribeCPSLBRegions(DescribeCPSLBRegionsRequest request) {
+            return  new DescribeCPSLBRegionsExecutor().Client(this).Execute<DescribeCPSLBRegionsResponse, DescribeCPSLBRegionsResult, DescribeCPSLBRegionsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询负载均衡地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCPSLBRegionsResponse> DescribeCPSLBRegions(DescribeCPSLBRegionsRequest request) {
+            return await new DescribeCPSLBRegionsExecutor().Client(this).Execute<DescribeCPSLBRegionsResponse, DescribeCPSLBRegionsResult, DescribeCPSLBRegionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询路由表详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRouteTableResponse DescribeRouteTable(DescribeRouteTableRequest request) {
+            return  new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询路由表详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRouteTableResponse> DescribeRouteTable(DescribeRouteTableRequest request) {
+            return await new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1216,6 +1197,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest request) {
             return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询负载均衡实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLoadBalancerResponse DescribeLoadBalancer(DescribeLoadBalancerRequest request) {
+            return  new DescribeLoadBalancerExecutor().Client(this).Execute<DescribeLoadBalancerResponse, DescribeLoadBalancerResult, DescribeLoadBalancerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询负载均衡实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLoadBalancerResponse> DescribeLoadBalancer(DescribeLoadBalancerRequest request) {
+            return await new DescribeLoadBalancerExecutor().Client(this).Execute<DescribeLoadBalancerResponse, DescribeLoadBalancerResult, DescribeLoadBalancerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1262,6 +1262,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询虚拟服务器组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeServerGroupResponse DescribeServerGroup(DescribeServerGroupRequest request) {
+            return  new DescribeServerGroupExecutor().Client(this).Execute<DescribeServerGroupResponse, DescribeServerGroupResult, DescribeServerGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询虚拟服务器组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeServerGroupResponse> DescribeServerGroup(DescribeServerGroupRequest request) {
+            return await new DescribeServerGroupExecutor().Client(this).Execute<DescribeServerGroupResponse, DescribeServerGroupResult, DescribeServerGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建监听器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1298,25 +1317,6 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyElasticIpBandwidthResponse> ModifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) {
             return await new ModifyElasticIpBandwidthExecutor().Client(this).Execute<ModifyElasticIpBandwidthResponse, ModifyElasticIpBandwidthResult, ModifyElasticIpBandwidthRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询监听器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryListenersResponse QueryListeners(QueryListenersRequest request) {
-            return  new QueryListenersExecutor().Client(this).Execute<QueryListenersResponse, QueryListenersResult, QueryListenersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询监听器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryListenersResponse> QueryListeners(QueryListenersRequest request) {
-            return await new QueryListenersExecutor().Client(this).Execute<QueryListenersResponse, QueryListenersResult, QueryListenersRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

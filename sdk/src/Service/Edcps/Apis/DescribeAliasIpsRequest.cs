@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -59,6 +60,12 @@ namespace  JDCloudSDK.Edcps.Apis
         /// CIDR段，模糊搜索
         ///</summary>
         public   string Cidr{ get; set; }
+        ///<summary>
+        /// aliasIpId - 别名IP id&lt;br/&gt;
+        /// 
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
         ///<summary>
         /// 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
         ///Required:true

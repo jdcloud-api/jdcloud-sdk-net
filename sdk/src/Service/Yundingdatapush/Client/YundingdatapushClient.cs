@@ -89,9 +89,9 @@ namespace JDCloudSDK.Yundingdatapush.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -176,7 +176,7 @@ namespace JDCloudSDK.Yundingdatapush.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询开通数据推送的数据库实例
+        ///  查询已绑定数据推送的数据库实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -185,7 +185,7 @@ namespace JDCloudSDK.Yundingdatapush.Client
         }
 #else
         /// <summary>
-        ///  查询开通数据推送的数据库实例
+        ///  查询已绑定数据推送的数据库实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

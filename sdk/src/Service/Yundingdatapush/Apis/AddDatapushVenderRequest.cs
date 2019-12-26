@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Yundingdatapush.Apis
     public class AddDatapushVenderRequest : JdcloudRequest
     {
         ///<summary>
-        /// 添加/删除数据推送用户对象
+        /// 添加数据推送用户对象
         /// 
         ///Required:true
         ///</summary>

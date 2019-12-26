@@ -28,7 +28,9 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Cps.Apis
 {
@@ -47,6 +49,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   long? EndTime{ get; set; }
         ///<summary>
+        /// metric - 监控指标，精确匹配，支持多个，具体如下&lt;br/&gt;
         /// cps.cpu.util - CPU使用率&lt;br/&gt;
         /// cps.memory.util - 内存使用率&lt;br/&gt;
         /// cps.memory.used - 内存使用量&lt;br/&gt;
@@ -68,14 +71,15 @@ namespace  JDCloudSDK.Cps.Apis
         /// cps.process.total - 总进程数
         /// 
         ///</summary>
-        public List<string> Metrics{ get; set; }
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 云物理服务器ID
         ///Required:true

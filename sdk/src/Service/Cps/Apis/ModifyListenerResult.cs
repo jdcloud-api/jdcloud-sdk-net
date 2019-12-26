@@ -41,6 +41,6 @@ namespace  JDCloudSDK.Cps.Apis
         ///<summary>
         /// 监听器详细信息
         ///</summary>
-        public   Listener LoadBalancer{ get; set; }
+        public   Listener Listener{ get; set; }
     }
 }

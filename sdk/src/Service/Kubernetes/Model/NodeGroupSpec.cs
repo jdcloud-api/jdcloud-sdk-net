@@ -78,5 +78,9 @@ namespace JDCloudSDK.Kubernetes.Model
         /// 是否开启自动修复，默认不开启。
         ///</summary>
         public bool AutoRepair{ get; set; }
+        ///<summary>
+        /// 自动伸缩配置
+        ///</summary>
+        public CAConfigSpec CaConfig{ get; set; }
     }
 }

@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Cps.Apis
 {
@@ -62,6 +63,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

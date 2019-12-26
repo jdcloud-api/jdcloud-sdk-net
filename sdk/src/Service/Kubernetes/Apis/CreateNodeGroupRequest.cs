@@ -92,6 +92,10 @@ namespace  JDCloudSDK.Kubernetes.Apis
         ///</summary>
         public   bool AutoRepair{ get; set; }
         ///<summary>
+        /// 自动伸缩配置
+        ///</summary>
+        public   CAConfigSpec CaConfig{ get; set; }
+        ///<summary>
         /// 地域 ID
         ///Required:true
         ///</summary>
