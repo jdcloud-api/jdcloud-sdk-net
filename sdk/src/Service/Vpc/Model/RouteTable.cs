@@ -62,6 +62,10 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public List<RouteTableRule> RouteTableRules{ get; set; }
         ///<summary>
+        /// 路由传播列表
+        ///</summary>
+        public List<RoutePropagation> RoutePropagations{ get; set; }
+        ///<summary>
         /// 路由表绑定的子网列表
         ///</summary>
         public List<string> SubnetIds{ get; set; }

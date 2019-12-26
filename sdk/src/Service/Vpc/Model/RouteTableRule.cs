@@ -46,7 +46,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public double? Priority{ get; set; }
         ///<summary>
-        /// 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+        /// 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
         ///</summary>
         public string NextHopType{ get; set; }
         ///<summary>
@@ -57,5 +57,13 @@ namespace JDCloudSDK.Vpc.Model
         /// 匹配地址前缀, internet类型路由跟其他类型的路由，addressPrefix不允许重复
         ///</summary>
         public string AddressPrefix{ get; set; }
+        ///<summary>
+        /// 路由类型，propagated:传播、static:静态
+        ///</summary>
+        public string RouteType{ get; set; }
+        ///<summary>
+        /// 路由描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+        ///</summary>
+        public string Description{ get; set; }
     }
 }

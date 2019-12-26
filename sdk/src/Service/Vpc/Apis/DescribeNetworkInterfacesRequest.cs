@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性网卡
+ * Elastic-Network-Interface
  * 弹性网卡相关接口
  *
  * OpenAPI spec version: v1
@@ -53,7 +53,7 @@ namespace  JDCloudSDK.Vpc.Apis
         /// networkInterfaceNames - 弹性网卡名称列表，支持多个
         /// vpcId - 弹性网卡所属vpc Id，支持单个
         /// subnetId	- 弹性网卡所属子网Id，支持单个
-        /// role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡），支持单个
+        /// role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持单个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

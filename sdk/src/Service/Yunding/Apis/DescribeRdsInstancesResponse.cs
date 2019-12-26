@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * yunding-vm-instance
- * 云鼎-云主机实例相关的接口
+ * yunding-rds
+ * 云鼎-云数据库管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -33,12 +33,9 @@ namespace  JDCloudSDK.Yunding.Apis
 {
 
     /// <summary>
-    ///  删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
-        ///         /// 云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-        ///         /// 如果主机中挂载的数据盘为按配置计费的云硬盘且AutoDelete属性为true，那么数据盘会随主机一起删除。
-        ///         ///  [MFA enabled]
+    ///  批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
     /// </summary>
-    public class DeleteVmInstanceResponse : JdcloudResponse<DeleteVmInstanceResult>
+    public class DescribeRdsInstancesResponse : JdcloudResponse<DescribeRdsInstancesResult>
     {
     }
 }

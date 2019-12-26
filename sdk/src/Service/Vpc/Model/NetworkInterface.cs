@@ -46,7 +46,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public string NetworkInterfaceId{ get; set; }
         ///<summary>
-        /// 可用区名称
+        /// 可用区名称，该参数无效，不建议使用
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
@@ -101,6 +101,14 @@ namespace JDCloudSDK.Vpc.Model
         /// 网卡描述信息
         ///</summary>
         public string Description{ get; set; }
+        ///<summary>
+        /// 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
+        ///</summary>
+        public string AttachmentStatus{ get; set; }
+        ///<summary>
+        /// 弹性网卡可用状态，enabled（启用）、disabled（停用）
+        ///</summary>
+        public string NetworkInterfaceStatus{ get; set; }
         ///<summary>
         /// 弹性网卡创建时间
         ///</summary>

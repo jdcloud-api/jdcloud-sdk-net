@@ -39,13 +39,13 @@ namespace JDCloudSDK.Vpc.Model
     {
 
         ///<summary>
-        /// 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+        /// 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、route、securityGroupRule
         ///Required:true
         ///</summary>
         [Required]
         public string Type{ get; set; }
         ///<summary>
-        /// type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
+        /// type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为route设置为routeTableId, type为securityGroupRule为securityGroupId
         ///</summary>
         public string ParentResourceId{ get; set; }
         ///<summary>

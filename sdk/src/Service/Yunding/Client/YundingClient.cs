@@ -138,6 +138,141 @@ namespace JDCloudSDK.Yunding.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRdsInstanceResponse DescribeRdsInstance(DescribeRdsInstanceRequest request) {
+            return  new DescribeRdsInstanceExecutor().Client(this).Execute<DescribeRdsInstanceResponse, DescribeRdsInstanceResult, DescribeRdsInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRdsInstanceResponse> DescribeRdsInstance(DescribeRdsInstanceRequest request) {
+            return await new DescribeRdsInstanceExecutor().Client(this).Execute<DescribeRdsInstanceResponse, DescribeRdsInstanceResult, DescribeRdsInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询云鼎数据库实例列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeYdRdsInstancesResponse DescribeYdRdsInstances(DescribeYdRdsInstancesRequest request) {
+            return  new DescribeYdRdsInstancesExecutor().Client(this).Execute<DescribeYdRdsInstancesResponse, DescribeYdRdsInstancesResult, DescribeYdRdsInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询云鼎数据库实例列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeYdRdsInstancesResponse> DescribeYdRdsInstances(DescribeYdRdsInstancesRequest request) {
+            return await new DescribeYdRdsInstancesExecutor().Client(this).Execute<DescribeYdRdsInstancesResponse, DescribeYdRdsInstancesResult, DescribeYdRdsInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给网卡分配secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssignSecondaryIpsResponse AssignSecondaryIps(AssignSecondaryIpsRequest request) {
+            return  new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给网卡分配secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssignSecondaryIpsResponse> AssignSecondaryIps(AssignSecondaryIpsRequest request) {
+            return await new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyRdsWhiteListResponse ModifyRdsWhiteList(ModifyRdsWhiteListRequest request) {
+            return  new ModifyRdsWhiteListExecutor().Client(this).Execute<ModifyRdsWhiteListResponse, ModifyRdsWhiteListResult, ModifyRdsWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyRdsWhiteListResponse> ModifyRdsWhiteList(ModifyRdsWhiteListRequest request) {
+            return await new ModifyRdsWhiteListExecutor().Client(this).Execute<ModifyRdsWhiteListResponse, ModifyRdsWhiteListResult, ModifyRdsWhiteListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRdsDatabaseResponse CreateRdsDatabase(CreateRdsDatabaseRequest request) {
+            return  new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRdsDatabaseResponse> CreateRdsDatabase(CreateRdsDatabaseRequest request) {
+            return await new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRdsAccountsResponse DescribeRdsAccounts(DescribeRdsAccountsRequest request) {
+            return  new DescribeRdsAccountsExecutor().Client(this).Execute<DescribeRdsAccountsResponse, DescribeRdsAccountsResult, DescribeRdsAccountsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRdsAccountsResponse> DescribeRdsAccounts(DescribeRdsAccountsRequest request) {
+            return await new DescribeRdsAccountsExecutor().Client(this).Execute<DescribeRdsAccountsResponse, DescribeRdsAccountsResult, DescribeRdsAccountsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GrantRdsPrivilegeResponse GrantRdsPrivilege(GrantRdsPrivilegeRequest request) {
+            return  new GrantRdsPrivilegeExecutor().Client(this).Execute<GrantRdsPrivilegeResponse, GrantRdsPrivilegeResult, GrantRdsPrivilegeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GrantRdsPrivilegeResponse> GrantRdsPrivilege(GrantRdsPrivilegeRequest request) {
+            return await new GrantRdsPrivilegeExecutor().Client(this).Execute<GrantRdsPrivilegeResponse, GrantRdsPrivilegeResult, GrantRdsPrivilegeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -157,27 +292,97 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
-        /// 云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-        /// 如果主机中挂载的数据盘为按配置计费的云硬盘且AutoDelete属性为true，那么数据盘会随主机一起删除。
-        ///  [MFA enabled]
+        ///  获取当前实例的所有数据库详细信息的列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteVmInstanceResponse DeleteVmInstance(DeleteVmInstanceRequest request) {
-            return  new DeleteVmInstanceExecutor().Client(this).Execute<DeleteVmInstanceResponse, DeleteVmInstanceResult, DeleteVmInstanceRequest>(request);
+        public DescribeRdsDatabasesResponse DescribeRdsDatabases(DescribeRdsDatabasesRequest request) {
+            return  new DescribeRdsDatabasesExecutor().Client(this).Execute<DescribeRdsDatabasesResponse, DescribeRdsDatabasesResult, DescribeRdsDatabasesRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
-        /// 云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-        /// 如果主机中挂载的数据盘为按配置计费的云硬盘且AutoDelete属性为true，那么数据盘会随主机一起删除。
-        ///  [MFA enabled]
+        ///  获取当前实例的所有数据库详细信息的列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteVmInstanceResponse> DeleteVmInstance(DeleteVmInstanceRequest request) {
-            return await new DeleteVmInstanceExecutor().Client(this).Execute<DeleteVmInstanceResponse, DeleteVmInstanceResult, DeleteVmInstanceRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeRdsDatabasesResponse> DescribeRdsDatabases(DescribeRdsDatabasesRequest request) {
+            return await new DescribeRdsDatabasesExecutor().Client(this).Execute<DescribeRdsDatabasesResponse, DescribeRdsDatabasesResult, DescribeRdsDatabasesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRdsInstancesResponse DescribeRdsInstances(DescribeRdsInstancesRequest request) {
+            return  new DescribeRdsInstancesExecutor().Client(this).Execute<DescribeRdsInstancesResponse, DescribeRdsInstancesResult, DescribeRdsInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRdsInstancesResponse> DescribeRdsInstances(DescribeRdsInstancesRequest request) {
+            return await new DescribeRdsInstancesExecutor().Client(this).Execute<DescribeRdsInstancesResponse, DescribeRdsInstancesResult, DescribeRdsInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询RDS实例（MySQL、SQL Server等）的真实状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceInfoResponse DescribeInstanceInfo(DescribeInstanceInfoRequest request) {
+            return  new DescribeInstanceInfoExecutor().Client(this).Execute<DescribeInstanceInfoResponse, DescribeInstanceInfoResult, DescribeInstanceInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询RDS实例（MySQL、SQL Server等）的真实状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceInfoResponse> DescribeInstanceInfo(DescribeInstanceInfoRequest request) {
+            return await new DescribeInstanceInfoExecutor().Client(this).Execute<DescribeInstanceInfoResponse, DescribeInstanceInfoResult, DescribeInstanceInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRdsAccountResponse CreateRdsAccount(CreateRdsAccountRequest request) {
+            return  new CreateRdsAccountExecutor().Client(this).Execute<CreateRdsAccountResponse, CreateRdsAccountResult, CreateRdsAccountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRdsAccountResponse> CreateRdsAccount(CreateRdsAccountRequest request) {
+            return await new CreateRdsAccountExecutor().Client(this).Execute<CreateRdsAccountResponse, CreateRdsAccountResult, CreateRdsAccountRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRdsWhiteListResponse DescribeRdsWhiteList(DescribeRdsWhiteListRequest request) {
+            return  new DescribeRdsWhiteListExecutor().Client(this).Execute<DescribeRdsWhiteListResponse, DescribeRdsWhiteListResult, DescribeRdsWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRdsWhiteListResponse> DescribeRdsWhiteList(DescribeRdsWhiteListRequest request) {
+            return await new DescribeRdsWhiteListExecutor().Client(this).Execute<DescribeRdsWhiteListResponse, DescribeRdsWhiteListResult, DescribeRdsWhiteListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -201,21 +406,21 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  给网卡分配secondaryIp接口
+        ///  删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AssignSecondaryIpsResponse AssignSecondaryIps(AssignSecondaryIpsRequest request) {
-            return  new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request);
+        public DeleteRdsAccountResponse DeleteRdsAccount(DeleteRdsAccountRequest request) {
+            return  new DeleteRdsAccountExecutor().Client(this).Execute<DeleteRdsAccountResponse, DeleteRdsAccountResult, DeleteRdsAccountRequest>(request);
         }
 #else
         /// <summary>
-        ///  给网卡分配secondaryIp接口
+        ///  删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AssignSecondaryIpsResponse> AssignSecondaryIps(AssignSecondaryIpsRequest request) {
-            return await new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteRdsAccountResponse> DeleteRdsAccount(DeleteRdsAccountRequest request) {
+            return await new DeleteRdsAccountExecutor().Client(this).Execute<DeleteRdsAccountResponse, DeleteRdsAccountResult, DeleteRdsAccountRequest>(request).ConfigureAwait(false);
         }
 #endif
 

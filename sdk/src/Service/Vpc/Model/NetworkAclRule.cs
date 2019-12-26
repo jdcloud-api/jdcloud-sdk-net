@@ -77,5 +77,9 @@ namespace JDCloudSDK.Vpc.Model
         /// networkAclRule创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 规则类型，default：默认规则，custom：自定义规则
+        ///</summary>
+        public string RuleType{ get; set; }
     }
 }

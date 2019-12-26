@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性公网ip
+ * Elastic-IP
  * 弹性公网ip相关接口
  *
  * OpenAPI spec version: v1
@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
+using JDCloudSDK.Vpc.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -55,6 +56,11 @@ namespace  JDCloudSDK.Vpc.Apis
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
+        ///<summary>
+        /// Tag筛选条件
+        ///</summary>
+        public List<JDCloudSDK.Vpc.Model.TagFilter> Tags{ get; set; }
 
         ///<summary>
         /// Region ID

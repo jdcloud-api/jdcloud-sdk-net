@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性网卡
+ * Elastic-Network-Interface
  * 弹性网卡相关接口
  *
  * OpenAPI spec version: v1
@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Vpc.Apis
         [Required]
         public   string SubnetId{ get; set; }
         ///<summary>
-        /// 可用区，用户的默认可用区
+        /// 可用区，用户的默认可用区，该参数无效，不建议使用
         ///</summary>
         public   string Az{ get; set; }
         ///<summary>

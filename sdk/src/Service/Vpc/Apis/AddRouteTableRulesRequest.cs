@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class AddRouteTableRulesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 安全组规则信息
+        /// 路由表规则信息
         ///Required:true
         ///</summary>
         [Required]

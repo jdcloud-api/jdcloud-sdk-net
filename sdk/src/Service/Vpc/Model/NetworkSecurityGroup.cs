@@ -61,5 +61,13 @@ namespace JDCloudSDK.Vpc.Model
         /// 安全组创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 安全组类型, default：默认安全组，custom：自定义安全组
+        ///</summary>
+        public string NetworkSecurityGroupType{ get; set; }
+        ///<summary>
+        /// 安全组绑定的弹性网卡列表
+        ///</summary>
+        public List<string> NetworkInterfaceIds{ get; set; }
     }
 }

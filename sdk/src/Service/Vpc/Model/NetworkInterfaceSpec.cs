@@ -45,7 +45,7 @@ namespace JDCloudSDK.Vpc.Model
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 可用区，用户的默认可用区
+        /// 可用区，用户的默认可用区，该参数无效，不建议使用
         ///</summary>
         public string Az{ get; set; }
         ///<summary>

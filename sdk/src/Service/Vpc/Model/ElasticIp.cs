@@ -67,7 +67,7 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 实例类型
+        /// 实例类型,取值为：compute、lb、container、pod
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
@@ -82,5 +82,9 @@ namespace JDCloudSDK.Vpc.Model
         /// 弹性ip可用区属性，如果为空，表示全可用区
         ///</summary>
         public string Az{ get; set; }
+        ///<summary>
+        /// Tag信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

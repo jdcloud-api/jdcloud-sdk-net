@@ -54,5 +54,9 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         [Required]
         public ElasticIpSpec ElasticIpSpec{ get; set; }
+        ///<summary>
+        /// 用户标签
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
     }
 }

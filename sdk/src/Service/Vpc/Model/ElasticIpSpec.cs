@@ -46,7 +46,7 @@ namespace JDCloudSDK.Vpc.Model
         [Required]
         public int BandwidthMbps{ get; set; }
         ///<summary>
-        /// IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：[bgp，no_bgp]；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+        /// IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
         ///Required:true
         ///</summary>
         [Required]
