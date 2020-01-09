@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
-        <Version>0.7.3.1</Version>
+        <Version>0.8.6.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>目前RDS OpenAPI支持云数据库 MySQL、Percona、MariaDB、SQL Server、PostgreSQL</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

@@ -42,6 +42,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string AlarmId{ get; set; }
         ///<summary>
+        /// 触发条件id
+        ///</summary>
+        public List<long?> RuleIds{ get; set; }
+
+        ///<summary>
         /// 成功则返回true
         ///</summary>
         public   bool Success{ get; set; }

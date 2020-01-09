@@ -50,6 +50,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public Dictionary<String,string> Tags{ get; set; }
         ///<summary>
+        /// Unit
+        ///</summary>
+        public string Unit{ get; set; }
+        ///<summary>
         /// Value
         ///</summary>
         public object Value{ get; set; }

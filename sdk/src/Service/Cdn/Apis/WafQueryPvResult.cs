@@ -43,5 +43,13 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public List<PvItem> Pvs{ get; set; }
 
+        ///<summary>
+        /// PeakAttackPv
+        ///</summary>
+        public   int? PeakAttackPv{ get; set; }
+        ///<summary>
+        /// PeakTotalPv
+        ///</summary>
+        public   int? PeakTotalPv{ get; set; }
     }
 }

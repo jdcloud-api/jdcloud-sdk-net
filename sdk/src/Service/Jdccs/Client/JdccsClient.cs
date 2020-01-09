@@ -157,6 +157,25 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询工单详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTicketResponse DescribeTicket(DescribeTicketRequest request) {
+            return  new DescribeTicketExecutor().Client(this).Execute<DescribeTicketResponse, DescribeTicketResult, DescribeTicketRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询工单详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTicketResponse> DescribeTicket(DescribeTicketRequest request) {
+            return await new DescribeTicketExecutor().Client(this).Execute<DescribeTicketResponse, DescribeTicketResult, DescribeTicketRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看某资源的最后一个监控数据点（目前只支持机柜电流）
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,25 +191,6 @@ namespace JDCloudSDK.Jdccs.Client
         /// <returns>请求结果信息</returns>
         public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
             return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询可用监控项列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeMetricsResponse DescribeMetrics(DescribeMetricsRequest request) {
-            return  new DescribeMetricsExecutor().Client(this).Execute<DescribeMetricsResponse, DescribeMetricsResult, DescribeMetricsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询可用监控项列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeMetricsResponse> DescribeMetrics(DescribeMetricsRequest request) {
-            return await new DescribeMetricsExecutor().Client(this).Execute<DescribeMetricsResponse, DescribeMetricsResult, DescribeMetricsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -214,6 +214,44 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询工单列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTicketsResponse DescribeTickets(DescribeTicketsRequest request) {
+            return  new DescribeTicketsExecutor().Client(this).Execute<DescribeTicketsResponse, DescribeTicketsResult, DescribeTicketsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询工单列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTicketsResponse> DescribeTickets(DescribeTicketsRequest request) {
+            return await new DescribeTicketsExecutor().Client(this).Execute<DescribeTicketsResponse, DescribeTicketsResult, DescribeTicketsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  报警历史列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmHistoryResponse DescribeAlarmHistory(DescribeAlarmHistoryRequest request) {
+            return  new DescribeAlarmHistoryExecutor().Client(this).Execute<DescribeAlarmHistoryResponse, DescribeAlarmHistoryResult, DescribeAlarmHistoryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  报警历史列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmHistoryResponse> DescribeAlarmHistory(DescribeAlarmHistoryRequest request) {
+            return await new DescribeAlarmHistoryExecutor().Client(this).Execute<DescribeAlarmHistoryResponse, DescribeAlarmHistoryResult, DescribeAlarmHistoryRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询带宽（出口）流量（资源）详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -229,6 +267,25 @@ namespace JDCloudSDK.Jdccs.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBandwidthTrafficResponse> DescribeBandwidthTraffic(DescribeBandwidthTrafficRequest request) {
             return await new DescribeBandwidthTrafficExecutor().Client(this).Execute<DescribeBandwidthTrafficResponse, DescribeBandwidthTrafficResult, DescribeBandwidthTrafficRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询设备详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDeviceResponse DescribeDevice(DescribeDeviceRequest request) {
+            return  new DescribeDeviceExecutor().Client(this).Execute<DescribeDeviceResponse, DescribeDeviceResult, DescribeDeviceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询设备详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDeviceResponse> DescribeDevice(DescribeDeviceRequest request) {
+            return await new DescribeDeviceExecutor().Client(this).Execute<DescribeDeviceResponse, DescribeDeviceResult, DescribeDeviceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -252,6 +309,63 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询报警规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmsResponse DescribeAlarms(DescribeAlarmsRequest request) {
+            return  new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询报警规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmsResponse> DescribeAlarms(DescribeAlarmsRequest request) {
+            return await new DescribeAlarmsExecutor().Client(this).Execute<DescribeAlarmsResponse, DescribeAlarmsResult, DescribeAlarmsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询带宽（出口）列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBandwidthsResponse DescribeBandwidths(DescribeBandwidthsRequest request) {
+            return  new DescribeBandwidthsExecutor().Client(this).Execute<DescribeBandwidthsResponse, DescribeBandwidthsResult, DescribeBandwidthsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询带宽（出口）列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBandwidthsResponse> DescribeBandwidths(DescribeBandwidthsRequest request) {
+            return await new DescribeBandwidthsExecutor().Client(this).Execute<DescribeBandwidthsResponse, DescribeBandwidthsResult, DescribeBandwidthsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询设备列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest request) {
+            return  new DescribeDevicesExecutor().Client(this).Execute<DescribeDevicesResponse, DescribeDevicesResult, DescribeDevicesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询设备列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDevicesResponse> DescribeDevices(DescribeDevicesRequest request) {
+            return await new DescribeDevicesExecutor().Client(this).Execute<DescribeDevicesResponse, DescribeDevicesResult, DescribeDevicesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询IDC机房列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -271,6 +385,82 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询公网IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpsResponse DescribeIps(DescribeIpsRequest request) {
+            return  new DescribeIpsExecutor().Client(this).Execute<DescribeIpsResponse, DescribeIpsResult, DescribeIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询公网IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpsResponse> DescribeIps(DescribeIpsRequest request) {
+            return await new DescribeIpsExecutor().Client(this).Execute<DescribeIpsResponse, DescribeIpsResult, DescribeIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询带宽（出口）详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBandwidthResponse DescribeBandwidth(DescribeBandwidthRequest request) {
+            return  new DescribeBandwidthExecutor().Client(this).Execute<DescribeBandwidthResponse, DescribeBandwidthResult, DescribeBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询带宽（出口）详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBandwidthResponse> DescribeBandwidth(DescribeBandwidthRequest request) {
+            return await new DescribeBandwidthExecutor().Client(this).Execute<DescribeBandwidthResponse, DescribeBandwidthResult, DescribeBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询可用监控项列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeMetricsResponse DescribeMetrics(DescribeMetricsRequest request) {
+            return  new DescribeMetricsExecutor().Client(this).Execute<DescribeMetricsResponse, DescribeMetricsResult, DescribeMetricsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用监控项列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeMetricsResponse> DescribeMetrics(DescribeMetricsRequest request) {
+            return await new DescribeMetricsExecutor().Client(this).Execute<DescribeMetricsResponse, DescribeMetricsResult, DescribeMetricsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询机柜详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCabinetResponse DescribeCabinet(DescribeCabinetRequest request) {
+            return  new DescribeCabinetExecutor().Client(this).Execute<DescribeCabinetResponse, DescribeCabinetResult, DescribeCabinetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询机柜详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCabinetResponse> DescribeCabinet(DescribeCabinetRequest request) {
+            return await new DescribeCabinetExecutor().Client(this).Execute<DescribeCabinetResponse, DescribeCabinetResult, DescribeCabinetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询机柜列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -286,6 +476,25 @@ namespace JDCloudSDK.Jdccs.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCabinetsResponse> DescribeCabinets(DescribeCabinetsRequest request) {
             return await new DescribeCabinetsExecutor().Client(this).Execute<DescribeCabinetsResponse, DescribeCabinetsResult, DescribeCabinetsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询报警规则详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAlarmResponse DescribeAlarm(DescribeAlarmRequest request) {
+            return  new DescribeAlarmExecutor().Client(this).Execute<DescribeAlarmResponse, DescribeAlarmResult, DescribeAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询报警规则详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAlarmResponse> DescribeAlarm(DescribeAlarmRequest request) {
+            return await new DescribeAlarmExecutor().Client(this).Execute<DescribeAlarmResponse, DescribeAlarmResult, DescribeAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Monitor.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v2";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -271,6 +271,25 @@ namespace JDCloudSDK.Monitor.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeOneDataPointResponse DescribeOneDataPoint(DescribeOneDataPointRequest request) {
+            return  new DescribeOneDataPointExecutor().Client(this).Execute<DescribeOneDataPointResponse, DescribeOneDataPointResult, DescribeOneDataPointRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeOneDataPointResponse> DescribeOneDataPoint(DescribeOneDataPointRequest request) {
+            return await new DescribeOneDataPointExecutor().Client(this).Execute<DescribeOneDataPointResponse, DescribeOneDataPointResult, DescribeOneDataPointRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -286,25 +305,6 @@ namespace JDCloudSDK.Monitor.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAlarmsResponse> DeleteAlarms(DeleteAlarmsRequest request) {
             return await new DeleteAlarmsExecutor().Client(this).Execute<DeleteAlarmsResponse, DeleteAlarmsResult, DeleteAlarmsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public LastDownsampleResponse LastDownsample(LastDownsampleRequest request) {
-            return  new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<LastDownsampleResponse> LastDownsample(LastDownsampleRequest request) {
-            return await new LastDownsampleExecutor().Client(this).Execute<LastDownsampleResponse, LastDownsampleResult, LastDownsampleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -362,6 +362,25 @@ namespace JDCloudSDK.Monitor.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableAlarmsResponse> EnableAlarms(EnableAlarmsRequest request) {
             return await new EnableAlarmsExecutor().Client(this).Execute<EnableAlarmsResponse, EnableAlarmsResult, EnableAlarmsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  该接口为自定义监控数据上报的接口，方便您将自己采集的时序数据上报到云监控。不同region域名上报不同region的数据，参考：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/reporting-monitoring-data&quot;&gt;调用说明&lt;/a&gt;可上报原始数据和已聚合的统计数据。支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutCustomMetricDataResponse PutCustomMetricData(PutCustomMetricDataRequest request) {
+            return  new PutCustomMetricDataExecutor().Client(this).Execute<PutCustomMetricDataResponse, PutCustomMetricDataResult, PutCustomMetricDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  该接口为自定义监控数据上报的接口，方便您将自己采集的时序数据上报到云监控。不同region域名上报不同region的数据，参考：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/reporting-monitoring-data&quot;&gt;调用说明&lt;/a&gt;可上报原始数据和已聚合的统计数据。支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutCustomMetricDataResponse> PutCustomMetricData(PutCustomMetricDataRequest request) {
+            return await new PutCustomMetricDataExecutor().Client(this).Execute<PutCustomMetricDataResponse, PutCustomMetricDataResult, PutCustomMetricDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

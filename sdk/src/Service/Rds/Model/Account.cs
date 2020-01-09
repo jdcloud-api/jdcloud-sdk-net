@@ -46,6 +46,22 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string AccountStatus{ get; set; }
         ///<summary>
+        /// 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
+        ///</summary>
+        public string AccountType{ get; set; }
+        ///<summary>
+        /// 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+        ///</summary>
+        public string CreateTime{ get; set; }
+        ///<summary>
+        /// 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+        ///</summary>
+        public string UpdateTime{ get; set; }
+        ///<summary>
+        /// 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
+        ///</summary>
+        public string Notes{ get; set; }
+        ///<summary>
         /// 具有的权限
         ///</summary>
         public List<AccountPrivilege> AccountPrivileges{ get; set; }

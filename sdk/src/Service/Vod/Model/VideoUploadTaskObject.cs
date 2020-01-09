@@ -42,8 +42,12 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string VideoId{ get; set; }
         ///<summary>
-        /// 视频上传地址
+        /// 上传地址
         ///</summary>
         public string UploadUrl{ get; set; }
+        ///<summary>
+        /// 上传凭证
+        ///</summary>
+        public string AuthToken{ get; set; }
     }
 }

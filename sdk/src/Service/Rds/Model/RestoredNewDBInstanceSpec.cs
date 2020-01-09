@@ -88,7 +88,7 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceStorageType{ get; set; }
         ///<summary>
-        /// 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+        /// 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；PostgreSQL的默认端口号为5432；
         ///</summary>
         public string InstancePort{ get; set; }
         ///<summary>

@@ -39,11 +39,15 @@ namespace  JDCloudSDK.Monitor.Apis
     public class DescribeMetricsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
+        /// 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表
         ///Required:true
         ///</summary>
         [Required]
         public   string ServiceCode{ get; set; }
+        ///<summary>
+        /// Dimension
+        ///</summary>
+        public   string Dimension{ get; set; }
         ///<summary>
         /// metric的类型，取值0(控制台展示)、1(内部使用，控制台不展示)、2(所有).默认取0
         ///</summary>

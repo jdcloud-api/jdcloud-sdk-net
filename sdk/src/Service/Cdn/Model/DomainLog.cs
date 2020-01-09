@@ -50,6 +50,14 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string FileName{ get; set; }
         ///<summary>
+        /// 日志格式
+        ///</summary>
+        public string LogType{ get; set; }
+        ///<summary>
+        /// 日志粒度
+        ///</summary>
+        public string Interval{ get; set; }
+        ///<summary>
         /// 文件大小
         ///</summary>
         public long? Size{ get; set; }
@@ -61,5 +69,9 @@ namespace JDCloudSDK.Cdn.Model
         /// 日志结束时间，UTC时间
         ///</summary>
         public string EndTime{ get; set; }
+        ///<summary>
+        /// 日志修改时间，UTC时间
+        ///</summary>
+        public string LastModified{ get; set; }
     }
 }

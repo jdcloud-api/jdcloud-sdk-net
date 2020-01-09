@@ -39,6 +39,10 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
+        /// 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+        ///</summary>
+        public string AutoScalingPolicyId{ get; set; }
+        ///<summary>
         /// 告警通知联系人
         ///</summary>
         public List<BaseContact> BaseContact{ get; set; }

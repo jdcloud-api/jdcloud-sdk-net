@@ -39,19 +39,49 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryAreaIspListResult : JdcloudResult
     {
         ///<summary>
-        /// MainLand
+        /// 大陆城市
         ///</summary>
         public List<AreaIspItem> MainLand{ get; set; }
 
         ///<summary>
-        /// Overseas
+        /// 海外国家
         ///</summary>
         public List<AreaIspItem> Overseas{ get; set; }
 
         ///<summary>
-        /// Isp
+        /// 国内运营商
         ///</summary>
         public List<AreaIspItem> Isp{ get; set; }
+
+        ///<summary>
+        /// 港澳台
+        ///</summary>
+        public List<AreaIspItem> Gangaotai{ get; set; }
+
+        ///<summary>
+        /// 大洋洲国家
+        ///</summary>
+        public List<AreaIspItem> Oceanica{ get; set; }
+
+        ///<summary>
+        /// 南美洲国家
+        ///</summary>
+        public List<AreaIspItem> SouthAmerica{ get; set; }
+
+        ///<summary>
+        /// 北美洲国家
+        ///</summary>
+        public List<AreaIspItem> NorthAmerica{ get; set; }
+
+        ///<summary>
+        /// Asia
+        ///</summary>
+        public List<AreaIspItem> Asia{ get; set; }
+
+        ///<summary>
+        /// 欧洲国家
+        ///</summary>
+        public List<AreaIspItem> Europe{ get; set; }
 
     }
 }

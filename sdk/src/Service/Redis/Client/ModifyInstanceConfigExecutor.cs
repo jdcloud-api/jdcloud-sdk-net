@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  修改缓存Redis实例的配置参数，支持部分参数修改
+    ///  修改缓存Redis实例的配置参数，支持部分配置参数修改
     /// </summary>
     public class ModifyInstanceConfigExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改缓存Redis实例的配置参数，支持部分参数修改接口的Http 请求方法
+        ///  修改缓存Redis实例的配置参数，支持部分配置参数修改接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  修改缓存Redis实例的配置参数，支持部分参数修改接口的Http资源请求路径
+        ///  修改缓存Redis实例的配置参数，支持部分配置参数修改接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

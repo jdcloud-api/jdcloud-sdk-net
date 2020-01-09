@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,13 +33,13 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+    ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），不同规格价格也不同，具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         /// 
     /// </summary>
     public class CreateCacheInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+        ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），不同规格价格也不同，具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+        ///  创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），不同规格价格也不同，具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

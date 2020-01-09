@@ -59,6 +59,10 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   string Dimension{ get; set; }
         ///<summary>
+        /// 根据region筛选对应region的资源的报警历史
+        ///</summary>
+        public   string Region{ get; set; }
+        ///<summary>
         /// 正在报警, 取值为1
         ///</summary>
         public   long? IsAlarming{ get; set; }

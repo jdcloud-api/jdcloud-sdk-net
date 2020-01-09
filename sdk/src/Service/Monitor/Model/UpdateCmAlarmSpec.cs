@@ -39,66 +39,56 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+        /// 聚合方式，多个维度聚合成1个维度时，多维度值之间的聚合方式。可选值:sum、avg、min、max
         ///Required:true
         ///</summary>
         [Required]
-        public string Calculation{ get; set; }
+        public string AggrType{ get; set; }
         ///<summary>
-        /// 通知的联系组，如 [“联系组1”,”联系组2”]
+        /// 告警通知联系人
         ///</summary>
-        public List<string> ContactGroups{ get; set; }
+        public List<BaseContact> BaseContact{ get; set; }
         ///<summary>
-        /// 通知的联系人，如 [“联系人1”,”联系人2”]
-        ///</summary>
-        public List<string> ContactPersons{ get; set; }
-        ///<summary>
-        /// 取样频次
-        ///</summary>
-        public string DownSample{ get; set; }
-        ///<summary>
-        /// 根据产品线查询可用监控项列表 接口 返回的Metric字段
+        /// 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
         ///Required:true
         ///</summary>
         [Required]
-        public string Metric{ get; set; }
+        public List<DimensionsParam> Dimensions{ get; set; }
         ///<summary>
-        /// 通知周期 单位：小时
+        /// 是否启用, 1表示启用规则，0表示禁用规则，默认为1
         ///</summary>
-        public long? NoticePeriod{ get; set; }
+        public long? Enabled{ get; set; }
         ///<summary>
-        /// &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
+        /// 命名空间
         ///Required:true
         ///</summary>
         [Required]
-        public string Operation{ get; set; }
+        public string Namespace{ get; set; }
         ///<summary>
-        /// 统计周期（单位：分钟）目前支持的取值：2，5，15，30，60
+        /// 通知策略
+        ///</summary>
+        public List<NoticeOption> NoticeOption{ get; set; }
+        ///<summary>
+        /// 规则绑定资源所在地域
         ///Required:true
         ///</summary>
         [Required]
-        public long Period{ get; set; }
+        public string Region{ get; set; }
         ///<summary>
-        /// 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        /// 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+        ///Required:true
         ///</summary>
+        [Required]
         public string RuleName{ get; set; }
         ///<summary>
-        /// 产品名称
+        /// 规则的触发条件设置选项
         ///Required:true
         ///</summary>
         [Required]
-        public string ServiceCode{ get; set; }
+        public List<BasicCustomRule> RuleOption{ get; set; }
         ///<summary>
-        /// 阈值
-        ///Required:true
+        /// WebHookOption
         ///</summary>
-        [Required]
-        public double Threshold{ get; set; }
-        ///<summary>
-        /// 连续多少次后报警，可选值:1,2,3,5
-        ///Required:true
-        ///</summary>
-        [Required]
-        public long Times{ get; set; }
+        public WebHookOption WebHookOption{ get; set; }
     }
 }

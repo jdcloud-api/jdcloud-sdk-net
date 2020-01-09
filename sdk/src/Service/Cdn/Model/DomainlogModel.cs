@@ -54,6 +54,10 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
+        /// 日志修改时间，UTC时间
+        ///</summary>
+        public string LastModified{ get; set; }
+        ///<summary>
         /// MD5值
         ///</summary>
         public string Md5{ get; set; }

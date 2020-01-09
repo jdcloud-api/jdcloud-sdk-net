@@ -45,5 +45,13 @@ namespace JDCloudSDK.Rds.Model
         /// 实例名称
         ///</summary>
         public string ResourceName{ get; set; }
+        ///<summary>
+        /// 备注
+        ///</summary>
+        public string Remark{ get; set; }
+        ///<summary>
+        /// 绑定的资源
+        ///</summary>
+        public List<ResourceInfo> Bind{ get; set; }
     }
 }

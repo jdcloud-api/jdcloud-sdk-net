@@ -38,11 +38,11 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 生效截止时间，默认值:23:59
+        /// 生效截止时间，默认值:23:59:59
         ///</summary>
         public string EffectiveIntervalEnd{ get; set; }
         ///<summary>
-        /// 生效起始时间，默认值:00:00
+        /// 生效起始时间，默认值:00:00:00
         ///</summary>
         public string EffectiveIntervalStart{ get; set; }
         ///<summary>

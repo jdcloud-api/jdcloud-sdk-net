@@ -57,7 +57,7 @@ namespace  JDCloudSDK.Jdccs.Apis
         [Required]
         public   int EndTime{ get; set; }
         ///<summary>
-        /// 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d
+        /// 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，会根据时间范围是否超过2小时，设定时间间隔为1m或5m
         ///</summary>
         public   string TimeInterval{ get; set; }
         ///<summary>

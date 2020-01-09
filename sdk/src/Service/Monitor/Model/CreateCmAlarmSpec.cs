@@ -40,7 +40,7 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 幂等性校验参数,最长36位
+        /// 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，保证只创建一次规则
         ///Required:true
         ///</summary>
         [Required]
@@ -51,6 +51,6 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         [Required]
         [JsonProperty("createCmAlarmSpec")]
-        public CreateCmAlarmParam CreateCmAlarmSpecValue{ get; set; }
+        public CreateCustomAlarmParam CreateCmAlarmSpecValue{ get; set; }
     }
 }

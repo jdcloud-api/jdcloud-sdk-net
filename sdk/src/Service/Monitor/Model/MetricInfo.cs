@@ -38,16 +38,16 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// metric 单位
+        /// 单位
         ///</summary>
         public string CalculateUnit{ get; set; }
         ///<summary>
-        /// metric名称
+        /// metricName
         ///</summary>
         public string MetricName{ get; set; }
         ///<summary>
-        /// metric uid
+        /// metricUID
         ///</summary>
-        public string MetricUid{ get; set; }
+        public string MetricUID{ get; set; }
     }
 }

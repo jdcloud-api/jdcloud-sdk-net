@@ -70,6 +70,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public DateTime? NoticeTime{ get; set; }
         ///<summary>
+        /// 告警时间对应的时间戳
+        ///</summary>
+        public long? NoticeTimeUnix{ get; set; }
+        ///<summary>
         /// 资源类型
         ///</summary>
         public string Product{ get; set; }
@@ -81,6 +85,10 @@ namespace JDCloudSDK.Monitor.Model
         /// 告警通知人
         ///</summary>
         public List<NoticeReceiver> Receivers{ get; set; }
+        ///<summary>
+        /// 资源Id对应的region
+        ///</summary>
+        public string Region{ get; set; }
         ///<summary>
         /// 资源Id
         ///</summary>

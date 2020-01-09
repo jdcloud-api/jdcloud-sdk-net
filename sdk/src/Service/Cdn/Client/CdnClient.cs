@@ -214,25 +214,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置是否开启过滤参数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public OperateLiveDomainIgnoreQueryStringResponse OperateLiveDomainIgnoreQueryString(OperateLiveDomainIgnoreQueryStringRequest request) {
-            return  new OperateLiveDomainIgnoreQueryStringExecutor().Client(this).Execute<OperateLiveDomainIgnoreQueryStringResponse, OperateLiveDomainIgnoreQueryStringResult, OperateLiveDomainIgnoreQueryStringRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置是否开启过滤参数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<OperateLiveDomainIgnoreQueryStringResponse> OperateLiveDomainIgnoreQueryString(OperateLiveDomainIgnoreQueryStringRequest request) {
-            return await new OperateLiveDomainIgnoreQueryStringExecutor().Client(this).Execute<OperateLiveDomainIgnoreQueryStringResponse, OperateLiveDomainIgnoreQueryStringResult, OperateLiveDomainIgnoreQueryStringRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  禁用WAF黑名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -898,25 +879,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置IP白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetPushIpWhiteListResponse SetPushIpWhiteList(SetPushIpWhiteListRequest request) {
-            return  new SetPushIpWhiteListExecutor().Client(this).Execute<SetPushIpWhiteListResponse, SetPushIpWhiteListResult, SetPushIpWhiteListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置IP白名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetPushIpWhiteListResponse> SetPushIpWhiteList(SetPushIpWhiteListRequest request) {
-            return await new SetPushIpWhiteListExecutor().Client(this).Execute<SetPushIpWhiteListResponse, SetPushIpWhiteListResult, SetPushIpWhiteListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  根据taskIds查询刷新预热任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -951,6 +913,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryStatisticsDataGroupSumResponse> QueryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) {
             return await new QueryStatisticsDataGroupSumExecutor().Client(this).Execute<QueryStatisticsDataGroupSumResponse, QueryStatisticsDataGroupSumResult, QueryStatisticsDataGroupSumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名的全部分类配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainAllConfigClassifyResponse QueryDomainAllConfigClassify(QueryDomainAllConfigClassifyRequest request) {
+            return  new QueryDomainAllConfigClassifyExecutor().Client(this).Execute<QueryDomainAllConfigClassifyResponse, QueryDomainAllConfigClassifyResult, QueryDomainAllConfigClassifyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名的全部分类配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainAllConfigClassifyResponse> QueryDomainAllConfigClassify(QueryDomainAllConfigClassifyRequest request) {
+            return await new QueryDomainAllConfigClassifyExecutor().Client(this).Execute<QueryDomainAllConfigClassifyResponse, QueryDomainAllConfigClassifyResult, QueryDomainAllConfigClassifyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1027,25 +1008,6 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryLiveStatisticsDataResponse> QueryLiveStatisticsData(QueryLiveStatisticsDataRequest request) {
             return await new QueryLiveStatisticsDataExecutor().Client(this).Execute<QueryLiveStatisticsDataResponse, QueryLiveStatisticsDataResult, QueryLiveStatisticsDataRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置回源鉴权信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetOriginAuthenticationResponse SetOriginAuthentication(SetOriginAuthenticationRequest request) {
-            return  new SetOriginAuthenticationExecutor().Client(this).Execute<SetOriginAuthenticationResponse, SetOriginAuthenticationResult, SetOriginAuthenticationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置回源鉴权信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetOriginAuthenticationResponse> SetOriginAuthentication(SetOriginAuthenticationRequest request) {
-            return await new SetOriginAuthenticationExecutor().Client(this).Execute<SetOriginAuthenticationResponse, SetOriginAuthenticationResult, SetOriginAuthenticationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1259,25 +1221,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询直播域名详情v2
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryLiveDomainDetailV2Response QueryLiveDomainDetailV2(QueryLiveDomainDetailV2Request request) {
-            return  new QueryLiveDomainDetailV2Executor().Client(this).Execute<QueryLiveDomainDetailV2Response, QueryLiveDomainDetailV2Result, QueryLiveDomainDetailV2Request>(request);
-        }
-#else
-        /// <summary>
-        ///  查询直播域名详情v2
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryLiveDomainDetailV2Response> QueryLiveDomainDetailV2(QueryLiveDomainDetailV2Request request) {
-            return await new QueryLiveDomainDetailV2Executor().Client(this).Execute<QueryLiveDomainDetailV2Response, QueryLiveDomainDetailV2Result, QueryLiveDomainDetailV2Request>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建刷新预热回调任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1392,25 +1335,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置http协议
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetHttpTypeResponse SetHttpType(SetHttpTypeRequest request) {
-            return  new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置http协议
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
-            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1426,6 +1350,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainLogResponse> QueryDomainLog(QueryDomainLogRequest request) {
             return await new QueryDomainLogExecutor().Client(this).Execute<QueryDomainLogResponse, QueryDomainLogResult, QueryDomainLogRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置http协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetHttpTypeResponse SetHttpType(SetHttpTypeRequest request) {
+            return  new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置http协议
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
+            return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1715,25 +1658,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置推流中断超时时间
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetPublishNormalTimeoutResponse SetPublishNormalTimeout(SetPublishNormalTimeoutRequest request) {
-            return  new SetPublishNormalTimeoutExecutor().Client(this).Execute<SetPublishNormalTimeoutResponse, SetPublishNormalTimeoutResult, SetPublishNormalTimeoutRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置推流中断超时时间
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetPublishNormalTimeoutResponse> SetPublishNormalTimeout(SetPublishNormalTimeoutRequest request) {
-            return await new SetPublishNormalTimeoutExecutor().Client(this).Execute<SetPublishNormalTimeoutResponse, SetPublishNormalTimeoutResult, SetPublishNormalTimeoutRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查看证书列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1791,6 +1715,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询目录带宽，仅有部分用户支持该功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDirBandwidthResponse QueryDirBandwidth(QueryDirBandwidthRequest request) {
+            return  new QueryDirBandwidthExecutor().Client(this).Execute<QueryDirBandwidthResponse, QueryDirBandwidthResult, QueryDirBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询目录带宽，仅有部分用户支持该功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDirBandwidthResponse> QueryDirBandwidth(QueryDirBandwidthRequest request) {
+            return await new QueryDirBandwidthExecutor().Client(this).Execute<QueryDirBandwidthResponse, QueryDirBandwidthResult, QueryDirBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置视频拖拽
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1810,25 +1753,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  绑定推流域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public BindPublishDomainResponse BindPublishDomain(BindPublishDomainRequest request) {
-            return  new BindPublishDomainExecutor().Client(this).Execute<BindPublishDomainResponse, BindPublishDomainResult, BindPublishDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  绑定推流域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<BindPublishDomainResponse> BindPublishDomain(BindPublishDomainRequest request) {
-            return await new BindPublishDomainExecutor().Client(this).Execute<BindPublishDomainResponse, BindPublishDomainResult, BindPublishDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询CC 防护开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1844,25 +1768,6 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryCCProtectSwitchResponse> QueryCCProtectSwitch(QueryCCProtectSwitchRequest request) {
             return await new QueryCCProtectSwitchExecutor().Client(this).Execute<QueryCCProtectSwitchResponse, QueryCCProtectSwitchResult, QueryCCProtectSwitchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建直播域名V2
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateLiveDomainResponse CreateLiveDomain(CreateLiveDomainRequest request) {
-            return  new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建直播域名V2
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateLiveDomainResponse> CreateLiveDomain(CreateLiveDomainRequest request) {
-            return await new CreateLiveDomainExecutor().Client(this).Execute<CreateLiveDomainResponse, CreateLiveDomainResult, CreateLiveDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2361,25 +2266,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询关联域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribebindedDomainsResponse DescribebindedDomains(DescribebindedDomainsRequest request) {
-            return  new DescribebindedDomainsExecutor().Client(this).Execute<DescribebindedDomainsResponse, DescribebindedDomainsResult, DescribebindedDomainsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询关联域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribebindedDomainsResponse> DescribebindedDomains(DescribebindedDomainsRequest request) {
-            return await new DescribebindedDomainsExecutor().Client(this).Execute<DescribebindedDomainsResponse, DescribebindedDomainsResult, DescribebindedDomainsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询WAF总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2395,25 +2281,6 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryWafSwitchResponse> QueryWafSwitch(QueryWafSwitchRequest request) {
             return await new QueryWafSwitchExecutor().Client(this).Execute<QueryWafSwitchResponse, QueryWafSwitchResult, QueryWafSwitchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询全部推流域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribePublishDomainsResponse DescribePublishDomains(DescribePublishDomainsRequest request) {
-            return  new DescribePublishDomainsExecutor().Client(this).Execute<DescribePublishDomainsResponse, DescribePublishDomainsResult, DescribePublishDomainsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询全部推流域名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribePublishDomainsResponse> DescribePublishDomains(DescribePublishDomainsRequest request) {
-            return await new DescribePublishDomainsExecutor().Client(this).Execute<DescribePublishDomainsResponse, DescribePublishDomainsResult, DescribePublishDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2608,21 +2475,21 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置转推域名
+        ///  域名一键复制配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyLiveDomainForwardCustomVhostResponse ModifyLiveDomainForwardCustomVhost(ModifyLiveDomainForwardCustomVhostRequest request) {
-            return  new ModifyLiveDomainForwardCustomVhostExecutor().Client(this).Execute<ModifyLiveDomainForwardCustomVhostResponse, ModifyLiveDomainForwardCustomVhostResult, ModifyLiveDomainForwardCustomVhostRequest>(request);
+        public ExecuteDomainCopyResponse ExecuteDomainCopy(ExecuteDomainCopyRequest request) {
+            return  new ExecuteDomainCopyExecutor().Client(this).Execute<ExecuteDomainCopyResponse, ExecuteDomainCopyResult, ExecuteDomainCopyRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置转推域名
+        ///  域名一键复制配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyLiveDomainForwardCustomVhostResponse> ModifyLiveDomainForwardCustomVhost(ModifyLiveDomainForwardCustomVhostRequest request) {
-            return await new ModifyLiveDomainForwardCustomVhostExecutor().Client(this).Execute<ModifyLiveDomainForwardCustomVhostResponse, ModifyLiveDomainForwardCustomVhostResult, ModifyLiveDomainForwardCustomVhostRequest>(request).ConfigureAwait(false);
+        public async Task<ExecuteDomainCopyResponse> ExecuteDomainCopy(ExecuteDomainCopyRequest request) {
+            return await new ExecuteDomainCopyExecutor().Client(this).Execute<ExecuteDomainCopyResponse, ExecuteDomainCopyResult, ExecuteDomainCopyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2642,25 +2509,6 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<BatchCreateResponse> BatchCreate(BatchCreateRequest request) {
             return await new BatchCreateExecutor().Client(this).Execute<BatchCreateResponse, BatchCreateResult, BatchCreateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置转推鉴权信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetForwardAuthenticationResponse SetForwardAuthentication(SetForwardAuthenticationRequest request) {
-            return  new SetForwardAuthenticationExecutor().Client(this).Execute<SetForwardAuthenticationResponse, SetForwardAuthenticationResult, SetForwardAuthenticationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置转推鉴权信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetForwardAuthenticationResponse> SetForwardAuthentication(SetForwardAuthenticationRequest request) {
-            return await new SetForwardAuthenticationExecutor().Client(this).Execute<SetForwardAuthenticationResponse, SetForwardAuthenticationResult, SetForwardAuthenticationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2794,25 +2642,6 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetWafSwitchResponse> SetWafSwitch(SetWafSwitchRequest request) {
             return await new SetWafSwitchExecutor().Client(this).Execute<SetWafSwitchResponse, SetWafSwitchResult, SetWafSwitchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置推流中断通知方式
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetStreamNotifyInfoResponse SetStreamNotifyInfo(SetStreamNotifyInfoRequest request) {
-            return  new SetStreamNotifyInfoExecutor().Client(this).Execute<SetStreamNotifyInfoResponse, SetStreamNotifyInfoResult, SetStreamNotifyInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置推流中断通知方式
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetStreamNotifyInfoResponse> SetStreamNotifyInfo(SetStreamNotifyInfoRequest request) {
-            return await new SetStreamNotifyInfoExecutor().Client(this).Execute<SetStreamNotifyInfoResponse, SetStreamNotifyInfoResult, SetStreamNotifyInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

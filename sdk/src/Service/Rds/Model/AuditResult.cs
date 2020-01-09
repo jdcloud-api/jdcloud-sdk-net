@@ -58,6 +58,10 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string ThreadId{ get; set; }
         ///<summary>
+        /// 线程ID，仅 PostgreSQL 支持此参数
+        ///</summary>
+        public string ProcessId{ get; set; }
+        ///<summary>
         /// 数据库名
         ///</summary>
         public string DbName{ get; set; }

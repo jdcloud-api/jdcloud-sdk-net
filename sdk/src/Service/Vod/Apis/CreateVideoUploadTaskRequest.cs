@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Vod.Apis
 {
@@ -43,11 +44,15 @@ namespace  JDCloudSDK.Vod.Apis
         public   string HttpMethod{ get; set; }
         ///<summary>
         /// 视频标题
+        ///Required:true
         ///</summary>
+        [Required]
         public   string Title{ get; set; }
         ///<summary>
         /// 文件名称
+        ///Required:true
         ///</summary>
+        [Required]
         public   string FileName{ get; set; }
         ///<summary>
         /// 文件大小

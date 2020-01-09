@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Monitor.Model
 {
@@ -46,9 +47,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        /// RegionId
+        /// RegionIdValue
         ///</summary>
-        public string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
         /// Value
         ///</summary>

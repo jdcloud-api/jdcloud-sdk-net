@@ -38,20 +38,12 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// metric个数
+        /// namespace名字
         ///</summary>
-        public long? MetricCount{ get; set; }
+        public string NamespaceName{ get; set; }
         ///<summary>
-        /// 命名空间名称
+        /// namespaceUUID
         ///</summary>
-        public string NsName{ get; set; }
-        ///<summary>
-        /// 命名空间uid
-        ///</summary>
-        public string NsUid{ get; set; }
-        ///<summary>
-        /// obj个数
-        ///</summary>
-        public long? ObjCount{ get; set; }
+        public string NamespaceUuid{ get; set; }
     }
 }

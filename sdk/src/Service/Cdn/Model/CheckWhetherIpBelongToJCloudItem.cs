@@ -54,6 +54,10 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string Province{ get; set; }
         ///<summary>
+        /// City
+        ///</summary>
+        public string City{ get; set; }
+        ///<summary>
         /// Isp
         ///</summary>
         public string Isp{ get; set; }

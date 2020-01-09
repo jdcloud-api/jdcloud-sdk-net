@@ -52,6 +52,10 @@ namespace  JDCloudSDK.Rds.Apis
         [Required]
         public   string AccountPassword{ get; set; }
         ///<summary>
+        /// 备注信息，仅支持PostgreSQL
+        ///</summary>
+        public   string Notes{ get; set; }
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>
