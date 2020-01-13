@@ -16,19 +16,19 @@ namespace JDCloudSDK.Core.Auth.Sign
     /// <summary>
     /// 京东云网关签名类
     /// </summary>
-    public class JDCloudSigner: IJDCloudSigner
+    public class JDCloudSigner : IJDCloudSigner
     {
         /// <summary>
         /// 要进行忽略的签名头信息
         /// </summary>
-        private static readonly string[] LIST_OF_HEADERS_TO_IGNORE_IN_LOWER_CASE = { "connection","x-jdcloud-trace-id"};
-          
+        private static readonly string[] LIST_OF_HEADERS_TO_IGNORE_IN_LOWER_CASE = { "connection", "x-jdcloud-trace-id" };
+
 
         /// <summary>
         /// URL 进行二次加密
         /// </summary>
-        public bool DoubleUrlEncode { get; set; }=false;
-        
+        public bool DoubleUrlEncode { get; set; } = false;
+
         /// <summary>
         /// 签名注释
         /// </summary>
@@ -42,7 +42,7 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="doubleUrlEncode"></param>
         public JDCloudSigner(bool doubleUrlEncode)
         {
-             DoubleUrlEncode = doubleUrlEncode;
+            DoubleUrlEncode = doubleUrlEncode;
         }
 
         /// <summary>
@@ -51,25 +51,53 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="requestModel"></param>
         /// <param name="credentials"></param>
         /// <returns></returns>
-        public SignedRequestModel Sign(RequestModel requestModel, Credential credentials) {
+        public SignedRequestModel Sign(RequestModel requestModel, Credential credentials)
+        {
             string nonceId = "";
-            if (requestModel.NonceId.IsNullOrWhiteSpace())
+            if (!requestModel.NonceId.IsNullOrWhiteSpace())
+            {
+                nonceId = requestModel.NonceId;
+            }
+            else if (requestModel.Header != null &&
+                requestModel.Header.Count > 0 &&
+                requestModel.Header.ContainsKey(ParameterConstant.X_JDCLOUD_NONCE))
+            {
+                List<string> headValues = requestModel.Header[ParameterConstant.X_JDCLOUD_NONCE];
+                if (headValues != null && headValues.Count > 0)
+                {
+                    nonceId = headValues[0];
+                }
+                else
+                {
+                    nonceId = Guid.NewGuid().ToString().ToLower();
+                }
+            }
+            else
             {
                 nonceId = Guid.NewGuid().ToString().ToLower();
             }
-            else {
-                nonceId = requestModel.NonceId;
-            }
-            
-            var signDate = requestModel.OverrddenDate == null ? DateTime.Now:requestModel.OverrddenDate.Value;
+
+            var signDate = requestModel.OverrddenDate == null ? DateTime.Now : requestModel.OverrddenDate.Value;
             string formattedSigningDateTime = signDate.ToString(ParameterConstant.DATA_TIME_FORMAT);
             string formattedSigningDate = signDate.ToString(ParameterConstant.HEADER_DATA_FORMAT);
-            string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName,ParameterConstant.JDCLOUD_TERMINATOR);
+            string scope = SignUtil.GenerateScope(formattedSigningDate, requestModel.ServiceName, requestModel.RegionName, ParameterConstant.JDCLOUD_TERMINATOR);
             var requestHeader = requestModel.Header;
-            requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
-                              new List<string> { formattedSigningDateTime } );
-            requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE, 
-                              new List<string> { nonceId });
+            if (!requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_DATE))
+            {
+                requestHeader.Add(ParameterConstant.X_JDCLOUD_DATE,
+                             new List<string> { formattedSigningDateTime });
+            }
+            else {
+                requestHeader[ParameterConstant.X_JDCLOUD_DATE] = new List<string> { formattedSigningDateTime };
+            }
+            if (!requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_NONCE))
+            {
+                requestHeader.Add(ParameterConstant.X_JDCLOUD_NONCE,
+                               new List<string> { nonceId });
+            }
+            else {
+                requestHeader[ParameterConstant.X_JDCLOUD_NONCE] = new List<string> { nonceId };
+            }
             var contentSHA256 = "";
             if (requestHeader.ContainsKey(ParameterConstant.X_JDCLOUD_CONTENT_SHA256))
             {
@@ -77,7 +105,7 @@ namespace JDCloudSDK.Core.Auth.Sign
                 if (contentSha256Value != null && contentSha256Value.Count > 0)
                 {
                     contentSHA256 = contentSha256Value[0];
-                } 
+                }
             }
             if (contentSHA256.IsNullOrWhiteSpace())
             {
@@ -86,30 +114,31 @@ namespace JDCloudSDK.Core.Auth.Sign
             var requestParameters = OrderRequestParameters(requestModel.QueryParameters);
             string path = "";
             StringBuilder stringBuilder = new StringBuilder();
-            if (!requestModel.ResourcePath.TrimStart().StartsWith("/")) {
+            if (!requestModel.ResourcePath.TrimStart().StartsWith("/"))
+            {
                 stringBuilder.Append("/");
             }
             stringBuilder.Append(requestModel.ResourcePath);
             path = stringBuilder.ToString();
             var canonicalRequest = SignUtil.CreateCanonicalRequest(requestParameters,
-                GetCanonicalizedResourcePath(path,false),
+                GetCanonicalizedResourcePath(path, false),
                 requestModel.HttpMethod.ToUpper()
-                ,GetCanonicalizedHeaderString(requestModel),
+                , GetCanonicalizedHeaderString(requestModel),
                 GetSignedHeadersString(requestModel), contentSHA256);
             var stringToSign = SignUtil.CreateStringToSign(canonicalRequest, formattedSigningDateTime, scope, ParameterConstant.JDCLOUD2_SIGNING_ALGORITHM);
 
             byte[] kSecret = System.Text.Encoding.UTF8.GetBytes($"JDCLOUD2{credentials.SecretAccessKey}");
-            byte[] kDate =SignUtil.Sign(formattedSigningDate, kSecret, ParameterConstant.SIGN_SHA256);
+            byte[] kDate = SignUtil.Sign(formattedSigningDate, kSecret, ParameterConstant.SIGN_SHA256);
             byte[] kRegion = SignUtil.Sign(requestModel.RegionName, kDate, ParameterConstant.SIGN_SHA256);
             byte[] kService = SignUtil.Sign(requestModel.ServiceName, kRegion, ParameterConstant.SIGN_SHA256);
             byte[] signingKey = SignUtil.Sign(ParameterConstant.JDCLOUD_TERMINATOR, kService, ParameterConstant.SIGN_SHA256);
             byte[] signature = SignUtil.ComputeSignature(stringToSign, signingKey);
-           // Console.WriteLine($" kSecret={ BitConverter.ToString(kSecret).Replace("-", "")}");
-           // Console.WriteLine($" kDate={ BitConverter.ToString(kDate).Replace("-", "")}");
-           // Console.WriteLine($" kRegion={ BitConverter.ToString(kRegion).Replace("-", "")}");
-           // Console.WriteLine($" kService={ BitConverter.ToString(kService).Replace("-", "")}");
-           // Console.WriteLine($" signingKey={ BitConverter.ToString(signingKey).Replace("-", "")}");
-           // Console.WriteLine($" signature={ BitConverter.ToString(signature).Replace("-", "")}");
+            // Console.WriteLine($" kSecret={ BitConverter.ToString(kSecret).Replace("-", "")}");
+            // Console.WriteLine($" kDate={ BitConverter.ToString(kDate).Replace("-", "")}");
+            // Console.WriteLine($" kRegion={ BitConverter.ToString(kRegion).Replace("-", "")}");
+            // Console.WriteLine($" kService={ BitConverter.ToString(kService).Replace("-", "")}");
+            // Console.WriteLine($" signingKey={ BitConverter.ToString(signingKey).Replace("-", "")}");
+            // Console.WriteLine($" signature={ BitConverter.ToString(signature).Replace("-", "")}");
 
             string signingCredentials = credentials.AccessKeyId + "/" + scope;
             string credential = "Credential=" + signingCredentials;
@@ -124,37 +153,40 @@ namespace JDCloudSDK.Core.Auth.Sign
                     .Append(", ")
                     .Append(signatureHeader)
                     .ToString();
-           
+
             requestModel.AddHeader(ParameterConstant.AUTHORIZATION, signHeader);
             SignedRequestModel signedRequestModel = new SignedRequestModel();
             signedRequestModel.CanonicalRequest = canonicalRequest;
             signedRequestModel.ContentSHA256 = contentSHA256;
-            foreach (var header in requestModel.Header) {
+            foreach (var header in requestModel.Header)
+            {
                 signedRequestModel.RequestHead.Add(header.Key, string.Join(",", header.Value.ToArray()));
             }
-            signedRequestModel.RequestNonceId = nonceId; 
+            signedRequestModel.RequestNonceId = nonceId;
             signedRequestModel.SignedHeaders = signHeader;
             signedRequestModel.StringSignature = stringToSign;
             signedRequestModel.StringToSign = stringToSign;
-            
+
             return signedRequestModel;
         }
 
-       
-
-        
 
 
 
 
-       
+
+
+
+
         /// <summary>
         /// order request parameters
         /// </summary>
         /// <param name="requestQueryParameters"></param>
         /// <returns></returns>
-        private static string OrderRequestParameters(string requestQueryParameters) {
-            if (requestQueryParameters.IsNullOrWhiteSpace()) {
+        private static string OrderRequestParameters(string requestQueryParameters)
+        {
+            if (requestQueryParameters.IsNullOrWhiteSpace())
+            {
                 return string.Empty;
             }
             if (!requestQueryParameters.IsNullOrWhiteSpace())
@@ -166,10 +198,13 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
             Dictionary<string, string> paramDic = new Dictionary<string, string>();
             var paramArray = requestQueryParameters.Split('&');
-            if (paramArray != null && paramArray.Length > 0) {
-                foreach (var paramKeyValue in paramArray) {
+            if (paramArray != null && paramArray.Length > 0)
+            {
+                foreach (var paramKeyValue in paramArray)
+                {
                     var keyValue = paramKeyValue.Split('=');
-                    if (keyValue != null && keyValue.Length > 0) {
+                    if (keyValue != null && keyValue.Length > 0)
+                    {
                         if (keyValue.Length == 1)
                         {
                             paramDic.Add(keyValue[0], string.Empty);
@@ -178,23 +213,27 @@ namespace JDCloudSDK.Core.Auth.Sign
                         {
                             paramDic.Add(keyValue[0], keyValue[1]);
                         }
-                        else {
+                        else
+                        {
                             StringBuilder stringBuilder = new StringBuilder();
-                            for (int i = 1; i < keyValue.Length; i++) {
+                            for (int i = 1; i < keyValue.Length; i++)
+                            {
                                 if (i == keyValue.Length - 1)
                                 {
                                     stringBuilder.Append(keyValue[i]);
                                 }
-                                else {
+                                else
+                                {
                                     stringBuilder.Append(keyValue[i]).Append("=");
                                 }
-                            } 
+                            }
                             paramDic.Add(keyValue[0], stringBuilder.ToString());
                         }
                     }
                 }
             }
-            if (paramDic != null && paramDic.Count > 0) {
+            if (paramDic != null && paramDic.Count > 0)
+            {
                 StringBuilder resultBuilder = new StringBuilder();
 #if !NET20 && !NET30
                 var orderParamDic = paramDic.OrderBy(p => p.Key);
@@ -206,16 +245,17 @@ namespace JDCloudSDK.Core.Auth.Sign
                     orderParamDic.Add(item.Key, item.Value);
                 }
 #endif
-                foreach (var param in orderParamDic) {
+                foreach (var param in orderParamDic)
+                {
                     resultBuilder.Append(param.Key).Append("=").Append(param.Value);
                     resultBuilder.Append("&");
                 }
                 return resultBuilder.ToString().TrimEnd('&');
-            } 
+            }
             return string.Empty;
         }
 
-        
+
 
 
         /// <summary>
@@ -328,14 +368,14 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <returns>转换后的path</returns>
         protected string GetCanonicalizedResourcePath(string path, bool doubleUrlEncode)
         {
- 
-            if (path.IsNullOrWhiteSpace()) 
+
+            if (path.IsNullOrWhiteSpace())
             {
                 return "/";
             }
             else
             {
-                string value = doubleUrlEncode ?Uri.EscapeDataString(path).Replace("%2F","/"): path;
+                string value = doubleUrlEncode ? Uri.EscapeDataString(path).Replace("%2F", "/") : path;
                 if (value.StartsWith("/"))
                 {
                     return value;
@@ -347,14 +387,14 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
         }
 
-        
 
 
 
-       
 
 
-    
+
+
+
 
         /// <summary>
         /// 添加时间请求头信息
@@ -365,7 +405,7 @@ namespace JDCloudSDK.Core.Auth.Sign
         {
             string formatDateTime = requestModel.OverrddenDate == null || !requestModel.OverrddenDate.HasValue ?
                 DateTime.UtcNow.ToString(ParameterConstant.DATA_TIME_FORMAT) : requestModel.OverrddenDate.Value.ToString(ParameterConstant.DATA_TIME_FORMAT);
-            requestModel.AddHeader(ParameterConstant.X_JDCLOUD_DATE, formatDateTime); 
+            requestModel.AddHeader(ParameterConstant.X_JDCLOUD_DATE, formatDateTime);
             return requestModel;
         }
 
@@ -377,7 +417,8 @@ namespace JDCloudSDK.Core.Auth.Sign
         private RequestModel AddContentTypeHeader(RequestModel requestModel)
         {
 #if !NET20 && !NET30
-            if(!requestModel.Header.Any(p=>p.Key.ToLower() == ParameterConstant.CONTENT_TYPE.ToLower())){ 
+            if (!requestModel.Header.Any(p => p.Key.ToLower() == ParameterConstant.CONTENT_TYPE.ToLower()))
+            {
 #else
             var contain = false;
             foreach (var item in requestModel.Header.Keys) {
@@ -392,10 +433,10 @@ namespace JDCloudSDK.Core.Auth.Sign
                 {
                     requestModel.ContentType = ParameterConstant.MIME_JSON;
                 }
-                
+
                 requestModel.AddHeader(ParameterConstant.CONTENT_TYPE, requestModel.ContentType);
             }
- 
+
             return requestModel;
         }
 
@@ -411,11 +452,12 @@ namespace JDCloudSDK.Core.Auth.Sign
             {
                 throw new ArgumentNullException("the request url is not set,please check the client url config");
             }
-            if ( requestModel.Uri.IsDefaultPort)
+            if (requestModel.Uri.IsDefaultPort)
             {
                 requestModel.AddHeader(ParameterConstant.HOST, requestModel.Uri.Host);
-                
-            }else
+
+            }
+            else
             {
                 StringBuilder signHostBuilder = new StringBuilder();
                 signHostBuilder.Append(requestModel.Uri.Host).Append(":").Append(requestModel.Uri.Port);
@@ -443,17 +485,18 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="nonceId">the request nonce id</param>
         /// <param name="overrddenDate">the sgin overrdden date</param>
         /// <returns></returns>
-        public SignedRequestModel Sign(string host, string port, string path, string queryString, 
+        public SignedRequestModel Sign(string host, string port, string path, string queryString,
             string serviceName, string httpRequestMethod, string regionName, string apiVersion, Credential credentials,
             byte[] content = null,
             string contentType = "application/json",
             Dictionary<string, List<string>> header = null,
-            string nonceId=null, DateTime? overrddenDate = null)
+            string nonceId = null, DateTime? overrddenDate = null)
         {
             RequestModel requestModel = new RequestModel();
             requestModel.ServiceName = serviceName;
             requestModel.RegionName = regionName;
-            if (header != null && header.Count > 0) {
+            if (header != null && header.Count > 0)
+            {
 #if !NET30 && !NET20
                 requestModel.Header.Concat(header).ToDictionary(k => k.Key, v => v.Value);
 #else
@@ -475,7 +518,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             var requestUrl = $"http://{host}{port}{path}{queryString}";
             Uri uri = new Uri(requestUrl);
             requestModel.Uri = uri;// uri.Host
-             
+
             requestModel.QueryParameters = queryString;
 
             if (!(uri.Scheme.ToLower() == "http" && uri.Port == 80) &&
@@ -485,7 +528,7 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
             requestModel.ResourcePath = path;
             return Sign(requestModel, credentials);
-            
+
         }
     }
 
