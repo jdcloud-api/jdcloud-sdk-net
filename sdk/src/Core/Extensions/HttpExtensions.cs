@@ -43,23 +43,23 @@ namespace JDCloudSDK.Core.Extensions
         /// <returns></returns>
         public static HttpWebRequest DoSign(this HttpWebRequest httpWebRequest, Credential credentials, string serviceName = null, object bodyContent = null,bool isWriteBody =false,JDCloudSignVersionType? signType = null, DateTime? overrideDate = null) {
             var byteContent = new byte[0];
-            if (bodyContent != null) {
+            if (bodyContent != null)
+            {
                 if (isWriteBody)
-                { 
-                    var httpRequestWrite = httpWebRequest.GetRequestStream();
-
+                {
                     if (bodyContent is byte[])
                     {
-                         byteContent = (byte[])bodyContent;
-                        httpRequestWrite.Write(byteContent, 0, byteContent.Length);
+                        byteContent = (byte[])bodyContent;
                     }
                     else if (bodyContent is string)
                     {
-                         byteContent = System.Text.Encoding.UTF8.GetBytes((string)bodyContent);
-                        httpRequestWrite.Write(byteContent, 0, byteContent.Length);
+                        byteContent = System.Text.Encoding.UTF8.GetBytes((string)bodyContent);
+                        //  httpWebRequest.ContentLength = byteContent.Length;
+                        //  httpRequestWrite.Write(byteContent, 0, byteContent.Length);
+
                     }
                     else if (bodyContent is int || bodyContent is long || bodyContent is bool || bodyContent is float || bodyContent is double)
-                    {  
+                    {
                         if (bodyContent is int)
                         {
                             byteContent = BitConverter.GetBytes((int)bodyContent);
@@ -79,42 +79,37 @@ namespace JDCloudSDK.Core.Extensions
                         else if (bodyContent is double)
                         {
                             byteContent = BitConverter.GetBytes((double)bodyContent);
-                        } 
-                        httpRequestWrite.Write(byteContent, 0, byteContent.Length);
-                    }
-                    else if (bodyContent is JdcloudRequest)
-                    {
-                        var requestJson = JsonConvert.SerializeObject(bodyContent);
-                        if (!requestJson.IsNullOrWhiteSpace())
-                        {
-                            byteContent = System.Text.Encoding.UTF8.GetBytes((string)bodyContent);
-                            httpRequestWrite.Write(byteContent, 0, byteContent.Length);
                         }
+
                     }
+
                     else
                     {
                         var requestJson = JsonConvert.SerializeObject(bodyContent);
                         if (!requestJson.IsNullOrWhiteSpace())
                         {
-                            byteContent = System.Text.Encoding.UTF8.GetBytes((string)bodyContent);
-                            httpRequestWrite.Write(byteContent, 0, byteContent.Length);
+                            byteContent = Encoding.UTF8.GetBytes((string)bodyContent);
                         }
                     }
+
                 }
             }
             var headers = httpWebRequest.Headers;
             var requestUri = httpWebRequest.RequestUri;
             var queryString = requestUri.Query;
             var requestPath = requestUri.AbsolutePath;
-            var requestContent =  bodyContent;
+            var requestContent = bodyContent;
+
             var requestMethod = httpWebRequest.Method;
             string apiVersion = requestUri.GetRequestVersion();
             RequestModel requestModel = new RequestModel();
+            requestModel.Content = (byte[])byteContent.Clone();
             requestModel.ApiVersion = apiVersion;
-           
-            if (!httpWebRequest.ContentType.IsNullOrWhiteSpace()  ) {
+
+            if (!httpWebRequest.ContentType.IsNullOrWhiteSpace())
+            {
                 requestModel.ContentType = httpWebRequest.ContentType.ToString();
-            } 
+            }
             requestModel.HttpMethod = requestMethod.ToString().ToUpper();
             var pathRegion = requestUri.GetRequestVersion();
             if (!pathRegion.IsNullOrWhiteSpace())
@@ -141,11 +136,11 @@ namespace JDCloudSDK.Core.Extensions
                 requestModel.ServiceName = serviceName;
             }
             JDCloudSignVersionType jDCloudSignVersionType = GlobalConfig.GetInstance().SignVersionType;
-            if (signType != null&&signType.HasValue)
+            if (signType != null && signType.HasValue)
             {
                 jDCloudSignVersionType = signType.Value;
             }
-            requestModel.SignType = jDCloudSignVersionType; 
+            requestModel.SignType = jDCloudSignVersionType;
             requestModel.Uri = requestUri;
             requestModel.QueryParameters = queryString;
             requestModel.OverrddenDate = overrideDate;
@@ -156,15 +151,26 @@ namespace JDCloudSDK.Core.Extensions
             }
             foreach (string headerKeyValue in headers.Keys)
             {
-                requestModel.AddHeader(headerKeyValue,   headers.Get(headerKeyValue));
+                requestModel.AddHeader(headerKeyValue, headers.Get(headerKeyValue));
             }
             IJDCloudSigner jDCloudSigner = SignUtil.GetJDCloudSigner(jDCloudSignVersionType);
             SignedRequestModel signedRequestModel = jDCloudSigner.Sign(requestModel, credentials);
             var signedHeader = signedRequestModel.RequestHead;
-            foreach(var key in signedHeader.Keys) {
-                if (httpWebRequest.Headers.GetValues(key) == null) {
+            foreach (var key in signedHeader.Keys)
+            {
+                if (httpWebRequest.Headers.GetValues(key) == null)
+                {
                     var value = signedHeader[key];
-                    httpWebRequest.Headers.Add(key, value); 
+                    httpWebRequest.Headers.Add(key, value);
+                }
+            }
+            if (byteContent.Length > 0)
+            {
+
+                httpWebRequest.ContentLength = byteContent.Length;
+                using (var httpRequestWrite = httpWebRequest.GetRequestStream())
+                {
+                    httpRequestWrite.Write(byteContent, 0, byteContent.Length);
                 }
             }
             return httpWebRequest;
