@@ -7,14 +7,16 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+#if !NET30&&!NET20
 using System.Linq;
+#endif
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using JDCloudSDK.Core.Extensions;
 using System.IO;
 
-#if NET35 || NET40
+#if NET35 || NET40 || NET30 || NET20
 using System.Net;
 #else
 using System.Threading.Tasks;
@@ -72,7 +74,7 @@ namespace JDCloudSDK.Core.Client
         ///  如果Http 请求状态为ok(200) 返回 成功请求后得到的结果 如果返回 200 内容为null返回null
         ///  如果Http 请求返回状态不为（OK）200 则返回错误信息，Error内的code 返回 Http 请求的错误码，message 返回服务器返回的异常
         /// </returns>
-#if NET40 || NET35
+#if NET40 || NET35 || NET20 || NET30
         public R Execute<R, R2, T>(T request) where T : JdcloudRequest where R2 : JdcloudResult where R : JdcloudResponse<R2>, new()
 #else
         public async Task<R> Execute<R, R2, T>(T request) where T : JdcloudRequest where R2 : JdcloudResult where R : JdcloudResponse<R2>, new()
@@ -117,7 +119,7 @@ namespace JDCloudSDK.Core.Client
                     bodyContent = Encoding.UTF8.GetBytes(contentStr);
                 }
                 string url = host.ToString() + path.ToString() + paramsStr;
-#if NET35 || NET40
+#if NET35 || NET40 || NET20 || NET30
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
 
                 if (JdcloudClient.CustomHeader != null && JdcloudClient.CustomHeader.Count > 0)
@@ -133,7 +135,7 @@ namespace JDCloudSDK.Core.Client
                         {
 #if NET40
                             webRequest.Host = item.Value; 
-#elif NET35
+#elif NET35 ||NET30 || NET20
                             //因为 dotnet3.5 默认不支持设置header 的host 属性，在使用签名的时候需要添加host 属性的信息，因此使用反射设置对象的值 ，会有性能损失。
                             FieldInfo headersFieldInfo = webRequest.GetType().GetField("_HttpRequestHeaders", System.Reflection.BindingFlags.NonPublic
                                         | System.Reflection.BindingFlags.Instance
@@ -181,7 +183,15 @@ namespace JDCloudSDK.Core.Client
                                     string[] values = httpWebResponse.Headers.GetValues(key);
                                     if (values != null && values.Length > 0)
                                     {
+#if !NET30 && !NET20
                                         httpSDKResponse.AddHeader(key, values.ToList());
+#else
+                                        List<string> headerValues = new List<string>();
+                                        foreach (var item in values) {
+                                            headerValues.Add(item);
+                                        }
+                                        httpSDKResponse.AddHeader(key, headerValues);
+#endif
                                     }
 
                                 }
@@ -217,7 +227,16 @@ namespace JDCloudSDK.Core.Client
                                         string[] values = exceptionResponce.Headers.GetValues(key);
                                         if (values != null && values.Length > 0)
                                         {
-                                            httpSDKResponse.AddHeader(key, values.ToList());
+#if !NET30 && !NET20
+                                        httpSDKResponse.AddHeader(key, values.ToList());
+#else
+                                            List<string> headerValues = new List<string>();
+                                            foreach (var item in values)
+                                            {
+                                                headerValues.Add(item);
+                                            }
+                                            httpSDKResponse.AddHeader(key, headerValues);
+#endif
                                         }
 
                                     }
@@ -235,8 +254,8 @@ namespace JDCloudSDK.Core.Client
                 return null;
 #else
 
-                // 生成请求header
-                var httpClient = JdcloudClient.RequestHttpClient;
+                                        // 生成请求header
+                                        var httpClient = JdcloudClient.RequestHttpClient;
                 if (httpClient == null)
                 {
                     httpClient = new System.Net.Http.HttpClient();
@@ -310,7 +329,7 @@ namespace JDCloudSDK.Core.Client
                 else
                 {
 
-                    if (result.ReturnValue != null && result.ReturnValue.Count() > 0)
+                    if (result.ReturnValue != null && result.ReturnValue.Length>0)
                     {
                         string resultStr = result.ReturnValue;
 
@@ -330,7 +349,7 @@ namespace JDCloudSDK.Core.Client
         }
 
 
-#if NET35 || NET40
+#if NET35 || NET40 || NET30 || NET20
 #else
 
 
@@ -452,7 +471,7 @@ namespace JDCloudSDK.Core.Client
                 var properties = request.GetType().GetProperties();
                 foreach (var item in properties)
                 {
-#if NET40 || NET35
+#if NET40 || NET35 || NET30 || NET20
 
                     var requiredAttribute = item.GetCustomAttributes(typeof(RequiredAttribute), false);
                     if (requiredAttribute != null && requiredAttribute.Length > 0)
@@ -534,7 +553,16 @@ namespace JDCloudSDK.Core.Client
             var properties = request.GetType().GetProperties();
             if (properties != null && properties.Length > 0)
             {
+#if !NET20 && !NET30
                 propertyInfo = properties.Where(p => p.Name.ToLower() == propertyName.ToLower()).FirstOrDefault();
+#else
+                foreach (var item in properties) {
+                    if (item.Name.ToLower() == propertyName.ToLower()) {
+                        propertyInfo = item;
+                        break;
+                    }
+                }
+#endif
             }
 
             if (propertyInfo == null)
@@ -605,7 +633,14 @@ namespace JDCloudSDK.Core.Client
                 paramDic = CreateParam(jObject);
                 if (paramDic != null)
                 {
+#if !NET30 && !NET20
                     var paramDicOrder = paramDic.OrderBy(p => p.Key);
+#else
+                    var paramDicOrder = new SortedDictionary<string, string>();
+                    foreach (var item in paramDic) {
+                        paramDicOrder.Add(item.Key, item.Value);
+                    }
+#endif
                     StringBuilder paramStrBuilder = new StringBuilder();
                     foreach (var item in paramDicOrder)
                     {

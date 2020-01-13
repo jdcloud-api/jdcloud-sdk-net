@@ -9,9 +9,11 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
-#if NET35 || NET40
+#if !NET20 && !NET30
+using System.Linq;
+#endif
+#if NET35 || NET40 || NET20 || NET30
 using System.Net;
 #else
 using System.Net.Http;
@@ -26,7 +28,7 @@ namespace JDCloudSDK.Core.Extensions
     public static class HttpExtensions
     {
 
-#if NET35 || NET40
+#if NET35 || NET40 ||NET30 || NET20
 
         /// <summary>
         /// 扩展签名方法

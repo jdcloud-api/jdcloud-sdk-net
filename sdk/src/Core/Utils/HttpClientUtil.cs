@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-#if NET40||NET35
+#if NET40||NET35 ||NET30 ||NET20
 #else
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 #endif
 using System.Text;
+#if !NET30&&!NET20
 using System.Linq;
+#endif
 using System.IO;
 using System.Net;
 using System.Reflection;
@@ -40,8 +42,9 @@ namespace JDCloudSDK.Core.Utils
                 return "";
             }
             try
-            {
+            { 
                 string encode = System.Web.HttpUtility.UrlEncode(value, ParameterConstant.DEFAULT_ENCODING);
+ 
                 encode = encode.Replace("+", "%20").Replace("*", "%2A").Replace("%7E", "~").Replace("%7e", "~");
                 if (path)
                 {
@@ -113,7 +116,7 @@ namespace JDCloudSDK.Core.Utils
 
     }
 
-#if NET35
+#if NET35 ||NET30 || NET20
     /// <summary>
     /// 自定义头信息
     /// </summary>

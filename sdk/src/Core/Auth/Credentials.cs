@@ -33,7 +33,7 @@ namespace JDCloudSDK.Core.Auth
         public Credentials(string accessKeyId, string secretAccessKey, bool validateCredentials)
         {
 
-#if NET35
+#if NET35 ||NET30 ||NET20
             this.AccessKeyId = string.IsNullOrEmpty(accessKeyId)|| string.IsNullOrEmpty(accessKeyId.Trim()) ? null:accessKeyId.Trim();
             this.SecretAccessKey = string.IsNullOrEmpty(secretAccessKey) || string.IsNullOrEmpty(secretAccessKey.Trim()) ? null : secretAccessKey.Trim();
 #else

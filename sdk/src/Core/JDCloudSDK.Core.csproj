@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;net46;net47;net48;net40;net45;net35</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net46;net47;net48;net40;net45;net35;net30;net20</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Configurations>Debug;Release;</Configurations>
     <Version>0.1.0</Version>
@@ -22,9 +22,9 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40' Or '$(TargetFramework)' == 'net30' Or '$(TargetFramework)' == 'net20'">
     <Reference Include="System.Web" />
-  </ItemGroup>
+  </ItemGroup> 
   <ItemGroup Condition="'$(TargetFramework)' == 'net45' Or '$(TargetFramework)' == 'net46' Or '$(TargetFramework)' == 'net47' Or '$(TargetFramework)' == 'net48'">
     <PackageReference Include="System.Memory" Version="4.5.3">
     </PackageReference>

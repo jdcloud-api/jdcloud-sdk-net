@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using JDCloudSDK.Core.Model;
+#if !NET20&&!NET30
 using System.Linq;
+#endif
 using JDCloudSDK.Core.Utils;
 using System.Text;
 using JDCloudSDK.Core.Common;
 using System.Globalization;
+using System.Collections;
 
 namespace JDCloudSDK.Core.Auth.Sign
 {
@@ -180,12 +183,24 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
 
             requestMethod = requestMethod.ToUpper();
-
+#if !NET20 && !NET30
             if (!REQUEST_METHOD.Contains(requestMethod))
             {
                 throw new ArgumentException($" request method :{requestMethod} not support");
             }
+#else
+            var contains = false;
+            foreach (var item in REQUEST_METHOD) {
+                if (item.ToLower() == requestMethod.ToLower()) {
+                    contains = true;
+                }
+            }
 
+            if (!contains)
+            {
+                throw new ArgumentException($" request method :{requestMethod} not support");
+            }
+#endif
             return requestMethod;
         }
 
@@ -224,7 +239,14 @@ namespace JDCloudSDK.Core.Auth.Sign
             requestModel.RegionName = regionName;
             if (header != null && header.Count > 0)
             {
+#if !NET30 && !NET20
                 requestModel.Header.Concat(header).ToDictionary(k => k.Key, v => v.Value);
+#else
+                foreach (var item in header)
+                {
+                    requestModel.Header.Add(item.Key, item.Value);
+                }
+#endif
             }
             requestModel.Content = content;
             requestModel.ContentType = contentType;
@@ -257,12 +279,20 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <param name="needSignHeaders">the headers while sign</param>
         /// <returns></returns>
 
-        public static string GetSignedHeadersString(Dictionary<string, string> needSignHeaders) {
+        public static string GetSignedHeadersString(IDictionary<string, string> needSignHeaders) {
             if (needSignHeaders == null | needSignHeaders.Count == 0)
             {
                 return null;
             }
+#if !NET20 && !NET30
             needSignHeaders = needSignHeaders.OrderBy(p => p.Key).ToDictionary(k => k.Key, v => v.Value);
+#else
+            var sortDic = new SortedDictionary<string, string>();
+            foreach (var item in needSignHeaders) {
+                sortDic.Add(item.Key, item.Value);
+            }
+            needSignHeaders = sortDic;
+#endif
             StringBuilder stringBuilder = new StringBuilder();
             foreach (var item in needSignHeaders) {
                 string key = item.Key.ToLower(CultureInfo.GetCultureInfo("en-US"));
@@ -281,8 +311,21 @@ namespace JDCloudSDK.Core.Auth.Sign
             if (needSignHeaders == null | needSignHeaders.Count == 0) {
                 return null;
             }
+#if !NET30 && !NET20
             needSignHeaders = needSignHeaders.OrderBy(p => p.Key).ToDictionary(k => k.Key, v => v.Value);
             string[] signHeaderKey = needSignHeaders.Keys.ToArray();
+#else
+            string[] signHeaderKey = new string[needSignHeaders.Count];
+            int i = 0;
+            foreach (var item in needSignHeaders) {
+                signHeaderKey[i] =  item.Key;
+                i += 1;
+            }
+            Array.Sort(signHeaderKey);
+           
+             
+#endif
+
             string signHeader = string.Join(";", signHeaderKey); 
             return signHeader; 
         }
@@ -329,7 +372,17 @@ namespace JDCloudSDK.Core.Auth.Sign
                     if (!item.Key.IsNullOrWhiteSpace()) {
                         if (item.Value != null && item.Value.Count > 0)
                         {
+#if !NET20 && !NET30
                             string value = string.Join(",", item.Value.Select(p => p.Trim()).ToArray());
+#else 
+                            string[] tmpList = new string[item.Value.Count];
+                            int i = 0;
+                            foreach (var tempItem in item.Value) {
+                                tmpList[i] = tempItem.Trim();
+                                i += 1;
+                            }
+                            string value = string.Join(",", tmpList);
+#endif
                             result.Add(item.Key, value);
                         }
                         else {
@@ -355,10 +408,28 @@ namespace JDCloudSDK.Core.Auth.Sign
                 foreach (var item in header) {
                     if (!item.Key.IsNullOrWhiteSpace()) {
                         string key = item.Key.ToLower().Trim();
+#if !NET20 && !NET30
                         if (!NOT_SIGN_REQUEST_HEAD.Contains(key)&&
                             !NOT_SIGN_REQUEST_HEAD_START.Any(p=>key.Trim().StartsWith(p))) {
                             result.Add(key, item.Value.Trim());
                         }
+#else
+                        var headContains = false;
+                        var headStartWith = false;
+                        foreach (var headerKey in NOT_SIGN_REQUEST_HEAD) {
+                            if (headerKey.ToLower() == key) {
+                                headContains = true;
+                            }
+                        }
+                        foreach (var headerStartKey in NOT_SIGN_REQUEST_HEAD_START) {
+                            if (key.TrimStart().ToLower().StartsWith(headerStartKey.ToLower())) {
+                                headStartWith = true;
+                            }
+                        }
+                        if (!headContains && !headStartWith){
+                            result.Add(key, item.Value.Trim());
+                        }
+#endif
                     }
                 } 
             }
@@ -410,7 +481,15 @@ namespace JDCloudSDK.Core.Auth.Sign
                                 if (paramKV[0]!=null&&paramKV[0]!=string.Empty) {
 
                                     string key = JDCloudSignV3Util.UnescapeDataStringRfc3986(paramKV[0]);
+#if !NET20 && !NET30
                                     string queryParamValue = string.Join("=", paramKV.Skip(1).Take(paramKV.Length - 1).ToArray());
+#else
+                                    string[] queryParamVlueArray = new string[paramKV.Length - 1];
+                                    for (int i = 1; i < paramKV.Length; i++) {
+                                        queryParamVlueArray[i - 1] = paramKV[i];
+                                    }
+                                    string queryParamValue = string.Join("=", queryParamVlueArray);
+#endif
                                     string value = JDCloudSignV3Util.UnescapeDataStringRfc3986(queryParamValue);
                                     QueryParam queryParam = new QueryParam
                                     {
@@ -426,7 +505,11 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
 
             if (queryParamList.Count > 0) {
+#if !NET20 && !NET30
                 queryParamList = queryParamList.OrderBy(p => p.Key).ThenBy(p => p.Value).ToList();
+#else
+                queryParamList.Sort();
+#endif
                 StringBuilder stringBuilder = new StringBuilder();
                 foreach (var item in queryParamList) {
                     stringBuilder.Append(item.Key).Append("=");
@@ -460,11 +543,29 @@ namespace JDCloudSDK.Core.Auth.Sign
             var decodePath = JDCloudSignV3Util.UnescapeDataStringRfc3986(path);
             var pathArray = decodePath.Split('/');
             //var pathDecodeArray = pathArray.Select(p => JDCloudSignV3Util.UnescapeDataStringRfc3986(p)).ToList();
+#if !NET30 && !NET20
             var pathList = pathArray.Select(p => JDCloudSignV3Util.EscapeUriDataStringRfc3986(p)).ToList();
-
             pathList.RemoveAll(p => p.Equals(string.Empty));
-           
             path = string.Join("/", pathList.ToArray());
+#else
+            var pathList = new List<string>();
+            foreach (var item in pathArray) {
+                if (item != null && item != string.Empty) {
+                    pathList.Add(JDCloudSignV3Util.EscapeUriDataStringRfc3986(item));
+                }
+            }
+            if (pathList.Count > 0) {
+                string[] pathArrays = new string[pathList.Count];
+                int i = 0;
+                foreach (var item in pathList) {
+                    pathArrays[i] = item;
+                    i += 1;
+                }
+                path = string.Join("/", pathArrays);
+            }
+
+#endif
+
             if (!path.StartsWith("/"))
             {
                 path = $"/{path}";
@@ -479,7 +580,8 @@ namespace JDCloudSDK.Core.Auth.Sign
     /// <summary>
     /// model use save query param
     /// </summary>
-    internal class QueryParam { 
+    internal class QueryParam : IComparer<QueryParam>
+    { 
         /// <summary>
         /// query string key
         /// </summary>
@@ -490,5 +592,19 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// query string value
         /// </summary>
         public string Value { get; set; }
+
+       
+
+        public int Compare(QueryParam x, QueryParam y)
+        {
+            if (x.Key != y.Key)
+            {
+                return x.Key.CompareTo(y.Key);
+            }
+            else {
+                return x.Value.CompareTo(y.Value);
+            }
+             
+        }
     }
 }

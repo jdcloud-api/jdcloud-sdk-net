@@ -1,4 +1,4 @@
-﻿#if !(NET35 || NET40)
+﻿#if !(NET35 || NET40||NET30||NET20)
 using JDCloudSDK.Core.Auth;
 using JDCloudSDK.Core.Auth.Sign;
 using JDCloudSDK.Core.Common;

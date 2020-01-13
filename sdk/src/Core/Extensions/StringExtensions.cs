@@ -18,7 +18,7 @@ namespace JDCloudSDK.Core.Utils
         /// <returns></returns>
         public static bool IsNullOrWhiteSpace(this string value)
         {
-#if NET35
+#if NET35 ||NET30 ||NET20
             if (value == null)
             {
                 return true;
@@ -39,7 +39,7 @@ namespace JDCloudSDK.Core.Utils
         /// <returns>首字母转换为大写的结果</returns>
         public static string StringFirstCharToUpper(this string str)
         {
-#if NET35
+#if NET35 ||NET30 || NET20
             if (str.IsNullOrWhiteSpace())
 
 #else

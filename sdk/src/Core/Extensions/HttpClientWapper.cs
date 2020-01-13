@@ -2,7 +2,7 @@
 using JDCloudSDK.Core.Extensions;
 using JDCloudSDK.Core.Model;
 
-#if NET35 || NET40
+#if NET35 || NET40 ||NET20||NET30
 #else
 using System;
 using System.IO;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 #endif
 namespace JDCloudSDK.Core.Extensions
 {
-#if NET35 || NET40
+#if NET35 || NET40 ||NET20||NET30
 
 #else
     /// <summary>

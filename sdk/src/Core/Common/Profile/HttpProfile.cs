@@ -1,4 +1,4 @@
-﻿#if !(NET35||NET40)
+﻿#if !(NET35||NET40||NET30||NET20)
 using System.Net.Http;
 #endif
 namespace JDCloudSDK.Core.Common.Profile
@@ -54,7 +54,7 @@ namespace JDCloudSDK.Core.Common.Profile
             this.Timeout = timeout;
         }
 
-#if!(NET35||NET40)
+#if!(NET35||NET40||NET20||NET30)
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -96,7 +96,7 @@ namespace JDCloudSDK.Core.Common.Profile
         /// </summary>
         public int Timeout { get; set; } = 15;
 
-#if!(NET35||NET40)
+#if!(NET35||NET40||NET30||NET20)
 
         /// <summary>
         /// 请求方法

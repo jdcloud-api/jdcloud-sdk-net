@@ -6,7 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+#if !NET20&&!NET30
 using System.Linq;
+#endif
 using System.Globalization;
 
 namespace JDCloudSDK.Core.Auth.Sign
@@ -194,7 +196,16 @@ namespace JDCloudSDK.Core.Auth.Sign
             }
             if (paramDic != null && paramDic.Count > 0) {
                 StringBuilder resultBuilder = new StringBuilder();
+#if !NET20 && !NET30
                 var orderParamDic = paramDic.OrderBy(p => p.Key);
+#else
+                
+
+                var orderParamDic = new SortedDictionary<string, string>(); ;
+                foreach (var item in paramDic) {
+                    orderParamDic.Add(item.Key, item.Value);
+                }
+#endif
                 foreach (var param in orderParamDic) {
                     resultBuilder.Append(param.Key).Append("=").Append(param.Value);
                     resultBuilder.Append("&");
@@ -215,10 +226,19 @@ namespace JDCloudSDK.Core.Auth.Sign
         private string GetSignedHeadersString(RequestModel requestModel)
         {
             var headers = requestModel.Header;
+
+#if !NET20 && !NET30
             var keys = headers.Keys;
             List<string> keysList = keys.ToList().OrderBy(p => p.ToLower(CultureInfo.GetCultureInfo("en-US"))).ToList();
+#else
+            List<string> keysList = new List<string>();
+            foreach (var item in headers.Keys) {
+                keysList.Add(item);
+            }
+            keysList.Sort();
+#endif
             StringBuilder stringBuilder = new StringBuilder();
-            foreach (String header in keysList)
+            foreach (string header in keysList)
             {
                 if (ShouldExcludeHeaderFromSigning(header))
                 {
@@ -242,7 +262,16 @@ namespace JDCloudSDK.Core.Auth.Sign
         {
             var headers = requestModel.Header;
             var keys = headers.Keys;
+#if !NET20 && !NET30
             List<string> keysList = keys.ToList().OrderBy(p => p.ToLower(CultureInfo.GetCultureInfo("en-US"))).ToList();
+#else
+            // todo 需要进行修改
+            List<string> keysList = new List<string>();
+            foreach (var item in keys) {
+                keysList.Add(item);
+            }
+            keysList.Sort();
+#endif
             StringBuilder stringBuilder = new StringBuilder();
             foreach (var item in keysList)
             {
@@ -276,7 +305,18 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <returns>是否是需要排除的头信息</returns>
         private bool ShouldExcludeHeaderFromSigning(string header)
         {
+#if !NET20 && !NET30
             return LIST_OF_HEADERS_TO_IGNORE_IN_LOWER_CASE.Contains(header.ToLower());
+#else
+            var result = false;
+            foreach (var item in LIST_OF_HEADERS_TO_IGNORE_IN_LOWER_CASE) {
+                if (header.ToLower() == item.ToLower()) {
+                    result = true;
+                    
+                }
+            }
+            return result;
+#endif 
         }
 
 
@@ -336,7 +376,18 @@ namespace JDCloudSDK.Core.Auth.Sign
         /// <returns></returns>
         private RequestModel AddContentTypeHeader(RequestModel requestModel)
         {
+#if !NET20 && !NET30
             if(!requestModel.Header.Any(p=>p.Key.ToLower() == ParameterConstant.CONTENT_TYPE.ToLower())){ 
+#else
+            var contain = false;
+            foreach (var item in requestModel.Header.Keys) {
+                if (item.ToLower() == ParameterConstant.CONTENT_TYPE.ToLower()) {
+                    contain = true;
+                }
+            }
+            if (!contain){
+#endif
+
                 if (requestModel.ContentType.IsNullOrWhiteSpace())
                 {
                     requestModel.ContentType = ParameterConstant.MIME_JSON;
@@ -403,7 +454,13 @@ namespace JDCloudSDK.Core.Auth.Sign
             requestModel.ServiceName = serviceName;
             requestModel.RegionName = regionName;
             if (header != null && header.Count > 0) {
+#if !NET30 && !NET20
                 requestModel.Header.Concat(header).ToDictionary(k => k.Key, v => v.Value);
+#else
+                foreach (var item in header){
+                    requestModel.Header.Add(item.Key, item.Value);
+                }
+#endif
             }
             requestModel.Content = content;
             requestModel.ContentType = contentType;

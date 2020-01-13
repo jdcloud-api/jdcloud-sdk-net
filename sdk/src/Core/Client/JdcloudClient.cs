@@ -3,7 +3,7 @@ using JDCloudSDK.Core.Common.Profile;
 using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
-#if NET40 || NET35
+#if NET40 || NET35 ||NET30 ||NET20
 #else
 using System.Net.Http;
 #endif
@@ -115,7 +115,7 @@ namespace JDCloudSDK.Core.Client
 
         }
 
-#if NET40 || NET35
+#if NET40 || NET35 || NET30 ||NET20
 #else
         /// <summary>
         /// Api 请求 使用的HttpClient
