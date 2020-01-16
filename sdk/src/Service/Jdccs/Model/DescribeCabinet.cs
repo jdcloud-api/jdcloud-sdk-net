@@ -70,23 +70,23 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string CabinetType{ get; set; }
         ///<summary>
-        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
         ///</summary>
         public string CabinetOpenStatus{ get; set; }
         ///<summary>
-        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string CabinetOpenTime{ get; set; }
         ///<summary>
-        /// 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string ExpireTime{ get; set; }
         ///<summary>
-        /// 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string ReserveStartTime{ get; set; }
         ///<summary>
-        /// 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string ReserveEndTime{ get; set; }
     }

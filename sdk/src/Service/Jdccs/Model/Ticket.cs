@@ -62,11 +62,11 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 创建时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string CreatedTime{ get; set; }
         ///<summary>
-        /// 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string ClosedTime{ get; set; }
         ///<summary>

@@ -72,10 +72,10 @@ namespace JDCloudSDK.Jdccs.Model
         ///<summary>
         /// 关联的公网IP
         ///</summary>
-        public List<object> RelatedIp{ get; set; }
+        public List<RelatedIp> RelatedIp{ get; set; }
         ///<summary>
-        /// Switchboard
+        /// 交换机信息
         ///</summary>
-        public List<object> Switchboard{ get; set; }
+        public List<DescribeSwitchboard> Switchboard{ get; set; }
     }
 }

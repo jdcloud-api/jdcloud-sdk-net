@@ -60,11 +60,11 @@ namespace JDCloudSDK.Jdccs.Model
         ///<summary>
         /// 网关地址
         ///</summary>
-        public int? GatewayAddr{ get; set; }
+        public string GatewayAddr{ get; set; }
         ///<summary>
         /// 广播地址
         ///</summary>
-        public int? BroadcastAddr{ get; set; }
+        public string BroadcastAddr{ get; set; }
         ///<summary>
         /// 状态 normal:正常 abnormal:异常
         ///</summary>

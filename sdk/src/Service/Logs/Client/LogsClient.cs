@@ -176,196 +176,6 @@ namespace JDCloudSDK.Logs.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询采集配置的实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCollectResourcesResponse DescribeCollectResources(DescribeCollectResourcesRequest request) {
-            return  new DescribeCollectResourcesExecutor().Client(this).Execute<DescribeCollectResourcesResponse, DescribeCollectResourcesResult, DescribeCollectResourcesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询采集配置的实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCollectResourcesResponse> DescribeCollectResources(DescribeCollectResourcesRequest request) {
-            return await new DescribeCollectResourcesExecutor().Client(this).Execute<DescribeCollectResourcesResponse, DescribeCollectResourcesResult, DescribeCollectResourcesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新日志主题。日志主题名称不可更新。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateLogtopicResponse UpdateLogtopic(UpdateLogtopicRequest request) {
-            return  new UpdateLogtopicExecutor().Client(this).Execute<UpdateLogtopicResponse, UpdateLogtopicResult, UpdateLogtopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新日志主题。日志主题名称不可更新。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateLogtopicResponse> UpdateLogtopic(UpdateLogtopicRequest request) {
-            return await new UpdateLogtopicExecutor().Client(this).Execute<UpdateLogtopicResponse, UpdateLogtopicResult, UpdateLogtopicRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeLogsetsResponse DescribeLogsets(DescribeLogsetsRequest request) {
-            return  new DescribeLogsetsExecutor().Client(this).Execute<DescribeLogsetsResponse, DescribeLogsetsResult, DescribeLogsetsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeLogsetsResponse> DescribeLogsets(DescribeLogsetsRequest request) {
-            return await new DescribeLogsetsExecutor().Client(this).Execute<DescribeLogsetsResponse, DescribeLogsetsResult, DescribeLogsetsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询监控任务列表，返回该主题下的所有监控任务信息。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeMetricTasksResponse DescribeMetricTasks(DescribeMetricTasksRequest request) {
-            return  new DescribeMetricTasksExecutor().Client(this).Execute<DescribeMetricTasksResponse, DescribeMetricTasksResult, DescribeMetricTasksRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询监控任务列表，返回该主题下的所有监控任务信息。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeMetricTasksResponse> DescribeMetricTasks(DescribeMetricTasksRequest request) {
-            return await new DescribeMetricTasksExecutor().Client(this).Execute<DescribeMetricTasksResponse, DescribeMetricTasksResult, DescribeMetricTasksRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询指定监控任务的详情信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeMetricTaskResponse DescribeMetricTask(DescribeMetricTaskRequest request) {
-            return  new DescribeMetricTaskExecutor().Client(this).Execute<DescribeMetricTaskResponse, DescribeMetricTaskResult, DescribeMetricTaskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询指定监控任务的详情信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeMetricTaskResponse> DescribeMetricTask(DescribeMetricTaskRequest request) {
-            return await new DescribeMetricTaskExecutor().Client(this).Execute<DescribeMetricTaskResponse, DescribeMetricTaskResult, DescribeMetricTaskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  自定义日志上报。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public PutResponse Put(PutRequest request) {
-            return  new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  自定义日志上报。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<PutResponse> Put(PutRequest request) {
-            return await new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  搜索日志上下文
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SearchLogContextResponse SearchLogContext(SearchLogContextRequest request) {
-            return  new SearchLogContextExecutor().Client(this).Execute<SearchLogContextResponse, SearchLogContextResult, SearchLogContextRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  搜索日志上下文
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SearchLogContextResponse> SearchLogContext(SearchLogContextRequest request) {
-            return await new SearchLogContextExecutor().Client(this).Execute<SearchLogContextResponse, SearchLogContextResult, SearchLogContextRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteLogsetResponse DeleteLogset(DeleteLogsetRequest request) {
-            return  new DeleteLogsetExecutor().Client(this).Execute<DeleteLogsetResponse, DeleteLogsetResult, DeleteLogsetRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteLogsetResponse> DeleteLogset(DeleteLogsetRequest request) {
-            return await new DeleteLogsetExecutor().Client(this).Execute<DeleteLogsetResponse, DeleteLogsetResult, DeleteLogsetRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  搜索日志
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SearchResponse Search(SearchRequest request) {
-            return  new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  搜索日志
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SearchResponse> Search(SearchRequest request) {
-            return await new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  日志测试，根据用户输入的日志筛选条件以及监控指标设置进行模拟监控统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public TestMetricTaskResponse TestMetricTask(TestMetricTaskRequest request) {
-            return  new TestMetricTaskExecutor().Client(this).Execute<TestMetricTaskResponse, TestMetricTaskResult, TestMetricTaskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  日志测试，根据用户输入的日志筛选条件以及监控指标设置进行模拟监控统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<TestMetricTaskResponse> TestMetricTask(TestMetricTaskRequest request) {
-            return await new TestMetricTaskExecutor().Client(this).Execute<TestMetricTaskResponse, TestMetricTaskResult, TestMetricTaskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询日志集详情。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -423,21 +233,59 @@ namespace JDCloudSDK.Logs.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建监控任务，不可与当前日志主题下现有日志监控任务重名。
+        ///  查询采集配置的实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateMetricTaskResponse CreateMetricTask(CreateMetricTaskRequest request) {
-            return  new CreateMetricTaskExecutor().Client(this).Execute<CreateMetricTaskResponse, CreateMetricTaskResult, CreateMetricTaskRequest>(request);
+        public DescribeCollectResourcesResponse DescribeCollectResources(DescribeCollectResourcesRequest request) {
+            return  new DescribeCollectResourcesExecutor().Client(this).Execute<DescribeCollectResourcesResponse, DescribeCollectResourcesResult, DescribeCollectResourcesRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建监控任务，不可与当前日志主题下现有日志监控任务重名。
+        ///  查询采集配置的实例列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateMetricTaskResponse> CreateMetricTask(CreateMetricTaskRequest request) {
-            return await new CreateMetricTaskExecutor().Client(this).Execute<CreateMetricTaskResponse, CreateMetricTaskResult, CreateMetricTaskRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeCollectResourcesResponse> DescribeCollectResources(DescribeCollectResourcesRequest request) {
+            return await new DescribeCollectResourcesExecutor().Client(this).Execute<DescribeCollectResourcesResponse, DescribeCollectResourcesResult, DescribeCollectResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新日志主题。日志主题名称不可更新。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateLogtopicResponse UpdateLogtopic(UpdateLogtopicRequest request) {
+            return  new UpdateLogtopicExecutor().Client(this).Execute<UpdateLogtopicResponse, UpdateLogtopicResult, UpdateLogtopicRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新日志主题。日志主题名称不可更新。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateLogtopicResponse> UpdateLogtopic(UpdateLogtopicRequest request) {
+            return await new UpdateLogtopicExecutor().Client(this).Execute<UpdateLogtopicResponse, UpdateLogtopicResult, UpdateLogtopicRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLogsetsResponse DescribeLogsets(DescribeLogsetsRequest request) {
+            return  new DescribeLogsetsExecutor().Client(this).Execute<DescribeLogsetsResponse, DescribeLogsetsResult, DescribeLogsetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLogsetsResponse> DescribeLogsets(DescribeLogsetsRequest request) {
+            return await new DescribeLogsetsExecutor().Client(this).Execute<DescribeLogsetsResponse, DescribeLogsetsResult, DescribeLogsetsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -457,6 +305,25 @@ namespace JDCloudSDK.Logs.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateCollectInfoResponse> UpdateCollectInfo(UpdateCollectInfoRequest request) {
             return await new UpdateCollectInfoExecutor().Client(this).Execute<UpdateCollectInfoResponse, UpdateCollectInfoResult, UpdateCollectInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  自定义日志上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutResponse Put(PutRequest request) {
+            return  new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  自定义日志上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutResponse> Put(PutRequest request) {
+            return await new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -537,6 +404,25 @@ namespace JDCloudSDK.Logs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  搜索日志上下文
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SearchLogContextResponse SearchLogContext(SearchLogContextRequest request) {
+            return  new SearchLogContextExecutor().Client(this).Execute<SearchLogContextResponse, SearchLogContextResult, SearchLogContextRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  搜索日志上下文
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SearchLogContextResponse> SearchLogContext(SearchLogContextRequest request) {
+            return await new SearchLogContextExecutor().Client(this).Execute<SearchLogContextResponse, SearchLogContextResult, SearchLogContextRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -556,40 +442,40 @@ namespace JDCloudSDK.Logs.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  更新监控任务，日志监控任务不许重名。
+        ///  删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateMetricTaskResponse UpdateMetricTask(UpdateMetricTaskRequest request) {
-            return  new UpdateMetricTaskExecutor().Client(this).Execute<UpdateMetricTaskResponse, UpdateMetricTaskResult, UpdateMetricTaskRequest>(request);
+        public DeleteLogsetResponse DeleteLogset(DeleteLogsetRequest request) {
+            return  new DeleteLogsetExecutor().Client(this).Execute<DeleteLogsetResponse, DeleteLogsetResult, DeleteLogsetRequest>(request);
         }
 #else
         /// <summary>
-        ///  更新监控任务，日志监控任务不许重名。
+        ///  删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateMetricTaskResponse> UpdateMetricTask(UpdateMetricTaskRequest request) {
-            return await new UpdateMetricTaskExecutor().Client(this).Execute<UpdateMetricTaskResponse, UpdateMetricTaskResult, UpdateMetricTaskRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteLogsetResponse> DeleteLogset(DeleteLogsetRequest request) {
+            return await new DeleteLogsetExecutor().Client(this).Execute<DeleteLogsetResponse, DeleteLogsetResult, DeleteLogsetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除指定监控任务。
+        ///  搜索日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteMetricTaskResponse DeleteMetricTask(DeleteMetricTaskRequest request) {
-            return  new DeleteMetricTaskExecutor().Client(this).Execute<DeleteMetricTaskResponse, DeleteMetricTaskResult, DeleteMetricTaskRequest>(request);
+        public SearchResponse Search(SearchRequest request) {
+            return  new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除指定监控任务。
+        ///  搜索日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteMetricTaskResponse> DeleteMetricTask(DeleteMetricTaskRequest request) {
-            return await new DeleteMetricTaskExecutor().Client(this).Execute<DeleteMetricTaskResponse, DeleteMetricTaskResult, DeleteMetricTaskRequest>(request).ConfigureAwait(false);
+        public async Task<SearchResponse> Search(SearchRequest request) {
+            return await new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

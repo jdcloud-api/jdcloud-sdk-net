@@ -50,7 +50,7 @@ namespace JDCloudSDK.Sts.Model
         ///</summary>
         public string SessionToken{ get; set; }
         ///<summary>
-        /// 有效期
+        /// 失效时间，格式：yyyy-MM-dd HH:mm:ss(eg 2019-01-01 00:00:00)
         ///</summary>
         public string Expiration{ get; set; }
     }

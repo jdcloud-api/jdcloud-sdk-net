@@ -86,7 +86,7 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string AssetStatus{ get; set; }
         ///<summary>
-        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string DeviceOpenTime{ get; set; }
     }

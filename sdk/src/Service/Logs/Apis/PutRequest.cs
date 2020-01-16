@@ -48,6 +48,10 @@ namespace  JDCloudSDK.Logs.Apis
         ///</summary>
         public   string Timestamp{ get; set; }
         ///<summary>
+        /// 全局标签 map[string]string
+        ///</summary>
+        public   object Tags{ get; set; }
+        ///<summary>
         /// 日志数据
         ///Required:true
         ///</summary>

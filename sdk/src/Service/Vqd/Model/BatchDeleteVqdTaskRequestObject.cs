@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Vqd.Model
 {
@@ -39,7 +40,9 @@ namespace JDCloudSDK.Vqd.Model
 
         ///<summary>
         /// TaskIds
+        ///Required:true
         ///</summary>
+        [Required]
         public List<string> TaskIds{ get; set; }
     }
 }

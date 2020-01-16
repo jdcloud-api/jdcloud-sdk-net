@@ -101,9 +101,5 @@ namespace JDCloudSDK.Jdccs.Model
         /// 规则状态 disabled:禁用 enabled:启用
         ///</summary>
         public string Status{ get; set; }
-        ///<summary>
-        /// Switchboard
-        ///</summary>
-        public List<object> Switchboard{ get; set; }
     }
 }

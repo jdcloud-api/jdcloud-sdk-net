@@ -102,8 +102,8 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// Switchboard
+        /// 交换机信息
         ///</summary>
-        public List<object> Switchboard{ get; set; }
+        public List<Switchboard> Switchboard{ get; set; }
     }
 }

@@ -61,7 +61,7 @@ namespace JDCloudSDK.Jdccs.Model
         ///<summary>
         /// 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
         ///</summary>
-        public int? LineType{ get; set; }
+        public string LineType{ get; set; }
         ///<summary>
         /// 合同带宽（Mbps）
         ///</summary>
@@ -70,10 +70,10 @@ namespace JDCloudSDK.Jdccs.Model
         ///<summary>
         /// 关联的公网IP
         ///</summary>
-        public List<object> RelatedIp{ get; set; }
+        public List<RelatedIp> RelatedIp{ get; set; }
         ///<summary>
         /// 交换机信息
         ///</summary>
-        public List<object> Switchboard{ get; set; }
+        public List<Switchboard> Switchboard{ get; set; }
     }
 }

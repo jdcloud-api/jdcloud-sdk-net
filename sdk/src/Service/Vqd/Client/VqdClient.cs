@@ -138,21 +138,65 @@ namespace JDCloudSDK.Vqd.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  设置回调配置
+        ///  删除视频质检模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetCallbackResponse SetCallback(SetCallbackRequest request) {
-            return  new SetCallbackExecutor().Client(this).Execute<SetCallbackResponse, SetCallbackResult, SetCallbackRequest>(request);
+        public DeleteVqdTemplateResponse DeleteVqdTemplate(DeleteVqdTemplateRequest request) {
+            return  new DeleteVqdTemplateExecutor().Client(this).Execute<DeleteVqdTemplateResponse, DeleteVqdTemplateResult, DeleteVqdTemplateRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置回调配置
+        ///  删除视频质检模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetCallbackResponse> SetCallback(SetCallbackRequest request) {
-            return await new SetCallbackExecutor().Client(this).Execute<SetCallbackResponse, SetCallbackResult, SetCallbackRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteVqdTemplateResponse> DeleteVqdTemplate(DeleteVqdTemplateRequest request) {
+            return await new DeleteVqdTemplateExecutor().Client(this).Execute<DeleteVqdTemplateResponse, DeleteVqdTemplateResult, DeleteVqdTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等。一次最多删除50条
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchDeleteVqdTasksResponse BatchDeleteVqdTasks(BatchDeleteVqdTasksRequest request) {
+            return  new BatchDeleteVqdTasksExecutor().Client(this).Execute<BatchDeleteVqdTasksResponse, BatchDeleteVqdTasksResult, BatchDeleteVqdTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等。一次最多删除50条
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchDeleteVqdTasksResponse> BatchDeleteVqdTasks(BatchDeleteVqdTasksRequest request) {
+            return await new BatchDeleteVqdTasksExecutor().Client(this).Execute<BatchDeleteVqdTasksResponse, BatchDeleteVqdTasksResult, BatchDeleteVqdTasksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频质检模板列表。
+        /// 支持过滤查询：
+        ///   - templateId,eq 精确匹配模板ID，非必选
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListVqdTemplatesResponse ListVqdTemplates(ListVqdTemplatesRequest request) {
+            return  new ListVqdTemplatesExecutor().Client(this).Execute<ListVqdTemplatesResponse, ListVqdTemplatesResult, ListVqdTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频质检模板列表。
+        /// 支持过滤查询：
+        ///   - templateId,eq 精确匹配模板ID，非必选
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListVqdTemplatesResponse> ListVqdTemplates(ListVqdTemplatesRequest request) {
+            return await new ListVqdTemplatesExecutor().Client(this).Execute<ListVqdTemplatesResponse, ListVqdTemplatesResult, ListVqdTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -176,6 +220,111 @@ namespace JDCloudSDK.Vqd.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取视频质检任务详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVqdTaskResponse GetVqdTask(GetVqdTaskRequest request) {
+            return  new GetVqdTaskExecutor().Client(this).Execute<GetVqdTaskResponse, GetVqdTaskResult, GetVqdTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取视频质检任务详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVqdTaskResponse> GetVqdTask(GetVqdTaskRequest request) {
+            return await new GetVqdTaskExecutor().Client(this).Execute<GetVqdTaskResponse, GetVqdTaskResult, GetVqdTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVqdTemplateResponse GetVqdTemplate(GetVqdTemplateRequest request) {
+            return  new GetVqdTemplateExecutor().Client(this).Execute<GetVqdTemplateResponse, GetVqdTemplateResult, GetVqdTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVqdTemplateResponse> GetVqdTemplate(GetVqdTemplateRequest request) {
+            return await new GetVqdTemplateExecutor().Client(this).Execute<GetVqdTemplateResponse, GetVqdTemplateResult, GetVqdTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频质检任务列表
+        /// 支持过滤查询：
+        ///   - createTime,ge 最早任务创建时间
+        ///   - createTime,le 最晚任务创建时间
+        ///   - status,in 任务状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListVqdTasksResponse ListVqdTasks(ListVqdTasksRequest request) {
+            return  new ListVqdTasksExecutor().Client(this).Execute<ListVqdTasksResponse, ListVqdTasksResult, ListVqdTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频质检任务列表
+        /// 支持过滤查询：
+        ///   - createTime,ge 最早任务创建时间
+        ///   - createTime,le 最晚任务创建时间
+        ///   - status,in 任务状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListVqdTasksResponse> ListVqdTasks(ListVqdTasksRequest request) {
+            return await new ListVqdTasksExecutor().Client(this).Execute<ListVqdTasksResponse, ListVqdTasksResult, ListVqdTasksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频质检任务结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryVqdTaskResultResponse QueryVqdTaskResult(QueryVqdTaskResultRequest request) {
+            return  new QueryVqdTaskResultExecutor().Client(this).Execute<QueryVqdTaskResultResponse, QueryVqdTaskResultResult, QueryVqdTaskResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频质检任务结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryVqdTaskResultResponse> QueryVqdTaskResult(QueryVqdTaskResultRequest request) {
+            return await new QueryVqdTaskResultExecutor().Client(this).Execute<QueryVqdTaskResultResponse, QueryVqdTaskResultResult, QueryVqdTaskResultRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置回调配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCallbackResponse SetCallback(SetCallbackRequest request) {
+            return  new SetCallbackExecutor().Client(this).Execute<SetCallbackResponse, SetCallbackResult, SetCallbackRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置回调配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCallbackResponse> SetCallback(SetCallbackRequest request) {
+            return await new SetCallbackExecutor().Client(this).Execute<SetCallbackResponse, SetCallbackResult, SetCallbackRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  批量提交视频质检任务，一次同时最多提交50个输入媒体
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -195,21 +344,78 @@ namespace JDCloudSDK.Vqd.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  批量删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等。一次最多删除50条
+        ///  删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public BatchDeleteVqdTasksResponse BatchDeleteVqdTasks(BatchDeleteVqdTasksRequest request) {
-            return  new BatchDeleteVqdTasksExecutor().Client(this).Execute<BatchDeleteVqdTasksResponse, BatchDeleteVqdTasksResult, BatchDeleteVqdTasksRequest>(request);
+        public DeleteVqdTaskResponse DeleteVqdTask(DeleteVqdTaskRequest request) {
+            return  new DeleteVqdTaskExecutor().Client(this).Execute<DeleteVqdTaskResponse, DeleteVqdTaskResult, DeleteVqdTaskRequest>(request);
         }
 #else
         /// <summary>
-        ///  批量删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等。一次最多删除50条
+        ///  删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<BatchDeleteVqdTasksResponse> BatchDeleteVqdTasks(BatchDeleteVqdTasksRequest request) {
-            return await new BatchDeleteVqdTasksExecutor().Client(this).Execute<BatchDeleteVqdTasksResponse, BatchDeleteVqdTasksResult, BatchDeleteVqdTasksRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteVqdTaskResponse> DeleteVqdTask(DeleteVqdTaskRequest request) {
+            return await new DeleteVqdTaskExecutor().Client(this).Execute<DeleteVqdTaskResponse, DeleteVqdTaskResult, DeleteVqdTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建视频质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVqdTemplateResponse CreateVqdTemplate(CreateVqdTemplateRequest request) {
+            return  new CreateVqdTemplateExecutor().Client(this).Execute<CreateVqdTemplateResponse, CreateVqdTemplateResult, CreateVqdTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建视频质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVqdTemplateResponse> CreateVqdTemplate(CreateVqdTemplateRequest request) {
+            return await new CreateVqdTemplateExecutor().Client(this).Execute<CreateVqdTemplateResponse, CreateVqdTemplateResult, CreateVqdTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改视频质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateVqdTemplateResponse UpdateVqdTemplate(UpdateVqdTemplateRequest request) {
+            return  new UpdateVqdTemplateExecutor().Client(this).Execute<UpdateVqdTemplateResponse, UpdateVqdTemplateResult, UpdateVqdTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改视频质检模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateVqdTemplateResponse> UpdateVqdTemplate(UpdateVqdTemplateRequest request) {
+            return await new UpdateVqdTemplateExecutor().Client(this).Execute<UpdateVqdTemplateResponse, UpdateVqdTemplateResult, UpdateVqdTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  提交视频质检任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SubmitVqdTaskResponse SubmitVqdTask(SubmitVqdTaskRequest request) {
+            return  new SubmitVqdTaskExecutor().Client(this).Execute<SubmitVqdTaskResponse, SubmitVqdTaskResult, SubmitVqdTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  提交视频质检任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SubmitVqdTaskResponse> SubmitVqdTask(SubmitVqdTaskRequest request) {
+            return await new SubmitVqdTaskExecutor().Client(this).Execute<SubmitVqdTaskResponse, SubmitVqdTaskResult, SubmitVqdTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 

@@ -49,7 +49,11 @@ namespace  JDCloudSDK.Vqd.Apis
         ///</summary>
         public   string HttpUrl{ get; set; }
         ///<summary>
-        /// 回调事件列表
+        /// 回调事件列表。
+        /// - VqdSuccess 视频质检成功
+        /// - VqdFailure 视频质检失败
+        /// - VqdStart 视频质检开始
+        /// 
         ///Required:true
         ///</summary>
         [Required]

@@ -41,7 +41,9 @@ namespace  JDCloudSDK.Vqd.Apis
     {
         ///<summary>
         /// 媒体列表
+        ///Required:true
         ///</summary>
+        [Required]
         public List<VqdMediaObject> MediaList{ get; set; }
 
         ///<summary>

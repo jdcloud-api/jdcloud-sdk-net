@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Logs.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -54,11 +55,11 @@ namespace  JDCloudSDK.Logs.Apis
         ///</summary>
         public   bool CaseSensitive{ get; set; }
         ///<summary>
-        /// 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+        /// 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
         ///</summary>
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+        /// 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>
@@ -69,6 +70,15 @@ namespace  JDCloudSDK.Logs.Apis
         /// 每页个数。默认为10，最大100
         ///</summary>
         public   long? PageSize{ get; set; }
+        ///<summary>
+        /// 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
+        ///</summary>
+        public   string Sort{ get; set; }
+        ///<summary>
+        /// 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+        ///</summary>
+        public List<Filter> Filters{ get; set; }
+
         ///<summary>
         /// 地域 Id
         ///Required:true

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Logs.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -50,6 +51,11 @@ namespace  JDCloudSDK.Logs.Apis
         /// 搜索方向,默认both,可取值:up,down,both
         ///</summary>
         public   string Direction{ get; set; }
+        ///<summary>
+        /// 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+        ///</summary>
+        public List<Filter> Filters{ get; set; }
+
         ///<summary>
         /// 日志记录ID
         ///Required:true

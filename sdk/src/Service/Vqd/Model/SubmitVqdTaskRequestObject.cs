@@ -40,7 +40,9 @@ namespace JDCloudSDK.Vqd.Model
 
         ///<summary>
         /// Media
+        ///Required:true
         ///</summary>
+        [Required]
         public VqdMediaObject Media{ get; set; }
         ///<summary>
         /// 检测模板ID

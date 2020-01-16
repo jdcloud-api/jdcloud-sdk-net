@@ -102,9 +102,13 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// Switchboard
+        /// IP地址
         ///</summary>
-        public List<object> Switchboard{ get; set; }
+        public string ManagementIp{ get; set; }
+        ///<summary>
+        /// 端口名称
+        ///</summary>
+        public string IfName{ get; set; }
         ///<summary>
         /// 报警状态 normal:正常 alarm:报警
         ///</summary>
@@ -114,7 +118,7 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public double? Value{ get; set; }
         ///<summary>
-        /// 报警时间 遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string NoticeTime{ get; set; }
     }
