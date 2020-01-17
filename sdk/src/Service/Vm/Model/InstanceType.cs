@@ -75,5 +75,9 @@ namespace JDCloudSDK.Vm.Model
         /// 本地缓存盘配置，目前只有Gpu规格上才有
         ///</summary>
         public List<LocalDisk> LocalDisks{ get; set; }
+        ///<summary>
+        /// 实例规格代数
+        ///</summary>
+        public int? Generation{ get; set; }
     }
 }

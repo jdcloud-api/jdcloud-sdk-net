@@ -134,6 +134,6 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 用户普通标签集合
         ///</summary>
-        public List<JDCloudSDK.Vm.Model.Tag> UserTags{ get; set; }
+        public List<Tag> UserTags{ get; set; }
     }
 }

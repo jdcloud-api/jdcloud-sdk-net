@@ -23,40 +23,20 @@
  */
 
 
-using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-namespace JDCloudSDK.Vm.Client
+
+namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像导入导出任务详情
-        /// 
+    ///  导出镜像，将京东云私有镜像导出至京东云以外环境
+        ///         /// 
     /// </summary>
-    public class ImageTasksExecutor : JdcloudExecutor
+    public class ExportImageResponse : JdcloudResponse<ExportImageResult>
     {
-        /// <summary>
-        ///  查询镜像导入导出任务详情
-        /// 接口的Http 请求方法
-        /// </summary>
-        public override  string Method
-        {
-            get {
-                return "GET";
-            }
-        }
-        /// <summary>
-        ///  查询镜像导入导出任务详情
-        /// 接口的Http资源请求路径
-        /// </summary>
-        public override string Url
-        {
-            get {
-            return "/regions/{regionId}/imageTasks";
-            }
-        }
     }
 }

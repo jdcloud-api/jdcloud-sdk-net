@@ -53,5 +53,9 @@ namespace JDCloudSDK.Vm.Model
         /// 默认本地盘系统盘大小
         ///</summary>
         public int? SystemDiskSize{ get; set; }
+        ///<summary>
+        /// 逗号分隔的规格列表，*代表所有。
+        ///</summary>
+        public string Flavors{ get; set; }
     }
 }

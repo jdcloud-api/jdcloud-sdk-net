@@ -299,6 +299,27 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  导出镜像，将京东云私有镜像导出至京东云以外环境
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExportImageResponse ExportImage(ExportImageRequest request) {
+            return  new ExportImageExecutor().Client(this).Execute<ExportImageResponse, ExportImageResult, ExportImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导出镜像，将京东云私有镜像导出至京东云以外环境
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExportImageResponse> ExportImage(ExportImageRequest request) {
+            return await new ExportImageExecutor().Client(this).Execute<ExportImageResponse, ExportImageResult, ExportImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
         /// 只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
         /// 
@@ -1217,7 +1238,7 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询镜像导入任务详情
+        ///  查询镜像导入导出任务详情
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1227,7 +1248,7 @@ namespace JDCloudSDK.Vm.Client
         }
 #else
         /// <summary>
-        ///  查询镜像导入任务详情
+        ///  查询镜像导入导出任务详情
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>

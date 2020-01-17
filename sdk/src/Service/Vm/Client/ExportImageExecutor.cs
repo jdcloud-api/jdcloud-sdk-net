@@ -33,29 +33,29 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询镜像导入导出任务详情
+    ///  导出镜像，将京东云私有镜像导出至京东云以外环境
         /// 
     /// </summary>
-    public class ImageTasksExecutor : JdcloudExecutor
+    public class ExportImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询镜像导入导出任务详情
+        ///  导出镜像，将京东云私有镜像导出至京东云以外环境
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
             get {
-                return "GET";
+                return "POST";
             }
         }
         /// <summary>
-        ///  查询镜像导入导出任务详情
+        ///  导出镜像，将京东云私有镜像导出至京东云以外环境
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/imageTasks";
+            return "/regions/{regionId}/images/{imageId}:exportImage";
             }
         }
     }

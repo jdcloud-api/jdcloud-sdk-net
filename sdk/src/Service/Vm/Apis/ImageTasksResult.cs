@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像导入任务详情
+    ///  查询镜像导入导出任务详情
         ///         /// 
     /// </summary>
     public class ImageTasksResult : JdcloudResult

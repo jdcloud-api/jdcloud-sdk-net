@@ -35,42 +35,31 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像导入导出任务详情
+    ///  导出镜像，将京东云私有镜像导出至京东云以外环境
         ///         /// 
     /// </summary>
-    public class ImageTasksRequest : JdcloudRequest
+    public class ExportImageRequest : JdcloudRequest
     {
         ///<summary>
-        /// 任务种类。可选值：ImportImage， ExportImage
+        /// 用户创建的服务角色名称
         ///Required:true
         ///</summary>
         [Required]
-        public   string TaskAction{ get; set; }
+        public   string RoleName{ get; set; }
         ///<summary>
-        /// 任务id
+        /// 存储导出镜像文件的oss bucket的域名，请填写以 https:// 开头的完整url
+        ///Required:true
         ///</summary>
-        public List<int?> TaskIds{ get; set; }
-
+        [Required]
+        public   string OssUrl{ get; set; }
         ///<summary>
-        /// 任务状态。可选值：pending,running,failed,finished
+        /// 导出镜像文件名前缀，仅支持英文字母和数字，不能超过32个字符
         ///</summary>
-        public   string TaskStatus{ get; set; }
+        public   string OssPrefix{ get; set; }
         ///<summary>
-        /// 任务开始时间
+        /// 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符
         ///</summary>
-        public   DateTime? StartTime{ get; set; }
-        ///<summary>
-        /// 任务结束时间
-        ///</summary>
-        public   DateTime? EndTime{ get; set; }
-        ///<summary>
-        /// 页码；默认为1
-        ///</summary>
-        public   int? PageNumber{ get; set; }
-        ///<summary>
-        /// 分页大小；默认为20；取值范围[10, 100]
-        ///</summary>
-        public   int? PageSize{ get; set; }
+        public   string ClientToken{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true
@@ -78,5 +67,11 @@ namespace  JDCloudSDK.Vm.Apis
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
+        ///<summary>
+        /// 镜像ID
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string ImageId{ get; set; }
     }
 }

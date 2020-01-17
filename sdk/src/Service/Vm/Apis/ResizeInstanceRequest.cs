@@ -55,6 +55,10 @@ namespace  JDCloudSDK.Vm.Apis
         [Required]
         public   string InstanceType{ get; set; }
         ///<summary>
+        /// 是否强制调配，默认为false；如果指定为true, 将会清除本地数据盘。
+        ///</summary>
+        public   bool Force{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>

@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
-        <Version>1.2.5.1</Version>
+        <Version>1.2.7.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>云主机实例、镜像、实例规格、实例模板、配额相关的接口</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
