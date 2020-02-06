@@ -121,5 +121,13 @@ namespace JDCloudSDK.Jdccs.Model
         /// 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string NoticeTime{ get; set; }
+        ///<summary>
+        /// 报警条件
+        ///</summary>
+        public string Condition{ get; set; }
+        ///<summary>
+        /// 策略ID
+        ///</summary>
+        public int? StrategyId{ get; set; }
     }
 }

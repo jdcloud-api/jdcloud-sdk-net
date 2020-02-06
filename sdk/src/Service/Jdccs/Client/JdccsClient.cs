@@ -461,6 +461,25 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询账号是否有使用云托管控制台的权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeConsolePermissionResponse DescribeConsolePermission(DescribeConsolePermissionRequest request) {
+            return  new DescribeConsolePermissionExecutor().Client(this).Execute<DescribeConsolePermissionResponse, DescribeConsolePermissionResult, DescribeConsolePermissionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询账号是否有使用云托管控制台的权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeConsolePermissionResponse> DescribeConsolePermission(DescribeConsolePermissionRequest request) {
+            return await new DescribeConsolePermissionExecutor().Client(this).Execute<DescribeConsolePermissionResponse, DescribeConsolePermissionResult, DescribeConsolePermissionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询机柜列表
         /// </summary>
         /// <param name="request">请求参数信息</param>

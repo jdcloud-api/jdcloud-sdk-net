@@ -49,5 +49,13 @@ namespace  JDCloudSDK.Jdccs.Apis
         /// 报警规则ID
         ///</summary>
         public   string AlarmId{ get; set; }
+        ///<summary>
+        /// 查询时间范围的开始时间， UNIX时间戳
+        ///</summary>
+        public   int? StartTime{ get; set; }
+        ///<summary>
+        /// 查询时间范围的结束时间， UNIX时间戳
+        ///</summary>
+        public   int? EndTime{ get; set; }
     }
 }

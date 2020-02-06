@@ -45,13 +45,13 @@ namespace  JDCloudSDK.Jdccs.Apis
         [Required]
         public   string ResourceId{ get; set; }
         ///<summary>
-        /// 查询时间范围的开始时间， UNIX时间戳，（最多支持最近90天数据查询）
+        /// 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
         ///Required:true
         ///</summary>
         [Required]
         public   int StartTime{ get; set; }
         ///<summary>
-        /// 查询时间范围的结束时间， UNIX时间戳，（最多支持最近90天数据查询）
+        /// 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
         ///Required:true
         ///</summary>
         [Required]
