@@ -40,6 +40,7 @@ namespace JDCloudSDK.Disk.Client
         /// -   可选参数快照 ID用于从快照创建新盘。
         /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
         /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        /// -   userTags 为创建云盘时打的标签
         /// 
     /// </summary>
     public class CreateDisksExecutor : JdcloudExecutor
@@ -52,6 +53,7 @@ namespace JDCloudSDK.Disk.Client
         /// -   可选参数快照 ID用于从快照创建新盘。
         /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
         /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        /// -   userTags 为创建云盘时打的标签
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -68,6 +70,7 @@ namespace JDCloudSDK.Disk.Client
         /// -   可选参数快照 ID用于从快照创建新盘。
         /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
         /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        /// -   userTags 为创建云盘时打的标签
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Mps.Apis
 {
@@ -60,7 +61,8 @@ namespace  JDCloudSDK.Mps.Apis
         ///<summary>
         /// 所属区域(readOnly)
         ///</summary>
-        public   string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 所属Bucket(readOnly)
         ///</summary>

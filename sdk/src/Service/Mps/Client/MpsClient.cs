@@ -89,9 +89,9 @@ namespace JDCloudSDK.Mps.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -153,6 +153,50 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetImageStyleResponse> GetImageStyle(GetImageStyleRequest request) {
             return await new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询转码作业列表。
+        /// 支持如下过滤器：
+        /// - title[eq] 按照输入视频标题进行精确匹配
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListTranscodeJobsResponse ListTranscodeJobs(ListTranscodeJobsRequest request) {
+            return  new ListTranscodeJobsExecutor().Client(this).Execute<ListTranscodeJobsResponse, ListTranscodeJobsResult, ListTranscodeJobsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码作业列表。
+        /// 支持如下过滤器：
+        /// - title[eq] 按照输入视频标题进行精确匹配
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListTranscodeJobsResponse> ListTranscodeJobs(ListTranscodeJobsRequest request) {
+            return await new ListTranscodeJobsExecutor().Client(this).Execute<ListTranscodeJobsResponse, ListTranscodeJobsResult, ListTranscodeJobsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  提交转码作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SubmitTranscodeJobResponse SubmitTranscodeJob(SubmitTranscodeJobRequest request) {
+            return  new SubmitTranscodeJobExecutor().Client(this).Execute<SubmitTranscodeJobResponse, SubmitTranscodeJobResult, SubmitTranscodeJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  提交转码作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SubmitTranscodeJobResponse> SubmitTranscodeJob(SubmitTranscodeJobRequest request) {
+            return await new SubmitTranscodeJobExecutor().Client(this).Execute<SubmitTranscodeJobResponse, SubmitTranscodeJobResult, SubmitTranscodeJobRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

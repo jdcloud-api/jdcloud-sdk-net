@@ -58,6 +58,10 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
+        /// 类型名称
+        ///</summary>
+        public string DiskTypeName{ get; set; }
+        ///<summary>
         /// 默认的iops数量(基础iops数量)
         ///</summary>
         public int? DefaultIOPS{ get; set; }

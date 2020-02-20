@@ -43,6 +43,7 @@ namespace  JDCloudSDK.Disk.Apis
         ///         /// -   可选参数快照 ID用于从快照创建新盘。
         ///         /// -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
         ///         /// -   maxCount为最大努力，不保证一定能达到maxCount。
+        ///         /// -   userTags 为创建云盘时打的标签
         ///         /// 
     /// </summary>
     public class CreateDisksRequest : JdcloudRequest
@@ -59,6 +60,11 @@ namespace  JDCloudSDK.Disk.Apis
         ///</summary>
         [Required]
         public   int MaxCount{ get; set; }
+        ///<summary>
+        /// 用户标签
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
+
         ///<summary>
         /// 幂等性校验参数
         ///Required:true

@@ -46,6 +46,10 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public string ResourceName{ get; set; }
         ///<summary>
+        /// 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+        ///</summary>
+        public string Status{ get; set; }
+        ///<summary>
         /// 绑定资源列表
         ///</summary>
         public List<Bind> Bind{ get; set; }
