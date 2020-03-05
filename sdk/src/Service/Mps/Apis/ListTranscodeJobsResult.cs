@@ -60,7 +60,7 @@ namespace  JDCloudSDK.Mps.Apis
         ///<summary>
         /// 分页内容
         ///</summary>
-        public List<TranscodeJob> Content{ get; set; }
+        public List<TranscodeJobInfo> Content{ get; set; }
 
     }
 }

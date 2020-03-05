@@ -47,58 +47,65 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 购买类型：1新购 3升级
+        /// 购买类型. &lt;br&gt;- 1: 新购&lt;br&gt;- 3: 升级
         ///Required:true
         ///</summary>
         [Required]
         public int BuyType{ get; set; }
         ///<summary>
-        /// 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+        /// 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
         ///Required:true
         ///</summary>
         [Required]
         public int Carrier{ get; set; }
         ///<summary>
-        /// 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
-        /// - 0: IPV4,
-        /// - 1: IPV4/IPV6
-        /// 
+        /// 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路&lt;br&gt;- 0: IPV4,&lt;br&gt;- 1: IPV4/IPV6
         ///</summary>
         public int? IpType{ get; set; }
         ///<summary>
-        /// 保底带宽：单位Gbps
+        /// IP 数量
+        ///Required:true
+        ///</summary>
+        [Required]
+        public int IpCount{ get; set; }
+        ///<summary>
+        /// 可配的转发端口数量
+        ///Required:true
+        ///</summary>
+        [Required]
+        public int PortCount{ get; set; }
+        ///<summary>
+        /// 可配的网站规则域名数量
+        ///</summary>
+        public int? DomainCount{ get; set; }
+        ///<summary>
+        /// 保底带宽: 单位 Gbps
         ///Required:true
         ///</summary>
         [Required]
         public int Bp{ get; set; }
         ///<summary>
-        /// 弹性带宽：单位Gbps
+        /// 弹性带宽: 单位 Gbps
         ///Required:true
         ///</summary>
         [Required]
         public int Ep{ get; set; }
         ///<summary>
-        /// 业务带宽：单位Mbps
+        /// 业务带宽: 单位 Mbps
         ///Required:true
         ///</summary>
         [Required]
         public int Bw{ get; set; }
         ///<summary>
-        /// 购买防护包时长, 新购高防实例时必传
-        /// - timeUnit 为 3 时, 可取值 1-9
-        /// - timeUnit 为 4 时, 可取值 1-3
-        /// 
+        /// 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
         ///</summary>
         public long? TimeSpan{ get; set; }
         ///<summary>
-        /// 购买时长类型, 新购高防实例时必传
-        /// - 3: 月
-        /// - 4: 年
-        /// 
+        /// 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
         ///</summary>
         public int? TimeUnit{ get; set; }
         ///<summary>
-        /// 支付成功后跳转的页面，控制台交互模式传该字段
+        /// 支付成功后跳转的页面, 控制台交互模式传该字段
         ///</summary>
         public string ReturnUrl{ get; set; }
     }

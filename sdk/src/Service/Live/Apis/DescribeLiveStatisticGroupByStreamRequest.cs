@@ -40,21 +40,15 @@ namespace  JDCloudSDK.Live.Apis
     {
         ///<summary>
         /// 播放域名
-        ///Required:true
         ///</summary>
-        [Required]
         public   string DomainName{ get; set; }
         ///<summary>
         /// 应用名称
-        ///Required:true
         ///</summary>
-        [Required]
         public   string AppName{ get; set; }
         ///<summary>
         /// 流名称
-        ///Required:true
         ///</summary>
-        [Required]
         public   string StreamName{ get; set; }
         ///<summary>
         /// 运营商

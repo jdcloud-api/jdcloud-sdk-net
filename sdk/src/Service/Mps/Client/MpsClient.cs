@@ -239,6 +239,25 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTranscodeTemplateResponse GetTranscodeTemplate(GetTranscodeTemplateRequest request) {
+            return  new GetTranscodeTemplateExecutor().Client(this).Execute<GetTranscodeTemplateResponse, GetTranscodeTemplateResult, GetTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTranscodeTemplateResponse> GetTranscodeTemplate(GetTranscodeTemplateRequest request) {
+            return await new GetTranscodeTemplateExecutor().Client(this).Execute<GetTranscodeTemplateResponse, GetTranscodeTemplateResult, GetTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  图片样式总数
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -254,6 +273,25 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<CountImageStyleResponse> CountImageStyle(CountImageStyleRequest request) {
             return await new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
+            return  new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTranscodeTemplateResponse> CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
+            return await new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -296,6 +334,27 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询单个转码作业信息。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTranscodeJobResponse GetTranscodeJob(GetTranscodeJobRequest request) {
+            return  new GetTranscodeJobExecutor().Client(this).Execute<GetTranscodeJobResponse, GetTranscodeJobResult, GetTranscodeJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个转码作业信息。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTranscodeJobResponse> GetTranscodeJob(GetTranscodeJobRequest request) {
+            return await new GetTranscodeJobExecutor().Client(this).Execute<GetTranscodeJobResponse, GetTranscodeJobResult, GetTranscodeJobRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除bucket的图片样式分隔符配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -330,6 +389,25 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetNotificationResponse> GetNotification(GetNotificationRequest request) {
             return await new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  部分修改转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest request) {
+            return  new ModifyTranscodeTemplateExecutor().Client(this).Execute<ModifyTranscodeTemplateResponse, ModifyTranscodeTemplateResult, ModifyTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  部分修改转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyTranscodeTemplateResponse> ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest request) {
+            return await new ModifyTranscodeTemplateExecutor().Client(this).Execute<ModifyTranscodeTemplateResponse, ModifyTranscodeTemplateResult, ModifyTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -429,6 +507,31 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转码模板列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - transcodeType[eq] 按转码方式精确查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListTranscodeTemplatesResponse ListTranscodeTemplates(ListTranscodeTemplatesRequest request) {
+            return  new ListTranscodeTemplatesExecutor().Client(this).Execute<ListTranscodeTemplatesResponse, ListTranscodeTemplatesResult, ListTranscodeTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码模板列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - transcodeType[eq] 按转码方式精确查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListTranscodeTemplatesResponse> ListTranscodeTemplates(ListTranscodeTemplatesRequest request) {
+            return await new ListTranscodeTemplatesExecutor().Client(this).Execute<ListTranscodeTemplatesResponse, ListTranscodeTemplatesResult, ListTranscodeTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  图片样式列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -444,6 +547,44 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ListImageStyleResponse> ListImageStyle(ListImageStyleRequest request) {
             return await new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  完整更新转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateTranscodeTemplateResponse UpdateTranscodeTemplate(UpdateTranscodeTemplateRequest request) {
+            return  new UpdateTranscodeTemplateExecutor().Client(this).Execute<UpdateTranscodeTemplateResponse, UpdateTranscodeTemplateResult, UpdateTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  完整更新转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateTranscodeTemplateResponse> UpdateTranscodeTemplate(UpdateTranscodeTemplateRequest request) {
+            return await new UpdateTranscodeTemplateExecutor().Client(this).Execute<UpdateTranscodeTemplateResponse, UpdateTranscodeTemplateResult, UpdateTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest request) {
+            return  new DeleteTranscodeTemplateExecutor().Client(this).Execute<DeleteTranscodeTemplateResponse, DeleteTranscodeTemplateResult, DeleteTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTranscodeTemplateResponse> DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest request) {
+            return await new DeleteTranscodeTemplateExecutor().Client(this).Execute<DeleteTranscodeTemplateResponse, DeleteTranscodeTemplateResult, DeleteTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 

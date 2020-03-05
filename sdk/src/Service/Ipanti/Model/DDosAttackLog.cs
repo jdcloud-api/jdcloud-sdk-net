@@ -42,7 +42,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public double? AttackTraffic{ get; set; }
         ///<summary>
-        /// 是否触发黑洞，0否 1是
+        /// 是否触发黑洞, 0否 1是
         ///</summary>
         public int? BlackHole{ get; set; }
         ///<summary>
@@ -54,7 +54,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        /// 流量单位，bps、Kbps、Mbps、Gbps
+        /// 流量单位, bps、Kbps、Mbps、Gbps
         ///</summary>
         public string Unit{ get; set; }
         ///<summary>

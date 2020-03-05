@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Ipanti.Apis
 {
@@ -39,16 +40,14 @@ namespace  JDCloudSDK.Ipanti.Apis
     public class DescribeCCGraphRequest : JdcloudRequest
     {
         ///<summary>
-        /// 开始时间, 最多查最近 60 天, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+        /// 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
         ///Required:true
         ///</summary>
         [Required]
         public   string StartTime{ get; set; }
         ///<summary>
         /// 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-        ///Required:true
         ///</summary>
-        [Required]
         public   string EndTime{ get; set; }
         ///<summary>
         /// 高防实例 Id 列表
@@ -65,6 +64,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

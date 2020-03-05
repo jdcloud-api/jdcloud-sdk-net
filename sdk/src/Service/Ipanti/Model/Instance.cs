@@ -46,16 +46,25 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+        /// 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
         ///</summary>
         public int? Carrier{ get; set; }
         ///<summary>
-        /// 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
-        /// - 0: IPV4,
-        /// - 1: IPV4/IPV6
-        /// 
+        /// 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路. &lt;br&gt;- 0: IPV4. &lt;br&gt;- 1: IPV4/IPV6
         ///</summary>
         public int? IpType{ get; set; }
+        ///<summary>
+        /// IP 数量
+        ///</summary>
+        public int? IpCount{ get; set; }
+        ///<summary>
+        /// 可配的转发端口数量
+        ///</summary>
+        public int? PortCount{ get; set; }
+        ///<summary>
+        /// 可配的网站规则域名数量
+        ///</summary>
+        public int? DomainCount{ get; set; }
         ///<summary>
         /// 触发弹性带宽的次数
         ///</summary>
@@ -93,11 +102,11 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? WebRuleCount{ get; set; }
         ///<summary>
-        /// PAID|ARREARS|EXPIRED
+        /// 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
         ///</summary>
         public string ChargeStatus{ get; set; }
         ///<summary>
-        /// SAFE|CLEANING|BLOCKING
+        /// 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
         ///</summary>
         public string SecurityStatus{ get; set; }
         ///<summary>
@@ -113,26 +122,15 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
-        /// CC 防护观察者模式.
-        /// - 0: 关闭
-        /// - 1: 开启
-        /// 
+        /// CC 防护观察者模式. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
         ///</summary>
         public int? CcObserveMode{ get; set; }
         ///<summary>
-        /// CC 防护模式.
-        /// - 0: 正常
-        /// - 1: 紧急
-        /// - 2: 宽松
-        /// - 3: 自定义
-        /// 
+        /// CC 防护模式. &lt;br&gt;- 0: 正常 &lt;br&gt;- 1: 紧急 &lt;br&gt;- 2: 宽松 &lt;br&gt;- 3: 自定义
         ///</summary>
         public int? CcProtectMode{ get; set; }
         ///<summary>
-        /// CC 开关状态.
-        /// - 0: 关闭
-        /// - 1: 开启
-        /// 
+        /// CC 开关状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
         ///</summary>
         public int? CcProtectStatus{ get; set; }
         ///<summary>
@@ -148,10 +146,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<string> IpBlackList{ get; set; }
         ///<summary>
-        /// IP 黑名单状态.
-        /// - 0: 关闭
-        /// - 1: 开启
-        /// 
+        /// IP 黑名单状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
         ///</summary>
         public int? IpBlackStatus{ get; set; }
         ///<summary>
@@ -159,10 +154,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<string> IpWhiteList{ get; set; }
         ///<summary>
-        /// IP 白名单状态.
-        /// - 0: 关闭
-        /// - 1: 开启
-        /// 
+        /// IP 白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
         ///</summary>
         public int? IpWhiteStatus{ get; set; }
         ///<summary>
@@ -170,23 +162,23 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<string> UrlWhitelist{ get; set; }
         ///<summary>
-        /// url白名单状态，0关闭，1开启
+        /// url白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
         ///</summary>
         public int? UrlWhitelistStatus{ get; set; }
         ///<summary>
-        /// ccProtectMode为自定义模式时，每个Host的防护阈值
+        /// ccProtectMode为自定义模式时, 每个Host的防护阈值
         ///</summary>
         public int? HostQps{ get; set; }
         ///<summary>
-        /// ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+        /// ccProtectMode为自定义模式时, 每个Host+URI的防护阈值
         ///</summary>
         public int? HostUrlQps{ get; set; }
         ///<summary>
-        /// ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+        /// ccProtectMode为自定义模式时, 每个源IP对Host的防护阈值
         ///</summary>
         public int? IpHostQps{ get; set; }
         ///<summary>
-        /// ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+        /// ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
         ///</summary>
         public int? IpHostUrlQps{ get; set; }
     }

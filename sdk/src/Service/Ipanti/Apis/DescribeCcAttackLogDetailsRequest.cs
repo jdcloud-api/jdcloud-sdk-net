@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Ipanti.Apis
 {
@@ -49,28 +50,24 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-        ///Required:true
+        /// 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ, attackId 为空时必传
         ///</summary>
-        [Required]
         public   string StartTime{ get; set; }
         ///<summary>
         /// 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-        ///Required:true
         ///</summary>
-        [Required]
         public   string EndTime{ get; set; }
         ///<summary>
         /// 高防实例 ID
         ///</summary>
         public   string InstanceId{ get; set; }
         ///<summary>
-        /// 查询的子域名，只有选中某一个实例后才能多选子域名
+        /// 查询的子域名, 只有选中某一个实例后才能多选子域名
         ///</summary>
         public List<string> SubDomain{ get; set; }
 
         ///<summary>
-        /// CC 攻击记录Id
+        /// CC 攻击记录 Id, 不为空时忽略 startTime, endTime
         ///</summary>
         public   string AttackId{ get; set; }
         ///<summary>
@@ -78,6 +75,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

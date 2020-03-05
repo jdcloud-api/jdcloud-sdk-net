@@ -45,9 +45,5 @@ namespace JDCloudSDK.Ipanti.Model
         /// IP 黑白名单的名称
         ///</summary>
         public string Name{ get; set; }
-        ///<summary>
-        /// IP 或 IP 段的数组
-        ///</summary>
-        public List<string> Ip{ get; set; }
     }
 }

@@ -39,6 +39,10 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
+        /// 高防 IP
+        ///</summary>
+        public string ServiceIp{ get; set; }
+        ///<summary>
         /// 子域名
         ///Required:true
         ///</summary>
@@ -51,74 +55,58 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public WebRuleProtocol Protocol{ get; set; }
         ///<summary>
-        /// HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+        /// HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
         ///</summary>
         public List<int?> Port{ get; set; }
         ///<summary>
-        /// HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+        /// HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
         ///</summary>
         public List<int?> HttpsPort{ get; set; }
         ///<summary>
-        /// 回源类型：A或者CNAME
+        /// 回源类型：A 或者 CNAME
         ///Required:true
         ///</summary>
         [Required]
         public string OriginType{ get; set; }
         ///<summary>
-        /// originType 为 A 时，需要设置该字段
+        /// originType 为 A 时, 需要设置该字段
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
-        /// 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
+        /// 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        /// 回源域名,originType为CNAME时需要指定该字段
+        /// 回源域名, originType 为 CNAME 时需要指定该字段
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        /// 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+        /// 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
         ///Required:true
         ///</summary>
         [Required]
         public string Algorithm{ get; set; }
         ///<summary>
-        /// 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
-        ///   - 0 不开启强制跳转
-        ///   - 1 开启强制跳转
-        /// 
+        /// 是否开启 HTTPS 强制跳转, protocol.http 和 protocol.https 都为 true 时此参数生效. &lt;br&gt;- 0: 不开启强制跳转. &lt;br&gt;- 1: 开启强制跳转
         ///</summary>
         public int? ForceJump{ get; set; }
         ///<summary>
-        /// 是否为自定义端口号，0为默认 1为自定义
+        /// 是否为自定义端口号. 0: 默认&lt;br&gt;- 1: 自定义
         ///</summary>
         public int? CustomPortStatus{ get; set; }
         ///<summary>
-        /// 是否开启http回源, 当勾选HTTPS时可以配置该属性
-        ///   - 0 不开启
-        ///   - 1 开启
-        /// 
+        /// 是否开启 HTTP 回源, protocol.https 为 true 时此参数生效. &lt;br&gt;- 0: 不开启. &lt;br&gt;- 1: 开启
         ///</summary>
         public int? HttpOrigin{ get; set; }
         ///<summary>
-        /// 是否开启 WebSocket, 0 为不开启, 1 为开启
+        /// 是否开启 WebSocket.&lt;br&gt;- 0: 不开启&lt;br&gt;- 1: 开启
         ///Required:true
         ///</summary>
         [Required]
         public int WebSocketStatus{ get; set; }
         ///<summary>
-        /// 证书内容
+        /// 按区域分流回源配置
         ///</summary>
-        public string HttpsCertContent{ get; set; }
-        ///<summary>
-        /// 证书私钥
-        ///</summary>
-        public string HttpsRsaKey{ get; set; }
-        ///<summary>
-        /// 证书 Id
-        ///   - 如果传 certId, 请确认已经上传了相应的证书
-        ///   - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-        ///</summary>
-        public string CertId{ get; set; }
+        public List<GeoRsRoute> GeoRsRoute{ get; set; }
     }
 }

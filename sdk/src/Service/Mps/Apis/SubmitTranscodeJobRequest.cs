@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Mps.Apis
         [Required]
         public   string SecretKey{ get; set; }
         ///<summary>
-        /// 输入对象存储 endpoint，必须参数，如 s3.cn-north-1.jcloudcs.com
+        /// 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
         ///Required:true
         ///</summary>
         [Required]

@@ -38,35 +38,35 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 规则id
+        /// 规则 Id
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// 实例id
+        /// 实例 Id
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// TCP或UDP
+        /// TCP 或 UDP
         ///</summary>
         public string Protocol{ get; set; }
         ///<summary>
-        /// 规则的cname
+        /// 规则的 CNAME
         ///</summary>
         public string Cname{ get; set; }
         ///<summary>
-        /// 回源类型: ip或者domain
+        /// 回源类型: ip 或者 domain
         ///</summary>
         public string OriginType{ get; set; }
+        ///<summary>
+        /// 高防 IP
+        ///</summary>
+        public string ServiceIp{ get; set; }
         ///<summary>
         /// 端口号
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// 转发规则
-        /// - wrr 带权重的轮询
-        /// - rr  不带权重的轮询
-        /// - sh  源地址hash
-        /// 
+        /// 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
@@ -86,7 +86,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? OriginPort{ get; set; }
         ///<summary>
-        /// 0防御状态，1回源状态
+        /// 0: 防御状态&lt;br&gt;1: 回源状态
         ///</summary>
         public int? Status{ get; set; }
     }

@@ -157,6 +157,25 @@ namespace JDCloudSDK.Yundingdatapush.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建历史订单同步
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateOrderSyncResponse CreateOrderSync(CreateOrderSyncRequest request) {
+            return  new CreateOrderSyncExecutor().Client(this).Execute<CreateOrderSyncResponse, CreateOrderSyncResult, CreateOrderSyncRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建历史订单同步
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateOrderSyncResponse> CreateOrderSync(CreateOrderSyncRequest request) {
+            return await new CreateOrderSyncExecutor().Client(this).Execute<CreateOrderSyncResponse, CreateOrderSyncResult, CreateOrderSyncRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询已经开通的用户
         /// </summary>
         /// <param name="request">请求参数信息</param>

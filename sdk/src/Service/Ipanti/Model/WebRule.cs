@@ -58,6 +58,10 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? CnameStatus{ get; set; }
         ///<summary>
+        /// 高防 IP
+        ///</summary>
+        public string ServiceIp{ get; set; }
+        ///<summary>
         /// Protocol
         ///</summary>
         public WebRuleProtocol Protocol{ get; set; }
@@ -74,7 +78,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<int?> HttpsPort{ get; set; }
         ///<summary>
-        /// 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+        /// 是否开启 HTTP 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
         ///</summary>
         public int? HttpOrigin{ get; set; }
         ///<summary>
@@ -86,7 +90,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
-        /// OriginAddr
+        /// 回源域名, originType 为 A 时返回该字段
         ///</summary>
         public List<OriginAddrItem> OriginAddr{ get; set; }
         ///<summary>
@@ -94,11 +98,11 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string OriginDomain{ get; set; }
         ///<summary>
-        /// OnlineAddr
+        /// 备用的回源地址列表, 为一个域名或者多个 IP 地址
         ///</summary>
         public List<string> OnlineAddr{ get; set; }
         ///<summary>
-        /// 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
+        /// 证书状态. &lt;br&gt;- 0: 异常&lt;br&gt;- 1: 正常&lt;br&gt;- 2: 证书未上传
         ///</summary>
         public int? HttpCertStatus{ get; set; }
         ///<summary>
@@ -118,14 +122,11 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string HttpsRsaKey{ get; set; }
         ///<summary>
-        /// 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
-        ///   - 0 不强跳
-        ///   - 1 开启强跳
-        /// 
+        /// 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
         ///</summary>
         public int? ForceJump{ get; set; }
         ///<summary>
-        /// 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
+        /// 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
         ///</summary>
         public string Algorithm{ get; set; }
         ///<summary>
@@ -144,5 +145,9 @@ namespace JDCloudSDK.Ipanti.Model
         /// 白名单状态, 0: 关闭, 1: 开启
         ///</summary>
         public int? WhiteListEnable{ get; set; }
+        ///<summary>
+        /// 按区域分流回源配置
+        ///</summary>
+        public List<GeoRsRoute> GeoRsRoute{ get; set; }
     }
 }

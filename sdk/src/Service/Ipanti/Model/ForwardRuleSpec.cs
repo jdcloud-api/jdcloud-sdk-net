@@ -39,11 +39,15 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 协议: TCP或者UDP
+        /// 协议: TCP 或者 UDP
         ///Required:true
         ///</summary>
         [Required]
         public string Protocol{ get; set; }
+        ///<summary>
+        /// 高防 IP
+        ///</summary>
+        public string ServiceIp{ get; set; }
         ///<summary>
         /// 端口号, 取值范围[1, 65535]
         ///Required:true
@@ -51,11 +55,7 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public int Port{ get; set; }
         ///<summary>
-        /// 转发规则
-        /// - wrr 带权重的轮询
-        /// - rr  不带权重的轮询
-        /// - sh  源地址hash
-        /// 
+        /// 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
         ///Required:true
         ///</summary>
         [Required]

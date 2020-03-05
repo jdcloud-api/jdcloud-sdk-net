@@ -54,15 +54,19 @@ namespace  JDCloudSDK.Live.Apis
 
         ///<summary>
         /// 存储桶
+        ///Required:true
         ///</summary>
+        [Required]
         public   string SaveBucket{ get; set; }
         ///<summary>
         /// 存储地址
+        ///Required:true
         ///</summary>
+        [Required]
         public   string SaveEndpoint{ get; set; }
         ///<summary>
         /// 录制文件类型:
-        /// - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+        /// - 取值: ts,flv,mp4 (多种类型之间用;隔开)
         /// - 不区分大小写
         /// 
         ///Required:true
@@ -70,13 +74,13 @@ namespace  JDCloudSDK.Live.Apis
         [Required]
         public   string RecordFileType{ get; set; }
         ///<summary>
-        /// 录制文件存储路径:
-        /// - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
+        /// 录制文件存储Object:
+        /// - 默认: /record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
         /// 
         ///</summary>
         public   string SaveObject{ get; set; }
         ///<summary>
-        /// 打点录制任务外键
+        /// 打点录制任务外部id(可传入您的id,在回调时会在该字段返回)
         /// 
         ///</summary>
         public   string TaskExternalId{ get; set; }

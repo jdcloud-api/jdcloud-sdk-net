@@ -70,7 +70,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public long? IpHostUrlQps{ get; set; }
         ///<summary>
-        /// 开启的 cc 防护规则数量
+        /// 开启的 CC 防护规则数量
         ///</summary>
         public long? CcProtectionRuleEnableCount{ get; set; }
     }

@@ -47,7 +47,7 @@ namespace JDCloudSDK.Mps.Model
         ///</summary>
         public string SecretKey{ get; set; }
         ///<summary>
-        /// 输出对象存储 endpoint，可选参数，默认与输入 endpoint 保持一致，如 s3.cn-north-1.jcloudcs.com
+        /// 输出对象存储 endpoint。可选参数，内网域名，默认与输入 endpoint 保持一致，如 s3-internal.cn-north-1.jcloudcs.com
         ///</summary>
         public string Endpoint{ get; set; }
         ///<summary>

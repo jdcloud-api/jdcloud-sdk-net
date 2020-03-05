@@ -38,10 +38,7 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 证书 Id
-        /// - 如果传 certId, 请确认已经上传了相应的证书
-        /// - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-        /// 
+        /// 证书 Id&lt;br&gt;- 如果传 certId, 请确认已经上传了相应的证书&lt;br&gt;- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
         ///</summary>
         public string CertId{ get; set; }
         ///<summary>

@@ -164,7 +164,7 @@ namespace JDCloudSDK.Core.Client
                         {
                             string resultStr = result.ReturnValue;
 #if NET35
-                            if (string.IsNullOrEmpty(resultStr) || string.IsNullOrEmpty(resultStr))
+                            if (!(string.IsNullOrEmpty(resultStr) || string.IsNullOrEmpty(resultStr)))
 #else
                             if (!String.IsNullOrWhiteSpace(resultStr))
 #endif
