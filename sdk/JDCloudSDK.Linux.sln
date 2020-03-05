@@ -101,10 +101,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Antipro", "Antipro", "{5538
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JDCloudSDK.Antipro", "src\Service\Antipro\JDCloudSDK.Antipro.csproj", "{CB5A6488-A009-4094-A8DE-AEB3C75EC500}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Userpool", "Userpool", "{5A3DB57C-4396-41B5-8A71-0F21F480B058}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JDCloudSDK.Userpool", "src\Service\Userpool\JDCloudSDK.Userpool.csproj", "{E683DB3D-DAE3-471C-AE4C-C39D552B615A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Function", "Function", "{EBAB7549-74BE-46A7-9D51-EE1180A718E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JDCloudSDK.Function", "src\Service\Function\JDCloudSDK.Function.csproj", "{976CBF0E-22BB-4666-8770-585B243CF743}"
