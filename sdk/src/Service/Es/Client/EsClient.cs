@@ -252,6 +252,25 @@ namespace JDCloudSDK.Es.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取用户支持的特定功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSpecialFeaturesResponse DescribeSpecialFeatures(DescribeSpecialFeaturesRequest request) {
+            return  new DescribeSpecialFeaturesExecutor().Client(this).Execute<DescribeSpecialFeaturesResponse, DescribeSpecialFeaturesResult, DescribeSpecialFeaturesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取用户支持的特定功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSpecialFeaturesResponse> DescribeSpecialFeatures(DescribeSpecialFeaturesRequest request) {
+            return await new DescribeSpecialFeaturesExecutor().Client(this).Execute<DescribeSpecialFeaturesResponse, DescribeSpecialFeaturesResult, DescribeSpecialFeaturesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  变更es实例的配置，实例为running状态才可变更配置，每次只能变更一种且不可与原来的相同。
         /// 实例配置（cpu核数、内存、磁盘容量、节点数量）目前只允许变大
         /// 
@@ -431,6 +450,25 @@ namespace JDCloudSDK.Es.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据pin获取es实例的资产信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAssetsResponse DescribeAssets(DescribeAssetsRequest request) {
+            return  new DescribeAssetsExecutor().Client(this).Execute<DescribeAssetsResponse, DescribeAssetsResult, DescribeAssetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据pin获取es实例的资产信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAssetsResponse> DescribeAssets(DescribeAssetsRequest request) {
+            return await new DescribeAssetsExecutor().Client(this).Execute<DescribeAssetsResponse, DescribeAssetsResult, DescribeAssetsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询es实例节点列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -579,6 +617,44 @@ namespace JDCloudSDK.Es.Client
         /// <returns>请求结果信息</returns>
         public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
             return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重启实例接口，提供强制重启与滚动重启，两种重启方式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestartInstanceResponse RestartInstance(RestartInstanceRequest request) {
+            return  new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重启实例接口，提供强制重启与滚动重启，两种重启方式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest request) {
+            return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  水平缩容时，判断可以最小缩容到几个节点
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeShrinkInstanceLimitNodeCountResponse DescribeShrinkInstanceLimitNodeCount(DescribeShrinkInstanceLimitNodeCountRequest request) {
+            return  new DescribeShrinkInstanceLimitNodeCountExecutor().Client(this).Execute<DescribeShrinkInstanceLimitNodeCountResponse, DescribeShrinkInstanceLimitNodeCountResult, DescribeShrinkInstanceLimitNodeCountRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  水平缩容时，判断可以最小缩容到几个节点
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeShrinkInstanceLimitNodeCountResponse> DescribeShrinkInstanceLimitNodeCount(DescribeShrinkInstanceLimitNodeCountRequest request) {
+            return await new DescribeShrinkInstanceLimitNodeCountExecutor().Client(this).Execute<DescribeShrinkInstanceLimitNodeCountResponse, DescribeShrinkInstanceLimitNodeCountResult, DescribeShrinkInstanceLimitNodeCountRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

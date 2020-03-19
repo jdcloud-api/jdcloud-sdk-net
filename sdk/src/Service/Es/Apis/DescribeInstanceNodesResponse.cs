@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es节点接口
+ * ES Node API
  * es节点列表接口
  *
  * OpenAPI spec version: v1

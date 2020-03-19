@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * ProductTopic
- * 关于产品Topic信息操作的相关接口
+ * 关于产品自定义Topic信息操作的相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  新建产品Topic
+    ///  新建产品自定义Topic
     /// </summary>
     public class CreateProductTopicResponse : JdcloudResponse<CreateProductTopicResult>
     {

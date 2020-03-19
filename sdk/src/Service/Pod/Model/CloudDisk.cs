@@ -38,6 +38,10 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
+        /// Category
+        ///</summary>
+        public string Category{ get; set; }
+        ///<summary>
         /// 云盘ID。
         ///</summary>
         public string VolumeId{ get; set; }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es数据面身份验证设置相关接口
+ * ES Auth API
  * 查询、设置数据面身份验证信息接口
  *
  * OpenAPI spec version: v1

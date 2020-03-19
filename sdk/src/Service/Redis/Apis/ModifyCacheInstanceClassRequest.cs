@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存。
+    ///  变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存
         ///         /// 
     /// </summary>
     public class ModifyCacheInstanceClassRequest : JdcloudRequest
@@ -46,6 +46,10 @@ namespace  JDCloudSDK.Redis.Apis
         ///</summary>
         [Required]
         public   string CacheInstanceClass{ get; set; }
+        ///<summary>
+        /// 自定义分片数，只对自定义分片规格实例有效
+        ///</summary>
+        public   int? ShardNumber{ get; set; }
         ///<summary>
         /// 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
         ///Required:true

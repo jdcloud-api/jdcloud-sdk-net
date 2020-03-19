@@ -52,7 +52,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         [Required]
         public string Az{ get; set; }
         ///<summary>
-        /// 容器名称
+        /// 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
         ///Required:true
         ///</summary>
         [Required]

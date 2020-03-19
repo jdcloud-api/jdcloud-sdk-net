@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Jdccs.Apis
     public class LastDownsampleRequest : JdcloudRequest
     {
         ///<summary>
-        /// 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
+        /// 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
         ///Required:true
         ///</summary>
         [Required]

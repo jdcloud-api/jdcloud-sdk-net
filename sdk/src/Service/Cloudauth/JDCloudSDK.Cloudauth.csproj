@@ -24,7 +24,7 @@
         <DocumentationFile>bin\Debug\netstandard2.0\JDCloudSDK.cloudauth.xml</DocumentationFile>
     </PropertyGroup>
     <ItemGroup>
-        <None Include="../../../icon/icon.png" Pack="true" PackagePath="\" />
+        <None Include="../../../icon/icon.png" Pack="true" PackagePath="\"/>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

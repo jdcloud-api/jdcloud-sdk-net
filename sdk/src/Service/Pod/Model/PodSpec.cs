@@ -40,7 +40,7 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// Pod名称
+        /// Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
         ///Required:true
         ///</summary>
         [Required]
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 主机名；范围：[1-63]个ASCII字符，默认值为 podId
+        /// 主机名；符合hostname规范，默认值为 podId
         ///</summary>
         public string Hostname{ get; set; }
         ///<summary>

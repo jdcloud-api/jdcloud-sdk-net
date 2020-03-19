@@ -442,6 +442,25 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据IP网段查询流量采样数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTrafficSamplingResponse DescribeTrafficSampling(DescribeTrafficSamplingRequest request) {
+            return  new DescribeTrafficSamplingExecutor().Client(this).Execute<DescribeTrafficSamplingResponse, DescribeTrafficSamplingResult, DescribeTrafficSamplingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据IP网段查询流量采样数据
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTrafficSamplingResponse> DescribeTrafficSampling(DescribeTrafficSamplingRequest request) {
+            return await new DescribeTrafficSamplingExecutor().Client(this).Execute<DescribeTrafficSamplingResponse, DescribeTrafficSamplingResult, DescribeTrafficSamplingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询机柜详情
         /// </summary>
         /// <param name="request">请求参数信息</param>

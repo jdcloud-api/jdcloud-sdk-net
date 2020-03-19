@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * ProductTopic
- * 关于产品Topic信息操作的相关接口
+ * 关于产品自定义Topic信息操作的相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -35,20 +35,23 @@ namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  新建产品Topic
+    ///  新建产品自定义Topic
     /// </summary>
     public class CreateProductTopicRequest : JdcloudRequest
     {
         ///<summary>
-        /// 自定义类目名称, /user/{productKey}/{identifier}/topicShortName
+        /// Topic名称为必填，同一个产品下的Topic名称不能重复
+        /// 只能包含字母，数字和下划线，最多64个字符，每个层级都不能为空
+        /// 不能以/结尾
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string TopicShortName{ get; set; }
         ///<summary>
-        /// 设备对该Topic类的操作权限，取值
-        /// sub:订阅
+        /// 操作权限，设备对该Topic类的操作权限，取值
         /// pub:发布
+        /// sub:订阅
         /// 
         ///Required:true
         ///</summary>
@@ -66,7 +69,7 @@ namespace  JDCloudSDK.Iotcore.Apis
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// IoT Engine实例ID信息
+        /// IoTCore实例ID信息
         ///Required:true
         ///</summary>
         [Required]

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es快照接口
+ * ES Snapshot API
  * es快照创建、查询，自动快照的设置、查询接口
  *
  * OpenAPI spec version: v1

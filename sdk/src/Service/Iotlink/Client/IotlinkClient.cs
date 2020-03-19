@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 京东云iotlink接口
- * iotlink相关接口
+ * iotlink接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Iotlink.Client
 {
     /// <summary>
     ///  京东云iotlink接口
-    ///  iotlink相关接口
+    ///  iotlink接口
     ///  Iotlink Api 客户端
     ///</summary>
     public class IotlinkClient : JdcloudClient
@@ -191,6 +191,44 @@ namespace JDCloudSDK.Iotlink.Client
         /// <returns>请求结果信息</returns>
         public async Task<CloseIotCardResponse> CloseIotCard(CloseIotCardRequest request) {
             return await new CloseIotCardExecutor().Client(this).Execute<CloseIotCardResponse, CloseIotCardResult, CloseIotCardRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  物联网卡查询通用操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SearchResponse Search(SearchRequest request) {
+            return  new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  物联网卡查询通用操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SearchResponse> Search(SearchRequest request) {
+            return await new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  物联网卡卡操作通用操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperateResponse Operate(OperateRequest request) {
+            return  new OperateExecutor().Client(this).Execute<OperateResponse, OperateResult, OperateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  物联网卡卡操作通用操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperateResponse> Operate(OperateRequest request) {
+            return await new OperateExecutor().Client(this).Execute<OperateResponse, OperateResult, OperateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

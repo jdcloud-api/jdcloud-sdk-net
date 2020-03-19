@@ -70,11 +70,11 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public DateTime? CreatedTime{ get; set; }
         ///<summary>
-        /// 所属VPC的ID
+        /// 所属VPC ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        /// 所属子网的ID
+        /// 所属子网ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>

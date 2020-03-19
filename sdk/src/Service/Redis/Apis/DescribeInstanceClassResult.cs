@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  查询某区域下的缓存Redis实例规格列表
+    ///  查询缓存Redis实例的规格列表
     /// </summary>
     public class DescribeInstanceClassResult : JdcloudResult
     {

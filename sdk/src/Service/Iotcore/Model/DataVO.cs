@@ -101,5 +101,13 @@ namespace JDCloudSDK.Iotcore.Model
         /// 实例类型[0-独享，1-共享]
         ///</summary>
         public string InstanceType{ get; set; }
+        ///<summary>
+        /// Edge是否开通，0-未开通，1-已开通
+        ///</summary>
+        public string EdgeStatus{ get; set; }
+        ///<summary>
+        /// Edge开通时间
+        ///</summary>
+        public string EdgeOpenTime{ get; set; }
     }
 }

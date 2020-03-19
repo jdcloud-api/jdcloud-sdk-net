@@ -33,7 +33,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  创建缓存Redis实例时，用户输入的参数
+    ///  创建缓存Redis实例时，用户指定的参数
     /// </summary>
     public class CacheInstanceSpec
     {
@@ -57,7 +57,7 @@ namespace JDCloudSDK.Redis.Model
         [Required]
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+        /// 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
         ///Required:true
         ///</summary>
         [Required]
@@ -77,12 +77,16 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceDescription{ get; set; }
         ///<summary>
-        /// 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+        /// 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
         ///</summary>
         public string RedisVersion{ get; set; }
         ///<summary>
-        /// 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+        /// 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
         ///</summary>
         public int? Ipv6On{ get; set; }
+        ///<summary>
+        /// 自定义分片数，只对自定义规格实例有效
+        ///</summary>
+        public int? ShardNumber{ get; set; }
     }
 }

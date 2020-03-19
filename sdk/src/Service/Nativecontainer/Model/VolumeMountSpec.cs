@@ -40,7 +40,7 @@ namespace JDCloudSDK.Nativecontainer.Model
     {
 
         ///<summary>
-        /// 磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型
+        /// 磁盘分类 cloud：基于云硬盘的卷 local：本地盘（使用前需申请）
         ///Required:true
         ///</summary>
         [Required]

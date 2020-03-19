@@ -159,6 +159,27 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改资源的配额，支持：原生容器 pod 和 secret.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
+            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改资源的配额，支持：原生容器 pod 和 secret.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
+            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取 pod 中某个容器的详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -304,6 +325,33 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  校验镜像与镜像仓库认证信息是否有效。&lt;br&gt;
+        /// 设置 image，如果 secret 不设置，使用 docker 官方镜像可以直接将 image 字段设置为镜像名称，不可设置 serverAddress、username、password；&lt;br&gt;
+        /// 同时设置 image 与 secret 时，需要保证该 secret 已经创建成功，不可设置 serverAddress、username、password；&lt;br&gt;
+        /// 如果不设置 image，则用于 check secret，需必传 serverAddress 路径，用户名密码可选。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public VerifyImageAccessResponse VerifyImageAccess(VerifyImageAccessRequest request) {
+            return  new VerifyImageAccessExecutor().Client(this).Execute<VerifyImageAccessResponse, VerifyImageAccessResult, VerifyImageAccessRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  校验镜像与镜像仓库认证信息是否有效。&lt;br&gt;
+        /// 设置 image，如果 secret 不设置，使用 docker 官方镜像可以直接将 image 字段设置为镜像名称，不可设置 serverAddress、username、password；&lt;br&gt;
+        /// 同时设置 image 与 secret 时，需要保证该 secret 已经创建成功，不可设置 serverAddress、username、password；&lt;br&gt;
+        /// 如果不设置 image，则用于 check secret，需必传 serverAddress 路径，用户名密码可选。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<VerifyImageAccessResponse> VerifyImageAccess(VerifyImageAccessRequest request) {
+            return await new VerifyImageAccessExecutor().Client(this).Execute<VerifyImageAccessResponse, VerifyImageAccessResult, VerifyImageAccessRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  执行exec，此接口需要升级Http协议到WebSocket
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -388,6 +436,25 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询资源和绑定资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SelectDetailListResponse SelectDetailList(SelectDetailListRequest request) {
+            return  new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询资源和绑定资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SelectDetailListResponse> SelectDetailList(SelectDetailListRequest request) {
+            return await new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建一台或多台 pod
         /// - 创建pod需要通过实名认证
         /// - hostname规范
@@ -400,7 +467,6 @@ namespace JDCloudSDK.Pod.Client
         ///         - 标签与标签之间使用“.”(点)进行连接
         ///         - 不能以“.”(点)开始，也不能以“.”(点)结尾
         ///         - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
-        ///     - 正则：^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$
         /// - 网络配置
         ///     - 指定主网卡配置信息
         ///         - 必须指定subnetId
@@ -432,12 +498,10 @@ namespace JDCloudSDK.Pod.Client
         /// - pod 容器日志
         ///     - default：默认在本地分配10MB的存储空间，自动rotate
         /// - DNS-1123 label规范
-        ///     - 长度范围: [1-63]
-        ///     - 正则表达式: ^[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?$
+        ///     - 支持数字、小写字母、英文中划线“-”，但不支持以“-”作为开始字符和结束字符，1~63字符。
         ///     - 例子: my-name, 123-abc
         /// - DNS-1123 subdomain规范
-        ///     - 长度范围: [1-253]
-        ///     - 正则表达式: ^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$
+        ///     - 由一或多个标签组成，标签之间用&#39;.&#39;分隔；标签可由小写字母、数字、英文中划线&#39;-&#39;构成，标签首尾不可为&#39;-&#39;；所有字符总长度为1~253。
         ///     - 例子: example.com, registry.docker-cn.com
         /// - 其他
         ///     - 创建完成后，pod 状态为running
@@ -463,7 +527,6 @@ namespace JDCloudSDK.Pod.Client
         ///         - 标签与标签之间使用“.”(点)进行连接
         ///         - 不能以“.”(点)开始，也不能以“.”(点)结尾
         ///         - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
-        ///     - 正则：^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$
         /// - 网络配置
         ///     - 指定主网卡配置信息
         ///         - 必须指定subnetId
@@ -495,12 +558,10 @@ namespace JDCloudSDK.Pod.Client
         /// - pod 容器日志
         ///     - default：默认在本地分配10MB的存储空间，自动rotate
         /// - DNS-1123 label规范
-        ///     - 长度范围: [1-63]
-        ///     - 正则表达式: ^[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?$
+        ///     - 支持数字、小写字母、英文中划线“-”，但不支持以“-”作为开始字符和结束字符，1~63字符。
         ///     - 例子: my-name, 123-abc
         /// - DNS-1123 subdomain规范
-        ///     - 长度范围: [1-253]
-        ///     - 正则表达式: ^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$
+        ///     - 由一或多个标签组成，标签之间用&#39;.&#39;分隔；标签可由小写字母、数字、英文中划线&#39;-&#39;构成，标签首尾不可为&#39;-&#39;；所有字符总长度为1~253。
         ///     - 例子: example.com, registry.docker-cn.com
         /// - 其他
         ///     - 创建完成后，pod 状态为running

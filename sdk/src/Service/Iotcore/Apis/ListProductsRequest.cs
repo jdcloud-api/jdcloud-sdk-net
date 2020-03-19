@@ -49,9 +49,10 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// productName-产品名称，精确匹配，支持单个
+        /// productName-产品名称，模糊匹配，支持单个
         /// productKey-产品key，精确匹配，支持单个
         /// productType-产品类型，精确匹配，支持单个
+        /// templateName-模板名称，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

@@ -58,6 +58,10 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public InstanceCloudDisk CloudDisk{ get; set; }
         ///<summary>
+        /// 云硬盘规格
+        ///</summary>
+        public InstanceLocalDisk LocalDisk{ get; set; }
+        ///<summary>
         /// 指定volume文件系统类型，目前支持[xfs, ext4]
         ///</summary>
         public string FsType{ get; set; }

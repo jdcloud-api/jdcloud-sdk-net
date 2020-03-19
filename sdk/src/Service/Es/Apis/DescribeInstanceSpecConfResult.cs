@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es配置相关接口
+ * ES Config API
  * es配置相关接口
  *
  * OpenAPI spec version: v1

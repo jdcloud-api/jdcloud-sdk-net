@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es定时创建删除索引接口
+ * ES Index LifeCycle API
  * 支持针对索引模板每天、每周或每月定时创建索引；支持定期删除索引。
  *
  * OpenAPI spec version: v1

@@ -39,7 +39,7 @@ namespace JDCloudSDK.Pod.Model
     {
 
         ///<summary>
-        /// 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
+        /// 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
         ///Required:true
         ///</summary>
         [Required]

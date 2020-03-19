@@ -33,7 +33,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  查询缓存Redis实例时，返回的实例信息（列表和详情的信息一样）
+    ///  缓存Redis实例信息
     /// </summary>
     public class CacheInstance
     {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+        /// 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         ///</summary>
         public string CacheInstanceClass{ get; set; }
         ///<summary>
@@ -71,23 +71,23 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public AzId AzId{ get; set; }
         ///<summary>
-        /// 所属VPC的ID
+        /// 实例所属VPC ID
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        /// 所属子网的ID
+        /// 实例所属子网ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 访问域名
+        /// 实例的访问域名
         ///</summary>
         public string ConnectionDomain{ get; set; }
         ///<summary>
-        /// 端口
+        /// 实例的访问端口
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// 计费信息
+        /// 实例的计费信息
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
@@ -114,5 +114,13 @@ namespace JDCloudSDK.Redis.Model
         /// 标签信息
         ///</summary>
         public List<Tag> Tags{ get; set; }
+        ///<summary>
+        /// 实例分片数，自定义分片规格的实例分片数由用户创建时选择，其他实例为固定分片数
+        ///</summary>
+        public int? ShardNumber{ get; set; }
+        ///<summary>
+        /// 单分片内存大小（MB）
+        ///</summary>
+        public int? MemoryMBPerShard{ get; set; }
     }
 }
