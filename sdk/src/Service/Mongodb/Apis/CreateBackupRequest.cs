@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Mongodb.Apis
 {
@@ -49,10 +50,15 @@ namespace  JDCloudSDK.Mongodb.Apis
         ///</summary>
         public   string BackupName{ get; set; }
         ///<summary>
+        /// 备份方式，Logical - 逻辑备份、Physical - 物理备份
+        ///</summary>
+        public   string BackupMethod{ get; set; }
+        ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

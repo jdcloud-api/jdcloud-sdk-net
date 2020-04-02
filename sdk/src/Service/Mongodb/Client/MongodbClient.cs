@@ -89,9 +89,9 @@ namespace JDCloudSDK.Mongodb.Client
         }
 
         /// <summary>
-        ///  版本号 1.0.9
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.0.9";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Mongodb.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  内部接口，删除未到期包年包月实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeletePrepaidInstanceResponse DeletePrepaidInstance(DeletePrepaidInstanceRequest request) {
+            return  new DeletePrepaidInstanceExecutor().Client(this).Execute<DeletePrepaidInstanceResponse, DeletePrepaidInstanceResult, DeletePrepaidInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  内部接口，删除未到期包年包月实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeletePrepaidInstanceResponse> DeletePrepaidInstance(DeletePrepaidInstanceRequest request) {
+            return await new DeletePrepaidInstanceExecutor().Client(this).Execute<DeletePrepaidInstanceResponse, DeletePrepaidInstanceResult, DeletePrepaidInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  变更实例规格
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -157,40 +176,21 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建实例
+        ///  查询实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
-            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+        public DescribeInstancesInternalResponse DescribeInstancesInternal(DescribeInstancesInternalRequest request) {
+            return  new DescribeInstancesInternalExecutor().Client(this).Execute<DescribeInstancesInternalResponse, DescribeInstancesInternalResult, DescribeInstancesInternalRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建实例
+        ///  查询实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
-            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取备份策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
-            return  new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取备份策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
-            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeInstancesInternalResponse> DescribeInstancesInternal(DescribeInstancesInternalRequest request) {
+            return await new DescribeInstancesInternalExecutor().Client(this).Execute<DescribeInstancesInternalResponse, DescribeInstancesInternalResult, DescribeInstancesInternalRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -214,25 +214,6 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取备份下载链接
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public BackupDownloadURLResponse BackupDownloadURL(BackupDownloadURLRequest request) {
-            return  new BackupDownloadURLExecutor().Client(this).Execute<BackupDownloadURLResponse, BackupDownloadURLResult, BackupDownloadURLRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取备份下载链接
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<BackupDownloadURLResponse> BackupDownloadURL(BackupDownloadURLRequest request) {
-            return await new BackupDownloadURLExecutor().Client(this).Execute<BackupDownloadURLResponse, BackupDownloadURLResult, BackupDownloadURLRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询实例信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -252,40 +233,97 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除实例
+        ///  创建分片集群
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request) {
-            return  new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+        public CreateShardingInstanceResponse CreateShardingInstance(CreateShardingInstanceRequest request) {
+            return  new CreateShardingInstanceExecutor().Client(this).Execute<CreateShardingInstanceResponse, CreateShardingInstanceResult, CreateShardingInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除实例
+        ///  创建分片集群
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
-            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
+        public async Task<CreateShardingInstanceResponse> CreateShardingInstance(CreateShardingInstanceRequest request) {
+            return await new CreateShardingInstanceExecutor().Client(this).Execute<CreateShardingInstanceResponse, CreateShardingInstanceResult, CreateShardingInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  数据恢复
+        ///  查询跨区域备份同步服务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
-            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        public DescribeBackupSynchronicitiesResponse DescribeBackupSynchronicities(DescribeBackupSynchronicitiesRequest request) {
+            return  new DescribeBackupSynchronicitiesExecutor().Client(this).Execute<DescribeBackupSynchronicitiesResponse, DescribeBackupSynchronicitiesResult, DescribeBackupSynchronicitiesRequest>(request);
         }
 #else
         /// <summary>
-        ///  数据恢复
+        ///  查询跨区域备份同步服务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
-            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeBackupSynchronicitiesResponse> DescribeBackupSynchronicities(DescribeBackupSynchronicitiesRequest request) {
+            return await new DescribeBackupSynchronicitiesExecutor().Client(this).Execute<DescribeBackupSynchronicitiesResponse, DescribeBackupSynchronicitiesResult, DescribeBackupSynchronicitiesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重启MongoDB分片集群节点，支持重启Mongos、Shard。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestartNodeResponse RestartNode(RestartNodeRequest request) {
+            return  new RestartNodeExecutor().Client(this).Execute<RestartNodeResponse, RestartNodeResult, RestartNodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重启MongoDB分片集群节点，支持重启Mongos、Shard。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestartNodeResponse> RestartNode(RestartNodeRequest request) {
+            return await new RestartNodeExecutor().Client(this).Execute<RestartNodeResponse, RestartNodeResult, RestartNodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建跨区域备份同步服务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateBackupSynchronicityResponse CreateBackupSynchronicity(CreateBackupSynchronicityRequest request) {
+            return  new CreateBackupSynchronicityExecutor().Client(this).Execute<CreateBackupSynchronicityResponse, CreateBackupSynchronicityResult, CreateBackupSynchronicityRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建跨区域备份同步服务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateBackupSynchronicityResponse> CreateBackupSynchronicity(CreateBackupSynchronicityRequest request) {
+            return await new CreateBackupSynchronicityExecutor().Client(this).Execute<CreateBackupSynchronicityResponse, CreateBackupSynchronicityResult, CreateBackupSynchronicityRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取topology结构
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTopologyResponse DescribeTopology(DescribeTopologyRequest request) {
+            return  new DescribeTopologyExecutor().Client(this).Execute<DescribeTopologyResponse, DescribeTopologyResult, DescribeTopologyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取topology结构
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTopologyResponse> DescribeTopology(DescribeTopologyRequest request) {
+            return await new DescribeTopologyExecutor().Client(this).Execute<DescribeTopologyResponse, DescribeTopologyResult, DescribeTopologyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -305,63 +343,6 @@ namespace JDCloudSDK.Mongodb.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeFlavorsResponse> DescribeFlavors(DescribeFlavorsRequest request) {
             return await new DescribeFlavorsExecutor().Client(this).Execute<DescribeFlavorsResponse, DescribeFlavorsResult, DescribeFlavorsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重置密码
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
-            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置密码
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
-            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建备份
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateBackupResponse CreateBackup(CreateBackupRequest request) {
-            return  new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建备份
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
-            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改备份策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
-            return  new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改备份策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
-            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -404,6 +385,310 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  资源权限校验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public VerifyInstanceValidationResponse VerifyInstanceValidation(VerifyInstanceValidationRequest request) {
+            return  new VerifyInstanceValidationExecutor().Client(this).Execute<VerifyInstanceValidationResponse, VerifyInstanceValidationResult, VerifyInstanceValidationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  资源权限校验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<VerifyInstanceValidationResponse> VerifyInstanceValidation(VerifyInstanceValidationRequest request) {
+            return await new VerifyInstanceValidationExecutor().Client(this).Execute<VerifyInstanceValidationResponse, VerifyInstanceValidationResult, VerifyInstanceValidationRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBackupResponse DeleteBackup(DeleteBackupRequest request) {
+            return  new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
+            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取配额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest request) {
+            return  new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取配额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
+            return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除跨地域备份同步服务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBackupSynchronicitiesResponse DeleteBackupSynchronicities(DeleteBackupSynchronicitiesRequest request) {
+            return  new DeleteBackupSynchronicitiesExecutor().Client(this).Execute<DeleteBackupSynchronicitiesResponse, DeleteBackupSynchronicitiesResult, DeleteBackupSynchronicitiesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除跨地域备份同步服务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBackupSynchronicitiesResponse> DeleteBackupSynchronicities(DeleteBackupSynchronicitiesRequest request) {
+            return await new DeleteBackupSynchronicitiesExecutor().Client(this).Execute<DeleteBackupSynchronicitiesResponse, DeleteBackupSynchronicitiesResult, DeleteBackupSynchronicitiesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重启实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestartInstanceResponse RestartInstance(RestartInstanceRequest request) {
+            return  new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重启实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestartInstanceResponse> RestartInstance(RestartInstanceRequest request) {
+            return await new RestartInstanceExecutor().Client(this).Execute<RestartInstanceResponse, RestartInstanceResult, RestartInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
+            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
+            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  变更分片集群的节点规格，支持Mognos、Shard节点。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyNodeSpecResponse ModifyNodeSpec(ModifyNodeSpecRequest request) {
+            return  new ModifyNodeSpecExecutor().Client(this).Execute<ModifyNodeSpecResponse, ModifyNodeSpecResult, ModifyNodeSpecRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  变更分片集群的节点规格，支持Mognos、Shard节点。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyNodeSpecResponse> ModifyNodeSpec(ModifyNodeSpecRequest request) {
+            return await new ModifyNodeSpecExecutor().Client(this).Execute<ModifyNodeSpecResponse, ModifyNodeSpecResult, ModifyNodeSpecRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取备份策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
+            return  new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取备份策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicy(DescribeBackupPolicyRequest request) {
+            return await new DescribeBackupPolicyExecutor().Client(this).Execute<DescribeBackupPolicyResponse, DescribeBackupPolicyResult, DescribeBackupPolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取备份下载链接
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BackupDownloadURLResponse BackupDownloadURL(BackupDownloadURLRequest request) {
+            return  new BackupDownloadURLExecutor().Client(this).Execute<BackupDownloadURLResponse, BackupDownloadURLResult, BackupDownloadURLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取备份下载链接
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BackupDownloadURLResponse> BackupDownloadURL(BackupDownloadURLRequest request) {
+            return await new BackupDownloadURLExecutor().Client(this).Execute<BackupDownloadURLResponse, BackupDownloadURLResult, BackupDownloadURLRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  内部接口，实例欠费或者到期后，关闭实例的网络访问功能。网络访问关闭后，用户无法通过域名连接实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DetachNetworkResponse DetachNetwork(DetachNetworkRequest request) {
+            return  new DetachNetworkExecutor().Client(this).Execute<DetachNetworkResponse, DetachNetworkResult, DetachNetworkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  内部接口，实例欠费或者到期后，关闭实例的网络访问功能。网络访问关闭后，用户无法通过域名连接实例。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DetachNetworkResponse> DetachNetwork(DetachNetworkRequest request) {
+            return await new DetachNetworkExecutor().Client(this).Execute<DetachNetworkResponse, DetachNetworkResult, DetachNetworkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request) {
+            return  new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
+            return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  数据恢复
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request) {
+            return  new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  数据恢复
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest request) {
+            return await new RestoreInstanceExecutor().Client(this).Execute<RestoreInstanceResponse, RestoreInstanceResult, RestoreInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重置密码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResetPasswordResponse ResetPassword(ResetPasswordRequest request) {
+            return  new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置密码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request) {
+            return await new ResetPasswordExecutor().Client(this).Execute<ResetPasswordResponse, ResetPasswordResult, ResetPasswordRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  验证实例规格有效性
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StandardVerifyResponse StandardVerify(StandardVerifyRequest request) {
+            return  new StandardVerifyExecutor().Client(this).Execute<StandardVerifyResponse, StandardVerifyResult, StandardVerifyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  验证实例规格有效性
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StandardVerifyResponse> StandardVerify(StandardVerifyRequest request) {
+            return await new StandardVerifyExecutor().Client(this).Execute<StandardVerifyResponse, StandardVerifyResult, StandardVerifyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateBackupResponse CreateBackup(CreateBackupRequest request) {
+            return  new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建备份
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
+            return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改备份策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
+            return  new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改备份策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicy(ModifyBackupPolicyRequest request) {
+            return await new ModifyBackupPolicyExecutor().Client(this).Execute<ModifyBackupPolicyResponse, ModifyBackupPolicyResult, ModifyBackupPolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改实例访问白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -442,21 +727,21 @@ namespace JDCloudSDK.Mongodb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除备份
+        ///  内部接口，实例欠费或者到期停服状态下，用户续费后，开启实例的网络访问功能。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteBackupResponse DeleteBackup(DeleteBackupRequest request) {
-            return  new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request);
+        public AttachNetworkResponse AttachNetwork(AttachNetworkRequest request) {
+            return  new AttachNetworkExecutor().Client(this).Execute<AttachNetworkResponse, AttachNetworkResult, AttachNetworkRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除备份
+        ///  内部接口，实例欠费或者到期停服状态下，用户续费后，开启实例的网络访问功能。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest request) {
-            return await new DeleteBackupExecutor().Client(this).Execute<DeleteBackupResponse, DeleteBackupResult, DeleteBackupRequest>(request).ConfigureAwait(false);
+        public async Task<AttachNetworkResponse> AttachNetwork(AttachNetworkRequest request) {
+            return await new AttachNetworkExecutor().Client(this).Execute<AttachNetworkResponse, AttachNetworkResult, AttachNetworkRequest>(request).ConfigureAwait(false);
         }
 #endif
 

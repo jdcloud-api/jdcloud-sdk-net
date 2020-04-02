@@ -38,15 +38,22 @@ namespace JDCloudSDK.Mps.Model
     {
 
         ///<summary>
-        /// 加密Key。HLS AES129KEY，必须为 16 个 ASCII 可打印字符
+        /// HLS加密公钥，按指定编码方式编码
+        /// 必须为 16 字节值，按照 hlsKeyEncodeType 所指定的编码方式进行编码后的字符串
         /// 
         ///</summary>
         public string HlsKey{ get; set; }
         ///<summary>
-        /// 加密Key地址。必须为合法的HTTP地址。
-        /// 若 hleKey 已设置，表示开启 HLS 加密，其时该参数必须
+        /// HLS加密公钥地址，仅支持HTTP(s)地址
+        /// 若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
         /// 
         ///</summary>
         public string HlsKeyUrl{ get; set; }
+        ///<summary>
+        /// HLS加密公钥编码方式。取值范围：base16, base32, base64
+        /// 若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
+        /// 
+        ///</summary>
+        public string HlsKeyEncodeType{ get; set; }
     }
 }

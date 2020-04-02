@@ -83,9 +83,7 @@ namespace  JDCloudSDK.Kubernetes.Apis
         public   string VpcId{ get; set; }
         ///<summary>
         /// 工作节点组的cidr
-        ///Required:true
         ///</summary>
-        [Required]
         public   string NodeCidr{ get; set; }
         ///<summary>
         /// 是否开启工作节点组的自动修复，默认关闭
@@ -95,6 +93,10 @@ namespace  JDCloudSDK.Kubernetes.Apis
         /// 自动伸缩配置
         ///</summary>
         public   CAConfigSpec CaConfig{ get; set; }
+        ///<summary>
+        /// 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+        ///</summary>
+        public   NodeGroupNetworkSpec NodeGroupNetwork{ get; set; }
         ///<summary>
         /// 地域 ID
         ///Required:true

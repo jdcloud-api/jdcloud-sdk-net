@@ -49,5 +49,9 @@ namespace JDCloudSDK.Mongodb.Model
         /// 端口
         ///</summary>
         public string Port{ get; set; }
+        ///<summary>
+        /// floatingIp地址
+        ///</summary>
+        public string FloatingIp{ get; set; }
     }
 }

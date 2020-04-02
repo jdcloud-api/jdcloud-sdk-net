@@ -66,6 +66,10 @@ namespace JDCloudSDK.Mongodb.Model
         ///</summary>
         public string BackupMode{ get; set; }
         ///<summary>
+        /// 备份方式，Logical - 逻辑备份、Physical - 物理备份
+        ///</summary>
+        public string BackupMethod{ get; set; }
+        ///<summary>
         /// 整个备份集大小，单位：Byte
         ///</summary>
         public int? BackupSizeByte{ get; set; }

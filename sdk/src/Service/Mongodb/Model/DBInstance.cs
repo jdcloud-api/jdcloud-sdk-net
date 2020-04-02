@@ -47,6 +47,10 @@ namespace JDCloudSDK.Mongodb.Model
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
+        /// 实例类型，副本集：Replication；分片集群：Sharding；
+        ///</summary>
+        public string InstanceType{ get; set; }
+        ///<summary>
         /// 数据库类型
         ///</summary>
         public string Engine{ get; set; }
@@ -55,23 +59,31 @@ namespace JDCloudSDK.Mongodb.Model
         ///</summary>
         public string EngineVersion{ get; set; }
         ///<summary>
-        /// 实例规格代码
+        /// 存储类型。LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe、EBS_SSD-SSD云盘。
+        ///</summary>
+        public string InstanceStorageType{ get; set; }
+        ///<summary>
+        /// 实例数据加密（存储类型为云硬盘才支持数据加密）。 false：不加密；true：加密。缺省为false。
+        ///</summary>
+        public bool StorageEncrypted{ get; set; }
+        ///<summary>
+        /// 副本集实例规格代码
         ///</summary>
         public string InstanceClass{ get; set; }
         ///<summary>
-        /// 存储空间
+        /// 副本集存储空间
         ///</summary>
         public int? InstanceStorageGB{ get; set; }
         ///<summary>
-        /// CPU核数
+        /// 副本集CPU核数
         ///</summary>
         public int? InstanceCPU{ get; set; }
         ///<summary>
-        /// 内存，单位GB
+        /// 副本集内存，单位GB
         ///</summary>
         public int? InstanceMemoryGB{ get; set; }
         ///<summary>
-        /// 可取区ID，依次为主、从、隐藏节点所在可用区
+        /// 副本集可用区区ID，依次为主、从、隐藏节点所在可用区
         ///</summary>
         public List<string> AzId{ get; set; }
         ///<summary>
@@ -87,7 +99,7 @@ namespace JDCloudSDK.Mongodb.Model
         ///</summary>
         public string ReplicaSetName{ get; set; }
         ///<summary>
-        /// 域名
+        /// 副本集域名
         ///</summary>
         public string InstanceDomain{ get; set; }
         ///<summary>
@@ -99,7 +111,7 @@ namespace JDCloudSDK.Mongodb.Model
         ///</summary>
         public string AccountName{ get; set; }
         ///<summary>
-        /// 应用访问端口
+        /// 副本集访问端口
         ///</summary>
         public string InstancePort{ get; set; }
         ///<summary>
@@ -134,5 +146,17 @@ namespace JDCloudSDK.Mongodb.Model
         /// 标签
         ///</summary>
         public List<Tag> Tags{ get; set; }
+        ///<summary>
+        /// mongos信息
+        ///</summary>
+        public List<Mongos> Mongos{ get; set; }
+        ///<summary>
+        /// configserver信息
+        ///</summary>
+        public List<Configserver> Configserver{ get; set; }
+        ///<summary>
+        /// shard信息
+        ///</summary>
+        public List<Shard> Shard{ get; set; }
     }
 }

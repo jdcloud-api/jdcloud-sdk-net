@@ -51,13 +51,12 @@ namespace JDCloudSDK.Mps.Model
         [Required]
         public int Bitrate{ get; set; }
         ///<summary>
-        /// 音频采样率。取值范围：22050、24000、32000、44100、48000、64000、88200、96000
-        /// 当容器封装格式为 flv 时，只支持 22050、44100
+        /// 音频采样率。
+        /// 若容器封装格式为 flv ，该字段为必须参数，其取值范围：22050、44100
+        /// 若容器封装格式不为 flv ，则此字段为非必须参数，未设置时，与源文件音频采样率保持一致，若设置值，其取值范围：22050、24000、32000、44100、48000、64000、88200、96000
         /// 
-        ///Required:true
         ///</summary>
-        [Required]
-        public int SampleRate{ get; set; }
+        public int? SampleRate{ get; set; }
         ///<summary>
         /// 音频声道数。取值范围：1、2 。默认值为 2
         ///</summary>

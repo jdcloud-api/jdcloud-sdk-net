@@ -29,8 +29,9 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Mongodb.Model;
-using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Mongodb.Apis
 {
@@ -49,12 +50,13 @@ namespace  JDCloudSDK.Mongodb.Apis
         ///<summary>
         /// 付费方式
         ///</summary>
-        public   ChargeSpec ChargeSpec{ get; set; }
+        public   JDCloudSDK.Charge.Model.ChargeSpec ChargeSpec{ get; set; }
         ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

@@ -135,5 +135,13 @@ namespace JDCloudSDK.Kubernetes.Model
         /// 控制节点操作进度
         ///</summary>
         public MaintenanceWindow MasterProgress{ get; set; }
+        ///<summary>
+        /// 网络配置信息
+        ///</summary>
+        public ClusterNetwork ClusterNetwork{ get; set; }
+        ///<summary>
+        /// 集群网络类型,可取值为auto和customized
+        ///</summary>
+        public string NetworkMode{ get; set; }
     }
 }

@@ -214,6 +214,25 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改集群的网络配置，仅支持 pod 子网更新
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateClusterNetworkDetailResponse UpdateClusterNetworkDetail(UpdateClusterNetworkDetailRequest request) {
+            return  new UpdateClusterNetworkDetailExecutor().Client(this).Execute<UpdateClusterNetworkDetailResponse, UpdateClusterNetworkDetailResult, UpdateClusterNetworkDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改集群的网络配置，仅支持 pod 子网更新
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateClusterNetworkDetailResponse> UpdateClusterNetworkDetail(UpdateClusterNetworkDetailRequest request) {
+            return await new UpdateClusterNetworkDetailExecutor().Client(this).Execute<UpdateClusterNetworkDetailResponse, UpdateClusterNetworkDetailResult, UpdateClusterNetworkDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置集群组件
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -370,6 +389,25 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改 kubernetes 集群配额，内部接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
+            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改 kubernetes 集群配额，内部接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
+            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询版本信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -446,6 +484,44 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  添加集群的网络配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddClusterNetworkDetailResponse AddClusterNetworkDetail(AddClusterNetworkDetailRequest request) {
+            return  new AddClusterNetworkDetailExecutor().Client(this).Execute<AddClusterNetworkDetailResponse, AddClusterNetworkDetailResult, AddClusterNetworkDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加集群的网络配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddClusterNetworkDetailResponse> AddClusterNetworkDetail(AddClusterNetworkDetailRequest request) {
+            return await new AddClusterNetworkDetailExecutor().Client(this).Execute<AddClusterNetworkDetailResponse, AddClusterNetworkDetailResult, AddClusterNetworkDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除集群的网络配置，只支持 node 子网移除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveClusterNetworkDetailResponse RemoveClusterNetworkDetail(RemoveClusterNetworkDetailRequest request) {
+            return  new RemoveClusterNetworkDetailExecutor().Client(this).Execute<RemoveClusterNetworkDetailResponse, RemoveClusterNetworkDetailResult, RemoveClusterNetworkDetailRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除集群的网络配置，只支持 node 子网移除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveClusterNetworkDetailResponse> RemoveClusterNetworkDetail(RemoveClusterNetworkDetailRequest request) {
+            return await new RemoveClusterNetworkDetailExecutor().Client(this).Execute<RemoveClusterNetworkDetailResponse, RemoveClusterNetworkDetailResult, RemoveClusterNetworkDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询单个工作节点组详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -480,6 +556,76 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeProgressResponse> DescribeProgress(DescribeProgressRequest request) {
             return await new DescribeProgressExecutor().Client(this).Execute<DescribeProgressResponse, DescribeProgressResult, DescribeProgressRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  - 创建网络定制化集群
+        /// - 证书
+        ///   - 关于kubernetes的证书，默认生成，不需要用户传入。
+        /// - nodegroup
+        ///   - cluster必须与nodeGroup进行绑定
+        ///   - cluster支持多nodegroup
+        ///   - 状态
+        ///     - pending,reconciling,deleting状态不可以操作更新接口
+        ///     - running，running_with_error状态可以操作nodegroup所有接口
+        ///     - error状态只可以查询，删除
+        ///     - delete状态的cluster在十五分钟内可以查询，十五分钟后无法查询到
+        /// - 状态限制
+        ///   - pending,reconciling,deleting状态不可以操作更新接口
+        ///   - running状态可以操作cluster所有接口
+        ///   - error状态只可以查询，删除
+        ///   - delete状态的cluster在十五分钟内可以查询，十五分钟后无法查询到
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCustomizedClusterResponse CreateCustomizedCluster(CreateCustomizedClusterRequest request) {
+            return  new CreateCustomizedClusterExecutor().Client(this).Execute<CreateCustomizedClusterResponse, CreateCustomizedClusterResult, CreateCustomizedClusterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  - 创建网络定制化集群
+        /// - 证书
+        ///   - 关于kubernetes的证书，默认生成，不需要用户传入。
+        /// - nodegroup
+        ///   - cluster必须与nodeGroup进行绑定
+        ///   - cluster支持多nodegroup
+        ///   - 状态
+        ///     - pending,reconciling,deleting状态不可以操作更新接口
+        ///     - running，running_with_error状态可以操作nodegroup所有接口
+        ///     - error状态只可以查询，删除
+        ///     - delete状态的cluster在十五分钟内可以查询，十五分钟后无法查询到
+        /// - 状态限制
+        ///   - pending,reconciling,deleting状态不可以操作更新接口
+        ///   - running状态可以操作cluster所有接口
+        ///   - error状态只可以查询，删除
+        ///   - delete状态的cluster在十五分钟内可以查询，十五分钟后无法查询到
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCustomizedClusterResponse> CreateCustomizedCluster(CreateCustomizedClusterRequest request) {
+            return await new CreateCustomizedClusterExecutor().Client(this).Execute<CreateCustomizedClusterResponse, CreateCustomizedClusterResult, CreateCustomizedClusterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  检查集群网络配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ValidateNetworkConfigResponse ValidateNetworkConfig(ValidateNetworkConfigRequest request) {
+            return  new ValidateNetworkConfigExecutor().Client(this).Execute<ValidateNetworkConfigResponse, ValidateNetworkConfigResult, ValidateNetworkConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  检查集群网络配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ValidateNetworkConfigResponse> ValidateNetworkConfig(ValidateNetworkConfigRequest request) {
+            return await new ValidateNetworkConfigExecutor().Client(this).Execute<ValidateNetworkConfigResponse, ValidateNetworkConfigResult, ValidateNetworkConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -630,6 +776,25 @@ namespace JDCloudSDK.Kubernetes.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询服务配置信息，提供详细的 master 和 node 镜像信息。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeImagesResponse DescribeImages(DescribeImagesRequest request) {
+            return  new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询服务配置信息，提供详细的 master 和 node 镜像信息。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest request) {
+            return await new DescribeImagesExecutor().Client(this).Execute<DescribeImagesResponse, DescribeImagesResult, DescribeImagesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询单个集群详情。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -683,6 +848,25 @@ namespace JDCloudSDK.Kubernetes.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest request) {
             return await new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询集群的网络配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeClusterNetworkResponse DescribeClusterNetwork(DescribeClusterNetworkRequest request) {
+            return  new DescribeClusterNetworkExecutor().Client(this).Execute<DescribeClusterNetworkResponse, DescribeClusterNetworkResult, DescribeClusterNetworkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询集群的网络配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeClusterNetworkResponse> DescribeClusterNetwork(DescribeClusterNetworkRequest request) {
+            return await new DescribeClusterNetworkExecutor().Client(this).Execute<DescribeClusterNetworkResponse, DescribeClusterNetworkResult, DescribeClusterNetworkRequest>(request).ConfigureAwait(false);
         }
 #endif
 

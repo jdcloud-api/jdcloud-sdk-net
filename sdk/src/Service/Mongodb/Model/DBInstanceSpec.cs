@@ -69,7 +69,7 @@ namespace JDCloudSDK.Mongodb.Model
         [Required]
         public bool MultiAZ{ get; set; }
         ///<summary>
-        /// 可用区ID，必填，第一个ID为primary所在可用区ID，第二个为secondary，第三个为hidden。multiAZ选择是，则primary与secondary的可用区ID需相同，且与hidden不同；multiAZ选择否，三个节点写相同的可用区ID。
+        /// 可用区ID，必填，依次为primary、secondary、hidden所在的可用区ID。multiAZ选择否，则三个节点需要写相同的可用区ID；multiAZ选择是，如当前地域的可用区数量为2，则primary与secondary的可用区ID需相同，且与hidden不同；如当前地域的可用区数量大于2，则3个可用区ID均需不同。
         ///Required:true
         ///</summary>
         [Required]
@@ -102,5 +102,13 @@ namespace JDCloudSDK.Mongodb.Model
         /// 用户指定备份保留周期内的任意时间点，如2011-06-11T16:00:00Z，非必填，与backupId互斥。
         ///</summary>
         public string RestoreTime{ get; set; }
+        ///<summary>
+        /// 存储类型。参考枚举参数定义，LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe，缺省值为：LOCAL_SSD
+        ///</summary>
+        public string InstanceStorageType{ get; set; }
+        ///<summary>
+        /// 实例数据加密（存储类型为云硬盘才支持数据加密）。 false：不加密；true：加密。缺省为false。
+        ///</summary>
+        public bool StorageEncrypted{ get; set; }
     }
 }

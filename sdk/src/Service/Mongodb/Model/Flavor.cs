@@ -38,6 +38,22 @@ namespace JDCloudSDK.Mongodb.Model
     {
 
         ///<summary>
+        /// 实例类型，副本集：Replication；分片集群：Sharding
+        ///</summary>
+        public string InstanceType{ get; set; }
+        ///<summary>
+        /// 副本集规格代码
+        ///</summary>
+        public string InstanceClass{ get; set; }
+        ///<summary>
+        /// 分片集群节点角色，mongos、configserver、shard
+        ///</summary>
+        public string NodeRole{ get; set; }
+        ///<summary>
+        /// 分片集群节点规格代码
+        ///</summary>
+        public string NodeType{ get; set; }
+        ///<summary>
         /// CPU核数
         ///</summary>
         public int? Cpu{ get; set; }
@@ -65,5 +81,9 @@ namespace JDCloudSDK.Mongodb.Model
         /// 磁盘步长
         ///</summary>
         public int? DiskStep{ get; set; }
+        ///<summary>
+        /// 存储类型。LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe、EBS_SSD-SSD云盘。
+        ///</summary>
+        public string InstanceStorageType{ get; set; }
     }
 }
