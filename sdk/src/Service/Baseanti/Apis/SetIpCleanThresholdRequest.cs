@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Baseanti.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Baseanti.Apis
 {
@@ -47,10 +48,10 @@ namespace  JDCloudSDK.Baseanti.Apis
         public   IpCleanThresholdSpec IpCleanThresholdSpec{ get; set; }
         ///<summary>
         /// 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-        /// 
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

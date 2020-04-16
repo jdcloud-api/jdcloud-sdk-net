@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+        /// 规格代码，或者自定义分片实例的单分片规格代码
         ///</summary>
         public string CacheInstanceClass{ get; set; }
         ///<summary>

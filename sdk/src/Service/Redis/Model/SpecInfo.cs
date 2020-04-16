@@ -62,6 +62,10 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public int? BandwidthMbps{ get; set; }
         ///<summary>
+        /// 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+        ///</summary>
+        public int? IpNumber{ get; set; }
+        ///<summary>
         /// 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
         ///</summary>
         public ShardInfo Shard{ get; set; }

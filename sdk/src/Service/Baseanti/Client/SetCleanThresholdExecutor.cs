@@ -33,13 +33,13 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+    ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
         /// 
     /// </summary>
     public class SetCleanThresholdExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

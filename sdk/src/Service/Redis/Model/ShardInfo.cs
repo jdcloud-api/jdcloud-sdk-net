@@ -49,5 +49,9 @@ namespace JDCloudSDK.Redis.Model
         /// 分片数列表
         ///</summary>
         public List<int?> ShardNumberList{ get; set; }
+        ///<summary>
+        /// 需要的IP数列表
+        ///</summary>
+        public List<int?> IpNumberList{ get; set; }
     }
 }

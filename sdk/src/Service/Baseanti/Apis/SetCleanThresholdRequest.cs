@@ -30,12 +30,13 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Baseanti.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Baseanti.Apis
 {
 
     /// <summary>
-    ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+    ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
         ///         /// 
     /// </summary>
     public class SetCleanThresholdRequest : JdcloudRequest
@@ -48,16 +49,13 @@ namespace  JDCloudSDK.Baseanti.Apis
         public   CleanThresholdSpec CleanThresholdSpec{ get; set; }
         ///<summary>
         /// 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-        /// 
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 基础防护已防护的公网 IP, 仅支持 ipv4 格式
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询基础防护已防护的私有网络弹性公网 IP
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询基础防护已防护的云物理服务器公网IP 和 弹性公网 IP
-        /// 
+        /// 基础防护已防护的公网 IP, 仅支持 ipv4 格式. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt; 接口查询基础防护已防护的私有网络弹性公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口查询基础防护已防护的云物理服务器公网 IP 和 弹性公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeccsipresources&#39;&gt;describeCcsIpResources&lt;/a&gt; 接口查询基础防护已防护的托管区公网 IP
         ///Required:true
         ///</summary>
         [Required]

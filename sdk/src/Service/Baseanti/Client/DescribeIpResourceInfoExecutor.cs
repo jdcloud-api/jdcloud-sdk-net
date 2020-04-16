@@ -33,13 +33,13 @@ namespace JDCloudSDK.Baseanti.Client
 {
 
     /// <summary>
-    ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+    ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&#39;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
         /// 
     /// </summary>
     public class DescribeIpResourceInfoExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&#39;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Baseanti.Client
             }
         }
         /// <summary>
-        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&#39;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

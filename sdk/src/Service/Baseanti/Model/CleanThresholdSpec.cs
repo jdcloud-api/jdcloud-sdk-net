@@ -39,15 +39,13 @@ namespace JDCloudSDK.Baseanti.Model
     {
 
         ///<summary>
-        /// 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-        /// 
+        /// 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
         ///Required:true
         ///</summary>
         [Required]
         public long CleanThresholdBps{ get; set; }
         ///<summary>
-        /// 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-        /// 
+        /// 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
         ///Required:true
         ///</summary>
         [Required]

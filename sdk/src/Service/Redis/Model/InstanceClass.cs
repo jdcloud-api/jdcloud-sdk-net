@@ -39,7 +39,7 @@ namespace JDCloudSDK.Redis.Model
     {
 
         ///<summary>
-        /// 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications，自定义分片规格请调用describeSpecConfig获取
+        /// 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         ///</summary>
         [JsonProperty("instanceClass")]
         public string InstanceClassValue{ get; set; }

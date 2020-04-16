@@ -89,9 +89,9 @@ namespace JDCloudSDK.Baseanti.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.0
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.0";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -195,8 +195,28 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+        ///  查询 IPv6 资源的安全信息. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt; 接口, 已包含 ipv6 资源
         /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpv6ResourcesResponse DescribeIpv6Resources(DescribeIpv6ResourcesRequest request) {
+            return  new DescribeIpv6ResourcesExecutor().Client(this).Execute<DescribeIpv6ResourcesResponse, DescribeIpv6ResourcesResult, DescribeIpv6ResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 IPv6 资源的安全信息. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt; 接口, 已包含 ipv6 资源
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpv6ResourcesResponse> DescribeIpv6Resources(DescribeIpv6ResourcesRequest request) {
+            return await new DescribeIpv6ResourcesExecutor().Client(this).Execute<DescribeIpv6ResourcesResponse, DescribeIpv6ResourcesResult, DescribeIpv6ResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -205,13 +225,31 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
-        /// 
+        ///  查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpResourcesResponse> DescribeIpResources(DescribeIpResourcesRequest request) {
             return await new DescribeIpResourcesExecutor().Client(this).Execute<DescribeIpResourcesResponse, DescribeIpResourcesResult, DescribeIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  检测是否为托管区用户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckTrusteeshipUserResponse CheckTrusteeshipUser(CheckTrusteeshipUserRequest request) {
+            return  new CheckTrusteeshipUserExecutor().Client(this).Execute<CheckTrusteeshipUserResponse, CheckTrusteeshipUserResult, CheckTrusteeshipUserRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  检测是否为托管区用户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckTrusteeshipUserResponse> CheckTrusteeshipUser(CheckTrusteeshipUserRequest request) {
+            return await new CheckTrusteeshipUserExecutor().Client(this).Execute<CheckTrusteeshipUserResponse, CheckTrusteeshipUserResult, CheckTrusteeshipUserRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -313,7 +351,28 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&quot;&gt;describeAttackLogs&lt;/a&gt; 接口)
+        ///  更新公网IP信息, 提供给云内其他产品调用，在IP新购、修改带宽时调用。目前仅支持云物理机(cps)公网IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyIpBaseInfoResponse ModifyIpBaseInfo(ModifyIpBaseInfoRequest request) {
+            return  new ModifyIpBaseInfoExecutor().Client(this).Execute<ModifyIpBaseInfoResponse, ModifyIpBaseInfoResult, ModifyIpBaseInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新公网IP信息, 提供给云内其他产品调用，在IP新购、修改带宽时调用。目前仅支持云物理机(cps)公网IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyIpBaseInfoResponse> ModifyIpBaseInfo(ModifyIpBaseInfoRequest request) {
+            return await new ModifyIpBaseInfoExecutor().Client(this).Execute<ModifyIpBaseInfoResponse, ModifyIpBaseInfoResult, ModifyIpBaseInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&#39;&gt;describeAttackLogs&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -323,7 +382,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&quot;&gt;describeAttackLogs&lt;/a&gt; 接口)
+        ///  查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&#39;&gt;describeAttackLogs&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -355,7 +414,45 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+        ///  查询公网 IP 状态, 包括攻击状态和防护状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpStatusInfoResponse DescribeIpStatusInfo(DescribeIpStatusInfoRequest request) {
+            return  new DescribeIpStatusInfoExecutor().Client(this).Execute<DescribeIpStatusInfoResponse, DescribeIpStatusInfoResult, DescribeIpStatusInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询公网 IP 状态, 包括攻击状态和防护状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpStatusInfoResponse> DescribeIpStatusInfo(DescribeIpStatusInfoRequest request) {
+            return await new DescribeIpStatusInfoExecutor().Client(this).Execute<DescribeIpStatusInfoResponse, DescribeIpStatusInfoResult, DescribeIpStatusInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  检测是否为 ipv6 用户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckIpv6UserResponse CheckIpv6User(CheckIpv6UserRequest request) {
+            return  new CheckIpv6UserExecutor().Client(this).Execute<CheckIpv6UserResponse, CheckIpv6UserResult, CheckIpv6UserRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  检测是否为 ipv6 用户
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckIpv6UserResponse> CheckIpv6User(CheckIpv6UserRequest request) {
+            return await new CheckIpv6UserExecutor().Client(this).Execute<CheckIpv6UserResponse, CheckIpv6UserResult, CheckIpv6UserRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -365,7 +462,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+        ///  设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -376,7 +473,7 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&quot;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
+        ///  查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&#39;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -386,7 +483,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&quot;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
+        ///  查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&#39;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -397,7 +494,28 @@ namespace JDCloudSDK.Baseanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        ///  删除公网IP信息, 提供给云内其他产品调用，在用户公网IP到期删除时调用。目前仅支持云物理机(cps)公网IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteIpBaseInfoResponse DeleteIpBaseInfo(DeleteIpBaseInfoRequest request) {
+            return  new DeleteIpBaseInfoExecutor().Client(this).Execute<DeleteIpBaseInfoResponse, DeleteIpBaseInfoResult, DeleteIpBaseInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除公网IP信息, 提供给云内其他产品调用，在用户公网IP到期删除时调用。目前仅支持云物理机(cps)公网IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteIpBaseInfoResponse> DeleteIpBaseInfo(DeleteIpBaseInfoRequest request) {
+            return await new DeleteIpBaseInfoExecutor().Client(this).Execute<DeleteIpBaseInfoResponse, DeleteIpBaseInfoResult, DeleteIpBaseInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&#39;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -407,7 +525,7 @@ namespace JDCloudSDK.Baseanti.Client
         }
 #else
         /// <summary>
-        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+        ///  查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&#39;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>

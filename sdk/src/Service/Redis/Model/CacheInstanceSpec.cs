@@ -85,7 +85,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public int? Ipv6On{ get; set; }
         ///<summary>
-        /// 自定义分片数，只对自定义规格实例有效
+        /// 分片数，只对自定义分片规格实例有效，主从版固定为1，集群版大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
         ///</summary>
         public int? ShardNumber{ get; set; }
     }

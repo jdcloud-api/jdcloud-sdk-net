@@ -42,7 +42,7 @@ namespace JDCloudSDK.Baseanti.Model
         ///</summary>
         public string Ip{ get; set; }
         ///<summary>
-        /// 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+        /// 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
         ///</summary>
         public int? SafeStatus{ get; set; }
         ///<summary>
