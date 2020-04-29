@@ -58,5 +58,9 @@ namespace JDCloudSDK.Vpc.Model
         /// 用户标签
         ///</summary>
         public List<Tag> UserTags{ get; set; }
+        ///<summary>
+        /// 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+        ///</summary>
+        public string IpType{ get; set; }
     }
 }

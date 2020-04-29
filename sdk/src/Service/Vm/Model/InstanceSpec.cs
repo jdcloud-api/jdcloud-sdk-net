@@ -100,7 +100,7 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public ChargeSpec Charge{ get; set; }
         ///<summary>
-        /// 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+        /// 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
         /// launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
         /// launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
         /// 
@@ -135,5 +135,9 @@ namespace JDCloudSDK.Vm.Model
         /// 用户普通标签集合
         ///</summary>
         public List<Tag> UserTags{ get; set; }
+        ///<summary>
+        /// 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+        ///</summary>
+        public string ChargeOnStopped{ get; set; }
     }
 }

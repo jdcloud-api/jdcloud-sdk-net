@@ -113,5 +113,13 @@ namespace JDCloudSDK.Vm.Model
         /// 镜像复制和转换时的进度，仅显示数值，单位为百分比
         ///</summary>
         public string Progress{ get; set; }
+        ///<summary>
+        /// 该镜像的上下线状态
+        ///</summary>
+        public bool Offline{ get; set; }
+        ///<summary>
+        /// 该镜像所属的产品线标识
+        ///</summary>
+        public string ServiceCode{ get; set; }
     }
 }

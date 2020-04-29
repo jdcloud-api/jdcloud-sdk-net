@@ -45,5 +45,9 @@ namespace JDCloudSDK.Vm.Model
         /// 可售卖情况，true:可售卖、false:已售罄不可用
         ///</summary>
         public bool InStock{ get; set; }
+        ///<summary>
+        /// 可用库存数量，预留字段，敬请期待。
+        ///</summary>
+        public int? AvailableCount{ get; set; }
     }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -37,7 +37,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    ///  查询弹性ip列表
+    ///  查询弹性公网IP列表
     /// </summary>
     public class DescribeElasticIpsRequest : JdcloudRequest
     {
@@ -53,6 +53,8 @@ namespace  JDCloudSDK.Vpc.Apis
         /// elasticIpIds - elasticip id数组条件，支持多个
         /// elasticIpAddress - eip的IP地址，支持单个
         /// chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
+        /// ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
+        /// azs - eip可用区，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

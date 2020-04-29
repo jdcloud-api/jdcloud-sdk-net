@@ -39,7 +39,7 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 子网ID
+        /// 子网ID 仅支持中心可用区的子网
         ///Required:true
         ///</summary>
         [Required]

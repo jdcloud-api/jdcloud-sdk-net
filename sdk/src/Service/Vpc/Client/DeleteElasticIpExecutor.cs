@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Vpc.Client
 {
 
     /// <summary>
-    ///  删除弹性Ip
+    ///  删除弹性公网IP
     /// </summary>
     public class DeleteElasticIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  删除弹性Ip接口的Http 请求方法
+        ///  删除弹性公网IP接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Vpc.Client
             }
         }
         /// <summary>
-        ///  删除弹性Ip接口的Http资源请求路径
+        ///  删除弹性公网IP接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

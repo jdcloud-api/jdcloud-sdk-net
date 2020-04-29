@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Vpc.Apis
     public class AssociateRouteTableRequest : JdcloudRequest
     {
         ///<summary>
-        /// 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+        /// 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
         ///Required:true
         ///</summary>
         [Required]

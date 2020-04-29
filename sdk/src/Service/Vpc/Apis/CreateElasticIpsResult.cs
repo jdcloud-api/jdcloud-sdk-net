@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    ///  创建一个或者多个弹性Ip
+    ///  创建一个或者多个弹性公网IP
     /// </summary>
     public class CreateElasticIpsResult : JdcloudResult
     {
         ///<summary>
-        /// 弹性IP ID列表
+        /// 弹性公网IP ID列表
         ///</summary>
         public List<string> ElasticIpIds{ get; set; }
 

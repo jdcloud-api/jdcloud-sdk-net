@@ -45,7 +45,7 @@ namespace JDCloudSDK.Vm.Model
         [Required]
         public int BandwidthMbps{ get; set; }
         ///<summary>
-        /// IP服务商，取值为BGP,nonBGP
+        /// IP服务商，取值为BGP,nonBGP，不支持边缘可用区
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>

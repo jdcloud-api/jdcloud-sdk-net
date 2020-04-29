@@ -47,6 +47,14 @@ namespace  JDCloudSDK.Vm.Apis
         ///</summary>
         public   string ImageSource{ get; set; }
         ///<summary>
+        /// 产品线标识，非必传，不传的时候返回全部产品线镜像
+        ///</summary>
+        public   string ServiceCode{ get; set; }
+        ///<summary>
+        /// 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
+        ///</summary>
+        public   bool Offline{ get; set; }
+        ///<summary>
         /// 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
         ///</summary>
         public   string Platform{ get; set; }

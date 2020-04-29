@@ -41,6 +41,10 @@ namespace  JDCloudSDK.Vm.Apis
     public class StopInstanceRequest : JdcloudRequest
     {
         ///<summary>
+        /// 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+        ///</summary>
+        public   string ChargeOnStopped{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>

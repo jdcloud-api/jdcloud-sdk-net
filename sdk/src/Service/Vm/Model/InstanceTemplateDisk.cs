@@ -46,8 +46,16 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public int? DiskSizeGB{ get; set; }
         ///<summary>
-        /// 用于创建云硬盘的快照ID
+        /// 创建云硬盘的快照ID
         ///</summary>
         public string SnapshotId{ get; set; }
+        ///<summary>
+        /// 是否加密，false:(默认)不加密；true:加密
+        ///</summary>
+        public bool Encrypt{ get; set; }
+        ///<summary>
+        /// 云硬盘的iops值
+        ///</summary>
+        public int? Iops{ get; set; }
     }
 }

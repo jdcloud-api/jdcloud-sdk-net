@@ -138,21 +138,40 @@ namespace JDCloudSDK.Mps.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  图片样式详情
+        ///  查询回调配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetImageStyleResponse GetImageStyle(GetImageStyleRequest request) {
-            return  new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request);
+        public QueryCallbackSettingsResponse QueryCallbackSettings(QueryCallbackSettingsRequest request) {
+            return  new QueryCallbackSettingsExecutor().Client(this).Execute<QueryCallbackSettingsResponse, QueryCallbackSettingsResult, QueryCallbackSettingsRequest>(request);
         }
 #else
         /// <summary>
-        ///  图片样式详情
+        ///  查询回调配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetImageStyleResponse> GetImageStyle(GetImageStyleRequest request) {
-            return await new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request).ConfigureAwait(false);
+        public async Task<QueryCallbackSettingsResponse> QueryCallbackSettings(QueryCallbackSettingsRequest request) {
+            return await new QueryCallbackSettingsExecutor().Client(this).Execute<QueryCallbackSettingsResponse, QueryCallbackSettingsResult, QueryCallbackSettingsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetSnapshotTemplateResponse GetSnapshotTemplate(GetSnapshotTemplateRequest request) {
+            return  new GetSnapshotTemplateExecutor().Client(this).Execute<GetSnapshotTemplateResponse, GetSnapshotTemplateResult, GetSnapshotTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetSnapshotTemplateResponse> GetSnapshotTemplate(GetSnapshotTemplateRequest request) {
+            return await new GetSnapshotTemplateExecutor().Client(this).Execute<GetSnapshotTemplateResponse, GetSnapshotTemplateResult, GetSnapshotTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -201,40 +220,65 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改图片样式
+        ///  开通服务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateImageStyleResponse UpdateImageStyle(UpdateImageStyleRequest request) {
-            return  new UpdateImageStyleExecutor().Client(this).Execute<UpdateImageStyleResponse, UpdateImageStyleResult, UpdateImageStyleRequest>(request);
+        public OpenServiceResponse OpenService(OpenServiceRequest request) {
+            return  new OpenServiceExecutor().Client(this).Execute<OpenServiceResponse, OpenServiceResult, OpenServiceRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改图片样式
+        ///  开通服务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateImageStyleResponse> UpdateImageStyle(UpdateImageStyleRequest request) {
-            return await new UpdateImageStyleExecutor().Client(this).Execute<UpdateImageStyleResponse, UpdateImageStyleResult, UpdateImageStyleRequest>(request).ConfigureAwait(false);
+        public async Task<OpenServiceResponse> OpenService(OpenServiceRequest request) {
+            return await new OpenServiceExecutor().Client(this).Execute<OpenServiceResponse, OpenServiceResult, OpenServiceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除图片样式
+        ///  查询截图模板列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - templateId[eq] 按模板ID精确查询
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteImageStyleResponse DeleteImageStyle(DeleteImageStyleRequest request) {
-            return  new DeleteImageStyleExecutor().Client(this).Execute<DeleteImageStyleResponse, DeleteImageStyleResult, DeleteImageStyleRequest>(request);
+        public ListSnapshotTemplatesResponse ListSnapshotTemplates(ListSnapshotTemplatesRequest request) {
+            return  new ListSnapshotTemplatesExecutor().Client(this).Execute<ListSnapshotTemplatesResponse, ListSnapshotTemplatesResult, ListSnapshotTemplatesRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除图片样式
+        ///  查询截图模板列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - templateId[eq] 按模板ID精确查询
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteImageStyleResponse> DeleteImageStyle(DeleteImageStyleRequest request) {
-            return await new DeleteImageStyleExecutor().Client(this).Execute<DeleteImageStyleResponse, DeleteImageStyleResult, DeleteImageStyleRequest>(request).ConfigureAwait(false);
+        public async Task<ListSnapshotTemplatesResponse> ListSnapshotTemplates(ListSnapshotTemplatesRequest request) {
+            return await new ListSnapshotTemplatesExecutor().Client(this).Execute<ListSnapshotTemplatesResponse, ListSnapshotTemplatesResult, ListSnapshotTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除视频截图任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSnapshotTaskResponse DeleteSnapshotTask(DeleteSnapshotTaskRequest request) {
+            return  new DeleteSnapshotTaskExecutor().Client(this).Execute<DeleteSnapshotTaskResponse, DeleteSnapshotTaskResult, DeleteSnapshotTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除视频截图任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSnapshotTaskResponse> DeleteSnapshotTask(DeleteSnapshotTaskRequest request) {
+            return await new DeleteSnapshotTaskExecutor().Client(this).Execute<DeleteSnapshotTaskResponse, DeleteSnapshotTaskResult, DeleteSnapshotTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -258,21 +302,73 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  图片样式总数
+        ///  查询视频截图任务列表
+        /// 支持过滤查询：
+        ///   - createTime,ge 最早任务创建时间
+        ///   - createTime,le 最晚任务创建时间
+        ///   - status,in 任务状态IN查询
+        ///   - taskId,eq 任务ID精确查询
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CountImageStyleResponse CountImageStyle(CountImageStyleRequest request) {
-            return  new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request);
+        public ListSnapshotTasksResponse ListSnapshotTasks(ListSnapshotTasksRequest request) {
+            return  new ListSnapshotTasksExecutor().Client(this).Execute<ListSnapshotTasksResponse, ListSnapshotTasksResult, ListSnapshotTasksRequest>(request);
         }
 #else
         /// <summary>
-        ///  图片样式总数
+        ///  查询视频截图任务列表
+        /// 支持过滤查询：
+        ///   - createTime,ge 最早任务创建时间
+        ///   - createTime,le 最晚任务创建时间
+        ///   - status,in 任务状态IN查询
+        ///   - taskId,eq 任务ID精确查询
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CountImageStyleResponse> CountImageStyle(CountImageStyleRequest request) {
-            return await new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request).ConfigureAwait(false);
+        public async Task<ListSnapshotTasksResponse> ListSnapshotTasks(ListSnapshotTasksRequest request) {
+            return await new ListSnapshotTasksExecutor().Client(this).Execute<ListSnapshotTasksResponse, ListSnapshotTasksResult, ListSnapshotTasksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSnapshotTemplateResponse CreateSnapshotTemplate(CreateSnapshotTemplateRequest request) {
+            return  new CreateSnapshotTemplateExecutor().Client(this).Execute<CreateSnapshotTemplateResponse, CreateSnapshotTemplateResult, CreateSnapshotTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSnapshotTemplateResponse> CreateSnapshotTemplate(CreateSnapshotTemplateRequest request) {
+            return await new CreateSnapshotTemplateExecutor().Client(this).Execute<CreateSnapshotTemplateResponse, CreateSnapshotTemplateResult, CreateSnapshotTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  置换截图模板。此接口调用时，所有必要字段都需要设置，不设置或者设置为NULL时会置换掉原有值。此接口慎用，请使用modify接口以更新资源。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateSnapshotTemplateResponse UpdateSnapshotTemplate(UpdateSnapshotTemplateRequest request) {
+            return  new UpdateSnapshotTemplateExecutor().Client(this).Execute<UpdateSnapshotTemplateResponse, UpdateSnapshotTemplateResult, UpdateSnapshotTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  置换截图模板。此接口调用时，所有必要字段都需要设置，不设置或者设置为NULL时会置换掉原有值。此接口慎用，请使用modify接口以更新资源。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateSnapshotTemplateResponse> UpdateSnapshotTemplate(UpdateSnapshotTemplateRequest request) {
+            return await new UpdateSnapshotTemplateExecutor().Client(this).Execute<UpdateSnapshotTemplateResponse, UpdateSnapshotTemplateResult, UpdateSnapshotTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -311,25 +407,6 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateThumbnailTaskResponse> CreateThumbnailTask(CreateThumbnailTaskRequest request) {
             return await new CreateThumbnailTaskExecutor().Client(this).Execute<CreateThumbnailTaskResponse, CreateThumbnailTaskResult, CreateThumbnailTaskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询截图任务，返回满足查询条件的任务列表。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListThumbnailTaskResponse ListThumbnailTask(ListThumbnailTaskRequest request) {
-            return  new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询截图任务，返回满足查询条件的任务列表。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListThumbnailTaskResponse> ListThumbnailTask(ListThumbnailTaskRequest request) {
-            return await new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -374,25 +451,6 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取媒体处理通知
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetNotificationResponse GetNotification(GetNotificationRequest request) {
-            return  new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取媒体处理通知
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetNotificationResponse> GetNotification(GetNotificationRequest request) {
-            return await new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  部分修改转码模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -408,6 +466,329 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyTranscodeTemplateResponse> ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest request) {
             return await new ModifyTranscodeTemplateExecutor().Client(this).Execute<ModifyTranscodeTemplateResponse, ModifyTranscodeTemplateResult, ModifyTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifySnapshotTemplateResponse ModifySnapshotTemplate(ModifySnapshotTemplateRequest request) {
+            return  new ModifySnapshotTemplateExecutor().Client(this).Execute<ModifySnapshotTemplateResponse, ModifySnapshotTemplateResult, ModifySnapshotTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifySnapshotTemplateResponse> ModifySnapshotTemplate(ModifySnapshotTemplateRequest request) {
+            return await new ModifySnapshotTemplateExecutor().Client(this).Execute<ModifySnapshotTemplateResponse, ModifySnapshotTemplateResult, ModifySnapshotTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateImageStyleResponse CreateImageStyle(CreateImageStyleRequest request) {
+            return  new CreateImageStyleExecutor().Client(this).Execute<CreateImageStyleResponse, CreateImageStyleResult, CreateImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateImageStyleResponse> CreateImageStyle(CreateImageStyleRequest request) {
+            return await new CreateImageStyleExecutor().Client(this).Execute<CreateImageStyleResponse, CreateImageStyleResult, CreateImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  图片样式列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListImageStyleResponse ListImageStyle(ListImageStyleRequest request) {
+            return  new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  图片样式列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListImageStyleResponse> ListImageStyle(ListImageStyleRequest request) {
+            return await new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  完整更新转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateTranscodeTemplateResponse UpdateTranscodeTemplate(UpdateTranscodeTemplateRequest request) {
+            return  new UpdateTranscodeTemplateExecutor().Client(this).Execute<UpdateTranscodeTemplateResponse, UpdateTranscodeTemplateResult, UpdateTranscodeTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  完整更新转码模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateTranscodeTemplateResponse> UpdateTranscodeTemplate(UpdateTranscodeTemplateRequest request) {
+            return await new UpdateTranscodeTemplateExecutor().Client(this).Execute<UpdateTranscodeTemplateResponse, UpdateTranscodeTemplateResult, UpdateTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  检查服务开通状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckServiceOpenStatusResponse CheckServiceOpenStatus(CheckServiceOpenStatusRequest request) {
+            return  new CheckServiceOpenStatusExecutor().Client(this).Execute<CheckServiceOpenStatusResponse, CheckServiceOpenStatusResult, CheckServiceOpenStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  检查服务开通状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckServiceOpenStatusResponse> CheckServiceOpenStatus(CheckServiceOpenStatusRequest request) {
+            return await new CheckServiceOpenStatusExecutor().Client(this).Execute<CheckServiceOpenStatusResponse, CheckServiceOpenStatusResult, CheckServiceOpenStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频截图任务结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QuerySnapshotTaskResultResponse QuerySnapshotTaskResult(QuerySnapshotTaskResultRequest request) {
+            return  new QuerySnapshotTaskResultExecutor().Client(this).Execute<QuerySnapshotTaskResultResponse, QuerySnapshotTaskResultResult, QuerySnapshotTaskResultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频截图任务结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QuerySnapshotTaskResultResponse> QuerySnapshotTaskResult(QuerySnapshotTaskResultRequest request) {
+            return await new QuerySnapshotTaskResultExecutor().Client(this).Execute<QuerySnapshotTaskResultResponse, QuerySnapshotTaskResultResult, QuerySnapshotTaskResultRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置回调配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCallbackSettingsResponse SetCallbackSettings(SetCallbackSettingsRequest request) {
+            return  new SetCallbackSettingsExecutor().Client(this).Execute<SetCallbackSettingsResponse, SetCallbackSettingsResult, SetCallbackSettingsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置回调配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCallbackSettingsResponse> SetCallbackSettings(SetCallbackSettingsRequest request) {
+            return await new SetCallbackSettingsExecutor().Client(this).Execute<SetCallbackSettingsResponse, SetCallbackSettingsResult, SetCallbackSettingsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  图片样式详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetImageStyleResponse GetImageStyle(GetImageStyleRequest request) {
+            return  new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  图片样式详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetImageStyleResponse> GetImageStyle(GetImageStyleRequest request) {
+            return await new GetImageStyleExecutor().Client(this).Execute<GetImageStyleResponse, GetImageStyleResult, GetImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  用户查询服务状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryServiceStatusResponse QueryServiceStatus(QueryServiceStatusRequest request) {
+            return  new QueryServiceStatusExecutor().Client(this).Execute<QueryServiceStatusResponse, QueryServiceStatusResult, QueryServiceStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  用户查询服务状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryServiceStatusResponse> QueryServiceStatus(QueryServiceStatusRequest request) {
+            return await new QueryServiceStatusExecutor().Client(this).Execute<QueryServiceStatusResponse, QueryServiceStatusResult, QueryServiceStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  提交视频截图任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SubmitSnapshotTaskResponse SubmitSnapshotTask(SubmitSnapshotTaskRequest request) {
+            return  new SubmitSnapshotTaskExecutor().Client(this).Execute<SubmitSnapshotTaskResponse, SubmitSnapshotTaskResult, SubmitSnapshotTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  提交视频截图任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SubmitSnapshotTaskResponse> SubmitSnapshotTask(SubmitSnapshotTaskRequest request) {
+            return await new SubmitSnapshotTaskExecutor().Client(this).Execute<SubmitSnapshotTaskResponse, SubmitSnapshotTaskResult, SubmitSnapshotTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSnapshotTemplateResponse DeleteSnapshotTemplate(DeleteSnapshotTemplateRequest request) {
+            return  new DeleteSnapshotTemplateExecutor().Client(this).Execute<DeleteSnapshotTemplateResponse, DeleteSnapshotTemplateResult, DeleteSnapshotTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除截图模板
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSnapshotTemplateResponse> DeleteSnapshotTemplate(DeleteSnapshotTemplateRequest request) {
+            return await new DeleteSnapshotTemplateExecutor().Client(this).Execute<DeleteSnapshotTemplateResponse, DeleteSnapshotTemplateResult, DeleteSnapshotTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateImageStyleResponse UpdateImageStyle(UpdateImageStyleRequest request) {
+            return  new UpdateImageStyleExecutor().Client(this).Execute<UpdateImageStyleResponse, UpdateImageStyleResult, UpdateImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateImageStyleResponse> UpdateImageStyle(UpdateImageStyleRequest request) {
+            return await new UpdateImageStyleExecutor().Client(this).Execute<UpdateImageStyleResponse, UpdateImageStyleResult, UpdateImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteImageStyleResponse DeleteImageStyle(DeleteImageStyleRequest request) {
+            return  new DeleteImageStyleExecutor().Client(this).Execute<DeleteImageStyleResponse, DeleteImageStyleResult, DeleteImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除图片样式
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteImageStyleResponse> DeleteImageStyle(DeleteImageStyleRequest request) {
+            return await new DeleteImageStyleExecutor().Client(this).Execute<DeleteImageStyleResponse, DeleteImageStyleResult, DeleteImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  图片样式总数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CountImageStyleResponse CountImageStyle(CountImageStyleRequest request) {
+            return  new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  图片样式总数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CountImageStyleResponse> CountImageStyle(CountImageStyleRequest request) {
+            return await new CountImageStyleExecutor().Client(this).Execute<CountImageStyleResponse, CountImageStyleResult, CountImageStyleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取视频截图任务详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetSnapshotTaskResponse GetSnapshotTask(GetSnapshotTaskRequest request) {
+            return  new GetSnapshotTaskExecutor().Client(this).Execute<GetSnapshotTaskResponse, GetSnapshotTaskResult, GetSnapshotTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取视频截图任务详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetSnapshotTaskResponse> GetSnapshotTask(GetSnapshotTaskRequest request) {
+            return await new GetSnapshotTaskExecutor().Client(this).Execute<GetSnapshotTaskResponse, GetSnapshotTaskResult, GetSnapshotTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询截图任务，返回满足查询条件的任务列表。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListThumbnailTaskResponse ListThumbnailTask(ListThumbnailTaskRequest request) {
+            return  new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询截图任务，返回满足查询条件的任务列表。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListThumbnailTaskResponse> ListThumbnailTask(ListThumbnailTaskRequest request) {
+            return await new ListThumbnailTaskExecutor().Client(this).Execute<ListThumbnailTaskResponse, ListThumbnailTaskResult, ListThumbnailTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取媒体处理通知
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetNotificationResponse GetNotification(GetNotificationRequest request) {
+            return  new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取媒体处理通知
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetNotificationResponse> GetNotification(GetNotificationRequest request) {
+            return await new GetNotificationExecutor().Client(this).Execute<GetNotificationResponse, GetNotificationResult, GetNotificationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -488,25 +869,6 @@ namespace JDCloudSDK.Mps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加图片样式
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateImageStyleResponse CreateImageStyle(CreateImageStyleRequest request) {
-            return  new CreateImageStyleExecutor().Client(this).Execute<CreateImageStyleResponse, CreateImageStyleResult, CreateImageStyleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加图片样式
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateImageStyleResponse> CreateImageStyle(CreateImageStyleRequest request) {
-            return await new CreateImageStyleExecutor().Client(this).Execute<CreateImageStyleResponse, CreateImageStyleResult, CreateImageStyleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询转码模板列表。
         /// 允许通过条件过滤查询，支持的过滤字段如下：
         ///   - transcodeType[eq] 按转码方式精确查询
@@ -528,44 +890,6 @@ namespace JDCloudSDK.Mps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ListTranscodeTemplatesResponse> ListTranscodeTemplates(ListTranscodeTemplatesRequest request) {
             return await new ListTranscodeTemplatesExecutor().Client(this).Execute<ListTranscodeTemplatesResponse, ListTranscodeTemplatesResult, ListTranscodeTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  图片样式列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListImageStyleResponse ListImageStyle(ListImageStyleRequest request) {
-            return  new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  图片样式列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListImageStyleResponse> ListImageStyle(ListImageStyleRequest request) {
-            return await new ListImageStyleExecutor().Client(this).Execute<ListImageStyleResponse, ListImageStyleResult, ListImageStyleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  完整更新转码模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateTranscodeTemplateResponse UpdateTranscodeTemplate(UpdateTranscodeTemplateRequest request) {
-            return  new UpdateTranscodeTemplateExecutor().Client(this).Execute<UpdateTranscodeTemplateResponse, UpdateTranscodeTemplateResult, UpdateTranscodeTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  完整更新转码模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateTranscodeTemplateResponse> UpdateTranscodeTemplate(UpdateTranscodeTemplateRequest request) {
-            return await new UpdateTranscodeTemplateExecutor().Client(this).Execute<UpdateTranscodeTemplateResponse, UpdateTranscodeTemplateResult, UpdateTranscodeTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

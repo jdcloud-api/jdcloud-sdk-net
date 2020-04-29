@@ -78,5 +78,9 @@ namespace JDCloudSDK.Vm.Model
         /// 数据盘配置信息
         ///</summary>
         public List<InstanceTemplateDiskAttachmentSpec> DataDisks{ get; set; }
+        ///<summary>
+        /// 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+        ///</summary>
+        public string ChargeOnStopped{ get; set; }
     }
 }

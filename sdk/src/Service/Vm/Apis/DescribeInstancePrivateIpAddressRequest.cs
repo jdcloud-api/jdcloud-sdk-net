@@ -57,6 +57,7 @@ namespace  JDCloudSDK.Vm.Apis
         /// imageId - 镜像ID，精确匹配，支持多个
         /// networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
         /// subnetId - 子网ID，精确匹配，支持多个
+        /// chargeOnStopped - 停机不计费标志，keepCharging、stopCharging 或者 notApplicable
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

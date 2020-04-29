@@ -81,5 +81,13 @@ namespace JDCloudSDK.Vpc.Model
         /// 子网创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 子网类型，取值：standard(标准子网)，edge(边缘子网)
+        ///</summary>
+        public string SubnetType{ get; set; }
+        ///<summary>
+        /// 子网可用区
+        ///</summary>
+        public string Az{ get; set; }
     }
 }

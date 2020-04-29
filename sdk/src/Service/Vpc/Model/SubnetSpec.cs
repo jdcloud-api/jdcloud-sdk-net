@@ -57,12 +57,20 @@ namespace JDCloudSDK.Vpc.Model
         [Required]
         public string AddressPrefix{ get; set; }
         ///<summary>
-        /// 子网关联的路由表Id, 默认为vpc的默认路由表
+        /// 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
         ///</summary>
         public string RouteTableId{ get; set; }
         ///<summary>
         /// 子网描述信息,允许输入UTF-8编码下的全部字符，不超过256字符。
         ///</summary>
         public string Description{ get; set; }
+        ///<summary>
+        /// 子网类型，取值：standard(标准子网)，edge(边缘子网)
+        ///</summary>
+        public string SubnetType{ get; set; }
+        ///<summary>
+        /// 子网可用区，边缘子网必须指定可用区
+        ///</summary>
+        public string Az{ get; set; }
     }
 }

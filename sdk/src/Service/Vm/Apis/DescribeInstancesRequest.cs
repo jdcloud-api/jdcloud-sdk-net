@@ -62,6 +62,10 @@ namespace  JDCloudSDK.Vm.Apis
         /// subnetId - 子网ID，精确匹配，支持多个
         /// agId - 使用可用组id，支持单个
         /// faultDomain - 错误域，支持多个
+        /// dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
+        /// dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
+        /// instanceType - 实例规格，精确匹配，支持多个
+        /// elasticIpAddress - 公网IP地址，精确匹配，支持单个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

@@ -196,6 +196,8 @@ namespace JDCloudSDK.Vm.Client
         ///         - 自动删除
         ///             - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
         ///         - 可以从快照创建磁盘
+        ///     - iops
+        ///         - 仅当云盘类型为ssd.io1时，可指定iops值，范围为【200， min（32000，size * 50 ）】，步长为10，若不指定则按此公式计算默认值
         ///     - local类型系统的云主机可以挂载8块云硬盘
         ///     - cloud类型系统的云主机可以挂载7块云硬盘
         /// - 计费
@@ -254,6 +256,8 @@ namespace JDCloudSDK.Vm.Client
         ///         - 自动删除
         ///             - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
         ///         - 可以从快照创建磁盘
+        ///     - iops
+        ///         - 仅当云盘类型为ssd.io1时，可指定iops值，范围为【200， min（32000，size * 50 ）】，步长为10，若不指定则按此公式计算默认值
         ///     - local类型系统的云主机可以挂载8块云硬盘
         ///     - cloud类型系统的云主机可以挂载7块云硬盘
         /// - 计费
@@ -299,6 +303,27 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改配额，此接口为内部接口，支持：云主机、镜像、密钥、模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
+            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改配额，此接口为内部接口，支持：云主机、镜像、密钥、模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
+            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  导出镜像，将京东云私有镜像导出至京东云以外环境
         /// 
         /// </summary>
@@ -316,6 +341,29 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<ExportImageResponse> ExportImage(ExportImageRequest request) {
             return await new ExportImageExecutor().Client(this).Execute<ExportImageResponse, ExportImageResult, ExportImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量查询云主机的详细信息，包括实例的 HostIP. 不返回云盘、网络以及计费等信息（内部接口不对外提供）。&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInternalInstancesResponse DescribeInternalInstances(DescribeInternalInstancesRequest request) {
+            return  new DescribeInternalInstancesExecutor().Client(this).Execute<DescribeInternalInstancesResponse, DescribeInternalInstancesResult, DescribeInternalInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询云主机的详细信息，包括实例的 HostIP. 不返回云盘、网络以及计费等信息（内部接口不对外提供）。&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInternalInstancesResponse> DescribeInternalInstances(DescribeInternalInstancesRequest request) {
+            return await new DescribeInternalInstancesExecutor().Client(this).Execute<DescribeInternalInstancesResponse, DescribeInternalInstancesResult, DescribeInternalInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -360,6 +408,31 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<UnReleaseImageResponse> UnReleaseImage(UnReleaseImageRequest request) {
             return await new UnReleaseImageExecutor().Client(this).Execute<UnReleaseImageResponse, UnReleaseImageResult, UnReleaseImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  内部接口&lt;br&gt;
+        /// 查询任务。&lt;br&gt;
+        /// 子帐号只能查询自己的任务。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTaskResponse DescribeTask(DescribeTaskRequest request) {
+            return  new DescribeTaskExecutor().Client(this).Execute<DescribeTaskResponse, DescribeTaskResult, DescribeTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  内部接口&lt;br&gt;
+        /// 查询任务。&lt;br&gt;
+        /// 子帐号只能查询自己的任务。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTaskResponse> DescribeTask(DescribeTaskRequest request) {
+            return await new DescribeTaskExecutor().Client(this).Execute<DescribeTaskResponse, DescribeTaskResult, DescribeTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -477,6 +550,29 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询开关及事件的时间，提供给计费侧用于精确计费 &lt;br&gt;
+        /// 不指定 startTime 将实例创建成功的时间作为开始时间，不指定 endTime 则将当前时间作为结束时间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeChargeEventsResponse DescribeChargeEvents(DescribeChargeEventsRequest request) {
+            return  new DescribeChargeEventsExecutor().Client(this).Execute<DescribeChargeEventsResponse, DescribeChargeEventsResult, DescribeChargeEventsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询开关及事件的时间，提供给计费侧用于精确计费 &lt;br&gt;
+        /// 不指定 startTime 将实例创建成功的时间作为开始时间，不指定 endTime 则将当前时间作为结束时间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeChargeEventsResponse> DescribeChargeEvents(DescribeChargeEventsRequest request) {
+            return await new DescribeChargeEventsExecutor().Client(this).Execute<DescribeChargeEventsResponse, DescribeChargeEventsResult, DescribeChargeEventsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  云主机绑定一块弹性网卡。&lt;br&gt;
         /// 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
         /// 弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
@@ -502,6 +598,29 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest request) {
             return await new AttachNetworkInterfaceExecutor().Client(this).Execute<AttachNetworkInterfaceResponse, AttachNetworkInterfaceResult, AttachNetworkInterfaceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  内部接口。&lt;br&gt;
+        /// 镜像转换，只支持镜像从localDisk转换到cloudDisk类型，只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConvertImageResponse ConvertImage(ConvertImageRequest request) {
+            return  new ConvertImageExecutor().Client(this).Execute<ConvertImageResponse, ConvertImageResult, ConvertImageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  内部接口。&lt;br&gt;
+        /// 镜像转换，只支持镜像从localDisk转换到cloudDisk类型，只允许操作您的个人私有镜像。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConvertImageResponse> ConvertImage(ConvertImageRequest request) {
+            return await new ConvertImageExecutor().Client(this).Execute<ConvertImageResponse, ConvertImageResult, ConvertImageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -766,6 +885,27 @@ namespace JDCloudSDK.Vm.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询用户本地系统盘大小配置。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUserLocalSysDiskResponse DescribeUserLocalSysDisk(DescribeUserLocalSysDiskRequest request) {
+            return  new DescribeUserLocalSysDiskExecutor().Client(this).Execute<DescribeUserLocalSysDiskResponse, DescribeUserLocalSysDiskResult, DescribeUserLocalSysDiskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户本地系统盘大小配置。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUserLocalSysDiskResponse> DescribeUserLocalSysDisk(DescribeUserLocalSysDiskRequest request) {
+            return await new DescribeUserLocalSysDiskExecutor().Client(this).Execute<DescribeUserLocalSysDiskResponse, DescribeUserLocalSysDiskResult, DescribeUserLocalSysDiskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
         /// 如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
         /// 如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
@@ -860,6 +1000,56 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisassociateElasticIpResponse> DisassociateElasticIp(DisassociateElasticIpRequest request) {
             return await new DisassociateElasticIpExecutor().Client(this).Execute<DisassociateElasticIpResponse, DisassociateElasticIpResult, DisassociateElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  内部接口&lt;br&gt;
+        /// 导出主机列表数据&lt;br&gt;
+        /// 同一地域下同一时刻只能执行一次导出任务。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExportInstancesDataResponse ExportInstancesData(ExportInstancesDataRequest request) {
+            return  new ExportInstancesDataExecutor().Client(this).Execute<ExportInstancesDataResponse, ExportInstancesDataResult, ExportInstancesDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  内部接口&lt;br&gt;
+        /// 导出主机列表数据&lt;br&gt;
+        /// 同一地域下同一时刻只能执行一次导出任务。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExportInstancesDataResponse> ExportInstancesData(ExportInstancesDataRequest request) {
+            return await new ExportInstancesDataExecutor().Client(this).Execute<ExportInstancesDataResponse, ExportInstancesDataResult, ExportInstancesDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  内部接口&lt;br&gt;
+        /// 文件下载。&lt;br&gt;
+        /// 子帐号只能下载自己的文件。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DownloadFileResponse DownloadFile(DownloadFileRequest request) {
+            return  new DownloadFileExecutor().Client(this).Execute<DownloadFileResponse, DownloadFileResult, DownloadFileRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  内部接口&lt;br&gt;
+        /// 文件下载。&lt;br&gt;
+        /// 子帐号只能下载自己的文件。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DownloadFileResponse> DownloadFile(DownloadFileRequest request) {
+            return await new DownloadFileExecutor().Client(this).Execute<DownloadFileResponse, DownloadFileResult, DownloadFileRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1299,6 +1489,29 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
             return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量查询云主机信息的轻量接口，不返回云盘、网络、计费、标签等信息。如果不需要关联资源属性，尽量选择使用该接口。&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBriefInstancesResponse DescribeBriefInstances(DescribeBriefInstancesRequest request) {
+            return  new DescribeBriefInstancesExecutor().Client(this).Execute<DescribeBriefInstancesResponse, DescribeBriefInstancesResult, DescribeBriefInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量查询云主机信息的轻量接口，不返回云盘、网络、计费、标签等信息。如果不需要关联资源属性，尽量选择使用该接口。&lt;br&gt;
+        /// 此接口支持分页查询，默认每页20条。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBriefInstancesResponse> DescribeBriefInstances(DescribeBriefInstancesRequest request) {
+            return await new DescribeBriefInstancesExecutor().Client(this).Execute<DescribeBriefInstancesResponse, DescribeBriefInstancesResult, DescribeBriefInstancesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

@@ -39,19 +39,19 @@ namespace JDCloudSDK.Vpc.Model
     {
 
         ///<summary>
-        /// 弹性IP的Id
+        /// 弹性公网IP的Id
         ///</summary>
         public string ElasticIpId{ get; set; }
         ///<summary>
-        /// 弹性IP地址
+        /// 弹性公网IP的地址
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        /// 弹性ip的限速（单位：Mbps)
+        /// 弹性公网IP的限速（单位：Mbps)
         ///</summary>
         public int? BandwidthMbps{ get; set; }
         ///<summary>
-        /// IP服务商，取值为bgp或no_bgp
+        /// 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
         ///</summary>
         public string Provider{ get; set; }
         ///<summary>
@@ -75,16 +75,20 @@ namespace JDCloudSDK.Vpc.Model
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        /// 弹性ip创建时间
+        /// 弹性公网IP的创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
         ///<summary>
-        /// 弹性ip可用区属性，如果为空，表示全可用区
+        /// 弹性公网IP的可用区属性，如果为空，表示全可用区
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
         /// Tag信息
         ///</summary>
         public List<Tag> Tags{ get; set; }
+        ///<summary>
+        /// 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
+        ///</summary>
+        public string IpType{ get; set; }
     }
 }

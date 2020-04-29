@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Vpc.Apis
 {
 
     /// <summary>
-    ///  修改弹性IP
+    ///  修改弹性公网IP
     /// </summary>
     public class ModifyElasticIpRequest : JdcloudRequest
     {
