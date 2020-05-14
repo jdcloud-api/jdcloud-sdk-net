@@ -138,7 +138,7 @@ namespace JDCloudSDK.Redis.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
+        ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +147,7 @@ namespace JDCloudSDK.Redis.Client
         }
 #else
         /// <summary>
-        ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
+        ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

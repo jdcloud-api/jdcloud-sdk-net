@@ -35,12 +35,12 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
+    ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间
     /// </summary>
     public class ModifyBackupPolicyRequest : JdcloudRequest
     {
         ///<summary>
-        /// 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
+        /// 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
         ///Required:true
         ///</summary>
         [Required]

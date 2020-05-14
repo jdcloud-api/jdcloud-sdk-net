@@ -33,12 +33,12 @@ namespace JDCloudSDK.Redis.Client
 {
 
     /// <summary>
-    ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
+    ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间
     /// </summary>
     public class ModifyBackupPolicyExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间接口的Http 请求方法
+        ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Client
             }
         }
         /// <summary>
-        ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间接口的Http资源请求路径
+        ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

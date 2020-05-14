@@ -47,7 +47,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceName{ get; set; }
         ///<summary>
-        /// 规格代码，或者自定义分片实例的单分片规格代码
+        /// 规格代码，2.8、4.0标准版是实例规格，4.0自定义分片集群版实例表示单分片规格
         ///</summary>
         public string CacheInstanceClass{ get; set; }
         ///<summary>
@@ -95,11 +95,11 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string InstanceVersion{ get; set; }
         ///<summary>
-        /// 连接redis实例时，是否需要密码认证，false表示无密码
+        /// 连接实例时，是否需要密码认证，false表示无密码
         ///</summary>
         public bool Auth{ get; set; }
         ///<summary>
-        /// 创建实例时选择的redis引擎版本：目前支持2.8和4.0
+        /// 创建实例时选择的引擎版本：目前支持2.8和4.0
         ///</summary>
         public string RedisVersion{ get; set; }
         ///<summary>
@@ -115,7 +115,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public List<Tag> Tags{ get; set; }
         ///<summary>
-        /// 实例分片数，自定义分片规格的实例分片数由用户创建时选择，其他实例为固定分片数
+        /// 实例分片数，标准版固定为1，自定义分片集群版实例分片数由用户创建时选择，其他实例为固定分片数
         ///</summary>
         public int? ShardNumber{ get; set; }
         ///<summary>

@@ -186,48 +186,6 @@ namespace JDCloudSDK.Nativecontainer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建一个 secret，用于存放镜像仓库认证信息。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateSecretResponse CreateSecret(CreateSecretRequest request) {
-            return  new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一个 secret，用于存放镜像仓库认证信息。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
-            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除单个 secret
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteSecretResponse DeleteSecret(DeleteSecretRequest request) {
-            return  new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除单个 secret
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
-            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询一台原生容器的详细信息
         /// 
         /// </summary>
@@ -245,31 +203,6 @@ namespace JDCloudSDK.Nativecontainer.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeContainerResponse> DescribeContainer(DescribeContainerRequest request) {
             return await new DescribeContainerExecutor().Client(this).Execute<DescribeContainerResponse, DescribeContainerResult, DescribeContainerRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-        /// 只能支持主动删除按配置计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteContainerResponse DeleteContainer(DeleteContainerRequest request) {
-            return  new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-        /// 只能支持主动删除按配置计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteContainerResponse> DeleteContainer(DeleteContainerRequest request) {
-            return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -320,6 +253,352 @@ namespace JDCloudSDK.Nativecontainer.Client
         /// <returns>请求结果信息</returns>
         public async Task<SelectDetailListResponse> SelectDetailList(SelectDetailListRequest request) {
             return await new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  重置原生容器，对已有原生容器使用新的镜像重置。
+        /// 原容器 id 不变，不涉及计费变动，暂不支持修改实例类型，不会改变原生容器所在的物理节点，也不支持修改已经使用的系统盘和数据盘以及网络相关参数。
+        /// - 镜像
+        ///     - 容器的镜像通过镜像名称来确定
+        ///     - nginx:tag 或 mysql/mysql-server:tag 这样命名的镜像表示 docker hub 官方镜像
+        ///     - container-registry/image:tag 这样命名的镜像表示私有仓储的镜像
+        ///     - 私有仓储必须兼容 docker registry 认证机制，并通过 secret 来保存机密信息
+        /// - 其他
+        ///     - rebuild 之前容器必须处于关闭状态
+        ///     - rebuild 完成后，容器仍为关闭状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RebuildContainerResponse RebuildContainer(RebuildContainerRequest request) {
+            return  new RebuildContainerExecutor().Client(this).Execute<RebuildContainerResponse, RebuildContainerResult, RebuildContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  重置原生容器，对已有原生容器使用新的镜像重置。
+        /// 原容器 id 不变，不涉及计费变动，暂不支持修改实例类型，不会改变原生容器所在的物理节点，也不支持修改已经使用的系统盘和数据盘以及网络相关参数。
+        /// - 镜像
+        ///     - 容器的镜像通过镜像名称来确定
+        ///     - nginx:tag 或 mysql/mysql-server:tag 这样命名的镜像表示 docker hub 官方镜像
+        ///     - container-registry/image:tag 这样命名的镜像表示私有仓储的镜像
+        ///     - 私有仓储必须兼容 docker registry 认证机制，并通过 secret 来保存机密信息
+        /// - 其他
+        ///     - rebuild 之前容器必须处于关闭状态
+        ///     - rebuild 完成后，容器仍为关闭状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RebuildContainerResponse> RebuildContainer(RebuildContainerRequest request) {
+            return await new RebuildContainerExecutor().Client(this).Execute<RebuildContainerResponse, RebuildContainerResult, RebuildContainerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建exec
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExecCreateResponse ExecCreate(ExecCreateRequest request) {
+            return  new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建exec
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExecCreateResponse> ExecCreate(ExecCreateRequest request) {
+            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一台或多台指定配置容器
+        /// - 创建容器需要通过实名认证
+        /// - 镜像
+        ///   - 容器的镜像通过镜像名称来确定
+        ///   - nginx:tag, mysql/mysql-server:tag这样命名的镜像表示docker hub官方镜像
+        ///   - container-registry/image:tag这样命名的镜像表示私有仓储的镜像
+        ///   - 私有仓储必须兼容docker registry认证机制，并通过secret来保存机密信息
+        /// - hostname规范
+        ///   - 支持两种方式：以标签方式书写或以完整主机名方式书写
+        ///   - 标签规范
+        ///     - 0-9，a-z(不分大小写)和-（减号），其他的都是无效的字符串
+        ///     - 不能以减号开始，也不能以减号结尾
+        ///     - 最小1个字符，最大63个字符
+        ///   - 完整的主机名由一系列标签与点连接组成
+        ///     - 标签与标签之间使用“.”(点)进行连接
+        ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
+        ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
+        /// - 网络配置
+        ///   - 指定主网卡配置信息
+        ///     - 必须指定vpcId、subnetId、securityGroupIds
+        ///     - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
+        ///     - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
+        ///     - 可以指定希望的辅助IP个数(secondaryIpAddressCount)让系统自动创建内网IP
+        ///     - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
+        ///     - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
+        ///     - 每个容器至多指定5个安全组
+        ///     - 主网卡deviceIndex设置为0
+        /// - 存储
+        ///   - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
+        ///   - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
+        ///   - 云盘类型为 ssd.io1 时，用户可以指定 iops，其他类型云盘无效，对已经存在的云盘无效，具体规则如下
+        ///     - 步长 10
+        ///     - 范围 [200，min(32000，size*50)]
+        ///     - 默认值 size*30
+        ///   - root volume
+        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+        ///     - 磁盘大小
+        ///       - 所有类型：范围[10,100]GB，步长为10G
+        ///     - 自动删除
+        ///       - 默认自动删除
+        ///     - 可以选择已存在的云硬盘
+        ///   - data volume
+        ///     - data volume当前只能选择cloud类别
+        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+        ///     - 磁盘大小
+        ///       - 所有类型：范围[20,2000]GB，步长为10G
+        ///     - 自动删除
+        ///       - 默认自动删除
+        ///     - 可以选择已存在的云硬盘
+        ///     - 可以从快照创建磁盘
+        ///     - 单个容器可以挂载7个data volume
+        /// - 容器日志
+        ///   - default：默认在本地分配10MB的存储空间，自动rotate
+        /// - 其他
+        ///   - 创建完成后，容器状态为running
+        ///   - maxCount为最大努力，不保证一定能达到maxCount
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateContainersResponse CreateContainers(CreateContainersRequest request) {
+            return  new CreateContainersExecutor().Client(this).Execute<CreateContainersResponse, CreateContainersResult, CreateContainersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一台或多台指定配置容器
+        /// - 创建容器需要通过实名认证
+        /// - 镜像
+        ///   - 容器的镜像通过镜像名称来确定
+        ///   - nginx:tag, mysql/mysql-server:tag这样命名的镜像表示docker hub官方镜像
+        ///   - container-registry/image:tag这样命名的镜像表示私有仓储的镜像
+        ///   - 私有仓储必须兼容docker registry认证机制，并通过secret来保存机密信息
+        /// - hostname规范
+        ///   - 支持两种方式：以标签方式书写或以完整主机名方式书写
+        ///   - 标签规范
+        ///     - 0-9，a-z(不分大小写)和-（减号），其他的都是无效的字符串
+        ///     - 不能以减号开始，也不能以减号结尾
+        ///     - 最小1个字符，最大63个字符
+        ///   - 完整的主机名由一系列标签与点连接组成
+        ///     - 标签与标签之间使用“.”(点)进行连接
+        ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
+        ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
+        /// - 网络配置
+        ///   - 指定主网卡配置信息
+        ///     - 必须指定vpcId、subnetId、securityGroupIds
+        ///     - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
+        ///     - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
+        ///     - 可以指定希望的辅助IP个数(secondaryIpAddressCount)让系统自动创建内网IP
+        ///     - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
+        ///     - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
+        ///     - 每个容器至多指定5个安全组
+        ///     - 主网卡deviceIndex设置为0
+        /// - 存储
+        ///   - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
+        ///   - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
+        ///   - 云盘类型为 ssd.io1 时，用户可以指定 iops，其他类型云盘无效，对已经存在的云盘无效，具体规则如下
+        ///     - 步长 10
+        ///     - 范围 [200，min(32000，size*50)]
+        ///     - 默认值 size*30
+        ///   - root volume
+        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+        ///     - 磁盘大小
+        ///       - 所有类型：范围[10,100]GB，步长为10G
+        ///     - 自动删除
+        ///       - 默认自动删除
+        ///     - 可以选择已存在的云硬盘
+        ///   - data volume
+        ///     - data volume当前只能选择cloud类别
+        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+        ///     - 磁盘大小
+        ///       - 所有类型：范围[20,2000]GB，步长为10G
+        ///     - 自动删除
+        ///       - 默认自动删除
+        ///     - 可以选择已存在的云硬盘
+        ///     - 可以从快照创建磁盘
+        ///     - 单个容器可以挂载7个data volume
+        /// - 容器日志
+        ///   - default：默认在本地分配10MB的存储空间，自动rotate
+        /// - 其他
+        ///   - 创建完成后，容器状态为running
+        ///   - maxCount为最大努力，不保证一定能达到maxCount
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateContainersResponse> CreateContainers(CreateContainersRequest request) {
+            return await new CreateContainersExecutor().Client(this).Execute<CreateContainersResponse, CreateContainersResult, CreateContainersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartContainerResponse StartContainer(StartContainerRequest request) {
+            return  new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartContainerResponse> StartContainer(StartContainerRequest request) {
+            return await new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改容器的 名称 和 描述。&lt;br&gt;
+        /// name 和 description 必须要指定一个
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyContainerAttributeResponse ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
+            return  new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改容器的 名称 和 描述。&lt;br&gt;
+        /// name 和 description 必须要指定一个
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyContainerAttributeResponse> ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
+            return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  调整TTY大小
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResizeTTYResponse ResizeTTY(ResizeTTYRequest request) {
+            return  new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  调整TTY大小
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResizeTTYResponse> ResizeTTY(ResizeTTYRequest request) {
+            return await new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改资源的配额，支持：原生容器 pod 和 secret.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
+            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改资源的配额，支持：原生容器 pod 和 secret.
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
+            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个 secret，用于存放镜像仓库认证信息。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSecretResponse CreateSecret(CreateSecretRequest request) {
+            return  new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个 secret，用于存放镜像仓库认证信息。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSecretResponse> CreateSecret(CreateSecretRequest request) {
+            return await new CreateSecretExecutor().Client(this).Execute<CreateSecretResponse, CreateSecretResult, CreateSecretRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除单个 secret
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSecretResponse DeleteSecret(DeleteSecretRequest request) {
+            return  new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除单个 secret
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSecretResponse> DeleteSecret(DeleteSecretRequest request) {
+            return await new DeleteSecretExecutor().Client(this).Execute<DeleteSecretResponse, DeleteSecretResult, DeleteSecretRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        /// 只能支持主动删除按配置计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteContainerResponse DeleteContainer(DeleteContainerRequest request) {
+            return  new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+        /// 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+        /// 只能支持主动删除按配置计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteContainerResponse> DeleteContainer(DeleteContainerRequest request) {
+            return await new DeleteContainerExecutor().Client(this).Execute<DeleteContainerResponse, DeleteContainerResult, DeleteContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -429,45 +708,6 @@ namespace JDCloudSDK.Nativecontainer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  重置原生容器，对已有原生容器使用新的镜像重置。
-        /// 原容器 id 不变，不涉及计费变动，暂不支持修改实例类型，不会改变原生容器所在的物理节点，也不支持修改已经使用的系统盘和数据盘以及网络相关参数。
-        /// - 镜像
-        ///     - 容器的镜像通过镜像名称来确定
-        ///     - nginx:tag 或 mysql/mysql-server:tag 这样命名的镜像表示 docker hub 官方镜像
-        ///     - container-registry/image:tag 这样命名的镜像表示私有仓储的镜像
-        ///     - 私有仓储必须兼容 docker registry 认证机制，并通过 secret 来保存机密信息
-        /// - 其他
-        ///     - rebuild 之前容器必须处于关闭状态
-        ///     - rebuild 完成后，容器仍为关闭状态
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RebuildContainerResponse RebuildContainer(RebuildContainerRequest request) {
-            return  new RebuildContainerExecutor().Client(this).Execute<RebuildContainerResponse, RebuildContainerResult, RebuildContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置原生容器，对已有原生容器使用新的镜像重置。
-        /// 原容器 id 不变，不涉及计费变动，暂不支持修改实例类型，不会改变原生容器所在的物理节点，也不支持修改已经使用的系统盘和数据盘以及网络相关参数。
-        /// - 镜像
-        ///     - 容器的镜像通过镜像名称来确定
-        ///     - nginx:tag 或 mysql/mysql-server:tag 这样命名的镜像表示 docker hub 官方镜像
-        ///     - container-registry/image:tag 这样命名的镜像表示私有仓储的镜像
-        ///     - 私有仓储必须兼容 docker registry 认证机制，并通过 secret 来保存机密信息
-        /// - 其他
-        ///     - rebuild 之前容器必须处于关闭状态
-        ///     - rebuild 完成后，容器仍为关闭状态
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RebuildContainerResponse> RebuildContainer(RebuildContainerRequest request) {
-            return await new RebuildContainerExecutor().Client(this).Execute<RebuildContainerResponse, RebuildContainerResult, RebuildContainerRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
         /// 一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
         /// 如果是黑名单中的用户，会返回错误。
@@ -493,27 +733,6 @@ namespace JDCloudSDK.Nativecontainer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建exec
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExecCreateResponse ExecCreate(ExecCreateRequest request) {
-            return  new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建exec
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExecCreateResponse> ExecCreate(ExecCreateRequest request) {
-            return await new ExecCreateExecutor().Client(this).Execute<ExecCreateResponse, ExecCreateResult, ExecCreateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  获取exec退出码
         /// 
         /// </summary>
@@ -531,162 +750,6 @@ namespace JDCloudSDK.Nativecontainer.Client
         /// <returns>请求结果信息</returns>
         public async Task<ExecGetExitCodeResponse> ExecGetExitCode(ExecGetExitCodeRequest request) {
             return await new ExecGetExitCodeExecutor().Client(this).Execute<ExecGetExitCodeResponse, ExecGetExitCodeResult, ExecGetExitCodeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建一台或多台指定配置容器
-        /// - 创建容器需要通过实名认证
-        /// - 镜像
-        ///   - 容器的镜像通过镜像名称来确定
-        ///   - nginx:tag, mysql/mysql-server:tag这样命名的镜像表示docker hub官方镜像
-        ///   - container-registry/image:tag这样命名的镜像表示私有仓储的镜像
-        ///   - 私有仓储必须兼容docker registry认证机制，并通过secret来保存机密信息
-        /// - hostname规范
-        ///   - 支持两种方式：以标签方式书写或以完整主机名方式书写
-        ///   - 标签规范
-        ///     - 0-9，a-z(不分大小写)和-（减号），其他的都是无效的字符串
-        ///     - 不能以减号开始，也不能以减号结尾
-        ///     - 最小1个字符，最大63个字符
-        ///   - 完整的主机名由一系列标签与点连接组成
-        ///     - 标签与标签之间使用“.”(点)进行连接
-        ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
-        ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
-        /// - 网络配置
-        ///   - 指定主网卡配置信息
-        ///     - 必须指定vpcId、subnetId、securityGroupIds
-        ///     - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
-        ///     - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
-        ///     - 可以指定希望的辅助IP个数(secondaryIpAddressCount)让系统自动创建内网IP
-        ///     - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
-        ///     - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        ///     - 每个容器至多指定5个安全组
-        ///     - 主网卡deviceIndex设置为0
-        /// - 存储
-        ///   - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
-        ///   - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
-        ///   - 云盘类型为 ssd.io1 时，用户可以指定 iops，其他类型云盘无效，对已经存在的云盘无效，具体规则如下
-        ///     - 步长 10
-        ///     - 范围 [200，min(32000，size*50)]
-        ///     - 默认值 size*30
-        ///   - root volume
-        ///   - root volume只能是cloud类别
-        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
-        ///     - 磁盘大小
-        ///       - 所有类型：范围[10,100]GB，步长为10G
-        ///     - 自动删除
-        ///       - 默认自动删除
-        ///     - 可以选择已存在的云硬盘
-        ///   - data volume
-        ///     - data volume当前只能选择cloud类别
-        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
-        ///     - 磁盘大小
-        ///       - 所有类型：范围[20,4000]GB，步长为10G
-        ///     - 自动删除
-        ///       - 默认自动删除
-        ///     - 可以选择已存在的云硬盘
-        ///     - 可以从快照创建磁盘
-        ///     - 单个容器可以挂载7个data volume
-        /// - 容器日志
-        ///   - default：默认在本地分配10MB的存储空间，自动rotate
-        /// - 其他
-        ///   - 创建完成后，容器状态为running
-        ///   - maxCount为最大努力，不保证一定能达到maxCount
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateContainersResponse CreateContainers(CreateContainersRequest request) {
-            return  new CreateContainersExecutor().Client(this).Execute<CreateContainersResponse, CreateContainersResult, CreateContainersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一台或多台指定配置容器
-        /// - 创建容器需要通过实名认证
-        /// - 镜像
-        ///   - 容器的镜像通过镜像名称来确定
-        ///   - nginx:tag, mysql/mysql-server:tag这样命名的镜像表示docker hub官方镜像
-        ///   - container-registry/image:tag这样命名的镜像表示私有仓储的镜像
-        ///   - 私有仓储必须兼容docker registry认证机制，并通过secret来保存机密信息
-        /// - hostname规范
-        ///   - 支持两种方式：以标签方式书写或以完整主机名方式书写
-        ///   - 标签规范
-        ///     - 0-9，a-z(不分大小写)和-（减号），其他的都是无效的字符串
-        ///     - 不能以减号开始，也不能以减号结尾
-        ///     - 最小1个字符，最大63个字符
-        ///   - 完整的主机名由一系列标签与点连接组成
-        ///     - 标签与标签之间使用“.”(点)进行连接
-        ///     - 不能以“.”(点)开始，也不能以“.”(点)结尾
-        ///     - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
-        /// - 网络配置
-        ///   - 指定主网卡配置信息
-        ///     - 必须指定vpcId、subnetId、securityGroupIds
-        ///     - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
-        ///     - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
-        ///     - 可以指定希望的辅助IP个数(secondaryIpAddressCount)让系统自动创建内网IP
-        ///     - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
-        ///     - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        ///     - 每个容器至多指定5个安全组
-        ///     - 主网卡deviceIndex设置为0
-        /// - 存储
-        ///   - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
-        ///   - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
-        ///   - 云盘类型为 ssd.io1 时，用户可以指定 iops，其他类型云盘无效，对已经存在的云盘无效，具体规则如下
-        ///     - 步长 10
-        ///     - 范围 [200，min(32000，size*50)]
-        ///     - 默认值 size*30
-        ///   - root volume
-        ///   - root volume只能是cloud类别
-        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
-        ///     - 磁盘大小
-        ///       - 所有类型：范围[10,100]GB，步长为10G
-        ///     - 自动删除
-        ///       - 默认自动删除
-        ///     - 可以选择已存在的云硬盘
-        ///   - data volume
-        ///     - data volume当前只能选择cloud类别
-        ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
-        ///     - 磁盘大小
-        ///       - 所有类型：范围[20,4000]GB，步长为10G
-        ///     - 自动删除
-        ///       - 默认自动删除
-        ///     - 可以选择已存在的云硬盘
-        ///     - 可以从快照创建磁盘
-        ///     - 单个容器可以挂载7个data volume
-        /// - 容器日志
-        ///   - default：默认在本地分配10MB的存储空间，自动rotate
-        /// - 其他
-        ///   - 创建完成后，容器状态为running
-        ///   - maxCount为最大努力，不保证一定能达到maxCount
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateContainersResponse> CreateContainers(CreateContainersRequest request) {
-            return await new CreateContainersExecutor().Client(this).Execute<CreateContainersResponse, CreateContainersResult, CreateContainersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
-        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartContainerResponse StartContainer(StartContainerRequest request) {
-            return  new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
-        /// 容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartContainerResponse> StartContainer(StartContainerRequest request) {
-            return await new StartContainerExecutor().Client(this).Execute<StartContainerResponse, StartContainerResult, StartContainerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -714,46 +777,21 @@ namespace JDCloudSDK.Nativecontainer.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改容器的 名称 和 描述。&lt;br&gt;
-        /// name 和 description 必须要指定一个
-        /// 
+        ///  查询用户配置信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyContainerAttributeResponse ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
-            return  new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request);
+        public DescribeUserConfigureResponse DescribeUserConfigure(DescribeUserConfigureRequest request) {
+            return  new DescribeUserConfigureExecutor().Client(this).Execute<DescribeUserConfigureResponse, DescribeUserConfigureResult, DescribeUserConfigureRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改容器的 名称 和 描述。&lt;br&gt;
-        /// name 和 description 必须要指定一个
-        /// 
+        ///  查询用户配置信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyContainerAttributeResponse> ModifyContainerAttribute(ModifyContainerAttributeRequest request) {
-            return await new ModifyContainerAttributeExecutor().Client(this).Execute<ModifyContainerAttributeResponse, ModifyContainerAttributeResult, ModifyContainerAttributeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  调整TTY大小
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResizeTTYResponse ResizeTTY(ResizeTTYRequest request) {
-            return  new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  调整TTY大小
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResizeTTYResponse> ResizeTTY(ResizeTTYRequest request) {
-            return await new ResizeTTYExecutor().Client(this).Execute<ResizeTTYResponse, ResizeTTYResult, ResizeTTYRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeUserConfigureResponse> DescribeUserConfigure(DescribeUserConfigureRequest request) {
+            return await new DescribeUserConfigureExecutor().Client(this).Execute<DescribeUserConfigureResponse, DescribeUserConfigureResult, DescribeUserConfigureRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -777,27 +815,6 @@ namespace JDCloudSDK.Nativecontainer.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeContainersResponse> DescribeContainers(DescribeContainersRequest request) {
             return await new DescribeContainersExecutor().Client(this).Execute<DescribeContainersResponse, DescribeContainersResult, DescribeContainersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
         }
 #endif
 

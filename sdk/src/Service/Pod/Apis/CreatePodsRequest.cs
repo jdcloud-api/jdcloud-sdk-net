@@ -60,7 +60,6 @@ namespace  JDCloudSDK.Pod.Apis
         ///         /// - 存储
         ///         ///     - volume分为container system disk和pod data volume，container system disk的挂载目录是/，data volume的挂载目录可以随意指定
         ///         ///     - container system disk
-        ///         ///         - 只能是cloud类别
         ///         ///         - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///         ///         - 磁盘大小
         ///         ///             - 所有类型：范围[20,100]GB，步长为10G
@@ -71,7 +70,7 @@ namespace  JDCloudSDK.Pod.Apis
         ///         ///         - 当前只能选择cloud类别
         ///         ///         - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///         ///         - 磁盘大小
-        ///         ///             - 所有类型：范围[20,4000]GB，步长为10G
+        ///         ///             - 所有类型：范围[20,2000]GB，步长为10G
         ///         ///         - 自动删除
         ///         ///             - 默认自动删除
         ///         ///         - 可以选择已存在的云硬盘

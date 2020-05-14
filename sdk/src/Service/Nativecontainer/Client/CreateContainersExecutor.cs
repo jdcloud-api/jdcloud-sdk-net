@@ -68,7 +68,6 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - 范围 [200，min(32000，size*50)]
         ///     - 默认值 size*30
         ///   - root volume
-        ///   - root volume只能是cloud类别
         ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///     - 磁盘大小
         ///       - 所有类型：范围[10,100]GB，步长为10G
@@ -79,7 +78,7 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - data volume当前只能选择cloud类别
         ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///     - 磁盘大小
-        ///       - 所有类型：范围[20,4000]GB，步长为10G
+        ///       - 所有类型：范围[20,2000]GB，步长为10G
         ///     - 自动删除
         ///       - 默认自动删除
         ///     - 可以选择已存在的云硬盘
@@ -130,7 +129,6 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - 范围 [200，min(32000，size*50)]
         ///     - 默认值 size*30
         ///   - root volume
-        ///   - root volume只能是cloud类别
         ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///     - 磁盘大小
         ///       - 所有类型：范围[10,100]GB，步长为10G
@@ -141,7 +139,7 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - data volume当前只能选择cloud类别
         ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///     - 磁盘大小
-        ///       - 所有类型：范围[20,4000]GB，步长为10G
+        ///       - 所有类型：范围[20,2000]GB，步长为10G
         ///     - 自动删除
         ///       - 默认自动删除
         ///     - 可以选择已存在的云硬盘
@@ -196,7 +194,6 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - 范围 [200，min(32000，size*50)]
         ///     - 默认值 size*30
         ///   - root volume
-        ///   - root volume只能是cloud类别
         ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///     - 磁盘大小
         ///       - 所有类型：范围[10,100]GB，步长为10G
@@ -207,7 +204,7 @@ namespace JDCloudSDK.Nativecontainer.Client
         ///     - data volume当前只能选择cloud类别
         ///     - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         ///     - 磁盘大小
-        ///       - 所有类型：范围[20,4000]GB，步长为10G
+        ///       - 所有类型：范围[20,2000]GB，步长为10G
         ///     - 自动删除
         ///       - 默认自动删除
         ///     - 可以选择已存在的云硬盘

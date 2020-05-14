@@ -43,7 +43,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        /// 设备Index
+        /// 设备Index，主网卡为1
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>

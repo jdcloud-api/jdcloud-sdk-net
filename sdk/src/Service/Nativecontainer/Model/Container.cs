@@ -123,11 +123,11 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public string ElasticIpAddress{ get; set; }
         ///<summary>
-        /// 主网卡信息
+        /// 主网卡配置信息
         ///</summary>
         public InstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        /// 弹性网卡信息
+        /// 辅助网卡配置信息
         ///</summary>
         public List<InstanceNetworkInterfaceAttachment> SecondaryNetworkInterfaces{ get; set; }
         ///<summary>

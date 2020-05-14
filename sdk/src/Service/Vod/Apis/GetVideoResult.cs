@@ -60,6 +60,7 @@ namespace  JDCloudSDK.Vod.Apis
         ///   transcode_failed - 转码失败
         ///   normal - 正常
         ///   uploaded - 上传完成（未转码）
+        ///   blocked - 封禁
         /// 
         ///</summary>
         public   string Status{ get; set; }

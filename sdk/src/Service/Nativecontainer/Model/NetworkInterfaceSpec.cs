@@ -55,11 +55,11 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public string PrimaryIpAddress{ get; set; }
         ///<summary>
-        /// SecondaryIp列表
+        /// 网卡辅助IP，暂不支持
         ///</summary>
         public List<string> SecondaryIpAddresses{ get; set; }
         ///<summary>
-        /// 自动分配的SecondaryIp数量
+        /// 自动分配的辅助Ip数量，暂不支持
         ///</summary>
         public int? SecondaryIpCount{ get; set; }
         ///<summary>
@@ -71,7 +71,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public bool SanityCheck{ get; set; }
         ///<summary>
-        /// 描述
+        /// 描述，最大长度256字符
         ///</summary>
         public string Description{ get; set; }
     }

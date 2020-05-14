@@ -40,7 +40,7 @@ namespace JDCloudSDK.Nativecontainer.Model
     {
 
         ///<summary>
-        /// 磁盘分类 cloud：基于云硬盘的卷 local：本地盘（使用前需申请）
+        /// 磁盘类型，支持云盘： cloud
         ///Required:true
         ///</summary>
         [Required]
@@ -58,7 +58,7 @@ namespace JDCloudSDK.Nativecontainer.Model
         ///</summary>
         public bool ReadOnly{ get; set; }
         ///<summary>
-        /// 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统
+        /// 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统 &lt;br&gt;注：其中az、chargeSpec、multiAttachable、encrypt字段无效
         ///</summary>
         public DiskSpec CloudDiskSpec{ get; set; }
         ///<summary>

@@ -38,7 +38,7 @@ namespace JDCloudSDK.Redis.Model
     {
 
         ///<summary>
-        /// 实例类型：目前支持主从版（master-slave）、集群版（cluster）
+        /// 实例类型：目前支持标准版（master-slave）、集群版（cluster）
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>

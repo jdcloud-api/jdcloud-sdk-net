@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
+    ///  开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间
     /// </summary>
     public class ModifyBackupPolicyResponse : JdcloudResponse<ModifyBackupPolicyResult>
     {

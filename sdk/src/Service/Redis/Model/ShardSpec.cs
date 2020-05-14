@@ -32,7 +32,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  单分片规格，自定义分片规格实例才有
+    ///  单分片规格，自定义分片规格集群实例才需要
     /// </summary>
     public class ShardSpec
     {
