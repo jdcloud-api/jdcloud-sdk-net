@@ -105,5 +105,13 @@ namespace  JDCloudSDK.Iotcore.Apis
         /// 动态注册,0:关闭，1:开启
         ///</summary>
         public   int? DynamicRegister{ get; set; }
+        ///<summary>
+        /// 设备采集器类型
+        ///</summary>
+        public   string DeviceCollectorType{ get; set; }
+        ///<summary>
+        /// 最后离线时间
+        ///</summary>
+        public   long? LastDisconnectTime{ get; set; }
     }
 }

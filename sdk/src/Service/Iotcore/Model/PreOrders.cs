@@ -50,6 +50,10 @@ namespace JDCloudSDK.Iotcore.Model
         ///</summary>
         public string ProductKey{ get; set; }
         ///<summary>
+        /// 产品名称
+        ///</summary>
+        public string ProductName{ get; set; }
+        ///<summary>
         /// 用户Pin
         ///</summary>
         public string UserPin{ get; set; }

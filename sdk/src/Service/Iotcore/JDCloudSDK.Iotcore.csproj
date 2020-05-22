@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
-        <Version>1.1.15.1</Version>
+        <Version>1.1.17.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>API related to IoT Engine</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

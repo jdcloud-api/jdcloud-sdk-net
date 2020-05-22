@@ -52,7 +52,7 @@ namespace JDCloudSDK.Iotcore.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/instances/{instanceId}/product/{productKey}/register";
+            return "/regions/{regionId}/loongrayinstances/{instanceId}/product/{productKey}/register";
             }
         }
     }

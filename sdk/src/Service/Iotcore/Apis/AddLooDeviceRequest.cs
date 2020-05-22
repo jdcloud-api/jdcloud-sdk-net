@@ -70,6 +70,12 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
+        /// 设备类型
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string DeviceType{ get; set; }
+        ///<summary>
         /// 设备归属的实例ID
         ///Required:true
         ///</summary>

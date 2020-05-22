@@ -109,5 +109,13 @@ namespace JDCloudSDK.Iotcore.Model
         /// 是否开启动态注册,0:关闭,1:开启，开启动态注册的设备认证类型为一型一密，否则为一机一密
         ///</summary>
         public int? DynamicRegister{ get; set; }
+        ///<summary>
+        /// 设备采集器类型
+        ///</summary>
+        public string DeviceCollectorType{ get; set; }
+        ///<summary>
+        /// 最后离线时间
+        ///</summary>
+        public long? LastDisconnectTime{ get; set; }
     }
 }
