@@ -37,5 +37,9 @@ namespace  JDCloudSDK.Iotcore.Apis
     /// </summary>
     public class CollectorWriteMessageResult : JdcloudResult
     {
+        ///<summary>
+        /// WriteStatus
+        ///</summary>
+        public   string WriteStatus{ get; set; }
     }
 }

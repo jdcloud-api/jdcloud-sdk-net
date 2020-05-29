@@ -117,5 +117,9 @@ namespace JDCloudSDK.Iotcore.Model
         /// 最后离线时间
         ///</summary>
         public long? LastDisconnectTime{ get; set; }
+        ///<summary>
+        /// 订单号
+        ///</summary>
+        public long? OrderId{ get; set; }
     }
 }

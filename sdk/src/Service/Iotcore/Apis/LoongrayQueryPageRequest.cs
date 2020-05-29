@@ -76,6 +76,14 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   string ParentId{ get; set; }
         ///<summary>
+        /// 订单号
+        ///</summary>
+        public   int? OrderId{ get; set; }
+        ///<summary>
+        /// 设备采集器类型
+        ///</summary>
+        public   string DeviceCollectorType{ get; set; }
+        ///<summary>
         /// 设备归属的实例ID
         ///Required:true
         ///</summary>
