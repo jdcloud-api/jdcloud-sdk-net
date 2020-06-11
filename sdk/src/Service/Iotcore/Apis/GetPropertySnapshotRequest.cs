@@ -29,18 +29,35 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Iotcore.Model;
+using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  设备在线统计
+    ///  属性获取接口
     /// </summary>
-    public class DataStatesResult : JdcloudResult
+    public class GetPropertySnapshotRequest : JdcloudRequest
     {
         ///<summary>
-        /// IotDataStatsVO
+        /// 方法查询请求
+        ///Required:true
         ///</summary>
-        public   IotDataStatsVO IotDataStatsVO{ get; set; }
+        [Required]
+        public   DeviceSnapshotRequestVO DeviceSnapshotRequestVO{ get; set; }
+        ///<summary>
+        /// 区域id
+        ///Required:true
+        ///</summary>
+        [Required]
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
+        ///<summary>
+        /// 实例Id
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string InstanceId{ get; set; }
     }
 }

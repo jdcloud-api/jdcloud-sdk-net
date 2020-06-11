@@ -577,25 +577,6 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设备在线统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DataStatesResponse DataStates(DataStatesRequest request) {
-            return  new DataStatesExecutor().Client(this).Execute<DataStatesResponse, DataStatesResult, DataStatesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备在线统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DataStatesResponse> DataStates(DataStatesRequest request) {
-            return await new DataStatesExecutor().Client(this).Execute<DataStatesResponse, DataStatesResult, DataStatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查看物联网引擎资源列表接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1474,25 +1455,6 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  根据模型ID查看物模型完整信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DiscribeThingModelResponse DiscribeThingModel(DiscribeThingModelRequest request) {
-            return  new DiscribeThingModelExecutor().Client(this).Execute<DiscribeThingModelResponse, DiscribeThingModelResult, DiscribeThingModelRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据模型ID查看物模型完整信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DiscribeThingModelResponse> DiscribeThingModel(DiscribeThingModelRequest request) {
-            return await new DiscribeThingModelExecutor().Client(this).Execute<DiscribeThingModelResponse, DiscribeThingModelResult, DiscribeThingModelRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  下载设备证书接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1945,6 +1907,25 @@ namespace JDCloudSDK.Iotcore.Client
         /// <returns>请求结果信息</returns>
         public async Task<ElevatorOperatingStatusResponse> ElevatorOperatingStatus(ElevatorOperatingStatusRequest request) {
             return await new ElevatorOperatingStatusExecutor().Client(this).Execute<ElevatorOperatingStatusResponse, ElevatorOperatingStatusResult, ElevatorOperatingStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设备在线统计
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribDataStatsResponse DescribDataStats(DescribDataStatsRequest request) {
+            return  new DescribDataStatsExecutor().Client(this).Execute<DescribDataStatsResponse, DescribDataStatsResult, DescribDataStatsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设备在线统计
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribDataStatsResponse> DescribDataStats(DescribDataStatsRequest request) {
+            return await new DescribDataStatsExecutor().Client(this).Execute<DescribDataStatsResponse, DescribDataStatsResult, DescribDataStatsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2445,6 +2426,25 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  (0x03)读保持寄存器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ReadHoldingRegistersResponse ReadHoldingRegisters(ReadHoldingRegistersRequest request) {
+            return  new ReadHoldingRegistersExecutor().Client(this).Execute<ReadHoldingRegistersResponse, ReadHoldingRegistersResult, ReadHoldingRegistersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  (0x03)读保持寄存器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ReadHoldingRegistersResponse> ReadHoldingRegisters(ReadHoldingRegistersRequest request) {
+            return await new ReadHoldingRegistersExecutor().Client(this).Execute<ReadHoldingRegistersResponse, ReadHoldingRegistersResult, ReadHoldingRegistersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取协议信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2675,6 +2675,25 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询属性接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PropertyAcquireResponse PropertyAcquire(PropertyAcquireRequest request) {
+            return  new PropertyAcquireExecutor().Client(this).Execute<PropertyAcquireResponse, PropertyAcquireResult, PropertyAcquireRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询属性接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PropertyAcquireResponse> PropertyAcquire(PropertyAcquireRequest request) {
+            return await new PropertyAcquireExecutor().Client(this).Execute<PropertyAcquireResponse, PropertyAcquireResult, PropertyAcquireRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除预置物模型模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2829,6 +2848,25 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  属性获取接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetPropertySnapshotResponse GetPropertySnapshot(GetPropertySnapshotRequest request) {
+            return  new GetPropertySnapshotExecutor().Client(this).Execute<GetPropertySnapshotResponse, GetPropertySnapshotResult, GetPropertySnapshotRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  属性获取接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetPropertySnapshotResponse> GetPropertySnapshot(GetPropertySnapshotRequest request) {
+            return await new GetPropertySnapshotExecutor().Client(this).Execute<GetPropertySnapshotResponse, GetPropertySnapshotResult, GetPropertySnapshotRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  IoT Hub共享模式实例创建接口
         /// 
         /// </summary>
@@ -2924,6 +2962,25 @@ namespace JDCloudSDK.Iotcore.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdatePreOrderStatusResponse> UpdatePreOrderStatus(UpdatePreOrderStatusRequest request) {
             return await new UpdatePreOrderStatusExecutor().Client(this).Execute<UpdatePreOrderStatusResponse, UpdatePreOrderStatusResult, UpdatePreOrderStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据模型ID查看物模型完整信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeThingModelResponse DescribeThingModel(DescribeThingModelRequest request) {
+            return  new DescribeThingModelExecutor().Client(this).Execute<DescribeThingModelResponse, DescribeThingModelResult, DescribeThingModelRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据模型ID查看物模型完整信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeThingModelResponse> DescribeThingModel(DescribeThingModelRequest request) {
+            return await new DescribeThingModelExecutor().Client(this).Execute<DescribeThingModelResponse, DescribeThingModelResult, DescribeThingModelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -3198,7 +3255,7 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询物类型列表
+        ///  查询物类型详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -3207,7 +3264,7 @@ namespace JDCloudSDK.Iotcore.Client
         }
 #else
         /// <summary>
-        ///  查询物类型列表
+        ///  查询物类型详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

@@ -28,18 +28,47 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  写入采集器数据
+    ///  (0x03)读保持寄存器
     /// </summary>
-    public class CollectorWriteMessageResult : JdcloudResult
+    public class ReadHoldingRegistersRequest : JdcloudRequest
     {
         ///<summary>
-        /// WriteStatus
+        /// 连接码
+        ///Required:true
         ///</summary>
-        public   string WriteStatus{ get; set; }
+        [Required]
+        public   string Identifier{ get; set; }
+        ///<summary>
+        /// 起始地址，如40301
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   int AddressOfFirstRegister{ get; set; }
+        ///<summary>
+        /// 寄存器数量
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   int NumberOfRegisters{ get; set; }
+        ///<summary>
+        /// Hub实例Id
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string InstanceId{ get; set; }
+        ///<summary>
+        /// 区域Id
+        ///Required:true
+        ///</summary>
+        [Required]
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

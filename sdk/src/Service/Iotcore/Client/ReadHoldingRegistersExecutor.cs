@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * CoreWebConsoleAPI
- * 控制台开放API
+ * LoongrayElevator
+ * 朗锐电梯服务
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -23,24 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Iotcore.Model;
-
-namespace  JDCloudSDK.Iotcore.Apis
+namespace JDCloudSDK.Iotcore.Client
 {
 
     /// <summary>
-    ///  根据模型ID查看物模型完整信息
+    ///  (0x03)读保持寄存器
     /// </summary>
-    public class DiscribeThingModelResult : JdcloudResult
+    public class ReadHoldingRegistersExecutor : JdcloudExecutor
     {
-        ///<summary>
-        /// ThingModelRespTO
-        ///</summary>
-        public   ThingModelRespTO ThingModelRespTO{ get; set; }
+        /// <summary>
+        ///  (0x03)读保持寄存器接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "GET";
+            }
+        }
+        /// <summary>
+        ///  (0x03)读保持寄存器接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/regions/{regionId}/loongrayinstances/{instanceId}/readHoldingRegisters";
+            }
+        }
     }
 }

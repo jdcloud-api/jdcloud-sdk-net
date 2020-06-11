@@ -37,5 +37,13 @@ namespace  JDCloudSDK.Iotcore.Apis
     /// </summary>
     public class DownloadCertificateResult : JdcloudResult
     {
+        ///<summary>
+        /// 证书对应deviceId
+        ///</summary>
+        public   string DeviceId{ get; set; }
+        ///<summary>
+        /// 证书zip包对应链接，默认有效时长10分钟
+        ///</summary>
+        public   string DeviceCertUrl{ get; set; }
     }
 }

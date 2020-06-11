@@ -28,39 +28,14 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
-using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  根据模型ID查看物模型完整信息
+    ///  设备在线统计
     /// </summary>
-    public class DiscribeThingModelRequest : JdcloudRequest
+    public class DescribDataStatsResponse : JdcloudResponse<DescribDataStatsResult>
     {
-        ///<summary>
-        /// 物模型ID编号
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string ThingModelId{ get; set; }
-        ///<summary>
-        /// 版本号。如果为空，则返回最新版本
-        ///</summary>
-        public   string ThingModelVersion{ get; set; }
-        ///<summary>
-        /// 区域id
-        ///Required:true
-        ///</summary>
-        [Required]
-        [JsonProperty("regionId")]
-        public   string RegionIdValue{ get; set; }
-        ///<summary>
-        /// 实例Id
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string InstanceId{ get; set; }
     }
 }

@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iotcore.Client
 {
 
     /// <summary>
-    ///  查询物类型列表
+    ///  查询物类型详情
     /// </summary>
     public class ThingTypeDescribeExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询物类型列表接口的Http 请求方法
+        ///  查询物类型详情接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iotcore.Client
             }
         }
         /// <summary>
-        ///  查询物类型列表接口的Http资源请求路径
+        ///  查询物类型详情接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

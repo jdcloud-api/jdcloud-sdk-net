@@ -47,7 +47,7 @@ namespace JDCloudSDK.Iotcore.Model
         ///<summary>
         /// 输入参数
         ///</summary>
-        public string InParams{ get; set; }
+        public Dictionary<String,string> InParams{ get; set; }
         ///<summary>
         /// 服务名称
         ///Required:true

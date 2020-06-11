@@ -33,12 +33,12 @@ namespace JDCloudSDK.Iotcore.Client
 {
 
     /// <summary>
-    ///  根据模型ID查看物模型完整信息
+    ///  查询属性接口
     /// </summary>
-    public class DiscribeThingModelExecutor : JdcloudExecutor
+    public class PropertyAcquireExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  根据模型ID查看物模型完整信息接口的Http 请求方法
+        ///  查询属性接口接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +47,12 @@ namespace JDCloudSDK.Iotcore.Client
             }
         }
         /// <summary>
-        ///  根据模型ID查看物模型完整信息接口的Http资源请求路径
+        ///  查询属性接口接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/coreinstances/{instanceId}/thingModel:discribeThingModel";
+            return "/regions/{regionId}/coreinstances/{instanceId}/property:acquire";
             }
         }
     }

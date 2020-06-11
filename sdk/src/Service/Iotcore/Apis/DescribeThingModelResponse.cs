@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Iotcore.Apis
     /// <summary>
     ///  根据模型ID查看物模型完整信息
     /// </summary>
-    public class DiscribeThingModelResponse : JdcloudResponse<DiscribeThingModelResult>
+    public class DescribeThingModelResponse : JdcloudResponse<DescribeThingModelResult>
     {
     }
 }

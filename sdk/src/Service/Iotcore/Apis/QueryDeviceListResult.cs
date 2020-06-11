@@ -47,21 +47,13 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   int? CurrentPage{ get; set; }
         ///<summary>
-        /// TotalSize
+        /// TotalCount
         ///</summary>
-        public   int? TotalSize{ get; set; }
-        ///<summary>
-        /// TotalPage
-        ///</summary>
-        public   int? TotalPage{ get; set; }
+        public   int? TotalCount{ get; set; }
         ///<summary>
         /// Data的数据
         ///</summary>
         public List<DeviceInfoVO> Data{ get; set; }
 
-        ///<summary>
-        /// 统计数据
-        ///</summary>
-        public   int? TotalCount{ get; set; }
     }
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * CoreWebConsoleAPI
- * 控制台开放API
+ * LoongrayElevator
+ * 朗锐电梯服务
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -28,29 +28,18 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
-using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  设备在线统计
+    ///  (0x03)读保持寄存器
     /// </summary>
-    public class DataStatesRequest : JdcloudRequest
+    public class ReadHoldingRegistersResult : JdcloudResult
     {
         ///<summary>
-        /// 区域id
-        ///Required:true
+        /// 读取寄存器值，key：寄存器地址 value:寄存器值
         ///</summary>
-        [Required]
-        [JsonProperty("regionId")]
-        public   string RegionIdValue{ get; set; }
-        ///<summary>
-        /// 实例Id
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string InstanceId{ get; set; }
+        public   object ReadData{ get; set; }
     }
 }

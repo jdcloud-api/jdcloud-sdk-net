@@ -23,37 +23,19 @@
  */
 
 
-using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-namespace JDCloudSDK.Iotcore.Client
+
+namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  设备在线统计
+    ///  属性获取接口
     /// </summary>
-    public class DataStatesExecutor : JdcloudExecutor
+    public class GetPropertySnapshotResult : JdcloudResult
     {
-        /// <summary>
-        ///  设备在线统计接口的Http 请求方法
-        /// </summary>
-        public override  string Method
-        {
-            get {
-                return "GET";
-            }
-        }
-        /// <summary>
-        ///  设备在线统计接口的Http资源请求路径
-        /// </summary>
-        public override string Url
-        {
-            get {
-            return "/regions/{regionId}/coreinstances/{instanceId}/data:states";
-            }
-        }
     }
 }

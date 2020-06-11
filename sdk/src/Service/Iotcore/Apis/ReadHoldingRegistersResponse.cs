@@ -23,37 +23,19 @@
  */
 
 
-using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-namespace JDCloudSDK.Iotcore.Client
+
+namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  读取电梯属性
+    ///  (0x03)读保持寄存器
     /// </summary>
-    public class GetElevatorPropertyExecutor : JdcloudExecutor
+    public class ReadHoldingRegistersResponse : JdcloudResponse<ReadHoldingRegistersResult>
     {
-        /// <summary>
-        ///  读取电梯属性接口的Http 请求方法
-        /// </summary>
-        public override  string Method
-        {
-            get {
-                return "GET";
-            }
-        }
-        /// <summary>
-        ///  读取电梯属性接口的Http资源请求路径
-        /// </summary>
-        public override string Url
-        {
-            get {
-            return "/regions/{regionId}/loongrayinstances/{instanceId}/register/{identifier}/elevator-property";
-            }
-        }
     }
 }

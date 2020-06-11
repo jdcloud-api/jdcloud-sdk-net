@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Iotcore.Apis
     public class FunctionListRequest : JdcloudRequest
     {
         ///<summary>
-        /// 方法查询请求
+        /// 方法查询请求对象
         ///Required:true
         ///</summary>
         [Required]

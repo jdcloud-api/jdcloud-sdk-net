@@ -68,7 +68,7 @@ namespace JDCloudSDK.Iotcore.Model
         ///<summary>
         /// GlobalProfiles
         ///</summary>
-        public GlobalProfileVO GlobalProfiles{ get; set; }
+        public List<GlobalProfileVO> GlobalProfiles{ get; set; }
         ///<summary>
         /// 最近一次上线时间
         ///</summary>
@@ -117,10 +117,6 @@ namespace JDCloudSDK.Iotcore.Model
         /// 物模型版本号
         ///</summary>
         public string ThingModelVersion{ get; set; }
-        ///<summary>
-        /// 物模型类型
-        ///</summary>
-        public string ThingType{ get; set; }
         ///<summary>
         /// 物类型ID
         ///</summary>

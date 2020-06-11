@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * LoongrayElevator
- * 朗锐电梯服务
+ * CoreWebConsoleAPI
+ * 控制台开放API
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -23,37 +23,34 @@
  */
 
 
-using JDCloudSDK.Core.Client;
-using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-namespace JDCloudSDK.Iotcore.Client
+using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
+
+namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  读取电梯属性
+    ///  设备在线统计
     /// </summary>
-    public class GetElevatorPropertyExecutor : JdcloudExecutor
+    public class DescribDataStatsRequest : JdcloudRequest
     {
-        /// <summary>
-        ///  读取电梯属性接口的Http 请求方法
-        /// </summary>
-        public override  string Method
-        {
-            get {
-                return "GET";
-            }
-        }
-        /// <summary>
-        ///  读取电梯属性接口的Http资源请求路径
-        /// </summary>
-        public override string Url
-        {
-            get {
-            return "/regions/{regionId}/loongrayinstances/{instanceId}/register/{identifier}/elevator-property";
-            }
-        }
+        ///<summary>
+        /// 区域id
+        ///Required:true
+        ///</summary>
+        [Required]
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
+        ///<summary>
+        /// 实例Id
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string InstanceId{ get; set; }
     }
 }

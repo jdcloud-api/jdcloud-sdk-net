@@ -44,6 +44,10 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   int? NowPage{ get; set; }
         ///<summary>
+        /// 用户UserPin
+        ///</summary>
+        public   string UserPin{ get; set; }
+        ///<summary>
         /// 分页大小，默认为10，取值范围：[10,100]
         ///</summary>
         public   int? PageSize{ get; set; }

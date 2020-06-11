@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  查询物类型列表
+    ///  查询物类型详情
     /// </summary>
     public class ThingTypeDescribeResponse : JdcloudResponse<ThingTypeDescribeResult>
     {

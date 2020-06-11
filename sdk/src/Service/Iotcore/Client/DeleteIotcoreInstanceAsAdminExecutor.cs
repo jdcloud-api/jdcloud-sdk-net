@@ -52,7 +52,7 @@ namespace JDCloudSDK.Iotcore.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/iotcoreinstances/{instanceId}:deleteIotcoreInstanceAsAdmin";
+            return "/regions/{regionId}/coreinstances/{instanceId}:deleteIotcoreInstanceAsAdmin";
             }
         }
     }
