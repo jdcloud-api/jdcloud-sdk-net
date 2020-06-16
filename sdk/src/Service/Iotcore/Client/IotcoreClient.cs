@@ -138,21 +138,21 @@ namespace JDCloudSDK.Iotcore.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  IoT Hub所在Region和AZ信息查询
+        ///  建立设备间的父子关系
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeRegionInfoResponse DescribeRegionInfo(DescribeRegionInfoRequest request) {
-            return  new DescribeRegionInfoExecutor().Client(this).Execute<DescribeRegionInfoResponse, DescribeRegionInfoResult, DescribeRegionInfoRequest>(request);
+        public AddDeviceLinksResponse AddDeviceLinks(AddDeviceLinksRequest request) {
+            return  new AddDeviceLinksExecutor().Client(this).Execute<AddDeviceLinksResponse, AddDeviceLinksResult, AddDeviceLinksRequest>(request);
         }
 #else
         /// <summary>
-        ///  IoT Hub所在Region和AZ信息查询
+        ///  建立设备间的父子关系
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeRegionInfoResponse> DescribeRegionInfo(DescribeRegionInfoRequest request) {
-            return await new DescribeRegionInfoExecutor().Client(this).Execute<DescribeRegionInfoResponse, DescribeRegionInfoResult, DescribeRegionInfoRequest>(request).ConfigureAwait(false);
+        public async Task<AddDeviceLinksResponse> AddDeviceLinks(AddDeviceLinksRequest request) {
+            return await new AddDeviceLinksExecutor().Client(this).Execute<AddDeviceLinksResponse, AddDeviceLinksResult, AddDeviceLinksRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -176,977 +176,6 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新建产品属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateProductPropertyResponse CreateProductProperty(CreateProductPropertyRequest request) {
-            return  new CreateProductPropertyExecutor().Client(this).Execute<CreateProductPropertyResponse, CreateProductPropertyResult, CreateProductPropertyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建产品属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateProductPropertyResponse> CreateProductProperty(CreateProductPropertyRequest request) {
-            return await new CreateProductPropertyExecutor().Client(this).Execute<CreateProductPropertyResponse, CreateProductPropertyResult, CreateProductPropertyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ServiceUsersResponse ServiceUsers(ServiceUsersRequest request) {
-            return  new ServiceUsersExecutor().Client(this).Execute<ServiceUsersResponse, ServiceUsersResult, ServiceUsersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ServiceUsersResponse> ServiceUsers(ServiceUsersRequest request) {
-            return await new ServiceUsersExecutor().Client(this).Execute<ServiceUsersResponse, ServiceUsersResult, ServiceUsersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询设备批次信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDeviceBatchInfoResponse QueryDeviceBatchInfo(QueryDeviceBatchInfoRequest request) {
-            return  new QueryDeviceBatchInfoExecutor().Client(this).Execute<QueryDeviceBatchInfoResponse, QueryDeviceBatchInfoResult, QueryDeviceBatchInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询设备批次信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDeviceBatchInfoResponse> QueryDeviceBatchInfo(QueryDeviceBatchInfoRequest request) {
-            return await new QueryDeviceBatchInfoExecutor().Client(this).Execute<QueryDeviceBatchInfoResponse, QueryDeviceBatchInfoResult, QueryDeviceBatchInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyProductTopicResponse ModifyProductTopic(ModifyProductTopicRequest request) {
-            return  new ModifyProductTopicExecutor().Client(this).Execute<ModifyProductTopicResponse, ModifyProductTopicResult, ModifyProductTopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyProductTopicResponse> ModifyProductTopic(ModifyProductTopicRequest request) {
-            return await new ModifyProductTopicExecutor().Client(this).Execute<ModifyProductTopicResponse, ModifyProductTopicResult, ModifyProductTopicRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  用户Pin注册验证接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckSharedUserResponse CheckSharedUser(CheckSharedUserRequest request) {
-            return  new CheckSharedUserExecutor().Client(this).Execute<CheckSharedUserResponse, CheckSharedUserResult, CheckSharedUserRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  用户Pin注册验证接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckSharedUserResponse> CheckSharedUser(CheckSharedUserRequest request) {
-            return await new CheckSharedUserExecutor().Client(this).Execute<CheckSharedUserResponse, CheckSharedUserResult, CheckSharedUserRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设备事件查询
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EventListResponse EventList(EventListRequest request) {
-            return  new EventListExecutor().Client(this).Execute<EventListResponse, EventListResult, EventListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备事件查询
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EventListResponse> EventList(EventListRequest request) {
-            return await new EventListExecutor().Client(this).Execute<EventListResponse, EventListResult, EventListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建自定义物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateCustomizedThingModelTemplateResponse CreateCustomizedThingModelTemplate(CreateCustomizedThingModelTemplateRequest request) {
-            return  new CreateCustomizedThingModelTemplateExecutor().Client(this).Execute<CreateCustomizedThingModelTemplateResponse, CreateCustomizedThingModelTemplateResult, CreateCustomizedThingModelTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建自定义物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateCustomizedThingModelTemplateResponse> CreateCustomizedThingModelTemplate(CreateCustomizedThingModelTemplateRequest request) {
-            return await new CreateCustomizedThingModelTemplateExecutor().Client(this).Execute<CreateCustomizedThingModelTemplateResponse, CreateCustomizedThingModelTemplateResult, CreateCustomizedThingModelTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看事件列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListThingEventsResponse ListThingEvents(ListThingEventsRequest request) {
-            return  new ListThingEventsExecutor().Client(this).Execute<ListThingEventsResponse, ListThingEventsResult, ListThingEventsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看事件列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListThingEventsResponse> ListThingEvents(ListThingEventsRequest request) {
-            return await new ListThingEventsExecutor().Client(this).Execute<ListThingEventsResponse, ListThingEventsResult, ListThingEventsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询授权状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssStatusResponse DescribeOssStatus(DescribeOssStatusRequest request) {
-            return  new DescribeOssStatusExecutor().Client(this).Execute<DescribeOssStatusResponse, DescribeOssStatusResult, DescribeOssStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询授权状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssStatusResponse> DescribeOssStatus(DescribeOssStatusRequest request) {
-            return await new DescribeOssStatusExecutor().Client(this).Execute<DescribeOssStatusResponse, DescribeOssStatusResult, DescribeOssStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  升级自定义物模型模板产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateCustomizedTemplateProductsResponse UpdateCustomizedTemplateProducts(UpdateCustomizedTemplateProductsRequest request) {
-            return  new UpdateCustomizedTemplateProductsExecutor().Client(this).Execute<UpdateCustomizedTemplateProductsResponse, UpdateCustomizedTemplateProductsResult, UpdateCustomizedTemplateProductsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  升级自定义物模型模板产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateCustomizedTemplateProductsResponse> UpdateCustomizedTemplateProducts(UpdateCustomizedTemplateProductsRequest request) {
-            return await new UpdateCustomizedTemplateProductsExecutor().Client(this).Execute<UpdateCustomizedTemplateProductsResponse, UpdateCustomizedTemplateProductsResult, UpdateCustomizedTemplateProductsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建产品分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateProductCategoryResponse CreateProductCategory(CreateProductCategoryRequest request) {
-            return  new CreateProductCategoryExecutor().Client(this).Execute<CreateProductCategoryResponse, CreateProductCategoryResult, CreateProductCategoryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建产品分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateProductCategoryResponse> CreateProductCategory(CreateProductCategoryRequest request) {
-            return await new CreateProductCategoryExecutor().Client(this).Execute<CreateProductCategoryResponse, CreateProductCategoryResult, CreateProductCategoryRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  写入采集器数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CollectorWriteMessageResponse CollectorWriteMessage(CollectorWriteMessageRequest request) {
-            return  new CollectorWriteMessageExecutor().Client(this).Execute<CollectorWriteMessageResponse, CollectorWriteMessageResult, CollectorWriteMessageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  写入采集器数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CollectorWriteMessageResponse> CollectorWriteMessage(CollectorWriteMessageRequest request) {
-            return await new CollectorWriteMessageExecutor().Client(this).Execute<CollectorWriteMessageResponse, CollectorWriteMessageResult, CollectorWriteMessageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  独享模式用户Pin开通验证接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckPrivateUserResponse CheckPrivateUser(CheckPrivateUserRequest request) {
-            return  new CheckPrivateUserExecutor().Client(this).Execute<CheckPrivateUserResponse, CheckPrivateUserResult, CheckPrivateUserRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  独享模式用户Pin开通验证接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckPrivateUserResponse> CheckPrivateUser(CheckPrivateUserRequest request) {
-            return await new CheckPrivateUserExecutor().Client(this).Execute<CheckPrivateUserResponse, CheckPrivateUserResult, CheckPrivateUserRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取当前规则的action列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryActionListResponse QueryActionList(QueryActionListRequest request) {
-            return  new QueryActionListExecutor().Client(this).Execute<QueryActionListResponse, QueryActionListResult, QueryActionListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取当前规则的action列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryActionListResponse> QueryActionList(QueryActionListRequest request) {
-            return await new QueryActionListExecutor().Client(this).Execute<QueryActionListResponse, QueryActionListResult, QueryActionListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建授权
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateAuthResponse CreateAuth(CreateAuthRequest request) {
-            return  new CreateAuthExecutor().Client(this).Execute<CreateAuthResponse, CreateAuthResult, CreateAuthRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建授权
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateAuthResponse> CreateAuth(CreateAuthRequest request) {
-            return await new CreateAuthExecutor().Client(this).Execute<CreateAuthResponse, CreateAuthResult, CreateAuthRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改自定义物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateCustomizedThingModelTemplateResponse UpdateCustomizedThingModelTemplate(UpdateCustomizedThingModelTemplateRequest request) {
-            return  new UpdateCustomizedThingModelTemplateExecutor().Client(this).Execute<UpdateCustomizedThingModelTemplateResponse, UpdateCustomizedThingModelTemplateResult, UpdateCustomizedThingModelTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改自定义物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateCustomizedThingModelTemplateResponse> UpdateCustomizedThingModelTemplate(UpdateCustomizedThingModelTemplateRequest request) {
-            return await new UpdateCustomizedThingModelTemplateExecutor().Client(this).Execute<UpdateCustomizedThingModelTemplateResponse, UpdateCustomizedThingModelTemplateResult, UpdateCustomizedThingModelTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看物联网引擎资源详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeIotCoreInstanceByMonitorResponse DescribeIotCoreInstanceByMonitor(DescribeIotCoreInstanceByMonitorRequest request) {
-            return  new DescribeIotCoreInstanceByMonitorExecutor().Client(this).Execute<DescribeIotCoreInstanceByMonitorResponse, DescribeIotCoreInstanceByMonitorResult, DescribeIotCoreInstanceByMonitorRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看物联网引擎资源详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeIotCoreInstanceByMonitorResponse> DescribeIotCoreInstanceByMonitor(DescribeIotCoreInstanceByMonitorRequest request) {
-            return await new DescribeIotCoreInstanceByMonitorExecutor().Client(this).Execute<DescribeIotCoreInstanceByMonitorResponse, DescribeIotCoreInstanceByMonitorResult, DescribeIotCoreInstanceByMonitorRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListProductsResponse ListProducts(ListProductsRequest request) {
-            return  new ListProductsExecutor().Client(this).Execute<ListProductsResponse, ListProductsResult, ListProductsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListProductsResponse> ListProducts(ListProductsRequest request) {
-            return await new ListProductsExecutor().Client(this).Execute<ListProductsResponse, ListProductsResult, ListProductsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除产品功能
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteProductAbilityResponse DeleteProductAbility(DeleteProductAbilityRequest request) {
-            return  new DeleteProductAbilityExecutor().Client(this).Execute<DeleteProductAbilityResponse, DeleteProductAbilityResult, DeleteProductAbilityRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除产品功能
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteProductAbilityResponse> DeleteProductAbility(DeleteProductAbilityRequest request) {
-            return await new DeleteProductAbilityExecutor().Client(this).Execute<DeleteProductAbilityResponse, DeleteProductAbilityResult, DeleteProductAbilityRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除一个IoT Hub Instance
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteInstanceAsAdminResponse DeleteInstanceAsAdmin(DeleteInstanceAsAdminRequest request) {
-            return  new DeleteInstanceAsAdminExecutor().Client(this).Execute<DeleteInstanceAsAdminResponse, DeleteInstanceAsAdminResult, DeleteInstanceAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除一个IoT Hub Instance
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteInstanceAsAdminResponse> DeleteInstanceAsAdmin(DeleteInstanceAsAdminRequest request) {
-            return await new DeleteInstanceAsAdminExecutor().Client(this).Execute<DeleteInstanceAsAdminResponse, DeleteInstanceAsAdminResult, DeleteInstanceAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  读取传感器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SensorManageResponse SensorManage(SensorManageRequest request) {
-            return  new SensorManageExecutor().Client(this).Execute<SensorManageResponse, SensorManageResult, SensorManageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  读取传感器
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SensorManageResponse> SensorManage(SensorManageRequest request) {
-            return await new SensorManageExecutor().Client(this).Execute<SensorManageResponse, SensorManageResult, SensorManageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看物联网引擎资源列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListIotCoreInstancesByMonitorResponse ListIotCoreInstancesByMonitor(ListIotCoreInstancesByMonitorRequest request) {
-            return  new ListIotCoreInstancesByMonitorExecutor().Client(this).Execute<ListIotCoreInstancesByMonitorResponse, ListIotCoreInstancesByMonitorResult, ListIotCoreInstancesByMonitorRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看物联网引擎资源列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListIotCoreInstancesByMonitorResponse> ListIotCoreInstancesByMonitor(ListIotCoreInstancesByMonitorRequest request) {
-            return await new ListIotCoreInstancesByMonitorExecutor().Client(this).Execute<ListIotCoreInstancesByMonitorResponse, ListIotCoreInstancesByMonitorResult, ListIotCoreInstancesByMonitorRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  发布核心系统
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public PublishCoreSystemResponse PublishCoreSystem(PublishCoreSystemRequest request) {
-            return  new PublishCoreSystemExecutor().Client(this).Execute<PublishCoreSystemResponse, PublishCoreSystemResult, PublishCoreSystemRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  发布核心系统
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<PublishCoreSystemResponse> PublishCoreSystem(PublishCoreSystemRequest request) {
-            return await new PublishCoreSystemExecutor().Client(this).Execute<PublishCoreSystemResponse, PublishCoreSystemResult, PublishCoreSystemRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询单个设备详细信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeviceQueryResponse DeviceQuery(DeviceQueryRequest request) {
-            return  new DeviceQueryExecutor().Client(this).Execute<DeviceQueryResponse, DeviceQueryResult, DeviceQueryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询单个设备详细信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeviceQueryResponse> DeviceQuery(DeviceQueryRequest request) {
-            return await new DeviceQueryExecutor().Client(this).Execute<DeviceQueryResponse, DeviceQueryResult, DeviceQueryRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设备注册接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeviceRegisterResponse DeviceRegister(DeviceRegisterRequest request) {
-            return  new DeviceRegisterExecutor().Client(this).Execute<DeviceRegisterResponse, DeviceRegisterResult, DeviceRegisterRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备注册接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeviceRegisterResponse> DeviceRegister(DeviceRegisterRequest request) {
-            return await new DeviceRegisterExecutor().Client(this).Execute<DeviceRegisterResponse, DeviceRegisterResult, DeviceRegisterRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加固件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateFirmwareResponse CreateFirmware(CreateFirmwareRequest request) {
-            return  new CreateFirmwareExecutor().Client(this).Execute<CreateFirmwareResponse, CreateFirmwareResult, CreateFirmwareRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加固件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateFirmwareResponse> CreateFirmware(CreateFirmwareRequest request) {
-            return await new CreateFirmwareExecutor().Client(this).Execute<CreateFirmwareResponse, CreateFirmwareResult, CreateFirmwareRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新或者创建动作信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SaveOrUpdateActionsResponse SaveOrUpdateActions(SaveOrUpdateActionsRequest request) {
-            return  new SaveOrUpdateActionsExecutor().Client(this).Execute<SaveOrUpdateActionsResponse, SaveOrUpdateActionsResult, SaveOrUpdateActionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新或者创建动作信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SaveOrUpdateActionsResponse> SaveOrUpdateActions(SaveOrUpdateActionsRequest request) {
-            return await new SaveOrUpdateActionsExecutor().Client(this).Execute<SaveOrUpdateActionsResponse, SaveOrUpdateActionsResult, SaveOrUpdateActionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取规则信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetRuleInfoResponse GetRuleInfo(GetRuleInfoRequest request) {
-            return  new GetRuleInfoExecutor().Client(this).Execute<GetRuleInfoResponse, GetRuleInfoResult, GetRuleInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取规则信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetRuleInfoResponse> GetRuleInfo(GetRuleInfoRequest request) {
-            return await new GetRuleInfoExecutor().Client(this).Execute<GetRuleInfoResponse, GetRuleInfoResult, GetRuleInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新设备影子的期望值
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateThingShadowResponse UpdateThingShadow(UpdateThingShadowRequest request) {
-            return  new UpdateThingShadowExecutor().Client(this).Execute<UpdateThingShadowResponse, UpdateThingShadowResult, UpdateThingShadowRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新设备影子的期望值
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateThingShadowResponse> UpdateThingShadow(UpdateThingShadowRequest request) {
-            return await new UpdateThingShadowExecutor().Client(this).Execute<UpdateThingShadowResponse, UpdateThingShadowResult, UpdateThingShadowRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询分页规则列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryRulePageResponse QueryRulePage(QueryRulePageRequest request) {
-            return  new QueryRulePageExecutor().Client(this).Execute<QueryRulePageResponse, QueryRulePageResult, QueryRulePageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询分页规则列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryRulePageResponse> QueryRulePage(QueryRulePageRequest request) {
-            return await new QueryRulePageExecutor().Client(this).Execute<QueryRulePageResponse, QueryRulePageResult, QueryRulePageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductPropertyResponse DescribeProductProperty(DescribeProductPropertyRequest request) {
-            return  new DescribeProductPropertyExecutor().Client(this).Execute<DescribeProductPropertyResponse, DescribeProductPropertyResult, DescribeProductPropertyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductPropertyResponse> DescribeProductProperty(DescribeProductPropertyRequest request) {
-            return await new DescribeProductPropertyExecutor().Client(this).Execute<DescribeProductPropertyResponse, DescribeProductPropertyResult, DescribeProductPropertyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建产品服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateProductServiceResponse CreateProductService(CreateProductServiceRequest request) {
-            return  new CreateProductServiceExecutor().Client(this).Execute<CreateProductServiceResponse, CreateProductServiceResult, CreateProductServiceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建产品服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateProductServiceResponse> CreateProductService(CreateProductServiceRequest request) {
-            return await new CreateProductServiceExecutor().Client(this).Execute<CreateProductServiceResponse, CreateProductServiceResult, CreateProductServiceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取Oss类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssBucketListsResponse DescribeOssBucketLists(DescribeOssBucketListsRequest request) {
-            return  new DescribeOssBucketListsExecutor().Client(this).Execute<DescribeOssBucketListsResponse, DescribeOssBucketListsResult, DescribeOssBucketListsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取Oss类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssBucketListsResponse> DescribeOssBucketLists(DescribeOssBucketListsRequest request) {
-            return await new DescribeOssBucketListsExecutor().Client(this).Execute<DescribeOssBucketListsResponse, DescribeOssBucketListsResult, DescribeOssBucketListsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改预置物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateThingModelTemplateResponse UpdateThingModelTemplate(UpdateThingModelTemplateRequest request) {
-            return  new UpdateThingModelTemplateExecutor().Client(this).Execute<UpdateThingModelTemplateResponse, UpdateThingModelTemplateResult, UpdateThingModelTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改预置物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateThingModelTemplateResponse> UpdateThingModelTemplate(UpdateThingModelTemplateRequest request) {
-            return await new UpdateThingModelTemplateExecutor().Client(this).Execute<UpdateThingModelTemplateResponse, UpdateThingModelTemplateResult, UpdateThingModelTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看预置物模型模板列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListThingModelTemplatesResponse ListThingModelTemplates(ListThingModelTemplatesRequest request) {
-            return  new ListThingModelTemplatesExecutor().Client(this).Execute<ListThingModelTemplatesResponse, ListThingModelTemplatesResult, ListThingModelTemplatesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看预置物模型模板列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListThingModelTemplatesResponse> ListThingModelTemplates(ListThingModelTemplatesRequest request) {
-            return await new ListThingModelTemplatesExecutor().Client(this).Execute<ListThingModelTemplatesResponse, ListThingModelTemplatesResult, ListThingModelTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除固件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteFirmwareResponse DeleteFirmware(DeleteFirmwareRequest request) {
-            return  new DeleteFirmwareExecutor().Client(this).Execute<DeleteFirmwareResponse, DeleteFirmwareResult, DeleteFirmwareRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除固件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteFirmwareResponse> DeleteFirmware(DeleteFirmwareRequest request) {
-            return await new DeleteFirmwareExecutor().Client(this).Execute<DeleteFirmwareResponse, DeleteFirmwareResult, DeleteFirmwareRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除产品分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteProductCategoryResponse DeleteProductCategory(DeleteProductCategoryRequest request) {
-            return  new DeleteProductCategoryExecutor().Client(this).Execute<DeleteProductCategoryResponse, DeleteProductCategoryResult, DeleteProductCategoryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除产品分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteProductCategoryResponse> DeleteProductCategory(DeleteProductCategoryRequest request) {
-            return await new DeleteProductCategoryExecutor().Client(this).Execute<DeleteProductCategoryResponse, DeleteProductCategoryResult, DeleteProductCategoryRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看实例详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeIotcoreInstanceResponse DescribeIotcoreInstance(DescribeIotcoreInstanceRequest request) {
-            return  new DescribeIotcoreInstanceExecutor().Client(this).Execute<DescribeIotcoreInstanceResponse, DescribeIotcoreInstanceResult, DescribeIotcoreInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看实例详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeIotcoreInstanceResponse> DescribeIotcoreInstance(DescribeIotcoreInstanceRequest request) {
-            return await new DescribeIotcoreInstanceExecutor().Client(this).Execute<DescribeIotcoreInstanceResponse, DescribeIotcoreInstanceResult, DescribeIotcoreInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看设备影子
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeThingShadowResponse DescribeThingShadow(DescribeThingShadowRequest request) {
-            return  new DescribeThingShadowExecutor().Client(this).Execute<DescribeThingShadowResponse, DescribeThingShadowResult, DescribeThingShadowRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看设备影子
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeThingShadowResponse> DescribeThingShadow(DescribeThingShadowRequest request) {
-            return await new DescribeThingShadowExecutor().Client(this).Execute<DescribeThingShadowResponse, DescribeThingShadowResult, DescribeThingShadowRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  朗瑞分页查询设备信息,支持一个或多个条件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public LoongrayQueryPageResponse LoongrayQueryPage(LoongrayQueryPageRequest request) {
-            return  new LoongrayQueryPageExecutor().Client(this).Execute<LoongrayQueryPageResponse, LoongrayQueryPageResult, LoongrayQueryPageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  朗瑞分页查询设备信息,支持一个或多个条件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<LoongrayQueryPageResponse> LoongrayQueryPage(LoongrayQueryPageRequest request) {
-            return await new LoongrayQueryPageExecutor().Client(this).Execute<LoongrayQueryPageResponse, LoongrayQueryPageResult, LoongrayQueryPageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateProductWithAdminResponse UpdateProductWithAdmin(UpdateProductWithAdminRequest request) {
-            return  new UpdateProductWithAdminExecutor().Client(this).Execute<UpdateProductWithAdminResponse, UpdateProductWithAdminResult, UpdateProductWithAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateProductWithAdminResponse> UpdateProductWithAdmin(UpdateProductWithAdminRequest request) {
-            return await new UpdateProductWithAdminExecutor().Client(this).Execute<UpdateProductWithAdminResponse, UpdateProductWithAdminResult, UpdateProductWithAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改用户信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateServiceUserResponse UpdateServiceUser(UpdateServiceUserRequest request) {
-            return  new UpdateServiceUserExecutor().Client(this).Execute<UpdateServiceUserResponse, UpdateServiceUserResult, UpdateServiceUserRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改用户信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateServiceUserResponse> UpdateServiceUser(UpdateServiceUserRequest request) {
-            return await new UpdateServiceUserExecutor().Client(this).Execute<UpdateServiceUserResponse, UpdateServiceUserResult, UpdateServiceUserRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取电梯列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetRegistersResponse GetRegisters(GetRegistersRequest request) {
-            return  new GetRegistersExecutor().Client(this).Execute<GetRegistersResponse, GetRegistersResult, GetRegistersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取电梯列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetRegistersResponse> GetRegisters(GetRegistersRequest request) {
-            return await new GetRegistersExecutor().Client(this).Execute<GetRegistersResponse, GetRegistersResult, GetRegistersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据deviceId查询设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryLoongrayDeviceDetailByIdResponse QueryLoongrayDeviceDetailById(QueryLoongrayDeviceDetailByIdRequest request) {
-            return  new QueryLoongrayDeviceDetailByIdExecutor().Client(this).Execute<QueryLoongrayDeviceDetailByIdResponse, QueryLoongrayDeviceDetailByIdResult, QueryLoongrayDeviceDetailByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据deviceId查询设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryLoongrayDeviceDetailByIdResponse> QueryLoongrayDeviceDetailById(QueryLoongrayDeviceDetailByIdRequest request) {
-            return await new QueryLoongrayDeviceDetailByIdExecutor().Client(this).Execute<QueryLoongrayDeviceDetailByIdResponse, QueryLoongrayDeviceDetailByIdResult, QueryLoongrayDeviceDetailByIdRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeServiceUserResponse DescribeServiceUser(DescribeServiceUserRequest request) {
-            return  new DescribeServiceUserExecutor().Client(this).Execute<DescribeServiceUserResponse, DescribeServiceUserResult, DescribeServiceUserRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeServiceUserResponse> DescribeServiceUser(DescribeServiceUserRequest request) {
-            return await new DescribeServiceUserExecutor().Client(this).Execute<DescribeServiceUserResponse, DescribeServiceUserResult, DescribeServiceUserRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  注册单个朗讯设备并返回秘钥信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddLooDeviceResponse AddLooDevice(AddLooDeviceRequest request) {
-            return  new AddLooDeviceExecutor().Client(this).Execute<AddLooDeviceResponse, AddLooDeviceResult, AddLooDeviceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  注册单个朗讯设备并返回秘钥信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddLooDeviceResponse> AddLooDevice(AddLooDeviceRequest request) {
-            return await new AddLooDeviceExecutor().Client(this).Execute<AddLooDeviceResponse, AddLooDeviceResult, AddLooDeviceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  读取采集器属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetCollectorPropertyResponse GetCollectorProperty(GetCollectorPropertyRequest request) {
-            return  new GetCollectorPropertyExecutor().Client(this).Execute<GetCollectorPropertyResponse, GetCollectorPropertyResult, GetCollectorPropertyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  读取采集器属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetCollectorPropertyResponse> GetCollectorProperty(GetCollectorPropertyRequest request) {
-            return await new GetCollectorPropertyExecutor().Client(this).Execute<GetCollectorPropertyResponse, GetCollectorPropertyResult, GetCollectorPropertyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看升级固件批次详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeFirmwareBatchResponse DescribeFirmwareBatch(DescribeFirmwareBatchRequest request) {
-            return  new DescribeFirmwareBatchExecutor().Client(this).Execute<DescribeFirmwareBatchResponse, DescribeFirmwareBatchResult, DescribeFirmwareBatchRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看升级固件批次详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeFirmwareBatchResponse> DescribeFirmwareBatch(DescribeFirmwareBatchRequest request) {
-            return await new DescribeFirmwareBatchExecutor().Client(this).Execute<DescribeFirmwareBatchResponse, DescribeFirmwareBatchResult, DescribeFirmwareBatchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  重置设备秘钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResetSecretResponse ResetSecret(ResetSecretRequest request) {
-            return  new ResetSecretExecutor().Client(this).Execute<ResetSecretResponse, ResetSecretResult, ResetSecretRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  重置设备秘钥
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResetSecretResponse> ResetSecret(ResetSecretRequest request) {
-            return await new ResetSecretExecutor().Client(this).Execute<ResetSecretResponse, ResetSecretResult, ResetSecretRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  建立设备间的父子关系
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddDeviceLinksResponse AddDeviceLinks(AddDeviceLinksRequest request) {
-            return  new AddDeviceLinksExecutor().Client(this).Execute<AddDeviceLinksResponse, AddDeviceLinksResult, AddDeviceLinksRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  建立设备间的父子关系
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddDeviceLinksResponse> AddDeviceLinks(AddDeviceLinksRequest request) {
-            return await new AddDeviceLinksExecutor().Client(this).Execute<AddDeviceLinksResponse, AddDeviceLinksResult, AddDeviceLinksRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看固件列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeFirmwaresResponse DescribeFirmwares(DescribeFirmwaresRequest request) {
-            return  new DescribeFirmwaresExecutor().Client(this).Execute<DescribeFirmwaresResponse, DescribeFirmwaresResult, DescribeFirmwaresRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看固件列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeFirmwaresResponse> DescribeFirmwares(DescribeFirmwaresRequest request) {
-            return await new DescribeFirmwaresExecutor().Client(this).Execute<DescribeFirmwaresResponse, DescribeFirmwaresResult, DescribeFirmwaresRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  注册单个设备并返回秘钥信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1162,789 +191,6 @@ namespace JDCloudSDK.Iotcore.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddDeviceResponse> AddDevice(AddDeviceRequest request) {
             return await new AddDeviceExecutor().Client(this).Execute<AddDeviceResponse, AddDeviceResult, AddDeviceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductServiceResponse DescribeProductService(DescribeProductServiceRequest request) {
-            return  new DescribeProductServiceExecutor().Client(this).Execute<DescribeProductServiceResponse, DescribeProductServiceResult, DescribeProductServiceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductServiceResponse> DescribeProductService(DescribeProductServiceRequest request) {
-            return await new DescribeProductServiceExecutor().Client(this).Execute<DescribeProductServiceResponse, DescribeProductServiceResult, DescribeProductServiceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设备基本数据统计，包括设备数，激活数，在线数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDeviceStatisticsResponse QueryDeviceStatistics(QueryDeviceStatisticsRequest request) {
-            return  new QueryDeviceStatisticsExecutor().Client(this).Execute<QueryDeviceStatisticsResponse, QueryDeviceStatisticsResult, QueryDeviceStatisticsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备基本数据统计，包括设备数，激活数，在线数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDeviceStatisticsResponse> QueryDeviceStatistics(QueryDeviceStatisticsRequest request) {
-            return await new QueryDeviceStatisticsExecutor().Client(this).Execute<QueryDeviceStatisticsResponse, QueryDeviceStatisticsResult, QueryDeviceStatisticsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  固件是否存在
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExistFirmwareResponse ExistFirmware(ExistFirmwareRequest request) {
-            return  new ExistFirmwareExecutor().Client(this).Execute<ExistFirmwareResponse, ExistFirmwareResult, ExistFirmwareRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  固件是否存在
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExistFirmwareResponse> ExistFirmware(ExistFirmwareRequest request) {
-            return await new ExistFirmwareExecutor().Client(this).Execute<ExistFirmwareResponse, ExistFirmwareResult, ExistFirmwareRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  批量设备服务调用(批量调用单个设备的多个服务)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public InvokeThingServicesByThingResponse InvokeThingServicesByThing(InvokeThingServicesByThingRequest request) {
-            return  new InvokeThingServicesByThingExecutor().Client(this).Execute<InvokeThingServicesByThingResponse, InvokeThingServicesByThingResult, InvokeThingServicesByThingRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量设备服务调用(批量调用单个设备的多个服务)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<InvokeThingServicesByThingResponse> InvokeThingServicesByThing(InvokeThingServicesByThingRequest request) {
-            return await new InvokeThingServicesByThingExecutor().Client(this).Execute<InvokeThingServicesByThingResponse, InvokeThingServicesByThingResult, InvokeThingServicesByThingRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询方法调用列表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public FunctionListResponse FunctionList(FunctionListRequest request) {
-            return  new FunctionListExecutor().Client(this).Execute<FunctionListResponse, FunctionListResult, FunctionListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询方法调用列表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<FunctionListResponse> FunctionList(FunctionListRequest request) {
-            return await new FunctionListExecutor().Client(this).Execute<FunctionListResponse, FunctionListResult, FunctionListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看服务调用记录列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListThingServicesResponse ListThingServices(ListThingServicesRequest request) {
-            return  new ListThingServicesExecutor().Client(this).Execute<ListThingServicesResponse, ListThingServicesResult, ListThingServicesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看服务调用记录列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListThingServicesResponse> ListThingServices(ListThingServicesRequest request) {
-            return await new ListThingServicesExecutor().Client(this).Execute<ListThingServicesResponse, ListThingServicesResult, ListThingServicesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  基于产品名称查看产品包括隐式产品（管理员）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductByProductNameAsAdminResponse DescribeProductByProductNameAsAdmin(DescribeProductByProductNameAsAdminRequest request) {
-            return  new DescribeProductByProductNameAsAdminExecutor().Client(this).Execute<DescribeProductByProductNameAsAdminResponse, DescribeProductByProductNameAsAdminResult, DescribeProductByProductNameAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  基于产品名称查看产品包括隐式产品（管理员）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductByProductNameAsAdminResponse> DescribeProductByProductNameAsAdmin(DescribeProductByProductNameAsAdminRequest request) {
-            return await new DescribeProductByProductNameAsAdminExecutor().Client(this).Execute<DescribeProductByProductNameAsAdminResponse, DescribeProductByProductNameAsAdminResult, DescribeProductByProductNameAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  IoT Hub共享模式实例软删除恢复接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RecoverSourceAsAdminResponse RecoverSourceAsAdmin(RecoverSourceAsAdminRequest request) {
-            return  new RecoverSourceAsAdminExecutor().Client(this).Execute<RecoverSourceAsAdminResponse, RecoverSourceAsAdminResult, RecoverSourceAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  IoT Hub共享模式实例软删除恢复接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RecoverSourceAsAdminResponse> RecoverSourceAsAdmin(RecoverSourceAsAdminRequest request) {
-            return await new RecoverSourceAsAdminExecutor().Client(this).Execute<RecoverSourceAsAdminResponse, RecoverSourceAsAdminResult, RecoverSourceAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  IoT Hub实例查询接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryHubsAsAdminResponse QueryHubsAsAdmin(QueryHubsAsAdminRequest request) {
-            return  new QueryHubsAsAdminExecutor().Client(this).Execute<QueryHubsAsAdminResponse, QueryHubsAsAdminResult, QueryHubsAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  IoT Hub实例查询接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryHubsAsAdminResponse> QueryHubsAsAdmin(QueryHubsAsAdminRequest request) {
-            return await new QueryHubsAsAdminExecutor().Client(this).Execute<QueryHubsAsAdminResponse, QueryHubsAsAdminResult, QueryHubsAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品自定义Topic列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductTopicsResponse DescribeProductTopics(DescribeProductTopicsRequest request) {
-            return  new DescribeProductTopicsExecutor().Client(this).Execute<DescribeProductTopicsResponse, DescribeProductTopicsResult, DescribeProductTopicsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品自定义Topic列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductTopicsResponse> DescribeProductTopics(DescribeProductTopicsRequest request) {
-            return await new DescribeProductTopicsExecutor().Client(this).Execute<DescribeProductTopicsResponse, DescribeProductTopicsResult, DescribeProductTopicsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改产品分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateProductCategoryResponse UpdateProductCategory(UpdateProductCategoryRequest request) {
-            return  new UpdateProductCategoryExecutor().Client(this).Execute<UpdateProductCategoryResponse, UpdateProductCategoryResult, UpdateProductCategoryRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改产品分类
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateProductCategoryResponse> UpdateProductCategory(UpdateProductCategoryRequest request) {
-            return await new UpdateProductCategoryExecutor().Client(this).Execute<UpdateProductCategoryResponse, UpdateProductCategoryResult, UpdateProductCategoryRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  发送Edge日志上报通知
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SendEdgeLogNotificationResponse SendEdgeLogNotification(SendEdgeLogNotificationRequest request) {
-            return  new SendEdgeLogNotificationExecutor().Client(this).Execute<SendEdgeLogNotificationResponse, SendEdgeLogNotificationResult, SendEdgeLogNotificationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  发送Edge日志上报通知
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SendEdgeLogNotificationResponse> SendEdgeLogNotification(SendEdgeLogNotificationRequest request) {
-            return await new SendEdgeLogNotificationExecutor().Client(this).Execute<SendEdgeLogNotificationResponse, SendEdgeLogNotificationResult, SendEdgeLogNotificationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取单个动作信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetActionInfoResponse GetActionInfo(GetActionInfoRequest request) {
-            return  new GetActionInfoExecutor().Client(this).Execute<GetActionInfoResponse, GetActionInfoResult, GetActionInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取单个动作信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetActionInfoResponse> GetActionInfo(GetActionInfoRequest request) {
-            return await new GetActionInfoExecutor().Client(this).Execute<GetActionInfoResponse, GetActionInfoResult, GetActionInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建预置物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateThingModelTemplateResponse CreateThingModelTemplate(CreateThingModelTemplateRequest request) {
-            return  new CreateThingModelTemplateExecutor().Client(this).Execute<CreateThingModelTemplateResponse, CreateThingModelTemplateResult, CreateThingModelTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建预置物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateThingModelTemplateResponse> CreateThingModelTemplate(CreateThingModelTemplateRequest request) {
-            return await new CreateThingModelTemplateExecutor().Client(this).Execute<CreateThingModelTemplateResponse, CreateThingModelTemplateResult, CreateThingModelTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDeviceDetailResponse QueryDeviceDetail(QueryDeviceDetailRequest request) {
-            return  new QueryDeviceDetailExecutor().Client(this).Execute<QueryDeviceDetailResponse, QueryDeviceDetailResult, QueryDeviceDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDeviceDetailResponse> QueryDeviceDetail(QueryDeviceDetailRequest request) {
-            return await new QueryDeviceDetailExecutor().Client(this).Execute<QueryDeviceDetailResponse, QueryDeviceDetailResult, QueryDeviceDetailRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  下载设备证书接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DownloadCertificateResponse DownloadCertificate(DownloadCertificateRequest request) {
-            return  new DownloadCertificateExecutor().Client(this).Execute<DownloadCertificateResponse, DownloadCertificateResult, DownloadCertificateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  下载设备证书接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DownloadCertificateResponse> DownloadCertificate(DownloadCertificateRequest request) {
-            return await new DownloadCertificateExecutor().Client(this).Execute<DownloadCertificateResponse, DownloadCertificateResult, DownloadCertificateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateAdminProductResponse CreateAdminProduct(CreateAdminProductRequest request) {
-            return  new CreateAdminProductExecutor().Client(this).Execute<CreateAdminProductResponse, CreateAdminProductResult, CreateAdminProductRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateAdminProductResponse> CreateAdminProduct(CreateAdminProductRequest request) {
-            return await new CreateAdminProductExecutor().Client(this).Execute<CreateAdminProductResponse, CreateAdminProductResult, CreateAdminProductRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  验证子用户私有模式下用户是否开通
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckCustomerPrivateResponse CheckCustomerPrivate(CheckCustomerPrivateRequest request) {
-            return  new CheckCustomerPrivateExecutor().Client(this).Execute<CheckCustomerPrivateResponse, CheckCustomerPrivateResult, CheckCustomerPrivateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  验证子用户私有模式下用户是否开通
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckCustomerPrivateResponse> CheckCustomerPrivate(CheckCustomerPrivateRequest request) {
-            return await new CheckCustomerPrivateExecutor().Client(this).Execute<CheckCustomerPrivateResponse, CheckCustomerPrivateResult, CheckCustomerPrivateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  批量注册设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddBatchDevicesResponse AddBatchDevices(AddBatchDevicesRequest request) {
-            return  new AddBatchDevicesExecutor().Client(this).Execute<AddBatchDevicesResponse, AddBatchDevicesResult, AddBatchDevicesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量注册设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddBatchDevicesResponse> AddBatchDevices(AddBatchDevicesRequest request) {
-            return await new AddBatchDevicesExecutor().Client(this).Execute<AddBatchDevicesResponse, AddBatchDevicesResult, AddBatchDevicesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看自定义物模型模板列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCustomizedThingModelTemplatesResponse DescribeCustomizedThingModelTemplates(DescribeCustomizedThingModelTemplatesRequest request) {
-            return  new DescribeCustomizedThingModelTemplatesExecutor().Client(this).Execute<DescribeCustomizedThingModelTemplatesResponse, DescribeCustomizedThingModelTemplatesResult, DescribeCustomizedThingModelTemplatesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看自定义物模型模板列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomizedThingModelTemplatesResponse> DescribeCustomizedThingModelTemplates(DescribeCustomizedThingModelTemplatesRequest request) {
-            return await new DescribeCustomizedThingModelTemplatesExecutor().Client(this).Execute<DescribeCustomizedThingModelTemplatesResponse, DescribeCustomizedThingModelTemplatesResult, DescribeCustomizedThingModelTemplatesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RemoveDeviceResponse RemoveDevice(RemoveDeviceRequest request) {
-            return  new RemoveDeviceExecutor().Client(this).Execute<RemoveDeviceResponse, RemoveDeviceResult, RemoveDeviceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RemoveDeviceResponse> RemoveDevice(RemoveDeviceRequest request) {
-            return await new RemoveDeviceExecutor().Client(this).Execute<RemoveDeviceResponse, RemoveDeviceResult, RemoveDeviceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品分类树
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListProductCategoryTreeResponse ListProductCategoryTree(ListProductCategoryTreeRequest request) {
-            return  new ListProductCategoryTreeExecutor().Client(this).Execute<ListProductCategoryTreeResponse, ListProductCategoryTreeResult, ListProductCategoryTreeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品分类树
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListProductCategoryTreeResponse> ListProductCategoryTree(ListProductCategoryTreeRequest request) {
-            return await new ListProductCategoryTreeExecutor().Client(this).Execute<ListProductCategoryTreeResponse, ListProductCategoryTreeResult, ListProductCategoryTreeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateProductTopicResponse CreateProductTopic(CreateProductTopicRequest request) {
-            return  new CreateProductTopicExecutor().Client(this).Execute<CreateProductTopicResponse, CreateProductTopicResult, CreateProductTopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateProductTopicResponse> CreateProductTopic(CreateProductTopicRequest request) {
-            return await new CreateProductTopicExecutor().Client(this).Execute<CreateProductTopicResponse, CreateProductTopicResult, CreateProductTopicRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置进度状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetProgressStateResponse SetProgressState(SetProgressStateRequest request) {
-            return  new SetProgressStateExecutor().Client(this).Execute<SetProgressStateResponse, SetProgressStateResult, SetProgressStateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置进度状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetProgressStateResponse> SetProgressState(SetProgressStateRequest request) {
-            return await new SetProgressStateExecutor().Client(this).Execute<SetProgressStateResponse, SetProgressStateResult, SetProgressStateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看固件详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeFirmwareResponse DescribeFirmware(DescribeFirmwareRequest request) {
-            return  new DescribeFirmwareExecutor().Client(this).Execute<DescribeFirmwareResponse, DescribeFirmwareResult, DescribeFirmwareRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看固件详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeFirmwareResponse> DescribeFirmware(DescribeFirmwareRequest request) {
-            return await new DescribeFirmwareExecutor().Client(this).Execute<DescribeFirmwareResponse, DescribeFirmwareResult, DescribeFirmwareRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  管理员删除实例，头信息里需要增加x-jdcloud-erp：erp账号
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteIotcoreInstanceAsAdminResponse DeleteIotcoreInstanceAsAdmin(DeleteIotcoreInstanceAsAdminRequest request) {
-            return  new DeleteIotcoreInstanceAsAdminExecutor().Client(this).Execute<DeleteIotcoreInstanceAsAdminResponse, DeleteIotcoreInstanceAsAdminResult, DeleteIotcoreInstanceAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  管理员删除实例，头信息里需要增加x-jdcloud-erp：erp账号
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteIotcoreInstanceAsAdminResponse> DeleteIotcoreInstanceAsAdmin(DeleteIotcoreInstanceAsAdminRequest request) {
-            return await new DeleteIotcoreInstanceAsAdminExecutor().Client(this).Execute<DeleteIotcoreInstanceAsAdminResponse, DeleteIotcoreInstanceAsAdminResult, DeleteIotcoreInstanceAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductTopicResponse DescribeProductTopic(DescribeProductTopicRequest request) {
-            return  new DescribeProductTopicExecutor().Client(this).Execute<DescribeProductTopicResponse, DescribeProductTopicResult, DescribeProductTopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductTopicResponse> DescribeProductTopic(DescribeProductTopicRequest request) {
-            return await new DescribeProductTopicExecutor().Client(this).Execute<DescribeProductTopicResponse, DescribeProductTopicResult, DescribeProductTopicRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取规则基础信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetBaseRuleResponse GetBaseRule(GetBaseRuleRequest request) {
-            return  new GetBaseRuleExecutor().Client(this).Execute<GetBaseRuleResponse, GetBaseRuleResult, GetBaseRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取规则基础信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetBaseRuleResponse> GetBaseRule(GetBaseRuleRequest request) {
-            return await new GetBaseRuleExecutor().Client(this).Execute<GetBaseRuleResponse, GetBaseRuleResult, GetBaseRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看Edge日志上报通知详情接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeEdgeLogNotificationResponse DescribeEdgeLogNotification(DescribeEdgeLogNotificationRequest request) {
-            return  new DescribeEdgeLogNotificationExecutor().Client(this).Execute<DescribeEdgeLogNotificationResponse, DescribeEdgeLogNotificationResult, DescribeEdgeLogNotificationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看Edge日志上报通知详情接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeEdgeLogNotificationResponse> DescribeEdgeLogNotification(DescribeEdgeLogNotificationRequest request) {
-            return await new DescribeEdgeLogNotificationExecutor().Client(this).Execute<DescribeEdgeLogNotificationResponse, DescribeEdgeLogNotificationResult, DescribeEdgeLogNotificationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  注册ProtocolAdaptor并返回注册生成信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddProtocolAdaptorResponse AddProtocolAdaptor(AddProtocolAdaptorRequest request) {
-            return  new AddProtocolAdaptorExecutor().Client(this).Execute<AddProtocolAdaptorResponse, AddProtocolAdaptorResult, AddProtocolAdaptorRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  注册ProtocolAdaptor并返回注册生成信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddProtocolAdaptorResponse> AddProtocolAdaptor(AddProtocolAdaptorRequest request) {
-            return await new AddProtocolAdaptorExecutor().Client(this).Execute<AddProtocolAdaptorResponse, AddProtocolAdaptorResult, AddProtocolAdaptorRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看所有产品服务列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAllProductServicesResponse DescribeAllProductServices(DescribeAllProductServicesRequest request) {
-            return  new DescribeAllProductServicesExecutor().Client(this).Execute<DescribeAllProductServicesResponse, DescribeAllProductServicesResult, DescribeAllProductServicesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看所有产品服务列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAllProductServicesResponse> DescribeAllProductServices(DescribeAllProductServicesRequest request) {
-            return await new DescribeAllProductServicesExecutor().Client(this).Execute<DescribeAllProductServicesResponse, DescribeAllProductServicesResult, DescribeAllProductServicesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询授权状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAuthStateResponse DescribeAuthState(DescribeAuthStateRequest request) {
-            return  new DescribeAuthStateExecutor().Client(this).Execute<DescribeAuthStateResponse, DescribeAuthStateResult, DescribeAuthStateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询授权状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAuthStateResponse> DescribeAuthState(DescribeAuthStateRequest request) {
-            return await new DescribeAuthStateExecutor().Client(this).Execute<DescribeAuthStateResponse, DescribeAuthStateResult, DescribeAuthStateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  分页查询设备信息,支持一个或多个条件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDevicePageResponse QueryDevicePage(QueryDevicePageRequest request) {
-            return  new QueryDevicePageExecutor().Client(this).Execute<QueryDevicePageResponse, QueryDevicePageResult, QueryDevicePageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  分页查询设备信息,支持一个或多个条件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDevicePageResponse> QueryDevicePage(QueryDevicePageRequest request) {
-            return await new QueryDevicePageExecutor().Client(this).Execute<QueryDevicePageResponse, QueryDevicePageResult, QueryDevicePageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询某个产品下，且不属于某个设备的子设备的所有设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDevicesExcludeChildrenOfParentResponse DescribeDevicesExcludeChildrenOfParent(DescribeDevicesExcludeChildrenOfParentRequest request) {
-            return  new DescribeDevicesExcludeChildrenOfParentExecutor().Client(this).Execute<DescribeDevicesExcludeChildrenOfParentResponse, DescribeDevicesExcludeChildrenOfParentResult, DescribeDevicesExcludeChildrenOfParentRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询某个产品下，且不属于某个设备的子设备的所有设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDevicesExcludeChildrenOfParentResponse> DescribeDevicesExcludeChildrenOfParent(DescribeDevicesExcludeChildrenOfParentRequest request) {
-            return await new DescribeDevicesExcludeChildrenOfParentExecutor().Client(this).Execute<DescribeDevicesExcludeChildrenOfParentResponse, DescribeDevicesExcludeChildrenOfParentResult, DescribeDevicesExcludeChildrenOfParentRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询iothub资源名称
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SelectDetailListResponse SelectDetailList(SelectDetailListRequest request) {
-            return  new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询iothub资源名称
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SelectDetailListResponse> SelectDetailList(SelectDetailListRequest request) {
-            return await new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看Iotcore的实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeIotcoreInstancesResponse DescribeIotcoreInstances(DescribeIotcoreInstancesRequest request) {
-            return  new DescribeIotcoreInstancesExecutor().Client(this).Execute<DescribeIotcoreInstancesResponse, DescribeIotcoreInstancesResult, DescribeIotcoreInstancesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看Iotcore的实例列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeIotcoreInstancesResponse> DescribeIotcoreInstances(DescribeIotcoreInstancesRequest request) {
-            return await new DescribeIotcoreInstancesExecutor().Client(this).Execute<DescribeIotcoreInstancesResponse, DescribeIotcoreInstancesResult, DescribeIotcoreInstancesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设备基本数据统计，包括设备数，激活数，在线数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryAdminStatisticsResponse QueryAdminStatistics(QueryAdminStatisticsRequest request) {
-            return  new QueryAdminStatisticsExecutor().Client(this).Execute<QueryAdminStatisticsResponse, QueryAdminStatisticsResult, QueryAdminStatisticsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备基本数据统计，包括设备数，激活数，在线数
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryAdminStatisticsResponse> QueryAdminStatistics(QueryAdminStatisticsRequest request) {
-            return await new QueryAdminStatisticsExecutor().Client(this).Execute<QueryAdminStatisticsResponse, QueryAdminStatisticsResult, QueryAdminStatisticsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询设备列表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDeviceListResponse QueryDeviceList(QueryDeviceListRequest request) {
-            return  new QueryDeviceListExecutor().Client(this).Execute<QueryDeviceListResponse, QueryDeviceListResult, QueryDeviceListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询设备列表信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDeviceListResponse> QueryDeviceList(QueryDeviceListRequest request) {
-            return await new QueryDeviceListExecutor().Client(this).Execute<QueryDeviceListResponse, QueryDeviceListResult, QueryDeviceListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取电梯运行状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ElevatorOperatingStatusResponse ElevatorOperatingStatus(ElevatorOperatingStatusRequest request) {
-            return  new ElevatorOperatingStatusExecutor().Client(this).Execute<ElevatorOperatingStatusResponse, ElevatorOperatingStatusResult, ElevatorOperatingStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取电梯运行状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ElevatorOperatingStatusResponse> ElevatorOperatingStatus(ElevatorOperatingStatusRequest request) {
-            return await new ElevatorOperatingStatusExecutor().Client(this).Execute<ElevatorOperatingStatusResponse, ElevatorOperatingStatusResult, ElevatorOperatingStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设备在线统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribDataStatsResponse DescribDataStats(DescribDataStatsRequest request) {
-            return  new DescribDataStatsExecutor().Client(this).Execute<DescribDataStatsResponse, DescribDataStatsResult, DescribDataStatsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备在线统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribDataStatsResponse> DescribDataStats(DescribDataStatsRequest request) {
-            return await new DescribDataStatsExecutor().Client(this).Execute<DescribDataStatsResponse, DescribDataStatsResult, DescribDataStatsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看应用数据存储目录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssAppBucketResponse DescribeOssAppBucket(DescribeOssAppBucketRequest request) {
-            return  new DescribeOssAppBucketExecutor().Client(this).Execute<DescribeOssAppBucketResponse, DescribeOssAppBucketResult, DescribeOssAppBucketRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看应用数据存储目录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssAppBucketResponse> DescribeOssAppBucket(DescribeOssAppBucketRequest request) {
-            return await new DescribeOssAppBucketExecutor().Client(this).Execute<DescribeOssAppBucketResponse, DescribeOssAppBucketResult, DescribeOssAppBucketRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1968,116 +214,97 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新增预购订单
+        ///  查询方法调用列表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AddPreOrderResponse AddPreOrder(AddPreOrderRequest request) {
-            return  new AddPreOrderExecutor().Client(this).Execute<AddPreOrderResponse, AddPreOrderResult, AddPreOrderRequest>(request);
+        public FunctionListResponse FunctionList(FunctionListRequest request) {
+            return  new FunctionListExecutor().Client(this).Execute<FunctionListResponse, FunctionListResult, FunctionListRequest>(request);
         }
 #else
         /// <summary>
-        ///  新增预购订单
+        ///  查询方法调用列表信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AddPreOrderResponse> AddPreOrder(AddPreOrderRequest request) {
-            return await new AddPreOrderExecutor().Client(this).Execute<AddPreOrderResponse, AddPreOrderResult, AddPreOrderRequest>(request).ConfigureAwait(false);
+        public async Task<FunctionListResponse> FunctionList(FunctionListRequest request) {
+            return await new FunctionListExecutor().Client(this).Execute<FunctionListResponse, FunctionListResult, FunctionListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询进度状态
+        ///  设备事件查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetProgressStateResponse GetProgressState(GetProgressStateRequest request) {
-            return  new GetProgressStateExecutor().Client(this).Execute<GetProgressStateResponse, GetProgressStateResult, GetProgressStateRequest>(request);
+        public EventListResponse EventList(EventListRequest request) {
+            return  new EventListExecutor().Client(this).Execute<EventListResponse, EventListResult, EventListRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询进度状态
+        ///  设备事件查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetProgressStateResponse> GetProgressState(GetProgressStateRequest request) {
-            return await new GetProgressStateExecutor().Client(this).Execute<GetProgressStateResponse, GetProgressStateResult, GetProgressStateRequest>(request).ConfigureAwait(false);
+        public async Task<EventListResponse> EventList(EventListRequest request) {
+            return await new EventListExecutor().Client(this).Execute<EventListResponse, EventListResult, EventListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  更新或者添加新的单条action
+        ///  查询属性接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SaveOrUpdateActionInfoResponse SaveOrUpdateActionInfo(SaveOrUpdateActionInfoRequest request) {
-            return  new SaveOrUpdateActionInfoExecutor().Client(this).Execute<SaveOrUpdateActionInfoResponse, SaveOrUpdateActionInfoResult, SaveOrUpdateActionInfoRequest>(request);
+        public PropertyAcquireResponse PropertyAcquire(PropertyAcquireRequest request) {
+            return  new PropertyAcquireExecutor().Client(this).Execute<PropertyAcquireResponse, PropertyAcquireResult, PropertyAcquireRequest>(request);
         }
 #else
         /// <summary>
-        ///  更新或者添加新的单条action
+        ///  查询属性接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SaveOrUpdateActionInfoResponse> SaveOrUpdateActionInfo(SaveOrUpdateActionInfoRequest request) {
-            return await new SaveOrUpdateActionInfoExecutor().Client(this).Execute<SaveOrUpdateActionInfoResponse, SaveOrUpdateActionInfoResult, SaveOrUpdateActionInfoRequest>(request).ConfigureAwait(false);
+        public async Task<PropertyAcquireResponse> PropertyAcquire(PropertyAcquireRequest request) {
+            return await new PropertyAcquireExecutor().Client(this).Execute<PropertyAcquireResponse, PropertyAcquireResult, PropertyAcquireRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  存储或更新基础规则信息
+        ///  查看产品自定义Topic列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SaveOrUpdateBaseRuleResponse SaveOrUpdateBaseRule(SaveOrUpdateBaseRuleRequest request) {
-            return  new SaveOrUpdateBaseRuleExecutor().Client(this).Execute<SaveOrUpdateBaseRuleResponse, SaveOrUpdateBaseRuleResult, SaveOrUpdateBaseRuleRequest>(request);
+        public DescribeProductTopicsResponse DescribeProductTopics(DescribeProductTopicsRequest request) {
+            return  new DescribeProductTopicsExecutor().Client(this).Execute<DescribeProductTopicsResponse, DescribeProductTopicsResult, DescribeProductTopicsRequest>(request);
         }
 #else
         /// <summary>
-        ///  存储或更新基础规则信息
+        ///  查看产品自定义Topic列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SaveOrUpdateBaseRuleResponse> SaveOrUpdateBaseRule(SaveOrUpdateBaseRuleRequest request) {
-            return await new SaveOrUpdateBaseRuleExecutor().Client(this).Execute<SaveOrUpdateBaseRuleResponse, SaveOrUpdateBaseRuleResult, SaveOrUpdateBaseRuleRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeProductTopicsResponse> DescribeProductTopics(DescribeProductTopicsRequest request) {
+            return await new DescribeProductTopicsExecutor().Client(this).Execute<DescribeProductTopicsResponse, DescribeProductTopicsResult, DescribeProductTopicsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  读取楼层信息
+        ///  写入采集器数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public FloorDataResponse FloorData(FloorDataRequest request) {
-            return  new FloorDataExecutor().Client(this).Execute<FloorDataResponse, FloorDataResult, FloorDataRequest>(request);
+        public CollectorWriteMessageResponse CollectorWriteMessage(CollectorWriteMessageRequest request) {
+            return  new CollectorWriteMessageExecutor().Client(this).Execute<CollectorWriteMessageResponse, CollectorWriteMessageResult, CollectorWriteMessageRequest>(request);
         }
 #else
         /// <summary>
-        ///  读取楼层信息
+        ///  写入采集器数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<FloorDataResponse> FloorData(FloorDataRequest request) {
-            return await new FloorDataExecutor().Client(this).Execute<FloorDataResponse, FloorDataResult, FloorDataRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除当前action的动作
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteActionInfoResponse DeleteActionInfo(DeleteActionInfoRequest request) {
-            return  new DeleteActionInfoExecutor().Client(this).Execute<DeleteActionInfoResponse, DeleteActionInfoResult, DeleteActionInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除当前action的动作
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteActionInfoResponse> DeleteActionInfo(DeleteActionInfoRequest request) {
-            return await new DeleteActionInfoExecutor().Client(this).Execute<DeleteActionInfoResponse, DeleteActionInfoResult, DeleteActionInfoRequest>(request).ConfigureAwait(false);
+        public async Task<CollectorWriteMessageResponse> CollectorWriteMessage(CollectorWriteMessageRequest request) {
+            return await new CollectorWriteMessageExecutor().Client(this).Execute<CollectorWriteMessageResponse, CollectorWriteMessageResult, CollectorWriteMessageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2139,40 +366,78 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看固件升级批次列表
+        ///  查看产品列表接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeFirmwareBatchesResponse DescribeFirmwareBatches(DescribeFirmwareBatchesRequest request) {
-            return  new DescribeFirmwareBatchesExecutor().Client(this).Execute<DescribeFirmwareBatchesResponse, DescribeFirmwareBatchesResult, DescribeFirmwareBatchesRequest>(request);
+        public ListProductsResponse ListProducts(ListProductsRequest request) {
+            return  new ListProductsExecutor().Client(this).Execute<ListProductsResponse, ListProductsResult, ListProductsRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看固件升级批次列表
+        ///  查看产品列表接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeFirmwareBatchesResponse> DescribeFirmwareBatches(DescribeFirmwareBatchesRequest request) {
-            return await new DescribeFirmwareBatchesExecutor().Client(this).Execute<DescribeFirmwareBatchesResponse, DescribeFirmwareBatchesResult, DescribeFirmwareBatchesRequest>(request).ConfigureAwait(false);
+        public async Task<ListProductsResponse> ListProducts(ListProductsRequest request) {
+            return await new ListProductsExecutor().Client(this).Execute<ListProductsResponse, ListProductsResult, ListProductsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除当前的规则信息
+        ///  新建产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteRuleInfoResponse DeleteRuleInfo(DeleteRuleInfoRequest request) {
-            return  new DeleteRuleInfoExecutor().Client(this).Execute<DeleteRuleInfoResponse, DeleteRuleInfoResult, DeleteRuleInfoRequest>(request);
+        public CreateProductResponse CreateProduct(CreateProductRequest request) {
+            return  new CreateProductExecutor().Client(this).Execute<CreateProductResponse, CreateProductResult, CreateProductRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除当前的规则信息
+        ///  新建产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteRuleInfoResponse> DeleteRuleInfo(DeleteRuleInfoRequest request) {
-            return await new DeleteRuleInfoExecutor().Client(this).Execute<DeleteRuleInfoResponse, DeleteRuleInfoResult, DeleteRuleInfoRequest>(request).ConfigureAwait(false);
+        public async Task<CreateProductResponse> CreateProduct(CreateProductRequest request) {
+            return await new CreateProductExecutor().Client(this).Execute<CreateProductResponse, CreateProductResult, CreateProductRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除设备
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveLoongrayDeviceResponse RemoveLoongrayDevice(RemoveLoongrayDeviceRequest request) {
+            return  new RemoveLoongrayDeviceExecutor().Client(this).Execute<RemoveLoongrayDeviceResponse, RemoveLoongrayDeviceResult, RemoveLoongrayDeviceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除设备
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveLoongrayDeviceResponse> RemoveLoongrayDevice(RemoveLoongrayDeviceRequest request) {
+            return await new RemoveLoongrayDeviceExecutor().Client(this).Execute<RemoveLoongrayDeviceResponse, RemoveLoongrayDeviceResult, RemoveLoongrayDeviceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设备删除接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest request) {
+            return  new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设备删除接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest request) {
+            return await new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2196,40 +461,135 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  存储或更新全部规则信息
+        ///  查询设备详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SaveOrUpdateRuleResponse SaveOrUpdateRule(SaveOrUpdateRuleRequest request) {
-            return  new SaveOrUpdateRuleExecutor().Client(this).Execute<SaveOrUpdateRuleResponse, SaveOrUpdateRuleResult, SaveOrUpdateRuleRequest>(request);
+        public QueryDeviceDetailResponse QueryDeviceDetail(QueryDeviceDetailRequest request) {
+            return  new QueryDeviceDetailExecutor().Client(this).Execute<QueryDeviceDetailResponse, QueryDeviceDetailResult, QueryDeviceDetailRequest>(request);
         }
 #else
         /// <summary>
-        ///  存储或更新全部规则信息
+        ///  查询设备详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SaveOrUpdateRuleResponse> SaveOrUpdateRule(SaveOrUpdateRuleRequest request) {
-            return await new SaveOrUpdateRuleExecutor().Client(this).Execute<SaveOrUpdateRuleResponse, SaveOrUpdateRuleResult, SaveOrUpdateRuleRequest>(request).ConfigureAwait(false);
+        public async Task<QueryDeviceDetailResponse> QueryDeviceDetail(QueryDeviceDetailRequest request) {
+            return await new QueryDeviceDetailExecutor().Client(this).Execute<QueryDeviceDetailResponse, QueryDeviceDetailResult, QueryDeviceDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改产品事件
+        ///  下载设备证书接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateProductEventResponse UpdateProductEvent(UpdateProductEventRequest request) {
-            return  new UpdateProductEventExecutor().Client(this).Execute<UpdateProductEventResponse, UpdateProductEventResult, UpdateProductEventRequest>(request);
+        public DownloadCertificateResponse DownloadCertificate(DownloadCertificateRequest request) {
+            return  new DownloadCertificateExecutor().Client(this).Execute<DownloadCertificateResponse, DownloadCertificateResult, DownloadCertificateRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改产品事件
+        ///  下载设备证书接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateProductEventResponse> UpdateProductEvent(UpdateProductEventRequest request) {
-            return await new UpdateProductEventExecutor().Client(this).Execute<UpdateProductEventResponse, UpdateProductEventResult, UpdateProductEventRequest>(request).ConfigureAwait(false);
+        public async Task<DownloadCertificateResponse> DownloadCertificate(DownloadCertificateRequest request) {
+            return await new DownloadCertificateExecutor().Client(this).Execute<DownloadCertificateResponse, DownloadCertificateResult, DownloadCertificateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  新建产品
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAdminProductResponse CreateAdminProduct(CreateAdminProductRequest request) {
+            return  new CreateAdminProductExecutor().Client(this).Execute<CreateAdminProductResponse, CreateAdminProductResult, CreateAdminProductRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  新建产品
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAdminProductResponse> CreateAdminProduct(CreateAdminProductRequest request) {
+            return await new CreateAdminProductExecutor().Client(this).Execute<CreateAdminProductResponse, CreateAdminProductResult, CreateAdminProductRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询单个设备详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeviceQueryResponse DeviceQuery(DeviceQueryRequest request) {
+            return  new DeviceQueryExecutor().Client(this).Execute<DeviceQueryResponse, DeviceQueryResult, DeviceQueryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询单个设备详细信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeviceQueryResponse> DeviceQuery(DeviceQueryRequest request) {
+            return await new DeviceQueryExecutor().Client(this).Execute<DeviceQueryResponse, DeviceQueryResult, DeviceQueryRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  属性获取接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetPropertySnapshotResponse GetPropertySnapshot(GetPropertySnapshotRequest request) {
+            return  new GetPropertySnapshotExecutor().Client(this).Execute<GetPropertySnapshotResponse, GetPropertySnapshotResult, GetPropertySnapshotRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  属性获取接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetPropertySnapshotResponse> GetPropertySnapshot(GetPropertySnapshotRequest request) {
+            return await new GetPropertySnapshotExecutor().Client(this).Execute<GetPropertySnapshotResponse, GetPropertySnapshotResult, GetPropertySnapshotRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设备注册接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeviceRegisterResponse DeviceRegister(DeviceRegisterRequest request) {
+            return  new DeviceRegisterExecutor().Client(this).Execute<DeviceRegisterResponse, DeviceRegisterResult, DeviceRegisterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设备注册接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeviceRegisterResponse> DeviceRegister(DeviceRegisterRequest request) {
+            return await new DeviceRegisterExecutor().Client(this).Execute<DeviceRegisterResponse, DeviceRegisterResult, DeviceRegisterRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除设备
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveDeviceResponse RemoveDevice(RemoveDeviceRequest request) {
+            return  new RemoveDeviceExecutor().Client(this).Execute<RemoveDeviceResponse, RemoveDeviceResult, RemoveDeviceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除设备
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveDeviceResponse> RemoveDevice(RemoveDeviceRequest request) {
+            return await new RemoveDeviceExecutor().Client(this).Execute<RemoveDeviceResponse, RemoveDeviceResult, RemoveDeviceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2253,59 +613,40 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  读取电梯属性
+        ///  更新设备影子的期望值
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetElevatorPropertyResponse GetElevatorProperty(GetElevatorPropertyRequest request) {
-            return  new GetElevatorPropertyExecutor().Client(this).Execute<GetElevatorPropertyResponse, GetElevatorPropertyResult, GetElevatorPropertyRequest>(request);
+        public UpdateThingShadowResponse UpdateThingShadow(UpdateThingShadowRequest request) {
+            return  new UpdateThingShadowExecutor().Client(this).Execute<UpdateThingShadowResponse, UpdateThingShadowResult, UpdateThingShadowRequest>(request);
         }
 #else
         /// <summary>
-        ///  读取电梯属性
+        ///  更新设备影子的期望值
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetElevatorPropertyResponse> GetElevatorProperty(GetElevatorPropertyRequest request) {
-            return await new GetElevatorPropertyExecutor().Client(this).Execute<GetElevatorPropertyResponse, GetElevatorPropertyResult, GetElevatorPropertyRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateThingShadowResponse> UpdateThingShadow(UpdateThingShadowRequest request) {
+            return await new UpdateThingShadowExecutor().Client(this).Execute<UpdateThingShadowResponse, UpdateThingShadowResult, UpdateThingShadowRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看自定义物模型模板产品列表
+        ///  新建产品自定义Topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeCustomizedTemplateProductsResponse DescribeCustomizedTemplateProducts(DescribeCustomizedTemplateProductsRequest request) {
-            return  new DescribeCustomizedTemplateProductsExecutor().Client(this).Execute<DescribeCustomizedTemplateProductsResponse, DescribeCustomizedTemplateProductsResult, DescribeCustomizedTemplateProductsRequest>(request);
+        public CreateProductTopicResponse CreateProductTopic(CreateProductTopicRequest request) {
+            return  new CreateProductTopicExecutor().Client(this).Execute<CreateProductTopicResponse, CreateProductTopicResult, CreateProductTopicRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看自定义物模型模板产品列表
+        ///  新建产品自定义Topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeCustomizedTemplateProductsResponse> DescribeCustomizedTemplateProducts(DescribeCustomizedTemplateProductsRequest request) {
-            return await new DescribeCustomizedTemplateProductsExecutor().Client(this).Execute<DescribeCustomizedTemplateProductsResponse, DescribeCustomizedTemplateProductsResult, DescribeCustomizedTemplateProductsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  预购订单列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public PreOrdersResponse PreOrders(PreOrdersRequest request) {
-            return  new PreOrdersExecutor().Client(this).Execute<PreOrdersResponse, PreOrdersResult, PreOrdersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  预购订单列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<PreOrdersResponse> PreOrders(PreOrdersRequest request) {
-            return await new PreOrdersExecutor().Client(this).Execute<PreOrdersResponse, PreOrdersResult, PreOrdersRequest>(request).ConfigureAwait(false);
+        public async Task<CreateProductTopicResponse> CreateProductTopic(CreateProductTopicRequest request) {
+            return await new CreateProductTopicExecutor().Client(this).Execute<CreateProductTopicResponse, CreateProductTopicResult, CreateProductTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2329,99 +670,59 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看预置物模型模板
+        ///  查看产品自定义Topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeThingModelTemplateResponse DescribeThingModelTemplate(DescribeThingModelTemplateRequest request) {
-            return  new DescribeThingModelTemplateExecutor().Client(this).Execute<DescribeThingModelTemplateResponse, DescribeThingModelTemplateResult, DescribeThingModelTemplateRequest>(request);
+        public DescribeProductTopicResponse DescribeProductTopic(DescribeProductTopicRequest request) {
+            return  new DescribeProductTopicExecutor().Client(this).Execute<DescribeProductTopicResponse, DescribeProductTopicResult, DescribeProductTopicRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看预置物模型模板
+        ///  查看产品自定义Topic
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeThingModelTemplateResponse> DescribeThingModelTemplate(DescribeThingModelTemplateRequest request) {
-            return await new DescribeThingModelTemplateExecutor().Client(this).Execute<DescribeThingModelTemplateResponse, DescribeThingModelTemplateResult, DescribeThingModelTemplateRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeProductTopicResponse> DescribeProductTopic(DescribeProductTopicRequest request) {
+            return await new DescribeProductTopicExecutor().Client(this).Execute<DescribeProductTopicResponse, DescribeProductTopicResult, DescribeProductTopicRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新建产品事件
+        ///  分页查询设备信息,支持一个或多个条件
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateProductEventResponse CreateProductEvent(CreateProductEventRequest request) {
-            return  new CreateProductEventExecutor().Client(this).Execute<CreateProductEventResponse, CreateProductEventResult, CreateProductEventRequest>(request);
+        public QueryDevicePageResponse QueryDevicePage(QueryDevicePageRequest request) {
+            return  new QueryDevicePageExecutor().Client(this).Execute<QueryDevicePageResponse, QueryDevicePageResult, QueryDevicePageRequest>(request);
         }
 #else
         /// <summary>
-        ///  新建产品事件
+        ///  分页查询设备信息,支持一个或多个条件
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateProductEventResponse> CreateProductEvent(CreateProductEventRequest request) {
-            return await new CreateProductEventExecutor().Client(this).Execute<CreateProductEventResponse, CreateProductEventResult, CreateProductEventRequest>(request).ConfigureAwait(false);
+        public async Task<QueryDevicePageResponse> QueryDevicePage(QueryDevicePageRequest request) {
+            return await new QueryDevicePageExecutor().Client(this).Execute<QueryDevicePageResponse, QueryDevicePageResult, QueryDevicePageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看升级固件批次设备列表
+        ///  根据模型ID查看物模型完整信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeFirmwareBatchDevicesResponse DescribeFirmwareBatchDevices(DescribeFirmwareBatchDevicesRequest request) {
-            return  new DescribeFirmwareBatchDevicesExecutor().Client(this).Execute<DescribeFirmwareBatchDevicesResponse, DescribeFirmwareBatchDevicesResult, DescribeFirmwareBatchDevicesRequest>(request);
+        public DescribeThingModelResponse DescribeThingModel(DescribeThingModelRequest request) {
+            return  new DescribeThingModelExecutor().Client(this).Execute<DescribeThingModelResponse, DescribeThingModelResult, DescribeThingModelRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看升级固件批次设备列表
+        ///  根据模型ID查看物模型完整信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeFirmwareBatchDevicesResponse> DescribeFirmwareBatchDevices(DescribeFirmwareBatchDevicesRequest request) {
-            return await new DescribeFirmwareBatchDevicesExecutor().Client(this).Execute<DescribeFirmwareBatchDevicesResponse, DescribeFirmwareBatchDevicesResult, DescribeFirmwareBatchDevicesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  IoT Hub实例软删除恢复接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RecoverHubAsAdminResponse RecoverHubAsAdmin(RecoverHubAsAdminRequest request) {
-            return  new RecoverHubAsAdminExecutor().Client(this).Execute<RecoverHubAsAdminResponse, RecoverHubAsAdminResult, RecoverHubAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  IoT Hub实例软删除恢复接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RecoverHubAsAdminResponse> RecoverHubAsAdmin(RecoverHubAsAdminRequest request) {
-            return await new RecoverHubAsAdminExecutor().Client(this).Execute<RecoverHubAsAdminResponse, RecoverHubAsAdminResult, RecoverHubAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据batchId查询对应的设备证书信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDeviceCredentialsResponse QueryDeviceCredentials(QueryDeviceCredentialsRequest request) {
-            return  new QueryDeviceCredentialsExecutor().Client(this).Execute<QueryDeviceCredentialsResponse, QueryDeviceCredentialsResult, QueryDeviceCredentialsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据batchId查询对应的设备证书信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDeviceCredentialsResponse> QueryDeviceCredentials(QueryDeviceCredentialsRequest request) {
-            return await new QueryDeviceCredentialsExecutor().Client(this).Execute<QueryDeviceCredentialsResponse, QueryDeviceCredentialsResult, QueryDeviceCredentialsRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeThingModelResponse> DescribeThingModel(DescribeThingModelRequest request) {
+            return await new DescribeThingModelExecutor().Client(this).Execute<DescribeThingModelResponse, DescribeThingModelResult, DescribeThingModelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2464,561 +765,21 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改产品服务
+        ///  查看设备影子
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateProductServiceResponse UpdateProductService(UpdateProductServiceRequest request) {
-            return  new UpdateProductServiceExecutor().Client(this).Execute<UpdateProductServiceResponse, UpdateProductServiceResult, UpdateProductServiceRequest>(request);
+        public DescribeThingShadowResponse DescribeThingShadow(DescribeThingShadowRequest request) {
+            return  new DescribeThingShadowExecutor().Client(this).Execute<DescribeThingShadowResponse, DescribeThingShadowResult, DescribeThingShadowRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改产品服务
+        ///  查看设备影子
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateProductServiceResponse> UpdateProductService(UpdateProductServiceRequest request) {
-            return await new UpdateProductServiceExecutor().Client(this).Execute<UpdateProductServiceResponse, UpdateProductServiceResult, UpdateProductServiceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  导出物模型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExportThingModelResponse ExportThingModel(ExportThingModelRequest request) {
-            return  new ExportThingModelExecutor().Client(this).Execute<ExportThingModelResponse, ExportThingModelResult, ExportThingModelRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  导出物模型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExportThingModelResponse> ExportThingModel(ExportThingModelRequest request) {
-            return await new ExportThingModelExecutor().Client(this).Execute<ExportThingModelResponse, ExportThingModelResult, ExportThingModelRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductResponse DescribeProduct(DescribeProductRequest request) {
-            return  new DescribeProductExecutor().Client(this).Execute<DescribeProductResponse, DescribeProductResult, DescribeProductRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductResponse> DescribeProduct(DescribeProductRequest request) {
-            return await new DescribeProductExecutor().Client(this).Execute<DescribeProductResponse, DescribeProductResult, DescribeProductRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateDeviceResponse UpdateDevice(UpdateDeviceRequest request) {
-            return  new UpdateDeviceExecutor().Client(this).Execute<UpdateDeviceResponse, UpdateDeviceResult, UpdateDeviceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateDeviceResponse> UpdateDevice(UpdateDeviceRequest request) {
-            return await new UpdateDeviceExecutor().Client(this).Execute<UpdateDeviceResponse, UpdateDeviceResult, UpdateDeviceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据deviceId查询设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryDeviceDetailByIdResponse QueryDeviceDetailById(QueryDeviceDetailByIdRequest request) {
-            return  new QueryDeviceDetailByIdExecutor().Client(this).Execute<QueryDeviceDetailByIdResponse, QueryDeviceDetailByIdResult, QueryDeviceDetailByIdRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据deviceId查询设备详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryDeviceDetailByIdResponse> QueryDeviceDetailById(QueryDeviceDetailByIdRequest request) {
-            return await new QueryDeviceDetailByIdExecutor().Client(this).Execute<QueryDeviceDetailByIdResponse, QueryDeviceDetailByIdResult, QueryDeviceDetailByIdRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  IoT Hub实例查询用户Pin接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserPinResponse DescribeUserPin(DescribeUserPinRequest request) {
-            return  new DescribeUserPinExecutor().Client(this).Execute<DescribeUserPinResponse, DescribeUserPinResult, DescribeUserPinRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  IoT Hub实例查询用户Pin接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserPinResponse> DescribeUserPin(DescribeUserPinRequest request) {
-            return await new DescribeUserPinExecutor().Client(this).Execute<DescribeUserPinResponse, DescribeUserPinResult, DescribeUserPinRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  导入物模型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImportThingModelResponse ImportThingModel(ImportThingModelRequest request) {
-            return  new ImportThingModelExecutor().Client(this).Execute<ImportThingModelResponse, ImportThingModelResult, ImportThingModelRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  导入物模型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImportThingModelResponse> ImportThingModel(ImportThingModelRequest request) {
-            return await new ImportThingModelExecutor().Client(this).Execute<ImportThingModelResponse, ImportThingModelResult, ImportThingModelRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改产品属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateProductPropertyResponse UpdateProductProperty(UpdateProductPropertyRequest request) {
-            return  new UpdateProductPropertyExecutor().Client(this).Execute<UpdateProductPropertyResponse, UpdateProductPropertyResult, UpdateProductPropertyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改产品属性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateProductPropertyResponse> UpdateProductProperty(UpdateProductPropertyRequest request) {
-            return await new UpdateProductPropertyExecutor().Client(this).Execute<UpdateProductPropertyResponse, UpdateProductPropertyResult, UpdateProductPropertyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  批量固件升级
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateFirmwareBatchResponse CreateFirmwareBatch(CreateFirmwareBatchRequest request) {
-            return  new CreateFirmwareBatchExecutor().Client(this).Execute<CreateFirmwareBatchResponse, CreateFirmwareBatchResult, CreateFirmwareBatchRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量固件升级
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateFirmwareBatchResponse> CreateFirmwareBatch(CreateFirmwareBatchRequest request) {
-            return await new CreateFirmwareBatchExecutor().Client(this).Execute<CreateFirmwareBatchResponse, CreateFirmwareBatchResult, CreateFirmwareBatchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取topic列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetTopicListResponse GetTopicList(GetTopicListRequest request) {
-            return  new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取topic列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetTopicListResponse> GetTopicList(GetTopicListRequest request) {
-            return await new GetTopicListExecutor().Client(this).Execute<GetTopicListResponse, GetTopicListResult, GetTopicListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  验证规则有效性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StandardVerifyResponse StandardVerify(StandardVerifyRequest request) {
-            return  new StandardVerifyExecutor().Client(this).Execute<StandardVerifyResponse, StandardVerifyResult, StandardVerifyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  验证规则有效性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StandardVerifyResponse> StandardVerify(StandardVerifyRequest request) {
-            return await new StandardVerifyExecutor().Client(this).Execute<StandardVerifyResponse, StandardVerifyResult, StandardVerifyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询属性接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public PropertyAcquireResponse PropertyAcquire(PropertyAcquireRequest request) {
-            return  new PropertyAcquireExecutor().Client(this).Execute<PropertyAcquireResponse, PropertyAcquireResult, PropertyAcquireRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询属性接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<PropertyAcquireResponse> PropertyAcquire(PropertyAcquireRequest request) {
-            return await new PropertyAcquireExecutor().Client(this).Execute<PropertyAcquireResponse, PropertyAcquireResult, PropertyAcquireRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除预置物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteThingModelTemplateResponse DeleteThingModelTemplate(DeleteThingModelTemplateRequest request) {
-            return  new DeleteThingModelTemplateExecutor().Client(this).Execute<DeleteThingModelTemplateResponse, DeleteThingModelTemplateResult, DeleteThingModelTemplateRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除预置物模型模板
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteThingModelTemplateResponse> DeleteThingModelTemplate(DeleteThingModelTemplateRequest request) {
-            return await new DeleteThingModelTemplateExecutor().Client(this).Execute<DeleteThingModelTemplateResponse, DeleteThingModelTemplateResult, DeleteThingModelTemplateRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  批量注册朗讯设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddBatchLooDevicesResponse AddBatchLooDevices(AddBatchLooDevicesRequest request) {
-            return  new AddBatchLooDevicesExecutor().Client(this).Execute<AddBatchLooDevicesResponse, AddBatchLooDevicesResult, AddBatchLooDevicesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量注册朗讯设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddBatchLooDevicesResponse> AddBatchLooDevices(AddBatchLooDevicesRequest request) {
-            return await new AddBatchLooDevicesExecutor().Client(this).Execute<AddBatchLooDevicesResponse, AddBatchLooDevicesResult, AddBatchLooDevicesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新建产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateProductResponse CreateProduct(CreateProductRequest request) {
-            return  new CreateProductExecutor().Client(this).Execute<CreateProductResponse, CreateProductResult, CreateProductRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新建产品
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateProductResponse> CreateProduct(CreateProductRequest request) {
-            return await new CreateProductExecutor().Client(this).Execute<CreateProductResponse, CreateProductResult, CreateProductRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询instance下实例详细信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceAsAdminResponse DescribeInstanceAsAdmin(DescribeInstanceAsAdminRequest request) {
-            return  new DescribeInstanceAsAdminExecutor().Client(this).Execute<DescribeInstanceAsAdminResponse, DescribeInstanceAsAdminResult, DescribeInstanceAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询instance下实例详细信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceAsAdminResponse> DescribeInstanceAsAdmin(DescribeInstanceAsAdminRequest request) {
-            return await new DescribeInstanceAsAdminExecutor().Client(this).Execute<DescribeInstanceAsAdminResponse, DescribeInstanceAsAdminResult, DescribeInstanceAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RemoveLoongrayDeviceResponse RemoveLoongrayDevice(RemoveLoongrayDeviceRequest request) {
-            return  new RemoveLoongrayDeviceExecutor().Client(this).Execute<RemoveLoongrayDeviceResponse, RemoveLoongrayDeviceResult, RemoveLoongrayDeviceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除设备
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RemoveLoongrayDeviceResponse> RemoveLoongrayDevice(RemoveLoongrayDeviceRequest request) {
-            return await new RemoveLoongrayDeviceExecutor().Client(this).Execute<RemoveLoongrayDeviceResponse, RemoveLoongrayDeviceResult, RemoveLoongrayDeviceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除申请单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelPreOrderResponse DelPreOrder(DelPreOrderRequest request) {
-            return  new DelPreOrderExecutor().Client(this).Execute<DelPreOrderResponse, DelPreOrderResult, DelPreOrderRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除申请单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelPreOrderResponse> DelPreOrder(DelPreOrderRequest request) {
-            return await new DelPreOrderExecutor().Client(this).Execute<DelPreOrderResponse, DelPreOrderResult, DelPreOrderRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设备删除接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest request) {
-            return  new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设备删除接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest request) {
-            return await new DeleteDeviceExecutor().Client(this).Execute<DeleteDeviceResponse, DeleteDeviceResult, DeleteDeviceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteProductTopicResponse DeleteProductTopic(DeleteProductTopicRequest request) {
-            return  new DeleteProductTopicExecutor().Client(this).Execute<DeleteProductTopicResponse, DeleteProductTopicResult, DeleteProductTopicRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除产品自定义Topic
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteProductTopicResponse> DeleteProductTopic(DeleteProductTopicRequest request) {
-            return await new DeleteProductTopicExecutor().Client(this).Execute<DeleteProductTopicResponse, DeleteProductTopicResult, DeleteProductTopicRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  属性获取接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetPropertySnapshotResponse GetPropertySnapshot(GetPropertySnapshotRequest request) {
-            return  new GetPropertySnapshotExecutor().Client(this).Execute<GetPropertySnapshotResponse, GetPropertySnapshotResult, GetPropertySnapshotRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  属性获取接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetPropertySnapshotResponse> GetPropertySnapshot(GetPropertySnapshotRequest request) {
-            return await new GetPropertySnapshotExecutor().Client(this).Execute<GetPropertySnapshotResponse, GetPropertySnapshotResult, GetPropertySnapshotRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  IoT Hub共享模式实例创建接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateShareHubAsAdminResponse CreateShareHubAsAdmin(CreateShareHubAsAdminRequest request) {
-            return  new CreateShareHubAsAdminExecutor().Client(this).Execute<CreateShareHubAsAdminResponse, CreateShareHubAsAdminResult, CreateShareHubAsAdminRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  IoT Hub共享模式实例创建接口
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateShareHubAsAdminResponse> CreateShareHubAsAdmin(CreateShareHubAsAdminRequest request) {
-            return await new CreateShareHubAsAdminExecutor().Client(this).Execute<CreateShareHubAsAdminResponse, CreateShareHubAsAdminResult, CreateShareHubAsAdminRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看定向升级的设备列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUpdatedDevicesResponse DescribeUpdatedDevices(DescribeUpdatedDevicesRequest request) {
-            return  new DescribeUpdatedDevicesExecutor().Client(this).Execute<DescribeUpdatedDevicesResponse, DescribeUpdatedDevicesResult, DescribeUpdatedDevicesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看定向升级的设备列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUpdatedDevicesResponse> DescribeUpdatedDevices(DescribeUpdatedDevicesRequest request) {
-            return await new DescribeUpdatedDevicesExecutor().Client(this).Execute<DescribeUpdatedDevicesResponse, DescribeUpdatedDevicesResult, DescribeUpdatedDevicesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户下的instances实例信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceInfoResponse DescribeInstanceInfo(DescribeInstanceInfoRequest request) {
-            return  new DescribeInstanceInfoExecutor().Client(this).Execute<DescribeInstanceInfoResponse, DescribeInstanceInfoResult, DescribeInstanceInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户下的instances实例信息
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceInfoResponse> DescribeInstanceInfo(DescribeInstanceInfoRequest request) {
-            return await new DescribeInstanceInfoExecutor().Client(this).Execute<DescribeInstanceInfoResponse, DescribeInstanceInfoResult, DescribeInstanceInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看服务调用记录详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeThingServiceResponse DescribeThingService(DescribeThingServiceRequest request) {
-            return  new DescribeThingServiceExecutor().Client(this).Execute<DescribeThingServiceResponse, DescribeThingServiceResult, DescribeThingServiceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看服务调用记录详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeThingServiceResponse> DescribeThingService(DescribeThingServiceRequest request) {
-            return await new DescribeThingServiceExecutor().Client(this).Execute<DescribeThingServiceResponse, DescribeThingServiceResult, DescribeThingServiceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改预购订单状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdatePreOrderStatusResponse UpdatePreOrderStatus(UpdatePreOrderStatusRequest request) {
-            return  new UpdatePreOrderStatusExecutor().Client(this).Execute<UpdatePreOrderStatusResponse, UpdatePreOrderStatusResult, UpdatePreOrderStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改预购订单状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdatePreOrderStatusResponse> UpdatePreOrderStatus(UpdatePreOrderStatusRequest request) {
-            return await new UpdatePreOrderStatusExecutor().Client(this).Execute<UpdatePreOrderStatusResponse, UpdatePreOrderStatusResult, UpdatePreOrderStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据模型ID查看物模型完整信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeThingModelResponse DescribeThingModel(DescribeThingModelRequest request) {
-            return  new DescribeThingModelExecutor().Client(this).Execute<DescribeThingModelResponse, DescribeThingModelResult, DescribeThingModelRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据模型ID查看物模型完整信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeThingModelResponse> DescribeThingModel(DescribeThingModelRequest request) {
-            return await new DescribeThingModelExecutor().Client(this).Execute<DescribeThingModelResponse, DescribeThingModelResult, DescribeThingModelRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  终止升级固件批次
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopFirmwareBatchResponse StopFirmwareBatch(StopFirmwareBatchRequest request) {
-            return  new StopFirmwareBatchExecutor().Client(this).Execute<StopFirmwareBatchResponse, StopFirmwareBatchResult, StopFirmwareBatchRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  终止升级固件批次
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopFirmwareBatchResponse> StopFirmwareBatch(StopFirmwareBatchRequest request) {
-            return await new StopFirmwareBatchExecutor().Client(this).Execute<StopFirmwareBatchResponse, StopFirmwareBatchResult, StopFirmwareBatchRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看产品事件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProductEventResponse DescribeProductEvent(DescribeProductEventRequest request) {
-            return  new DescribeProductEventExecutor().Client(this).Execute<DescribeProductEventResponse, DescribeProductEventResult, DescribeProductEventRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看产品事件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProductEventResponse> DescribeProductEvent(DescribeProductEventRequest request) {
-            return await new DescribeProductEventExecutor().Client(this).Execute<DescribeProductEventResponse, DescribeProductEventResult, DescribeProductEventRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeThingShadowResponse> DescribeThingShadow(DescribeThingShadowRequest request) {
+            return await new DescribeThingShadowExecutor().Client(this).Execute<DescribeThingShadowResponse, DescribeThingShadowResult, DescribeThingShadowRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -3042,25 +803,6 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  关闭当前规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableRuleResponse DisableRule(DisableRuleRequest request) {
-            return  new DisableRuleExecutor().Client(this).Execute<DisableRuleResponse, DisableRuleResult, DisableRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  关闭当前规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableRuleResponse> DisableRule(DisableRuleRequest request) {
-            return await new DisableRuleExecutor().Client(this).Execute<DisableRuleResponse, DisableRuleResult, DisableRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改设备详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -3076,6 +818,25 @@ namespace JDCloudSDK.Iotcore.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateLooDeviceResponse> UpdateLooDevice(UpdateLooDeviceRequest request) {
             return await new UpdateLooDeviceExecutor().Client(this).Execute<UpdateLooDeviceResponse, UpdateLooDeviceResult, UpdateLooDeviceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  导出物模型
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ExportThingModelResponse ExportThingModel(ExportThingModelRequest request) {
+            return  new ExportThingModelExecutor().Client(this).Execute<ExportThingModelResponse, ExportThingModelResult, ExportThingModelRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  导出物模型
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ExportThingModelResponse> ExportThingModel(ExportThingModelRequest request) {
+            return await new ExportThingModelExecutor().Client(this).Execute<ExportThingModelResponse, ExportThingModelResult, ExportThingModelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -3118,139 +879,135 @@ namespace JDCloudSDK.Iotcore.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改instance下实例详细信息
-        /// 
+        ///  朗瑞分页查询设备信息,支持一个或多个条件
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateInstanceAsAdminResponse UpdateInstanceAsAdmin(UpdateInstanceAsAdminRequest request) {
-            return  new UpdateInstanceAsAdminExecutor().Client(this).Execute<UpdateInstanceAsAdminResponse, UpdateInstanceAsAdminResult, UpdateInstanceAsAdminRequest>(request);
+        public LoongrayQueryPageResponse LoongrayQueryPage(LoongrayQueryPageRequest request) {
+            return  new LoongrayQueryPageExecutor().Client(this).Execute<LoongrayQueryPageResponse, LoongrayQueryPageResult, LoongrayQueryPageRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改instance下实例详细信息
-        /// 
+        ///  朗瑞分页查询设备信息,支持一个或多个条件
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateInstanceAsAdminResponse> UpdateInstanceAsAdmin(UpdateInstanceAsAdminRequest request) {
-            return await new UpdateInstanceAsAdminExecutor().Client(this).Execute<UpdateInstanceAsAdminResponse, UpdateInstanceAsAdminResult, UpdateInstanceAsAdminRequest>(request).ConfigureAwait(false);
+        public async Task<LoongrayQueryPageResponse> LoongrayQueryPage(LoongrayQueryPageRequest request) {
+            return await new LoongrayQueryPageExecutor().Client(this).Execute<LoongrayQueryPageResponse, LoongrayQueryPageResult, LoongrayQueryPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除自定义物模型模板
+        ///  修改产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DeleteCustomizedThingModelTemplateResponse DeleteCustomizedThingModelTemplate(DeleteCustomizedThingModelTemplateRequest request) {
-            return  new DeleteCustomizedThingModelTemplateExecutor().Client(this).Execute<DeleteCustomizedThingModelTemplateResponse, DeleteCustomizedThingModelTemplateResult, DeleteCustomizedThingModelTemplateRequest>(request);
+        public UpdateProductWithAdminResponse UpdateProductWithAdmin(UpdateProductWithAdminRequest request) {
+            return  new UpdateProductWithAdminExecutor().Client(this).Execute<UpdateProductWithAdminResponse, UpdateProductWithAdminResult, UpdateProductWithAdminRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除自定义物模型模板
+        ///  修改产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DeleteCustomizedThingModelTemplateResponse> DeleteCustomizedThingModelTemplate(DeleteCustomizedThingModelTemplateRequest request) {
-            return await new DeleteCustomizedThingModelTemplateExecutor().Client(this).Execute<DeleteCustomizedThingModelTemplateResponse, DeleteCustomizedThingModelTemplateResult, DeleteCustomizedThingModelTemplateRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateProductWithAdminResponse> UpdateProductWithAdmin(UpdateProductWithAdminRequest request) {
+            return await new UpdateProductWithAdminExecutor().Client(this).Execute<UpdateProductWithAdminResponse, UpdateProductWithAdminResult, UpdateProductWithAdminRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  IoT Hub共享模式获取用户列表接口
-        /// 
+        ///  查看产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeIoTHubUsersResponse DescribeIoTHubUsers(DescribeIoTHubUsersRequest request) {
-            return  new DescribeIoTHubUsersExecutor().Client(this).Execute<DescribeIoTHubUsersResponse, DescribeIoTHubUsersResult, DescribeIoTHubUsersRequest>(request);
+        public DescribeProductResponse DescribeProduct(DescribeProductRequest request) {
+            return  new DescribeProductExecutor().Client(this).Execute<DescribeProductResponse, DescribeProductResult, DescribeProductRequest>(request);
         }
 #else
         /// <summary>
-        ///  IoT Hub共享模式获取用户列表接口
-        /// 
+        ///  查看产品
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeIoTHubUsersResponse> DescribeIoTHubUsers(DescribeIoTHubUsersRequest request) {
-            return await new DescribeIoTHubUsersExecutor().Client(this).Execute<DescribeIoTHubUsersResponse, DescribeIoTHubUsersResult, DescribeIoTHubUsersRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeProductResponse> DescribeProduct(DescribeProductRequest request) {
+            return await new DescribeProductExecutor().Client(this).Execute<DescribeProductResponse, DescribeProductResult, DescribeProductRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加应用数据存储目录
+        ///  修改设备详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateOssAppBucketResponse CreateOssAppBucket(CreateOssAppBucketRequest request) {
-            return  new CreateOssAppBucketExecutor().Client(this).Execute<CreateOssAppBucketResponse, CreateOssAppBucketResult, CreateOssAppBucketRequest>(request);
+        public UpdateDeviceResponse UpdateDevice(UpdateDeviceRequest request) {
+            return  new UpdateDeviceExecutor().Client(this).Execute<UpdateDeviceResponse, UpdateDeviceResult, UpdateDeviceRequest>(request);
         }
 #else
         /// <summary>
-        ///  添加应用数据存储目录
+        ///  修改设备详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateOssAppBucketResponse> CreateOssAppBucket(CreateOssAppBucketRequest request) {
-            return await new CreateOssAppBucketExecutor().Client(this).Execute<CreateOssAppBucketResponse, CreateOssAppBucketResult, CreateOssAppBucketRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateDeviceResponse> UpdateDevice(UpdateDeviceRequest request) {
+            return await new UpdateDeviceExecutor().Client(this).Execute<UpdateDeviceResponse, UpdateDeviceResult, UpdateDeviceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看产品分类列表接口
+        ///  设备基本数据统计，包括设备数，激活数，在线数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ListProductCategoriesResponse ListProductCategories(ListProductCategoriesRequest request) {
-            return  new ListProductCategoriesExecutor().Client(this).Execute<ListProductCategoriesResponse, ListProductCategoriesResult, ListProductCategoriesRequest>(request);
+        public QueryAdminStatisticsResponse QueryAdminStatistics(QueryAdminStatisticsRequest request) {
+            return  new QueryAdminStatisticsExecutor().Client(this).Execute<QueryAdminStatisticsResponse, QueryAdminStatisticsResult, QueryAdminStatisticsRequest>(request);
         }
 #else
         /// <summary>
-        ///  查看产品分类列表接口
+        ///  设备基本数据统计，包括设备数，激活数，在线数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ListProductCategoriesResponse> ListProductCategories(ListProductCategoriesRequest request) {
-            return await new ListProductCategoriesExecutor().Client(this).Execute<ListProductCategoriesResponse, ListProductCategoriesResult, ListProductCategoriesRequest>(request).ConfigureAwait(false);
+        public async Task<QueryAdminStatisticsResponse> QueryAdminStatistics(QueryAdminStatisticsRequest request) {
+            return await new QueryAdminStatisticsExecutor().Client(this).Execute<QueryAdminStatisticsResponse, QueryAdminStatisticsResult, QueryAdminStatisticsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  开启当前规则
+        ///  注册单个朗讯设备并返回秘钥信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableRuleResponse EnableRule(EnableRuleRequest request) {
-            return  new EnableRuleExecutor().Client(this).Execute<EnableRuleResponse, EnableRuleResult, EnableRuleRequest>(request);
+        public AddLooDeviceResponse AddLooDevice(AddLooDeviceRequest request) {
+            return  new AddLooDeviceExecutor().Client(this).Execute<AddLooDeviceResponse, AddLooDeviceResult, AddLooDeviceRequest>(request);
         }
 #else
         /// <summary>
-        ///  开启当前规则
+        ///  注册单个朗讯设备并返回秘钥信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableRuleResponse> EnableRule(EnableRuleRequest request) {
-            return await new EnableRuleExecutor().Client(this).Execute<EnableRuleResponse, EnableRuleResult, EnableRuleRequest>(request).ConfigureAwait(false);
+        public async Task<AddLooDeviceResponse> AddLooDevice(AddLooDeviceRequest request) {
+            return await new AddLooDeviceExecutor().Client(this).Execute<AddLooDeviceResponse, AddLooDeviceResult, AddLooDeviceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除设备间的父子关系
+        ///  导入物模型
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public RemoveDeviceLinksResponse RemoveDeviceLinks(RemoveDeviceLinksRequest request) {
-            return  new RemoveDeviceLinksExecutor().Client(this).Execute<RemoveDeviceLinksResponse, RemoveDeviceLinksResult, RemoveDeviceLinksRequest>(request);
+        public ImportThingModelResponse ImportThingModel(ImportThingModelRequest request) {
+            return  new ImportThingModelExecutor().Client(this).Execute<ImportThingModelResponse, ImportThingModelResult, ImportThingModelRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除设备间的父子关系
+        ///  导入物模型
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<RemoveDeviceLinksResponse> RemoveDeviceLinks(RemoveDeviceLinksRequest request) {
-            return await new RemoveDeviceLinksExecutor().Client(this).Execute<RemoveDeviceLinksResponse, RemoveDeviceLinksResult, RemoveDeviceLinksRequest>(request).ConfigureAwait(false);
+        public async Task<ImportThingModelResponse> ImportThingModel(ImportThingModelRequest request) {
+            return await new ImportThingModelExecutor().Client(this).Execute<ImportThingModelResponse, ImportThingModelResult, ImportThingModelRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -3270,6 +1027,25 @@ namespace JDCloudSDK.Iotcore.Client
         /// <returns>请求结果信息</returns>
         public async Task<ThingTypeDescribeResponse> ThingTypeDescribe(ThingTypeDescribeRequest request) {
             return await new ThingTypeDescribeExecutor().Client(this).Execute<ThingTypeDescribeResponse, ThingTypeDescribeResult, ThingTypeDescribeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取电梯运行状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ElevatorOperatingStatusResponse ElevatorOperatingStatus(ElevatorOperatingStatusRequest request) {
+            return  new ElevatorOperatingStatusExecutor().Client(this).Execute<ElevatorOperatingStatusResponse, ElevatorOperatingStatusResult, ElevatorOperatingStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取电梯运行状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ElevatorOperatingStatusResponse> ElevatorOperatingStatus(ElevatorOperatingStatusRequest request) {
+            return await new ElevatorOperatingStatusExecutor().Client(this).Execute<ElevatorOperatingStatusResponse, ElevatorOperatingStatusResult, ElevatorOperatingStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 
