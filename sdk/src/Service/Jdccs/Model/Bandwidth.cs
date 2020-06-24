@@ -59,9 +59,13 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
         ///</summary>
         public string LineType{ get; set; }
+        ///<summary>
+        /// 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+        ///</summary>
+        public string ChargeType{ get; set; }
         ///<summary>
         /// 合同带宽（Mbps）
         ///</summary>

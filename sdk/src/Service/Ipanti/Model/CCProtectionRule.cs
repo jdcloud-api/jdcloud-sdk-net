@@ -81,5 +81,13 @@ namespace JDCloudSDK.Ipanti.Model
         /// 阻断持续时间, 单位为秒, 取值范围[10, 86400]
         ///</summary>
         public long? BlockTime{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面id
+        ///</summary>
+        public string PageId{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面名称
+        ///</summary>
+        public string PageName{ get; set; }
     }
 }

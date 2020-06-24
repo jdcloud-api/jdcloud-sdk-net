@@ -28,22 +28,18 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace JDCloudSDK.Ipanti.Model
+namespace JDCloudSDK.Hufu.Model
 {
 
     /// <summary>
-    ///  cpsIpResource
+    ///  isEncryptDataInput
     /// </summary>
-    public class CpsIpResource
+    public class IsEncryptDataInput
     {
 
         ///<summary>
-        /// 云物理服务器公网 IP 地址
+        /// 密文
         ///</summary>
-        public string Ip{ get; set; }
-        ///<summary>
-        /// 公网 IP 类型或绑定资源类型. &lt;br&gt;- 0: 未知类型&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)&lt;br&gt;- 11: 弹性公网 IP, 绑定了云主机&lt;br&gt;- 12: 弹性公网 IP, 绑定了负载均衡&lt;br&gt;- 13: 弹性公网 IP, 绑定了原生容器实例&lt;br&gt;- 14: 弹性公网 IP, 绑定了原生容器 Pod&lt;br&gt;- 2: 云物理服务器公网 IP&lt;br&gt;- 4: 托管区公网 IP
-        ///</summary>
-        public int? ResourceType{ get; set; }
+        public string Cipher{ get; set; }
     }
 }

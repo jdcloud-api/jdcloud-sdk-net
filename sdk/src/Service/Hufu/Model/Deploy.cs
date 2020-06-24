@@ -27,51 +27,52 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using JDCloudSDK.Core.Annotation;
 
-namespace JDCloudSDK.Jdccs.Model
+namespace JDCloudSDK.Hufu.Model
 {
 
     /// <summary>
-    ///  带宽（出口）
+    ///  发布
     /// </summary>
-    public class DescribeBandwidth
+    public class Deploy
     {
 
         ///<summary>
-        /// 机房英文标识
+        /// 发布的修订版本号
+        ///Required:true
         ///</summary>
-        public string Idc{ get; set; }
+        [Required]
+        public string Revision{ get; set; }
         ///<summary>
-        /// 机房名称
+        /// 环境：test、preview、online
+        ///Required:true
         ///</summary>
-        public string IdcName{ get; set; }
+        [Required]
+        public string Environment{ get; set; }
         ///<summary>
-        /// 带宽实例ID
+        /// 后端服务类型：mock、unique、vpc
         ///</summary>
-        public string BandwidthId{ get; set; }
+        public string BackendServiceType{ get; set; }
         ///<summary>
-        /// 带宽名称
+        /// 后端地址
         ///</summary>
-        public string BandwidthName{ get; set; }
+        public string BackendUrl{ get; set; }
         ///<summary>
-        /// 状态 normal:正常 abnormal:异常
+        /// 描述
         ///</summary>
-        public string Status{ get; set; }
+        public string Description{ get; set; }
         ///<summary>
-        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        /// 微服务网关名称
         ///</summary>
-        public string LineType{ get; set; }
+        public string JdsfName{ get; set; }
         ///<summary>
-        /// 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+        /// 微服务注册中心ID
         ///</summary>
-        public string ChargeType{ get; set; }
+        public string JdsfRegistryName{ get; set; }
         ///<summary>
-        /// 合同带宽（Mbps）
+        /// 微服务ID
         ///</summary>
-        public int? Bandwidth{ get; set; }
-        ///<summary>
-        /// 关联的公网IP
-        ///</summary>
-        public List<RelatedIp> RelatedIp{ get; set; }
+        public string JdsfId{ get; set; }
     }
 }

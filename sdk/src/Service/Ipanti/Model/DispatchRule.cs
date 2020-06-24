@@ -32,18 +32,42 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    ///  cpsIpResource
+    ///  dispatchRule
     /// </summary>
-    public class CpsIpResource
+    public class DispatchRule
     {
 
         ///<summary>
-        /// 云物理服务器公网 IP 地址
+        /// 规则 Id
         ///</summary>
-        public string Ip{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
-        /// 公网 IP 类型或绑定资源类型. &lt;br&gt;- 0: 未知类型&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)&lt;br&gt;- 11: 弹性公网 IP, 绑定了云主机&lt;br&gt;- 12: 弹性公网 IP, 绑定了负载均衡&lt;br&gt;- 13: 弹性公网 IP, 绑定了原生容器实例&lt;br&gt;- 14: 弹性公网 IP, 绑定了原生容器 Pod&lt;br&gt;- 2: 云物理服务器公网 IP&lt;br&gt;- 4: 托管区公网 IP
+        /// 规则名称
         ///</summary>
-        public int? ResourceType{ get; set; }
+        public string Name{ get; set; }
+        ///<summary>
+        /// 规则的 CNAME
+        ///</summary>
+        public string Cname{ get; set; }
+        ///<summary>
+        /// 高防 IP
+        ///</summary>
+        public string ServiceIp{ get; set; }
+        ///<summary>
+        /// 云内IP
+        ///</summary>
+        public List<string> InnerIps{ get; set; }
+        ///<summary>
+        /// 触发调度的流量阈值, 单位 Mbps
+        ///</summary>
+        public long? DispatchThresholdMbps{ get; set; }
+        ///<summary>
+        /// 触发调度的报文阈值, 单位 pps
+        ///</summary>
+        public long? DispatchThresholdPps{ get; set; }
+        ///<summary>
+        /// 0: 防御状态, 1: 回源状态
+        ///</summary>
+        public int? Status{ get; set; }
     }
 }

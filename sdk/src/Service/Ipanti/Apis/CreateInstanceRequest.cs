@@ -47,6 +47,10 @@ namespace  JDCloudSDK.Ipanti.Apis
         [Required]
         public   CreateInstanceSpec CreateInstanceSpec{ get; set; }
         ///<summary>
+        /// 自动续费配置, 默认不开通, 仅新购实例时可设置
+        ///</summary>
+        public   AutoRenewalSpec AutoRenewalSpec{ get; set; }
+        ///<summary>
         /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true
         ///</summary>

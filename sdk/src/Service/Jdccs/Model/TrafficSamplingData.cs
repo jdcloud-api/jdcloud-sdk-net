@@ -70,6 +70,10 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public int? Timestamp{ get; set; }
         ///<summary>
+        /// 唯一ID标识
+        ///</summary>
+        public string UniqueId{ get; set; }
+        ///<summary>
         /// 运营商类型 移动:CM 联通:CU 电信:CT
         ///</summary>
         public string OperatorType{ get; set; }

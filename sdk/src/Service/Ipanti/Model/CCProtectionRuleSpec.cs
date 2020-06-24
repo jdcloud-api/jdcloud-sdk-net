@@ -80,5 +80,9 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         [Required]
         public long BlockTime{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面id
+        ///</summary>
+        public string PageId{ get; set; }
     }
 }

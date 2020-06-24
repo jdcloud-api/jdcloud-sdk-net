@@ -69,5 +69,17 @@ namespace JDCloudSDK.Ipanti.Model
         /// 错误码告警域名列表
         ///</summary>
         public List<string> ErrorCodeDomain{ get; set; }
+        ///<summary>
+        /// 错误码列表
+        ///</summary>
+        public List<int?> ErrorCode{ get; set; }
+        ///<summary>
+        /// 错误码触发告警比例
+        ///</summary>
+        public int? ErrorCodePercent{ get; set; }
+        ///<summary>
+        /// 错误码触发告警次数
+        ///</summary>
+        public int? ErrorCodeCount{ get; set; }
     }
 }

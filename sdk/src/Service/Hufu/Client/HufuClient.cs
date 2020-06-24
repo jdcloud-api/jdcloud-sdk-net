@@ -89,9 +89,9 @@ namespace JDCloudSDK.Hufu.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,196 +138,6 @@ namespace JDCloudSDK.Hufu.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  customerId校验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CustomerIdVerifyResponse CustomerIdVerify(CustomerIdVerifyRequest request) {
-            return  new CustomerIdVerifyExecutor().Client(this).Execute<CustomerIdVerifyResponse, CustomerIdVerifyResult, CustomerIdVerifyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  customerId校验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CustomerIdVerifyResponse> CustomerIdVerify(CustomerIdVerifyRequest request) {
-            return await new CustomerIdVerifyExecutor().Client(this).Execute<CustomerIdVerifyResponse, CustomerIdVerifyResult, CustomerIdVerifyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询修订版本列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeRevisionsResponse DescribeRevisions(DescribeRevisionsRequest request) {
-            return  new DescribeRevisionsExecutor().Client(this).Execute<DescribeRevisionsResponse, DescribeRevisionsResult, DescribeRevisionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询修订版本列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeRevisionsResponse> DescribeRevisions(DescribeRevisionsRequest request) {
-            return await new DescribeRevisionsExecutor().Client(this).Execute<DescribeRevisionsResponse, DescribeRevisionsResult, DescribeRevisionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改api
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateApisResponse UpdateApis(UpdateApisRequest request) {
-            return  new UpdateApisExecutor().Client(this).Execute<UpdateApisResponse, UpdateApisResult, UpdateApisRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改api
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateApisResponse> UpdateApis(UpdateApisRequest request) {
-            return await new UpdateApisExecutor().Client(this).Execute<UpdateApisResponse, UpdateApisResult, UpdateApisRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询sdk、文档的生成结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QuerySdkAndDocumentResponse QuerySdkAndDocument(QuerySdkAndDocumentRequest request) {
-            return  new QuerySdkAndDocumentExecutor().Client(this).Execute<QuerySdkAndDocumentResponse, QuerySdkAndDocumentResult, QuerySdkAndDocumentRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询sdk、文档的生成结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QuerySdkAndDocumentResponse> QuerySdkAndDocument(QuerySdkAndDocumentRequest request) {
-            return await new QuerySdkAndDocumentExecutor().Client(this).Execute<QuerySdkAndDocumentResponse, QuerySdkAndDocumentResult, QuerySdkAndDocumentRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  下载sdk、文档的生成结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DownloadSdkResponse DownloadSdk(DownloadSdkRequest request) {
-            return  new DownloadSdkExecutor().Client(this).Execute<DownloadSdkResponse, DownloadSdkResult, DownloadSdkRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  下载sdk、文档的生成结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DownloadSdkResponse> DownloadSdk(DownloadSdkRequest request) {
-            return await new DownloadSdkExecutor().Client(this).Execute<DownloadSdkResponse, DownloadSdkResult, DownloadSdkRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询部署列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDeploymentsResponse DescribeDeployments(DescribeDeploymentsRequest request) {
-            return  new DescribeDeploymentsExecutor().Client(this).Execute<DescribeDeploymentsResponse, DescribeDeploymentsResult, DescribeDeploymentsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询部署列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDeploymentsResponse> DescribeDeployments(DescribeDeploymentsRequest request) {
-            return await new DescribeDeploymentsExecutor().Client(this).Execute<DescribeDeploymentsResponse, DescribeDeploymentsResult, DescribeDeploymentsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  下游更新路由信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyRouterByLowerResponse ModifyRouterByLower(ModifyRouterByLowerRequest request) {
-            return  new ModifyRouterByLowerExecutor().Client(this).Execute<ModifyRouterByLowerResponse, ModifyRouterByLowerResult, ModifyRouterByLowerRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  下游更新路由信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyRouterByLowerResponse> ModifyRouterByLower(ModifyRouterByLowerRequest request) {
-            return await new ModifyRouterByLowerExecutor().Client(this).Execute<ModifyRouterByLowerResponse, ModifyRouterByLowerResult, ModifyRouterByLowerRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  批量导入api
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImportApiResponse ImportApi(ImportApiRequest request) {
-            return  new ImportApiExecutor().Client(this).Execute<ImportApiResponse, ImportApiResult, ImportApiRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  批量导入api
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImportApiResponse> ImportApi(ImportApiRequest request) {
-            return await new ImportApiExecutor().Client(this).Execute<ImportApiResponse, ImportApiResult, ImportApiRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询api列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryApisResponse QueryApis(QueryApisRequest request) {
-            return  new QueryApisExecutor().Client(this).Execute<QueryApisResponse, QueryApisResult, QueryApisRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询api列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryApisResponse> QueryApis(QueryApisRequest request) {
-            return await new QueryApisExecutor().Client(this).Execute<QueryApisResponse, QueryApisResult, QueryApisRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  生成sdk、文档
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GenerateSdkAndDocumentResponse GenerateSdkAndDocument(GenerateSdkAndDocumentRequest request) {
-            return  new GenerateSdkAndDocumentExecutor().Client(this).Execute<GenerateSdkAndDocumentResponse, GenerateSdkAndDocumentResult, GenerateSdkAndDocumentRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  生成sdk、文档
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GenerateSdkAndDocumentResponse> GenerateSdkAndDocument(GenerateSdkAndDocumentRequest request) {
-            return await new GenerateSdkAndDocumentExecutor().Client(this).Execute<GenerateSdkAndDocumentResponse, GenerateSdkAndDocumentResult, GenerateSdkAndDocumentRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -347,78 +157,78 @@ namespace JDCloudSDK.Hufu.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  wms接入确认
+        ///  查询该版本的部署详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AccessConfirmResponse AccessConfirm(AccessConfirmRequest request) {
-            return  new AccessConfirmExecutor().Client(this).Execute<AccessConfirmResponse, AccessConfirmResult, AccessConfirmRequest>(request);
+        public DescribeDeploymentResponse DescribeDeployment(DescribeDeploymentRequest request) {
+            return  new DescribeDeploymentExecutor().Client(this).Execute<DescribeDeploymentResponse, DescribeDeploymentResult, DescribeDeploymentRequest>(request);
         }
 #else
         /// <summary>
-        ///  wms接入确认
+        ///  查询该版本的部署详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AccessConfirmResponse> AccessConfirm(AccessConfirmRequest request) {
-            return await new AccessConfirmExecutor().Client(this).Execute<AccessConfirmResponse, AccessConfirmResult, AccessConfirmRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeDeploymentResponse> DescribeDeployment(DescribeDeploymentRequest request) {
+            return await new DescribeDeploymentExecutor().Client(this).Execute<DescribeDeploymentResponse, DescribeDeploymentResult, DescribeDeploymentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建修订版本
+        ///  查询access日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateRevisionResponse CreateRevision(CreateRevisionRequest request) {
-            return  new CreateRevisionExecutor().Client(this).Execute<CreateRevisionResponse, CreateRevisionResult, CreateRevisionRequest>(request);
+        public QueryAccessLogResponse QueryAccessLog(QueryAccessLogRequest request) {
+            return  new QueryAccessLogExecutor().Client(this).Execute<QueryAccessLogResponse, QueryAccessLogResult, QueryAccessLogRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建修订版本
+        ///  查询access日志
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateRevisionResponse> CreateRevision(CreateRevisionRequest request) {
-            return await new CreateRevisionExecutor().Client(this).Execute<CreateRevisionResponse, CreateRevisionResult, CreateRevisionRequest>(request).ConfigureAwait(false);
+        public async Task<QueryAccessLogResponse> QueryAccessLog(QueryAccessLogRequest request) {
+            return await new QueryAccessLogExecutor().Client(this).Execute<QueryAccessLogResponse, QueryAccessLogResult, QueryAccessLogRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建api
+        ///  发布版本
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateApisResponse CreateApis(CreateApisRequest request) {
-            return  new CreateApisExecutor().Client(this).Execute<CreateApisResponse, CreateApisResult, CreateApisRequest>(request);
+        public DeployResponse Deploy(DeployRequest request) {
+            return  new DeployExecutor().Client(this).Execute<DeployResponse, DeployResult, DeployRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建api
+        ///  发布版本
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateApisResponse> CreateApis(CreateApisRequest request) {
-            return await new CreateApisExecutor().Client(this).Execute<CreateApisResponse, CreateApisResult, CreateApisRequest>(request).ConfigureAwait(false);
+        public async Task<DeployResponse> Deploy(DeployRequest request) {
+            return await new DeployExecutor().Client(this).Execute<DeployResponse, DeployResult, DeployRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  驳回接入申请
+        ///  加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AccessRejectResponse AccessReject(AccessRejectRequest request) {
-            return  new AccessRejectExecutor().Client(this).Execute<AccessRejectResponse, AccessRejectResult, AccessRejectRequest>(request);
+        public IsEncryptDataResponse IsEncryptData(IsEncryptDataRequest request) {
+            return  new IsEncryptDataExecutor().Client(this).Execute<IsEncryptDataResponse, IsEncryptDataResult, IsEncryptDataRequest>(request);
         }
 #else
         /// <summary>
-        ///  驳回接入申请
+        ///  加密
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AccessRejectResponse> AccessReject(AccessRejectRequest request) {
-            return await new AccessRejectExecutor().Client(this).Execute<AccessRejectResponse, AccessRejectResult, AccessRejectRequest>(request).ConfigureAwait(false);
+        public async Task<IsEncryptDataResponse> IsEncryptData(IsEncryptDataRequest request) {
+            return await new IsEncryptDataExecutor().Client(this).Execute<IsEncryptDataResponse, IsEncryptDataResult, IsEncryptDataRequest>(request).ConfigureAwait(false);
         }
 #endif
 

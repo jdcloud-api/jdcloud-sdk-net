@@ -58,6 +58,10 @@ namespace JDCloudSDK.Hufu.Model
         ///</summary>
         public string Path{ get; set; }
         ///<summary>
+        /// 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+        ///</summary>
+        public string MatchType{ get; set; }
+        ///<summary>
         /// 后端类型，为空或null时前端显示未设置
         ///</summary>
         public string BackServiceType{ get; set; }
@@ -105,5 +109,17 @@ namespace JDCloudSDK.Hufu.Model
         /// 响应格式类型,当resBodyType等于3时,使用该响应格式类型
         ///</summary>
         public string EditableResBodyType{ get; set; }
+        ///<summary>
+        /// waf状态，如：observe,deny,off
+        ///</summary>
+        public string WafStatus{ get; set; }
+        ///<summary>
+        /// 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+        ///</summary>
+        public int? ReqBodyFormatType{ get; set; }
+        ///<summary>
+        /// 返回体格式类型，1代表jsonschema，2代表swagger，默认为1
+        ///</summary>
+        public int? ResBodyFormatType{ get; set; }
     }
 }

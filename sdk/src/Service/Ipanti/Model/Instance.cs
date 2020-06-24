@@ -102,6 +102,10 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? WebRuleCount{ get; set; }
         ///<summary>
+        /// 防护调度规则数
+        ///</summary>
+        public int? DispatchRuleCount{ get; set; }
+        ///<summary>
         /// 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
         ///</summary>
         public string ChargeStatus{ get; set; }
@@ -181,5 +185,13 @@ namespace JDCloudSDK.Ipanti.Model
         /// ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
         ///</summary>
         public int? IpHostUrlQps{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面id
+        ///</summary>
+        public string PageId{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面名称
+        ///</summary>
+        public string PageName{ get; set; }
     }
 }

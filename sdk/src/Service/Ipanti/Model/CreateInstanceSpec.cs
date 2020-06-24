@@ -64,16 +64,12 @@ namespace JDCloudSDK.Ipanti.Model
         public int? IpType{ get; set; }
         ///<summary>
         /// IP 数量
-        ///Required:true
         ///</summary>
-        [Required]
-        public int IpCount{ get; set; }
+        public int? IpCount{ get; set; }
         ///<summary>
         /// 可配的转发端口数量
-        ///Required:true
         ///</summary>
-        [Required]
-        public int PortCount{ get; set; }
+        public int? PortCount{ get; set; }
         ///<summary>
         /// 可配的网站规则域名数量
         ///</summary>
@@ -97,9 +93,9 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public int Bw{ get; set; }
         ///<summary>
-        /// 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
+        /// 购买时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
         ///</summary>
-        public long? TimeSpan{ get; set; }
+        public int? TimeSpan{ get; set; }
         ///<summary>
         /// 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
         ///</summary>

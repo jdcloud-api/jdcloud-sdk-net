@@ -48,7 +48,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名
+        /// 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名, serviceIp: 高防IP(仅支持BGP线路的实例)
         ///</summary>
         public   string SearchType{ get; set; }
         ///<summary>

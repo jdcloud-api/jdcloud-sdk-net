@@ -38,11 +38,11 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 四层黑名单引用的IP黑白名单库列表
+        /// 黑名单引用的IP黑白名单库列表
         ///</summary>
         public List<IpSet> BlackListIds{ get; set; }
         ///<summary>
-        /// 四层白名单引用的IP黑白名单库列表
+        /// 白名单引用的IP黑白名单库列表
         ///</summary>
         public List<IpSet> WhiteListIds{ get; set; }
         ///<summary>

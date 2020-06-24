@@ -42,7 +42,7 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public double? AttackTraffic{ get; set; }
         ///<summary>
-        /// 是否触发黑洞, 0否 1是
+        /// 封禁状态,0:未封禁,1:封禁中,2:封禁结束
         ///</summary>
         public int? BlackHole{ get; set; }
         ///<summary>

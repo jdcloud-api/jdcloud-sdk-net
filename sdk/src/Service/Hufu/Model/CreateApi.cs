@@ -39,6 +39,12 @@ namespace JDCloudSDK.Hufu.Model
     {
 
         ///<summary>
+        /// 分组ID
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string ApiGroupId{ get; set; }
+        ///<summary>
         /// 名称
         ///Required:true
         ///</summary>
@@ -56,6 +62,12 @@ namespace JDCloudSDK.Hufu.Model
         ///</summary>
         [Required]
         public string Path{ get; set; }
+        ///<summary>
+        /// 匹配模式：&quot;absolute&quot;(绝对匹配); &quot;prefix&quot;（前缀匹配）;
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string MatchType{ get; set; }
         ///<summary>
         /// 描述
         ///</summary>
@@ -128,5 +140,13 @@ namespace JDCloudSDK.Hufu.Model
         /// 响应格式类型,当resBodyType等于3时,使用该响应格式类型
         ///</summary>
         public string EditableResBodyType{ get; set; }
+        ///<summary>
+        /// 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+        ///</summary>
+        public int? ReqBodyFormatType{ get; set; }
+        ///<summary>
+        /// 返回提格式类型，1代表jsonschema，2代表swagger，默认为1
+        ///</summary>
+        public int? ResBodyFormatType{ get; set; }
     }
 }

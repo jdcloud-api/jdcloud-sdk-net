@@ -54,6 +54,14 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string CidrAddr{ get; set; }
         ///<summary>
+        /// IP数量
+        ///</summary>
+        public string IpQuantity{ get; set; }
+        ///<summary>
+        /// IP类型 IPV4/IPV6
+        ///</summary>
+        public string IpType{ get; set; }
+        ///<summary>
         /// 网络位地址
         ///</summary>
         public string NetworkAddr{ get; set; }
@@ -65,6 +73,10 @@ namespace JDCloudSDK.Jdccs.Model
         /// 广播地址
         ///</summary>
         public string BroadcastAddr{ get; set; }
+        ///<summary>
+        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        ///</summary>
+        public string LineType{ get; set; }
         ///<summary>
         /// 状态 normal:正常 abnormal:异常
         ///</summary>

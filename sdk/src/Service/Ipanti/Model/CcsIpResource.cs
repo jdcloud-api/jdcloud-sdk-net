@@ -32,9 +32,9 @@ namespace JDCloudSDK.Ipanti.Model
 {
 
     /// <summary>
-    ///  cpsIpResource
+    ///  ccsIpResource
     /// </summary>
-    public class CpsIpResource
+    public class CcsIpResource
     {
 
         ///<summary>
