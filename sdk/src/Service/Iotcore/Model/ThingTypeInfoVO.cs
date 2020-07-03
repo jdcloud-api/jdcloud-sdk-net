@@ -51,6 +51,10 @@ namespace JDCloudSDK.Iotcore.Model
         ///</summary>
         public string CreatedTime{ get; set; }
         ///<summary>
+        /// 更新时间
+        ///</summary>
+        public string UpdateTime{ get; set; }
+        ///<summary>
         /// 自定义档案信息
         ///</summary>
         public List<CustomProfileVO> CustomProfiles{ get; set; }
@@ -82,11 +86,15 @@ namespace JDCloudSDK.Iotcore.Model
         public int? NodeType{ get; set; }
         ///<summary>
         /// 所属物类型Code
+        ///Required:true
         ///</summary>
+        [Required]
         public string Code{ get; set; }
         ///<summary>
-        /// 更新时间
+        /// 所属物类型名称
+        ///Required:true
         ///</summary>
-        public string UpdateTime{ get; set; }
+        [Required]
+        public string Name{ get; set; }
     }
 }

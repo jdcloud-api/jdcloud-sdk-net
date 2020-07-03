@@ -67,6 +67,12 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   object InternalTags{ get; set; }
         ///<summary>
+        /// 产品名下所有设备的采集器类型
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string CollDeviceType{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>

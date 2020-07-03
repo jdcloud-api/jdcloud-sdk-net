@@ -35,16 +35,16 @@ namespace  JDCloudSDK.Iotcore.Apis
 {
 
     /// <summary>
-    ///  根据模型ID查看物模型完整信息
+    ///  根据物类型Code查看物模型完整信息
     /// </summary>
     public class DescribeThingModelRequest : JdcloudRequest
     {
         ///<summary>
-        /// 物模型ID编号
+        /// 物类型Code
         ///Required:true
         ///</summary>
         [Required]
-        public   string ThingModelId{ get; set; }
+        public   string ThingTypeCode{ get; set; }
         ///<summary>
         /// 版本号。如果为空，则返回最新版本
         ///</summary>

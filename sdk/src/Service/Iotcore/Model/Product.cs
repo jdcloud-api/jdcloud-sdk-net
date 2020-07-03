@@ -63,5 +63,9 @@ namespace JDCloudSDK.Iotcore.Model
         /// 产品类型，如自定义等
         ///</summary>
         public string TemplateName{ get; set; }
+        ///<summary>
+        /// 产品的采集器类型
+        ///</summary>
+        public string CollDeviceType{ get; set; }
     }
 }

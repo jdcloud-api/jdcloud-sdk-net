@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Iotcore.Model;
 
 namespace  JDCloudSDK.Iotcore.Apis
 {
@@ -37,5 +38,21 @@ namespace  JDCloudSDK.Iotcore.Apis
     /// </summary>
     public class InvokeFunctionResult : JdcloudResult
     {
+        ///<summary>
+        /// Code
+        ///</summary>
+        public   int? Code{ get; set; }
+        ///<summary>
+        /// Message
+        ///</summary>
+        public   string Message{ get; set; }
+        ///<summary>
+        /// Success
+        ///</summary>
+        public   bool Success{ get; set; }
+        ///<summary>
+        /// ReturnValues
+        ///</summary>
+        public   DeviceFunctionVO ReturnValues{ get; set; }
     }
 }

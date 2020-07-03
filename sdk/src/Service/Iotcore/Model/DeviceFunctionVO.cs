@@ -45,14 +45,16 @@ namespace JDCloudSDK.Iotcore.Model
         [Required]
         public string DeviceId{ get; set; }
         ///<summary>
-        /// 输入参数
+        /// 方法Key
+        ///</summary>
+        public string FunctionKey{ get; set; }
+        ///<summary>
+        /// 输入参数（Map&lt;String,Object&gt;类型）
         ///</summary>
         public Dictionary<String,string> InParams{ get; set; }
         ///<summary>
-        /// 服务名称
-        ///Required:true
+        /// 输出参数（Map&lt;String,Object&gt;类型）
         ///</summary>
-        [Required]
-        public string FunctionName{ get; set; }
+        public Dictionary<String,string> OutParams{ get; set; }
     }
 }

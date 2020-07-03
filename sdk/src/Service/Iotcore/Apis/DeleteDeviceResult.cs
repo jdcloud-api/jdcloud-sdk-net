@@ -37,5 +37,9 @@ namespace  JDCloudSDK.Iotcore.Apis
     /// </summary>
     public class DeleteDeviceResult : JdcloudResult
     {
+        ///<summary>
+        /// 是否删除成功
+        ///</summary>
+        public   bool Success{ get; set; }
     }
 }

@@ -44,6 +44,14 @@ namespace  JDCloudSDK.Iotcore.Apis
         ///</summary>
         public   string DeviceName{ get; set; }
         ///<summary>
+        /// 设备厂商，模糊匹配
+        ///</summary>
+        public   string Manufacturer{ get; set; }
+        ///<summary>
+        /// 设备型号，模糊匹配
+        ///</summary>
+        public   string Model{ get; set; }
+        ///<summary>
         /// 设备状态 0-未激活，1-激活离线，2-激活在线
         ///</summary>
         public   int? Status{ get; set; }

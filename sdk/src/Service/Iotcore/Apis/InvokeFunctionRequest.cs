@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Iotcore.Apis
     public class InvokeFunctionRequest : JdcloudRequest
     {
         ///<summary>
-        /// 设备ID
+        /// 设备方法
         ///Required:true
         ///</summary>
         [Required]
