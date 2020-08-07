@@ -95,7 +95,7 @@ namespace JDCloudSDK.Asset.Client
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
-        private const string defaultEndpoint = "asset.jcloud.com";
+        private const string defaultEndpoint = "asset.jdcloud-api.com";
         private const string serviceName = "asset";
         private const string userAgent = userAgentPrefix + "/" + ClientVersion + " " + serviceName + "/" + apiVersion;
 
