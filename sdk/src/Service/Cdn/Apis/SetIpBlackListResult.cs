@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  设置ip黑名单
+    ///  设置ip黑名白单
     /// </summary>
     public class SetIpBlackListResult : JdcloudResult
     {

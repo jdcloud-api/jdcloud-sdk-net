@@ -164,5 +164,17 @@ namespace JDCloudSDK.Rds.Model
         /// 标签信息
         ///</summary>
         public List<Tag> Tags{ get; set; }
+        ///<summary>
+        /// 对接的目录服务的相关信息&lt;br&gt;仅支SQL Server
+        ///</summary>
+        public ADService ActiveDirectory{ get; set; }
+        ///<summary>
+        /// 只读代理服务 ID
+        ///</summary>
+        public string RoInstanceProxyID{ get; set; }
+        ///<summary>
+        /// 读写分离代理服务 ID
+        ///</summary>
+        public string ReadWriteProxyId{ get; set; }
     }
 }

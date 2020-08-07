@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cdn.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,6 +157,63 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询用户服务通知接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryServiceNoticeResponse QueryServiceNotice(QueryServiceNoticeRequest request) {
+            return  new QueryServiceNoticeExecutor().Client(this).Execute<QueryServiceNoticeResponse, QueryServiceNoticeResult, QueryServiceNoticeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户服务通知接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryServiceNoticeResponse> QueryServiceNotice(QueryServiceNoticeRequest request) {
+            return await new QueryServiceNoticeExecutor().Client(this).Execute<QueryServiceNoticeResponse, QueryServiceNoticeResult, QueryServiceNoticeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询设备状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDeviceStatusForPCdnResponse QueryDeviceStatusForPCdn(QueryDeviceStatusForPCdnRequest request) {
+            return  new QueryDeviceStatusForPCdnExecutor().Client(this).Execute<QueryDeviceStatusForPCdnResponse, QueryDeviceStatusForPCdnResult, QueryDeviceStatusForPCdnRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询设备状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDeviceStatusForPCdnResponse> QueryDeviceStatusForPCdn(QueryDeviceStatusForPCdnRequest request) {
+            return await new QueryDeviceStatusForPCdnExecutor().Client(this).Execute<QueryDeviceStatusForPCdnResponse, QueryDeviceStatusForPCdnResult, QueryDeviceStatusForPCdnRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询目录基础统计数据，仅有部分用户支持该功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDirStatsDataResponse QueryDirStatsData(QueryDirStatsDataRequest request) {
+            return  new QueryDirStatsDataExecutor().Client(this).Execute<QueryDirStatsDataResponse, QueryDirStatsDataResult, QueryDirStatsDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询目录基础统计数据，仅有部分用户支持该功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDirStatsDataResponse> QueryDirStatsData(QueryDirStatsDataRequest request) {
+            return await new QueryDirStatsDataExecutor().Client(this).Execute<QueryDirStatsDataResponse, QueryDirStatsDataResult, QueryDirStatsDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询域名组详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -172,6 +229,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryDomainGroupDetailResponse> QueryDomainGroupDetail(QueryDomainGroupDetailRequest request) {
             return await new QueryDomainGroupDetailExecutor().Client(this).Execute<QueryDomainGroupDetailResponse, QueryDomainGroupDetailResult, QueryDomainGroupDetailRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询模板详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainTempProKeysResponse QueryDomainTempProKeys(QueryDomainTempProKeysRequest request) {
+            return  new QueryDomainTempProKeysExecutor().Client(this).Execute<QueryDomainTempProKeysResponse, QueryDomainTempProKeysResult, QueryDomainTempProKeysRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询模板详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainTempProKeysResponse> QueryDomainTempProKeys(QueryDomainTempProKeysRequest request) {
+            return await new QueryDomainTempProKeysExecutor().Client(this).Execute<QueryDomainTempProKeysResponse, QueryDomainTempProKeysResult, QueryDomainTempProKeysRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -210,6 +286,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteHttpHeaderResponse> DeleteHttpHeader(DeleteHttpHeaderRequest request) {
             return await new DeleteHttpHeaderExecutor().Client(this).Execute<DeleteHttpHeaderResponse, DeleteHttpHeaderResult, DeleteHttpHeaderRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置自定义错误页面信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCustomErrorPageResponse SetCustomErrorPage(SetCustomErrorPageRequest request) {
+            return  new SetCustomErrorPageExecutor().Client(this).Execute<SetCustomErrorPageResponse, SetCustomErrorPageResult, SetCustomErrorPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置自定义错误页面信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCustomErrorPageResponse> SetCustomErrorPage(SetCustomErrorPageRequest request) {
+            return await new SetCustomErrorPageExecutor().Client(this).Execute<SetCustomErrorPageResponse, SetCustomErrorPageResult, SetCustomErrorPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -347,7 +442,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置ip黑名单
+        ///  设置ip黑名白单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -356,7 +451,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  设置ip黑名单
+        ///  设置ip黑名白单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -499,7 +594,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置直播域名ip黑名单
+        ///  设置直播域名ip黑白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -508,7 +603,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  设置直播域名ip黑名单
+        ///  设置直播域名ip黑白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -537,6 +632,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetExtraCacheTimeResponse SetExtraCacheTime(SetExtraCacheTimeRequest request) {
+            return  new SetExtraCacheTimeExecutor().Client(this).Execute<SetExtraCacheTimeResponse, SetExtraCacheTimeResult, SetExtraCacheTimeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetExtraCacheTimeResponse> SetExtraCacheTime(SetExtraCacheTimeRequest request) {
+            return await new SetExtraCacheTimeExecutor().Client(this).Execute<SetExtraCacheTimeResponse, SetExtraCacheTimeResult, SetExtraCacheTimeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询源站监控信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -552,6 +666,44 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryMonitorResponse> QueryMonitor(QueryMonitorRequest request) {
             return await new QueryMonitorExecutor().Client(this).Execute<QueryMonitorResponse, QueryMonitorResult, QueryMonitorRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户刷新预热封禁限额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryCdnUserQuotaResponse QueryCdnUserQuota(QueryCdnUserQuotaRequest request) {
+            return  new QueryCdnUserQuotaExecutor().Client(this).Execute<QueryCdnUserQuotaResponse, QueryCdnUserQuotaResult, QueryCdnUserQuotaRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户刷新预热封禁限额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryCdnUserQuotaResponse> QueryCdnUserQuota(QueryCdnUserQuotaRequest request) {
+            return await new QueryCdnUserQuotaExecutor().Client(this).Execute<QueryCdnUserQuotaResponse, QueryCdnUserQuotaResult, QueryCdnUserQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取所有上层节点的ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckWhetherIpBelongToJCloudV2Response CheckWhetherIpBelongToJCloudV2(CheckWhetherIpBelongToJCloudV2Request request) {
+            return  new CheckWhetherIpBelongToJCloudV2Executor().Client(this).Execute<CheckWhetherIpBelongToJCloudV2Response, CheckWhetherIpBelongToJCloudV2Result, CheckWhetherIpBelongToJCloudV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  获取所有上层节点的ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckWhetherIpBelongToJCloudV2Response> CheckWhetherIpBelongToJCloudV2(CheckWhetherIpBelongToJCloudV2Request request) {
+            return await new CheckWhetherIpBelongToJCloudV2Executor().Client(this).Execute<CheckWhetherIpBelongToJCloudV2Response, CheckWhetherIpBelongToJCloudV2Result, CheckWhetherIpBelongToJCloudV2Request>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -727,6 +879,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询http2配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryHttp2Response QueryHttp2(QueryHttp2Request request) {
+            return  new QueryHttp2Executor().Client(this).Execute<QueryHttp2Response, QueryHttp2Result, QueryHttp2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  查询http2配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryHttp2Response> QueryHttp2(QueryHttp2Request request) {
+            return await new QueryHttp2Executor().Client(this).Execute<QueryHttp2Response, QueryHttp2Result, QueryHttp2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询加速域名详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -761,6 +932,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetNetProtectionRulesSwitchResponse> SetNetProtectionRulesSwitch(SetNetProtectionRulesSwitchRequest request) {
             return await new SetNetProtectionRulesSwitchExecutor().Client(this).Execute<SetNetProtectionRulesSwitchResponse, SetNetProtectionRulesSwitchResult, SetNetProtectionRulesSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  http2配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfigHttp2Response ConfigHttp2(ConfigHttp2Request request) {
+            return  new ConfigHttp2Executor().Client(this).Execute<ConfigHttp2Response, ConfigHttp2Result, ConfigHttp2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  http2配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfigHttp2Response> ConfigHttp2(ConfigHttp2Request request) {
+            return await new ConfigHttp2Executor().Client(this).Execute<ConfigHttp2Response, ConfigHttp2Result, ConfigHttp2Request>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -993,6 +1183,44 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询刷新任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryPurgeTaskResponse QueryPurgeTask(QueryPurgeTaskRequest request) {
+            return  new QueryPurgeTaskExecutor().Client(this).Execute<QueryPurgeTaskResponse, QueryPurgeTaskResult, QueryPurgeTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询刷新任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryPurgeTaskResponse> QueryPurgeTask(QueryPurgeTaskRequest request) {
+            return await new QueryPurgeTaskExecutor().Client(this).Execute<QueryPurgeTaskResponse, QueryPurgeTaskResult, QueryPurgeTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置gzip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetGzipResponse SetGzip(SetGzipRequest request) {
+            return  new SetGzipExecutor().Client(this).Execute<SetGzipResponse, SetGzipResult, SetGzipRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置gzip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetGzipResponse> SetGzip(SetGzipRequest request) {
+            return await new SetGzipExecutor().Client(this).Execute<SetGzipResponse, SetGzipResult, SetGzipRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询统计数据
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1107,6 +1335,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建修改模板实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyDomainTempInstResponse ModifyDomainTempInst(ModifyDomainTempInstRequest request) {
+            return  new ModifyDomainTempInstExecutor().Client(this).Execute<ModifyDomainTempInstResponse, ModifyDomainTempInstResult, ModifyDomainTempInstRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建修改模板实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyDomainTempInstResponse> ModifyDomainTempInst(ModifyDomainTempInstRequest request) {
+            return await new ModifyDomainTempInstExecutor().Client(this).Execute<ModifyDomainTempInstResponse, ModifyDomainTempInstResult, ModifyDomainTempInstRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建直播预热任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1179,6 +1426,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<StopMonitorResponse> StopMonitor(StopMonitorRequest request) {
             return await new StopMonitorExecutor().Client(this).Execute<StopMonitorResponse, StopMonitorResult, StopMonitorRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除修改模板实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DelDomainTempInstanceResponse DelDomainTempInstance(DelDomainTempInstanceRequest request) {
+            return  new DelDomainTempInstanceExecutor().Client(this).Execute<DelDomainTempInstanceResponse, DelDomainTempInstanceResult, DelDomainTempInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除修改模板实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DelDomainTempInstanceResponse> DelDomainTempInstance(DelDomainTempInstanceRequest request) {
+            return await new DelDomainTempInstanceExecutor().Client(this).Execute<DelDomainTempInstanceResponse, DelDomainTempInstanceResult, DelDomainTempInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1316,6 +1582,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询平均带宽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryAvgBandwidthForPCdnResponse QueryAvgBandwidthForPCdn(QueryAvgBandwidthForPCdnRequest request) {
+            return  new QueryAvgBandwidthForPCdnExecutor().Client(this).Execute<QueryAvgBandwidthForPCdnResponse, QueryAvgBandwidthForPCdnResult, QueryAvgBandwidthForPCdnRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询平均带宽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryAvgBandwidthForPCdnResponse> QueryAvgBandwidthForPCdn(QueryAvgBandwidthForPCdnRequest request) {
+            return await new QueryAvgBandwidthForPCdnExecutor().Client(this).Execute<QueryAvgBandwidthForPCdnResponse, QueryAvgBandwidthForPCdnResult, QueryAvgBandwidthForPCdnRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询WAF白名单规则列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1331,6 +1616,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QuerywafWhiteRulesResponse> QuerywafWhiteRules(QuerywafWhiteRulesRequest request) {
             return await new QuerywafWhiteRulesExecutor().Client(this).Execute<QuerywafWhiteRulesResponse, QuerywafWhiteRulesResult, QuerywafWhiteRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义错误页面信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryCustomErrorPageResponse QueryCustomErrorPage(QueryCustomErrorPageRequest request) {
+            return  new QueryCustomErrorPageExecutor().Client(this).Execute<QueryCustomErrorPageResponse, QueryCustomErrorPageResult, QueryCustomErrorPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义错误页面信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryCustomErrorPageResponse> QueryCustomErrorPage(QueryCustomErrorPageRequest request) {
+            return await new QueryCustomErrorPageExecutor().Client(this).Execute<QueryCustomErrorPageResponse, QueryCustomErrorPageResult, QueryCustomErrorPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1369,6 +1673,63 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetHttpTypeResponse> SetHttpType(SetHttpTypeRequest request) {
             return await new SetHttpTypeExecutor().Client(this).Execute<SetHttpTypeResponse, SetHttpTypeResult, SetHttpTypeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询ip黑白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveDomainIpBlackWhiteListResponse QueryLiveDomainIpBlackWhiteList(QueryLiveDomainIpBlackWhiteListRequest request) {
+            return  new QueryLiveDomainIpBlackWhiteListExecutor().Client(this).Execute<QueryLiveDomainIpBlackWhiteListResponse, QueryLiveDomainIpBlackWhiteListResult, QueryLiveDomainIpBlackWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询ip黑白名单
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveDomainIpBlackWhiteListResponse> QueryLiveDomainIpBlackWhiteList(QueryLiveDomainIpBlackWhiteListRequest request) {
+            return await new QueryLiveDomainIpBlackWhiteListExecutor().Client(this).Execute<QueryLiveDomainIpBlackWhiteListResponse, QueryLiveDomainIpBlackWhiteListResult, QueryLiveDomainIpBlackWhiteListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryExtraCacheTimeResponse QueryExtraCacheTime(QueryExtraCacheTimeRequest request) {
+            return  new QueryExtraCacheTimeExecutor().Client(this).Execute<QueryExtraCacheTimeResponse, QueryExtraCacheTimeResult, QueryExtraCacheTimeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryExtraCacheTimeResponse> QueryExtraCacheTime(QueryExtraCacheTimeRequest request) {
+            return await new QueryExtraCacheTimeExecutor().Client(this).Execute<QueryExtraCacheTimeResponse, QueryExtraCacheTimeResult, QueryExtraCacheTimeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  停止预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopPrefetchTaskResponse StopPrefetchTask(StopPrefetchTaskRequest request) {
+            return  new StopPrefetchTaskExecutor().Client(this).Execute<StopPrefetchTaskResponse, StopPrefetchTaskResult, StopPrefetchTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopPrefetchTaskResponse> StopPrefetchTask(StopPrefetchTaskRequest request) {
+            return await new StopPrefetchTaskExecutor().Client(this).Execute<StopPrefetchTaskResponse, StopPrefetchTaskResult, StopPrefetchTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1430,7 +1791,26 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询ip黑名单
+        ///  查询解封状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryUnForbiddenStatusResponse QueryUnForbiddenStatus(QueryUnForbiddenStatusRequest request) {
+            return  new QueryUnForbiddenStatusExecutor().Client(this).Execute<QueryUnForbiddenStatusResponse, QueryUnForbiddenStatusResult, QueryUnForbiddenStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询解封状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryUnForbiddenStatusResponse> QueryUnForbiddenStatus(QueryUnForbiddenStatusRequest request) {
+            return await new QueryUnForbiddenStatusExecutor().Client(this).Execute<QueryUnForbiddenStatusResponse, QueryUnForbiddenStatusResult, QueryUnForbiddenStatusRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询ip黑白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1439,12 +1819,31 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  查询ip黑名单
+        ///  查询ip黑白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<QueryIpBlackListResponse> QueryIpBlackList(QueryIpBlackListRequest request) {
             return await new QueryIpBlackListExecutor().Client(this).Execute<QueryIpBlackListResponse, QueryIpBlackListResult, QueryIpBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  回源改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfigBackSourceRuleResponse ConfigBackSourceRule(ConfigBackSourceRuleRequest request) {
+            return  new ConfigBackSourceRuleExecutor().Client(this).Execute<ConfigBackSourceRuleResponse, ConfigBackSourceRuleResult, ConfigBackSourceRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  回源改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfigBackSourceRuleResponse> ConfigBackSourceRule(ConfigBackSourceRuleRequest request) {
+            return await new ConfigBackSourceRuleExecutor().Client(this).Execute<ConfigBackSourceRuleResponse, ConfigBackSourceRuleResult, ConfigBackSourceRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1464,6 +1863,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveDomainBackSourceHostResponse> SetLiveDomainBackSourceHost(SetLiveDomainBackSourceHostRequest request) {
             return await new SetLiveDomainBackSourceHostExecutor().Client(this).Execute<SetLiveDomainBackSourceHostResponse, SetLiveDomainBackSourceHostResult, SetLiveDomainBackSourceHostRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteExtraCacheTimeResponse DeleteExtraCacheTime(DeleteExtraCacheTimeRequest request) {
+            return  new DeleteExtraCacheTimeExecutor().Client(this).Execute<DeleteExtraCacheTimeResponse, DeleteExtraCacheTimeResult, DeleteExtraCacheTimeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteExtraCacheTimeResponse> DeleteExtraCacheTime(DeleteExtraCacheTimeRequest request) {
+            return await new DeleteExtraCacheTimeExecutor().Client(this).Execute<DeleteExtraCacheTimeResponse, DeleteExtraCacheTimeResult, DeleteExtraCacheTimeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1502,6 +1920,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryCCProtectRulesResponse> QueryCCProtectRules(QueryCCProtectRulesRequest request) {
             return await new QueryCCProtectRulesExecutor().Client(this).Execute<QueryCCProtectRulesResponse, QueryCCProtectRulesResult, QueryCCProtectRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  设置加速区域
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetAccelerateRegionResponse SetAccelerateRegion(SetAccelerateRegionRequest request) {
+            return  new SetAccelerateRegionExecutor().Client(this).Execute<SetAccelerateRegionResponse, SetAccelerateRegionResult, SetAccelerateRegionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置加速区域
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetAccelerateRegionResponse> SetAccelerateRegion(SetAccelerateRegionRequest request) {
+            return await new SetAccelerateRegionExecutor().Client(this).Execute<SetAccelerateRegionResponse, SetAccelerateRegionResult, SetAccelerateRegionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1601,6 +2038,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  更新预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdatePrefetchTaskResponse UpdatePrefetchTask(UpdatePrefetchTaskRequest request) {
+            return  new UpdatePrefetchTaskExecutor().Client(this).Execute<UpdatePrefetchTaskResponse, UpdatePrefetchTaskResult, UpdatePrefetchTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdatePrefetchTaskResponse> UpdatePrefetchTask(UpdatePrefetchTaskRequest request) {
+            return await new UpdatePrefetchTaskExecutor().Client(this).Execute<UpdatePrefetchTaskResponse, UpdatePrefetchTaskResult, UpdatePrefetchTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置网络防护层规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1677,6 +2133,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询Url改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryUrlRuleResponse QueryUrlRule(QueryUrlRuleRequest request) {
+            return  new QueryUrlRuleExecutor().Client(this).Execute<QueryUrlRuleResponse, QueryUrlRuleResult, QueryUrlRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询Url改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryUrlRuleResponse> QueryUrlRule(QueryUrlRuleRequest request) {
+            return await new QueryUrlRuleExecutor().Client(this).Execute<QueryUrlRuleResponse, QueryUrlRuleResult, QueryUrlRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建点播加速域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1692,6 +2167,44 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest request) {
             return await new CreateDomainExecutor().Client(this).Execute<CreateDomainResponse, CreateDomainResult, CreateDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询模板实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainTempInstResponse QueryDomainTempInst(QueryDomainTempInstRequest request) {
+            return  new QueryDomainTempInstExecutor().Client(this).Execute<QueryDomainTempInstResponse, QueryDomainTempInstResult, QueryDomainTempInstRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询模板实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainTempInstResponse> QueryDomainTempInst(QueryDomainTempInstRequest request) {
+            return await new QueryDomainTempInstExecutor().Client(this).Execute<QueryDomainTempInstResponse, QueryDomainTempInstResult, QueryDomainTempInstRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询一个域名的全部调度ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryServiceIpResponse QueryServiceIp(QueryServiceIpRequest request) {
+            return  new QueryServiceIpExecutor().Client(this).Execute<QueryServiceIpResponse, QueryServiceIpResult, QueryServiceIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询一个域名的全部调度ip
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryServiceIpResponse> QueryServiceIp(QueryServiceIpRequest request) {
+            return await new QueryServiceIpExecutor().Client(this).Execute<QueryServiceIpResponse, QueryServiceIpResult, QueryServiceIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1768,6 +2281,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryCCProtectSwitchResponse> QueryCCProtectSwitch(QueryCCProtectSwitchRequest request) {
             return await new QueryCCProtectSwitchExecutor().Client(this).Execute<QueryCCProtectSwitchResponse, QueryCCProtectSwitchResult, QueryCCProtectSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  多path回源配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfigBackSourcePathResponse ConfigBackSourcePath(ConfigBackSourcePathRequest request) {
+            return  new ConfigBackSourcePathExecutor().Client(this).Execute<ConfigBackSourcePathResponse, ConfigBackSourcePathResult, ConfigBackSourcePathRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  多path回源配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfigBackSourcePathResponse> ConfigBackSourcePath(ConfigBackSourcePathRequest request) {
+            return await new ConfigBackSourcePathExecutor().Client(this).Execute<ConfigBackSourcePathResponse, ConfigBackSourcePathResult, ConfigBackSourcePathRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1882,6 +2414,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<OperateLiveDomainIpBlackListResponse> OperateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) {
             return await new OperateLiveDomainIpBlackListExecutor().Client(this).Execute<OperateLiveDomainIpBlackListResponse, OperateLiveDomainIpBlackListResult, OperateLiveDomainIpBlackListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  URL改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfigUrlRuleResponse ConfigUrlRule(ConfigUrlRuleRequest request) {
+            return  new ConfigUrlRuleExecutor().Client(this).Execute<ConfigUrlRuleResponse, ConfigUrlRuleResult, ConfigUrlRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  URL改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfigUrlRuleResponse> ConfigUrlRule(ConfigUrlRuleRequest request) {
+            return await new ConfigUrlRuleExecutor().Client(this).Execute<ConfigUrlRuleResponse, ConfigUrlRuleResult, ConfigUrlRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2015,6 +2566,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest request) {
             return await new DeleteDomainExecutor().Client(this).Execute<DeleteDomainResponse, DeleteDomainResult, DeleteDomainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询回源path
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryBackSourcePathResponse QueryBackSourcePath(QueryBackSourcePathRequest request) {
+            return  new QueryBackSourcePathExecutor().Client(this).Execute<QueryBackSourcePathResponse, QueryBackSourcePathResult, QueryBackSourcePathRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询回源path
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryBackSourcePathResponse> QueryBackSourcePath(QueryBackSourcePathRequest request) {
+            return await new QueryBackSourcePathExecutor().Client(this).Execute<QueryBackSourcePathResponse, QueryBackSourcePathResult, QueryBackSourcePathRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2190,6 +2760,63 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryPrefetchTaskResponse QueryPrefetchTask(QueryPrefetchTaskRequest request) {
+            return  new QueryPrefetchTaskExecutor().Client(this).Execute<QueryPrefetchTaskResponse, QueryPrefetchTaskResult, QueryPrefetchTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryPrefetchTaskResponse> QueryPrefetchTask(QueryPrefetchTaskRequest request) {
+            return await new QueryPrefetchTaskExecutor().Client(this).Execute<QueryPrefetchTaskResponse, QueryPrefetchTaskResult, QueryPrefetchTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  无线宝按条件查询的统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryJDBoxStatisticsDataResponse QueryJDBoxStatisticsData(QueryJDBoxStatisticsDataRequest request) {
+            return  new QueryJDBoxStatisticsDataExecutor().Client(this).Execute<QueryJDBoxStatisticsDataResponse, QueryJDBoxStatisticsDataResult, QueryJDBoxStatisticsDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  无线宝按条件查询的统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryJDBoxStatisticsDataResponse> QueryJDBoxStatisticsData(QueryJDBoxStatisticsDataRequest request) {
+            return await new QueryJDBoxStatisticsDataExecutor().Client(this).Execute<QueryJDBoxStatisticsDataResponse, QueryJDBoxStatisticsDataResult, QueryJDBoxStatisticsDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询封禁信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryForbiddenInfoListResponse QueryForbiddenInfoList(QueryForbiddenInfoListRequest request) {
+            return  new QueryForbiddenInfoListExecutor().Client(this).Execute<QueryForbiddenInfoListResponse, QueryForbiddenInfoListResult, QueryForbiddenInfoListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询封禁信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryForbiddenInfoListResponse> QueryForbiddenInfoList(QueryForbiddenInfoListRequest request) {
+            return await new QueryForbiddenInfoListExecutor().Client(this).Execute<QueryForbiddenInfoListResponse, QueryForbiddenInfoListResult, QueryForbiddenInfoListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询协议跟随回源
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2209,6 +2836,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询模板实例列表接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryDomainTempInstListResponse QueryDomainTempInstList(QueryDomainTempInstListRequest request) {
+            return  new QueryDomainTempInstListExecutor().Client(this).Execute<QueryDomainTempInstListResponse, QueryDomainTempInstListResult, QueryDomainTempInstListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询模板实例列表接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryDomainTempInstListResponse> QueryDomainTempInstList(QueryDomainTempInstListRequest request) {
+            return await new QueryDomainTempInstListExecutor().Client(this).Execute<QueryDomainTempInstListResponse, QueryDomainTempInstListResult, QueryDomainTempInstListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  更新域名组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2224,6 +2870,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateDomainGroupResponse> UpdateDomainGroup(UpdateDomainGroupRequest request) {
             return await new UpdateDomainGroupExecutor().Client(this).Execute<UpdateDomainGroupResponse, UpdateDomainGroupResult, UpdateDomainGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatCreatePrefetchTaskResponse BatCreatePrefetchTask(BatCreatePrefetchTaskRequest request) {
+            return  new BatCreatePrefetchTaskExecutor().Client(this).Execute<BatCreatePrefetchTaskResponse, BatCreatePrefetchTaskResult, BatCreatePrefetchTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建预热任务接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatCreatePrefetchTaskResponse> BatCreatePrefetchTask(BatCreatePrefetchTaskRequest request) {
+            return await new BatCreatePrefetchTaskExecutor().Client(this).Execute<BatCreatePrefetchTaskResponse, BatCreatePrefetchTaskResult, BatCreatePrefetchTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2285,6 +2950,44 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除封禁信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteForbiddenInfoResponse DeleteForbiddenInfo(DeleteForbiddenInfoRequest request) {
+            return  new DeleteForbiddenInfoExecutor().Client(this).Execute<DeleteForbiddenInfoResponse, DeleteForbiddenInfoResult, DeleteForbiddenInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除封禁信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteForbiddenInfoResponse> DeleteForbiddenInfo(DeleteForbiddenInfoRequest request) {
+            return await new DeleteForbiddenInfoExecutor().Client(this).Execute<DeleteForbiddenInfoResponse, DeleteForbiddenInfoResult, DeleteForbiddenInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  配置服务通知接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfigServiceNoticeResponse ConfigServiceNotice(ConfigServiceNoticeRequest request) {
+            return  new ConfigServiceNoticeExecutor().Client(this).Execute<ConfigServiceNoticeResponse, ConfigServiceNoticeResult, ConfigServiceNoticeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  配置服务通知接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfigServiceNoticeResponse> ConfigServiceNotice(ConfigServiceNoticeRequest request) {
+            return await new ConfigServiceNoticeExecutor().Client(this).Execute<ConfigServiceNoticeResponse, ConfigServiceNoticeResult, ConfigServiceNoticeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建刷新预热任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2338,6 +3041,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<PreviewCertificateResponse> PreviewCertificate(PreviewCertificateRequest request) {
             return await new PreviewCertificateExecutor().Client(this).Execute<PreviewCertificateResponse, PreviewCertificateResult, PreviewCertificateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询回源改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryBackSourceRuleResponse QueryBackSourceRule(QueryBackSourceRuleRequest request) {
+            return  new QueryBackSourceRuleExecutor().Client(this).Execute<QueryBackSourceRuleResponse, QueryBackSourceRuleResult, QueryBackSourceRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询回源改写配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryBackSourceRuleResponse> QueryBackSourceRule(QueryBackSourceRuleRequest request) {
+            return await new QueryBackSourceRuleExecutor().Client(this).Execute<QueryBackSourceRuleResponse, QueryBackSourceRuleResult, QueryBackSourceRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2494,6 +3216,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  操作刷新任务接口(包含创建、停止刷新任务)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OperatePurgeTaskResponse OperatePurgeTask(OperatePurgeTaskRequest request) {
+            return  new OperatePurgeTaskExecutor().Client(this).Execute<OperatePurgeTaskResponse, OperatePurgeTaskResult, OperatePurgeTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  操作刷新任务接口(包含创建、停止刷新任务)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OperatePurgeTaskResponse> OperatePurgeTask(OperatePurgeTaskRequest request) {
+            return await new OperatePurgeTaskExecutor().Client(this).Execute<OperatePurgeTaskResponse, OperatePurgeTaskResult, OperatePurgeTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建点播加速域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2551,6 +3292,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置过滤参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetFilterArgsResponse SetFilterArgs(SetFilterArgsRequest request) {
+            return  new SetFilterArgsExecutor().Client(this).Execute<SetFilterArgsResponse, SetFilterArgsResult, SetFilterArgsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置过滤参数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetFilterArgsResponse> SetFilterArgs(SetFilterArgsRequest request) {
+            return await new SetFilterArgsExecutor().Client(this).Execute<SetFilterArgsResponse, SetFilterArgsResult, SetFilterArgsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改CC防护规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2570,6 +3330,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置封禁
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateForbiddenInfoResponse CreateForbiddenInfo(CreateForbiddenInfoRequest request) {
+            return  new CreateForbiddenInfoExecutor().Client(this).Execute<CreateForbiddenInfoResponse, CreateForbiddenInfoResult, CreateForbiddenInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置封禁
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateForbiddenInfoResponse> CreateForbiddenInfo(CreateForbiddenInfoRequest request) {
+            return await new CreateForbiddenInfoExecutor().Client(this).Execute<CreateForbiddenInfoResponse, CreateForbiddenInfoResult, CreateForbiddenInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置线上计费方式
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2585,6 +3364,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryOnlineBillingTypeResponse> QueryOnlineBillingType(QueryOnlineBillingTypeRequest request) {
             return await new QueryOnlineBillingTypeExecutor().Client(this).Execute<QueryOnlineBillingTypeResponse, QueryOnlineBillingTypeResult, QueryOnlineBillingTypeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量设置异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public BatchSetExtraCacheTimeResponse BatchSetExtraCacheTime(BatchSetExtraCacheTimeRequest request) {
+            return  new BatchSetExtraCacheTimeExecutor().Client(this).Execute<BatchSetExtraCacheTimeResponse, BatchSetExtraCacheTimeResult, BatchSetExtraCacheTimeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量设置异常码缓存时间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<BatchSetExtraCacheTimeResponse> BatchSetExtraCacheTime(BatchSetExtraCacheTimeRequest request) {
+            return await new BatchSetExtraCacheTimeExecutor().Client(this).Execute<BatchSetExtraCacheTimeResponse, BatchSetExtraCacheTimeResult, BatchSetExtraCacheTimeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2642,6 +3440,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetWafSwitchResponse> SetWafSwitch(SetWafSwitchRequest request) {
             return await new SetWafSwitchExecutor().Client(this).Execute<SetWafSwitchResponse, SetWafSwitchResult, SetWafSwitchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询保留参数信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryFilterArgsResponse QueryFilterArgs(QueryFilterArgsRequest request) {
+            return  new QueryFilterArgsExecutor().Client(this).Execute<QueryFilterArgsResponse, QueryFilterArgsResult, QueryFilterArgsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询保留参数信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryFilterArgsResponse> QueryFilterArgs(QueryFilterArgsRequest request) {
+            return await new QueryFilterArgsExecutor().Client(this).Execute<QueryFilterArgsResponse, QueryFilterArgsResult, QueryFilterArgsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

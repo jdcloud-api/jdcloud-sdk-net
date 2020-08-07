@@ -48,6 +48,10 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string BackSourceType{ get; set; }
         ///<summary>
+        /// 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
+        ///</summary>
+        public   string AccelerateRegion{ get; set; }
+        ///<summary>
         /// IpSource
         ///</summary>
         public List<IpSourceInfo> IpSource{ get; set; }

@@ -53,5 +53,9 @@ namespace JDCloudSDK.Cdn.Model
         /// 域名组名称
         ///</summary>
         public string DomainGroupName{ get; set; }
+        ///<summary>
+        /// 域名组id
+        ///</summary>
+        public long? Id{ get; set; }
     }
 }

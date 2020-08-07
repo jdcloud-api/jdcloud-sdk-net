@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string CertName{ get; set; }
         ///<summary>
-        /// 绑定域名
+        /// 主域名
         ///</summary>
         public   string CommonName{ get; set; }
         ///<summary>
@@ -62,17 +62,18 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   DateTime? SslCertEndTime{ get; set; }
         ///<summary>
-        /// 是否允许被删除,1允许,0不允许
-        ///</summary>
-        public   int? Deletable{ get; set; }
-        ///<summary>
         /// 对私钥文件使用sha256算法计算的摘要信息
         ///</summary>
         public   string Digest{ get; set; }
         ///<summary>
-        /// 绑定的域名
+        /// 备用域名
         ///</summary>
         public List<string> RelatedDomains{ get; set; }
+
+        ///<summary>
+        /// 绑定的资源
+        ///</summary>
+        public List<string> BindResources{ get; set; }
 
     }
 }

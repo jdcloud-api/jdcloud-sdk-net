@@ -41,5 +41,9 @@ namespace  JDCloudSDK.Rds.Apis
         /// InstanceId
         ///</summary>
         public   string InstanceId{ get; set; }
+        ///<summary>
+        /// OrderId
+        ///</summary>
+        public   string OrderId{ get; set; }
     }
 }

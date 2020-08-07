@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询ip黑名单
+    ///  查询ip黑白名单
     /// </summary>
     public class QueryIpBlackListRequest : JdcloudRequest
     {

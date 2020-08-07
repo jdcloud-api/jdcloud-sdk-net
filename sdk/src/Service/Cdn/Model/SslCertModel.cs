@@ -46,7 +46,7 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string CertName{ get; set; }
         ///<summary>
-        /// 绑定域名
+        /// 主域名
         ///</summary>
         public string CommonName{ get; set; }
         ///<summary>
@@ -70,7 +70,11 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string Digest{ get; set; }
         ///<summary>
-        /// 绑定的域名
+        /// 证书别名
+        ///</summary>
+        public string AliasName{ get; set; }
+        ///<summary>
+        /// 备用域名
         ///</summary>
         public List<string> RelatedDomains{ get; set; }
     }

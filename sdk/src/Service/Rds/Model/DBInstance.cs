@@ -56,6 +56,10 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string InstanceStorageType{ get; set; }
         ///<summary>
+        /// 实例数据加密. false：不加密; true：加密
+        ///</summary>
+        public bool StorageEncrypted{ get; set; }
+        ///<summary>
         /// 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
         ///</summary>
         public string Engine{ get; set; }
@@ -128,5 +132,9 @@ namespace JDCloudSDK.Rds.Model
         /// MySQL、PostgreSQL只读实例对应的主实例ID
         ///</summary>
         public string SourceInstanceId{ get; set; }
+        ///<summary>
+        /// 应用访问端口&lt;br&gt;- 仅支持MySQL
+        ///</summary>
+        public string InstancePort{ get; set; }
     }
 }

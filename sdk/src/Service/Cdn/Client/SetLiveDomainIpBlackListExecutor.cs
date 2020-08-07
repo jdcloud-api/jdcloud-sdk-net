@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 直播域名操作类接口
+ * 直播域名配置类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  设置直播域名ip黑名单
+    ///  设置直播域名ip黑白名单
     /// </summary>
     public class SetLiveDomainIpBlackListExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  设置直播域名ip黑名单接口的Http 请求方法
+        ///  设置直播域名ip黑白名单接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  设置直播域名ip黑名单接口的Http资源请求路径
+        ///  设置直播域名ip黑白名单接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

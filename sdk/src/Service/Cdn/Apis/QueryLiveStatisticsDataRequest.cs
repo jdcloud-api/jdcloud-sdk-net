@@ -82,6 +82,10 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Scheme{ get; set; }
         ///<summary>
+        /// cacheLevel
+        ///</summary>
+        public   string CacheLevel{ get; set; }
+        ///<summary>
         /// 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
         ///</summary>
         public   string Period{ get; set; }

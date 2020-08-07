@@ -44,6 +44,14 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   string StartWindow{ get; set; }
         ///<summary>
+        /// binlog本地保留周期，单位小时,范围24-168
+        ///</summary>
+        public   int? BinlogRetentionPeriod{ get; set; }
+        ///<summary>
+        /// binlog本地占用空间上限，单位%，范围1-50
+        ///</summary>
+        public   int? BinlogUsageLimit{ get; set; }
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>

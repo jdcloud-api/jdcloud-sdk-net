@@ -88,6 +88,10 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   int? Count{ get; set; }
         ///<summary>
+        /// 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
+        ///</summary>
+        public   string RoInstanceProxy{ get; set; }
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>

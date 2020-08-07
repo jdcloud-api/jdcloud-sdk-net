@@ -34,15 +34,19 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  设置ip黑名单
+    ///  设置ip黑名白单
     /// </summary>
     public class SetIpBlackListRequest : JdcloudRequest
     {
         ///<summary>
-        /// ip黑名单,ips中url不能超过50条
+        /// ip名单,ips中url不能超过50条
         ///</summary>
         public List<string> Ips{ get; set; }
 
+        ///<summary>
+        /// ip黑白名单类型，black:黑名单,white:白名单
+        ///</summary>
+        public   string IpListType{ get; set; }
         ///<summary>
         /// 用户域名
         ///Required:true

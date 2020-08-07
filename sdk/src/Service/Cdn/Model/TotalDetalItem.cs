@@ -46,6 +46,14 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public object OriData{ get; set; }
         ///<summary>
+        /// Httpdata
+        ///</summary>
+        public object Httpdata{ get; set; }
+        ///<summary>
+        /// HttpsData
+        ///</summary>
+        public object HttpsData{ get; set; }
+        ///<summary>
         /// TimeStamp
         ///</summary>
         public long? TimeStamp{ get; set; }

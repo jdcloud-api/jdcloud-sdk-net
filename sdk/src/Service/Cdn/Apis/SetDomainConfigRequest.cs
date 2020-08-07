@@ -51,6 +51,18 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string JumpType{ get; set; }
         ///<summary>
+        /// dash鉴权相关配置
+        ///</summary>
+        public   string JcdnTimeAnti{ get; set; }
+        ///<summary>
+        /// 回源鉴权相关配置
+        ///</summary>
+        public   string HdrCtrl{ get; set; }
+        ///<summary>
+        /// 头条header配置
+        ///</summary>
+        public   string ToutiaoHeader{ get; set; }
+        ///<summary>
         /// 用户域名
         ///Required:true
         ///</summary>

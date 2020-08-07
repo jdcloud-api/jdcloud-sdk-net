@@ -91,6 +91,14 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string IsShareOpen{ get; set; }
         ///<summary>
+        /// gzip参数[on,off]
+        ///</summary>
+        public   string Gzip{ get; set; }
+        ///<summary>
+        /// GzipTypes
+        ///</summary>
+        public   string GzipTypes{ get; set; }
+        ///<summary>
         /// CacheRules
         ///</summary>
         public List<CacheRule> CacheRules{ get; set; }

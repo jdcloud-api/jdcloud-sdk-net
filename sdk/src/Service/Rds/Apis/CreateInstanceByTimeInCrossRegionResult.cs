@@ -41,5 +41,9 @@ namespace  JDCloudSDK.Rds.Apis
         /// 新创建的实例ID
         ///</summary>
         public   string InstanceId{ get; set; }
+        ///<summary>
+        /// 订单ID
+        ///</summary>
+        public   string OrderId{ get; set; }
     }
 }

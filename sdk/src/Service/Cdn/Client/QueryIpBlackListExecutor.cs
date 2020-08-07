@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  查询ip黑名单
+    ///  查询ip黑白名单
     /// </summary>
     public class QueryIpBlackListExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询ip黑名单接口的Http 请求方法
+        ///  查询ip黑白名单接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  查询ip黑名单接口的Http资源请求路径
+        ///  查询ip黑白名单接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

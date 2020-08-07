@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询ip黑名单
+    ///  查询ip黑白名单
     /// </summary>
     public class QueryIpBlackListResult : JdcloudResult
     {
@@ -44,11 +44,16 @@ namespace  JDCloudSDK.Cdn.Apis
         ///<summary>
         /// 黑名单列表
         ///</summary>
-        public List<object> Ips{ get; set; }
+        public List<string> Ips{ get; set; }
 
         ///<summary>
         /// 黑名单状态,on:开启,off:关闭
         ///</summary>
         public   string Status{ get; set; }
+        ///<summary>
+        /// 白名单列表
+        ///</summary>
+        public List<string> WhiteIps{ get; set; }
+
     }
 }

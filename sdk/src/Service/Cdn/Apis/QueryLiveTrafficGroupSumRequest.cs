@@ -89,5 +89,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// ReqMethod
         ///</summary>
         public   string ReqMethod{ get; set; }
+        ///<summary>
+        /// cacheLevel
+        ///</summary>
+        public   string CacheLevel{ get; set; }
     }
 }

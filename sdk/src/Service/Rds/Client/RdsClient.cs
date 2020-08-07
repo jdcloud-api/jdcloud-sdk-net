@@ -89,9 +89,9 @@ namespace JDCloudSDK.Rds.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -324,6 +324,44 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<GrantPrivilegeResponse> GrantPrivilege(GrantPrivilegeRequest request) {
             return await new GrantPrivilegeExecutor().Client(this).Execute<GrantPrivilegeResponse, GrantPrivilegeResult, GrantPrivilegeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableReadWriteProxyInternetAccessResponse DisableReadWriteProxyInternetAccess(DisableReadWriteProxyInternetAccessRequest request) {
+            return  new DisableReadWriteProxyInternetAccessExecutor().Client(this).Execute<DisableReadWriteProxyInternetAccessResponse, DisableReadWriteProxyInternetAccessResult, DisableReadWriteProxyInternetAccessRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableReadWriteProxyInternetAccessResponse> DisableReadWriteProxyInternetAccess(DisableReadWriteProxyInternetAccessRequest request) {
+            return await new DisableReadWriteProxyInternetAccessExecutor().Client(this).Execute<DisableReadWriteProxyInternetAccessResponse, DisableReadWriteProxyInternetAccessResult, DisableReadWriteProxyInternetAccessRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeReadWriteProxyAttributeResponse DescribeReadWriteProxyAttribute(DescribeReadWriteProxyAttributeRequest request) {
+            return  new DescribeReadWriteProxyAttributeExecutor().Client(this).Execute<DescribeReadWriteProxyAttributeResponse, DescribeReadWriteProxyAttributeResult, DescribeReadWriteProxyAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeReadWriteProxyAttributeResponse> DescribeReadWriteProxyAttribute(DescribeReadWriteProxyAttributeRequest request) {
+            return await new DescribeReadWriteProxyAttributeExecutor().Client(this).Execute<DescribeReadWriteProxyAttributeResponse, DescribeReadWriteProxyAttributeResult, DescribeReadWriteProxyAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -841,7 +879,7 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -850,12 +888,31 @@ namespace JDCloudSDK.Rds.Client
         }
 #else
         /// <summary>
-        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+        ///  修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
         public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest request) {
             return await new ModifyInstanceNameExecutor().Client(this).Execute<ModifyInstanceNameResponse, ModifyInstanceNameResult, ModifyInstanceNameRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除RDS 实例的读写分离代理&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteReadWriteProxyResponse DeleteReadWriteProxy(DeleteReadWriteProxyRequest request) {
+            return  new DeleteReadWriteProxyExecutor().Client(this).Execute<DeleteReadWriteProxyResponse, DeleteReadWriteProxyResult, DeleteReadWriteProxyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除RDS 实例的读写分离代理&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteReadWriteProxyResponse> DeleteReadWriteProxy(DeleteReadWriteProxyRequest request) {
+            return await new DeleteReadWriteProxyExecutor().Client(this).Execute<DeleteReadWriteProxyResponse, DeleteReadWriteProxyResult, DeleteReadWriteProxyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -875,6 +932,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableAuditResponse> EnableAudit(EnableAuditRequest request) {
             return await new EnableAuditExecutor().Client(this).Execute<EnableAuditResponse, EnableAuditResult, EnableAuditRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableReadWriteProxyInternetAccessResponse EnableReadWriteProxyInternetAccess(EnableReadWriteProxyInternetAccessRequest request) {
+            return  new EnableReadWriteProxyInternetAccessExecutor().Client(this).Execute<EnableReadWriteProxyInternetAccessResponse, EnableReadWriteProxyInternetAccessResult, EnableReadWriteProxyInternetAccessRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableReadWriteProxyInternetAccessResponse> EnableReadWriteProxyInternetAccess(EnableReadWriteProxyInternetAccessRequest request) {
+            return await new EnableReadWriteProxyInternetAccessExecutor().Client(this).Execute<EnableReadWriteProxyInternetAccessResponse, EnableReadWriteProxyInternetAccessResult, EnableReadWriteProxyInternetAccessRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1008,6 +1084,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<RestoreDatabaseFromBackupResponse> RestoreDatabaseFromBackup(RestoreDatabaseFromBackupRequest request) {
             return await new RestoreDatabaseFromBackupExecutor().Client(this).Execute<RestoreDatabaseFromBackupResponse, RestoreDatabaseFromBackupResult, RestoreDatabaseFromBackupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateReadWriteProxyResponse CreateReadWriteProxy(CreateReadWriteProxyRequest request) {
+            return  new CreateReadWriteProxyExecutor().Client(this).Execute<CreateReadWriteProxyResponse, CreateReadWriteProxyResult, CreateReadWriteProxyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateReadWriteProxyResponse> CreateReadWriteProxy(CreateReadWriteProxyRequest request) {
+            return await new CreateReadWriteProxyExecutor().Client(this).Execute<CreateReadWriteProxyResponse, CreateReadWriteProxyResult, CreateReadWriteProxyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1179,6 +1274,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateParameterGroupResponse> CreateParameterGroup(CreateParameterGroupRequest request) {
             return await new CreateParameterGroupExecutor().Client(this).Execute<CreateParameterGroupResponse, CreateParameterGroupResult, CreateParameterGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改数据库临时运维账号属性。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyAccountForOpsResponse ModifyAccountForOps(ModifyAccountForOpsRequest request) {
+            return  new ModifyAccountForOpsExecutor().Client(this).Execute<ModifyAccountForOpsResponse, ModifyAccountForOpsResult, ModifyAccountForOpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改数据库临时运维账号属性。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyAccountForOpsResponse> ModifyAccountForOps(ModifyAccountForOpsRequest request) {
+            return await new ModifyAccountForOpsExecutor().Client(this).Execute<ModifyAccountForOpsResponse, ModifyAccountForOpsResult, ModifyAccountForOpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1373,6 +1487,63 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建数据库临时运维账号。&lt;br&gt;如果在使用数据库过程中需要京东云提供技术支持,并且需要对您的实例进行操作，您可以把临时运维账号提供给技术支持人员。&lt;br&gt;临时运维账号默认授予全局Select、Process权限，且账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAccountForOpsResponse CreateAccountForOps(CreateAccountForOpsRequest request) {
+            return  new CreateAccountForOpsExecutor().Client(this).Execute<CreateAccountForOpsResponse, CreateAccountForOpsResult, CreateAccountForOpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建数据库临时运维账号。&lt;br&gt;如果在使用数据库过程中需要京东云提供技术支持,并且需要对您的实例进行操作，您可以把临时运维账号提供给技术支持人员。&lt;br&gt;临时运维账号默认授予全局Select、Process权限，且账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAccountForOpsResponse> CreateAccountForOps(CreateAccountForOpsRequest request) {
+            return await new CreateAccountForOpsExecutor().Client(this).Execute<CreateAccountForOpsResponse, CreateAccountForOpsResult, CreateAccountForOpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  升级指定实例的RDS版本。 仅当实例处于running状态时才可以升级。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest request) {
+            return  new UpgradeInstanceExecutor().Client(this).Execute<UpgradeInstanceResponse, UpgradeInstanceResult, UpgradeInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  升级指定实例的RDS版本。 仅当实例处于running状态时才可以升级。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpgradeInstanceResponse> UpgradeInstance(UpgradeInstanceRequest request) {
+            return await new UpgradeInstanceExecutor().Client(this).Execute<UpgradeInstanceResponse, UpgradeInstanceResult, UpgradeInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改SQL Server对接的Active Directory 服务。支持SQL Server 2012 及2012以上以上的版本。&lt;br&gt;注意：修改目录服务后，需重启SQL Server实例才能生效
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyActiveDirectoryResponse ModifyActiveDirectory(ModifyActiveDirectoryRequest request) {
+            return  new ModifyActiveDirectoryExecutor().Client(this).Execute<ModifyActiveDirectoryResponse, ModifyActiveDirectoryResult, ModifyActiveDirectoryRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改SQL Server对接的Active Directory 服务。支持SQL Server 2012 及2012以上以上的版本。&lt;br&gt;注意：修改目录服务后，需重启SQL Server实例才能生效
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyActiveDirectoryResponse> ModifyActiveDirectory(ModifyActiveDirectoryRequest request) {
+            return await new ModifyActiveDirectoryExecutor().Client(this).Execute<ModifyActiveDirectoryResponse, ModifyActiveDirectoryResult, ModifyActiveDirectoryRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空&lt;br&gt;- 仅支持SQL Server
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1388,6 +1559,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest request) {
             return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取当前实例的版本信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceVersionInternalResponse DescribeInstanceVersionInternal(DescribeInstanceVersionInternalRequest request) {
+            return  new DescribeInstanceVersionInternalExecutor().Client(this).Execute<DescribeInstanceVersionInternalResponse, DescribeInstanceVersionInternalResult, DescribeInstanceVersionInternalRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前实例的版本信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceVersionInternalResponse> DescribeInstanceVersionInternal(DescribeInstanceVersionInternalRequest request) {
+            return await new DescribeInstanceVersionInternalExecutor().Client(this).Execute<DescribeInstanceVersionInternalResponse, DescribeInstanceVersionInternalResult, DescribeInstanceVersionInternalRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1620,6 +1810,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  关闭数据库的加密连接, 需要重启数据库实例才生效&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableSSLResponse DisableSSL(DisableSSLRequest request) {
+            return  new DisableSSLExecutor().Client(this).Execute<DisableSSLResponse, DisableSSLResult, DisableSSLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭数据库的加密连接, 需要重启数据库实例才生效&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableSSLResponse> DisableSSL(DisableSSLRequest request) {
+            return await new DisableSSLExecutor().Client(this).Execute<DisableSSLResponse, DisableSSLResult, DisableSSLRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1692,6 +1901,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSSLResponse> DescribeSSL(DescribeSSLRequest request) {
             return await new DescribeSSLExecutor().Client(this).Execute<DescribeSSLResponse, DescribeSSLResult, DescribeSSLRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看某个RDS实例下的运维账号信息。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAccountsForOpsResponse DescribeAccountsForOps(DescribeAccountsForOpsRequest request) {
+            return  new DescribeAccountsForOpsExecutor().Client(this).Execute<DescribeAccountsForOpsResponse, DescribeAccountsForOpsResult, DescribeAccountsForOpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看某个RDS实例下的运维账号信息。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAccountsForOpsResponse> DescribeAccountsForOps(DescribeAccountsForOpsRequest request) {
+            return await new DescribeAccountsForOpsExecutor().Client(this).Execute<DescribeAccountsForOpsResponse, DescribeAccountsForOpsResult, DescribeAccountsForOpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1825,6 +2053,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterGroupParametersResponse> DescribeParameterGroupParameters(DescribeParameterGroupParametersRequest request) {
             return await new DescribeParameterGroupParametersExecutor().Client(this).Execute<DescribeParameterGroupParametersResponse, DescribeParameterGroupParametersResult, DescribeParameterGroupParametersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyReadWriteProxyResponse ModifyReadWriteProxy(ModifyReadWriteProxyRequest request) {
+            return  new ModifyReadWriteProxyExecutor().Client(this).Execute<ModifyReadWriteProxyResponse, ModifyReadWriteProxyResult, ModifyReadWriteProxyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyReadWriteProxyResponse> ModifyReadWriteProxy(ModifyReadWriteProxyRequest request) {
+            return await new ModifyReadWriteProxyExecutor().Client(this).Execute<ModifyReadWriteProxyResponse, ModifyReadWriteProxyResult, ModifyReadWriteProxyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
