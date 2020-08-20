@@ -54,6 +54,10 @@ namespace  JDCloudSDK.Jdccs.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
+        /// 状态 normal:正常 abnormal:异常
+        ///</summary>
+        public   string Status{ get; set; }
+        ///<summary>
         /// IDC机房ID
         ///Required:true
         ///</summary>

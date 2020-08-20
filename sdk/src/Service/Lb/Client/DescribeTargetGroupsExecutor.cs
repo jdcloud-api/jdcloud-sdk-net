@@ -33,12 +33,12 @@ namespace JDCloudSDK.Lb.Client
 {
 
     /// <summary>
-    ///  查询虚拟服务器组列表详情
+    ///  查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
     /// </summary>
     public class DescribeTargetGroupsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询虚拟服务器组列表详情接口的Http 请求方法
+        ///  查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Lb.Client
             }
         }
         /// <summary>
-        ///  查询虚拟服务器组列表详情接口的Http资源请求路径
+        ///  查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

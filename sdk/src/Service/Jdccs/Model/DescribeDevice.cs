@@ -50,6 +50,10 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string DeviceId{ get; set; }
         ///<summary>
+        /// 设备编码
+        ///</summary>
+        public string DeviceNo{ get; set; }
+        ///<summary>
         /// 设备SN号
         ///</summary>
         public string SnNo{ get; set; }
@@ -82,7 +86,7 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string AssetBelong{ get; set; }
         ///<summary>
-        /// 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+        /// 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
         ///</summary>
         public string AssetStatus{ get; set; }
         ///<summary>

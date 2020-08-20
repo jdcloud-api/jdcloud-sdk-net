@@ -30,6 +30,7 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Charge.Model;
 using JDCloudSDK.Vpc.Model;
+using JDCloudSDK.Lb.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -85,6 +86,11 @@ namespace  JDCloudSDK.Lb.Apis
         /// 删除保护，取值为True(开启)或False(关闭)，默认为False
         ///</summary>
         public   bool DeleteProtection{ get; set; }
+        ///<summary>
+        /// 用户tag 信息
+        ///</summary>
+        public List<JDCloudSDK.Lb.Model.Tag> UserTags{ get; set; }
+
         ///<summary>
         /// Region ID
         ///Required:true

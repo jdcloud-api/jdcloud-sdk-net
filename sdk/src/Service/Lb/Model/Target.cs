@@ -46,24 +46,28 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public string TargetGroupId{ get; set; }
         ///<summary>
-        /// Target的类型，取值为vm或container, 默认为vm
+        /// Target的类型，取值为vm、container或ip, 默认为vm
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        /// Target所属实例的Id
+        /// Target所属实例（vm或container）的Id
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+        /// Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// Target的权重，取值范围：1-100 ，默认为10
+        /// 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
         ///</summary>
         public int? Weight{ get; set; }
         ///<summary>
-        /// Target的内网IP地址
+        /// Target所属实例（vm或container）的内网IP地址
         ///</summary>
         public string PrivateIpAddress{ get; set; }
+        ///<summary>
+        /// Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址
+        ///</summary>
+        public string IpAddress{ get; set; }
     }
 }

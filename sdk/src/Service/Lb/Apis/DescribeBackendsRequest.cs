@@ -50,11 +50,11 @@ namespace  JDCloudSDK.Lb.Apis
         public   int? PageSize{ get; set; }
         ///<summary>
         /// backendIds - 后端服务Id列表，支持多个
-        /// backendNames - 后端服务名称列表，支持多个
+        /// backendNames - 后端服务名字列表，支持多个
         /// loadBalancerId - 负载均衡器Id，支持单个
-        /// agId - 高可用组Id，支持单个
+        /// agId - 可用性组Id，支持单个
         /// loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
-        /// protocol - 后端服务的协议【alb】支持Http、Tcp，【nlb&amp;dnlb】支持Tcp，默认查询所有，支持单个
+        /// protocol - 后端服务的协议【alb】支持Http、Tcp，【nlb】支持Tcp，默认查询所有，支持单个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

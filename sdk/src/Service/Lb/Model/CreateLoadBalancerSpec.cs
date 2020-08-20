@@ -82,5 +82,9 @@ namespace JDCloudSDK.Lb.Model
         /// 删除保护，取值为True(开启)或False(关闭)，默认为False
         ///</summary>
         public bool DeleteProtection{ get; set; }
+        ///<summary>
+        /// 用户tag 信息
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
     }
 }

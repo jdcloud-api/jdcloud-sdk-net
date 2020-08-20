@@ -79,7 +79,7 @@ namespace  JDCloudSDK.Lb.Apis
         ///</summary>
         public   string Action{ get; set; }
         ///<summary>
-        /// 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+        /// 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
         ///</summary>
         public List<CertificateSpec> CertificateSpecs{ get; set; }
 

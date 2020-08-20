@@ -71,13 +71,17 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public List<string> SecurityGroupIds{ get; set; }
         ///<summary>
-        /// LoadBalancer的IP地址信息
+        /// 描述LB的私有对象信息
         ///</summary>
         public PrivateIpAddress PrivateIp{ get; set; }
         ///<summary>
         /// 计费配置
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
+        ///<summary>
+        /// tag信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
         ///<summary>
         /// LoadBalancer的描述信息
         ///</summary>

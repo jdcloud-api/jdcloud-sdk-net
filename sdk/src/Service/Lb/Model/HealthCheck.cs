@@ -62,7 +62,7 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// 【Http协议】检查域名
+        /// 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
         ///</summary>
         public string HttpDomain{ get; set; }
         ///<summary>

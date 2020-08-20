@@ -49,13 +49,5 @@ namespace JDCloudSDK.Lb.Model
         /// 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
         ///</summary>
         public int? ChargeDuration{ get; set; }
-        ///<summary>
-        /// True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
-        ///</summary>
-        public bool AutoRenew{ get; set; }
-        ///<summary>
-        /// 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
-        ///</summary>
-        public string BuyScenario{ get; set; }
     }
 }

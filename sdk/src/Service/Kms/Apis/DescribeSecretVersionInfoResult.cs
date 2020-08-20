@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Kms.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Kms.Apis
 {
@@ -39,8 +39,34 @@ namespace  JDCloudSDK.Kms.Apis
     public class DescribeSecretVersionInfoResult : JdcloudResult
     {
         ///<summary>
-        /// SecretVersionItem
+        /// 版本标识
+        ///Required:true
         ///</summary>
-        public   SecretVersionItem SecretVersionItem{ get; set; }
+        [Required]
+        public   string SecretVersion{ get; set; }
+        ///<summary>
+        /// Secret当前状态: 0: 已启用、1: 已禁用
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   int SecretStatus{ get; set; }
+        ///<summary>
+        /// Secret激活时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   DateTime StartTime{ get; set; }
+        ///<summary>
+        /// 到期时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   DateTime ExpireTime{ get; set; }
+        ///<summary>
+        /// 密钥的内容
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string SecretData{ get; set; }
     }
 }

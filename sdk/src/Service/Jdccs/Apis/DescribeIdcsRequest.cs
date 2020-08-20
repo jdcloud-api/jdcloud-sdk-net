@@ -45,5 +45,9 @@ namespace  JDCloudSDK.Jdccs.Apis
         /// 分页大小，默认为20
         ///</summary>
         public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 是否强制包含外部机房 yes/no
+        ///</summary>
+        public   string IncludeExternalIdc{ get; set; }
     }
 }

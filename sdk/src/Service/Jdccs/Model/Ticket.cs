@@ -85,5 +85,25 @@ namespace JDCloudSDK.Jdccs.Model
         /// 机房名称
         ///</summary>
         public string IdcName{ get; set; }
+        ///<summary>
+        /// 通用服务工单申请数量
+        ///</summary>
+        public int? Count{ get; set; }
+        ///<summary>
+        /// 是否是商业化外部机房
+        ///</summary>
+        public bool IsExternalIdc{ get; set; }
+        ///<summary>
+        /// 外部机房地址
+        ///</summary>
+        public string ExternalIdcAddress{ get; set; }
+        ///<summary>
+        /// 外部机房联系人
+        ///</summary>
+        public string ExternalIdcContactPerson{ get; set; }
+        ///<summary>
+        /// 外部机房联系电话
+        ///</summary>
+        public string ExternalIdcContactPhone{ get; set; }
     }
 }

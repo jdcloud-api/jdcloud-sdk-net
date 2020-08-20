@@ -39,7 +39,7 @@ namespace JDCloudSDK.Lb.Model
     {
 
         ///<summary>
-        /// rule Id
+        /// rule资源Id
         ///Required:true
         ///</summary>
         [Required]
@@ -53,12 +53,16 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public string Path{ get; set; }
         ///<summary>
-        /// 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+        /// 匹配转发规则后执行的动作，取值为Forward或Redirect
         ///</summary>
         public string Action{ get; set; }
         ///<summary>
-        /// 后端服务的Id
+        /// 后端服务的Id。当action选择Forward时需配置本参数
         ///</summary>
         public string BackendId{ get; set; }
+        ///<summary>
+        /// 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+        ///</summary>
+        public RedirectActionSpec RedirectActionSpec{ get; set; }
     }
 }

@@ -82,7 +82,7 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public int? ConnectionIdleTimeSeconds{ get; set; }
         ///<summary>
-        /// 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+        /// 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
         ///</summary>
         public List<CertificateSpec> CertificateSpecs{ get; set; }
         ///<summary>
@@ -93,5 +93,9 @@ namespace JDCloudSDK.Lb.Model
         /// Listener的创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 【alb Https和Tls协议】Listener绑定的扩展证书列表
+        ///</summary>
+        public List<ExtensionCertificateSpec> ExtensionCertificateSpecs{ get; set; }
     }
 }

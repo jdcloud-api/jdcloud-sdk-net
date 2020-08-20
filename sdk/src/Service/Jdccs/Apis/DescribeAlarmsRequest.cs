@@ -53,5 +53,9 @@ namespace  JDCloudSDK.Jdccs.Apis
         /// 资源ID，指定resourceId时须指定resourceType
         ///</summary>
         public   string ResourceId{ get; set; }
+        ///<summary>
+        /// 规则状态 disabled:禁用 enabled:启用
+        ///</summary>
+        public   string Status{ get; set; }
     }
 }

@@ -47,5 +47,9 @@ namespace JDCloudSDK.Jdccs.Model
         /// 机房名称
         ///</summary>
         public string IdcName{ get; set; }
+        ///<summary>
+        /// 是否是商业化外部机房
+        ///</summary>
+        public bool IsExternalIdc{ get; set; }
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云负载均衡
+ * 负载均衡
  * 负载均衡相关API
  *
  * OpenAPI spec version: v1
@@ -39,7 +39,7 @@ using System.Threading.Tasks;
 namespace JDCloudSDK.Lb.Client
 {
     /// <summary>
-    ///  京东云负载均衡
+    ///  负载均衡
     ///  负载均衡相关API
     ///  Lb Api 客户端
     ///</summary>
@@ -89,9 +89,9 @@ namespace JDCloudSDK.Lb.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -290,7 +290,7 @@ namespace JDCloudSDK.Lb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询TargetGroup详情
+        ///  查询TargetGroup详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -299,7 +299,7 @@ namespace JDCloudSDK.Lb.Client
         }
 #else
         /// <summary>
-        ///  查询TargetGroup详情
+        ///  查询TargetGroup详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -324,6 +324,25 @@ namespace JDCloudSDK.Lb.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteBackendResponse> DeleteBackend(DeleteBackendRequest request) {
             return await new DeleteBackendExecutor().Client(this).Execute<DeleteBackendResponse, DeleteBackendResult, DeleteBackendRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  listener批量删除扩展证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteListenerCertificatesResponse DeleteListenerCertificates(DeleteListenerCertificatesRequest request) {
+            return  new DeleteListenerCertificatesExecutor().Client(this).Execute<DeleteListenerCertificatesResponse, DeleteListenerCertificatesResult, DeleteListenerCertificatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  listener批量删除扩展证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteListenerCertificatesResponse> DeleteListenerCertificates(DeleteListenerCertificatesRequest request) {
+            return await new DeleteListenerCertificatesExecutor().Client(this).Execute<DeleteListenerCertificatesResponse, DeleteListenerCertificatesResult, DeleteListenerCertificatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -537,7 +556,7 @@ namespace JDCloudSDK.Lb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询虚拟服务器组列表详情
+        ///  查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -546,7 +565,7 @@ namespace JDCloudSDK.Lb.Client
         }
 #else
         /// <summary>
-        ///  查询虚拟服务器组列表详情
+        ///  查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -632,7 +651,7 @@ namespace JDCloudSDK.Lb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除后，所有target将不会再接收来自loadbalancer新建连接的流量
+        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -641,7 +660,7 @@ namespace JDCloudSDK.Lb.Client
         }
 #else
         /// <summary>
-        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除后，所有target将不会再接收来自loadbalancer新建连接的流量
+        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -708,25 +727,6 @@ namespace JDCloudSDK.Lb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改配额信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改配额信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除转发规则组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -784,21 +784,21 @@ namespace JDCloudSDK.Lb.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取配额信息
+        ///  listener批量添加扩展证书
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeQuotaResponse DescribeQuota(DescribeQuotaRequest request) {
-            return  new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request);
+        public AddListenerCertificatesResponse AddListenerCertificates(AddListenerCertificatesRequest request) {
+            return  new AddListenerCertificatesExecutor().Client(this).Execute<AddListenerCertificatesResponse, AddListenerCertificatesResult, AddListenerCertificatesRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取配额信息
+        ///  listener批量添加扩展证书
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
-            return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request).ConfigureAwait(false);
+        public async Task<AddListenerCertificatesResponse> AddListenerCertificates(AddListenerCertificatesRequest request) {
+            return await new AddListenerCertificatesExecutor().Client(this).Execute<AddListenerCertificatesResponse, AddListenerCertificatesResult, AddListenerCertificatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -837,6 +837,25 @@ namespace JDCloudSDK.Lb.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateRulesResponse> UpdateRules(UpdateRulesRequest request) {
             return await new UpdateRulesExecutor().Client(this).Execute<UpdateRulesResponse, UpdateRulesResult, UpdateRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  listener批量修改扩展证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateListenerCertificatesResponse UpdateListenerCertificates(UpdateListenerCertificatesRequest request) {
+            return  new UpdateListenerCertificatesExecutor().Client(this).Execute<UpdateListenerCertificatesResponse, UpdateListenerCertificatesResult, UpdateListenerCertificatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  listener批量修改扩展证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateListenerCertificatesResponse> UpdateListenerCertificates(UpdateListenerCertificatesRequest request) {
+            return await new UpdateListenerCertificatesExecutor().Client(this).Execute<UpdateListenerCertificatesResponse, UpdateListenerCertificatesResult, UpdateListenerCertificatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

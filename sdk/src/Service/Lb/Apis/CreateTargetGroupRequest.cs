@@ -56,6 +56,10 @@ namespace  JDCloudSDK.Lb.Apis
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
+        /// 类型，取值为instance或ip
+        ///</summary>
+        public   string Type{ get; set; }
+        ///<summary>
         /// Region ID
         ///Required:true
         ///</summary>

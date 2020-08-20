@@ -52,7 +52,7 @@ namespace JDCloudSDK.Ossopenapi.Client
         public override string Url
         {
             get {
-            return "/regions/{regionId}/buckets/{bucketName}/historical-replicat-task/";
+            return "/regions/{regionId}/buckets/{bucketName}/historical_replicat_task/";
             }
         }
     }

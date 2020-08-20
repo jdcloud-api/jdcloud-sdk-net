@@ -69,5 +69,9 @@ namespace JDCloudSDK.Lb.Model
         /// Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
         ///</summary>
         public List<Target> Targets{ get; set; }
+        ///<summary>
+        /// 实例或IP
+        ///</summary>
+        public string Type{ get; set; }
     }
 }

@@ -54,6 +54,10 @@ namespace  JDCloudSDK.Jdccs.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
+        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        ///</summary>
+        public   string LineType{ get; set; }
+        ///<summary>
         /// IDC机房ID
         ///Required:true
         ///</summary>

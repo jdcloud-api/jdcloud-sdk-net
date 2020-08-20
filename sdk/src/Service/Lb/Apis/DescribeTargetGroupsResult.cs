@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Lb.Apis
 {
 
     /// <summary>
-    ///  查询虚拟服务器组列表详情
+    ///  查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
     /// </summary>
     public class DescribeTargetGroupsResult : JdcloudResult
     {

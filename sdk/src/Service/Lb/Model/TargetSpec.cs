@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Lb.Model
 {
@@ -39,22 +38,24 @@ namespace JDCloudSDK.Lb.Model
     {
 
         ///<summary>
-        /// Target所属实例的Id  &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例仅允许一个端口提供服务。
-        ///Required:true
+        /// Target所属实例的Id，只有type为vm或container时此项才需要
         ///</summary>
-        [Required]
         public string InstanceId{ get; set; }
         ///<summary>
-        /// Target所属的type，取值为vm或container，默认为vm。
+        /// Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        /// Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+        /// Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// Target的权重，取值范围：1-100 ，默认为10。
+        /// 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
         ///</summary>
         public int? Weight{ get; set; }
+        ///<summary>
+        /// Target的ip地址。仅当type为ip时，此项必须配置。
+        ///</summary>
+        public string IpAddress{ get; set; }
     }
 }

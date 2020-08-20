@@ -55,6 +55,10 @@ namespace  JDCloudSDK.Jdccs.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
+        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+        ///</summary>
+        public   string CabinetOpenStatus{ get; set; }
+        ///<summary>
         /// IDC机房ID
         ///Required:true
         ///</summary>

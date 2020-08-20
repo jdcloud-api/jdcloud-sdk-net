@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Common.Model;
+using JDCloudSDK.Lb.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -56,6 +57,11 @@ namespace  JDCloudSDK.Lb.Apis
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
+        ///<summary>
+        /// Tag筛选条件
+        ///</summary>
+        public List<JDCloudSDK.Lb.Model.TagFilter> Tags{ get; set; }
 
         ///<summary>
         /// Region ID

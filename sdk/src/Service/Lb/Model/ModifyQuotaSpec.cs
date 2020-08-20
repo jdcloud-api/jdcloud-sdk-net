@@ -43,13 +43,13 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public string LbType{ get; set; }
         ///<summary>
-        /// 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)
+        /// 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
         ///Required:true
         ///</summary>
         [Required]
         public string Type{ get; set; }
         ///<summary>
-        /// type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId
+        /// type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId,type为extensionCertificate设置为listenerId
         ///</summary>
         public string ParentResourceId{ get; set; }
         ///<summary>

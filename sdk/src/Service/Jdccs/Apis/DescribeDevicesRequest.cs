@@ -59,6 +59,10 @@ namespace  JDCloudSDK.Jdccs.Apis
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
+        /// 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+        ///</summary>
+        public   string DeviceType{ get; set; }
+        ///<summary>
         /// IDC机房ID
         ///Required:true
         ///</summary>

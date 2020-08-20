@@ -46,24 +46,28 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public string AgId{ get; set; }
         ///<summary>
-        /// Target所属实例的Id
+        /// Target所属实例的Id（type为vm或container时显示）
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// Target所属的type，取值为vm或者container,默认为vm
+        /// Target所属的type，取值为vm、container或ip,默认为vm
         ///</summary>
         public string Type{ get; set; }
         ///<summary>
-        /// Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同
+        /// 健康检查的port
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// Target的权重，取值范围：1-100 ，默认为10。
+        /// 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
         ///</summary>
         public int? Weight{ get; set; }
         ///<summary>
-        /// Target的健康状态，取值为healthy、unhealthy
+        /// 该Target的健康状态，取值为healthy、unhealthy
         ///</summary>
         public string Status{ get; set; }
+        ///<summary>
+        /// Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
+        ///</summary>
+        public string IpAddress{ get; set; }
     }
 }

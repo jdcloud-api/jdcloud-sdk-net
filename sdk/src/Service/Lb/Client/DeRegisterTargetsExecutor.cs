@@ -33,12 +33,12 @@ namespace JDCloudSDK.Lb.Client
 {
 
     /// <summary>
-    ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除后，所有target将不会再接收来自loadbalancer新建连接的流量
+    ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量
     /// </summary>
     public class DeRegisterTargetsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除后，所有target将不会再接收来自loadbalancer新建连接的流量接口的Http 请求方法
+        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Lb.Client
             }
         }
         /// <summary>
-        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除后，所有target将不会再接收来自loadbalancer新建连接的流量接口的Http资源请求路径
+        ///  从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
