@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cloudsign.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -256,21 +256,21 @@ namespace JDCloudSDK.Cloudsign.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取电子签章的数据统计信息
+        ///  填充合同模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GetStatisticsResponse GetStatistics(GetStatisticsRequest request) {
-            return  new GetStatisticsExecutor().Client(this).Execute<GetStatisticsResponse, GetStatisticsResult, GetStatisticsRequest>(request);
+        public PaddingTemplateResponse PaddingTemplate(PaddingTemplateRequest request) {
+            return  new PaddingTemplateExecutor().Client(this).Execute<PaddingTemplateResponse, PaddingTemplateResult, PaddingTemplateRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取电子签章的数据统计信息
+        ///  填充合同模板
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GetStatisticsResponse> GetStatistics(GetStatisticsRequest request) {
-            return await new GetStatisticsExecutor().Client(this).Execute<GetStatisticsResponse, GetStatisticsResult, GetStatisticsRequest>(request).ConfigureAwait(false);
+        public async Task<PaddingTemplateResponse> PaddingTemplate(PaddingTemplateRequest request) {
+            return await new PaddingTemplateExecutor().Client(this).Execute<PaddingTemplateResponse, PaddingTemplateResult, PaddingTemplateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -365,25 +365,6 @@ namespace JDCloudSDK.Cloudsign.Client
         /// <returns>请求结果信息</returns>
         public async Task<VerifyContractResponse> VerifyContract(VerifyContractRequest request) {
             return await new VerifyContractExecutor().Client(this).Execute<VerifyContractResponse, VerifyContractResult, VerifyContractRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  申请开通电子签章服务（cloudsign）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ApplyServiceResponse ApplyService(ApplyServiceRequest request) {
-            return  new ApplyServiceExecutor().Client(this).Execute<ApplyServiceResponse, ApplyServiceResult, ApplyServiceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  申请开通电子签章服务（cloudsign）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ApplyServiceResponse> ApplyService(ApplyServiceRequest request) {
-            return await new ApplyServiceExecutor().Client(this).Execute<ApplyServiceResponse, ApplyServiceResult, ApplyServiceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

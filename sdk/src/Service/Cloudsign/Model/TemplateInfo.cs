@@ -62,6 +62,14 @@ namespace JDCloudSDK.Cloudsign.Model
         ///</summary>
         public string TemplateDigest{ get; set; }
         ///<summary>
+        /// 合同模板文件类型 pdf,word,pdf-auto
+        ///</summary>
+        public string TemplateType{ get; set; }
+        ///<summary>
+        /// 填充信息
+        ///</summary>
+        public List<PaddingInfo> PaddingInfo{ get; set; }
+        ///<summary>
         /// 创建时间
         ///</summary>
         public DateTime? CreateTime{ get; set; }

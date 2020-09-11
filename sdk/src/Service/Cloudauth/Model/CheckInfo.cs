@@ -43,7 +43,7 @@ namespace JDCloudSDK.Cloudauth.Model
         ///Required:true
         ///</summary>
         [Required]
-        public float PaymentAmount{ get; set; }
+        public string PaymentAmount{ get; set; }
         ///<summary>
         /// 订单号
         ///Required:true

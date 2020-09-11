@@ -49,5 +49,15 @@ namespace JDCloudSDK.Cloudsign.Model
         /// 合同模板标题
         ///</summary>
         public string TemplateTitle{ get; set; }
+        ///<summary>
+        /// 模板类型 pdf,word (word为可编辑模板)
+        ///</summary>
+        public string TemplateType{ get; set; }
+        ///<summary>
+        /// 占位符关键字,templateType为word时必传
+        /// 在word文档中为双大括号里的内容, 比如{{单位名称}}
+        /// 
+        ///</summary>
+        public List<string> HoldingKeys{ get; set; }
     }
 }

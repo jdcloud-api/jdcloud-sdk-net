@@ -45,10 +45,6 @@ namespace JDCloudSDK.Cloudauth.Model
         [Required]
         public string OrgName{ get; set; }
         ///<summary>
-        /// 身份证号码
-        ///</summary>
-        public string IdCard{ get; set; }
-        ///<summary>
         /// 银行卡号
         ///Required:true
         ///</summary>

@@ -689,25 +689,6 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取所有上层节点的ip
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckWhetherIpBelongToJCloudV2Response CheckWhetherIpBelongToJCloudV2(CheckWhetherIpBelongToJCloudV2Request request) {
-            return  new CheckWhetherIpBelongToJCloudV2Executor().Client(this).Execute<CheckWhetherIpBelongToJCloudV2Response, CheckWhetherIpBelongToJCloudV2Result, CheckWhetherIpBelongToJCloudV2Request>(request);
-        }
-#else
-        /// <summary>
-        ///  获取所有上层节点的ip
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckWhetherIpBelongToJCloudV2Response> CheckWhetherIpBelongToJCloudV2(CheckWhetherIpBelongToJCloudV2Request request) {
-            return await new CheckWhetherIpBelongToJCloudV2Executor().Client(this).Execute<CheckWhetherIpBelongToJCloudV2Response, CheckWhetherIpBelongToJCloudV2Result, CheckWhetherIpBelongToJCloudV2Request>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询直播域名app列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1810,6 +1791,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  dash鉴权设置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetAuthConfigResponse SetAuthConfig(SetAuthConfigRequest request) {
+            return  new SetAuthConfigExecutor().Client(this).Execute<SetAuthConfigResponse, SetAuthConfigResult, SetAuthConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  dash鉴权设置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetAuthConfigResponse> SetAuthConfig(SetAuthConfigRequest request) {
+            return await new SetAuthConfigExecutor().Client(this).Execute<SetAuthConfigResponse, SetAuthConfigResult, SetAuthConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询ip黑白名单
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2585,6 +2585,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryBackSourcePathResponse> QueryBackSourcePath(QueryBackSourcePathRequest request) {
             return await new QueryBackSourcePathExecutor().Client(this).Execute<QueryBackSourcePathResponse, QueryBackSourcePathResult, QueryBackSourcePathRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  回源鉴权设置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetSourceAuthConfigResponse SetSourceAuthConfig(SetSourceAuthConfigRequest request) {
+            return  new SetSourceAuthConfigExecutor().Client(this).Execute<SetSourceAuthConfigResponse, SetSourceAuthConfigResult, SetSourceAuthConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  回源鉴权设置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetSourceAuthConfigResponse> SetSourceAuthConfig(SetSourceAuthConfigRequest request) {
+            return await new SetSourceAuthConfigExecutor().Client(this).Execute<SetSourceAuthConfigResponse, SetSourceAuthConfigResult, SetSourceAuthConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

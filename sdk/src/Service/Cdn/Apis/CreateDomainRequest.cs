@@ -102,6 +102,10 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string AccelerateRegion{ get; set; }
         ///<summary>
+        /// TempInstId
+        ///</summary>
+        public   long? TempInstId{ get; set; }
+        ///<summary>
         /// 用户域名
         ///Required:true
         ///</summary>

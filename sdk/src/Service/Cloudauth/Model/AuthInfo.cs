@@ -57,16 +57,21 @@ namespace JDCloudSDK.Cloudauth.Model
         [Required]
         public string Code{ get; set; }
         ///<summary>
-        /// 认证结果
+        /// 1. 认证结果信息
+        /// 2. 查询结果信息
+        /// 3. 状态码信息
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public string Message{ get; set; }
         ///<summary>
-        /// Detail
+        /// 1. 认证结果信息
+        /// 2. 查询结果信息
+        /// 
         ///Required:true
         ///</summary>
         [Required]
-        public AuthDetail Detail{ get; set; }
+        public string Detail{ get; set; }
     }
 }

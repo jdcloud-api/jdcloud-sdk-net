@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Cloudauth.Model;
+using JDCloudSDK.Core.Annotation;
 
 namespace  JDCloudSDK.Cloudauth.Apis
 {
@@ -39,8 +39,39 @@ namespace  JDCloudSDK.Cloudauth.Apis
     public class PersonalAuthResult : JdcloudResult
     {
         ///<summary>
-        /// AuthInfo
+        /// 认证结果true 成功, false 失败
+        ///Required:true
         ///</summary>
-        public   AuthInfo AuthInfo{ get; set; }
+        [Required]
+        public   bool Success{ get; set; }
+        ///<summary>
+        /// 是否有异常 true 有异常, false 无异常
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   bool HasException{ get; set; }
+        ///<summary>
+        /// 认证结果状态码
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string Code{ get; set; }
+        ///<summary>
+        /// 1. 认证结果信息
+        /// 2. 查询结果信息
+        /// 3. 状态码信息
+        /// 
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string Message{ get; set; }
+        ///<summary>
+        /// 1. 认证结果信息
+        /// 2. 查询结果信息
+        /// 
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string Detail{ get; set; }
     }
 }

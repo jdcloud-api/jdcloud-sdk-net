@@ -105,5 +105,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 加速区域 (mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
         ///</summary>
         public   string AccelerateRegion{ get; set; }
+        ///<summary>
+        /// TempInstId
+        ///</summary>
+        public   long? TempInstId{ get; set; }
     }
 }

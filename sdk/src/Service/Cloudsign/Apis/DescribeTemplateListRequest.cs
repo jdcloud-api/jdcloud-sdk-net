@@ -49,5 +49,9 @@ namespace  JDCloudSDK.Cloudsign.Apis
         /// 合同模板名称或者标题
         ///</summary>
         public   string TemplateNameOrTitle{ get; set; }
+        ///<summary>
+        /// 模板类型 pdf,word,pdf-auto(不传查所有类型)
+        ///</summary>
+        public   string TemplateType{ get; set; }
     }
 }

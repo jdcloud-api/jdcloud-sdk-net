@@ -38,15 +38,15 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryJDBoxStatisticsDataRequest : JdcloudRequest
     {
         ///<summary>
-        /// 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+        /// 查询起始时间,时间戳
         ///</summary>
-        public   string StartTime{ get; set; }
+        public   long? StartTime{ get; set; }
         ///<summary>
-        /// 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+        /// 查询截止时间,时间戳
         ///</summary>
-        public   string EndTime{ get; set; }
+        public   long? EndTime{ get; set; }
         ///<summary>
-        /// 查询的字段，决定了查询结果中出现哪些字段，取值范围见&quot;统计字段说明&quot;。多个用逗号分隔。默认为空，表示查询带宽流量 pv
+        /// 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
         ///</summary>
         public   string Fields{ get; set; }
         ///<summary>
@@ -58,13 +58,9 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Isp{ get; set; }
         ///<summary>
-        /// 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
+        /// 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
         ///</summary>
         public   string Period{ get; set; }
-        ///<summary>
-        /// 取值范围[area,isp,mac_addr,category]  按区域、运营商、设备、业务类型分组，默认为isp
-        ///</summary>
-        public   string GroupBy{ get; set; }
         ///<summary>
         /// 业务类型
         ///</summary>
@@ -73,5 +69,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 设备id
         ///</summary>
         public   string MacAddr{ get; set; }
+        ///<summary>
+        /// 插件pin
+        ///</summary>
+        public   string PluginPin{ get; set; }
     }
 }

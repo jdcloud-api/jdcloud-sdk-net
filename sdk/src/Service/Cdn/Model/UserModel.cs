@@ -44,7 +44,7 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// 计费类型
         ///</summary>
-        public int? TypeList{ get; set; }
+        public string TypeList{ get; set; }
         ///<summary>
         /// 计费类型描述
         ///</summary>
@@ -65,5 +65,9 @@ namespace JDCloudSDK.Cdn.Model
         /// 结算方式描述
         ///</summary>
         public string SettlementMethodDesc{ get; set; }
+        ///<summary>
+        /// 计费资源id
+        ///</summary>
+        public string BillSourceid{ get; set; }
     }
 }

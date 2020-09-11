@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cloudauth.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,120 +138,6 @@ namespace JDCloudSDK.Cloudauth.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  查询服务开通状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeApplyStatusResponse DescribeApplyStatus(DescribeApplyStatusRequest request) {
-            return  new DescribeApplyStatusExecutor().Client(this).Execute<DescribeApplyStatusResponse, DescribeApplyStatusResult, DescribeApplyStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询服务开通状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeApplyStatusResponse> DescribeApplyStatus(DescribeApplyStatusRequest request) {
-            return await new DescribeApplyStatusExecutor().Client(this).Execute<DescribeApplyStatusResponse, DescribeApplyStatusResult, DescribeApplyStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取实名认证的数据统计信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetStatisticsResponse GetStatistics(GetStatisticsRequest request) {
-            return  new GetStatisticsExecutor().Client(this).Execute<GetStatisticsResponse, GetStatisticsResult, GetStatisticsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取实名认证的数据统计信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetStatisticsResponse> GetStatistics(GetStatisticsRequest request) {
-            return await new GetStatisticsExecutor().Client(this).Execute<GetStatisticsResponse, GetStatisticsResult, GetStatisticsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  代理人信息核验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckAgentResponse CheckAgent(CheckAgentRequest request) {
-            return  new CheckAgentExecutor().Client(this).Execute<CheckAgentResponse, CheckAgentResult, CheckAgentRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  代理人信息核验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckAgentResponse> CheckAgent(CheckAgentRequest request) {
-            return await new CheckAgentExecutor().Client(this).Execute<CheckAgentResponse, CheckAgentResult, CheckAgentRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  对公打款查询
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckCompanyTransferResponse CheckCompanyTransfer(CheckCompanyTransferRequest request) {
-            return  new CheckCompanyTransferExecutor().Client(this).Execute<CheckCompanyTransferResponse, CheckCompanyTransferResult, CheckCompanyTransferRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  对公打款查询
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckCompanyTransferResponse> CheckCompanyTransfer(CheckCompanyTransferRequest request) {
-            return await new CheckCompanyTransferExecutor().Client(this).Execute<CheckCompanyTransferResponse, CheckCompanyTransferResult, CheckCompanyTransferRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  企业基础信息核验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckCompanyInfoResponse CheckCompanyInfo(CheckCompanyInfoRequest request) {
-            return  new CheckCompanyInfoExecutor().Client(this).Execute<CheckCompanyInfoResponse, CheckCompanyInfoResult, CheckCompanyInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  企业基础信息核验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckCompanyInfoResponse> CheckCompanyInfo(CheckCompanyInfoRequest request) {
-            return await new CheckCompanyInfoExecutor().Client(this).Execute<CheckCompanyInfoResponse, CheckCompanyInfoResult, CheckCompanyInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  企业所有信息核验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CheckLegalPersonAndAgentResponse CheckLegalPersonAndAgent(CheckLegalPersonAndAgentRequest request) {
-            return  new CheckLegalPersonAndAgentExecutor().Client(this).Execute<CheckLegalPersonAndAgentResponse, CheckLegalPersonAndAgentResult, CheckLegalPersonAndAgentRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  企业所有信息核验
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CheckLegalPersonAndAgentResponse> CheckLegalPersonAndAgent(CheckLegalPersonAndAgentRequest request) {
-            return await new CheckLegalPersonAndAgentExecutor().Client(this).Execute<CheckLegalPersonAndAgentResponse, CheckLegalPersonAndAgentResult, CheckLegalPersonAndAgentRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询城市下银行分行列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -267,6 +153,25 @@ namespace JDCloudSDK.Cloudauth.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryBankBranchListResponse> QueryBankBranchList(QueryBankBranchListRequest request) {
             return await new QueryBankBranchListExecutor().Client(this).Execute<QueryBankBranchListResponse, QueryBankBranchListResult, QueryBankBranchListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询服务开通状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeApplyStatusResponse DescribeApplyStatus(DescribeApplyStatusRequest request) {
+            return  new DescribeApplyStatusExecutor().Client(this).Execute<DescribeApplyStatusResponse, DescribeApplyStatusResult, DescribeApplyStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询服务开通状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeApplyStatusResponse> DescribeApplyStatus(DescribeApplyStatusRequest request) {
+            return await new DescribeApplyStatusExecutor().Client(this).Execute<DescribeApplyStatusResponse, DescribeApplyStatusResult, DescribeApplyStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -347,6 +252,25 @@ namespace JDCloudSDK.Cloudauth.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  代理人信息核验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckAgentResponse CheckAgent(CheckAgentRequest request) {
+            return  new CheckAgentExecutor().Client(this).Execute<CheckAgentResponse, CheckAgentResult, CheckAgentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  代理人信息核验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckAgentResponse> CheckAgent(CheckAgentRequest request) {
+            return await new CheckAgentExecutor().Client(this).Execute<CheckAgentResponse, CheckAgentResult, CheckAgentRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询省份下城市编码
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -366,6 +290,63 @@ namespace JDCloudSDK.Cloudauth.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  对公打款查询
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckCompanyTransferResponse CheckCompanyTransfer(CheckCompanyTransferRequest request) {
+            return  new CheckCompanyTransferExecutor().Client(this).Execute<CheckCompanyTransferResponse, CheckCompanyTransferResult, CheckCompanyTransferRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对公打款查询
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckCompanyTransferResponse> CheckCompanyTransfer(CheckCompanyTransferRequest request) {
+            return await new CheckCompanyTransferExecutor().Client(this).Execute<CheckCompanyTransferResponse, CheckCompanyTransferResult, CheckCompanyTransferRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  企业基础信息核验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckCompanyInfoResponse CheckCompanyInfo(CheckCompanyInfoRequest request) {
+            return  new CheckCompanyInfoExecutor().Client(this).Execute<CheckCompanyInfoResponse, CheckCompanyInfoResult, CheckCompanyInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  企业基础信息核验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckCompanyInfoResponse> CheckCompanyInfo(CheckCompanyInfoRequest request) {
+            return await new CheckCompanyInfoExecutor().Client(this).Execute<CheckCompanyInfoResponse, CheckCompanyInfoResult, CheckCompanyInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  企业所有信息核验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CheckLegalPersonAndAgentResponse CheckLegalPersonAndAgent(CheckLegalPersonAndAgentRequest request) {
+            return  new CheckLegalPersonAndAgentExecutor().Client(this).Execute<CheckLegalPersonAndAgentResponse, CheckLegalPersonAndAgentResult, CheckLegalPersonAndAgentRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  企业所有信息核验
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CheckLegalPersonAndAgentResponse> CheckLegalPersonAndAgent(CheckLegalPersonAndAgentRequest request) {
+            return await new CheckLegalPersonAndAgentExecutor().Client(this).Execute<CheckLegalPersonAndAgentResponse, CheckLegalPersonAndAgentResult, CheckLegalPersonAndAgentRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询所有省份列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -381,25 +362,6 @@ namespace JDCloudSDK.Cloudauth.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryProvinceListResponse> QueryProvinceList(QueryProvinceListRequest request) {
             return await new QueryProvinceListExecutor().Client(this).Execute<QueryProvinceListResponse, QueryProvinceListResult, QueryProvinceListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  申请开通实名认证服务（cloudauth）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ApplyServiceResponse ApplyService(ApplyServiceRequest request) {
-            return  new ApplyServiceExecutor().Client(this).Execute<ApplyServiceResponse, ApplyServiceResult, ApplyServiceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  申请开通实名认证服务（cloudauth）
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ApplyServiceResponse> ApplyService(ApplyServiceRequest request) {
-            return await new ApplyServiceExecutor().Client(this).Execute<ApplyServiceResponse, ApplyServiceResult, ApplyServiceRequest>(request).ConfigureAwait(false);
         }
 #endif
 
