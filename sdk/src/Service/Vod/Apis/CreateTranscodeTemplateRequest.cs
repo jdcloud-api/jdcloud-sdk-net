@@ -65,6 +65,10 @@ namespace  JDCloudSDK.Vod.Apis
         [Required]
         public   Encapsulation Encapsulation{ get; set; }
         ///<summary>
+        /// 输出文件配置
+        ///</summary>
+        public   OutFile OutFile{ get; set; }
+        ///<summary>
         /// 清晰度规格标记。取值范围：
         ///   SD - 标清
         ///   HD - 高清

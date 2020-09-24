@@ -38,6 +38,10 @@ namespace JDCloudSDK.Waf.Model
     {
 
         ///<summary>
+        /// 实例
+        ///</summary>
+        public string WafInstanceId{ get; set; }
+        ///<summary>
         /// 域名
         ///</summary>
         public string Domain{ get; set; }

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Edcps.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -357,7 +357,7 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询链路类型列表
+        ///  查询链路类型
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -366,7 +366,7 @@ namespace JDCloudSDK.Edcps.Client
         }
 #else
         /// <summary>
-        ///  查询链路类型列表
+        ///  查询链路类型
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -526,6 +526,44 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询共享带宽库存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBandwidthPackageStockResponse DescribeBandwidthPackageStock(DescribeBandwidthPackageStockRequest request) {
+            return  new DescribeBandwidthPackageStockExecutor().Client(this).Execute<DescribeBandwidthPackageStockResponse, DescribeBandwidthPackageStockResult, DescribeBandwidthPackageStockRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询共享带宽库存
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBandwidthPackageStockResponse> DescribeBandwidthPackageStock(DescribeBandwidthPackageStockRequest request) {
+            return await new DescribeBandwidthPackageStockExecutor().Client(this).Execute<DescribeBandwidthPackageStockResponse, DescribeBandwidthPackageStockResult, DescribeBandwidthPackageStockRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询共享带宽详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBandwidthPackageResponse DescribeBandwidthPackage(DescribeBandwidthPackageRequest request) {
+            return  new DescribeBandwidthPackageExecutor().Client(this).Execute<DescribeBandwidthPackageResponse, DescribeBandwidthPackageResult, DescribeBandwidthPackageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询共享带宽详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBandwidthPackageResponse> DescribeBandwidthPackage(DescribeBandwidthPackageRequest request) {
+            return await new DescribeBandwidthPackageExecutor().Client(this).Execute<DescribeBandwidthPackageResponse, DescribeBandwidthPackageResult, DescribeBandwidthPackageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  重置分布式云物理服务器密码
         /// 
         /// </summary>
@@ -585,6 +623,29 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询弹性公网IP列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBandwidthPackagesResponse DescribeBandwidthPackages(DescribeBandwidthPackagesRequest request) {
+            return  new DescribeBandwidthPackagesExecutor().Client(this).Execute<DescribeBandwidthPackagesResponse, DescribeBandwidthPackagesResult, DescribeBandwidthPackagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性公网IP列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBandwidthPackagesResponse> DescribeBandwidthPackages(DescribeBandwidthPackagesRequest request) {
+            return await new DescribeBandwidthPackagesExecutor().Client(this).Execute<DescribeBandwidthPackagesResponse, DescribeBandwidthPackagesResult, DescribeBandwidthPackagesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  对单台分布式云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -619,6 +680,48 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeEdCPSRegionsResponse> DescribeEdCPSRegions(DescribeEdCPSRegionsRequest request) {
             return await new DescribeEdCPSRegionsExecutor().Client(this).Execute<DescribeEdCPSRegionsResponse, DescribeEdCPSRegionsResult, DescribeEdCPSRegionsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改共享带宽的带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest request) {
+            return  new ModifyBandwidthPackageBandwidthExecutor().Client(this).Execute<ModifyBandwidthPackageBandwidthResponse, ModifyBandwidthPackageBandwidthResult, ModifyBandwidthPackageBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改共享带宽的带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyBandwidthPackageBandwidthResponse> ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest request) {
+            return await new ModifyBandwidthPackageBandwidthExecutor().Client(this).Execute<ModifyBandwidthPackageBandwidthResponse, ModifyBandwidthPackageBandwidthResult, ModifyBandwidthPackageBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除共享带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteBandwidthPackageResponse DeleteBandwidthPackage(DeleteBandwidthPackageRequest request) {
+            return  new DeleteBandwidthPackageExecutor().Client(this).Execute<DeleteBandwidthPackageResponse, DeleteBandwidthPackageResult, DeleteBandwidthPackageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除共享带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteBandwidthPackageResponse> DeleteBandwidthPackage(DeleteBandwidthPackageRequest request) {
+            return await new DeleteBandwidthPackageExecutor().Client(this).Execute<DeleteBandwidthPackageResponse, DeleteBandwidthPackageResult, DeleteBandwidthPackageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -764,6 +867,27 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改共享带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyBandwidthPackageResponse ModifyBandwidthPackage(ModifyBandwidthPackageRequest request) {
+            return  new ModifyBandwidthPackageExecutor().Client(this).Execute<ModifyBandwidthPackageResponse, ModifyBandwidthPackageResult, ModifyBandwidthPackageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改共享带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyBandwidthPackageResponse> ModifyBandwidthPackage(ModifyBandwidthPackageRequest request) {
+            return await new ModifyBandwidthPackageExecutor().Client(this).Execute<ModifyBandwidthPackageResponse, ModifyBandwidthPackageResult, ModifyBandwidthPackageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除弹性公网IP
         /// 
         /// </summary>
@@ -842,6 +966,27 @@ namespace JDCloudSDK.Edcps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  移除共享带宽IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveBandwidthPackageIpResponse RemoveBandwidthPackageIp(RemoveBandwidthPackageIpRequest request) {
+            return  new RemoveBandwidthPackageIpExecutor().Client(this).Execute<RemoveBandwidthPackageIpResponse, RemoveBandwidthPackageIpResult, RemoveBandwidthPackageIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除共享带宽IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveBandwidthPackageIpResponse> RemoveBandwidthPackageIp(RemoveBandwidthPackageIpRequest request) {
+            return await new RemoveBandwidthPackageIpExecutor().Client(this).Execute<RemoveBandwidthPackageIpResponse, RemoveBandwidthPackageIpResult, RemoveBandwidthPackageIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  导入密钥对
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -914,6 +1059,27 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDeviceStockResponse> DescribeDeviceStock(DescribeDeviceStockRequest request) {
             return await new DescribeDeviceStockExecutor().Client(this).Execute<DescribeDeviceStockResponse, DescribeDeviceStockResult, DescribeDeviceStockRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加共享带宽IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddBandwidthPackageIpResponse AddBandwidthPackageIp(AddBandwidthPackageIpRequest request) {
+            return  new AddBandwidthPackageIpExecutor().Client(this).Execute<AddBandwidthPackageIpResponse, AddBandwidthPackageIpResult, AddBandwidthPackageIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加共享带宽IP
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddBandwidthPackageIpResponse> AddBandwidthPackageIp(AddBandwidthPackageIpRequest request) {
+            return await new AddBandwidthPackageIpExecutor().Client(this).Execute<AddBandwidthPackageIpResponse, AddBandwidthPackageIpResult, AddBandwidthPackageIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1112,6 +1278,27 @@ namespace JDCloudSDK.Edcps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ApplyElasticIpsResponse> ApplyElasticIps(ApplyElasticIpsRequest request) {
             return await new ApplyElasticIpsExecutor().Client(this).Execute<ApplyElasticIpsResponse, ApplyElasticIpsResult, ApplyElasticIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  申请共享带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ApplyBandwidthPackagesResponse ApplyBandwidthPackages(ApplyBandwidthPackagesRequest request) {
+            return  new ApplyBandwidthPackagesExecutor().Client(this).Execute<ApplyBandwidthPackagesResponse, ApplyBandwidthPackagesResult, ApplyBandwidthPackagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  申请共享带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ApplyBandwidthPackagesResponse> ApplyBandwidthPackages(ApplyBandwidthPackagesRequest request) {
+            return await new ApplyBandwidthPackagesExecutor().Client(this).Execute<ApplyBandwidthPackagesResponse, ApplyBandwidthPackagesResult, ApplyBandwidthPackagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

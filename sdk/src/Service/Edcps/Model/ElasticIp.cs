@@ -81,13 +81,13 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        /// 别名IP id
+        /// 绑定的ip地址
         ///</summary>
-        public string AliasIpId{ get; set; }
+        public string TargetIp{ get; set; }
         ///<summary>
-        /// 别名IP ip
+        /// 共享带宽 id
         ///</summary>
-        public string AliasIp{ get; set; }
+        public string BandwidthPackageId{ get; set; }
         ///<summary>
         /// 计费信息
         ///</summary>

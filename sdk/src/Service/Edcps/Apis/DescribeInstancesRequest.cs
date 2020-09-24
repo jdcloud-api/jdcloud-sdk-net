@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -75,13 +75,21 @@ namespace  JDCloudSDK.Edcps.Apis
         ///</summary>
         public   string EnableInternet{ get; set; }
         ///<summary>
-        /// 内网ip
+        /// 主网口内网ip
         ///</summary>
         public   string PrivateIp{ get; set; }
+        ///<summary>
+        /// 辅网口内网ip
+        ///</summary>
+        public   string ExtensionPrivateIp{ get; set; }
         ///<summary>
         /// 密钥对id
         ///</summary>
         public   string KeypairId{ get; set; }
+        ///<summary>
+        /// 网口模式 单网口:bond,双网口:dual
+        ///</summary>
+        public   string InterfaceMode{ get; set; }
         ///<summary>
         /// instanceId - 分布式云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
         /// status - 分布式云物理服务器状态，参考分布式云物理服务器状态，精确匹配，支持多个

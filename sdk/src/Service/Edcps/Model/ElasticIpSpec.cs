@@ -50,6 +50,10 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public int? ExtraUplinkBandwidth{ get; set; }
         ///<summary>
+        /// 共享带宽ID, 选择加入共享带宽方式购买时必传
+        ///</summary>
+        public string BandwidthPackageId{ get; set; }
+        ///<summary>
         /// 购买数量
         ///Required:true
         ///</summary>

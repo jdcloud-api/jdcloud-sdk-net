@@ -61,7 +61,7 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public List<string> SslProtocols{ get; set; }
         ///<summary>
-        /// 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;
+        /// 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
         ///Required:true
         ///</summary>
         [Required]
@@ -100,5 +100,13 @@ namespace JDCloudSDK.Waf.Model
         /// 请求头是否支持下划线，0-否，1-是。缺省为0
         ///</summary>
         public int? EnableUnderscores{ get; set; }
+        ///<summary>
+        /// 禁用被动健康检查，缺省为0-否
+        ///</summary>
+        public int? DisableHealthCheck{ get; set; }
+        ///<summary>
+        /// 连接超时时间，3-60s
+        ///</summary>
+        public int? ProxyConnectTimeout{ get; set; }
     }
 }

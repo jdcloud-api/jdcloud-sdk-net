@@ -39,7 +39,7 @@ namespace JDCloudSDK.Vod.Model
     {
 
         ///<summary>
-        /// HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
+        /// HTTP 请求方法，上传支持 PUT 和 POST 方法，默认值为 PUT 。
         ///</summary>
         public string HttpMethod{ get; set; }
         ///<summary>

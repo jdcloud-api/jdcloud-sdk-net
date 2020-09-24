@@ -44,7 +44,7 @@ namespace JDCloudSDK.Waf.Model
         ///<summary>
         /// 规则更新时间，秒级时间戳, 0 表示历史数据无记录
         ///</summary>
-        public string UpdateTime{ get; set; }
+        public int? UpdateTime{ get; set; }
         ///<summary>
         /// 0-使用中 1-禁用
         ///</summary>

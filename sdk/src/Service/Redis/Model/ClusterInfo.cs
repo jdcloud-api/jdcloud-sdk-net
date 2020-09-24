@@ -40,10 +40,10 @@ namespace JDCloudSDK.Redis.Model
         ///<summary>
         /// proxy列表
         ///</summary>
-        public Proxy Proxies{ get; set; }
+        public List<Proxy> Proxies{ get; set; }
         ///<summary>
         /// shard列表
         ///</summary>
-        public Shard Shards{ get; set; }
+        public List<Shard> Shards{ get; set; }
     }
 }

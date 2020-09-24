@@ -163,9 +163,61 @@ namespace JDCloudSDK.Edcps.Model
         ///</summary>
         public string KeypairId{ get; set; }
         ///<summary>
+        /// 网络接口模式，单网口:bond、双网口:dual
+        ///</summary>
+        public string InterfaceMode{ get; set; }
+        ///<summary>
+        /// 辅网口私有网络ID
+        ///</summary>
+        public string ExtensionVpcId{ get; set; }
+        ///<summary>
+        /// 辅网口私有网络名称
+        ///</summary>
+        public string ExtensionVpcName{ get; set; }
+        ///<summary>
+        /// 辅网口子网ID
+        ///</summary>
+        public string ExtensionSubnetId{ get; set; }
+        ///<summary>
+        /// 辅网口子网名称
+        ///</summary>
+        public string ExtensionSubnetName{ get; set; }
+        ///<summary>
+        /// 辅网口手动分配的内网ip
+        ///</summary>
+        public string ExtensionPrivateIp{ get; set; }
+        ///<summary>
+        /// 辅网口是否启用外网
+        ///</summary>
+        public string ExtensionEnableInternet{ get; set; }
+        ///<summary>
+        /// 辅网口弹性公网ip id
+        ///</summary>
+        public string ExtensionElasticIpId{ get; set; }
+        ///<summary>
+        /// 辅网口公网ip
+        ///</summary>
+        public string ExtensionPublicIp{ get; set; }
+        ///<summary>
+        /// 辅网口外网带宽，单位Mbps
+        ///</summary>
+        public int? ExtensionBandwidth{ get; set; }
+        ///<summary>
+        /// 辅网口额外上行带宽, 单位Mbps
+        ///</summary>
+        public int? ExtensionExtraUplinkBandwidth{ get; set; }
+        ///<summary>
         /// agent状态
         ///</summary>
         public string AgentStatus{ get; set; }
+        ///<summary>
+        /// 创建时间
+        ///</summary>
+        public string CreateTime{ get; set; }
+        ///<summary>
+        /// 更新时间
+        ///</summary>
+        public string UpdateTime{ get; set; }
         ///<summary>
         /// 计费信息
         ///</summary>

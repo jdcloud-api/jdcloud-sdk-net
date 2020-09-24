@@ -29,6 +29,7 @@ using System.Text;
 
 using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Resourcetag.Model;
 
 namespace JDCloudSDK.Edcps.Model
 {
@@ -80,13 +81,21 @@ namespace JDCloudSDK.Edcps.Model
         [Required]
         public string DataRaidTypeId{ get; set; }
         ///<summary>
-        /// 子网编号
+        /// 子网ID
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
         /// 是否启用外网，取值范围：yes、no
         ///</summary>
         public string EnableInternet{ get; set; }
+        ///<summary>
+        /// 启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+        ///</summary>
+        public string InternetChargeMode{ get; set; }
+        ///<summary>
+        /// 弹性公网IP加入的共享带宽ID
+        ///</summary>
+        public string BandwidthPackageId{ get; set; }
         ///<summary>
         /// 网络类型，取值范围：vpc
         ///Required:true
@@ -101,6 +110,10 @@ namespace JDCloudSDK.Edcps.Model
         /// 内网IP
         ///</summary>
         public string PrivateIp{ get; set; }
+        ///<summary>
+        /// 内网添加的别名IP范围
+        ///</summary>
+        public List<AliasIpInfo> AliasIps{ get; set; }
         ///<summary>
         /// 外网链路类型, 目前支持联通un、电信ct、移动cm
         ///</summary>
@@ -148,8 +161,48 @@ namespace JDCloudSDK.Edcps.Model
         [Required]
         public ChargeSpec Charge{ get; set; }
         ///<summary>
-        /// 别名ip配置
+        /// 网络接口模式，单网口:bond、双网口:dual
         ///</summary>
-        public List<AliasIpInfo> AliasIps{ get; set; }
+        public string InterfaceMode{ get; set; }
+        ///<summary>
+        /// 辅网口子网ID
+        ///</summary>
+        public string ExtensionSubnetId{ get; set; }
+        ///<summary>
+        /// 辅网口手动分配的内网ip
+        ///</summary>
+        public string ExtensionPrivateIp{ get; set; }
+        ///<summary>
+        /// 辅网口内网添加的别名IP范围
+        ///</summary>
+        public List<AliasIpInfo> ExtensionAliasIps{ get; set; }
+        ///<summary>
+        /// 辅网口是否启用外网，取值范围：yes、no
+        ///</summary>
+        public string ExtensionEnableInternet{ get; set; }
+        ///<summary>
+        /// 辅网口链路类型, 目前支持联通un、电信ct、移动cm
+        ///</summary>
+        public string ExtensionLineType{ get; set; }
+        ///<summary>
+        /// 辅网口外网带宽，范围[1,10240] 单位Mbps
+        ///</summary>
+        public int? ExtensionBandwidth{ get; set; }
+        ///<summary>
+        /// 辅网口额外上行带宽, 范围[0,10240] 单位Mbps
+        ///</summary>
+        public int? ExtensionExtraUplinkBandwidth{ get; set; }
+        ///<summary>
+        /// 辅网口启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+        ///</summary>
+        public string ExtensionInternetChargeMode{ get; set; }
+        ///<summary>
+        /// 辅网口弹性公网IP加入的共享带宽ID
+        ///</summary>
+        public string ExtensionBandwidthPackageId{ get; set; }
+        ///<summary>
+        /// 标签
+        ///</summary>
+        public List<Tag> ResourceTags{ get; set; }
     }
 }

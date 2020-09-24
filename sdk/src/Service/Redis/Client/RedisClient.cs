@@ -89,9 +89,9 @@ namespace JDCloudSDK.Redis.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,63 +157,6 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  停止缓存Redis服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopInstanceResponse StopInstance(StopInstanceRequest request) {
-            return  new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  停止缓存Redis服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopInstanceResponse> StopInstance(StopInstanceRequest request) {
-            return await new StopInstanceExecutor().Client(this).Execute<StopInstanceResponse, StopInstanceResult, StopInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取集群中admin节点信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAdminConfigResponse DescribeAdminConfig(DescribeAdminConfigRequest request) {
-            return  new DescribeAdminConfigExecutor().Client(this).Execute<DescribeAdminConfigResponse, DescribeAdminConfigResult, DescribeAdminConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取集群中admin节点信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAdminConfigResponse> DescribeAdminConfig(DescribeAdminConfigRequest request) {
-            return await new DescribeAdminConfigExecutor().Client(this).Execute<DescribeAdminConfigResponse, DescribeAdminConfigResult, DescribeAdminConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  执行redis命令
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ExecuteCommandResponse ExecuteCommand(ExecuteCommandRequest request) {
-            return  new ExecuteCommandExecutor().Client(this).Execute<ExecuteCommandResponse, ExecuteCommandResult, ExecuteCommandRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  执行redis命令
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ExecuteCommandResponse> ExecuteCommand(ExecuteCommandRequest request) {
-            return await new ExecuteCommandExecutor().Client(this).Execute<ExecuteCommandResponse, ExecuteCommandResult, ExecuteCommandRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  获取Redis实例的IP白名单（只有白名单内的IP、网络才能访问该实例）
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -229,25 +172,6 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpWhiteListResponse> DescribeIpWhiteList(DescribeIpWhiteListRequest request) {
             return await new DescribeIpWhiteListExecutor().Client(this).Execute<DescribeIpWhiteListResponse, DescribeIpWhiteListResult, DescribeIpWhiteListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询缓存Redis支持的功能
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSupportedFunctionResponse DescribeSupportedFunction(DescribeSupportedFunctionRequest request) {
-            return  new DescribeSupportedFunctionExecutor().Client(this).Execute<DescribeSupportedFunctionResponse, DescribeSupportedFunctionResult, DescribeSupportedFunctionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询缓存Redis支持的功能
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSupportedFunctionResponse> DescribeSupportedFunction(DescribeSupportedFunctionRequest request) {
-            return await new DescribeSupportedFunctionExecutor().Client(this).Execute<DescribeSupportedFunctionResponse, DescribeSupportedFunctionResult, DescribeSupportedFunctionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -290,40 +214,21 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询订单结果
+        ///  查询指定客户端IP的连接详细信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeOrderStatusResponse DescribeOrderStatus(DescribeOrderStatusRequest request) {
-            return  new DescribeOrderStatusExecutor().Client(this).Execute<DescribeOrderStatusResponse, DescribeOrderStatusResult, DescribeOrderStatusRequest>(request);
+        public DescribeClientIpDetailResponse DescribeClientIpDetail(DescribeClientIpDetailRequest request) {
+            return  new DescribeClientIpDetailExecutor().Client(this).Execute<DescribeClientIpDetailResponse, DescribeClientIpDetailResult, DescribeClientIpDetailRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询订单结果
+        ///  查询指定客户端IP的连接详细信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeOrderStatusResponse> DescribeOrderStatus(DescribeOrderStatusRequest request) {
-            return await new DescribeOrderStatusExecutor().Client(this).Execute<DescribeOrderStatusResponse, DescribeOrderStatusResult, DescribeOrderStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启动缓存Redis服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartInstanceResponse StartInstance(StartInstanceRequest request) {
-            return  new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动缓存Redis服务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartInstanceResponse> StartInstance(StartInstanceRequest request) {
-            return await new StartInstanceExecutor().Client(this).Execute<StartInstanceResponse, StartInstanceResult, StartInstanceRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeClientIpDetailResponse> DescribeClientIpDetail(DescribeClientIpDetailRequest request) {
+            return await new DescribeClientIpDetailExecutor().Client(this).Execute<DescribeClientIpDetailResponse, DescribeClientIpDetailResult, DescribeClientIpDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -343,25 +248,6 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDownloadUrlResponse> DescribeDownloadUrl(DescribeDownloadUrlRequest request) {
             return await new DescribeDownloadUrlExecutor().Client(this).Execute<DescribeDownloadUrlResponse, DescribeDownloadUrlResult, DescribeDownloadUrlRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取webCommand所需的token
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetWebCmdTokenResponse GetWebCmdToken(GetWebCmdTokenRequest request) {
-            return  new GetWebCmdTokenExecutor().Client(this).Execute<GetWebCmdTokenResponse, GetWebCmdTokenResult, GetWebCmdTokenRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取webCommand所需的token
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetWebCmdTokenResponse> GetWebCmdToken(GetWebCmdTokenRequest request) {
-            return await new GetWebCmdTokenExecutor().Client(this).Execute<GetWebCmdTokenResponse, GetWebCmdTokenResult, GetWebCmdTokenRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -442,25 +328,6 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取集群中redis节点信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeRedisConfigResponse DescribeRedisConfig(DescribeRedisConfigRequest request) {
-            return  new DescribeRedisConfigExecutor().Client(this).Execute<DescribeRedisConfigResponse, DescribeRedisConfigResult, DescribeRedisConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取集群中redis节点信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeRedisConfigResponse> DescribeRedisConfig(DescribeRedisConfigRequest request) {
-            return await new DescribeRedisConfigExecutor().Client(this).Execute<DescribeRedisConfigResponse, DescribeRedisConfigResult, DescribeRedisConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询缓存分析任务列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -480,63 +347,6 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询用户实例的实例名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceNamesResponse DescribeInstanceNames(DescribeInstanceNamesRequest request) {
-            return  new DescribeInstanceNamesExecutor().Client(this).Execute<DescribeInstanceNamesResponse, DescribeInstanceNamesResult, DescribeInstanceNamesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户实例的实例名
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceNamesResponse> DescribeInstanceNames(DescribeInstanceNamesRequest request) {
-            return await new DescribeInstanceNamesExecutor().Client(this).Execute<DescribeInstanceNamesResponse, DescribeInstanceNamesResult, DescribeInstanceNamesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改规格的可见性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyInstanceClassResponse ModifyInstanceClass(ModifyInstanceClassRequest request) {
-            return  new ModifyInstanceClassExecutor().Client(this).Execute<ModifyInstanceClassResponse, ModifyInstanceClassResult, ModifyInstanceClassRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改规格的可见性
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceClassResponse> ModifyInstanceClass(ModifyInstanceClassRequest request) {
-            return await new ModifyInstanceClassExecutor().Client(this).Execute<ModifyInstanceClassResponse, ModifyInstanceClassResult, ModifyInstanceClassRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改账户的缓存Redis配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyUserQuotaResponse ModifyUserQuota(ModifyUserQuotaRequest request) {
-            return  new ModifyUserQuotaExecutor().Client(this).Execute<ModifyUserQuotaResponse, ModifyUserQuotaResult, ModifyUserQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改账户的缓存Redis配额
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyUserQuotaResponse> ModifyUserQuota(ModifyUserQuotaRequest request) {
-            return await new ModifyUserQuotaExecutor().Client(this).Execute<ModifyUserQuotaResponse, ModifyUserQuotaResult, ModifyUserQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  获取自动缓存分析时间
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -552,25 +362,6 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAnalysisTimeResponse> DescribeAnalysisTime(DescribeAnalysisTimeRequest request) {
             return await new DescribeAnalysisTimeExecutor().Client(this).Execute<DescribeAnalysisTimeResponse, DescribeAnalysisTimeResult, DescribeAnalysisTimeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询所有区域售卖状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeGlobalAzSaleStatusResponse DescribeGlobalAzSaleStatus(DescribeGlobalAzSaleStatusRequest request) {
-            return  new DescribeGlobalAzSaleStatusExecutor().Client(this).Execute<DescribeGlobalAzSaleStatusResponse, DescribeGlobalAzSaleStatusResult, DescribeGlobalAzSaleStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询所有区域售卖状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeGlobalAzSaleStatusResponse> DescribeGlobalAzSaleStatus(DescribeGlobalAzSaleStatusRequest request) {
-            return await new DescribeGlobalAzSaleStatusExecutor().Client(this).Execute<DescribeGlobalAzSaleStatusResponse, DescribeGlobalAzSaleStatusResult, DescribeGlobalAzSaleStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -611,25 +402,6 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest request) {
             return await new CreateBackupExecutor().Client(this).Execute<CreateBackupResponse, CreateBackupResult, CreateBackupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询内部用户实例详细列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInternalListResponse DescribeInternalList(DescribeInternalListRequest request) {
-            return  new DescribeInternalListExecutor().Client(this).Execute<DescribeInternalListResponse, DescribeInternalListResult, DescribeInternalListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询内部用户实例详细列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInternalListResponse> DescribeInternalList(DescribeInternalListRequest request) {
-            return await new DescribeInternalListExecutor().Client(this).Execute<DescribeInternalListResponse, DescribeInternalListResult, DescribeInternalListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -754,25 +526,6 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取集群中proxy节点信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProxyConfigResponse DescribeProxyConfig(DescribeProxyConfigRequest request) {
-            return  new DescribeProxyConfigExecutor().Client(this).Execute<DescribeProxyConfigResponse, DescribeProxyConfigResult, DescribeProxyConfigRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取集群中proxy节点信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProxyConfigResponse> DescribeProxyConfig(DescribeProxyConfigRequest request) {
-            return await new DescribeProxyConfigExecutor().Client(this).Execute<DescribeProxyConfigResponse, DescribeProxyConfigResult, DescribeProxyConfigRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建一个指定配置的缓存Redis实例：可选择版本、类型、规格（按CPU核数、内存容量、磁盘容量、带宽等划分），自定义分片规格可通过describeSpecConfig接口获取，老规格代码请参考，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
         /// 
         /// </summary>
@@ -828,6 +581,25 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
             return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询当前客户端IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeClientListResponse DescribeClientList(DescribeClientListRequest request) {
+            return  new DescribeClientListExecutor().Client(this).Execute<DescribeClientListResponse, DescribeClientListResult, DescribeClientListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询当前客户端IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeClientListResponse> DescribeClientList(DescribeClientListRequest request) {
+            return await new DescribeClientListExecutor().Client(this).Execute<DescribeClientListResponse, DescribeClientListResult, DescribeClientListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -904,27 +676,6 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyIpWhiteListResponse> ModifyIpWhiteList(ModifyIpWhiteListRequest request) {
             return await new ModifyIpWhiteListExecutor().Client(this).Execute<ModifyIpWhiteListResponse, ModifyIpWhiteListResult, ModifyIpWhiteListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建一个指定配置的缓存Redis实例：可选择版本、类型、规格（按CPU核数、内存容量、磁盘容量、带宽等划分），自定义分片规格可通过describeSpecConfig接口获取，老规格代码请参考，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateCacheInstanceNoBillResponse CreateCacheInstanceNoBill(CreateCacheInstanceNoBillRequest request) {
-            return  new CreateCacheInstanceNoBillExecutor().Client(this).Execute<CreateCacheInstanceNoBillResponse, CreateCacheInstanceNoBillResult, CreateCacheInstanceNoBillRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一个指定配置的缓存Redis实例：可选择版本、类型、规格（按CPU核数、内存容量、磁盘容量、带宽等划分），自定义分片规格可通过describeSpecConfig接口获取，老规格代码请参考，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateCacheInstanceNoBillResponse> CreateCacheInstanceNoBill(CreateCacheInstanceNoBillRequest request) {
-            return await new CreateCacheInstanceNoBillExecutor().Client(this).Execute<CreateCacheInstanceNoBillResponse, CreateCacheInstanceNoBillResult, CreateCacheInstanceNoBillRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

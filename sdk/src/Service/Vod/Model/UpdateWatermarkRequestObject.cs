@@ -69,6 +69,22 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string SizeUnit{ get; set; }
         ///<summary>
+        /// WidthRef
+        ///</summary>
+        public string WidthRef{ get; set; }
+        ///<summary>
+        /// 高度参考，仅当 siteUnit &#x3D; percent 时生效。
+        /// 取值说明：
+        ///   w: 输出水印高度 &#x3D; height * 水印原图高度
+        ///   v: 等同于 vh
+        ///   vw: 输出水印高度 &#x3D; height * 输出视频宽度
+        ///   vh: 输出水印高度 &#x3D; height * 输出视频高度
+        ///   vls: 输出水印高度 &#x3D; height * 输出视频长边
+        ///   vss: 输出水印高度 &#x3D; height * 输出视频短边
+        /// 
+        ///</summary>
+        public string HeightRef{ get; set; }
+        ///<summary>
         /// 水印位置。取值范围：
         ///   LT - 左上
         ///   RT - 右上

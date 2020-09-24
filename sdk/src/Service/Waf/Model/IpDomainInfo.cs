@@ -46,7 +46,7 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public bool IsVip{ get; set; }
         ///<summary>
-        /// 绑定的证书名称
+        /// 域名信息
         ///</summary>
         public List<DomainInfo> DomainInfo{ get; set; }
     }

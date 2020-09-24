@@ -45,6 +45,10 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public List<string> RsAddr{ get; set; }
         ///<summary>
+        /// 回源地址权重，与rsAddr顺序对应
+        ///</summary>
+        public List<int?> Weight{ get; set; }
+        ///<summary>
         /// http回源端口
         ///</summary>
         public List<string> HttpRsPort{ get; set; }

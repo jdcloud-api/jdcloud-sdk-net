@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器弹性公网IP操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -55,8 +55,25 @@ namespace  JDCloudSDK.Edcps.Apis
         ///</summary>
         public   string Status{ get; set; }
         ///<summary>
+        /// 弹性公网IP是否加入共享带宽，取值范围：yes、no
+        ///</summary>
+        public   string HasJoinBandwidthPackage{ get; set; }
+        ///<summary>
+        /// 支付模式，取值为：prepaid_by_duration表示预付费，postpaid_by_duration表示按配置后付费
+        ///</summary>
+        public   string ChargeMode{ get; set; }
+        ///<summary>
+        /// 实例Id
+        ///</summary>
+        public   string InstanceId{ get; set; }
+        ///<summary>
+        /// 子网Id
+        ///</summary>
+        public   string SubnetId{ get; set; }
+        ///<summary>
         /// elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
-        /// elasticIp - 弹性公网IP，精确匹配，支持多个
+        /// elasticIp - 弹性公网IP，精确匹配，支持多个&lt;br/&gt;
+        /// bandwidthPackageId - 共享带宽ID，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

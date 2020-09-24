@@ -38,10 +38,6 @@ namespace JDCloudSDK.Edcps.Model
     {
 
         ///<summary>
-        /// 实例ID
-        ///</summary>
-        public string InstanceId{ get; set; }
-        ///<summary>
         /// 地域
         ///</summary>
         public string Region{ get; set; }
@@ -49,6 +45,10 @@ namespace JDCloudSDK.Edcps.Model
         /// 可用区
         ///</summary>
         public string Az{ get; set; }
+        ///<summary>
+        /// 实例ID
+        ///</summary>
+        public string InstanceId{ get; set; }
         ///<summary>
         /// 子网ID
         ///</summary>
@@ -65,5 +65,9 @@ namespace JDCloudSDK.Edcps.Model
         /// cidr段
         ///</summary>
         public string Cidr{ get; set; }
+        ///<summary>
+        /// 是否已绑弹性公网ip
+        ///</summary>
+        public bool IsBondEip{ get; set; }
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,12 @@ namespace  JDCloudSDK.Edcps.Apis
     /// </summary>
     public class DescribeAvailablePrivateIpRequest : JdcloudRequest
     {
+        ///<summary>
+        /// 主网口或者辅网口的子网id
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string SubnetId{ get; set; }
         ///<summary>
         /// 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
         ///Required:true

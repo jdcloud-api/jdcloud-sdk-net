@@ -252,25 +252,6 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取ip的域名信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeIpDomainInfoResponse DescribeIpDomainInfo(DescribeIpDomainInfoRequest request) {
-            return  new DescribeIpDomainInfoExecutor().Client(this).Execute<DescribeIpDomainInfoResponse, DescribeIpDomainInfoResult, DescribeIpDomainInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取ip的域名信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeIpDomainInfoResponse> DescribeIpDomainInfo(DescribeIpDomainInfoRequest request) {
-            return await new DescribeIpDomainInfoExecutor().Client(this).Execute<DescribeIpDomainInfoResponse, DescribeIpDomainInfoResult, DescribeIpDomainInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  更新网站黑白名单ip配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -670,6 +651,25 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取回源ip段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLbOutIpResponse DescribeLbOutIp(DescribeLbOutIpRequest request) {
+            return  new DescribeLbOutIpExecutor().Client(this).Execute<DescribeLbOutIpResponse, DescribeLbOutIpResult, DescribeLbOutIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取回源ip段
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLbOutIpResponse> DescribeLbOutIp(DescribeLbOutIpRequest request) {
+            return await new DescribeLbOutIpExecutor().Client(this).Execute<DescribeLbOutIpResponse, DescribeLbOutIpResult, DescribeLbOutIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取网站在一定时间内的bps信息。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -837,25 +837,6 @@ namespace JDCloudSDK.Waf.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableRiskResponse> EnableRisk(EnableRiskRequest request) {
             return await new EnableRiskExecutor().Client(this).Execute<EnableRiskResponse, EnableRiskResult, EnableRiskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  判断IP是否为waf的vip
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public IsWafVipResponse IsWafVip(IsWafVipRequest request) {
-            return  new IsWafVipExecutor().Client(this).Execute<IsWafVipResponse, IsWafVipResult, IsWafVipRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  判断IP是否为waf的vip
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<IsWafVipResponse> IsWafVip(IsWafVipRequest request) {
-            return await new IsWafVipExecutor().Client(this).Execute<IsWafVipResponse, IsWafVipResult, IsWafVipRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

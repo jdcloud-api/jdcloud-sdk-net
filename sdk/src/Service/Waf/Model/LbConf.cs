@@ -98,5 +98,13 @@ namespace JDCloudSDK.Waf.Model
         /// 请求body最大值，默认300M，可为G/K
         ///</summary>
         public string MaxBodySize{ get; set; }
+        ///<summary>
+        /// 禁用被动健康检查，缺省为0-否
+        ///</summary>
+        public int? DisableHealthCheck{ get; set; }
+        ///<summary>
+        /// 连接超时时间，3-60s
+        ///</summary>
+        public int? ProxyConnectTimeout{ get; set; }
     }
 }

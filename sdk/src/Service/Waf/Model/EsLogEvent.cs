@@ -46,6 +46,10 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string RemoteAddr{ get; set; }
         ///<summary>
+        /// 客户端port
+        ///</summary>
+        public string RemotePort{ get; set; }
+        ///<summary>
         /// 域名
         ///</summary>
         public string Domain{ get; set; }
@@ -85,5 +89,101 @@ namespace JDCloudSDK.Waf.Model
         /// 回源错误信息
         ///</summary>
         public string UpstreamErr{ get; set; }
+        ///<summary>
+        /// 日志记录时间
+        ///</summary>
+        public string TimeLocal{ get; set; }
+        ///<summary>
+        /// 本机域名
+        ///</summary>
+        public string Hostname{ get; set; }
+        ///<summary>
+        /// 响应长度
+        ///</summary>
+        public string BytesSent{ get; set; }
+        ///<summary>
+        /// 请求长度
+        ///</summary>
+        public string RequestLength{ get; set; }
+        ///<summary>
+        /// 客户端请求的域名
+        ///</summary>
+        public string Host{ get; set; }
+        ///<summary>
+        /// jfe的server块监听IP
+        ///</summary>
+        public string ServerAddr{ get; set; }
+        ///<summary>
+        /// jfe的server块监听port
+        ///</summary>
+        public string ServerPort{ get; set; }
+        ///<summary>
+        /// 请求所连接的upstream名称
+        ///</summary>
+        public string UpstreamHttpName{ get; set; }
+        ///<summary>
+        /// 请求所连接的upstream服务器IP
+        ///</summary>
+        public string UpstreamAddr{ get; set; }
+        ///<summary>
+        /// 请求所连接的upstream服务器port
+        ///</summary>
+        public string UpstreamHttpPort{ get; set; }
+        ///<summary>
+        /// 等待upstream建立连接的时间
+        ///</summary>
+        public string UpstreamConnectTime{ get; set; }
+        ///<summary>
+        /// 接收upstream请求头的时间
+        ///</summary>
+        public string UpstreamHeaderTime{ get; set; }
+        ///<summary>
+        /// 接收upstream响应头的时间
+        ///</summary>
+        public string UpstreamResponseTime{ get; set; }
+        ///<summary>
+        /// 请求处理时间
+        ///</summary>
+        public string RequestTime{ get; set; }
+        ///<summary>
+        /// 请求头的UA字段
+        ///</summary>
+        public string HttpUserAgent{ get; set; }
+        ///<summary>
+        /// 攻击类型
+        ///</summary>
+        public string AntiReason{ get; set; }
+        ///<summary>
+        /// 请求来源
+        ///</summary>
+        public string HttpReferer{ get; set; }
+        ///<summary>
+        /// 请求协议
+        ///</summary>
+        public string Scheme{ get; set; }
+        ///<summary>
+        /// uri
+        ///</summary>
+        public string Uri{ get; set; }
+        ///<summary>
+        /// 断点续传响应分片位置
+        ///</summary>
+        public string SentHttpContentRange{ get; set; }
+        ///<summary>
+        /// 客户端IP
+        ///</summary>
+        public string AntiRemoteAddr{ get; set; }
+        ///<summary>
+        /// 原响应码
+        ///</summary>
+        public string AntiStatus{ get; set; }
+        ///<summary>
+        /// 命中规则请求原始请求报文
+        ///</summary>
+        public string AntiReqRaw{ get; set; }
+        ///<summary>
+        /// 命中规则请求原始响应报文
+        ///</summary>
+        public string AntiRespRaw{ get; set; }
     }
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理类接口
- * 京东云WAF-OpenAPI实例管理类接口
+ * Instance-Management
+ * Instance Management API
  *
  * OpenAPI spec version: v1
  * Contact: 
