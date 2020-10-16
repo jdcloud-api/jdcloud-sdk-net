@@ -33,12 +33,12 @@ namespace JDCloudSDK.Dbaudit.Client
 {
 
     /// <summary>
-    ///  添加一条IP白名单记录，仅支持IPv4地址
+    ///  添加一条IP白名单记录
     /// </summary>
     public class AddIpWhiteItemExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  添加一条IP白名单记录，仅支持IPv4地址接口的Http 请求方法
+        ///  添加一条IP白名单记录接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Dbaudit.Client
             }
         }
         /// <summary>
-        ///  添加一条IP白名单记录，仅支持IPv4地址接口的Http资源请求路径
+        ///  添加一条IP白名单记录接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

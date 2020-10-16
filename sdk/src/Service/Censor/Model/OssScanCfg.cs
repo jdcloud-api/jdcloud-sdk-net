@@ -70,6 +70,14 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public ScanConf VideoInfo{ get; set; }
         ///<summary>
+        /// 文本配置
+        ///</summary>
+        public ScanConf TextInfo{ get; set; }
+        ///<summary>
+        /// 音频配置
+        ///</summary>
+        public ScanConf AudioInfo{ get; set; }
+        ///<summary>
         /// 视频截帧配置, 暂不支持配置
         ///</summary>
         public FrameConf FrameInfo{ get; set; }

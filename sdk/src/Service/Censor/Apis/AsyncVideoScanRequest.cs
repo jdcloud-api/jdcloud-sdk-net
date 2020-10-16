@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Censor.Apis
     public class AsyncVideoScanRequest : JdcloudRequest
     {
         ///<summary>
+        /// 是否直播。默认为false，表示为普通视频检测；若是直播检测，该值必须传入true。
+        ///</summary>
+        public   bool Live{ get; set; }
+        ///<summary>
         /// 指定检测场景
         ///</summary>
         public List<string> Scenes{ get; set; }

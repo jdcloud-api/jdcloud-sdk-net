@@ -65,5 +65,9 @@ namespace JDCloudSDK.Cdn.Model
         /// 通知周期,取值[daily,weekly,monthly].
         ///</summary>
         public List<string> NoticePeriod{ get; set; }
+        ///<summary>
+        /// 通知状态，取值[init,start,stop]
+        ///</summary>
+        public string NoticeStatus{ get; set; }
     }
 }

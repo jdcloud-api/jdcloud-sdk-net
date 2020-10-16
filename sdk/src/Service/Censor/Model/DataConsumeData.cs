@@ -46,6 +46,10 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public int? Porn{ get; set; }
         ///<summary>
+        /// Ad
+        ///</summary>
+        public int? Ad{ get; set; }
+        ///<summary>
         /// 涉政暴恐
         ///</summary>
         public int? Politics_terrorism{ get; set; }

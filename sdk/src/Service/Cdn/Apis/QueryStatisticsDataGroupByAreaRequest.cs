@@ -81,5 +81,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 查询协议，可选值:[http,https,all],传空默认返回全部协议汇总后的数据
         ///</summary>
         public   string Scheme{ get; set; }
+        ///<summary>
+        /// true 代表查询境外数据，默认false查询境内数据
+        ///</summary>
+        public   bool Abroad{ get; set; }
     }
 }

@@ -175,5 +175,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 加速区域
         ///</summary>
         public   string AccelerateRegion{ get; set; }
+        ///<summary>
+        /// txt记录
+        ///</summary>
+        public   string Txt{ get; set; }
     }
 }

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Jmr.Model
 {
@@ -40,63 +41,64 @@ namespace JDCloudSDK.Jmr.Model
         ///<summary>
         /// 集群ID
         ///</summary>
-        public string ClusterId{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// 集群名称
         ///</summary>
-        public string ClusterName{ get; set; }
-        ///<summary>
-        /// 集群创建时间
-        ///</summary>
-        public string ClusterCreateTime{ get; set; }
-        ///<summary>
-        /// 集群是否为高可用
-        ///</summary>
-        public bool ClusterHa{ get; set; }
-        ///<summary>
-        /// 集群状态
-        ///</summary>
-        public string ClusterStatus{ get; set; }
-        ///<summary>
-        /// 集群版本
-        ///</summary>
-        public string ClusterVersion{ get; set; }
-        ///<summary>
-        /// 集群服务
-        ///</summary>
-        public List<string> ClusterService{ get; set; }
+        public string Name{ get; set; }
         ///<summary>
         /// 集群所属地域
         ///</summary>
-        public string ClusterRegion{ get; set; }
+        public string Region{ get; set; }
         ///<summary>
-        /// 集群所属可用区
+        /// VPC名称
         ///</summary>
-        public string ClusterAz{ get; set; }
-        ///<summary>
-        /// 集群费用
-        ///</summary>
-        public double? ClusterPrice{ get; set; }
-        ///<summary>
-        /// 集群计费类型
-        ///</summary>
-        public string ClusterPaymentType{ get; set; }
-        ///<summary>
-        /// 集群是否关联对象存储
-        ///</summary>
-        public bool ClusterOss{ get; set; }
-        ///<summary>
-        /// 集群私有网络名称
-        ///</summary>
-        public string ClusterVpc{ get; set; }
+        public string VpcName{ get; set; }
         ///<summary>
         /// 集群子网名称
         ///</summary>
-        public string ClusterVpcSubnet{ get; set; }
+        public string VpcSubnetName{ get; set; }
         ///<summary>
-        /// 集群公网网络带宽
+        /// 集群状态
         ///</summary>
-        public int? ClusterBandwidth{ get; set; }
+        public string Status{ get; set; }
+        ///<summary>
+        /// 集群版本
+        ///</summary>
+        [JsonProperty("version")]
+        public string VersionValue{ get; set; }
+        ///<summary>
+        /// 集群服务
+        ///</summary>
+        public string Software{ get; set; }
+        ///<summary>
+        /// 集群创建时间
+        ///</summary>
+        public string CreateTime{ get; set; }
+        ///<summary>
+        /// 集群所属可用区
+        ///</summary>
+        public bool HaFlag{ get; set; }
+        ///<summary>
+        /// 集群是否使用OSS
+        ///</summary>
+        public bool OssFlag{ get; set; }
+        ///<summary>
+        /// 集群费用
+        ///</summary>
+        public double? PayPrice{ get; set; }
+        ///<summary>
+        /// 集群收费类型
+        ///</summary>
+        public string PayType{ get; set; }
+        ///<summary>
+        /// 集群运行时间
+        ///</summary>
+        public string Duration{ get; set; }
+        ///<summary>
+        /// 集群节点个数
+        ///</summary>
+        public int? NodeCount{ get; set; }
         ///<summary>
         /// 集群节点信息
         ///</summary>

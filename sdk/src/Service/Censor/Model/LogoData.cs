@@ -38,10 +38,6 @@ namespace JDCloudSDK.Censor.Model
     {
 
         ///<summary>
-        /// 识别出的logo类型，取值为TV （台标）
-        ///</summary>
-        public string LogoType{ get; set; }
-        ///<summary>
         /// 识别出的logo名称
         ///</summary>
         public string Name{ get; set; }

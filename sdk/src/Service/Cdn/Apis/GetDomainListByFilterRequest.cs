@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class GetDomainListByFilterRequest : JdcloudRequest
     {
         ///<summary>
-        /// 根据关键字进行模糊匹配
+        /// 根据关键字进行模糊匹配，域名或者回源信息
         ///</summary>
         public   string KeyWord{ get; set; }
         ///<summary>
@@ -62,6 +62,10 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
         ///</summary>
         public   string AccelerateRegion{ get; set; }
+        ///<summary>
+        /// 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
+        ///</summary>
+        public   int? FilterBy{ get; set; }
         ///<summary>
         /// 标签过滤条件
         ///</summary>

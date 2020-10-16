@@ -35,16 +35,33 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    ///  查询集群列表
+    ///  查询用户集群的列表
+        ///         /// 
     /// </summary>
     public class DescribeClustersRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 地域
         ///</summary>
-        public   int? PageNumber{ get; set; }
+        public   string DataCenter{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[10, 100]
+        /// 集群状态，CREATING，RUNNING，RELEASED，FAILED等
+        ///</summary>
+        public   string Status{ get; set; }
+        ///<summary>
+        /// 集群名称
+        ///</summary>
+        public   string ClusterName{ get; set; }
+        ///<summary>
+        /// 排序，比如 id desc
+        ///</summary>
+        public   string OrderBy{ get; set; }
+        ///<summary>
+        /// 页数，默认为1
+        ///</summary>
+        public   int? PageNum{ get; set; }
+        ///<summary>
+        /// 每页数目，默认为10
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

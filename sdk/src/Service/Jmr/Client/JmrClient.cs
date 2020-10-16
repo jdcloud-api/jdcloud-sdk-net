@@ -157,6 +157,27 @@ namespace JDCloudSDK.Jmr.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询用户集群的列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeClustersResponse DescribeClusters(DescribeClustersRequest request) {
+            return  new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户集群的列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest request) {
+            return await new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  释放集群
         /// 
         /// </summary>
@@ -178,26 +199,7 @@ namespace JDCloudSDK.Jmr.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询集群列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeClustersResponse DescribeClusters(DescribeClustersRequest request) {
-            return  new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询集群列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest request) {
-            return await new DescribeClustersExecutor().Client(this).Execute<DescribeClustersResponse, DescribeClustersResult, DescribeClustersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户指定clusterId对应的集群列表及相关服务的一些信息
+        ///  查询用户的集群列表及相关服务的一些信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -206,7 +208,7 @@ namespace JDCloudSDK.Jmr.Client
         }
 #else
         /// <summary>
-        ///  查询用户指定clusterId对应的集群列表及相关服务的一些信息
+        ///  查询用户的集群列表及相关服务的一些信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

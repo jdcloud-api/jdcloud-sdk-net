@@ -66,5 +66,9 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public List<string> NoticePeriod{ get; set; }
 
+        ///<summary>
+        /// 通知状态，取值[init,start,stop]
+        ///</summary>
+        public   string NoticeStatus{ get; set; }
     }
 }

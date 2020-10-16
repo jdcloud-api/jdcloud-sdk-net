@@ -33,12 +33,14 @@ namespace JDCloudSDK.Jmr.Client
 {
 
     /// <summary>
-    ///  查询集群列表
+    ///  查询用户集群的列表
+        /// 
     /// </summary>
     public class DescribeClustersExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询集群列表接口的Http 请求方法
+        ///  查询用户集群的列表
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,12 +49,13 @@ namespace JDCloudSDK.Jmr.Client
             }
         }
         /// <summary>
-        ///  查询集群列表接口的Http资源请求路径
+        ///  查询用户集群的列表
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {
             get {
-            return "/regions/{regionId}/cluster:create";
+            return "/regions/{regionId}/clusters";
             }
         }
     }

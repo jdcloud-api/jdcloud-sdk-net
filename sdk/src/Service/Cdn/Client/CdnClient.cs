@@ -499,6 +499,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  设置用户刷新预热限额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetRefreshLimitResponse SetRefreshLimit(SetRefreshLimitRequest request) {
+            return  new SetRefreshLimitExecutor().Client(this).Execute<SetRefreshLimitResponse, SetRefreshLimitResult, SetRefreshLimitRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  设置用户刷新预热限额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetRefreshLimitResponse> SetRefreshLimit(SetRefreshLimitRequest request) {
+            return await new SetRefreshLimitExecutor().Client(this).Execute<SetRefreshLimitResponse, SetRefreshLimitResult, SetRefreshLimitRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置回源302跳转
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2357,6 +2376,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableWafWhiteRulesResponse> EnableWafWhiteRules(EnableWafWhiteRulesRequest request) {
             return await new EnableWafWhiteRulesExecutor().Client(this).Execute<EnableWafWhiteRulesResponse, EnableWafWhiteRulesResult, EnableWafWhiteRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户刷新预热限额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryRefreshLimitResponse QueryRefreshLimit(QueryRefreshLimitRequest request) {
+            return  new QueryRefreshLimitExecutor().Client(this).Execute<QueryRefreshLimitResponse, QueryRefreshLimitResult, QueryRefreshLimitRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户刷新预热限额
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryRefreshLimitResponse> QueryRefreshLimit(QueryRefreshLimitRequest request) {
+            return await new QueryRefreshLimitExecutor().Client(this).Execute<QueryRefreshLimitResponse, QueryRefreshLimitResult, QueryRefreshLimitRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

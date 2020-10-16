@@ -33,12 +33,12 @@ namespace JDCloudSDK.Jmr.Client
 {
 
     /// <summary>
-    ///  查询用户指定clusterId对应的集群列表及相关服务的一些信息
+    ///  查询用户的集群列表及相关服务的一些信息
     /// </summary>
     public class IdataClusterExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询用户指定clusterId对应的集群列表及相关服务的一些信息接口的Http 请求方法
+        ///  查询用户的集群列表及相关服务的一些信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Jmr.Client
             }
         }
         /// <summary>
-        ///  查询用户指定clusterId对应的集群列表及相关服务的一些信息接口的Http资源请求路径
+        ///  查询用户的集群列表及相关服务的一些信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

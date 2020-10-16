@@ -89,9 +89,9 @@ namespace JDCloudSDK.Censor.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,21 +138,59 @@ namespace JDCloudSDK.Censor.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  运营后台获取流量包统计数目
+        ///  查看音频异步检测结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribePkgAmountResponse DescribePkgAmount(DescribePkgAmountRequest request) {
-            return  new DescribePkgAmountExecutor().Client(this).Execute<DescribePkgAmountResponse, DescribePkgAmountResult, DescribePkgAmountRequest>(request);
+        public AudioResultsResponse AudioResults(AudioResultsRequest request) {
+            return  new AudioResultsExecutor().Client(this).Execute<AudioResultsResponse, AudioResultsResult, AudioResultsRequest>(request);
         }
 #else
         /// <summary>
-        ///  运营后台获取流量包统计数目
+        ///  查看音频异步检测结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribePkgAmountResponse> DescribePkgAmount(DescribePkgAmountRequest request) {
-            return await new DescribePkgAmountExecutor().Client(this).Execute<DescribePkgAmountResponse, DescribePkgAmountResult, DescribePkgAmountRequest>(request).ConfigureAwait(false);
+        public async Task<AudioResultsResponse> AudioResults(AudioResultsRequest request) {
+            return await new AudioResultsExecutor().Client(this).Execute<AudioResultsResponse, AudioResultsResult, AudioResultsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除限制参数配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLimitResponse DeleteLimit(DeleteLimitRequest request) {
+            return  new DeleteLimitExecutor().Client(this).Execute<DeleteLimitResponse, DeleteLimitResult, DeleteLimitRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除限制参数配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLimitResponse> DeleteLimit(DeleteLimitRequest request) {
+            return await new DeleteLimitExecutor().Client(this).Execute<DeleteLimitResponse, DeleteLimitResult, DeleteLimitRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  文本同步检测-检测文本中是否包含违规信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public InnerTextScanResponse InnerTextScan(InnerTextScanRequest request) {
+            return  new InnerTextScanExecutor().Client(this).Execute<InnerTextScanResponse, InnerTextScanResult, InnerTextScanRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  文本同步检测-检测文本中是否包含违规信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<InnerTextScanResponse> InnerTextScan(InnerTextScanRequest request) {
+            return await new InnerTextScanExecutor().Client(this).Execute<InnerTextScanResponse, InnerTextScanResult, InnerTextScanRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -176,234 +214,6 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看图片异步检测结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImageResultsResponse ImageResults(ImageResultsRequest request) {
-            return  new ImageResultsExecutor().Client(this).Execute<ImageResultsResponse, ImageResultsResult, ImageResultsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看图片异步检测结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImageResultsResponse> ImageResults(ImageResultsRequest request) {
-            return await new ImageResultsExecutor().Client(this).Execute<ImageResultsResponse, ImageResultsResult, ImageResultsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取开通记录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeApplyInfoResponse DescribeApplyInfo(DescribeApplyInfoRequest request) {
-            return  new DescribeApplyInfoExecutor().Client(this).Execute<DescribeApplyInfoResponse, DescribeApplyInfoResult, DescribeApplyInfoRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取开通记录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeApplyInfoResponse> DescribeApplyInfo(DescribeApplyInfoRequest request) {
-            return await new DescribeApplyInfoExecutor().Client(this).Execute<DescribeApplyInfoResponse, DescribeApplyInfoResult, DescribeApplyInfoRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取检测结果总览
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssOverviewResponse DescribeOssOverview(DescribeOssOverviewRequest request) {
-            return  new DescribeOssOverviewExecutor().Client(this).Execute<DescribeOssOverviewResponse, DescribeOssOverviewResult, DescribeOssOverviewRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取检测结果总览
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssOverviewResponse> DescribeOssOverview(DescribeOssOverviewRequest request) {
-            return await new DescribeOssOverviewExecutor().Client(this).Execute<DescribeOssOverviewResponse, DescribeOssOverviewResult, DescribeOssOverviewRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台获取用户趋势图
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserTrendResponse DescribeUserTrend(DescribeUserTrendRequest request) {
-            return  new DescribeUserTrendExecutor().Client(this).Execute<DescribeUserTrendResponse, DescribeUserTrendResult, DescribeUserTrendRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台获取用户趋势图
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserTrendResponse> DescribeUserTrend(DescribeUserTrendRequest request) {
-            return await new DescribeUserTrendExecutor().Client(this).Execute<DescribeUserTrendResponse, DescribeUserTrendResult, DescribeUserTrendRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取数据统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDataStatementResponse DescribeDataStatement(DescribeDataStatementRequest request) {
-            return  new DescribeDataStatementExecutor().Client(this).Execute<DescribeDataStatementResponse, DescribeDataStatementResult, DescribeDataStatementRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取数据统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDataStatementResponse> DescribeDataStatement(DescribeDataStatementRequest request) {
-            return await new DescribeDataStatementExecutor().Client(this).Execute<DescribeDataStatementResponse, DescribeDataStatementResult, DescribeDataStatementRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  角色授权访问用户数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AuthResponse Auth(AuthRequest request) {
-            return  new AuthExecutor().Client(this).Execute<AuthResponse, AuthResult, AuthRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  角色授权访问用户数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AuthResponse> Auth(AuthRequest request) {
-            return await new AuthExecutor().Client(this).Execute<AuthResponse, AuthResult, AuthRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  暂停检测中的任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public PauseOssScanResponse PauseOssScan(PauseOssScanRequest request) {
-            return  new PauseOssScanExecutor().Client(this).Execute<PauseOssScanResponse, PauseOssScanResult, PauseOssScanRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  暂停检测中的任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<PauseOssScanResponse> PauseOssScan(PauseOssScanRequest request) {
-            return await new PauseOssScanExecutor().Client(this).Execute<PauseOssScanResponse, PauseOssScanResult, PauseOssScanRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取oss数据检测趋势
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssTrendResponse DescribeOssTrend(DescribeOssTrendRequest request) {
-            return  new DescribeOssTrendExecutor().Client(this).Execute<DescribeOssTrendResponse, DescribeOssTrendResult, DescribeOssTrendRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取oss数据检测趋势
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssTrendResponse> DescribeOssTrend(DescribeOssTrendRequest request) {
-            return await new DescribeOssTrendExecutor().Client(this).Execute<DescribeOssTrendResponse, DescribeOssTrendResult, DescribeOssTrendRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取流量包列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribePackagesResponse DescribePackages(DescribePackagesRequest request) {
-            return  new DescribePackagesExecutor().Client(this).Execute<DescribePackagesResponse, DescribePackagesResult, DescribePackagesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取流量包列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribePackagesResponse> DescribePackages(DescribePackagesRequest request) {
-            return await new DescribePackagesExecutor().Client(this).Execute<DescribePackagesResponse, DescribePackagesResult, DescribePackagesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  图片同步检测
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ImageScanResponse ImageScan(ImageScanRequest request) {
-            return  new ImageScanExecutor().Client(this).Execute<ImageScanResponse, ImageScanResult, ImageScanRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  图片同步检测
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ImageScanResponse> ImageScan(ImageScanRequest request) {
-            return await new ImageScanExecutor().Client(this).Execute<ImageScanResponse, ImageScanResult, ImageScanRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台获取用户详情列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserDetailResponse DescribeUserDetail(DescribeUserDetailRequest request) {
-            return  new DescribeUserDetailExecutor().Client(this).Execute<DescribeUserDetailResponse, DescribeUserDetailResult, DescribeUserDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台获取用户详情列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserDetailResponse> DescribeUserDetail(DescribeUserDetailRequest request) {
-            return await new DescribeUserDetailExecutor().Client(this).Execute<DescribeUserDetailResponse, DescribeUserDetailResult, DescribeUserDetailRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  人工审核
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ReviewOssResultsResponse ReviewOssResults(ReviewOssResultsRequest request) {
-            return  new ReviewOssResultsExecutor().Client(this).Execute<ReviewOssResultsResponse, ReviewOssResultsResult, ReviewOssResultsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  人工审核
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ReviewOssResultsResponse> ReviewOssResults(ReviewOssResultsRequest request) {
-            return await new ReviewOssResultsExecutor().Client(this).Execute<ReviewOssResultsResponse, ReviewOssResultsResult, ReviewOssResultsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查看视频异步检测结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -423,173 +233,40 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  运营后台获取检测量统计数目
+        ///  查看图片异步检测结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeDataAmountResponse DescribeDataAmount(DescribeDataAmountRequest request) {
-            return  new DescribeDataAmountExecutor().Client(this).Execute<DescribeDataAmountResponse, DescribeDataAmountResult, DescribeDataAmountRequest>(request);
+        public ImageResultsResponse ImageResults(ImageResultsRequest request) {
+            return  new ImageResultsExecutor().Client(this).Execute<ImageResultsResponse, ImageResultsResult, ImageResultsRequest>(request);
         }
 #else
         /// <summary>
-        ///  运营后台获取检测量统计数目
+        ///  查看图片异步检测结果
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDataAmountResponse> DescribeDataAmount(DescribeDataAmountRequest request) {
-            return await new DescribeDataAmountExecutor().Client(this).Execute<DescribeDataAmountResponse, DescribeDataAmountResult, DescribeDataAmountRequest>(request).ConfigureAwait(false);
+        public async Task<ImageResultsResponse> ImageResults(ImageResultsRequest request) {
+            return await new ImageResultsExecutor().Client(this).Execute<ImageResultsResponse, ImageResultsResult, ImageResultsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  提交视频异步检测任务
+        ///  删除敏感库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AsyncVideoScanResponse AsyncVideoScan(AsyncVideoScanRequest request) {
-            return  new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request);
+        public DeleteCensorLibResponse DeleteCensorLib(DeleteCensorLibRequest request) {
+            return  new DeleteCensorLibExecutor().Client(this).Execute<DeleteCensorLibResponse, DeleteCensorLibResult, DeleteCensorLibRequest>(request);
         }
 #else
         /// <summary>
-        ///  提交视频异步检测任务
+        ///  删除敏感库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AsyncVideoScanResponse> AsyncVideoScan(AsyncVideoScanRequest request) {
-            return await new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台修改用户跟踪信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyUserTrackingResponse ModifyUserTracking(ModifyUserTrackingRequest request) {
-            return  new ModifyUserTrackingExecutor().Client(this).Execute<ModifyUserTrackingResponse, ModifyUserTrackingResult, ModifyUserTrackingRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台修改用户跟踪信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyUserTrackingResponse> ModifyUserTracking(ModifyUserTrackingRequest request) {
-            return await new ModifyUserTrackingExecutor().Client(this).Execute<ModifyUserTrackingResponse, ModifyUserTrackingResult, ModifyUserTrackingRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取回调
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssCallbackResponse DescribeOssCallback(DescribeOssCallbackRequest request) {
-            return  new DescribeOssCallbackExecutor().Client(this).Execute<DescribeOssCallbackResponse, DescribeOssCallbackResult, DescribeOssCallbackRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取回调
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssCallbackResponse> DescribeOssCallback(DescribeOssCallbackRequest request) {
-            return await new DescribeOssCallbackExecutor().Client(this).Execute<DescribeOssCallbackResponse, DescribeOssCallbackResult, DescribeOssCallbackRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取检测规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssScanCfgResponse DescribeOssScanCfg(DescribeOssScanCfgRequest request) {
-            return  new DescribeOssScanCfgExecutor().Client(this).Execute<DescribeOssScanCfgResponse, DescribeOssScanCfgResult, DescribeOssScanCfgRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取检测规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssScanCfgResponse> DescribeOssScanCfg(DescribeOssScanCfgRequest request) {
-            return await new DescribeOssScanCfgExecutor().Client(this).Execute<DescribeOssScanCfgResponse, DescribeOssScanCfgResult, DescribeOssScanCfgRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取数据统计总览
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDataOverviewResponse DescribeDataOverview(DescribeDataOverviewRequest request) {
-            return  new DescribeDataOverviewExecutor().Client(this).Execute<DescribeDataOverviewResponse, DescribeDataOverviewResult, DescribeDataOverviewRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取数据统计总览
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDataOverviewResponse> DescribeDataOverview(DescribeDataOverviewRequest request) {
-            return await new DescribeDataOverviewExecutor().Client(this).Execute<DescribeDataOverviewResponse, DescribeDataOverviewResult, DescribeDataOverviewRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取近7天未处理数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssUnreviewdDataResponse DescribeOssUnreviewdData(DescribeOssUnreviewdDataRequest request) {
-            return  new DescribeOssUnreviewdDataExecutor().Client(this).Execute<DescribeOssUnreviewdDataResponse, DescribeOssUnreviewdDataResult, DescribeOssUnreviewdDataRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取近7天未处理数据
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssUnreviewdDataResponse> DescribeOssUnreviewdData(DescribeOssUnreviewdDataRequest request) {
-            return await new DescribeOssUnreviewdDataExecutor().Client(this).Execute<DescribeOssUnreviewdDataResponse, DescribeOssUnreviewdDataResult, DescribeOssUnreviewdDataRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看音频异步检测结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AudioResultsResponse AudioResults(AudioResultsRequest request) {
-            return  new AudioResultsExecutor().Client(this).Execute<AudioResultsResponse, AudioResultsResult, AudioResultsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看音频异步检测结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AudioResultsResponse> AudioResults(AudioResultsRequest request) {
-            return await new AudioResultsExecutor().Client(this).Execute<AudioResultsResponse, AudioResultsResult, AudioResultsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取数据趋势图
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDataTrendResponse DescribeDataTrend(DescribeDataTrendRequest request) {
-            return  new DescribeDataTrendExecutor().Client(this).Execute<DescribeDataTrendResponse, DescribeDataTrendResult, DescribeDataTrendRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取数据趋势图
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDataTrendResponse> DescribeDataTrend(DescribeDataTrendRequest request) {
-            return await new DescribeDataTrendExecutor().Client(this).Execute<DescribeDataTrendResponse, DescribeDataTrendResult, DescribeDataTrendRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteCensorLibResponse> DeleteCensorLib(DeleteCensorLibRequest request) {
+            return await new DeleteCensorLibExecutor().Client(this).Execute<DeleteCensorLibResponse, DeleteCensorLibResult, DeleteCensorLibRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -613,40 +290,40 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  申请使用内容安全
+        ///  提交视频异步检测任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ApplyResponse Apply(ApplyRequest request) {
-            return  new ApplyExecutor().Client(this).Execute<ApplyResponse, ApplyResult, ApplyRequest>(request);
+        public AsyncVideoScanResponse AsyncVideoScan(AsyncVideoScanRequest request) {
+            return  new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request);
         }
 #else
         /// <summary>
-        ///  申请使用内容安全
+        ///  提交视频异步检测任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ApplyResponse> Apply(ApplyRequest request) {
-            return await new ApplyExecutor().Client(this).Execute<ApplyResponse, ApplyResult, ApplyRequest>(request).ConfigureAwait(false);
+        public async Task<AsyncVideoScanResponse> AsyncVideoScan(AsyncVideoScanRequest request) {
+            return await new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置回调
+        ///  删除敏感库Item
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetOssCallbackResponse SetOssCallback(SetOssCallbackRequest request) {
-            return  new SetOssCallbackExecutor().Client(this).Execute<SetOssCallbackResponse, SetOssCallbackResult, SetOssCallbackRequest>(request);
+        public DeleteCensorLibItemsResponse DeleteCensorLibItems(DeleteCensorLibItemsRequest request) {
+            return  new DeleteCensorLibItemsExecutor().Client(this).Execute<DeleteCensorLibItemsResponse, DeleteCensorLibItemsResult, DeleteCensorLibItemsRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置回调
+        ///  删除敏感库Item
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetOssCallbackResponse> SetOssCallback(SetOssCallbackRequest request) {
-            return await new SetOssCallbackExecutor().Client(this).Execute<SetOssCallbackResponse, SetOssCallbackResult, SetOssCallbackRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteCensorLibItemsResponse> DeleteCensorLibItems(DeleteCensorLibItemsRequest request) {
+            return await new DeleteCensorLibItemsExecutor().Client(this).Execute<DeleteCensorLibItemsResponse, DeleteCensorLibItemsResult, DeleteCensorLibItemsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -670,211 +347,21 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置检测规则
+        ///  图片同步检测
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetOssScanCfgResponse SetOssScanCfg(SetOssScanCfgRequest request) {
-            return  new SetOssScanCfgExecutor().Client(this).Execute<SetOssScanCfgResponse, SetOssScanCfgResult, SetOssScanCfgRequest>(request);
+        public ImageScanResponse ImageScan(ImageScanRequest request) {
+            return  new ImageScanExecutor().Client(this).Execute<ImageScanResponse, ImageScanResult, ImageScanRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置检测规则
+        ///  图片同步检测
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetOssScanCfgResponse> SetOssScanCfg(SetOssScanCfgRequest request) {
-            return await new SetOssScanCfgExecutor().Client(this).Execute<SetOssScanCfgResponse, SetOssScanCfgResult, SetOssScanCfgRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取购买记录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOrderHistoriesResponse DescribeOrderHistories(DescribeOrderHistoriesRequest request) {
-            return  new DescribeOrderHistoriesExecutor().Client(this).Execute<DescribeOrderHistoriesResponse, DescribeOrderHistoriesResult, DescribeOrderHistoriesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取购买记录
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOrderHistoriesResponse> DescribeOrderHistories(DescribeOrderHistoriesRequest request) {
-            return await new DescribeOrderHistoriesExecutor().Client(this).Execute<DescribeOrderHistoriesResponse, DescribeOrderHistoriesResult, DescribeOrderHistoriesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查看是否已授权
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAuthResponse DescribeAuth(DescribeAuthRequest request) {
-            return  new DescribeAuthExecutor().Client(this).Execute<DescribeAuthResponse, DescribeAuthResult, DescribeAuthRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查看是否已授权
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAuthResponse> DescribeAuth(DescribeAuthRequest request) {
-            return await new DescribeAuthExecutor().Client(this).Execute<DescribeAuthResponse, DescribeAuthResult, DescribeAuthRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  继续暂停的检测任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ContinueOssScanResponse ContinueOssScan(ContinueOssScanRequest request) {
-            return  new ContinueOssScanExecutor().Client(this).Execute<ContinueOssScanResponse, ContinueOssScanResult, ContinueOssScanRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  继续暂停的检测任务
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ContinueOssScanResponse> ContinueOssScan(ContinueOssScanRequest request) {
-            return await new ContinueOssScanExecutor().Client(this).Execute<ContinueOssScanResponse, ContinueOssScanResult, ContinueOssScanRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取调用量统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDataConsumeStatementResponse DescribeDataConsumeStatement(DescribeDataConsumeStatementRequest request) {
-            return  new DescribeDataConsumeStatementExecutor().Client(this).Execute<DescribeDataConsumeStatementResponse, DescribeDataConsumeStatementResult, DescribeDataConsumeStatementRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取调用量统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDataConsumeStatementResponse> DescribeDataConsumeStatement(DescribeDataConsumeStatementRequest request) {
-            return await new DescribeDataConsumeStatementExecutor().Client(this).Execute<DescribeDataConsumeStatementResponse, DescribeDataConsumeStatementResult, DescribeDataConsumeStatementRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取bucket列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeBucketsResponse DescribeBuckets(DescribeBucketsRequest request) {
-            return  new DescribeBucketsExecutor().Client(this).Execute<DescribeBucketsResponse, DescribeBucketsResult, DescribeBucketsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取bucket列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeBucketsResponse> DescribeBuckets(DescribeBucketsRequest request) {
-            return await new DescribeBucketsExecutor().Client(this).Execute<DescribeBucketsResponse, DescribeBucketsResult, DescribeBucketsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取扫描结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOssResultsResponse DescribeOssResults(DescribeOssResultsRequest request) {
-            return  new DescribeOssResultsExecutor().Client(this).Execute<DescribeOssResultsResponse, DescribeOssResultsResult, DescribeOssResultsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取扫描结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOssResultsResponse> DescribeOssResults(DescribeOssResultsRequest request) {
-            return await new DescribeOssResultsExecutor().Client(this).Execute<DescribeOssResultsResponse, DescribeOssResultsResult, DescribeOssResultsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台获取用户列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserPinsResponse DescribeUserPins(DescribeUserPinsRequest request) {
-            return  new DescribeUserPinsExecutor().Client(this).Execute<DescribeUserPinsResponse, DescribeUserPinsResult, DescribeUserPinsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台获取用户列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserPinsResponse> DescribeUserPins(DescribeUserPinsRequest request) {
-            return await new DescribeUserPinsExecutor().Client(this).Execute<DescribeUserPinsResponse, DescribeUserPinsResult, DescribeUserPinsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取检测结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeDataResultsResponse DescribeDataResults(DescribeDataResultsRequest request) {
-            return  new DescribeDataResultsExecutor().Client(this).Execute<DescribeDataResultsResponse, DescribeDataResultsResult, DescribeDataResultsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取检测结果
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeDataResultsResponse> DescribeDataResults(DescribeDataResultsRequest request) {
-            return await new DescribeDataResultsExecutor().Client(this).Execute<DescribeDataResultsResponse, DescribeDataResultsResult, DescribeDataResultsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营后台获取用户数目统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserAmountResponse DescribeUserAmount(DescribeUserAmountRequest request) {
-            return  new DescribeUserAmountExecutor().Client(this).Execute<DescribeUserAmountResponse, DescribeUserAmountResult, DescribeUserAmountRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营后台获取用户数目统计
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserAmountResponse> DescribeUserAmount(DescribeUserAmountRequest request) {
-            return await new DescribeUserAmountExecutor().Client(this).Execute<DescribeUserAmountResponse, DescribeUserAmountResult, DescribeUserAmountRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除回调
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelOssCallbackResponse DelOssCallback(DelOssCallbackRequest request) {
-            return  new DelOssCallbackExecutor().Client(this).Execute<DelOssCallbackResponse, DelOssCallbackResult, DelOssCallbackRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除回调
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelOssCallbackResponse> DelOssCallback(DelOssCallbackRequest request) {
-            return await new DelOssCallbackExecutor().Client(this).Execute<DelOssCallbackResponse, DelOssCallbackResult, DelOssCallbackRequest>(request).ConfigureAwait(false);
+        public async Task<ImageScanResponse> ImageScan(ImageScanRequest request) {
+            return await new ImageScanExecutor().Client(this).Execute<ImageScanResponse, ImageScanResult, ImageScanRequest>(request).ConfigureAwait(false);
         }
 #endif
 

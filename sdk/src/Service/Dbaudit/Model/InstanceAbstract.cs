@@ -66,6 +66,10 @@ namespace JDCloudSDK.Dbaudit.Model
         ///</summary>
         public string IpAddr{ get; set; }
         ///<summary>
+        /// VPC内ipv6地址
+        ///</summary>
+        public string Ipv6Addr{ get; set; }
+        ///<summary>
         /// 实例规格: basic:标准版 professional:企业版 enterprise:增强版 ultimate:旗舰版
         ///</summary>
         public string InsType{ get; set; }

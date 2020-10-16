@@ -60,9 +60,7 @@ namespace JDCloudSDK.Jmr.Model
         public string VersionValue{ get; set; }
         ///<summary>
         /// 集群计费类型，支持按配置和包年包月计费
-        ///Required:true
         ///</summary>
-        [Required]
         public string PayType{ get; set; }
         ///<summary>
         /// 主节点数量
@@ -70,14 +68,6 @@ namespace JDCloudSDK.Jmr.Model
         ///</summary>
         [Required]
         public int MasterNodeCount{ get; set; }
-        ///<summary>
-        /// Master节点CPU
-        ///</summary>
-        public int? MasterCore{ get; set; }
-        ///<summary>
-        /// Master节点内存(推荐至少8G内存，否则服务可能会部署失败)
-        ///</summary>
-        public int? MasterMemory{ get; set; }
         ///<summary>
         /// Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
         ///Required:true
@@ -92,10 +82,8 @@ namespace JDCloudSDK.Jmr.Model
         public int MasterSystemDiskVolume{ get; set; }
         ///<summary>
         /// Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-        ///Required:true
         ///</summary>
-        [Required]
-        public int MasterSystemDiskIops{ get; set; }
+        public int? MasterSystemDiskIops{ get; set; }
         ///<summary>
         /// Master数据盘类型：ssd.gp1,ssd.io1和hdd.std1
         ///Required:true
@@ -110,10 +98,8 @@ namespace JDCloudSDK.Jmr.Model
         public int MasterDiskVolume{ get; set; }
         ///<summary>
         /// Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-        ///Required:true
         ///</summary>
-        [Required]
-        public int MasterDiskIops{ get; set; }
+        public int? MasterDiskIops{ get; set; }
         ///<summary>
         /// master节点规格
         ///Required:true
@@ -126,14 +112,6 @@ namespace JDCloudSDK.Jmr.Model
         ///</summary>
         [Required]
         public int SlaveNodeCount{ get; set; }
-        ///<summary>
-        /// Slave节点CPU
-        ///</summary>
-        public int? SlaveCore{ get; set; }
-        ///<summary>
-        /// Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
-        ///</summary>
-        public int? SlaveMemory{ get; set; }
         ///<summary>
         /// Slave系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
         ///Required:true
@@ -148,10 +126,8 @@ namespace JDCloudSDK.Jmr.Model
         public int SlaveSystemDiskVolume{ get; set; }
         ///<summary>
         /// Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-        ///Required:true
         ///</summary>
-        [Required]
-        public int SlaveSystemDiskIops{ get; set; }
+        public int? SlaveSystemDiskIops{ get; set; }
         ///<summary>
         /// Slave数据盘类型：ssd.gp1,ssd.io1和hdd.std1
         ///Required:true
@@ -166,10 +142,8 @@ namespace JDCloudSDK.Jmr.Model
         public int SlaveDiskVolume{ get; set; }
         ///<summary>
         /// Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-        ///Required:true
         ///</summary>
-        [Required]
-        public int SlaveDiskIops{ get; set; }
+        public int? SlaveDiskIops{ get; set; }
         ///<summary>
         /// slave节点规格
         ///Required:true

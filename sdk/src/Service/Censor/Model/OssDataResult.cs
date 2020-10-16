@@ -50,9 +50,13 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public string DataId{ get; set; }
         ///<summary>
-        /// 送审时间
+        /// 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
         ///</summary>
         public string Time{ get; set; }
+        ///<summary>
+        /// 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+        ///</summary>
+        public string LogTime{ get; set; }
         ///<summary>
         /// 识别结果
         ///</summary>

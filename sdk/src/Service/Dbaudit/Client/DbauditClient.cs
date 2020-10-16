@@ -798,7 +798,7 @@ namespace JDCloudSDK.Dbaudit.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  添加一条IP白名单记录，仅支持IPv4地址
+        ///  添加一条IP白名单记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -807,7 +807,7 @@ namespace JDCloudSDK.Dbaudit.Client
         }
 #else
         /// <summary>
-        ///  添加一条IP白名单记录，仅支持IPv4地址
+        ///  添加一条IP白名单记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

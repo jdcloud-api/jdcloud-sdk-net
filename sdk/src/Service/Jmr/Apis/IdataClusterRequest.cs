@@ -35,7 +35,7 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    ///  查询用户指定clusterId对应的集群列表及相关服务的一些信息
+    ///  查询用户的集群列表及相关服务的一些信息
     /// </summary>
     public class IdataClusterRequest : JdcloudRequest
     {
@@ -47,10 +47,10 @@ namespace  JDCloudSDK.Jmr.Apis
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 集群ID
+        /// 地域信息
         ///Required:true
         ///</summary>
         [Required]
-        public   string ClusterId{ get; set; }
+        public   string DataCenter{ get; set; }
     }
 }

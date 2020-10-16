@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Jmr.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   ClusterExpansion ClusterSpec{ get; set; }
+        public   ClusterExpansion ClusterExpansion{ get; set; }
         ///<summary>
         /// 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
         /// 

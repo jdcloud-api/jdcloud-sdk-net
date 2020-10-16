@@ -34,19 +34,20 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    ///  查询集群列表
+    ///  查询用户集群的列表
+        ///         /// 
     /// </summary>
     public class DescribeClustersResult : JdcloudResult
     {
+        ///<summary>
+        /// 集群总的数目
+        ///</summary>
+        public   int? TotalNum{ get; set; }
         ///<summary>
         /// Clusters
         ///</summary>
         public List<Cluster> Clusters{ get; set; }
 
-        ///<summary>
-        /// TotalCount
-        ///</summary>
-        public   double? TotalCount{ get; set; }
         ///<summary>
         /// Status
         ///</summary>

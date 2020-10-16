@@ -38,32 +38,52 @@ namespace JDCloudSDK.Jmr.Model
     {
 
         ///<summary>
-        /// 集群节点ID
+        /// 节点ID
         ///</summary>
-        public string ClusterNodeId{ get; set; }
+        public string ServerId{ get; set; }
         ///<summary>
-        /// 集群节点主机名称
+        /// 节点实例信息
         ///</summary>
-        public string ClusterNodeHostName{ get; set; }
+        public string InstanceInfo{ get; set; }
         ///<summary>
-        /// 集群节点内网IP
+        /// 节点主机名称
         ///</summary>
-        public string ClusterNodeIntranetIp{ get; set; }
+        public string NodeName{ get; set; }
         ///<summary>
-        /// 集群节点公网IP
+        /// 节点系统盘类型
         ///</summary>
-        public string ClusterNodeConnectionIp{ get; set; }
+        public string NodeSystemDiskType{ get; set; }
         ///<summary>
-        /// 集群节点类型
+        /// 节点实例类型
         ///</summary>
-        public string ClusterNodeRole{ get; set; }
+        public string InstanceType{ get; set; }
         ///<summary>
-        /// 集群节点硬盘信息
+        /// 节点运行状态
         ///</summary>
-        public List<ClusterNodeDisk> ClusterNodeDisk{ get; set; }
+        public string NodeStatus{ get; set; }
         ///<summary>
-        /// 集群节点型号
+        /// 节点数据盘类型
         ///</summary>
-        public string ClusterNodeModel{ get; set; }
+        public string NodeDiskType{ get; set; }
+        ///<summary>
+        /// 节点类型，MASTER或者SLAVE
+        ///</summary>
+        public string NodeType{ get; set; }
+        ///<summary>
+        /// 节点外网IP
+        ///</summary>
+        public string OuterIp{ get; set; }
+        ///<summary>
+        /// 节点内网IP
+        ///</summary>
+        public string InnerIp{ get; set; }
+        ///<summary>
+        /// 节点系统盘大小(GB)
+        ///</summary>
+        public string NodeSystemDiskVolume{ get; set; }
+        ///<summary>
+        /// 节点数据盘大小(GB)
+        ///</summary>
+        public string NodeDiskVolume{ get; set; }
     }
 }

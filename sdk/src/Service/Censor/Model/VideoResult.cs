@@ -54,6 +54,10 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public string TaskId{ get; set; }
         ///<summary>
+        /// 对应请求中的url
+        ///</summary>
+        public string Url{ get; set; }
+        ///<summary>
         /// 返回结果。调用成功时（code&#x3D;200），返回结果中包含一个或多个元素。每个元素是个结构体，具体结构描述见VideoResultDetail
         ///</summary>
         public List<VideoResultDetail> Results{ get; set; }

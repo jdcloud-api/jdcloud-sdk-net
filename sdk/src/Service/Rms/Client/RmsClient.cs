@@ -89,9 +89,9 @@ namespace JDCloudSDK.Rms.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v2";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,82 @@ namespace JDCloudSDK.Rms.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询富媒体短信资质列表接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryCreditListResponse QueryCreditList(QueryCreditListRequest request) {
+            return  new QueryCreditListExecutor().Client(this).Execute<QueryCreditListResponse, QueryCreditListResult, QueryCreditListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询富媒体短信资质列表接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryCreditListResponse> QueryCreditList(QueryCreditListRequest request) {
+            return await new QueryCreditListExecutor().Client(this).Execute<QueryCreditListResponse, QueryCreditListResult, QueryCreditListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除富媒体短信内容接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTemplateResponse DeleteTemplate(DeleteTemplateRequest request) {
+            return  new DeleteTemplateExecutor().Client(this).Execute<DeleteTemplateResponse, DeleteTemplateResult, DeleteTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除富媒体短信内容接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTemplateResponse> DeleteTemplate(DeleteTemplateRequest request) {
+            return await new DeleteTemplateExecutor().Client(this).Execute<DeleteTemplateResponse, DeleteTemplateResult, DeleteTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询富媒体短信内容列表接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryTemplateListResponse QueryTemplateList(QueryTemplateListRequest request) {
+            return  new QueryTemplateListExecutor().Client(this).Execute<QueryTemplateListResponse, QueryTemplateListResult, QueryTemplateListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询富媒体短信内容列表接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryTemplateListResponse> QueryTemplateList(QueryTemplateListRequest request) {
+            return await new QueryTemplateListExecutor().Client(this).Execute<QueryTemplateListResponse, QueryTemplateListResult, QueryTemplateListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  增加富媒体短信内容接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddTemplateNewResponse AddTemplateNew(AddTemplateNewRequest request) {
+            return  new AddTemplateNewExecutor().Client(this).Execute<AddTemplateNewResponse, AddTemplateNewResult, AddTemplateNewRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  增加富媒体短信内容接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddTemplateNewResponse> AddTemplateNew(AddTemplateNewRequest request) {
+            return await new AddTemplateNewExecutor().Client(this).Execute<AddTemplateNewResponse, AddTemplateNewResult, AddTemplateNewRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  套餐包余量，仅预付费用户使用
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -157,21 +233,40 @@ namespace JDCloudSDK.Rms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  增加富媒体短信内容接口
+        ///  修改富媒体短信资质接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AddTemplateResponse AddTemplate(AddTemplateRequest request) {
-            return  new AddTemplateExecutor().Client(this).Execute<AddTemplateResponse, AddTemplateResult, AddTemplateRequest>(request);
+        public EditCreditResponse EditCredit(EditCreditRequest request) {
+            return  new EditCreditExecutor().Client(this).Execute<EditCreditResponse, EditCreditResult, EditCreditRequest>(request);
         }
 #else
         /// <summary>
-        ///  增加富媒体短信内容接口
+        ///  修改富媒体短信资质接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AddTemplateResponse> AddTemplate(AddTemplateRequest request) {
-            return await new AddTemplateExecutor().Client(this).Execute<AddTemplateResponse, AddTemplateResult, AddTemplateRequest>(request).ConfigureAwait(false);
+        public async Task<EditCreditResponse> EditCredit(EditCreditRequest request) {
+            return await new EditCreditExecutor().Client(this).Execute<EditCreditResponse, EditCreditResult, EditCreditRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除富媒体短信资质接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCreditResponse DeleteCredit(DeleteCreditRequest request) {
+            return  new DeleteCreditExecutor().Client(this).Execute<DeleteCreditResponse, DeleteCreditResult, DeleteCreditRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除富媒体短信资质接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCreditResponse> DeleteCredit(DeleteCreditRequest request) {
+            return await new DeleteCreditExecutor().Client(this).Execute<DeleteCreditResponse, DeleteCreditResult, DeleteCreditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -195,6 +290,25 @@ namespace JDCloudSDK.Rms.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改富媒体短信内容接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EditTemplateResponse EditTemplate(EditTemplateRequest request) {
+            return  new EditTemplateExecutor().Client(this).Execute<EditTemplateResponse, EditTemplateResult, EditTemplateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改富媒体短信内容接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EditTemplateResponse> EditTemplate(EditTemplateRequest request) {
+            return await new EditTemplateExecutor().Client(this).Execute<EditTemplateResponse, EditTemplateResult, EditTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询一个富媒体短信内容接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -214,21 +328,21 @@ namespace JDCloudSDK.Rms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询富媒体短信内容列表接口
+        ///  增加富媒体短信资质接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public QueryTemplateListResponse QueryTemplateList(QueryTemplateListRequest request) {
-            return  new QueryTemplateListExecutor().Client(this).Execute<QueryTemplateListResponse, QueryTemplateListResult, QueryTemplateListRequest>(request);
+        public AddCreditResponse AddCredit(AddCreditRequest request) {
+            return  new AddCreditExecutor().Client(this).Execute<AddCreditResponse, AddCreditResult, AddCreditRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询富媒体短信内容列表接口
+        ///  增加富媒体短信资质接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<QueryTemplateListResponse> QueryTemplateList(QueryTemplateListRequest request) {
-            return await new QueryTemplateListExecutor().Client(this).Execute<QueryTemplateListResponse, QueryTemplateListResult, QueryTemplateListRequest>(request).ConfigureAwait(false);
+        public async Task<AddCreditResponse> AddCredit(AddCreditRequest request) {
+            return await new AddCreditExecutor().Client(this).Execute<AddCreditResponse, AddCreditResult, AddCreditRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

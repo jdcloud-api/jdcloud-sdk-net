@@ -53,5 +53,9 @@ namespace JDCloudSDK.Censor.Model
         /// 该检测任务的ID
         ///</summary>
         public string TaskId{ get; set; }
+        ///<summary>
+        /// 对应请求中的url
+        ///</summary>
+        public string Url{ get; set; }
     }
 }

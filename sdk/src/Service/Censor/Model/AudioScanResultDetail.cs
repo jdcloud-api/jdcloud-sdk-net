@@ -42,13 +42,17 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public int? StartTime{ get; set; }
         ///<summary>
-        /// 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+        /// 句子结束的时间，单位是秒。
         ///</summary>
-        public string EndTime{ get; set; }
+        public int? EndTime{ get; set; }
         ///<summary>
         /// 语音转换成文本的结果。
         ///</summary>
         public string Text{ get; set; }
+        ///<summary>
+        /// 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+        ///</summary>
+        public string Label{ get; set; }
         ///<summary>
         /// 命中该风险的上下文信息。具体结构描述见hintWordsInfo
         ///</summary>

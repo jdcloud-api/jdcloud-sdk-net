@@ -45,5 +45,13 @@ namespace JDCloudSDK.Censor.Model
         /// 待检测视频的URL，最大200M
         ///</summary>
         public string Url{ get; set; }
+        ///<summary>
+        /// 视频截帧间隔，单位为秒，取值范围为1~60。默认值为1秒
+        ///</summary>
+        public int? Interval{ get; set; }
+        ///<summary>
+        /// 本视频截帧的张数上限，取值范围为5~3600，默认为200张，该参数仅在文件检测中生效(live&#x3D;false) 如果是视频流(live&#x3D;true)该参数无效。
+        ///</summary>
+        public int? MaxFrames{ get; set; }
     }
 }

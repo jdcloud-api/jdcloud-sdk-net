@@ -50,15 +50,19 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public string DataId{ get; set; }
         ///<summary>
-        /// 送审时间，秒级时间戳
+        /// 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
         ///</summary>
-        public int? Time{ get; set; }
+        public string Time{ get; set; }
+        ///<summary>
+        /// 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+        ///</summary>
+        public string LogTime{ get; set; }
         ///<summary>
         /// 识别结果
         ///</summary>
         public string Result{ get; set; }
         ///<summary>
-        /// 详情,见blockDetail中描述
+        /// 场景_结果 格式。
         ///</summary>
         public List<string> Details{ get; set; }
         ///<summary>
@@ -73,5 +77,17 @@ namespace JDCloudSDK.Censor.Model
         /// 状态码
         ///</summary>
         public string Code{ get; set; }
+        ///<summary>
+        /// 图片/音频/视频的url
+        ///</summary>
+        public string Url{ get; set; }
+        ///<summary>
+        /// 视频截帧
+        ///</summary>
+        public FrameCfg Frame{ get; set; }
+        ///<summary>
+        /// 人工审核结果，空表示没有审核
+        ///</summary>
+        public string FbSuggestion{ get; set; }
     }
 }

@@ -73,5 +73,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
         ///</summary>
         public   string Period{ get; set; }
+        ///<summary>
+        /// true 代表查询境外数据，默认false查询境内数据
+        ///</summary>
+        public   bool Abroad{ get; set; }
     }
 }

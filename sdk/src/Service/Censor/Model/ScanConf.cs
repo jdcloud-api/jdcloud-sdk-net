@@ -45,7 +45,7 @@ namespace JDCloudSDK.Censor.Model
         [Required]
         public int Enable{ get; set; }
         ///<summary>
-        /// 检测场景，porn-涉黄，terrorism-涉政暴恐，enable为1时必须
+        /// 检测场景，audio-语音违规-视频支持，porn-涉黄-图片视频支持，terrorism-涉政暴恐-图片视频支持，antispam-反垃圾-文本语音支持，enable为1时必须
         ///</summary>
         public List<string> Scense{ get; set; }
         ///<summary>
@@ -53,8 +53,16 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public int? Frozen{ get; set; }
         ///<summary>
-        /// 自动冻结阈值，视频检测时阈值0表示不冻结，1表示违规冻结，不对阈值进行比较
+        /// 自动冻结阈值
         ///</summary>
         public FrozenThreshold Threshold{ get; set; }
+        ///<summary>
+        /// 检测类型，all-全部
+        ///</summary>
+        public List<string> FileType{ get; set; }
+        ///<summary>
+        /// 文件后缀，all-表示全部
+        ///</summary>
+        public List<string> FileSuffix{ get; set; }
     }
 }

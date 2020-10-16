@@ -77,5 +77,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 分组依据
         ///</summary>
         public   string GroupBy{ get; set; }
+        ///<summary>
+        /// true 代表查询境外数据，默认false查询境内数据
+        ///</summary>
+        public   bool Abroad{ get; set; }
     }
 }

@@ -54,6 +54,10 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public int? Terrorism_frame_count{ get; set; }
         ///<summary>
+        /// 图文截帧数
+        ///</summary>
+        public int? Ad_frame_count{ get; set; }
+        ///<summary>
         /// 总截帧数
         ///</summary>
         public int? Total_frame_count{ get; set; }

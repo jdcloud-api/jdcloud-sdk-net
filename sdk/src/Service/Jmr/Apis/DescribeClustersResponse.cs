@@ -33,7 +33,8 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    ///  查询集群列表
+    ///  查询用户集群的列表
+        ///         /// 
     /// </summary>
     public class DescribeClustersResponse : JdcloudResponse<DescribeClustersResult>
     {

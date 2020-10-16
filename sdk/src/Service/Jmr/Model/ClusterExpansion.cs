@@ -50,5 +50,9 @@ namespace JDCloudSDK.Jmr.Model
         ///</summary>
         [Required]
         public string ExpansionNum{ get; set; }
+        ///<summary>
+        /// 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+        ///</summary>
+        public string NodeType{ get; set; }
     }
 }
