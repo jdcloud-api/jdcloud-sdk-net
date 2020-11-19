@@ -69,7 +69,7 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public long SingleIpLimit{ get; set; }
         ///<summary>
-        /// 阻断类型, 1: 封禁, 2: 人机交互
+        /// 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
         ///Required:true
         ///</summary>
         [Required]
@@ -81,8 +81,12 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public long BlockTime{ get; set; }
         ///<summary>
-        /// 关联的自定义页面id
+        /// 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
         ///</summary>
         public string PageId{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面名称
+        ///</summary>
+        public string PageName{ get; set; }
     }
 }

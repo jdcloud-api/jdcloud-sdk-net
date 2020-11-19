@@ -173,8 +173,20 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string RoInstanceProxyID{ get; set; }
         ///<summary>
+        /// 只读代理服务 名称
+        ///</summary>
+        public string RoInstanceProxyName{ get; set; }
+        ///<summary>
         /// 读写分离代理服务 ID
         ///</summary>
         public string ReadWriteProxyId{ get; set; }
+        ///<summary>
+        /// 实例关联的数据同步任务Id；未关联数据同步任务时返回空
+        ///</summary>
+        public string SyncTaskId{ get; set; }
+        ///<summary>
+        /// 实例内网域名解析到的内网IP地址&lt;br&gt;仅支持MySQL, Percona, MariaDB
+        ///</summary>
+        public string InstanceVip{ get; set; }
     }
 }

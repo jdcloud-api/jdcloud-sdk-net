@@ -60,6 +60,10 @@ namespace  JDCloudSDK.Rds.Apis
         ///</summary>
         public   bool StorageEncrypted{ get; set; }
         ///<summary>
+        /// 变配后的子网ID
+        ///</summary>
+        public   string SubnetId{ get; set; }
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>

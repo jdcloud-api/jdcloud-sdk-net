@@ -77,5 +77,17 @@ namespace JDCloudSDK.Vm.Model
         /// 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
         ///</summary>
         public string ChargeOnStopped{ get; set; }
+        ///<summary>
+        /// 自动镜像策略ID
+        ///</summary>
+        public string AutoImagePolicyId{ get; set; }
+        ///<summary>
+        /// 是否使用密码
+        ///</summary>
+        public string PasswordAuth{ get; set; }
+        ///<summary>
+        /// 是否继承镜像密码密钥
+        ///</summary>
+        public string ImageInherit{ get; set; }
     }
 }

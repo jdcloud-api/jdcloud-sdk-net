@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
-        <Version>1.1.8.1</Version>
+        <Version>1.1.9.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>视频点播相关接口</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

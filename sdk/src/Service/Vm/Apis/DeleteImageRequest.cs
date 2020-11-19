@@ -42,6 +42,10 @@ namespace  JDCloudSDK.Vm.Apis
     public class DeleteImageRequest : JdcloudRequest
     {
         ///<summary>
+        /// 删除镜像是否删除关联的快照，默认为false；如果指定为true, 将会删除镜像关联的快照。
+        ///</summary>
+        public   bool DeleteSnapshot{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>

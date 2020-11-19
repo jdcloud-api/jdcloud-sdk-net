@@ -121,5 +121,9 @@ namespace JDCloudSDK.Vm.Model
         /// 实例的物理机 IP
         ///</summary>
         public string HostIp{ get; set; }
+        ///<summary>
+        /// 机架信息
+        ///</summary>
+        public string Rack{ get; set; }
     }
 }

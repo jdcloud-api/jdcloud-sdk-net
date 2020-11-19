@@ -64,6 +64,10 @@ namespace  JDCloudSDK.Vm.Apis
         public List<string> Ids{ get; set; }
 
         ///<summary>
+        /// 根据镜像名称模糊查找
+        ///</summary>
+        public   string ImageName{ get; set; }
+        ///<summary>
         /// 镜像支持的系统盘类型，[localDisk,cloudDisk]
         ///</summary>
         public   string RootDeviceType{ get; set; }

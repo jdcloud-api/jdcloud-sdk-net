@@ -49,5 +49,9 @@ namespace JDCloudSDK.Vm.Model
         /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }
+        ///<summary>
+        /// 绑定了此密钥的所有虚机id
+        ///</summary>
+        public List<string> InstanceIds{ get; set; }
     }
 }

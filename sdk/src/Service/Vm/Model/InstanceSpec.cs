@@ -62,11 +62,21 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 云主机名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
+        /// 批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public string Name{ get; set; }
+        ///<summary>
+        /// 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
+        /// Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+        /// Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+        /// 批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+        /// 
+        ///</summary>
+        public string Hostname{ get; set; }
         ///<summary>
         /// 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
         ///</summary>
@@ -99,6 +109,12 @@ namespace JDCloudSDK.Vm.Model
         /// 
         ///</summary>
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+        /// 注意：key不要以连字符(-)结尾，否则此key不生效。
+        /// 
+        ///</summary>
+        public List<Metadata> Metadata{ get; set; }
         ///<summary>
         /// 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
         /// launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
@@ -139,5 +155,17 @@ namespace JDCloudSDK.Vm.Model
         /// 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
         ///</summary>
         public string ChargeOnStopped{ get; set; }
+        ///<summary>
+        /// 自动镜像策略ID。
+        ///</summary>
+        public string AutoImagePolicyId{ get; set; }
+        ///<summary>
+        /// 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+        ///</summary>
+        public string PasswordAuth{ get; set; }
+        ///<summary>
+        /// 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+        ///</summary>
+        public string ImageInherit{ get; set; }
     }
 }

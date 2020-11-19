@@ -50,6 +50,10 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
+        /// 策略ID
+        ///</summary>
+        public string PolicyId{ get; set; }
+        ///<summary>
         /// 是否加密，false:(默认)不加密；true:加密
         ///</summary>
         public bool Encrypt{ get; set; }

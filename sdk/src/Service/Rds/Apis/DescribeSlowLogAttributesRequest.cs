@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -63,6 +64,11 @@ namespace  JDCloudSDK.Rds.Apis
         /// 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
         ///</summary>
         public   int? PageSize{ get; set; }
+        ///<summary>
+        /// 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
         ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true

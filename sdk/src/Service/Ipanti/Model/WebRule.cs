@@ -149,5 +149,45 @@ namespace JDCloudSDK.Ipanti.Model
         /// 按区域分流回源配置
         ///</summary>
         public List<GeoRsRoute> GeoRsRoute{ get; set; }
+        ///<summary>
+        /// 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+        ///</summary>
+        public string EnableKeepalive{ get; set; }
+        ///<summary>
+        /// http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+        ///</summary>
+        public string HttpVersion{ get; set; }
+        ///<summary>
+        /// SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+        ///</summary>
+        public List<string> SslProtocols{ get; set; }
+        ///<summary>
+        /// 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+        ///</summary>
+        public string SuiteLevel{ get; set; }
+        ///<summary>
+        /// 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? JsFingerprintEnable{ get; set; }
+        ///<summary>
+        /// JS 指纹生效范围, 0: 所有页面, 1: 已配置的自定义页面
+        ///</summary>
+        public int? JsFingerprintScope{ get; set; }
+        ///<summary>
+        /// CC自定义规则总开关, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? CcCustomStatus{ get; set; }
+        ///<summary>
+        /// 健康检查开关, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? EnableHealthCheck{ get; set; }
+        ///<summary>
+        /// 回源连接超时时长, 单位 秒
+        ///</summary>
+        public int? ProxyConnectTimeout{ get; set; }
+        ///<summary>
+        /// 请求头支持下划线, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? EnableUnderscores{ get; set; }
     }
 }

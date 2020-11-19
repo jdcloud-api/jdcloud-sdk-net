@@ -62,11 +62,11 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? Pattern{ get; set; }
         ///<summary>
-        /// 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
+        /// 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
         ///</summary>
         public int? Action{ get; set; }
         ///<summary>
-        /// 命中后处理值, action 为 2 时 actionValue 为跳转路径
+        /// 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
         ///</summary>
         public string ActionValue{ get; set; }
         ///<summary>
@@ -77,5 +77,13 @@ namespace JDCloudSDK.Ipanti.Model
         /// geo 黑名单地域列表, mode 不为 geo 或未设置时此字段为空
         ///</summary>
         public List<Geo> GeoList{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+        ///</summary>
+        public string PageId{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面名称, 命中后处理动作为封禁并返回自定义页面时有效
+        ///</summary>
+        public string PageName{ get; set; }
     }
 }

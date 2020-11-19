@@ -65,7 +65,7 @@ namespace  JDCloudSDK.Vm.Apis
         /// dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
         /// dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
         /// instanceType - 实例规格，精确匹配，支持多个
-        /// elasticIpAddress - 公网IP地址，精确匹配，支持单个
+        /// elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成networkInterfaceId进行查询，所以与networkInterfaceId为或者的关系。
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

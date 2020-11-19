@@ -1013,6 +1013,25 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取视频源文件信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVideoSourceInfoResponse GetVideoSourceInfo(GetVideoSourceInfoRequest request) {
+            return  new GetVideoSourceInfoExecutor().Client(this).Execute<GetVideoSourceInfoResponse, GetVideoSourceInfoResult, GetVideoSourceInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取视频源文件信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVideoSourceInfoResponse> GetVideoSourceInfo(GetVideoSourceInfoRequest request) {
+            return await new GetVideoSourceInfoExecutor().Client(this).Execute<GetVideoSourceInfoResponse, GetVideoSourceInfoResult, GetVideoSourceInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置域名访问头参数
         /// </summary>
         /// <param name="request">请求参数信息</param>

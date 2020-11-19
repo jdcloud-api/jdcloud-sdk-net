@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Rds.Model;
 
 namespace  JDCloudSDK.Rds.Apis
 {
@@ -38,8 +39,12 @@ namespace  JDCloudSDK.Rds.Apis
     public class DescribeTdeResult : JdcloudResult
     {
         ///<summary>
-        /// 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
+        /// 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
         ///</summary>
         public   string Status{ get; set; }
+        ///<summary>
+        /// TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;
+        ///</summary>
+        public   StatusDetail StatusDetail{ get; set; }
     }
 }

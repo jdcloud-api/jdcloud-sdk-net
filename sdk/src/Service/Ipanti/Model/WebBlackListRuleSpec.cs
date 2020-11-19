@@ -65,13 +65,13 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? Pattern{ get; set; }
         ///<summary>
-        /// 命中后处理动作. &lt;br&gt;- 0: 阻断&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
+        /// 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
         ///Required:true
         ///</summary>
         [Required]
         public int Action{ get; set; }
         ///<summary>
-        /// 命中后处理值, action 为 1 时传跳转路径
+        /// 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
         ///</summary>
         public string ActionValue{ get; set; }
         ///<summary>
@@ -80,5 +80,9 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         [Required]
         public int Status{ get; set; }
+        ///<summary>
+        /// 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+        ///</summary>
+        public string PageId{ get; set; }
     }
 }

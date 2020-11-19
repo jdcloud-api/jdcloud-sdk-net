@@ -556,6 +556,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  获取当前账号下所有 RDS 实例及 MySQL /PostgreSQL 只读实例的概要信息，不会返回计费相关信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstancesInternalResponse DescribeInstancesInternal(DescribeInstancesInternalRequest request) {
+            return  new DescribeInstancesInternalExecutor().Client(this).Execute<DescribeInstancesInternalResponse, DescribeInstancesInternalResult, DescribeInstancesInternalRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取当前账号下所有 RDS 实例及 MySQL /PostgreSQL 只读实例的概要信息，不会返回计费相关信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstancesInternalResponse> DescribeInstancesInternal(DescribeInstancesInternalRequest request) {
+            return await new DescribeInstancesInternalExecutor().Client(this).Execute<DescribeInstancesInternalResponse, DescribeInstancesInternalResult, DescribeInstancesInternalRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  开启数据库的TDE功能
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -799,6 +818,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest request) {
             return await new DescribeDatabasesExecutor().Client(this).Execute<DescribeDatabasesResponse, DescribeDatabasesResult, DescribeDatabasesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询MySQL实例的数据同步任务详情。&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDisasterSyncAttributeResponse DescribeDisasterSyncAttribute(DescribeDisasterSyncAttributeRequest request) {
+            return  new DescribeDisasterSyncAttributeExecutor().Client(this).Execute<DescribeDisasterSyncAttributeResponse, DescribeDisasterSyncAttributeResult, DescribeDisasterSyncAttributeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询MySQL实例的数据同步任务详情。&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDisasterSyncAttributeResponse> DescribeDisasterSyncAttribute(DescribeDisasterSyncAttributeRequest request) {
+            return await new DescribeDisasterSyncAttributeExecutor().Client(this).Execute<DescribeDisasterSyncAttributeResponse, DescribeDisasterSyncAttributeResult, DescribeDisasterSyncAttributeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1145,6 +1183,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开启增强备份模式，开启后，备份保留天数可大于7天。 免费备份额度外的备份将按照备份占用的空间收费。开启后，不支持关闭。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableEnhancedBackupResponse EnableEnhancedBackup(EnableEnhancedBackupRequest request) {
+            return  new EnableEnhancedBackupExecutor().Client(this).Execute<EnableEnhancedBackupResponse, EnableEnhancedBackupResult, EnableEnhancedBackupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启增强备份模式，开启后，备份保留天数可大于7天。 免费备份额度外的备份将按照备份占用的空间收费。开启后，不支持关闭。&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableEnhancedBackupResponse> EnableEnhancedBackup(EnableEnhancedBackupRequest request) {
+            return await new EnableEnhancedBackupExecutor().Client(this).Execute<EnableEnhancedBackupResponse, EnableEnhancedBackupResult, EnableEnhancedBackupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看当前实例已开启的安全模式。如果开启数据库的高安全模式，会返回配置信息&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1255,6 +1312,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest request) {
             return await new DeleteInstanceExecutor().Client(this).Execute<DeleteInstanceResponse, DeleteInstanceResult, DeleteInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  将RDS灾备实例提升为主实例，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。**可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ChangeToMasterResponse ChangeToMaster(ChangeToMasterRequest request) {
+            return  new ChangeToMasterExecutor().Client(this).Execute<ChangeToMasterResponse, ChangeToMasterResult, ChangeToMasterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  将RDS灾备实例提升为主实例，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。**可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ChangeToMasterResponse> ChangeToMaster(ChangeToMasterRequest request) {
+            return await new ChangeToMasterExecutor().Client(this).Execute<ChangeToMasterResponse, ChangeToMasterResult, ChangeToMasterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1487,6 +1563,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  当 RDS 实例欠费或者到期了，关闭RDS实例的网络访问功能。关闭后，用户无法通过域名访问RDS
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DetachNetworkResponse DetachNetwork(DetachNetworkRequest request) {
+            return  new DetachNetworkExecutor().Client(this).Execute<DetachNetworkResponse, DetachNetworkResult, DetachNetworkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  当 RDS 实例欠费或者到期了，关闭RDS实例的网络访问功能。关闭后，用户无法通过域名访问RDS
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DetachNetworkResponse> DetachNetwork(DetachNetworkRequest request) {
+            return await new DetachNetworkExecutor().Client(this).Execute<DetachNetworkResponse, DetachNetworkResult, DetachNetworkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建数据库临时运维账号。&lt;br&gt;如果在使用数据库过程中需要京东云提供技术支持,并且需要对您的实例进行操作，您可以把临时运维账号提供给技术支持人员。&lt;br&gt;临时运维账号默认授予全局Select、Process权限，且账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1502,25 +1597,6 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateAccountForOpsResponse> CreateAccountForOps(CreateAccountForOpsRequest request) {
             return await new CreateAccountForOpsExecutor().Client(this).Execute<CreateAccountForOpsResponse, CreateAccountForOpsResult, CreateAccountForOpsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  升级指定实例的RDS版本。 仅当实例处于running状态时才可以升级。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest request) {
-            return  new UpgradeInstanceExecutor().Client(this).Execute<UpgradeInstanceResponse, UpgradeInstanceResult, UpgradeInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  升级指定实例的RDS版本。 仅当实例处于running状态时才可以升级。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpgradeInstanceResponse> UpgradeInstance(UpgradeInstanceRequest request) {
-            return await new UpgradeInstanceExecutor().Client(this).Execute<UpgradeInstanceResponse, UpgradeInstanceResult, UpgradeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1559,25 +1635,6 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest request) {
             return await new DescribeAuditExecutor().Client(this).Execute<DescribeAuditResponse, DescribeAuditResult, DescribeAuditRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取当前实例的版本信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeInstanceVersionInternalResponse DescribeInstanceVersionInternal(DescribeInstanceVersionInternalRequest request) {
-            return  new DescribeInstanceVersionInternalExecutor().Client(this).Execute<DescribeInstanceVersionInternalResponse, DescribeInstanceVersionInternalResult, DescribeInstanceVersionInternalRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取当前实例的版本信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceVersionInternalResponse> DescribeInstanceVersionInternal(DescribeInstanceVersionInternalRequest request) {
-            return await new DescribeInstanceVersionInternalExecutor().Client(this).Execute<DescribeInstanceVersionInternalResponse, DescribeInstanceVersionInternalResult, DescribeInstanceVersionInternalRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1848,6 +1905,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  当 RDS 实例不欠费了或者续费了，开启RDS实例的网络访问功能。开启后，用户可以通过域名正常访问RDS
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AttachNetworkResponse AttachNetwork(AttachNetworkRequest request) {
+            return  new AttachNetworkExecutor().Client(this).Execute<AttachNetworkResponse, AttachNetworkResult, AttachNetworkRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  当 RDS 实例不欠费了或者续费了，开启RDS实例的网络访问功能。开启后，用户可以通过域名正常访问RDS
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AttachNetworkResponse> AttachNetwork(AttachNetworkRequest request) {
+            return await new AttachNetworkExecutor().Client(this).Execute<AttachNetworkResponse, AttachNetworkResult, AttachNetworkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  开启数据库的高安全模式&lt;br&gt;- 仅支持MySQL
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1905,6 +1981,25 @@ namespace JDCloudSDK.Rds.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeReadWriteProxiesResponse DescribeReadWriteProxies(DescribeReadWriteProxiesRequest request) {
+            return  new DescribeReadWriteProxiesExecutor().Client(this).Execute<DescribeReadWriteProxiesResponse, DescribeReadWriteProxiesResult, DescribeReadWriteProxiesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeReadWriteProxiesResponse> DescribeReadWriteProxies(DescribeReadWriteProxiesRequest request) {
+            return await new DescribeReadWriteProxiesExecutor().Client(this).Execute<DescribeReadWriteProxiesResponse, DescribeReadWriteProxiesResult, DescribeReadWriteProxiesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查看某个RDS实例下的运维账号信息。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1920,6 +2015,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAccountsForOpsResponse> DescribeAccountsForOps(DescribeAccountsForOpsRequest request) {
             return await new DescribeAccountsForOpsExecutor().Client(this).Execute<DescribeAccountsForOpsResponse, DescribeAccountsForOpsResult, DescribeAccountsForOpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询该用户pin关联的备份的计费信息。仅当该用户开启了增强备份后有效。如用户未开启增强备份，返回null&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupChargeResponse DescribeBackupCharge(DescribeBackupChargeRequest request) {
+            return  new DescribeBackupChargeExecutor().Client(this).Execute<DescribeBackupChargeResponse, DescribeBackupChargeResult, DescribeBackupChargeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询该用户pin关联的备份的计费信息。仅当该用户开启了增强备份后有效。如用户未开启增强备份，返回null&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupChargeResponse> DescribeBackupCharge(DescribeBackupChargeRequest request) {
+            return await new DescribeBackupChargeExecutor().Client(this).Execute<DescribeBackupChargeResponse, DescribeBackupChargeResult, DescribeBackupChargeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2053,6 +2167,25 @@ namespace JDCloudSDK.Rds.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeParameterGroupParametersResponse> DescribeParameterGroupParameters(DescribeParameterGroupParametersRequest request) {
             return await new DescribeParameterGroupParametersExecutor().Client(this).Execute<DescribeParameterGroupParametersResponse, DescribeParameterGroupParametersResult, DescribeParameterGroupParametersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  当实例开启增强备份模式后，查询实例备份的空间使用情况&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBackupSpaceResponse DescribeBackupSpace(DescribeBackupSpaceRequest request) {
+            return  new DescribeBackupSpaceExecutor().Client(this).Execute<DescribeBackupSpaceResponse, DescribeBackupSpaceResult, DescribeBackupSpaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  当实例开启增强备份模式后，查询实例备份的空间使用情况&lt;br&gt;- 仅支持SQL Server
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBackupSpaceResponse> DescribeBackupSpace(DescribeBackupSpaceRequest request) {
+            return await new DescribeBackupSpaceExecutor().Client(this).Execute<DescribeBackupSpaceResponse, DescribeBackupSpaceResult, DescribeBackupSpaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

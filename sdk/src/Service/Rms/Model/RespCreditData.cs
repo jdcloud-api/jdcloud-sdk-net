@@ -40,6 +40,6 @@ namespace JDCloudSDK.Rms.Model
         ///<summary>
         /// 资质ID
         ///</summary>
-        public string CreditId{ get; set; }
+        public string SignId{ get; set; }
     }
 }

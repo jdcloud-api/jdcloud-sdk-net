@@ -65,5 +65,9 @@ namespace JDCloudSDK.Rds.Model
         /// 绑定的只读实例 ID 列表
         ///</summary>
         public List<string> RoInstanceId{ get; set; }
+        ///<summary>
+        /// 只读实例列表
+        ///</summary>
+        public List<RoInstanceList> RoInstanceList{ get; set; }
     }
 }

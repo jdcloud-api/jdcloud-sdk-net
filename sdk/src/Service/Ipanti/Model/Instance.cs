@@ -193,5 +193,13 @@ namespace JDCloudSDK.Ipanti.Model
         /// 关联的自定义页面名称
         ///</summary>
         public string PageName{ get; set; }
+        ///<summary>
+        /// 是否开启自定义页面, 关闭时透传状态码.  &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
+        ///</summary>
+        public int? PageStatus{ get; set; }
+        ///<summary>
+        /// 每条网站规则可配的http/https端口数
+        ///</summary>
+        public int? WebRulePortLimit{ get; set; }
     }
 }

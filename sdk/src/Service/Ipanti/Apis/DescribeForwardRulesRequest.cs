@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -55,6 +56,13 @@ namespace  JDCloudSDK.Ipanti.Apis
         /// 查询类型值
         ///</summary>
         public   string SearchValue{ get; set; }
+        ///<summary>
+        /// 排序属性：
+        /// port - 按转发端口排序，默认不排序,asc表示按转发端口升序，desc表示按转发端口降序
+        /// 
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
         ///<summary>
         /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可
         ///Required:true

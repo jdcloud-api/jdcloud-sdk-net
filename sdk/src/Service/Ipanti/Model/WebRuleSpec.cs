@@ -55,11 +55,11 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public WebRuleProtocol Protocol{ get; set; }
         ///<summary>
-        /// HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+        /// HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
         ///</summary>
         public List<int?> Port{ get; set; }
         ///<summary>
-        /// HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+        /// HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口
         ///</summary>
         public List<int?> HttpsPort{ get; set; }
         ///<summary>
@@ -108,5 +108,33 @@ namespace JDCloudSDK.Ipanti.Model
         /// 按区域分流回源配置
         ///</summary>
         public List<GeoRsRoute> GeoRsRoute{ get; set; }
+        ///<summary>
+        /// 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+        ///</summary>
+        public string EnableKeepalive{ get; set; }
+        ///<summary>
+        /// http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+        ///</summary>
+        public string HttpVersion{ get; set; }
+        ///<summary>
+        /// SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+        ///</summary>
+        public List<string> SslProtocols{ get; set; }
+        ///<summary>
+        /// 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+        ///</summary>
+        public string SuiteLevel{ get; set; }
+        ///<summary>
+        /// 健康检查开关, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? EnableHealthCheck{ get; set; }
+        ///<summary>
+        /// 回源连接超时时长, 单位 秒
+        ///</summary>
+        public int? ProxyConnectTimeout{ get; set; }
+        ///<summary>
+        /// 请求头支持下划线, 0: 关闭, 1: 开启
+        ///</summary>
+        public int? EnableUnderscores{ get; set; }
     }
 }

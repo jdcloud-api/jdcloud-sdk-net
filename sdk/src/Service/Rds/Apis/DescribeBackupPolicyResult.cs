@@ -61,5 +61,9 @@ namespace  JDCloudSDK.Rds.Apis
         /// 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
         ///</summary>
         public   string BackupBinlog{ get; set; }
+        ///<summary>
+        /// 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
+        ///</summary>
+        public   string EnhancedBackup{ get; set; }
     }
 }

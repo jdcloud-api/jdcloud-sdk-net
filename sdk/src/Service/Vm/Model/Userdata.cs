@@ -38,11 +38,11 @@ namespace JDCloudSDK.Vm.Model
     {
 
         ///<summary>
-        /// 键
+        /// 键，最大长度48字符
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        /// 值
+        /// 值，最大长度21848字符
         ///</summary>
         public string Value{ get; set; }
     }

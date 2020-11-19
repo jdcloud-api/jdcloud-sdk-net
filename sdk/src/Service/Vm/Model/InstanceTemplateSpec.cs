@@ -59,6 +59,19 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>
+        /// 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+        /// 注意：key不要以连字符(-)结尾，否则此key不生效。
+        /// 
+        ///</summary>
+        public List<Metadata> Metadata{ get; set; }
+        ///<summary>
+        /// 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+        /// launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+        /// launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+        /// 
+        ///</summary>
+        public List<Userdata> Userdata{ get; set; }
+        ///<summary>
         /// 主网卡主IP关联的弹性IP规格
         ///</summary>
         public InstanceTemplateElasticIpSpec ElasticIp{ get; set; }
@@ -70,9 +83,7 @@ namespace JDCloudSDK.Vm.Model
         public InstanceTemplateNetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
         ///<summary>
         /// 系统盘配置信息
-        ///Required:true
         ///</summary>
-        [Required]
         public InstanceTemplateDiskAttachmentSpec SystemDisk{ get; set; }
         ///<summary>
         /// 数据盘配置信息
@@ -82,5 +93,17 @@ namespace JDCloudSDK.Vm.Model
         /// 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
         ///</summary>
         public string ChargeOnStopped{ get; set; }
+        ///<summary>
+        /// 自动镜像策略ID。
+        ///</summary>
+        public string AutoImagePolicyId{ get; set; }
+        ///<summary>
+        /// 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+        ///</summary>
+        public string PassWordAuth{ get; set; }
+        ///<summary>
+        /// 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+        ///</summary>
+        public string ImageInherit{ get; set; }
     }
 }

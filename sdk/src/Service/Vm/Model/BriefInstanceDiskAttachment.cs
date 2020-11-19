@@ -56,6 +56,10 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public LocalDisk LocalDisk{ get; set; }
         ///<summary>
+        /// 云硬盘配置
+        ///</summary>
+        public LightCloudDiskInfo CloudDisk{ get; set; }
+        ///<summary>
         /// 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
         ///</summary>
         public string DeviceName{ get; set; }

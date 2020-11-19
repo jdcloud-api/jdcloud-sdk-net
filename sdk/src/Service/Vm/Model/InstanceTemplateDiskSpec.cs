@@ -50,6 +50,10 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
+        /// 策略ID
+        ///</summary>
+        public string PolicyId{ get; set; }
+        ///<summary>
         /// 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
         ///</summary>
         public bool Encrypt{ get; set; }
