@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 集群管理
- * JMR集群管理相关接口
+ * Live-Video
+ * 直播管理API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,35 +28,14 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Jmr.Model;
-using JDCloudSDK.Core.Annotation;
-using Newtonsoft.Json;
 
-namespace  JDCloudSDK.Jmr.Apis
+namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  扩容集群
+    ///  查询流分组统计数据(上行)
     /// </summary>
-    public class ClusterExpansionRequest : JdcloudRequest
+    public class DescribeLivePublishStatisticGroupByStreamResponse : JdcloudResponse<DescribeLivePublishStatisticGroupByStreamResult>
     {
-        ///<summary>
-        /// 描述集群扩容信息
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   ClusterExpansion ClusterExpansion{ get; set; }
-        ///<summary>
-        /// 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
-        /// 
-        ///</summary>
-        public   string ClientToken{ get; set; }
-        ///<summary>
-        /// 地域ID
-        ///Required:true
-        ///</summary>
-        [Required]
-        [JsonProperty("regionId")]
-        public   string RegionIdValue{ get; set; }
     }
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 集群管理
- * JMR集群管理相关接口
+ * Live-Video
+ * 直播管理API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -23,34 +23,40 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Jmr.Model;
-
-namespace  JDCloudSDK.Jmr.Apis
+namespace JDCloudSDK.Live.Client
 {
 
     /// <summary>
-    ///  查询用户集群的列表
-        ///         /// 
+    ///  删除录制文件
+        /// 
     /// </summary>
-    public class DescribeClustersResult : JdcloudResult
+    public class DeleteLiveRecordingsExecutor : JdcloudExecutor
     {
-        ///<summary>
-        /// 集群总的数目
-        ///</summary>
-        public   int? TotalNum{ get; set; }
-        ///<summary>
-        /// Clusters
-        ///</summary>
-        public List<ClusterListNode> Clusters{ get; set; }
-
-        ///<summary>
-        /// Status
-        ///</summary>
-        public   bool Status{ get; set; }
+        /// <summary>
+        ///  删除录制文件
+        /// 接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "DELETE";
+            }
+        }
+        /// <summary>
+        ///  删除录制文件
+        /// 接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/recordings:delete";
+            }
+        }
     }
 }

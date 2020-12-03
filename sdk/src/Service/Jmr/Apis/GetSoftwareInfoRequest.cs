@@ -40,17 +40,18 @@ namespace  JDCloudSDK.Jmr.Apis
     public class GetSoftwareInfoRequest : JdcloudRequest
     {
         ///<summary>
+        /// JMR软件版本号
+        ///Required:true
+        ///</summary>
+        [Required]
+        [JsonProperty("version")]
+        public   string VersionValue{ get; set; }
+        ///<summary>
         /// 地域ID
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
-        ///<summary>
-        /// JMR软件版本号
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   string Ver{ get; set; }
     }
 }

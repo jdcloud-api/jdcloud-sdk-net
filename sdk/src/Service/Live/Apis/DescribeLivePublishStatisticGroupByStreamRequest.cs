@@ -34,15 +34,13 @@ namespace  JDCloudSDK.Live.Apis
 {
 
     /// <summary>
-    ///  查询地域/运营商分组统计数据
+    ///  查询流分组统计数据(上行)
     /// </summary>
-    public class DescribeLiveStatisticGroupByAreaIspRequest : JdcloudRequest
+    public class DescribeLivePublishStatisticGroupByStreamRequest : JdcloudRequest
     {
         ///<summary>
         /// 播放域名
-        ///Required:true
         ///</summary>
-        [Required]
         public   string DomainName{ get; set; }
         ///<summary>
         /// 应用名称
@@ -62,11 +60,6 @@ namespace  JDCloudSDK.Live.Apis
         /// 
         ///</summary>
         public   string LocationName{ get; set; }
-        ///<summary>
-        /// 查询的流协议类型，取值范围：&quot;rtmp,hdl,hls&quot;，多个时以逗号分隔
-        /// 
-        ///</summary>
-        public   string ProtocolType{ get; set; }
         ///<summary>
         /// 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
         /// 

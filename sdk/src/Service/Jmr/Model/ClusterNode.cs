@@ -80,10 +80,34 @@ namespace JDCloudSDK.Jmr.Model
         ///<summary>
         /// 节点系统盘大小(GB)
         ///</summary>
-        public string NodeSystemDiskVolume{ get; set; }
+        public int? NodeSystemDiskVolume{ get; set; }
         ///<summary>
         /// 节点数据盘大小(GB)
         ///</summary>
-        public string NodeDiskVolume{ get; set; }
+        public int? NodeDiskVolume{ get; set; }
+        ///<summary>
+        /// 信息
+        ///</summary>
+        public string Msg{ get; set; }
+        ///<summary>
+        /// 节点系统信息
+        ///</summary>
+        public string NodeSystemInfo{ get; set; }
+        ///<summary>
+        /// 节点硬盘类型
+        ///</summary>
+        public string NodeDiskCategory{ get; set; }
+        ///<summary>
+        /// 节点系统盘类型
+        ///</summary>
+        public string NodeSystemDiskCategory{ get; set; }
+        ///<summary>
+        /// 节点数量
+        ///</summary>
+        public int? NodeCoreNum{ get; set; }
+        ///<summary>
+        /// 节点内存数量
+        ///</summary>
+        public int? NodeMemoryNum{ get; set; }
     }
 }

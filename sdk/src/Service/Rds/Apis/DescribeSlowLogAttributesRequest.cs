@@ -70,6 +70,11 @@ namespace  JDCloudSDK.Rds.Apis
         public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
 
         ///<summary>
+        /// Filters
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
+        ///<summary>
         /// 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
         ///Required:true
         ///</summary>

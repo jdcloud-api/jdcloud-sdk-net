@@ -192,5 +192,17 @@ namespace JDCloudSDK.Jmr.Model
         ///</summary>
         [Required]
         public string Az{ get; set; }
+        ///<summary>
+        /// 是否创建公网IP
+        ///</summary>
+        public bool CreateOuterIpFlag{ get; set; }
+        ///<summary>
+        /// 是否创建安全组
+        ///</summary>
+        public bool CreateSecurityGroupFlag{ get; set; }
+        ///<summary>
+        /// 安全组ID
+        ///</summary>
+        public string SecurityGroupId{ get; set; }
     }
 }

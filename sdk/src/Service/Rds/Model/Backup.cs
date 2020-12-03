@@ -70,6 +70,10 @@ namespace JDCloudSDK.Rds.Model
         ///</summary>
         public string BackupMode{ get; set; }
         ///<summary>
+        /// 备份方法，支持物理备份和快照备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **仅支持 MySQL、MariaDB、Percona**
+        ///</summary>
+        public string BackupMethod{ get; set; }
+        ///<summary>
         /// 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
         ///</summary>
         public string BackupUnit{ get; set; }

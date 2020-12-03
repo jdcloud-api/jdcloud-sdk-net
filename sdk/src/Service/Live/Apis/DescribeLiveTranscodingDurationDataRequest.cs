@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Live.Apis
     public class DescribeLiveTranscodingDurationDataRequest : JdcloudRequest
     {
         ///<summary>
+        /// 播放域名
+        ///</summary>
+        public   string DomainName{ get; set; }
+        ///<summary>
         /// 码率档次，可以查询指定档次的转码时长，取值：
         /// - video_h264_4k_1
         /// - video_h264_2k_1

@@ -29,34 +29,23 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Jmr.Model;
-using JDCloudSDK.Core.Annotation;
-using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    ///  扩容集群
+    ///  查询JMR的监控模板信息
     /// </summary>
-    public class ClusterExpansionRequest : JdcloudRequest
+    public class MonitorLabelListResult : JdcloudResult
     {
         ///<summary>
-        /// 描述集群扩容信息
-        ///Required:true
+        /// JMR的监控模板信息
         ///</summary>
-        [Required]
-        public   ClusterExpansion ClusterExpansion{ get; set; }
+        public List<MonitorLabelDetail> Data{ get; set; }
+
         ///<summary>
-        /// 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
-        /// 
+        /// Status
         ///</summary>
-        public   string ClientToken{ get; set; }
-        ///<summary>
-        /// 地域ID
-        ///Required:true
-        ///</summary>
-        [Required]
-        [JsonProperty("regionId")]
-        public   string RegionIdValue{ get; set; }
+        public   bool Status{ get; set; }
     }
 }

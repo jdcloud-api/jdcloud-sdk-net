@@ -157,6 +157,44 @@ namespace JDCloudSDK.Jmr.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询JMR的监控模板信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public MonitorLabelListResponse MonitorLabelList(MonitorLabelListRequest request) {
+            return  new MonitorLabelListExecutor().Client(this).Execute<MonitorLabelListResponse, MonitorLabelListResult, MonitorLabelListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询JMR的监控模板信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<MonitorLabelListResponse> MonitorLabelList(MonitorLabelListRequest request) {
+            return await new MonitorLabelListExecutor().Client(this).Execute<MonitorLabelListResponse, MonitorLabelListResult, MonitorLabelListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  缩容集群
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ClusterReductionResponse ClusterReduction(ClusterReductionRequest request) {
+            return  new ClusterReductionExecutor().Client(this).Execute<ClusterReductionResponse, ClusterReductionResult, ClusterReductionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  缩容集群
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ClusterReductionResponse> ClusterReduction(ClusterReductionRequest request) {
+            return await new ClusterReductionExecutor().Client(this).Execute<ClusterReductionResponse, ClusterReductionResult, ClusterReductionRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询用户集群的列表
         /// 
         /// </summary>

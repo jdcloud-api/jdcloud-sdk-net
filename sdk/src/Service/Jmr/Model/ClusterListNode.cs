@@ -32,9 +32,9 @@ namespace JDCloudSDK.Jmr.Model
 {
 
     /// <summary>
-    ///  cluster
+    ///  clusterListNode
     /// </summary>
-    public class Cluster
+    public class ClusterListNode
     {
 
         ///<summary>
@@ -52,7 +52,7 @@ namespace JDCloudSDK.Jmr.Model
         ///<summary>
         /// 集群ID
         ///</summary>
-        public string ClusterPrimaryId{ get; set; }
+        public int? RecordId{ get; set; }
         ///<summary>
         /// 监控ID
         ///</summary>
@@ -62,25 +62,13 @@ namespace JDCloudSDK.Jmr.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// 软件信息
+        /// 错误信息
         ///</summary>
-        public SoftwareStack SoftwareStack{ get; set; }
+        public string ErrorMessage{ get; set; }
         ///<summary>
         /// 集群创建时间
         ///</summary>
         public string CreateTime{ get; set; }
-        ///<summary>
-        /// 集群是否高可用
-        ///</summary>
-        public bool HaFlag{ get; set; }
-        ///<summary>
-        /// 集群是否使用OSS
-        ///</summary>
-        public bool JssFlag{ get; set; }
-        ///<summary>
-        /// 集群费用
-        ///</summary>
-        public string PayPrice{ get; set; }
         ///<summary>
         /// 集群收费类型
         ///</summary>
@@ -90,12 +78,8 @@ namespace JDCloudSDK.Jmr.Model
         ///</summary>
         public string Duration{ get; set; }
         ///<summary>
-        /// 集群节点个数
+        /// 公网Ip
         ///</summary>
-        public int? NodeCount{ get; set; }
-        ///<summary>
-        /// 集群节点信息
-        ///</summary>
-        public List<ClusterNode> Hardware{ get; set; }
+        public string OuterIp{ get; set; }
     }
 }

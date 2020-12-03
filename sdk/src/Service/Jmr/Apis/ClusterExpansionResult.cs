@@ -38,12 +38,8 @@ namespace  JDCloudSDK.Jmr.Apis
     public class ClusterExpansionResult : JdcloudResult
     {
         ///<summary>
-        /// 是否开始创建集群
+        /// 是否开始扩容集群
         ///</summary>
         public   bool Status{ get; set; }
-        ///<summary>
-        /// 集群ID
-        ///</summary>
-        public   string ClusterId{ get; set; }
     }
 }

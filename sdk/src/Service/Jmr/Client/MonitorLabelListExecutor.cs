@@ -23,40 +23,37 @@
  */
 
 
+using JDCloudSDK.Core.Client;
+using JDCloudSDK.Core.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Jmr.Model;
-using JDCloudSDK.Core.Annotation;
-using Newtonsoft.Json;
-
-namespace  JDCloudSDK.Jmr.Apis
+namespace JDCloudSDK.Jmr.Client
 {
 
     /// <summary>
-    ///  扩容集群
+    ///  查询JMR的监控模板信息
     /// </summary>
-    public class ClusterExpansionRequest : JdcloudRequest
+    public class MonitorLabelListExecutor : JdcloudExecutor
     {
-        ///<summary>
-        /// 描述集群扩容信息
-        ///Required:true
-        ///</summary>
-        [Required]
-        public   ClusterExpansion ClusterExpansion{ get; set; }
-        ///<summary>
-        /// 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
-        /// 
-        ///</summary>
-        public   string ClientToken{ get; set; }
-        ///<summary>
-        /// 地域ID
-        ///Required:true
-        ///</summary>
-        [Required]
-        [JsonProperty("regionId")]
-        public   string RegionIdValue{ get; set; }
+        /// <summary>
+        ///  查询JMR的监控模板信息接口的Http 请求方法
+        /// </summary>
+        public override  string Method
+        {
+            get {
+                return "POST";
+            }
+        }
+        /// <summary>
+        ///  查询JMR的监控模板信息接口的Http资源请求路径
+        /// </summary>
+        public override string Url
+        {
+            get {
+            return "/regions/{regionId}/monitorLabelList/{clusterId}";
+            }
+        }
     }
 }

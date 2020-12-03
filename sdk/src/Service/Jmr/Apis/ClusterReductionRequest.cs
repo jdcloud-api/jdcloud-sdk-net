@@ -36,16 +36,16 @@ namespace  JDCloudSDK.Jmr.Apis
 {
 
     /// <summary>
-    ///  扩容集群
+    ///  缩容集群
     /// </summary>
-    public class ClusterExpansionRequest : JdcloudRequest
+    public class ClusterReductionRequest : JdcloudRequest
     {
         ///<summary>
-        /// 描述集群扩容信息
+        /// 描述集群缩容信息
         ///Required:true
         ///</summary>
         [Required]
-        public   ClusterExpansion ClusterExpansion{ get; set; }
+        public   ClusterReduction ClusterReduction{ get; set; }
         ///<summary>
         /// 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
         /// 
