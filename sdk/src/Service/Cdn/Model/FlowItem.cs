@@ -32,22 +32,26 @@ namespace JDCloudSDK.Cdn.Model
 {
 
     /// <summary>
-    ///  queryAvgBandwidthItem
+    ///  flowItem
     /// </summary>
-    public class QueryAvgBandwidthItem
+    public class FlowItem
     {
 
         ///<summary>
-        /// 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
+        /// 时间点，2020-12-08 00:00
         ///</summary>
-        public string StartTime{ get; set; }
+        public string Time{ get; set; }
         ///<summary>
-        /// 平均带宽kbps
+        /// 目录流量(Byte)
         ///</summary>
-        public double? Avgbandwidth{ get; set; }
+        public double? Flow{ get; set; }
         ///<summary>
-        /// Isp
+        /// 目录
         ///</summary>
-        public string Isp{ get; set; }
+        public string Dir{ get; set; }
+        ///<summary>
+        /// 目录访问次数
+        ///</summary>
+        public long? Pv{ get; set; }
     }
 }

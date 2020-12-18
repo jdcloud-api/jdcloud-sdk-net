@@ -499,6 +499,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询定制的目录带宽，仅有部分用户支持该功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryCustomizedDirBandWidthResponse QueryCustomizedDirBandWidth(QueryCustomizedDirBandWidthRequest request) {
+            return  new QueryCustomizedDirBandWidthExecutor().Client(this).Execute<QueryCustomizedDirBandWidthResponse, QueryCustomizedDirBandWidthResult, QueryCustomizedDirBandWidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询定制的目录带宽，仅有部分用户支持该功能
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryCustomizedDirBandWidthResponse> QueryCustomizedDirBandWidth(QueryCustomizedDirBandWidthRequest request) {
+            return await new QueryCustomizedDirBandWidthExecutor().Client(this).Execute<QueryCustomizedDirBandWidthResponse, QueryCustomizedDirBandWidthResult, QueryCustomizedDirBandWidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置用户刷新预热限额
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1582,6 +1601,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查找地域运营商列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryAreaIspListV2Response QueryAreaIspListV2(QueryAreaIspListV2Request request) {
+            return  new QueryAreaIspListV2Executor().Client(this).Execute<QueryAreaIspListV2Response, QueryAreaIspListV2Result, QueryAreaIspListV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  查找地域运营商列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryAreaIspListV2Response> QueryAreaIspListV2(QueryAreaIspListV2Request request) {
+            return await new QueryAreaIspListV2Executor().Client(this).Execute<QueryAreaIspListV2Response, QueryAreaIspListV2Result, QueryAreaIspListV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询平均带宽
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2623,6 +2661,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<QueryBackSourcePathResponse> QueryBackSourcePath(QueryBackSourcePathRequest request) {
             return await new QueryBackSourcePathExecutor().Client(this).Execute<QueryBackSourcePathResponse, QueryBackSourcePathResult, QueryBackSourcePathRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询平均带宽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryJBoxAvgBandwidthResponse QueryJBoxAvgBandwidth(QueryJBoxAvgBandwidthRequest request) {
+            return  new QueryJBoxAvgBandwidthExecutor().Client(this).Execute<QueryJBoxAvgBandwidthResponse, QueryJBoxAvgBandwidthResult, QueryJBoxAvgBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询平均带宽
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryJBoxAvgBandwidthResponse> QueryJBoxAvgBandwidth(QueryJBoxAvgBandwidthRequest request) {
+            return await new QueryJBoxAvgBandwidthExecutor().Client(this).Execute<QueryJBoxAvgBandwidthResponse, QueryJBoxAvgBandwidthResult, QueryJBoxAvgBandwidthRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

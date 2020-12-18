@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * CDN刷新预热类接口
+ * 统计查询类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -28,54 +28,65 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cdn.Model;
 
 namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询刷新预热任务
+    ///  查找地域运营商列表
     /// </summary>
-    public class QueryRefreshTaskRequest : JdcloudRequest
+    public class QueryAreaIspListV2Result : JdcloudResult
     {
         ///<summary>
-        /// 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+        /// 大陆城市
         ///</summary>
-        public   string StartTime{ get; set; }
+        public List<AreaIspItem> MainLand{ get; set; }
+
         ///<summary>
-        /// 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+        /// 全部海外地区
         ///</summary>
-        public   string EndTime{ get; set; }
+        public List<AreaIspItem> Overseas{ get; set; }
+
         ///<summary>
-        /// url或者目录的模糊查询关键字
+        /// 国内运营商
         ///</summary>
-        public   string Keyword{ get; set; }
+        public List<AreaIspItem> Isp{ get; set; }
+
         ///<summary>
-        /// 任务id
+        /// 非洲地区
         ///</summary>
-        public   string TaskId{ get; set; }
+        public List<AreaIspItem> Africa{ get; set; }
+
         ///<summary>
-        /// null
+        /// 大洋洲地区
         ///</summary>
-        public   string TaskStatus{ get; set; }
+        public List<AreaIspItem> Oceania{ get; set; }
+
         ///<summary>
-        /// null
+        /// 南美洲地区
         ///</summary>
-        public   string TaskType{ get; set; }
+        public List<AreaIspItem> SouthAmerica{ get; set; }
+
         ///<summary>
-        /// 分页页数,默认值1
+        /// 北美洲地区
         ///</summary>
-        public   int? PageNumber{ get; set; }
+        public List<AreaIspItem> NorthAmerica{ get; set; }
+
         ///<summary>
-        /// 分页页面大小,默认值50
+        /// Asia
         ///</summary>
-        public   int? PageSize{ get; set; }
+        public List<AreaIspItem> Asia{ get; set; }
+
         ///<summary>
-        /// 查询的账号范围
+        /// 欧洲地区
         ///</summary>
-        public   string AccountType{ get; set; }
+        public List<AreaIspItem> Europe{ get; set; }
+
         ///<summary>
-        /// 查询的子账号，多个用逗号隔开
+        /// 中东地区
         ///</summary>
-        public   string SubUsers{ get; set; }
+        public List<AreaIspItem> MidEast{ get; set; }
+
     }
 }
