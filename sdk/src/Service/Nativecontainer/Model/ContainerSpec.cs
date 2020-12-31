@@ -127,5 +127,9 @@ namespace JDCloudSDK.Nativecontainer.Model
         /// 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
         ///</summary>
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 用户普通标签集合
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
     }
 }

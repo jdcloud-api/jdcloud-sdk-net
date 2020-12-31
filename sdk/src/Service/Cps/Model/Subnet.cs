@@ -38,11 +38,11 @@ namespace JDCloudSDK.Cps.Model
     {
 
         ///<summary>
-        /// 地域代码, 如cn-east-1
+        /// 地域代码, 如cn-north-1
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 可用区, 如cn-east-1a
+        /// 可用区, 如cn-north-1c
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
@@ -54,9 +54,13 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 子网CIDR
+        /// 子网ipv4 CIDR
         ///</summary>
         public string Cidr{ get; set; }
+        ///<summary>
+        /// 子网IPv6 CIDR
+        ///</summary>
+        public string Ipv6Cidr{ get; set; }
         ///<summary>
         /// 私有网络Id
         ///</summary>
@@ -66,13 +70,41 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
-        /// 可用ip数量
+        /// 私有网络IPv4 CIDR
+        ///</summary>
+        public string VpcCidr{ get; set; }
+        ///<summary>
+        /// 私有网络IPv6 CIDR
+        ///</summary>
+        public string VpcIpv6Cidr{ get; set; }
+        ///<summary>
+        /// 可用IPv4地址数量
         ///</summary>
         public int? AvailableIpCount{ get; set; }
         ///<summary>
-        /// 总ip数量
+        /// 总IPv4地址数量
         ///</summary>
         public int? TotalIpCount{ get; set; }
+        ///<summary>
+        /// 已用IPv6地址数量
+        ///</summary>
+        public int? UsedIpv6IpCount{ get; set; }
+        ///<summary>
+        /// 总IPv6地址数量
+        ///</summary>
+        public string TotalIpv6IpCount{ get; set; }
+        ///<summary>
+        /// 子网次要CIDR名称
+        ///</summary>
+        public string SecondaryCidrName{ get; set; }
+        ///<summary>
+        /// 子网次要CIDR
+        ///</summary>
+        public string SecondaryCidr{ get; set; }
+        ///<summary>
+        /// 子网次要CIDR ID
+        ///</summary>
+        public string SecondaryCidrId{ get; set; }
         ///<summary>
         /// 网络类型
         ///</summary>

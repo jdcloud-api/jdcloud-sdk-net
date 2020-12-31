@@ -43,11 +43,11 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 区域代码, 如 cn-east-1
+        /// 区域代码, 如 cn-north-1
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 可用区, 如 cn-east-1a
+        /// 可用区, 如 cn-north-1a
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
@@ -111,11 +111,11 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string DataRaidTypeId{ get; set; }
         ///<summary>
-        /// 数据盘RAID类型, 如 NORAID, RAID0, RAID1
+        /// 数据盘RAID类型, 如 NORAID, RAID0, RAID1，RAID10
         ///</summary>
         public string DataRaidType{ get; set; }
         ///<summary>
-        /// 网络类型, 如 basic, vpc
+        /// 网络类型：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
         ///</summary>
         public string NetworkType{ get; set; }
         ///<summary>
@@ -127,6 +127,18 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string VpcName{ get; set; }
         ///<summary>
+        /// 私有网络IPv4 CIDR
+        ///</summary>
+        public string VpcIpv4Cidr{ get; set; }
+        ///<summary>
+        /// 私有网络IPv6 CIDR
+        ///</summary>
+        public string VpcIpv6Cidr{ get; set; }
+        ///<summary>
+        /// IPv6网关ID
+        ///</summary>
+        public string Ipv6GatewayId{ get; set; }
+        ///<summary>
         /// 子网编号
         ///</summary>
         public string SubnetId{ get; set; }
@@ -134,6 +146,14 @@ namespace JDCloudSDK.Cps.Model
         /// 子网名称
         ///</summary>
         public string SubnetName{ get; set; }
+        ///<summary>
+        /// 子网IPv4 CIDR
+        ///</summary>
+        public string SubnetIpv4Cidr{ get; set; }
+        ///<summary>
+        /// 子网IPv6 CIDR
+        ///</summary>
+        public string SubnetIpv6Cidr{ get; set; }
         ///<summary>
         /// 内网IP
         ///</summary>
@@ -151,9 +171,93 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string PublicIp{ get; set; }
         ///<summary>
-        /// 公网IPv6
+        /// IPv6地址
         ///</summary>
-        public string PublicIpv6{ get; set; }
+        public string Ipv6Address{ get; set; }
+        ///<summary>
+        /// 公网IPv6地址ID
+        ///</summary>
+        public string Ipv6AddressId{ get; set; }
+        ///<summary>
+        /// 公网IPv6带宽, 单位Mbps
+        ///</summary>
+        public int? Ipv6AddressBandwidth{ get; set; }
+        ///<summary>
+        /// 网络接口模式：bond（网口bond）、dual（双网口）
+        ///</summary>
+        public string InterfaceMode{ get; set; }
+        ///<summary>
+        /// 辅网口私有网络ID
+        ///</summary>
+        public string ExtensionVpcId{ get; set; }
+        ///<summary>
+        /// 辅网口私有网络名称
+        ///</summary>
+        public string ExtensionVpcName{ get; set; }
+        ///<summary>
+        /// 辅网口私有网络IPv4 CIDR
+        ///</summary>
+        public string ExtensionVpcIpv4Cidr{ get; set; }
+        ///<summary>
+        /// 辅网口私有网络IPv6 CIDR
+        ///</summary>
+        public string ExtensionVpcIpv6Cidr{ get; set; }
+        ///<summary>
+        /// 辅网口子网ID
+        ///</summary>
+        public string ExtensionSubnetId{ get; set; }
+        ///<summary>
+        /// 辅网口子网名称
+        ///</summary>
+        public string ExtensionSubnetName{ get; set; }
+        ///<summary>
+        /// 辅网口子网IPv4 CIDR
+        ///</summary>
+        public string ExtensionSubnetIpv4Cidr{ get; set; }
+        ///<summary>
+        /// 辅网口子网IPv6 CIDR
+        ///</summary>
+        public string ExtensionSubnetIpv6Cidr{ get; set; }
+        ///<summary>
+        /// 辅网口手动分配的内网ip
+        ///</summary>
+        public string ExtensionPrivateIp{ get; set; }
+        ///<summary>
+        /// 辅网口是否启用外网
+        ///</summary>
+        public string ExtensionEnableInternet{ get; set; }
+        ///<summary>
+        /// 辅网口弹性公网ip id
+        ///</summary>
+        public string ExtensionElasticIpId{ get; set; }
+        ///<summary>
+        /// 辅网口公网ip
+        ///</summary>
+        public string ExtensionPublicIp{ get; set; }
+        ///<summary>
+        /// 辅网口外网带宽，单位Mbps
+        ///</summary>
+        public int? ExtensionBandwidth{ get; set; }
+        ///<summary>
+        /// 辅网口是否启用IPv6, 如 yes/no
+        ///</summary>
+        public string ExtensionEnableIpv6{ get; set; }
+        ///<summary>
+        /// 辅网口IPv6地址
+        ///</summary>
+        public string ExtensionIpv6Address{ get; set; }
+        ///<summary>
+        /// 辅网口公网IPv6地址ID
+        ///</summary>
+        public string ExtensionIpv6AddressId{ get; set; }
+        ///<summary>
+        /// 辅网口IPv6公网带宽, 单位Mbps
+        ///</summary>
+        public int? ExtensionIpv6AddressBandwidth{ get; set; }
+        ///<summary>
+        /// IPv6网关ID
+        ///</summary>
+        public string ExtensionIpv6GatewayId{ get; set; }
         ///<summary>
         /// 密钥对id
         ///</summary>

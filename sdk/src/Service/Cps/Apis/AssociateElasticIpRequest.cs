@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -52,6 +52,14 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         [Required]
         public   string ElasticIpId{ get; set; }
+        ///<summary>
+        /// 私有IP
+        ///</summary>
+        public   string TargetIp{ get; set; }
+        ///<summary>
+        /// 主网口或辅网口的子网ID，多网口实例必填
+        ///</summary>
+        public   string SubnetId{ get; set; }
         ///<summary>
         /// 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
         ///Required:true

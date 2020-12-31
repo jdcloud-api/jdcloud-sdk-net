@@ -109,5 +109,9 @@ namespace JDCloudSDK.Pod.Model
         ///</summary>
         [Required]
         public NetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
+        ///<summary>
+        /// 用户普通标签集合
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
     }
 }

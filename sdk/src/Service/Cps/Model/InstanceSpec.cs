@@ -29,6 +29,7 @@ using System.Text;
 
 using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Resourcetag.Model;
 
 namespace JDCloudSDK.Cps.Model
 {
@@ -40,7 +41,7 @@ namespace JDCloudSDK.Cps.Model
     {
 
         ///<summary>
-        /// 可用区, 如 cn-east-1
+        /// 可用区, 如 cn-north-1
         ///Required:true
         ///</summary>
         [Required]
@@ -75,9 +76,7 @@ namespace JDCloudSDK.Cps.Model
         public string SysRaidTypeId{ get; set; }
         ///<summary>
         /// 数据盘RAID类型ID
-        ///Required:true
         ///</summary>
-        [Required]
         public string DataRaidTypeId{ get; set; }
         ///<summary>
         /// 子网编号
@@ -88,11 +87,19 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string EnableInternet{ get; set; }
         ///<summary>
+        /// 启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+        ///</summary>
+        public string InternetChargeMode{ get; set; }
+        ///<summary>
         /// 是否启用IPv6，取值范围：yes、no
         ///</summary>
         public string EnableIpv6{ get; set; }
         ///<summary>
-        /// 网络类型，取值范围：basic、vpc
+        /// IPv6地址
+        ///</summary>
+        public string Ipv6Address{ get; set; }
+        ///<summary>
+        /// 网络类型，取值范围：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
         ///Required:true
         ///</summary>
         [Required]
@@ -105,6 +112,10 @@ namespace JDCloudSDK.Cps.Model
         /// 内网IP
         ///</summary>
         public string PrivateIp{ get; set; }
+        ///<summary>
+        /// 内网添加的别名IP范围
+        ///</summary>
+        public List<AliasIpInfo> AliasIps{ get; set; }
         ///<summary>
         /// 外网链路类型, 目前只支持bgp
         ///</summary>
@@ -147,5 +158,49 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         [Required]
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 网络接口模式，取值：bond（网口bond）、dual（双网口）
+        ///</summary>
+        public string InterfaceMode{ get; set; }
+        ///<summary>
+        /// 辅网口是否启用IPv6，取值范围：yes、no
+        ///</summary>
+        public string ExtensionEnableIpv6{ get; set; }
+        ///<summary>
+        /// 辅网口IPv6地址
+        ///</summary>
+        public string ExtensionIpv6Address{ get; set; }
+        ///<summary>
+        /// 辅网口子网ID
+        ///</summary>
+        public string ExtensionSubnetId{ get; set; }
+        ///<summary>
+        /// 辅网口手动分配的内网ip
+        ///</summary>
+        public string ExtensionPrivateIp{ get; set; }
+        ///<summary>
+        /// 辅网口内网添加的别名IP范围
+        ///</summary>
+        public List<AliasIpInfo> ExtensionAliasIps{ get; set; }
+        ///<summary>
+        /// 辅网口是否启用外网，取值范围：yes、no
+        ///</summary>
+        public string ExtensionEnableInternet{ get; set; }
+        ///<summary>
+        /// 辅网口链路类型, 目前支持BGP
+        ///</summary>
+        public string ExtensionLineType{ get; set; }
+        ///<summary>
+        /// 辅网口外网带宽，范围[1,200] 单位Mbps
+        ///</summary>
+        public int? ExtensionBandwidth{ get; set; }
+        ///<summary>
+        /// 辅网口启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+        ///</summary>
+        public string ExtensionInternetChargeMode{ get; set; }
+        ///<summary>
+        /// 标签
+        ///</summary>
+        public List<Tag> ResourceTags{ get; set; }
     }
 }

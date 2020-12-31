@@ -51,6 +51,10 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string Name{ get; set; }
         ///<summary>
+        /// 是否开通IPv6网关，取值范围：yes、no
+        ///</summary>
+        public string EnableIpv6{ get; set; }
+        ///<summary>
         /// 描述
         ///Required:true
         ///</summary>

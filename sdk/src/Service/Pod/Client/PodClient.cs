@@ -89,9 +89,9 @@ namespace JDCloudSDK.Pod.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -155,27 +155,6 @@ namespace JDCloudSDK.Pod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
             return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改资源的配额，支持：原生容器 pod 和 secret.
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -325,33 +304,6 @@ namespace JDCloudSDK.Pod.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  校验镜像与镜像仓库认证信息是否有效。&lt;br&gt;
-        /// 设置 image，如果 secret 不设置，使用 docker 官方镜像可以直接将 image 字段设置为镜像名称，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 同时设置 image 与 secret 时，需要保证该 secret 已经创建成功，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 如果不设置 image，则用于 check secret，需必传 serverAddress 路径，用户名密码可选。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public VerifyImageAccessResponse VerifyImageAccess(VerifyImageAccessRequest request) {
-            return  new VerifyImageAccessExecutor().Client(this).Execute<VerifyImageAccessResponse, VerifyImageAccessResult, VerifyImageAccessRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  校验镜像与镜像仓库认证信息是否有效。&lt;br&gt;
-        /// 设置 image，如果 secret 不设置，使用 docker 官方镜像可以直接将 image 字段设置为镜像名称，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 同时设置 image 与 secret 时，需要保证该 secret 已经创建成功，不可设置 serverAddress、username、password；&lt;br&gt;
-        /// 如果不设置 image，则用于 check secret，需必传 serverAddress 路径，用户名密码可选。&lt;br&gt;
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<VerifyImageAccessResponse> VerifyImageAccess(VerifyImageAccessRequest request) {
-            return await new VerifyImageAccessExecutor().Client(this).Execute<VerifyImageAccessResponse, VerifyImageAccessResult, VerifyImageAccessRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  执行exec，此接口需要升级Http协议到WebSocket
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -432,25 +384,6 @@ namespace JDCloudSDK.Pod.Client
         /// <returns>请求结果信息</returns>
         public async Task<ExecGetExitCodeResponse> ExecGetExitCode(ExecGetExitCodeRequest request) {
             return await new ExecGetExitCodeExecutor().Client(this).Execute<ExecGetExitCodeResponse, ExecGetExitCodeResult, ExecGetExitCodeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询资源和绑定资源
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SelectDetailListResponse SelectDetailList(SelectDetailListRequest request) {
-            return  new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询资源和绑定资源
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SelectDetailListResponse> SelectDetailList(SelectDetailListRequest request) {
-            return await new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -591,25 +524,6 @@ namespace JDCloudSDK.Pod.Client
         /// <returns>请求结果信息</returns>
         public async Task<CheckPodNameResponse> CheckPodName(CheckPodNameRequest request) {
             return await new CheckPodNameExecutor().Client(this).Execute<CheckPodNameResponse, CheckPodNameResult, CheckPodNameRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询用户配置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeUserConfigureResponse DescribeUserConfigure(DescribeUserConfigureRequest request) {
-            return  new DescribeUserConfigureExecutor().Client(this).Execute<DescribeUserConfigureResponse, DescribeUserConfigureResult, DescribeUserConfigureRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询用户配置信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeUserConfigureResponse> DescribeUserConfigure(DescribeUserConfigureRequest request) {
-            return await new DescribeUserConfigureExecutor().Client(this).Execute<DescribeUserConfigureResponse, DescribeUserConfigureResult, DescribeUserConfigureRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

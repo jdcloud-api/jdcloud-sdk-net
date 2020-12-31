@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -59,7 +59,7 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 网络类型，精确匹配，支持basic，vpc
+        /// 网络类型，精确匹配，支持basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
         ///</summary>
         public   string NetworkType{ get; set; }
         ///<summary>
@@ -75,13 +75,17 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string KeypairId{ get; set; }
         ///<summary>
-        /// 是否启用外网, yes/no
+        /// 是否启用外网, yes、no
         ///</summary>
         public   string EnableInternet{ get; set; }
         ///<summary>
         /// 内网ip
         ///</summary>
         public   string PrivateIp{ get; set; }
+        ///<summary>
+        /// 实例网卡类型：bond（网卡bond）、dual（双网卡）
+        ///</summary>
+        public   string InterfaceMode{ get; set; }
         ///<summary>
         /// instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
         /// status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个

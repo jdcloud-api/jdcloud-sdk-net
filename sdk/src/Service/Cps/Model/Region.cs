@@ -39,12 +39,12 @@ namespace JDCloudSDK.Cps.Model
     {
 
         ///<summary>
-        /// 地域代码, 如 cn-east-1
+        /// 地域代码, 如 cn-north-1
         ///</summary>
         [JsonProperty("region")]
         public string RegionValue{ get; set; }
         ///<summary>
-        /// 地域名称，如 华东一区
+        /// 地域名称，如华北-北京
         ///</summary>
         public string RegionName{ get; set; }
         ///<summary>

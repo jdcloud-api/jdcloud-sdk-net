@@ -50,7 +50,7 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string RaidTypeId{ get; set; }
         ///<summary>
-        /// RAID类型, 如 NORAID, RAID0, RAID1
+        /// RAID类型, 如 NORAID, RAID0, RAID1，RAID10
         ///</summary>
         public string RaidType{ get; set; }
         ///<summary>

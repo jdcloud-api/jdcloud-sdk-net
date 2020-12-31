@@ -50,6 +50,10 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
+        /// 私有网络名称
+        ///</summary>
+        public string VpcName{ get; set; }
+        ///<summary>
         /// 名称
         ///</summary>
         public string Name{ get; set; }

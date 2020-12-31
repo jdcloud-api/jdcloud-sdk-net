@@ -73,5 +73,9 @@ namespace JDCloudSDK.Pod.Model
         /// SecondaryIps
         ///</summary>
         public List<NetworkInterfacePrivateIp> SecondaryIps{ get; set; }
+        ///<summary>
+        /// 网卡IPv6地址
+        ///</summary>
+        public List<string> Ipv6Addresses{ get; set; }
     }
 }

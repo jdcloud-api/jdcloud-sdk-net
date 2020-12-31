@@ -50,9 +50,17 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 私有网络CIDR
+        /// 私有网络IPv4 CIDR
         ///</summary>
         public string Cidr{ get; set; }
+        ///<summary>
+        /// 私有网络IPv6 CIDR
+        ///</summary>
+        public string Ipv6Cidr{ get; set; }
+        ///<summary>
+        /// IPv6网关ID
+        ///</summary>
+        public string Ipv6GatewayId{ get; set; }
         ///<summary>
         /// 描述
         ///</summary>

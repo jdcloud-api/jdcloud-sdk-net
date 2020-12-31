@@ -73,6 +73,10 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
+        /// 绑定的ip地址
+        ///</summary>
+        public string TargetIp{ get; set; }
+        ///<summary>
         /// 创建时间
         ///</summary>
         public string CreateTime{ get; set; }

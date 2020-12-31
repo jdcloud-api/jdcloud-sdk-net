@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Cps.Apis
         [Required]
         public   string DeviceType{ get; set; }
         ///<summary>
-        /// 操作系统类型，取值范围：CentOS、Ubuntu
+        /// 操作系统类型，取值范围：CentOS、Ubuntu、Windows
         ///</summary>
         public   string OsType{ get; set; }
         ///<summary>

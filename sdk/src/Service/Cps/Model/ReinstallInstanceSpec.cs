@@ -70,9 +70,7 @@ namespace JDCloudSDK.Cps.Model
         public string KeepData{ get; set; }
         ///<summary>
         /// 数据盘RAID类型ID
-        ///Required:true
         ///</summary>
-        [Required]
         public string DataRaidTypeId{ get; set; }
         ///<summary>
         /// 密码

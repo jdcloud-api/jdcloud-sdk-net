@@ -51,11 +51,15 @@ namespace JDCloudSDK.Cps.Model
         [Required]
         public string VpcId{ get; set; }
         ///<summary>
-        /// 子网的网络范围
+        /// 子网的IPv4网络范围
         ///Required:true
         ///</summary>
         [Required]
         public string Cidr{ get; set; }
+        ///<summary>
+        /// 子网的IPv6网络范围
+        ///</summary>
+        public string Ipv6Cidr{ get; set; }
         ///<summary>
         /// 名称
         ///Required:true
@@ -68,5 +72,13 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         [Required]
         public string Description{ get; set; }
+        ///<summary>
+        /// 子网的次要cidr
+        ///</summary>
+        public string SecondaryCidr{ get; set; }
+        ///<summary>
+        /// 子网的次要cidr名称
+        ///</summary>
+        public string SecondaryCidrName{ get; set; }
     }
 }

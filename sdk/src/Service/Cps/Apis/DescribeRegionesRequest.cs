@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器地域操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Cps.Apis
     public class DescribeRegionesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 网络类型basic/vpc, 默认basic
+        /// 网络类型basic（基础网络）、vpc（私有网络）、retail（零售中台网络）, 默认basic
         ///</summary>
         public   string NetworkType{ get; set; }
     }

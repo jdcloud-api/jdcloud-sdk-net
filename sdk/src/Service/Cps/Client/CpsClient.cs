@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cps.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -353,6 +353,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改IPv6网关实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyIpv6GatewayResponse ModifyIpv6Gateway(ModifyIpv6GatewayRequest request) {
+            return  new ModifyIpv6GatewayExecutor().Client(this).Execute<ModifyIpv6GatewayResponse, ModifyIpv6GatewayResult, ModifyIpv6GatewayRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改IPv6网关实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyIpv6GatewayResponse> ModifyIpv6Gateway(ModifyIpv6GatewayRequest request) {
+            return await new ModifyIpv6GatewayExecutor().Client(this).Execute<ModifyIpv6GatewayResponse, ModifyIpv6GatewayResult, ModifyIpv6GatewayRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  解绑弹性公网IP
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -408,6 +427,46 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyVpcResponse> ModifyVpc(ModifyVpcRequest request) {
             return await new ModifyVpcExecutor().Client(this).Execute<ModifyVpcResponse, ModifyVpcResult, ModifyVpcRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改IPv6公网带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyIpv6AddressBandwidthResponse ModifyIpv6AddressBandwidth(ModifyIpv6AddressBandwidthRequest request) {
+            return  new ModifyIpv6AddressBandwidthExecutor().Client(this).Execute<ModifyIpv6AddressBandwidthResponse, ModifyIpv6AddressBandwidthResult, ModifyIpv6AddressBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改IPv6公网带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyIpv6AddressBandwidthResponse> ModifyIpv6AddressBandwidth(ModifyIpv6AddressBandwidthRequest request) {
+            return await new ModifyIpv6AddressBandwidthExecutor().Client(this).Execute<ModifyIpv6AddressBandwidthResponse, ModifyIpv6AddressBandwidthResult, ModifyIpv6AddressBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除别名IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteAliasIpResponse DeleteAliasIp(DeleteAliasIpRequest request) {
+            return  new DeleteAliasIpExecutor().Client(this).Execute<DeleteAliasIpResponse, DeleteAliasIpResult, DeleteAliasIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除别名IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteAliasIpResponse> DeleteAliasIp(DeleteAliasIpRequest request) {
+            return await new DeleteAliasIpExecutor().Client(this).Execute<DeleteAliasIpResponse, DeleteAliasIpResult, DeleteAliasIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -469,6 +528,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询IPv6网关实例列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpv6GatewaysResponse DescribeIpv6Gateways(DescribeIpv6GatewaysRequest request) {
+            return  new DescribeIpv6GatewaysExecutor().Client(this).Execute<DescribeIpv6GatewaysResponse, DescribeIpv6GatewaysResult, DescribeIpv6GatewaysRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询IPv6网关实例列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpv6GatewaysResponse> DescribeIpv6Gateways(DescribeIpv6GatewaysRequest request) {
+            return await new DescribeIpv6GatewaysExecutor().Client(this).Execute<DescribeIpv6GatewaysResponse, DescribeIpv6GatewaysResult, DescribeIpv6GatewaysRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -484,6 +562,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeInstanceRaidResponse> DescribeInstanceRaid(DescribeInstanceRaidRequest request) {
             return await new DescribeInstanceRaidExecutor().Client(this).Execute<DescribeInstanceRaidResponse, DescribeInstanceRaidResult, DescribeInstanceRaidRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询IPv6地址例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpv6AddressResponse DescribeIpv6Address(DescribeIpv6AddressRequest request) {
+            return  new DescribeIpv6AddressExecutor().Client(this).Execute<DescribeIpv6AddressResponse, DescribeIpv6AddressResult, DescribeIpv6AddressRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询IPv6地址例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpv6AddressResponse> DescribeIpv6Address(DescribeIpv6AddressRequest request) {
+            return await new DescribeIpv6AddressExecutor().Client(this).Execute<DescribeIpv6AddressResponse, DescribeIpv6AddressResult, DescribeIpv6AddressRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -583,6 +680,27 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  申请开通IPv6网关
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssignIpv6GatewayResponse AssignIpv6Gateway(AssignIpv6GatewayRequest request) {
+            return  new AssignIpv6GatewayExecutor().Client(this).Execute<AssignIpv6GatewayResponse, AssignIpv6GatewayResult, AssignIpv6GatewayRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  申请开通IPv6网关
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssignIpv6GatewayResponse> AssignIpv6Gateway(AssignIpv6GatewayRequest request) {
+            return await new AssignIpv6GatewayExecutor().Client(this).Execute<AssignIpv6GatewayResponse, AssignIpv6GatewayResult, AssignIpv6GatewayRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询云物理服务器实例类型
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -638,6 +756,44 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeElasticIpResponse> DescribeElasticIp(DescribeElasticIpRequest request) {
             return await new DescribeElasticIpExecutor().Client(this).Execute<DescribeElasticIpResponse, DescribeElasticIpResult, DescribeElasticIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除次要CIDR
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSecondaryCidrResponse DeleteSecondaryCidr(DeleteSecondaryCidrRequest request) {
+            return  new DeleteSecondaryCidrExecutor().Client(this).Execute<DeleteSecondaryCidrResponse, DeleteSecondaryCidrResult, DeleteSecondaryCidrRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除次要CIDR
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSecondaryCidrResponse> DeleteSecondaryCidr(DeleteSecondaryCidrRequest request) {
+            return await new DeleteSecondaryCidrExecutor().Client(this).Execute<DeleteSecondaryCidrResponse, DeleteSecondaryCidrResult, DeleteSecondaryCidrRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询次要CIDR列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSecondaryCidrsResponse DescribeSecondaryCidrs(DescribeSecondaryCidrsRequest request) {
+            return  new DescribeSecondaryCidrsExecutor().Client(this).Execute<DescribeSecondaryCidrsResponse, DescribeSecondaryCidrsResult, DescribeSecondaryCidrsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询次要CIDR列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSecondaryCidrsResponse> DescribeSecondaryCidrs(DescribeSecondaryCidrsRequest request) {
+            return await new DescribeSecondaryCidrsExecutor().Client(this).Execute<DescribeSecondaryCidrsResponse, DescribeSecondaryCidrsResult, DescribeSecondaryCidrsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -758,6 +914,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyBandwidthResponse> ModifyBandwidth(ModifyBandwidthRequest request) {
             return await new ModifyBandwidthExecutor().Client(this).Execute<ModifyBandwidthResponse, ModifyBandwidthResult, ModifyBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  申请IPv6地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssignIpv6AddressResponse AssignIpv6Address(AssignIpv6AddressRequest request) {
+            return  new AssignIpv6AddressExecutor().Client(this).Execute<AssignIpv6AddressResponse, AssignIpv6AddressResult, AssignIpv6AddressRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  申请IPv6地址
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssignIpv6AddressResponse> AssignIpv6Address(AssignIpv6AddressRequest request) {
+            return await new AssignIpv6AddressExecutor().Client(this).Execute<AssignIpv6AddressResponse, AssignIpv6AddressResult, AssignIpv6AddressRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1011,6 +1186,27 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  申请IPv6地址带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssignIpv6AddressesBandwidthResponse AssignIpv6AddressesBandwidth(AssignIpv6AddressesBandwidthRequest request) {
+            return  new AssignIpv6AddressesBandwidthExecutor().Client(this).Execute<AssignIpv6AddressesBandwidthResponse, AssignIpv6AddressesBandwidthResult, AssignIpv6AddressesBandwidthRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  申请IPv6地址带宽
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssignIpv6AddressesBandwidthResponse> AssignIpv6AddressesBandwidth(AssignIpv6AddressesBandwidthRequest request) {
+            return await new AssignIpv6AddressesBandwidthExecutor().Client(this).Execute<AssignIpv6AddressesBandwidthResponse, AssignIpv6AddressesBandwidthResult, AssignIpv6AddressesBandwidthRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  移除后端服务器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1125,6 +1321,46 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询IPv6网关实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpv6GatewayResponse DescribeIpv6Gateway(DescribeIpv6GatewayRequest request) {
+            return  new DescribeIpv6GatewayExecutor().Client(this).Execute<DescribeIpv6GatewayResponse, DescribeIpv6GatewayResult, DescribeIpv6GatewayRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询IPv6网关实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpv6GatewayResponse> DescribeIpv6Gateway(DescribeIpv6GatewayRequest request) {
+            return await new DescribeIpv6GatewayExecutor().Client(this).Execute<DescribeIpv6GatewayResponse, DescribeIpv6GatewayResult, DescribeIpv6GatewayRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  申请IPv6网段
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssignIpv6CidrResponse AssignIpv6Cidr(AssignIpv6CidrRequest request) {
+            return  new AssignIpv6CidrExecutor().Client(this).Execute<AssignIpv6CidrResponse, AssignIpv6CidrResult, AssignIpv6CidrRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  申请IPv6网段
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssignIpv6CidrResponse> AssignIpv6Cidr(AssignIpv6CidrRequest request) {
+            return await new AssignIpv6CidrExecutor().Client(this).Execute<AssignIpv6CidrResponse, AssignIpv6CidrResult, AssignIpv6CidrRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询负载均衡地域列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1159,6 +1395,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRouteTableResponse> DescribeRouteTable(DescribeRouteTableRequest request) {
             return await new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加别名IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateAliasIpResponse CreateAliasIp(CreateAliasIpRequest request) {
+            return  new CreateAliasIpExecutor().Client(this).Execute<CreateAliasIpResponse, CreateAliasIpResult, CreateAliasIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加别名IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateAliasIpResponse> CreateAliasIp(CreateAliasIpRequest request) {
+            return await new CreateAliasIpExecutor().Client(this).Execute<CreateAliasIpResponse, CreateAliasIpResult, CreateAliasIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1243,6 +1498,29 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询IPv6地址列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpv6AddressesResponse DescribeIpv6Addresses(DescribeIpv6AddressesRequest request) {
+            return  new DescribeIpv6AddressesExecutor().Client(this).Execute<DescribeIpv6AddressesResponse, DescribeIpv6AddressesResult, DescribeIpv6AddressesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询IPv6地址列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpv6AddressesResponse> DescribeIpv6Addresses(DescribeIpv6AddressesRequest request) {
+            return await new DescribeIpv6AddressesExecutor().Client(this).Execute<DescribeIpv6AddressesResponse, DescribeIpv6AddressesResult, DescribeIpv6AddressesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询云物理服务器支持的操作系统
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1258,6 +1536,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeOSResponse> DescribeOS(DescribeOSRequest request) {
             return await new DescribeOSExecutor().Client(this).Execute<DescribeOSResponse, DescribeOSResult, DescribeOSRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询云物理服务器监控报警日志信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeEventLogsResponse DescribeEventLogs(DescribeEventLogsRequest request) {
+            return  new DescribeEventLogsExecutor().Client(this).Execute<DescribeEventLogsResponse, DescribeEventLogsResult, DescribeEventLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询云物理服务器监控报警日志信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeEventLogsResponse> DescribeEventLogs(DescribeEventLogsRequest request) {
+            return await new DescribeEventLogsExecutor().Client(this).Execute<DescribeEventLogsResponse, DescribeEventLogsResult, DescribeEventLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1321,6 +1618,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  添加次要CIDR
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSecondaryCidrResponse CreateSecondaryCidr(CreateSecondaryCidrRequest request) {
+            return  new CreateSecondaryCidrExecutor().Client(this).Execute<CreateSecondaryCidrResponse, CreateSecondaryCidrResult, CreateSecondaryCidrRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加次要CIDR
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSecondaryCidrResponse> CreateSecondaryCidr(CreateSecondaryCidrRequest request) {
+            return await new CreateSecondaryCidrExecutor().Client(this).Execute<CreateSecondaryCidrResponse, CreateSecondaryCidrResult, CreateSecondaryCidrRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改后端服务器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1363,6 +1679,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询可用的私有IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAvailablePrivateIpResponse DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
+            return  new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询可用的私有IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAvailablePrivateIpResponse> DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
+            return await new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建负载均衡实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1397,6 +1732,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest request) {
             return await new CreateVpcExecutor().Client(this).Execute<CreateVpcResponse, CreateVpcResult, CreateVpcRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询别名IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAliasIpsResponse DescribeAliasIps(DescribeAliasIpsRequest request) {
+            return  new DescribeAliasIpsExecutor().Client(this).Execute<DescribeAliasIpsResponse, DescribeAliasIpsResult, DescribeAliasIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询别名IP列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAliasIpsResponse> DescribeAliasIps(DescribeAliasIpsRequest request) {
+            return await new DescribeAliasIpsExecutor().Client(this).Execute<DescribeAliasIpsResponse, DescribeAliasIpsResult, DescribeAliasIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
