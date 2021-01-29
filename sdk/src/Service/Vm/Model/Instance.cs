@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Charge.Model;
-using JDCloudSDK.Disk.Model;
 
 namespace JDCloudSDK.Vm.Model
 {

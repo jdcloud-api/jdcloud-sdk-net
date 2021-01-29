@@ -33,12 +33,12 @@ namespace JDCloudSDK.Ipanti.Client
 {
 
     /// <summary>
-    ///  查询 DDoS 攻击日志
+    ///  查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;
     /// </summary>
     public class DescribeDDoSAttackLogsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询 DDoS 攻击日志接口的Http 请求方法
+        ///  查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  查询 DDoS 攻击日志接口的Http资源请求路径
+        ///  查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

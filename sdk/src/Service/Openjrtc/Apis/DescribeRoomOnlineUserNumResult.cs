@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JRtcRoomUser
- * JRtc房间人员管理
+ * 房间人员管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Openjrtc.Apis
 {
 
     /// <summary>
-    ///  查询房间实时在线人数:
+    ///  查询房间实时在线人数
         ///         /// 
     /// </summary>
     public class DescribeRoomOnlineUserNumResult : JdcloudResult

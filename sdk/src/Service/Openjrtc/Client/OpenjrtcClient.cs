@@ -138,6 +138,178 @@ namespace JDCloudSDK.Openjrtc.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询应用下的房间列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - appId[eq] 按应用ID查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRoomsResponse DescribeRooms(DescribeRoomsRequest request) {
+            return  new DescribeRoomsExecutor().Client(this).Execute<DescribeRoomsResponse, DescribeRoomsResult, DescribeRoomsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询应用下的房间列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - appId[eq] 按应用ID查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRoomsResponse> DescribeRooms(DescribeRoomsRequest request) {
+            return await new DescribeRoomsExecutor().Client(this).Execute<DescribeRoomsResponse, DescribeRoomsResult, DescribeRoomsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取房间信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest request) {
+            return  new DescribeRoomInfoExecutor().Client(this).Execute<DescribeRoomInfoResponse, DescribeRoomInfoResult, DescribeRoomInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取房间信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRoomInfoResponse> DescribeRoomInfo(DescribeRoomInfoRequest request) {
+            return await new DescribeRoomInfoExecutor().Client(this).Execute<DescribeRoomInfoResponse, DescribeRoomInfoResult, DescribeRoomInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询应用appKey
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAppKeyResponse DescribeAppKey(DescribeAppKeyRequest request) {
+            return  new DescribeAppKeyExecutor().Client(this).Execute<DescribeAppKeyResponse, DescribeAppKeyResult, DescribeAppKeyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询应用appKey
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAppKeyResponse> DescribeAppKey(DescribeAppKeyRequest request) {
+            return await new DescribeAppKeyExecutor().Client(this).Execute<DescribeAppKeyResponse, DescribeAppKeyResult, DescribeAppKeyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询应用信息:
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAppResponse DescribeApp(DescribeAppRequest request) {
+            return  new DescribeAppExecutor().Client(this).Execute<DescribeAppResponse, DescribeAppResult, DescribeAppRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询应用信息:
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAppResponse> DescribeApp(DescribeAppRequest request) {
+            return await new DescribeAppExecutor().Client(this).Execute<DescribeAppResponse, DescribeAppResult, DescribeAppRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询房间实时在线人数
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRoomOnlineUserNumResponse DescribeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) {
+            return  new DescribeRoomOnlineUserNumExecutor().Client(this).Execute<DescribeRoomOnlineUserNumResponse, DescribeRoomOnlineUserNumResult, DescribeRoomOnlineUserNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询房间实时在线人数
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRoomOnlineUserNumResponse> DescribeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) {
+            return await new DescribeRoomOnlineUserNumExecutor().Client(this).Execute<DescribeRoomOnlineUserNumResponse, DescribeRoomOnlineUserNumResult, DescribeRoomOnlineUserNumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateRoomResponse UpdateRoom(UpdateRoomRequest request) {
+            return  new UpdateRoomExecutor().Client(this).Execute<UpdateRoomResponse, UpdateRoomResult, UpdateRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateRoomResponse> UpdateRoom(UpdateRoomRequest request) {
+            return await new UpdateRoomExecutor().Client(this).Execute<UpdateRoomResponse, UpdateRoomResult, UpdateRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询用户应用列表信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAppsResponse DescribeApps(DescribeAppsRequest request) {
+            return  new DescribeAppsExecutor().Client(this).Execute<DescribeAppsResponse, DescribeAppsResult, DescribeAppsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户应用列表信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAppsResponse> DescribeApps(DescribeAppsRequest request) {
+            return await new DescribeAppsExecutor().Client(this).Execute<DescribeAppsResponse, DescribeAppsResult, DescribeAppsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteRoomResponse DeleteRoom(DeleteRoomRequest request) {
+            return  new DeleteRoomExecutor().Client(this).Execute<DeleteRoomResponse, DeleteRoomResult, DeleteRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteRoomResponse> DeleteRoom(DeleteRoomRequest request) {
+            return await new DeleteRoomExecutor().Client(this).Execute<DeleteRoomResponse, DeleteRoomResult, DeleteRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  创建房间
         /// 
         /// </summary>
@@ -159,28 +331,7 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询房间实时在线人数:
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeRoomOnlineUserNumResponse DescribeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) {
-            return  new DescribeRoomOnlineUserNumExecutor().Client(this).Execute<DescribeRoomOnlineUserNumResponse, DescribeRoomOnlineUserNumResult, DescribeRoomOnlineUserNumRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询房间实时在线人数:
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeRoomOnlineUserNumResponse> DescribeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) {
-            return await new DescribeRoomOnlineUserNumExecutor().Client(this).Execute<DescribeRoomOnlineUserNumResponse, DescribeRoomOnlineUserNumResult, DescribeRoomOnlineUserNumRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建JRtc用户
+        ///  创建用户
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -190,7 +341,7 @@ namespace JDCloudSDK.Openjrtc.Client
         }
 #else
         /// <summary>
-        ///  创建JRtc用户
+        ///  创建用户
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>

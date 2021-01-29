@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
-        <Version>2.0.1.1</Version>
+        <Version>2.0.3.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>云鼎2.0 openApi 相关接口</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>
@@ -39,9 +39,6 @@
 		<ProjectReference Include="..\Rds\JDCloudSDK.Rds.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Rds\JDCloudSDK.Rds.csproj" />
-	</ItemGroup>
-	<ItemGroup>
 		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
 	</ItemGroup>
 	<ItemGroup>
@@ -75,6 +72,9 @@
 		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\Detection\JDCloudSDK.Detection.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\Rds\JDCloudSDK.Rds.csproj" />
 	</ItemGroup>
 	<ItemGroup>
@@ -99,7 +99,7 @@
 		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Disk\JDCloudSDK.Disk.csproj" />
+		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Monitor\JDCloudSDK.Monitor.csproj" />
@@ -120,19 +120,16 @@
 		<ProjectReference Include="..\Charge\JDCloudSDK.Charge.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Rds\JDCloudSDK.Rds.csproj" />
-	</ItemGroup>
-	<ItemGroup>
 		<ProjectReference Include="..\Vpc\JDCloudSDK.Vpc.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
+		<ProjectReference Include="..\Monitor\JDCloudSDK.Monitor.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Vpc\JDCloudSDK.Vpc.csproj" />
+		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Disk\JDCloudSDK.Disk.csproj" />
@@ -150,7 +147,13 @@
 		<ProjectReference Include="..\Disk\JDCloudSDK.Disk.csproj" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\Monitor\JDCloudSDK.Monitor.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Vpc\JDCloudSDK.Vpc.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Vm\JDCloudSDK.Vm.csproj" />

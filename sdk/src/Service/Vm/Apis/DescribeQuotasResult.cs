@@ -42,7 +42,7 @@ namespace  JDCloudSDK.Vm.Apis
         ///<summary>
         /// 配额列表
         ///</summary>
-        public List<Quota> Quotas{ get; set; }
+        public List<JDCloudSDK.Vm.Model.Quota> Quotas{ get; set; }
 
     }
 }

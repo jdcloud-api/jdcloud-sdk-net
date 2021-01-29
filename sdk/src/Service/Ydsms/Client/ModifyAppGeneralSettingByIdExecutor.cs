@@ -43,7 +43,7 @@ namespace JDCloudSDK.Ydsms.Client
         public override  string Method
         {
             get {
-                return "POST";
+                return "GET";
             }
         }
         /// <summary>

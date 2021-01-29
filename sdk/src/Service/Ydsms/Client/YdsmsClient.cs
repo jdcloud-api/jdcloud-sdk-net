@@ -176,6 +176,25 @@ namespace JDCloudSDK.Ydsms.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改应用启停状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyStatusUsingGETResponse ModifyStatusUsingGET(ModifyStatusUsingGETRequest request) {
+            return  new ModifyStatusUsingGETExecutor().Client(this).Execute<ModifyStatusUsingGETResponse, ModifyStatusUsingGETResult, ModifyStatusUsingGETRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改应用启停状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyStatusUsingGETResponse> ModifyStatusUsingGET(ModifyStatusUsingGETRequest request) {
+            return await new ModifyStatusUsingGETExecutor().Client(this).Execute<ModifyStatusUsingGETResponse, ModifyStatusUsingGETResult, ModifyStatusUsingGETRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询应用secretKey
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -423,6 +442,25 @@ namespace JDCloudSDK.Ydsms.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  编辑短信发送任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifySmsTaskUsingPOSTResponse ModifySmsTaskUsingPOST(ModifySmsTaskUsingPOSTRequest request) {
+            return  new ModifySmsTaskUsingPOSTExecutor().Client(this).Execute<ModifySmsTaskUsingPOSTResponse, ModifySmsTaskUsingPOSTResult, ModifySmsTaskUsingPOSTRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  编辑短信发送任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifySmsTaskUsingPOSTResponse> ModifySmsTaskUsingPOST(ModifySmsTaskUsingPOSTRequest request) {
+            return await new ModifySmsTaskUsingPOSTExecutor().Client(this).Execute<ModifySmsTaskUsingPOSTResponse, ModifySmsTaskUsingPOSTResult, ModifySmsTaskUsingPOSTRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询短信回执记录
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -613,21 +651,21 @@ namespace JDCloudSDK.Ydsms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改应用启停状态
+        ///  获取短信任务中的短信内容及计费条数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyStatusUsingPOSTResponse ModifyStatusUsingPOST(ModifyStatusUsingPOSTRequest request) {
-            return  new ModifyStatusUsingPOSTExecutor().Client(this).Execute<ModifyStatusUsingPOSTResponse, ModifyStatusUsingPOSTResult, ModifyStatusUsingPOSTRequest>(request);
+        public GetSmsTaskContentUsingGETResponse GetSmsTaskContentUsingGET(GetSmsTaskContentUsingGETRequest request) {
+            return  new GetSmsTaskContentUsingGETExecutor().Client(this).Execute<GetSmsTaskContentUsingGETResponse, GetSmsTaskContentUsingGETResult, GetSmsTaskContentUsingGETRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改应用启停状态
+        ///  获取短信任务中的短信内容及计费条数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyStatusUsingPOSTResponse> ModifyStatusUsingPOST(ModifyStatusUsingPOSTRequest request) {
-            return await new ModifyStatusUsingPOSTExecutor().Client(this).Execute<ModifyStatusUsingPOSTResponse, ModifyStatusUsingPOSTResult, ModifyStatusUsingPOSTRequest>(request).ConfigureAwait(false);
+        public async Task<GetSmsTaskContentUsingGETResponse> GetSmsTaskContentUsingGET(GetSmsTaskContentUsingGETRequest request) {
+            return await new GetSmsTaskContentUsingGETExecutor().Client(this).Execute<GetSmsTaskContentUsingGETResponse, GetSmsTaskContentUsingGETResult, GetSmsTaskContentUsingGETRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -689,7 +727,7 @@ namespace JDCloudSDK.Ydsms.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询短信模板
+        ///  查询短信模板列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -698,7 +736,7 @@ namespace JDCloudSDK.Ydsms.Client
         }
 #else
         /// <summary>
-        ///  查询短信模板
+        ///  查询短信模板列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -742,6 +780,25 @@ namespace JDCloudSDK.Ydsms.Client
         /// <returns>请求结果信息</returns>
         public async Task<ListSmsSignTypesUsingGETResponse> ListSmsSignTypesUsingGET(ListSmsSignTypesUsingGETRequest request) {
             return await new ListSmsSignTypesUsingGETExecutor().Client(this).Execute<ListSmsSignTypesUsingGETResponse, ListSmsSignTypesUsingGETResult, ListSmsSignTypesUsingGETRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public TaskDeleteUsingDeleteResponse TaskDeleteUsingDelete(TaskDeleteUsingDeleteRequest request) {
+            return  new TaskDeleteUsingDeleteExecutor().Client(this).Execute<TaskDeleteUsingDeleteResponse, TaskDeleteUsingDeleteResult, TaskDeleteUsingDeleteRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<TaskDeleteUsingDeleteResponse> TaskDeleteUsingDelete(TaskDeleteUsingDeleteRequest request) {
+            return await new TaskDeleteUsingDeleteExecutor().Client(this).Execute<TaskDeleteUsingDeleteResponse, TaskDeleteUsingDeleteResult, TaskDeleteUsingDeleteRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

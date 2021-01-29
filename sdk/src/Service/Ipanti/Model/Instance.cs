@@ -201,5 +201,9 @@ namespace JDCloudSDK.Ipanti.Model
         /// 每条网站规则可配的http/https端口数
         ///</summary>
         public int? WebRulePortLimit{ get; set; }
+        ///<summary>
+        /// Tag信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

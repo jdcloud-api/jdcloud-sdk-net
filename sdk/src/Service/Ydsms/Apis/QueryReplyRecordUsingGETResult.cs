@@ -39,9 +39,9 @@ namespace  JDCloudSDK.Ydsms.Apis
     public class QueryReplyRecordUsingGETResult : JdcloudResult
     {
         ///<summary>
-        /// SmsApps
+        /// ReplyRecords
         ///</summary>
-        public List<ReplyRecord> SmsApps{ get; set; }
+        public List<ReplyRecord> ReplyRecords{ get; set; }
 
         ///<summary>
         /// TotalCount

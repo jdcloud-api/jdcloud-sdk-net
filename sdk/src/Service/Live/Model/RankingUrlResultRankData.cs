@@ -54,6 +54,7 @@ namespace JDCloudSDK.Live.Model
         public long? Pv{ get; set; }
         ///<summary>
         /// 流量，单位：Byte
+        /// 
         ///</summary>
         public long? Flow{ get; set; }
     }

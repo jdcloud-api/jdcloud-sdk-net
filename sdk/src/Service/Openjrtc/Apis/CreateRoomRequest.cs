@@ -47,7 +47,7 @@ namespace  JDCloudSDK.Openjrtc.Apis
         ///</summary>
         public   string AppId{ get; set; }
         ///<summary>
-        /// JRtc用户ID(创建者ID)
+        /// 用户ID(创建者ID)
         ///</summary>
         public   long? PeerId{ get; set; }
     }

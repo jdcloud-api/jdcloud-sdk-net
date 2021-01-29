@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Rds.Model;
+using JDCloudSDK.Yunding.Model;
 
 namespace  JDCloudSDK.Yunding.Apis
 {
@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Yunding.Apis
         ///<summary>
         /// DbInstances
         ///</summary>
-        public List<JDCloudSDK.Rds.Model.DBInstance> DbInstances{ get; set; }
+        public List<DBInstance> DbInstances{ get; set; }
 
         ///<summary>
         /// TotalCount

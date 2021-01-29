@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Ydsms.Apis
 {
 
     /// <summary>
-    ///  查询短信模板
+    ///  查询短信模板列表
     /// </summary>
     public class ListSmsTemplatesUsingGETResult : JdcloudResult
     {

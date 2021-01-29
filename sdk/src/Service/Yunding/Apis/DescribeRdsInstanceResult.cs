@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Rds.Model;
+using JDCloudSDK.Yunding.Model;
 
 namespace  JDCloudSDK.Yunding.Apis
 {
@@ -41,6 +41,6 @@ namespace  JDCloudSDK.Yunding.Apis
         ///<summary>
         /// DbInstanceAttributes
         ///</summary>
-        public   JDCloudSDK.Rds.Model.DBInstanceAttribute DbInstanceAttributes{ get; set; }
+        public   DBInstanceAttribute DbInstanceAttributes{ get; set; }
     }
 }

@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Ydsms.Apis
 {
 
     /// <summary>
-    ///  查询短信模板
+    ///  查询短信模板列表
     /// </summary>
     public class ListSmsTemplatesUsingGETRequest : JdcloudRequest
     {
@@ -56,5 +56,9 @@ namespace  JDCloudSDK.Ydsms.Apis
         /// 状态，1申请中 2拒绝 3通过
         ///</summary>
         public   string Status{ get; set; }
+        ///<summary>
+        /// 要查询的模板类型，多个以 , 隔开(0 验证码短信,1 通知短信,2 推广短信)
+        ///</summary>
+        public   string TemplateTypes{ get; set; }
     }
 }

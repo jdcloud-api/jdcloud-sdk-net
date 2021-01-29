@@ -46,6 +46,14 @@ namespace JDCloudSDK.Ydsms.Model
         ///</summary>
         public string SmsContent{ get; set; }
         ///<summary>
+        /// 短信字数
+        ///</summary>
+        public int? ContentLength{ get; set; }
+        ///<summary>
+        /// 折成条数
+        ///</summary>
+        public int? ChargeCount{ get; set; }
+        ///<summary>
         /// 短信类型 短信类型，1 通道短信 2 官方短信
         ///</summary>
         public int? PackageType{ get; set; }

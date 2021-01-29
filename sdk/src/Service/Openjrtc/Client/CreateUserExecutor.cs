@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JRtcUser
- * JRtc用户管理
+ * 用户管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,13 +33,13 @@ namespace JDCloudSDK.Openjrtc.Client
 {
 
     /// <summary>
-    ///  创建JRtc用户
+    ///  创建用户
         /// 
     /// </summary>
     public class CreateUserExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建JRtc用户
+        ///  创建用户
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +49,7 @@ namespace JDCloudSDK.Openjrtc.Client
             }
         }
         /// <summary>
-        ///  创建JRtc用户
+        ///  创建用户
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

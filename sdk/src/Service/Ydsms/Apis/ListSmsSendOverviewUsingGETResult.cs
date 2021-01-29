@@ -39,8 +39,17 @@ namespace  JDCloudSDK.Ydsms.Apis
     public class ListSmsSendOverviewUsingGETResult : JdcloudResult
     {
         ///<summary>
-        /// ListSmsSendOverviewVO
+        /// pin
         ///</summary>
-        public   ListSmsSendOverviewVO ListSmsSendOverviewVO{ get; set; }
+        public   string Pin{ get; set; }
+        ///<summary>
+        /// 应用id
+        ///</summary>
+        public   string AppId{ get; set; }
+        ///<summary>
+        /// 短信发送记录
+        ///</summary>
+        public List<SendOverviewVO> SendOverviewVOList{ get; set; }
+
     }
 }

@@ -38,9 +38,9 @@ namespace JDCloudSDK.Live.Model
     {
 
         ///<summary>
-        /// 推流域名
+        /// 流起始时间
         ///</summary>
-        public string PublishDomain{ get; set; }
+        public string StartTime{ get; set; }
         ///<summary>
         /// 应用名称
         ///</summary>
@@ -50,18 +50,12 @@ namespace JDCloudSDK.Live.Model
         ///</summary>
         public string StreamName{ get; set; }
         ///<summary>
-        /// 推流开始时间
-        /// - UTC时间
-        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-        /// 
+        /// 码率
         ///</summary>
-        public string PublishUpTime{ get; set; }
+        public double? Bitrate{ get; set; }
         ///<summary>
-        /// 推流结束时刻
-        /// - UTC时间
-        ///   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-        /// 
+        /// 帧率
         ///</summary>
-        public string PublishDownTime{ get; set; }
+        public double? Framerate{ get; set; }
     }
 }

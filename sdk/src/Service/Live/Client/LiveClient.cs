@@ -595,6 +595,25 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询推流码率、帧率
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPublishInfoByPageResponse DescribeLiveStreamPublishInfoByPage(DescribeLiveStreamPublishInfoByPageRequest request) {
+            return  new DescribeLiveStreamPublishInfoByPageExecutor().Client(this).Execute<DescribeLiveStreamPublishInfoByPageResponse, DescribeLiveStreamPublishInfoByPageResult, DescribeLiveStreamPublishInfoByPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询推流码率、帧率
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPublishInfoByPageResponse> DescribeLiveStreamPublishInfoByPage(DescribeLiveStreamPublishInfoByPageRequest request) {
+            return await new DescribeLiveStreamPublishInfoByPageExecutor().Client(this).Execute<DescribeLiveStreamPublishInfoByPageResponse, DescribeLiveStreamPublishInfoByPageResult, DescribeLiveStreamPublishInfoByPageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询用户定义水印模板列表
         /// 
         /// </summary>
@@ -1766,6 +1785,25 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveTranscodeStreamNumResponse> DescribeLiveTranscodeStreamNum(DescribeLiveTranscodeStreamNumRequest request) {
             return await new DescribeLiveTranscodeStreamNumExecutor().Client(this).Execute<DescribeLiveTranscodeStreamNumResponse, DescribeLiveTranscodeStreamNumResult, DescribeLiveTranscodeStreamNumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询观看人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamPlayInfoByPageResponse DescribeLiveStreamPlayInfoByPage(DescribeLiveStreamPlayInfoByPageRequest request) {
+            return  new DescribeLiveStreamPlayInfoByPageExecutor().Client(this).Execute<DescribeLiveStreamPlayInfoByPageResponse, DescribeLiveStreamPlayInfoByPageResult, DescribeLiveStreamPlayInfoByPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询观看人数
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamPlayInfoByPageResponse> DescribeLiveStreamPlayInfoByPage(DescribeLiveStreamPlayInfoByPageRequest request) {
+            return await new DescribeLiveStreamPlayInfoByPageExecutor().Client(this).Execute<DescribeLiveStreamPlayInfoByPageResponse, DescribeLiveStreamPlayInfoByPageResult, DescribeLiveStreamPlayInfoByPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

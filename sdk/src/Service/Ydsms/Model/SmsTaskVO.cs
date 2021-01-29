@@ -81,5 +81,9 @@ namespace JDCloudSDK.Ydsms.Model
         /// 模板id
         ///</summary>
         public string TemplateId{ get; set; }
+        ///<summary>
+        /// 发送号码数量
+        ///</summary>
+        public int? PhoneCount{ get; set; }
     }
 }

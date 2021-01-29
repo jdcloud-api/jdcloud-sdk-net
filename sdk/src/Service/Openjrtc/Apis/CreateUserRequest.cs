@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JRtcUser
- * JRtc用户管理
+ * 用户管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Openjrtc.Apis
 {
 
     /// <summary>
-    ///  创建JRtc用户
+    ///  创建用户
         ///         /// 
     /// </summary>
     public class CreateUserRequest : JdcloudRequest

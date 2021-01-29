@@ -46,9 +46,7 @@ namespace  JDCloudSDK.Ydsms.Apis
         public   string AppId{ get; set; }
         ///<summary>
         /// 短信模板变量对应的数据值
-        ///Required:true
         ///</summary>
-        [Required]
         public List<string> Params{ get; set; }
 
         ///<summary>

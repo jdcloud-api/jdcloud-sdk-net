@@ -51,6 +51,10 @@ namespace  JDCloudSDK.Live.Apis
         ///</summary>
         public   string StreamName{ get; set; }
         ///<summary>
+        /// 截图模式：1表示采样截图；2表示关键帧截图(默认为2)
+        ///</summary>
+        public   int? ShotMode{ get; set; }
+        ///<summary>
         /// 起始时间:
         /// - UTC时间
         ///   格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;

@@ -56,7 +56,7 @@ namespace JDCloudSDK.Openjrtc.Model
         ///</summary>
         public string BillType{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 创建时间(UTC)
         ///</summary>
         public string CreateTime{ get; set; }
     }

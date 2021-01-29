@@ -39,8 +39,17 @@ namespace  JDCloudSDK.Ydsms.Apis
     public class QueryReceiptRecordUsingGETResult : JdcloudResult
     {
         ///<summary>
-        /// QueryReceiptRecordRes
+        /// pin
         ///</summary>
-        public   QueryReceiptRecordRes QueryReceiptRecordRes{ get; set; }
+        public   string Pin{ get; set; }
+        ///<summary>
+        /// 应用id
+        ///</summary>
+        public   string AppId{ get; set; }
+        ///<summary>
+        /// 短信回执记录
+        ///</summary>
+        public List<ReceiptRecord> ReceiptRecords{ get; set; }
+
     }
 }

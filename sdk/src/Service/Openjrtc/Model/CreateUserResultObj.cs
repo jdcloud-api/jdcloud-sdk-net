@@ -38,7 +38,7 @@ namespace JDCloudSDK.Openjrtc.Model
     {
 
         ///<summary>
-        /// JRtc用户ID
+        /// 用户ID
         ///</summary>
         public long? PeerId{ get; set; }
         ///<summary>

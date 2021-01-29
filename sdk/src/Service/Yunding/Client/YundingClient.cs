@@ -89,9 +89,9 @@ namespace JDCloudSDK.Yunding.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v2";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -273,6 +273,25 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  监控数据上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutProductMetricDataResponse PutProductMetricData(PutProductMetricDataRequest request) {
+            return  new PutProductMetricDataExecutor().Client(this).Execute<PutProductMetricDataResponse, PutProductMetricDataResult, PutProductMetricDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  监控数据上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutProductMetricDataResponse> PutProductMetricData(PutProductMetricDataRequest request) {
+            return await new PutProductMetricDataExecutor().Client(this).Execute<PutProductMetricDataResponse, PutProductMetricDataResult, PutProductMetricDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -288,6 +307,44 @@ namespace JDCloudSDK.Yunding.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteRdsDatabaseResponse> DeleteRdsDatabase(DeleteRdsDatabaseRequest request) {
             return await new DeleteRdsDatabaseExecutor().Client(this).Execute<DeleteRdsDatabaseResponse, DeleteRdsDatabaseResult, DeleteRdsDatabaseRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  云拔测-可用性agent任务查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTasksResponse DescribeTasks(DescribeTasksRequest request) {
+            return  new DescribeTasksExecutor().Client(this).Execute<DescribeTasksResponse, DescribeTasksResult, DescribeTasksRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  云拔测-可用性agent任务查询接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTasksResponse> DescribeTasks(DescribeTasksRequest request) {
+            return await new DescribeTasksExecutor().Client(this).Execute<DescribeTasksResponse, DescribeTasksResult, DescribeTasksRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RevokePrivilegeResponse RevokePrivilege(RevokePrivilegeRequest request) {
+            return  new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RevokePrivilegeResponse> RevokePrivilege(RevokePrivilegeRequest request) {
+            return await new RevokePrivilegeExecutor().Client(this).Execute<RevokePrivilegeResponse, RevokePrivilegeResult, RevokePrivilegeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -326,6 +383,25 @@ namespace JDCloudSDK.Yunding.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRdsInstancesResponse> DescribeRdsInstances(DescribeRdsInstancesRequest request) {
             return await new DescribeRdsInstancesExecutor().Client(this).Execute<DescribeRdsInstancesResponse, DescribeRdsInstancesResult, DescribeRdsInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询弹性网卡信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkInterfaceResponse DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
+            return  new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性网卡信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkInterfaceResponse> DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
+            return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -383,6 +459,25 @@ namespace JDCloudSDK.Yunding.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRdsWhiteListResponse> DescribeRdsWhiteList(DescribeRdsWhiteListRequest request) {
             return await new DescribeRdsWhiteListExecutor().Client(this).Execute<DescribeRdsWhiteListResponse, DescribeRdsWhiteListResult, DescribeRdsWhiteListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  监控数据上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutResponse Put(PutRequest request) {
+            return  new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  监控数据上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutResponse> Put(PutRequest request) {
+            return await new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

@@ -176,6 +176,44 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除自定义页面, 使用中的不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteCustomPageResponse DeleteCustomPage(DeleteCustomPageRequest request) {
+            return  new DeleteCustomPageExecutor().Client(this).Execute<DeleteCustomPageResponse, DeleteCustomPageResult, DeleteCustomPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除自定义页面, 使用中的不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteCustomPageResponse> DeleteCustomPage(DeleteCustomPageRequest request) {
+            return await new DeleteCustomPageExecutor().Client(this).Execute<DeleteCustomPageResponse, DeleteCustomPageResult, DeleteCustomPageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  实例全局访问控制配置可以恢复到上一次下发成功的配置时，调用此接口回滚到上一次下发成功的配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RecoverInstanceAclResponse RecoverInstanceAcl(RecoverInstanceAclRequest request) {
+            return  new RecoverInstanceAclExecutor().Client(this).Execute<RecoverInstanceAclResponse, RecoverInstanceAclResult, RecoverInstanceAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  实例全局访问控制配置可以恢复到上一次下发成功的配置时，调用此接口回滚到上一次下发成功的配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RecoverInstanceAclResponse> RecoverInstanceAcl(RecoverInstanceAclRequest request) {
+            return await new RecoverInstanceAclExecutor().Client(this).Execute<RecoverInstanceAclResponse, RecoverInstanceAclResult, RecoverInstanceAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -484,6 +522,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改实例页面错误状态码返回页面为为默认页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceCustomPageDefaultResponse ModifyInstanceCustomPageDefault(ModifyInstanceCustomPageDefaultRequest request) {
+            return  new ModifyInstanceCustomPageDefaultExecutor().Client(this).Execute<ModifyInstanceCustomPageDefaultResponse, ModifyInstanceCustomPageDefaultResult, ModifyInstanceCustomPageDefaultRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例页面错误状态码返回页面为为默认页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceCustomPageDefaultResponse> ModifyInstanceCustomPageDefault(ModifyInstanceCustomPageDefaultRequest request) {
+            return await new ModifyInstanceCustomPageDefaultExecutor().Client(this).Execute<ModifyInstanceCustomPageDefaultResponse, ModifyInstanceCustomPageDefaultResult, ModifyInstanceCustomPageDefaultRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改网站类规则的黑名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -537,6 +594,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeProtectionStatisticsResponse> DescribeProtectionStatistics(DescribeProtectionStatisticsRequest request) {
             return await new DescribeProtectionStatisticsExecutor().Client(this).Execute<DescribeProtectionStatisticsResponse, DescribeProtectionStatisticsResult, DescribeProtectionStatisticsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDDoSIpAttackLogsResponse DescribeDDoSIpAttackLogs(DescribeDDoSIpAttackLogsRequest request) {
+            return  new DescribeDDoSIpAttackLogsExecutor().Client(this).Execute<DescribeDDoSIpAttackLogsResponse, DescribeDDoSIpAttackLogsResult, DescribeDDoSIpAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDDoSIpAttackLogsResponse> DescribeDDoSIpAttackLogs(DescribeDDoSIpAttackLogsRequest request) {
+            return await new DescribeDDoSIpAttackLogsExecutor().Client(this).Execute<DescribeDDoSIpAttackLogsResponse, DescribeDDoSIpAttackLogsResult, DescribeDDoSIpAttackLogsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -674,6 +750,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改实例全局访问控制配置，包括全局的IP黑白名单和geo拦截配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceAclResponse ModifyInstanceAcl(ModifyInstanceAclRequest request) {
+            return  new ModifyInstanceAclExecutor().Client(this).Execute<ModifyInstanceAclResponse, ModifyInstanceAclResult, ModifyInstanceAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例全局访问控制配置，包括全局的IP黑白名单和geo拦截配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceAclResponse> ModifyInstanceAcl(ModifyInstanceAclRequest request) {
+            return await new ModifyInstanceAclExecutor().Client(this).Execute<ModifyInstanceAclResponse, ModifyInstanceAclResult, ModifyInstanceAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  插入JS指纹到所有页面, 需要打开网站类规则的JS指纹开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -712,6 +807,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询用户可设置为网站类规则回源 IP 的京东云托管区公网 IP 资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCcsIpListResponse DescribeCcsIpList(DescribeCcsIpListRequest request) {
+            return  new DescribeCcsIpListExecutor().Client(this).Execute<DescribeCcsIpListResponse, DescribeCcsIpListResult, DescribeCcsIpListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询用户可设置为网站类规则回源 IP 的京东云托管区公网 IP 资源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCcsIpListResponse> DescribeCcsIpList(DescribeCcsIpListRequest request) {
+            return await new DescribeCcsIpListExecutor().Client(this).Execute<DescribeCcsIpListResponse, DescribeCcsIpListResult, DescribeCcsIpListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询网站类规则的白名单规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -727,6 +841,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeWhiteListRuleOfWebRuleResponse> DescribeWhiteListRuleOfWebRule(DescribeWhiteListRuleOfWebRuleRequest request) {
             return await new DescribeWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DescribeWhiteListRuleOfWebRuleResponse, DescribeWhiteListRuleOfWebRuleResult, DescribeWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭实例错误状态码返回页面, 透传错误状态码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableInstanceCustomPageResponse DisableInstanceCustomPage(DisableInstanceCustomPageRequest request) {
+            return  new DisableInstanceCustomPageExecutor().Client(this).Execute<DisableInstanceCustomPageResponse, DisableInstanceCustomPageResult, DisableInstanceCustomPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭实例错误状态码返回页面, 透传错误状态码
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableInstanceCustomPageResponse> DisableInstanceCustomPage(DisableInstanceCustomPageRequest request) {
+            return await new DisableInstanceCustomPageExecutor().Client(this).Execute<DisableInstanceCustomPageResponse, DisableInstanceCustomPageResult, DisableInstanceCustomPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -769,7 +902,7 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询 DDoS 攻击日志
+        ///  查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -778,7 +911,7 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  查询 DDoS 攻击日志
+        ///  查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -803,6 +936,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisableWebRuleJsPageResponse> DisableWebRuleJsPage(DisableWebRuleJsPageRequest request) {
             return await new DisableWebRuleJsPageExecutor().Client(this).Execute<DisableWebRuleJsPageResponse, DisableWebRuleJsPageResult, DisableWebRuleJsPageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询自定义页面列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCustomPagesResponse DescribeCustomPages(DescribeCustomPagesRequest request) {
+            return  new DescribeCustomPagesExecutor().Client(this).Execute<DescribeCustomPagesResponse, DescribeCustomPagesResult, DescribeCustomPagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询自定义页面列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCustomPagesResponse> DescribeCustomPages(DescribeCustomPagesRequest request) {
+            return await new DescribeCustomPagesExecutor().Client(this).Execute<DescribeCustomPagesResponse, DescribeCustomPagesResult, DescribeCustomPagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -993,6 +1145,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpSetUsageResponse> DescribeIpSetUsage(DescribeIpSetUsageRequest request) {
             return await new DescribeIpSetUsageExecutor().Client(this).Execute<DescribeIpSetUsageResponse, DescribeIpSetUsageResult, DescribeIpSetUsageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCustomPageResponse CreateCustomPage(CreateCustomPageRequest request) {
+            return  new CreateCustomPageExecutor().Client(this).Execute<CreateCustomPageResponse, CreateCustomPageResult, CreateCustomPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCustomPageResponse> CreateCustomPage(CreateCustomPageRequest request) {
+            return await new CreateCustomPageExecutor().Client(this).Execute<CreateCustomPageResponse, CreateCustomPageResult, CreateCustomPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1354,6 +1525,44 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<EnableBlackListRuleOfWebRuleResponse> EnableBlackListRuleOfWebRule(EnableBlackListRuleOfWebRuleRequest request) {
             return await new EnableBlackListRuleOfWebRuleExecutor().Client(this).Execute<EnableBlackListRuleOfWebRuleResponse, EnableBlackListRuleOfWebRuleResult, EnableBlackListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改实例错误状态码返回页面为自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceCustomPageResponse ModifyInstanceCustomPage(ModifyInstanceCustomPageRequest request) {
+            return  new ModifyInstanceCustomPageExecutor().Client(this).Execute<ModifyInstanceCustomPageResponse, ModifyInstanceCustomPageResult, ModifyInstanceCustomPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例错误状态码返回页面为自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceCustomPageResponse> ModifyInstanceCustomPage(ModifyInstanceCustomPageRequest request) {
+            return await new ModifyInstanceCustomPageExecutor().Client(this).Execute<ModifyInstanceCustomPageResponse, ModifyInstanceCustomPageResult, ModifyInstanceCustomPageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  开启实例错误状态码返回页面, 错误状态码返回默认页面或自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableInstanceCustomPageResponse EnableInstanceCustomPage(EnableInstanceCustomPageRequest request) {
+            return  new EnableInstanceCustomPageExecutor().Client(this).Execute<EnableInstanceCustomPageResponse, EnableInstanceCustomPageResult, EnableInstanceCustomPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启实例错误状态码返回页面, 错误状态码返回默认页面或自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableInstanceCustomPageResponse> EnableInstanceCustomPage(EnableInstanceCustomPageRequest request) {
+            return await new EnableInstanceCustomPageExecutor().Client(this).Execute<EnableInstanceCustomPageResponse, EnableInstanceCustomPageResult, EnableInstanceCustomPageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1814,6 +2023,44 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  新建与并发连接数统计报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeConnStatGraphResponse DescribeConnStatGraph(DescribeConnStatGraphRequest request) {
+            return  new DescribeConnStatGraphExecutor().Client(this).Execute<DescribeConnStatGraphResponse, DescribeConnStatGraphResult, DescribeConnStatGraphRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  新建与并发连接数统计报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeConnStatGraphResponse> DescribeConnStatGraph(DescribeConnStatGraphRequest request) {
+            return await new DescribeConnStatGraphExecutor().Client(this).Execute<DescribeConnStatGraphResponse, DescribeConnStatGraphResult, DescribeConnStatGraphRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyCustomPageResponse ModifyCustomPage(ModifyCustomPageRequest request) {
+            return  new ModifyCustomPageExecutor().Client(this).Execute<ModifyCustomPageResponse, ModifyCustomPageResult, ModifyCustomPageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改自定义页面
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyCustomPageResponse> ModifyCustomPage(ModifyCustomPageRequest request) {
+            return await new ModifyCustomPageExecutor().Client(this).Execute<ModifyCustomPageResponse, ModifyCustomPageResult, ModifyCustomPageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  批量添加网站类规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1985,6 +2232,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询实例全局访问控制配置，包括全局的IP黑白名单和geo拦截配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceAclResponse DescribeInstanceAcl(DescribeInstanceAclRequest request) {
+            return  new DescribeInstanceAclExecutor().Client(this).Execute<DescribeInstanceAclResponse, DescribeInstanceAclResult, DescribeInstanceAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例全局访问控制配置，包括全局的IP黑白名单和geo拦截配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceAclResponse> DescribeInstanceAcl(DescribeInstanceAclRequest request) {
+            return await new DescribeInstanceAclExecutor().Client(this).Execute<DescribeInstanceAclResponse, DescribeInstanceAclResult, DescribeInstanceAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询网站类规则的白名单规则列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2076,6 +2342,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteWebRuleResponse> DeleteWebRule(DeleteWebRuleRequest request) {
             return await new DeleteWebRuleExecutor().Client(this).Execute<DeleteWebRuleResponse, DeleteWebRuleResult, DeleteWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  业务流量报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBusinessGraphResponse DescribeBusinessGraph(DescribeBusinessGraphRequest request) {
+            return  new DescribeBusinessGraphExecutor().Client(this).Execute<DescribeBusinessGraphResponse, DescribeBusinessGraphResult, DescribeBusinessGraphRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  业务流量报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBusinessGraphResponse> DescribeBusinessGraph(DescribeBusinessGraphRequest request) {
+            return await new DescribeBusinessGraphExecutor().Client(this).Execute<DescribeBusinessGraphResponse, DescribeBusinessGraphResult, DescribeBusinessGraphRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

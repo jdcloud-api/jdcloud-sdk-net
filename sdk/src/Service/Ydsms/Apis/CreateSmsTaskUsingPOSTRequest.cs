@@ -70,5 +70,9 @@ namespace  JDCloudSDK.Ydsms.Apis
         ///</summary>
         [Required]
         public   string TemplateId{ get; set; }
+        ///<summary>
+        /// 任务类型，1：通道短信 2：营销短信
+        ///</summary>
+        public   int? TaskType{ get; set; }
     }
 }
