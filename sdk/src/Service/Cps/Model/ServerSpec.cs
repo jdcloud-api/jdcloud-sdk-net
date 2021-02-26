@@ -49,5 +49,17 @@ namespace JDCloudSDK.Cps.Model
         /// 后端云物理服务器权重
         ///</summary>
         public int? Weight{ get; set; }
+        ///<summary>
+        /// 别名IP
+        ///</summary>
+        public string Aliasip{ get; set; }
+        ///<summary>
+        /// 主网口或辅网口IP
+        ///</summary>
+        public string Rip{ get; set; }
+        ///<summary>
+        /// bond0 单网卡-主网口| eth0 双网卡-主网口 | eth1 双网卡-辅网口
+        ///</summary>
+        public string NetworkPort{ get; set; }
     }
 }

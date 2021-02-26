@@ -83,6 +83,14 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         public string ImageType{ get; set; }
         ///<summary>
+        /// 机柜信息
+        ///</summary>
+        public string Cabinet{ get; set; }
+        ///<summary>
+        /// 带外管理IP
+        ///</summary>
+        public string IloIp{ get; set; }
+        ///<summary>
         /// 操作系统类型ID
         ///</summary>
         public string OsTypeId{ get; set; }
@@ -138,6 +146,14 @@ namespace JDCloudSDK.Cps.Model
         /// IPv6网关ID
         ///</summary>
         public string Ipv6GatewayId{ get; set; }
+        ///<summary>
+        /// POD网络名称
+        ///</summary>
+        public string PodName{ get; set; }
+        ///<summary>
+        /// POD机房地址描述
+        ///</summary>
+        public string PodRoom{ get; set; }
         ///<summary>
         /// 子网编号
         ///</summary>

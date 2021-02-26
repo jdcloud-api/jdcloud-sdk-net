@@ -77,5 +77,13 @@ namespace JDCloudSDK.Cps.Model
         /// 健康状态
         ///</summary>
         public string HealthyStatus{ get; set; }
+        ///<summary>
+        /// 别名IP
+        ///</summary>
+        public string Aliasip{ get; set; }
+        ///<summary>
+        /// IP类型：别名IPv4 or 内网IPv4
+        ///</summary>
+        public string Iptype{ get; set; }
     }
 }

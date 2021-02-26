@@ -29,6 +29,7 @@ using System.Text;
 
 using JDCloudSDK.Core.Annotation;
 using JDCloudSDK.Charge.Model;
+using JDCloudSDK.Resourcetag.Model;
 
 namespace JDCloudSDK.Cps.Model
 {
@@ -85,5 +86,9 @@ namespace JDCloudSDK.Cps.Model
         ///</summary>
         [Required]
         public ChargeSpec Charge{ get; set; }
+        ///<summary>
+        /// 标签
+        ///</summary>
+        public List<Tag> ResourceTags{ get; set; }
     }
 }

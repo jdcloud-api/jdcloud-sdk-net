@@ -84,6 +84,31 @@ namespace  JDCloudSDK.Cps.Apis
         ///</summary>
         public   string ServerGroupId{ get; set; }
         ///<summary>
+        /// 会话保持超时时间，单位s
+        ///</summary>
+        public   int? StickySessionTimeout{ get; set; }
+        ///<summary>
+        /// 会话类型，植入Cookie or 重写Cookie
+        ///</summary>
+        public   string CookieType{ get; set; }
+        ///<summary>
+        /// 检查路径
+        ///</summary>
+        public   string HealthCheckUri{ get; set; }
+        ///<summary>
+        /// 正常态码，要使用的Http状态码
+        ///</summary>
+        public   string HealthCheckHttpCode{ get; set; }
+        ///<summary>
+        /// 证书ID
+        ///</summary>
+        public   string CertificateId{ get; set; }
+        ///<summary>
+        /// 获取HTTP头字段：X-Forwarded-For、X-Forwarded-Proto、X- Forwarded-Port、X-Forwarded-LBIP
+        ///</summary>
+        public List<string> Headers{ get; set; }
+
+        ///<summary>
         /// 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
         ///Required:true
         ///</summary>

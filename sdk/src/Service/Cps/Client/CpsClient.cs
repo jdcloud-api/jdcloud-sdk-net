@@ -471,6 +471,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询证书详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCertResponse DescribeCert(DescribeCertRequest request) {
+            return  new DescribeCertExecutor().Client(this).Execute<DescribeCertResponse, DescribeCertResult, DescribeCertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询证书详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCertResponse> DescribeCert(DescribeCertRequest request) {
+            return await new DescribeCertExecutor().Client(this).Execute<DescribeCertResponse, DescribeCertResult, DescribeCertRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询云物理服务器名称
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -547,6 +566,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量关闭云物理服务器，只能停止running状态的服务器 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopInstancesResponse StopInstances(StopInstancesRequest request) {
+            return  new StopInstancesExecutor().Client(this).Execute<StopInstancesResponse, StopInstancesResult, StopInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量关闭云物理服务器，只能停止running状态的服务器 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopInstancesResponse> StopInstances(StopInstancesRequest request) {
+            return await new StopInstancesExecutor().Client(this).Execute<StopInstancesResponse, StopInstancesResult, StopInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -619,6 +657,27 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRegionesResponse> DescribeRegiones(DescribeRegionesRequest request) {
             return await new DescribeRegionesExecutor().Client(this).Execute<DescribeRegionesResponse, DescribeRegionesResult, DescribeRegionesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建证书
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateCertResponse CreateCert(CreateCertRequest request) {
+            return  new CreateCertExecutor().Client(this).Execute<CreateCertResponse, CreateCertResult, CreateCertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建证书
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateCertResponse> CreateCert(CreateCertRequest request) {
+            return await new CreateCertExecutor().Client(this).Execute<CreateCertResponse, CreateCertResult, CreateCertRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -760,6 +819,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量重启云物理服务器，只能重启running状态的服务器 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RestartInstancesResponse RestartInstances(RestartInstancesRequest request) {
+            return  new RestartInstancesExecutor().Client(this).Execute<RestartInstancesResponse, RestartInstancesResult, RestartInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量重启云物理服务器，只能重启running状态的服务器 [MFA enabled]
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RestartInstancesResponse> RestartInstances(RestartInstancesRequest request) {
+            return await new RestartInstancesExecutor().Client(this).Execute<RestartInstancesResponse, RestartInstancesResult, RestartInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除次要CIDR
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -794,6 +872,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSecondaryCidrsResponse> DescribeSecondaryCidrs(DescribeSecondaryCidrsRequest request) {
             return await new DescribeSecondaryCidrsExecutor().Client(this).Execute<DescribeSecondaryCidrsResponse, DescribeSecondaryCidrsResult, DescribeSecondaryCidrsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询SLB名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSlbsNameResponse DescribeSlbsName(DescribeSlbsNameRequest request) {
+            return  new DescribeSlbsNameExecutor().Client(this).Execute<DescribeSlbsNameResponse, DescribeSlbsNameResult, DescribeSlbsNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询SLB名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSlbsNameResponse> DescribeSlbsName(DescribeSlbsNameRequest request) {
+            return await new DescribeSlbsNameExecutor().Client(this).Execute<DescribeSlbsNameResponse, DescribeSlbsNameResult, DescribeSlbsNameRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1127,6 +1224,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量开启云物理服务器，只能启动stopped状态的服务器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartInstancesResponse StartInstances(StartInstancesRequest request) {
+            return  new StartInstancesExecutor().Client(this).Execute<StartInstancesResponse, StartInstancesResult, StartInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量开启云物理服务器，只能启动stopped状态的服务器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartInstancesResponse> StartInstances(StartInstancesRequest request) {
+            return await new StartInstancesExecutor().Client(this).Execute<StartInstancesResponse, StartInstancesResult, StartInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  申请弹性公网IP
         /// 
         /// </summary>
@@ -1302,6 +1418,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询EIP名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpNameResponse DescribeElasticIpName(DescribeElasticIpNameRequest request) {
+            return  new DescribeElasticIpNameExecutor().Client(this).Execute<DescribeElasticIpNameResponse, DescribeElasticIpNameResult, DescribeElasticIpNameRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询EIP名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpNameResponse> DescribeElasticIpName(DescribeElasticIpNameRequest request) {
+            return await new DescribeElasticIpNameExecutor().Client(this).Execute<DescribeElasticIpNameResponse, DescribeElasticIpNameResult, DescribeElasticIpNameRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  对单台云物理服务器执行开机操作，只能启动stopped状态的服务器
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1395,6 +1530,25 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRouteTableResponse> DescribeRouteTable(DescribeRouteTableRequest request) {
             return await new DescribeRouteTableExecutor().Client(this).Execute<DescribeRouteTableResponse, DescribeRouteTableResult, DescribeRouteTableRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveCertResponse RemoveCert(RemoveCertRequest request) {
+            return  new RemoveCertExecutor().Client(this).Execute<RemoveCertResponse, RemoveCertResult, RemoveCertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveCertResponse> RemoveCert(RemoveCertRequest request) {
+            return await new RemoveCertExecutor().Client(this).Execute<RemoveCertResponse, RemoveCertResult, RemoveCertRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1559,6 +1713,25 @@ namespace JDCloudSDK.Cps.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  修改证书名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyCertResponse ModifyCert(ModifyCertRequest request) {
+            return  new ModifyCertExecutor().Client(this).Execute<ModifyCertResponse, ModifyCertResult, ModifyCertRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改证书名称
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyCertResponse> ModifyCert(ModifyCertRequest request) {
+            return await new ModifyCertExecutor().Client(this).Execute<ModifyCertResponse, ModifyCertResult, ModifyCertRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询虚拟服务器组
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1694,6 +1867,29 @@ namespace JDCloudSDK.Cps.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeAvailablePrivateIpResponse> DescribeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) {
             return await new DescribeAvailablePrivateIpExecutor().Client(this).Execute<DescribeAvailablePrivateIpResponse, DescribeAvailablePrivateIpResult, DescribeAvailablePrivateIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询证书列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCertsResponse DescribeCerts(DescribeCertsRequest request) {
+            return  new DescribeCertsExecutor().Client(this).Execute<DescribeCertsResponse, DescribeCertsResult, DescribeCertsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询证书列表&lt;br/&gt;
+        /// 支持分页查询，默认每页20条&lt;br/&gt;
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCertsResponse> DescribeCerts(DescribeCertsRequest request) {
+            return await new DescribeCertsExecutor().Client(this).Execute<DescribeCertsResponse, DescribeCertsResult, DescribeCertsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

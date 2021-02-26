@@ -27,40 +27,35 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
-using JDCloudSDK.Charge.Model;
-using JDCloudSDK.Resourcetag.Model;
 
 namespace JDCloudSDK.Cps.Model
 {
 
     /// <summary>
-    ///  elasticIpSpec
+    ///  cert
     /// </summary>
-    public class ElasticIpSpec
+    public class Cert
     {
 
         ///<summary>
-        /// 带宽, 范围[1,200] 单位Mbps
-        ///Required:true
+        /// 证书ID
         ///</summary>
-        [Required]
-        public int Bandwidth{ get; set; }
+        public string CertId{ get; set; }
         ///<summary>
-        /// 购买数量
-        ///Required:true
+        /// 证书名称
         ///</summary>
-        [Required]
-        public int Count{ get; set; }
+        public string Name{ get; set; }
         ///<summary>
-        /// 计费配置
-        ///Required:true
+        /// 证书内容
         ///</summary>
-        [Required]
-        public ChargeSpec Charge{ get; set; }
+        public string Certificate{ get; set; }
         ///<summary>
-        /// 标签
+        /// 创建时间
         ///</summary>
-        public List<Tag> ResourceTags{ get; set; }
+        public string CreateTime{ get; set; }
+        ///<summary>
+        /// 证书关联监听器数量
+        ///</summary>
+        public int? ListenerCount{ get; set; }
     }
 }
