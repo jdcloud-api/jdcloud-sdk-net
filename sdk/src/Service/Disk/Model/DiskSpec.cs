@@ -76,6 +76,10 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
+        /// 策略ID
+        ///</summary>
+        public string PolicyId{ get; set; }
+        ///<summary>
         /// 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
         ///</summary>
         public ChargeSpec Charge{ get; set; }

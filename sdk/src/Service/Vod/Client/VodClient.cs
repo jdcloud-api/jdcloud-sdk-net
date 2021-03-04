@@ -610,6 +610,27 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除转码模板组中的模板。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteGroupedTranscodeTemplatesResponse DeleteGroupedTranscodeTemplates(DeleteGroupedTranscodeTemplatesRequest request) {
+            return  new DeleteGroupedTranscodeTemplatesExecutor().Client(this).Execute<DeleteGroupedTranscodeTemplatesResponse, DeleteGroupedTranscodeTemplatesResult, DeleteGroupedTranscodeTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除转码模板组中的模板。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteGroupedTranscodeTemplatesResponse> DeleteGroupedTranscodeTemplates(DeleteGroupedTranscodeTemplatesRequest request) {
+            return await new DeleteGroupedTranscodeTemplatesExecutor().Client(this).Execute<DeleteGroupedTranscodeTemplatesResponse, DeleteGroupedTranscodeTemplatesResult, DeleteGroupedTranscodeTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除视频转码流
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -663,6 +684,25 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetIPRuleResponse> SetIPRule(SetIPRuleRequest request) {
             return await new SetIPRuleExecutor().Client(this).Execute<SetIPRuleResponse, SetIPRuleResult, SetIPRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteTranscodeTemplateGroupResponse DeleteTranscodeTemplateGroup(DeleteTranscodeTemplateGroupRequest request) {
+            return  new DeleteTranscodeTemplateGroupExecutor().Client(this).Execute<DeleteTranscodeTemplateGroupResponse, DeleteTranscodeTemplateGroupResult, DeleteTranscodeTemplateGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteTranscodeTemplateGroupResponse> DeleteTranscodeTemplateGroup(DeleteTranscodeTemplateGroupRequest request) {
+            return await new DeleteTranscodeTemplateGroupExecutor().Client(this).Execute<DeleteTranscodeTemplateGroupResponse, DeleteTranscodeTemplateGroupResult, DeleteTranscodeTemplateGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -777,6 +817,25 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteHeaderResponse> DeleteHeader(DeleteHeaderRequest request) {
             return await new DeleteHeaderExecutor().Client(this).Execute<DeleteHeaderResponse, DeleteHeaderResult, DeleteHeaderRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateTranscodeTemplateGroupResponse UpdateTranscodeTemplateGroup(UpdateTranscodeTemplateGroupRequest request) {
+            return  new UpdateTranscodeTemplateGroupExecutor().Client(this).Execute<UpdateTranscodeTemplateGroupResponse, UpdateTranscodeTemplateGroupResult, UpdateTranscodeTemplateGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateTranscodeTemplateGroupResponse> UpdateTranscodeTemplateGroup(UpdateTranscodeTemplateGroupRequest request) {
+            return await new UpdateTranscodeTemplateGroupExecutor().Client(this).Execute<UpdateTranscodeTemplateGroupResponse, UpdateTranscodeTemplateGroupResult, UpdateTranscodeTemplateGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1070,6 +1129,25 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetTranscodeTemplateGroupResponse GetTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request) {
+            return  new GetTranscodeTemplateGroupExecutor().Client(this).Execute<GetTranscodeTemplateGroupResponse, GetTranscodeTemplateGroupResult, GetTranscodeTemplateGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetTranscodeTemplateGroupResponse> GetTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request) {
+            return await new GetTranscodeTemplateGroupExecutor().Client(this).Execute<GetTranscodeTemplateGroupResponse, GetTranscodeTemplateGroupResult, GetTranscodeTemplateGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询单个视频信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1253,6 +1331,25 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTranscodeTemplateGroupResponse CreateTranscodeTemplateGroup(CreateTranscodeTemplateGroupRequest request) {
+            return  new CreateTranscodeTemplateGroupExecutor().Client(this).Execute<CreateTranscodeTemplateGroupResponse, CreateTranscodeTemplateGroupResult, CreateTranscodeTemplateGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建转码模板组
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTranscodeTemplateGroupResponse> CreateTranscodeTemplateGroup(CreateTranscodeTemplateGroupRequest request) {
+            return await new CreateTranscodeTemplateGroupExecutor().Client(this).Execute<CreateTranscodeTemplateGroupResponse, CreateTranscodeTemplateGroupResult, CreateTranscodeTemplateGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询CDN域名IP黑名单规则配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1325,6 +1422,27 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateTranscodeTemplateResponse> CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
             return await new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询转码模板组列表。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListTranscodeTemplateGroupsResponse ListTranscodeTemplateGroups(ListTranscodeTemplateGroupsRequest request) {
+            return  new ListTranscodeTemplateGroupsExecutor().Client(this).Execute<ListTranscodeTemplateGroupsResponse, ListTranscodeTemplateGroupsResult, ListTranscodeTemplateGroupsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询转码模板组列表。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListTranscodeTemplateGroupsResponse> ListTranscodeTemplateGroups(ListTranscodeTemplateGroupsRequest request) {
+            return await new ListTranscodeTemplateGroupsExecutor().Client(this).Execute<ListTranscodeTemplateGroupsResponse, ListTranscodeTemplateGroupsResult, ListTranscodeTemplateGroupsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

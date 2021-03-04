@@ -73,6 +73,10 @@ namespace  JDCloudSDK.Vod.Apis
         public List<string> Tags{ get; set; }
 
         ///<summary>
+        /// 转码模板组ID。若此字段不为空，则将以模板组方式提交转码作业，transcodeTemplateIds字段将被忽略。
+        ///</summary>
+        public   string TranscodeTemplateGroupId{ get; set; }
+        ///<summary>
         /// 转码模板ID集合
         ///</summary>
         public List<long?> TranscodeTemplateIds{ get; set; }

@@ -66,6 +66,8 @@ namespace  JDCloudSDK.Disk.Apis
         /// name - 云硬盘名称，模糊匹配，支持单个
         /// multiAttach - 云硬盘是否多点挂载，精确匹配，支持单个
         /// encrypted - 云硬盘是否加密，精确匹配，支持单个
+        /// policyId - 绑定policyId的云硬盘，精确匹配，支持多个
+        /// notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

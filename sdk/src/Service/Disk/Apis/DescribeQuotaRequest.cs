@@ -40,7 +40,7 @@ namespace  JDCloudSDK.Disk.Apis
     public class DescribeQuotaRequest : JdcloudRequest
     {
         ///<summary>
-        /// 资源类型  disk：用户能创建的云盘的配额  snapshot： 用户能创建的快照的配额
+        /// 资源类型  disk：用户能创建的云盘的配额  snapshot： 用户能创建的快照的配额 snapshot_policy： 用户能创建的快照策略的配额
         ///Required:true
         ///</summary>
         [Required]

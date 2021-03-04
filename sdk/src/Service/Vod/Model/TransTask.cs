@@ -42,9 +42,21 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public long? TaskId{ get; set; }
         ///<summary>
-        /// 转码模板ID
+        /// 打包类型。取值范围：None, HLSPackage
+        ///</summary>
+        public string PackageType{ get; set; }
+        ///<summary>
+        /// 转码模板ID。非打包转码，包含此字段。
         ///</summary>
         public long? TemplateId{ get; set; }
+        ///<summary>
+        /// 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+        ///</summary>
+        public string TemplateGroupId{ get; set; }
+        ///<summary>
+        /// 模板ID列表。打包转码，包含一个模板组中的多个打包转码模板。
+        ///</summary>
+        public List<long?> TemplateIds{ get; set; }
         ///<summary>
         /// 封装格式
         ///</summary>

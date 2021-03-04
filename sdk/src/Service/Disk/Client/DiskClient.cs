@@ -89,9 +89,9 @@ namespace JDCloudSDK.Disk.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,25 @@ namespace JDCloudSDK.Disk.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  查询快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSnapPolicesResponse DescribeSnapPolices(DescribeSnapPolicesRequest request) {
+            return  new DescribeSnapPolicesExecutor().Client(this).Execute<DescribeSnapPolicesResponse, DescribeSnapPolicesResult, DescribeSnapPolicesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSnapPolicesResponse> DescribeSnapPolices(DescribeSnapPolicesRequest request) {
+            return await new DescribeSnapPolicesExecutor().Client(this).Execute<DescribeSnapPolicesResponse, DescribeSnapPolicesResult, DescribeSnapPolicesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改快照的名字或描述信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -153,25 +172,6 @@ namespace JDCloudSDK.Disk.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifySnapshotAttributeResponse> ModifySnapshotAttribute(ModifySnapshotAttributeRequest request) {
             return await new ModifySnapshotAttributeExecutor().Client(this).Execute<ModifySnapshotAttributeResponse, ModifySnapshotAttributeResult, ModifySnapshotAttributeRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  将快照从本区域的一份快照复制到目标区域
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CopySnapshotResponse CopySnapshot(CopySnapshotRequest request) {
-            return  new CopySnapshotExecutor().Client(this).Execute<CopySnapshotResponse, CopySnapshotResult, CopySnapshotRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  将快照从本区域的一份快照复制到目标区域
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CopySnapshotResponse> CopySnapshot(CopySnapshotRequest request) {
-            return await new CopySnapshotExecutor().Client(this).Execute<CopySnapshotResponse, CopySnapshotResult, CopySnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -201,42 +201,78 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  在同一个region中共享一个Snapshot给其他用户
+        ///  修改快照策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ShareSnapshotResponse ShareSnapshot(ShareSnapshotRequest request) {
-            return  new ShareSnapshotExecutor().Client(this).Execute<ShareSnapshotResponse, ShareSnapshotResult, ShareSnapshotRequest>(request);
+        public UpdateSnapshotPolicyResponse UpdateSnapshotPolicy(UpdateSnapshotPolicyRequest request) {
+            return  new UpdateSnapshotPolicyExecutor().Client(this).Execute<UpdateSnapshotPolicyResponse, UpdateSnapshotPolicyResult, UpdateSnapshotPolicyRequest>(request);
         }
 #else
         /// <summary>
-        ///  在同一个region中共享一个Snapshot给其他用户
+        ///  修改快照策略
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ShareSnapshotResponse> ShareSnapshot(ShareSnapshotRequest request) {
-            return await new ShareSnapshotExecutor().Client(this).Execute<ShareSnapshotResponse, ShareSnapshotResult, ShareSnapshotRequest>(request).ConfigureAwait(false);
+        public async Task<UpdateSnapshotPolicyResponse> UpdateSnapshotPolicy(UpdateSnapshotPolicyRequest request) {
+            return await new UpdateSnapshotPolicyExecutor().Client(this).Execute<UpdateSnapshotPolicyResponse, UpdateSnapshotPolicyResult, UpdateSnapshotPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  -   提供云硬盘支持规格的详情
-        /// 
+        ///  查询快照链的快照个数和快照总容量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeDiskSpecificationResponse DescribeDiskSpecification(DescribeDiskSpecificationRequest request) {
-            return  new DescribeDiskSpecificationExecutor().Client(this).Execute<DescribeDiskSpecificationResponse, DescribeDiskSpecificationResult, DescribeDiskSpecificationRequest>(request);
+        public DescribeSnapshotChainResponse DescribeSnapshotChain(DescribeSnapshotChainRequest request) {
+            return  new DescribeSnapshotChainExecutor().Client(this).Execute<DescribeSnapshotChainResponse, DescribeSnapshotChainResult, DescribeSnapshotChainRequest>(request);
         }
 #else
         /// <summary>
-        ///  -   提供云硬盘支持规格的详情
-        /// 
+        ///  查询快照链的快照个数和快照总容量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeDiskSpecificationResponse> DescribeDiskSpecification(DescribeDiskSpecificationRequest request) {
-            return await new DescribeDiskSpecificationExecutor().Client(this).Execute<DescribeDiskSpecificationResponse, DescribeDiskSpecificationResult, DescribeDiskSpecificationRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeSnapshotChainResponse> DescribeSnapshotChain(DescribeSnapshotChainRequest request) {
+            return await new DescribeSnapshotChainExecutor().Client(this).Execute<DescribeSnapshotChainResponse, DescribeSnapshotChainResult, DescribeSnapshotChainRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询快照策略与磁盘绑定关系
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSnapshotPolicyDiskRelationsResponse DescribeSnapshotPolicyDiskRelations(DescribeSnapshotPolicyDiskRelationsRequest request) {
+            return  new DescribeSnapshotPolicyDiskRelationsExecutor().Client(this).Execute<DescribeSnapshotPolicyDiskRelationsResponse, DescribeSnapshotPolicyDiskRelationsResult, DescribeSnapshotPolicyDiskRelationsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询快照策略与磁盘绑定关系
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSnapshotPolicyDiskRelationsResponse> DescribeSnapshotPolicyDiskRelations(DescribeSnapshotPolicyDiskRelationsRequest request) {
+            return await new DescribeSnapshotPolicyDiskRelationsExecutor().Client(this).Execute<DescribeSnapshotPolicyDiskRelationsResponse, DescribeSnapshotPolicyDiskRelationsResult, DescribeSnapshotPolicyDiskRelationsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteSnapshotPolicyResponse DeleteSnapshotPolicy(DeleteSnapshotPolicyRequest request) {
+            return  new DeleteSnapshotPolicyExecutor().Client(this).Execute<DeleteSnapshotPolicyResponse, DeleteSnapshotPolicyResult, DeleteSnapshotPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteSnapshotPolicyResponse> DeleteSnapshotPolicy(DeleteSnapshotPolicyRequest request) {
+            return await new DeleteSnapshotPolicyExecutor().Client(this).Execute<DeleteSnapshotPolicyResponse, DeleteSnapshotPolicyResult, DeleteSnapshotPolicyRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -283,6 +319,29 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  -   查询您已经创建的云硬盘。
+        /// -   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeVolumesIgnoreServiceCodeResponse DescribeVolumesIgnoreServiceCode(DescribeVolumesIgnoreServiceCodeRequest request) {
+            return  new DescribeVolumesIgnoreServiceCodeExecutor().Client(this).Execute<DescribeVolumesIgnoreServiceCodeResponse, DescribeVolumesIgnoreServiceCodeResult, DescribeVolumesIgnoreServiceCodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  -   查询您已经创建的云硬盘。
+        /// -   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeVolumesIgnoreServiceCodeResponse> DescribeVolumesIgnoreServiceCode(DescribeVolumesIgnoreServiceCodeRequest request) {
+            return await new DescribeVolumesIgnoreServiceCodeExecutor().Client(this).Execute<DescribeVolumesIgnoreServiceCodeResponse, DescribeVolumesIgnoreServiceCodeResult, DescribeVolumesIgnoreServiceCodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -302,42 +361,40 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  -   云硬盘暂停，速度限制到极低，但不会强制卸载。
-        /// 
+        ///  绑定/解绑快照策略与磁盘关系
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SuspendDiskResponse SuspendDisk(SuspendDiskRequest request) {
-            return  new SuspendDiskExecutor().Client(this).Execute<SuspendDiskResponse, SuspendDiskResult, SuspendDiskRequest>(request);
+        public ApplySnapshotPoliciesResponse ApplySnapshotPolicies(ApplySnapshotPoliciesRequest request) {
+            return  new ApplySnapshotPoliciesExecutor().Client(this).Execute<ApplySnapshotPoliciesResponse, ApplySnapshotPoliciesResult, ApplySnapshotPoliciesRequest>(request);
         }
 #else
         /// <summary>
-        ///  -   云硬盘暂停，速度限制到极低，但不会强制卸载。
-        /// 
+        ///  绑定/解绑快照策略与磁盘关系
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SuspendDiskResponse> SuspendDisk(SuspendDiskRequest request) {
-            return await new SuspendDiskExecutor().Client(this).Execute<SuspendDiskResponse, SuspendDiskResult, SuspendDiskRequest>(request).ConfigureAwait(false);
+        public async Task<ApplySnapshotPoliciesResponse> ApplySnapshotPolicies(ApplySnapshotPoliciesRequest request) {
+            return await new ApplySnapshotPoliciesExecutor().Client(this).Execute<ApplySnapshotPoliciesResponse, ApplySnapshotPoliciesResult, ApplySnapshotPoliciesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询云硬盘售罄情况列表
+        ///  查询快照容量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeSoldoutResponse DescribeSoldout(DescribeSoldoutRequest request) {
-            return  new DescribeSoldoutExecutor().Client(this).Execute<DescribeSoldoutResponse, DescribeSoldoutResult, DescribeSoldoutRequest>(request);
+        public DescribeSnapshotsCapacityResponse DescribeSnapshotsCapacity(DescribeSnapshotsCapacityRequest request) {
+            return  new DescribeSnapshotsCapacityExecutor().Client(this).Execute<DescribeSnapshotsCapacityResponse, DescribeSnapshotsCapacityResult, DescribeSnapshotsCapacityRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询云硬盘售罄情况列表
+        ///  查询快照容量
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeSoldoutResponse> DescribeSoldout(DescribeSoldoutRequest request) {
-            return await new DescribeSoldoutExecutor().Client(this).Execute<DescribeSoldoutResponse, DescribeSoldoutResult, DescribeSoldoutRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeSnapshotsCapacityResponse> DescribeSnapshotsCapacity(DescribeSnapshotsCapacityRequest request) {
+            return await new DescribeSnapshotsCapacityExecutor().Client(this).Execute<DescribeSnapshotsCapacityResponse, DescribeSnapshotsCapacityResult, DescribeSnapshotsCapacityRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -446,6 +503,44 @@ namespace JDCloudSDK.Disk.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSnapshotPolicyResponse CreateSnapshotPolicy(CreateSnapshotPolicyRequest request) {
+            return  new CreateSnapshotPolicyExecutor().Client(this).Execute<CreateSnapshotPolicyResponse, CreateSnapshotPolicyResult, CreateSnapshotPolicyRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSnapshotPolicyResponse> CreateSnapshotPolicy(CreateSnapshotPolicyRequest request) {
+            return await new CreateSnapshotPolicyExecutor().Client(this).Execute<CreateSnapshotPolicyResponse, CreateSnapshotPolicyResult, CreateSnapshotPolicyRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSnapshotPoliciesResponse DescribeSnapshotPolicies(DescribeSnapshotPoliciesRequest request) {
+            return  new DescribeSnapshotPoliciesExecutor().Client(this).Execute<DescribeSnapshotPoliciesResponse, DescribeSnapshotPoliciesResult, DescribeSnapshotPoliciesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询快照策略
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSnapshotPoliciesResponse> DescribeSnapshotPolicies(DescribeSnapshotPoliciesRequest request) {
+            return await new DescribeSnapshotPoliciesExecutor().Client(this).Execute<DescribeSnapshotPoliciesResponse, DescribeSnapshotPoliciesResult, DescribeSnapshotPoliciesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  -   查询您已经创建的云硬盘。
         /// -   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
         /// 
@@ -465,48 +560,6 @@ namespace JDCloudSDK.Disk.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest request) {
             return await new DescribeDisksExecutor().Client(this).Execute<DescribeDisksResponse, DescribeDisksResult, DescribeDisksRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  -   根据diskId查询云硬盘名称及云硬盘绑定的资源ID。
-        /// -   可以进行批量查询，各个卷ID用逗号隔开。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SelectDetailListResponse SelectDetailList(SelectDetailListRequest request) {
-            return  new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  -   根据diskId查询云硬盘名称及云硬盘绑定的资源ID。
-        /// -   可以进行批量查询，各个卷ID用逗号隔开。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SelectDetailListResponse> SelectDetailList(SelectDetailListRequest request) {
-            return await new SelectDetailListExecutor().Client(this).Execute<SelectDetailListResponse, SelectDetailListResult, SelectDetailListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  取消一个Snapshot的共享
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UnshareSnapshotResponse UnshareSnapshot(UnshareSnapshotRequest request) {
-            return  new UnshareSnapshotExecutor().Client(this).Execute<UnshareSnapshotResponse, UnshareSnapshotResult, UnshareSnapshotRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  取消一个Snapshot的共享
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UnshareSnapshotResponse> UnshareSnapshot(UnshareSnapshotRequest request) {
-            return await new UnshareSnapshotExecutor().Client(this).Execute<UnshareSnapshotResponse, UnshareSnapshotResult, UnshareSnapshotRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -532,27 +585,6 @@ namespace JDCloudSDK.Disk.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteDiskResponse> DeleteDisk(DeleteDiskRequest request) {
             return await new DeleteDiskExecutor().Client(this).Execute<DeleteDiskResponse, DeleteDiskResult, DeleteDiskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  -   云硬盘恢复，将被暂停的云硬盘恢复
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ResumeDiskResponse ResumeDisk(ResumeDiskRequest request) {
-            return  new ResumeDiskExecutor().Client(this).Execute<ResumeDiskResponse, ResumeDiskResult, ResumeDiskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  -   云硬盘恢复，将被暂停的云硬盘恢复
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ResumeDiskResponse> ResumeDisk(ResumeDiskRequest request) {
-            return await new ResumeDiskExecutor().Client(this).Execute<ResumeDiskResponse, ResumeDiskResult, ResumeDiskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

@@ -41,6 +41,6 @@ namespace  JDCloudSDK.Disk.Apis
         ///<summary>
         /// Quota
         ///</summary>
-        public   Quota Quota{ get; set; }
+        public   JDCloudSDK.Disk.Model.Quota Quota{ get; set; }
     }
 }

@@ -78,6 +78,10 @@ namespace  JDCloudSDK.Vod.Apis
         public List<string> Tags{ get; set; }
 
         ///<summary>
+        /// 转码模板组ID
+        ///</summary>
+        public   string TranscodeTemplateGroupId{ get; set; }
+        ///<summary>
         /// 转码模板ID集合
         ///</summary>
         public List<long?> TranscodeTemplateIds{ get; set; }

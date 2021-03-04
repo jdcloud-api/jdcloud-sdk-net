@@ -74,9 +74,17 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// 共享信息
+        /// 过期删除时间
+        ///</summary>
+        public DateTime? ExpireTime{ get; set; }
+        ///<summary>
+        /// 共享信息(已废弃，使用shareInfo)
         ///</summary>
         public List<ShareInfo> SharInfo{ get; set; }
+        ///<summary>
+        /// 共享信息
+        ///</summary>
+        public List<ShareInfo> ShareInfo{ get; set; }
         ///<summary>
         /// 快照是否为加密盘的快照
         ///</summary>

@@ -44,9 +44,13 @@ namespace  JDCloudSDK.Disk.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 快照描述，name和description必须要指定一个
+        /// 快照描述
         ///</summary>
         public   string Description{ get; set; }
+        ///<summary>
+        /// 快照过期时间，三者至少指定一个
+        ///</summary>
+        public   string ExpireTime{ get; set; }
         ///<summary>
         /// 地域ID
         ///Required:true

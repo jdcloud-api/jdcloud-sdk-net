@@ -103,8 +103,12 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public JDCloudSDK.Charge.Model.Charge Charge{ get; set; }
         ///<summary>
-        /// Tag信息
+        /// null
         ///</summary>
         public List<Tag> Tags{ get; set; }
+        ///<summary>
+        /// SnapshotPolicies
+        ///</summary>
+        public List<SnapshotPolicy> SnapshotPolicies{ get; set; }
     }
 }

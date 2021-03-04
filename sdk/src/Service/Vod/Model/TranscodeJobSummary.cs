@@ -46,9 +46,13 @@ namespace JDCloudSDK.Vod.Model
         ///</summary>
         public string VideoId{ get; set; }
         ///<summary>
-        /// 模板ID列表
+        /// 模板ID列表。以转码模板列表方式提交的转码作业，包含此字段。
         ///</summary>
         public List<long?> TemplateIds{ get; set; }
+        ///<summary>
+        /// 模板组ID。以转码模板组方式提交的转码作业，包含此字段。
+        ///</summary>
+        public string TemplateGroupId{ get; set; }
         ///<summary>
         /// 创建时间
         ///</summary>

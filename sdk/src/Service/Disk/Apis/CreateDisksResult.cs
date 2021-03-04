@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Disk.Model;
 
 namespace  JDCloudSDK.Disk.Apis
 {
@@ -45,6 +46,11 @@ namespace  JDCloudSDK.Disk.Apis
     /// </summary>
     public class CreateDisksResult : JdcloudResult
     {
+        ///<summary>
+        /// 绑定结果
+        ///</summary>
+        public List<PolicyDiskRelationOpResult> PolicyRelations{ get; set; }
+
         ///<summary>
         /// 创建的云硬盘ID列表
         ///</summary>
