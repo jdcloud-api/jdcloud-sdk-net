@@ -195,6 +195,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  更新防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyDispatchRuleResponse ModifyDispatchRule(ModifyDispatchRuleRequest request) {
+            return  new ModifyDispatchRuleExecutor().Client(this).Execute<ModifyDispatchRuleResponse, ModifyDispatchRuleResult, ModifyDispatchRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyDispatchRuleResponse> ModifyDispatchRule(ModifyDispatchRuleRequest request) {
+            return await new ModifyDispatchRuleExecutor().Client(this).Execute<ModifyDispatchRuleResponse, ModifyDispatchRuleResult, ModifyDispatchRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  实例全局访问控制配置可以恢复到上一次下发成功的配置时，调用此接口回滚到上一次下发成功的配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -978,6 +997,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  防护调度规则切换成防御状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SwitchDispatchRuleProtectResponse SwitchDispatchRuleProtect(SwitchDispatchRuleProtectRequest request) {
+            return  new SwitchDispatchRuleProtectExecutor().Client(this).Execute<SwitchDispatchRuleProtectResponse, SwitchDispatchRuleProtectResult, SwitchDispatchRuleProtectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  防护调度规则切换成防御状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SwitchDispatchRuleProtectResponse> SwitchDispatchRuleProtect(SwitchDispatchRuleProtectRequest request) {
+            return await new SwitchDispatchRuleProtectExecutor().Client(this).Execute<SwitchDispatchRuleProtectResponse, SwitchDispatchRuleProtectResult, SwitchDispatchRuleProtectRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询实例高防 IP 列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1012,6 +1050,44 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisableWhiteListRuleOfWebRuleResponse> DisableWhiteListRuleOfWebRule(DisableWhiteListRuleOfWebRuleRequest request) {
             return await new DisableWhiteListRuleOfWebRuleExecutor().Client(this).Execute<DisableWhiteListRuleOfWebRuleResponse, DisableWhiteListRuleOfWebRuleResult, DisableWhiteListRuleOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询高防实例防护概要
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProtectionOutlineResponse DescribeProtectionOutline(DescribeProtectionOutlineRequest request) {
+            return  new DescribeProtectionOutlineExecutor().Client(this).Execute<DescribeProtectionOutlineResponse, DescribeProtectionOutlineResult, DescribeProtectionOutlineRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询高防实例防护概要
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProtectionOutlineResponse> DescribeProtectionOutline(DescribeProtectionOutlineRequest request) {
+            return await new DescribeProtectionOutlineExecutor().Client(this).Execute<DescribeProtectionOutlineResponse, DescribeProtectionOutlineResult, DescribeProtectionOutlineRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDispatchRuleResponse DeleteDispatchRule(DeleteDispatchRuleRequest request) {
+            return  new DeleteDispatchRuleExecutor().Client(this).Execute<DeleteDispatchRuleResponse, DeleteDispatchRuleResult, DeleteDispatchRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDispatchRuleResponse> DeleteDispatchRule(DeleteDispatchRuleRequest request) {
+            return await new DeleteDispatchRuleExecutor().Client(this).Execute<DeleteDispatchRuleResponse, DeleteDispatchRuleResult, DeleteDispatchRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1510,6 +1586,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询高防实例回源 IP 白名单列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpList(DescribeOriginWhiteIpListRequest request) {
+            return  new DescribeOriginWhiteIpListExecutor().Client(this).Execute<DescribeOriginWhiteIpListResponse, DescribeOriginWhiteIpListResult, DescribeOriginWhiteIpListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询高防实例回源 IP 白名单列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeOriginWhiteIpListResponse> DescribeOriginWhiteIpList(DescribeOriginWhiteIpListRequest request) {
+            return await new DescribeOriginWhiteIpListExecutor().Client(this).Execute<DescribeOriginWhiteIpListResponse, DescribeOriginWhiteIpListResult, DescribeOriginWhiteIpListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  开启网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2004,6 +2099,25 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  防护调度规则切换成回源状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SwitchDispatchRuleOriginResponse SwitchDispatchRuleOrigin(SwitchDispatchRuleOriginRequest request) {
+            return  new SwitchDispatchRuleOriginExecutor().Client(this).Execute<SwitchDispatchRuleOriginResponse, SwitchDispatchRuleOriginResult, SwitchDispatchRuleOriginRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  防护调度规则切换成回源状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SwitchDispatchRuleOriginResponse> SwitchDispatchRuleOrigin(SwitchDispatchRuleOriginRequest request) {
+            return await new SwitchDispatchRuleOriginExecutor().Client(this).Execute<SwitchDispatchRuleOriginResponse, SwitchDispatchRuleOriginResult, SwitchDispatchRuleOriginRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询网站类规则的黑名单规则列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2019,6 +2133,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeBlackListRulesOfWebRuleResponse> DescribeBlackListRulesOfWebRule(DescribeBlackListRulesOfWebRuleRequest request) {
             return await new DescribeBlackListRulesOfWebRuleExecutor().Client(this).Execute<DescribeBlackListRulesOfWebRuleResponse, DescribeBlackListRulesOfWebRuleResult, DescribeBlackListRulesOfWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询某个实例下的防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeDispatchRulesResponse DescribeDispatchRules(DescribeDispatchRulesRequest request) {
+            return  new DescribeDispatchRulesExecutor().Client(this).Execute<DescribeDispatchRulesResponse, DescribeDispatchRulesResult, DescribeDispatchRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询某个实例下的防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeDispatchRulesResponse> DescribeDispatchRules(DescribeDispatchRulesRequest request) {
+            return await new DescribeDispatchRulesExecutor().Client(this).Execute<DescribeDispatchRulesResponse, DescribeDispatchRulesResult, DescribeDispatchRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2171,6 +2304,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeDDoSGraphResponse> DescribeDDoSGraph(DescribeDDoSGraphRequest request) {
             return await new DescribeDDoSGraphExecutor().Client(this).Execute<DescribeDDoSGraphResponse, DescribeDDoSGraphResult, DescribeDDoSGraphRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDispatchRuleResponse CreateDispatchRule(CreateDispatchRuleRequest request) {
+            return  new CreateDispatchRuleExecutor().Client(this).Execute<CreateDispatchRuleResponse, CreateDispatchRuleResult, CreateDispatchRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDispatchRuleResponse> CreateDispatchRule(CreateDispatchRuleRequest request) {
+            return await new CreateDispatchRuleExecutor().Client(this).Execute<CreateDispatchRuleResponse, CreateDispatchRuleResult, CreateDispatchRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2342,6 +2494,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteWebRuleResponse> DeleteWebRule(DeleteWebRuleRequest request) {
             return await new DeleteWebRuleExecutor().Client(this).Execute<DeleteWebRuleResponse, DeleteWebRuleResult, DeleteWebRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  批量添加防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDispatchRulesResponse CreateDispatchRules(CreateDispatchRulesRequest request) {
+            return  new CreateDispatchRulesExecutor().Client(this).Execute<CreateDispatchRulesResponse, CreateDispatchRulesResult, CreateDispatchRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量添加防护调度规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDispatchRulesResponse> CreateDispatchRules(CreateDispatchRulesRequest request) {
+            return await new CreateDispatchRulesExecutor().Client(this).Execute<CreateDispatchRulesResponse, CreateDispatchRulesResult, CreateDispatchRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

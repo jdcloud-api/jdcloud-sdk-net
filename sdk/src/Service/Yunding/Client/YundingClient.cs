@@ -178,59 +178,40 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  给网卡分配secondaryIp接口
+        ///  删除子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AssignSecondaryIpsResponse AssignSecondaryIps(AssignSecondaryIpsRequest request) {
-            return  new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request);
+        public DeleteSubnetResponse DeleteSubnet(DeleteSubnetRequest request) {
+            return  new DeleteSubnetExecutor().Client(this).Execute<DeleteSubnetResponse, DeleteSubnetResult, DeleteSubnetRequest>(request);
         }
 #else
         /// <summary>
-        ///  给网卡分配secondaryIp接口
+        ///  删除子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AssignSecondaryIpsResponse> AssignSecondaryIps(AssignSecondaryIpsRequest request) {
-            return await new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteSubnetResponse> DeleteSubnet(DeleteSubnetRequest request) {
+            return await new DeleteSubnetExecutor().Client(this).Execute<DeleteSubnetResponse, DeleteSubnetResult, DeleteSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        ///  查询子网列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyRdsWhiteListResponse ModifyRdsWhiteList(ModifyRdsWhiteListRequest request) {
-            return  new ModifyRdsWhiteListExecutor().Client(this).Execute<ModifyRdsWhiteListResponse, ModifyRdsWhiteListResult, ModifyRdsWhiteListRequest>(request);
+        public DescribeSubnetsResponse DescribeSubnets(DescribeSubnetsRequest request) {
+            return  new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        ///  查询子网列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyRdsWhiteListResponse> ModifyRdsWhiteList(ModifyRdsWhiteListRequest request) {
-            return await new ModifyRdsWhiteListExecutor().Client(this).Execute<ModifyRdsWhiteListResponse, ModifyRdsWhiteListResult, ModifyRdsWhiteListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateRdsDatabaseResponse CreateRdsDatabase(CreateRdsDatabaseRequest request) {
-            return  new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateRdsDatabaseResponse> CreateRdsDatabase(CreateRdsDatabaseRequest request) {
-            return await new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeSubnetsResponse> DescribeSubnets(DescribeSubnetsRequest request) {
+            return await new DescribeSubnetsExecutor().Client(this).Execute<DescribeSubnetsResponse, DescribeSubnetsResult, DescribeSubnetsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -254,21 +235,21 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+        ///  创建子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public GrantRdsPrivilegeResponse GrantRdsPrivilege(GrantRdsPrivilegeRequest request) {
-            return  new GrantRdsPrivilegeExecutor().Client(this).Execute<GrantRdsPrivilegeResponse, GrantRdsPrivilegeResult, GrantRdsPrivilegeRequest>(request);
+        public CreateSubnetResponse CreateSubnet(CreateSubnetRequest request) {
+            return  new CreateSubnetExecutor().Client(this).Execute<CreateSubnetResponse, CreateSubnetResult, CreateSubnetRequest>(request);
         }
 #else
         /// <summary>
-        ///  授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+        ///  创建子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<GrantRdsPrivilegeResponse> GrantRdsPrivilege(GrantRdsPrivilegeRequest request) {
-            return await new GrantRdsPrivilegeExecutor().Client(this).Execute<GrantRdsPrivilegeResponse, GrantRdsPrivilegeResult, GrantRdsPrivilegeRequest>(request).ConfigureAwait(false);
+        public async Task<CreateSubnetResponse> CreateSubnet(CreateSubnetRequest request) {
+            return await new CreateSubnetExecutor().Client(this).Execute<CreateSubnetResponse, CreateSubnetResult, CreateSubnetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -368,6 +349,196 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询弹性网卡信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkInterfaceResponse DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
+            return  new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性网卡信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkInterfaceResponse> DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
+            return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  监控数据上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PutResponse Put(PutRequest request) {
+            return  new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  监控数据上报。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PutResponse> Put(PutRequest request) {
+            return await new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给网卡删除secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UnassignSecondaryIpsResponse UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
+            return  new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给网卡删除secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UnassignSecondaryIpsResponse> UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
+            return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询弹性网卡列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
+            return  new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询弹性网卡列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
+            return await new DescribeNetworkInterfacesExecutor().Client(this).Execute<DescribeNetworkInterfacesResponse, DescribeNetworkInterfacesResult, DescribeNetworkInterfacesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  给网卡分配secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AssignSecondaryIpsResponse AssignSecondaryIps(AssignSecondaryIpsRequest request) {
+            return  new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  给网卡分配secondaryIp接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AssignSecondaryIpsResponse> AssignSecondaryIps(AssignSecondaryIpsRequest request) {
+            return await new AssignSecondaryIpsExecutor().Client(this).Execute<AssignSecondaryIpsResponse, AssignSecondaryIpsResult, AssignSecondaryIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyRdsWhiteListResponse ModifyRdsWhiteList(ModifyRdsWhiteListRequest request) {
+            return  new ModifyRdsWhiteListExecutor().Client(this).Execute<ModifyRdsWhiteListResponse, ModifyRdsWhiteListResult, ModifyRdsWhiteListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyRdsWhiteListResponse> ModifyRdsWhiteList(ModifyRdsWhiteListRequest request) {
+            return await new ModifyRdsWhiteListExecutor().Client(this).Execute<ModifyRdsWhiteListResponse, ModifyRdsWhiteListResult, ModifyRdsWhiteListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRdsDatabaseResponse CreateRdsDatabase(CreateRdsDatabaseRequest request) {
+            return  new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRdsDatabaseResponse> CreateRdsDatabase(CreateRdsDatabaseRequest request) {
+            return await new CreateRdsDatabaseExecutor().Client(this).Execute<CreateRdsDatabaseResponse, CreateRdsDatabaseResult, CreateRdsDatabaseRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GrantRdsPrivilegeResponse GrantRdsPrivilege(GrantRdsPrivilegeRequest request) {
+            return  new GrantRdsPrivilegeExecutor().Client(this).Execute<GrantRdsPrivilegeResponse, GrantRdsPrivilegeResult, GrantRdsPrivilegeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GrantRdsPrivilegeResponse> GrantRdsPrivilege(GrantRdsPrivilegeRequest request) {
+            return await new GrantRdsPrivilegeExecutor().Client(this).Execute<GrantRdsPrivilegeResponse, GrantRdsPrivilegeResult, GrantRdsPrivilegeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建网卡接口，只能创建辅助网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateNetworkInterfaceResponse CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
+            return  new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建网卡接口，只能创建辅助网卡
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateNetworkInterfaceResponse> CreateNetworkInterface(CreateNetworkInterfaceRequest request) {
+            return await new CreateNetworkInterfaceExecutor().Client(this).Execute<CreateNetworkInterfaceResponse, CreateNetworkInterfaceResult, CreateNetworkInterfaceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询子网信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSubnetResponse DescribeSubnet(DescribeSubnetRequest request) {
+            return  new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询子网信息详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
+            return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -387,21 +558,21 @@ namespace JDCloudSDK.Yunding.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询弹性网卡信息详情
+        ///  删除弹性网卡接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeNetworkInterfaceResponse DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
-            return  new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request);
+        public DeleteNetworkInterfaceResponse DeleteNetworkInterface(DeleteNetworkInterfaceRequest request) {
+            return  new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询弹性网卡信息详情
+        ///  删除弹性网卡接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeNetworkInterfaceResponse> DescribeNetworkInterface(DescribeNetworkInterfaceRequest request) {
-            return await new DescribeNetworkInterfaceExecutor().Client(this).Execute<DescribeNetworkInterfaceResponse, DescribeNetworkInterfaceResult, DescribeNetworkInterfaceRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteNetworkInterfaceResponse> DeleteNetworkInterface(DeleteNetworkInterfaceRequest request) {
+            return await new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -459,44 +630,6 @@ namespace JDCloudSDK.Yunding.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRdsWhiteListResponse> DescribeRdsWhiteList(DescribeRdsWhiteListRequest request) {
             return await new DescribeRdsWhiteListExecutor().Client(this).Execute<DescribeRdsWhiteListResponse, DescribeRdsWhiteListResult, DescribeRdsWhiteListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  监控数据上报。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public PutResponse Put(PutRequest request) {
-            return  new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  监控数据上报。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<PutResponse> Put(PutRequest request) {
-            return await new PutExecutor().Client(this).Execute<PutResponse, PutResult, PutRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  给网卡删除secondaryIp接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UnassignSecondaryIpsResponse UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
-            return  new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  给网卡删除secondaryIp接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UnassignSecondaryIpsResponse> UnassignSecondaryIps(UnassignSecondaryIpsRequest request) {
-            return await new UnassignSecondaryIpsExecutor().Client(this).Execute<UnassignSecondaryIpsResponse, UnassignSecondaryIpsResult, UnassignSecondaryIpsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
