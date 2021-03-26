@@ -44,10 +44,10 @@ namespace JDCloudSDK.Waf.Model
         ///<summary>
         /// cc防护
         ///</summary>
-        public string Cc{ get; set; }
+        public int? Cc{ get; set; }
         ///<summary>
         /// waf防护
         ///</summary>
-        public string Waf{ get; set; }
+        public int? Waf{ get; set; }
     }
 }

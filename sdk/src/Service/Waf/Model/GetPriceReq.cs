@@ -84,5 +84,13 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         [Required]
         public int ExtraBitsLimit{ get; set; }
+        ///<summary>
+        /// 云鼎的appCode
+        ///</summary>
+        public string AppCode{ get; set; }
+        ///<summary>
+        /// 云鼎的serviceCode
+        ///</summary>
+        public string ServiceCode{ get; set; }
     }
 }

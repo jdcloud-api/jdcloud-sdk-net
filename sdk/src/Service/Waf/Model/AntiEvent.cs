@@ -46,6 +46,10 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string CsaInfo{ get; set; }
         ///<summary>
+        /// 风险等级
+        ///</summary>
+        public string RiskLevel{ get; set; }
+        ///<summary>
         /// 来源地区
         ///</summary>
         public string Area{ get; set; }
@@ -89,5 +93,13 @@ namespace JDCloudSDK.Waf.Model
         /// 实例id
         ///</summary>
         public string WafInstanceId{ get; set; }
+        ///<summary>
+        /// 状态码
+        ///</summary>
+        public string AntiStatus{ get; set; }
+        ///<summary>
+        /// 状态标识
+        ///</summary>
+        public string UpstreamErr{ get; set; }
     }
 }

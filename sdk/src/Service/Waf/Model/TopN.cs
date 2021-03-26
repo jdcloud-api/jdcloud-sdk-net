@@ -53,5 +53,13 @@ namespace JDCloudSDK.Waf.Model
         /// Ua_top10
         ///</summary>
         public TopValue Ua_top10{ get; set; }
+        ///<summary>
+        /// Domain_anti_top10
+        ///</summary>
+        public TopAntiValue Domain_anti_top10{ get; set; }
+        ///<summary>
+        /// Url_anti_top10
+        ///</summary>
+        public TopAntiValue Url_anti_top10{ get; set; }
     }
 }

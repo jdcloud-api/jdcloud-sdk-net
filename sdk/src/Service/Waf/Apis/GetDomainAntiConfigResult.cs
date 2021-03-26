@@ -121,6 +121,6 @@ namespace  JDCloudSDK.Waf.Apis
         ///<summary>
         /// risk配置
         ///</summary>
-        public   EnableConf RiskConf{ get; set; }
+        public   RiskConf RiskConf{ get; set; }
     }
 }

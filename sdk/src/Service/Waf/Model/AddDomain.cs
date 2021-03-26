@@ -49,7 +49,7 @@ namespace JDCloudSDK.Waf.Model
         ///Required:true
         ///</summary>
         [Required]
-        public string Domain{ get; set; }
+        public List<string> Domain{ get; set; }
         ///<summary>
         /// 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
         ///Required:true

@@ -137,5 +137,9 @@ namespace JDCloudSDK.Waf.Model
         /// bot配置
         ///</summary>
         public EnableConf BotConf{ get; set; }
+        ///<summary>
+        /// risk配置
+        ///</summary>
+        public RiskConf RiskConf{ get; set; }
     }
 }

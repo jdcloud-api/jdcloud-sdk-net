@@ -59,7 +59,7 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public List<int?> Ids{ get; set; }
         ///<summary>
-        /// 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则
+        /// 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
         ///Required:true
         ///</summary>
         [Required]

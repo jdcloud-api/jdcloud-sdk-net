@@ -40,14 +40,14 @@ namespace JDCloudSDK.Waf.Model
         ///<summary>
         /// 自定义规则防护
         ///</summary>
-        public int? AclAnti{ get; set; }
+        public long? AclAnti{ get; set; }
         ///<summary>
         /// cc防护
         ///</summary>
-        public string CcAnti{ get; set; }
+        public long? CcAnti{ get; set; }
         ///<summary>
         /// web防护
         ///</summary>
-        public string WafAnti{ get; set; }
+        public long? WafAnti{ get; set; }
     }
 }

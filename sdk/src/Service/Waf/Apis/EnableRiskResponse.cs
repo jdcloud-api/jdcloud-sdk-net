@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Waf.Apis
 {
 
     /// <summary>
-    ///  使能risk
+    ///  使能数据风控
     /// </summary>
     public class EnableRiskResponse : JdcloudResponse<EnableRiskResult>
     {

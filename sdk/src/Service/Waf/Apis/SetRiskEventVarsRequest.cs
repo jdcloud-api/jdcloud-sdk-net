@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Instance-Management
- * Instance Management API
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,33 +26,38 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Waf.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
-namespace JDCloudSDK.Waf.Model
+namespace  JDCloudSDK.Waf.Apis
 {
 
     /// <summary>
-    ///  filter
+    ///  新增风险控制事件详细信息
     /// </summary>
-    public class Filter
+    public class SetRiskEventVarsRequest : JdcloudRequest
     {
-
         ///<summary>
-        /// 过滤条件的名称
+        /// 请求
         ///Required:true
         ///</summary>
         [Required]
-        public string Name{ get; set; }
+        public   SetRiskEventVarsReq Req{ get; set; }
         ///<summary>
-        /// 过滤条件的操作符，默认eq
-        ///</summary>
-        public string Operator{ get; set; }
-        ///<summary>
-        /// 过滤条件的值
+        /// 实例所属的地域ID
         ///Required:true
         ///</summary>
         [Required]
-        public List<string> Values{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
+        ///<summary>
+        /// 实例Id
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string WafInstanceId{ get; set; }
     }
 }

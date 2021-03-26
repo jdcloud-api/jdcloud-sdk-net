@@ -94,5 +94,13 @@ namespace JDCloudSDK.Waf.Model
         /// blockType 为3 时，为自定义页面名称，缺省为default
         ///</summary>
         public string Redirection{ get; set; }
+        ///<summary>
+        /// cc 统计维度，ip或cookie
+        ///</summary>
+        public string Dimension{ get; set; }
+        ///<summary>
+        /// cookiename, 只有当 dimension 为 cookie 时才有效
+        ///</summary>
+        public string Dmvalue{ get; set; }
     }
 }

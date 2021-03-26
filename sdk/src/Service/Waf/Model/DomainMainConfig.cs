@@ -92,6 +92,6 @@ namespace JDCloudSDK.Waf.Model
         ///<summary>
         /// 域名的地域信息，类型是map[string]regionVipInfo
         ///</summary>
-        public RegionVipInfo Region{ get; set; }
+        public DomainRegionInfo Region{ get; set; }
     }
 }

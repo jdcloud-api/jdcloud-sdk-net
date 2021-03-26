@@ -57,5 +57,9 @@ namespace JDCloudSDK.Waf.Model
         /// cc自定义规则个数
         ///</summary>
         public int? RulesCount{ get; set; }
+        ///<summary>
+        /// 动作配置，默认为告警，支持1，2，3和5四种类型动作
+        ///</summary>
+        public DenyActionCfg Action{ get; set; }
     }
 }

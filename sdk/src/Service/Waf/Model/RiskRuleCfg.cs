@@ -62,6 +62,18 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string Action{ get; set; }
         ///<summary>
+        /// 请求方法 支持 POST:1,GET:1,PUT:1
+        ///</summary>
+        public string Methods{ get; set; }
+        ///<summary>
+        /// 场景 支持 account_login / account_register
+        ///</summary>
+        public string SceneRef{ get; set; }
+        ///<summary>
+        /// 事件 支持 passwd:JSON_BODY.passwd,username:ARGS.username,session:ARGS_BODY.session
+        ///</summary>
+        public string Event{ get; set; }
+        ///<summary>
         /// 0-使用中 1-禁用
         ///</summary>
         public int? Disable{ get; set; }
@@ -69,5 +81,9 @@ namespace JDCloudSDK.Waf.Model
         /// 更新时间，s
         ///</summary>
         public int? UpdateTime{ get; set; }
+        ///<summary>
+        /// 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+        ///</summary>
+        public string Redirection{ get; set; }
     }
 }

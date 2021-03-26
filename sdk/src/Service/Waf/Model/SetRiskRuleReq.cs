@@ -67,10 +67,34 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public string Uri{ get; set; }
         ///<summary>
-        /// 动作 支持notice / verify@captcha
+        /// 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
         ///Required:true
         ///</summary>
         [Required]
         public string Action{ get; set; }
+        ///<summary>
+        /// 请求方法 支持 POST:1,GET:1,PUT:1
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string Methods{ get; set; }
+        ///<summary>
+        /// 场景 支持 account_login / account_register / data_risk_control
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string SceneRef{ get; set; }
+        ///<summary>
+        /// 事件 支持 passwd:BODY.passwd,username:ARGS.username
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string Event{ get; set; }
+        ///<summary>
+        /// 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string Redirection{ get; set; }
     }
 }

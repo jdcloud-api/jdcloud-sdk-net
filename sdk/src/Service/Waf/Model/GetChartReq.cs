@@ -47,13 +47,13 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string Domain{ get; set; }
         ///<summary>
-        /// 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+        /// 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
         ///Required:true
         ///</summary>
         [Required]
         public int Start{ get; set; }
         ///<summary>
-        /// 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+        /// 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
         ///Required:true
         ///</summary>
         [Required]
@@ -74,5 +74,13 @@ namespace JDCloudSDK.Waf.Model
         /// ua表示返回ua的饼图数据，仅getPieChart时有效。
         ///</summary>
         public string PieItem{ get; set; }
+        ///<summary>
+        /// 指定状态码，仅getStatusCodeInfo时有效
+        ///</summary>
+        public List<string> StatusCode{ get; set; }
+        ///<summary>
+        /// true表示获取状态码统计图、占比图。
+        ///</summary>
+        public bool IsStaCode{ get; set; }
     }
 }

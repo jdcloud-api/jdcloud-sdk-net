@@ -58,5 +58,9 @@ namespace JDCloudSDK.Waf.Model
         /// cc qps配置，ccMode 为0/1时， 该字段传0， 表示不可配；  ccMode为2/3时，qps限制[1-20000]
         ///</summary>
         public int? Qps{ get; set; }
+        ///<summary>
+        /// 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+        ///</summary>
+        public DenyActionCfg Action{ get; set; }
     }
 }

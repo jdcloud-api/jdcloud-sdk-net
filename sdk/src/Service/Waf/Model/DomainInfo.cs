@@ -54,12 +54,8 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string DnsType{ get; set; }
         ///<summary>
-        /// 备用cname
+        /// cname
         ///</summary>
-        public string BackupCname{ get; set; }
-        ///<summary>
-        /// 是否切清洗，0-否，1-是
-        ///</summary>
-        public int? Enable2Dos{ get; set; }
+        public string Cname{ get; set; }
     }
 }

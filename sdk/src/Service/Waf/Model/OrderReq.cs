@@ -67,7 +67,7 @@ namespace JDCloudSDK.Waf.Model
         ///Required:true
         ///</summary>
         [Required]
-        public int StartTime{ get; set; }
+        public long StartTime{ get; set; }
         ///<summary>
         /// 实例id，除新建必传
         ///</summary>
@@ -100,5 +100,13 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         [Required]
         public int ExtraBitsLimit{ get; set; }
+        ///<summary>
+        /// 云鼎的appCode
+        ///</summary>
+        public string AppCode{ get; set; }
+        ///<summary>
+        /// 云鼎的serviceCode
+        ///</summary>
+        public string ServiceCode{ get; set; }
     }
 }

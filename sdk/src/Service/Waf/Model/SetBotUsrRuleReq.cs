@@ -82,5 +82,29 @@ namespace JDCloudSDK.Waf.Model
         /// 规则类型，general-通用规则，advanced-高级规则，缺省为general
         ///</summary>
         public string RuleType{ get; set; }
+        ///<summary>
+        /// 响应状态码
+        ///</summary>
+        public int? Status{ get; set; }
+        ///<summary>
+        /// 状态码数量阀值
+        ///</summary>
+        public int? Ststhrst{ get; set; }
+        ///<summary>
+        /// 状态码比例阀值
+        ///</summary>
+        public int? StsthrstRatio{ get; set; }
+        ///<summary>
+        /// 响应码功能是否启用
+        ///</summary>
+        public int? StatusDisable{ get; set; }
+        ///<summary>
+        /// 规则生效时间是否启用
+        ///</summary>
+        public int? DateDisable{ get; set; }
+        ///<summary>
+        /// 统计维度
+        ///</summary>
+        public string Unit{ get; set; }
     }
 }

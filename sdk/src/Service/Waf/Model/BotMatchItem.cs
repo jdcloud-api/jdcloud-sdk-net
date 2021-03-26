@@ -39,13 +39,13 @@ namespace JDCloudSDK.Waf.Model
     {
 
         ///<summary>
-        /// 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie， uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)
+        /// 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)
         ///Required:true
         ///</summary>
         [Required]
         public string Field{ get; set; }
         ///<summary>
-        /// 0-完全匹配 1-包含匹配, field为fingerExist/fingerValid时无意义。
+        /// 0-完全匹配 1-包含匹配, 6-规则生效区间(field为Wday或Hour,Wday) field为fingerExist/fingerValid时无意义。
         ///Required:true
         ///</summary>
         [Required]

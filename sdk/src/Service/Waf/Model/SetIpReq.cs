@@ -55,6 +55,10 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? Iswhite{ get; set; }
         ///<summary>
+        /// 0默认关闭，1默认打开
+        ///</summary>
+        public int? IsEnable{ get; set; }
+        ///<summary>
         /// ip配置
         ///Required:true
         ///</summary>

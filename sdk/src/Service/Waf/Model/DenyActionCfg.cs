@@ -39,13 +39,13 @@ namespace JDCloudSDK.Waf.Model
     {
 
         ///<summary>
-        /// 黑名单匹配动作类型 1-4 分别表示forbidden@1 redirect@2 verify@captcha3 verify@jscookie4 5-告警(自定义bot增加)，6-302cookie(自定义bot增加)
+        /// 黑名单匹配动作类型 1-4 分别表示forbidden@1 redirect@2 verify@captcha3 verify@jscookie4 5-告警(自定义bot增加)，6-302cookie(自定义bot增加), 7-cc动态防护
         ///Required:true
         ///</summary>
         [Required]
         public int AtOp{ get; set; }
         ///<summary>
-        /// 黑名单匹配动作内容 当atOp为3/4时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
+        /// 黑名单匹配动作内容 当atOp为3/4/7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
         ///Required:true
         ///</summary>
         [Required]

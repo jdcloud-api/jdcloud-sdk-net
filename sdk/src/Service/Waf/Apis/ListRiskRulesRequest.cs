@@ -45,7 +45,7 @@ namespace  JDCloudSDK.Waf.Apis
         ///Required:true
         ///</summary>
         [Required]
-        public   ListRulesReq Req{ get; set; }
+        public   ListRiskRulesReq Req{ get; set; }
         ///<summary>
         /// 实例所属的地域ID
         ///Required:true

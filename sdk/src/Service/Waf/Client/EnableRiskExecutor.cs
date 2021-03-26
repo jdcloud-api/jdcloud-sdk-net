@@ -33,12 +33,12 @@ namespace JDCloudSDK.Waf.Client
 {
 
     /// <summary>
-    ///  使能risk
+    ///  使能数据风控
     /// </summary>
     public class EnableRiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  使能risk接口的Http 请求方法
+        ///  使能数据风控接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Waf.Client
             }
         }
         /// <summary>
-        ///  使能risk接口的Http资源请求路径
+        ///  使能数据风控接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

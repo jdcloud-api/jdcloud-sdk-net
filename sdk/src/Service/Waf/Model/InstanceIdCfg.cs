@@ -68,11 +68,11 @@ namespace JDCloudSDK.Waf.Model
         ///<summary>
         /// 创建时间
         ///</summary>
-        public int? StartTime{ get; set; }
+        public string StartTime{ get; set; }
         ///<summary>
         /// 资源预计释放时间，仅过期且未释放时有效
         ///</summary>
-        public int? ReleaseingTime{ get; set; }
+        public string ReleaseingTime{ get; set; }
         ///<summary>
         /// 资源的计费状态，1-服务中，2-过期停服，3-过期释放
         ///</summary>
