@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Bri.Model
 {
@@ -65,5 +66,18 @@ namespace JDCloudSDK.Bri.Model
         /// 资源包id
         ///</summary>
         public string PackId{ get; set; }
+        ///<summary>
+        /// 是否需要爬虫ip
+        ///</summary>
+        public bool NeedSpiderIp{ get; set; }
+        ///<summary>
+        /// QPS上限
+        ///</summary>
+        public int? QpsLimit{ get; set; }
+        ///<summary>
+        /// 注册，登录，营销场景的版本
+        ///</summary>
+        [JsonProperty("version")]
+        public int? VersionValue{ get; set; }
     }
 }

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Bri.Model
 {
@@ -68,5 +69,20 @@ namespace JDCloudSDK.Bri.Model
         ///</summary>
         [Required]
         public int PackageType{ get; set; }
+        ///<summary>
+        /// QPS上限(1-7) 1-100 2-300 3-500 4-1000 5-3000 6-5000 7-10000
+        ///Required:true
+        ///</summary>
+        [Required]
+        public int QpsLimit{ get; set; }
+        ///<summary>
+        /// 是否需要爬虫IP识别,当packageType为ip时必填  false-不购买  true-购买
+        ///</summary>
+        public bool NeedSpiderIp{ get; set; }
+        ///<summary>
+        /// 注册，登录，营销场景的版本号，当packageTpe为signup,login,marketing时必填   1-标准版  2-定制版
+        ///</summary>
+        [JsonProperty("version")]
+        public int? VersionValue{ get; set; }
     }
 }

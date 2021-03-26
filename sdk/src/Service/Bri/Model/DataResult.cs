@@ -42,7 +42,7 @@ namespace JDCloudSDK.Bri.Model
         ///</summary>
         public int? Timestamp{ get; set; }
         ///<summary>
-        /// 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备
+        /// 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备，reg-注册，login-登录，activity-营销
         ///</summary>
         public string ResourceType{ get; set; }
         ///<summary>
