@@ -36,63 +36,55 @@ namespace  JDCloudSDK.Monitor.Apis
 {
 
     /// <summary>
-    ///  根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+    ///  查询某资源下指定tag key的tag value
     /// </summary>
-    public class DescribeOneDataPointRequest : JdcloudRequest
+    public class DescribeTagValuesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 资源的类型，取值vm, lb, ip, database 等。可用的serviceCode请使用describeServices接口查询
+        /// serviceCode
         ///Required:true
         ///</summary>
         [Required]
         public   string ServiceCode{ get; set; }
         ///<summary>
-        /// 资源的维度。serviceCode下可用的dimension请使用describeServices接口查询
-        ///</summary>
-        public   string Dimension{ get; set; }
-        ///<summary>
-        /// 资源的uuid，支持多个resourceId批量查询，每个id用竖线分隔。 如：id1|id2|id3|id4
+        /// 资源标识
         ///Required:true
         ///</summary>
         [Required]
         public   string ResourceId{ get; set; }
         ///<summary>
-        /// 自定义标签
+        /// metric
+        ///</summary>
+        public   string Metric{ get; set; }
+        ///<summary>
+        /// 查询时间范围的开始时间(如不传,则默认为1时前)， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+,:要转译,如2019-10-23T10%3A33%3A31%2B0800）。对于非连续的时序数据，开始时间无法保证准确性
+        ///</summary>
+        public   string StartTime{ get; set; }
+        ///<summary>
+        /// 查询时间范围的结束时间(如不传,则默认为当前)， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+,:要转译,如2019-10-23T10%3A33%3A31%2B0800）.对于非连续的时序数据，结束时间无法保证准确性
+        ///</summary>
+        public   string EndTime{ get; set; }
+        ///<summary>
+        /// 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+        ///</summary>
+        public   string TimeInterval{ get; set; }
+        ///<summary>
+        /// 根据tags进行筛选(传入*和不传的效果一致)
         ///</summary>
         public List<TagFilter> Tags{ get; set; }
 
         ///<summary>
-        /// 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（早于30d时，将被重置为30d）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
-        ///</summary>
-        public   string StartTime{ get; set; }
-        ///<summary>
-        /// 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
-        ///</summary>
-        public   string EndTime{ get; set; }
-        ///<summary>
-        /// 查询的时间间隔，最大不超过30天，支持分钟级别,小时级别，天级别，例如：1m、1h、1d
-        ///</summary>
-        public   string TimeInterval{ get; set; }
-        ///<summary>
-        /// 聚合方式：max avg min等,用于不同维度之间聚合
-        ///</summary>
-        public   string AggrType{ get; set; }
-        ///<summary>
-        /// 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式,默认last
-        ///</summary>
-        public   string DownAggrType{ get; set; }
-        ///<summary>
-        /// 地域 Id
+        /// region
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 监控项英文标识(id)
+        /// region
         ///Required:true
         ///</summary>
         [Required]
-        public   string Metric{ get; set; }
+        public   string TagKey{ get; set; }
     }
 }

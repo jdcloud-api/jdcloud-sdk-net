@@ -49,6 +49,11 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public List<BaseContact> BaseContact{ get; set; }
         ///<summary>
+        /// 数据所有者，1云监控控制台; 2云鼎。默认为1
+        /// in: query
+        ///</summary>
+        public long? DataOwner{ get; set; }
+        ///<summary>
         /// 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
         ///Required:true
         ///</summary>
@@ -58,6 +63,10 @@ namespace JDCloudSDK.Monitor.Model
         /// 是否启用, 1表示启用规则，0表示禁用规则，默认为1
         ///</summary>
         public long? Enabled{ get; set; }
+        ///<summary>
+        /// 回调数组
+        ///</summary>
+        public List<WebHookOption> MultiWebHook{ get; set; }
         ///<summary>
         /// 命名空间
         ///Required:true

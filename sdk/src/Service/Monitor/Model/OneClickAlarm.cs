@@ -27,42 +27,52 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  oneClickAlarm
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class OneClickAlarm
     {
 
         ///<summary>
-        /// Description
+        /// 一键报警规则ID
+        ///</summary>
+        public string AlarmId{ get; set; }
+        ///<summary>
+        /// 一键告警规则配置
+        /// in: body
+        ///</summary>
+        public List<OneClickAlarmOption> AlarmOptions{ get; set; }
+        ///<summary>
+        /// 创建时间
+        ///</summary>
+        public DateTime? CreateTime{ get; set; }
+        ///<summary>
+        /// 描述
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 是否开启, 1表示打开，0表示关闭
         ///</summary>
-        public long? FolderId{ get; set; }
+        public long? Enabled{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
+        /// 是否由系统规则刚刚创建的，0代表是刚刚创建的，1代表由用户操作过的
         ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public long? Indeed{ get; set; }
         ///<summary>
-        /// templateUid
-        ///Required:true
+        /// 产品线标识
         ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
+        public string ServiceCode{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// 产品线名称
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string ServiceName{ get; set; }
+        ///<summary>
+        /// 更新时间
+        ///</summary>
+        public DateTime? UpdateTime{ get; set; }
     }
 }

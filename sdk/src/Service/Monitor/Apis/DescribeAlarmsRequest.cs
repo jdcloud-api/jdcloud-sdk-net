@@ -47,6 +47,10 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   long? PageSize{ get; set; }
         ///<summary>
+        /// 数据所有者，1云监控控制台; 2云鼎。默认为1
+        ///</summary>
+        public   long? DataOwner{ get; set; }
+        ///<summary>
         /// 产品线标识，同一个产品线下可能存在多个product，如(redis下有redis2.8cluster、redis4.0)
         ///</summary>
         public   string ServiceCode{ get; set; }

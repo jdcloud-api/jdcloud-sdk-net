@@ -33,36 +33,46 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  panelPositionForUpdate
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class PanelPositionForUpdate
     {
 
         ///<summary>
-        /// Description
-        ///</summary>
-        public string Description{ get; set; }
-        ///<summary>
-        /// FolderId，文件夹id，默认为0
-        ///</summary>
-        public long? FolderId{ get; set; }
-        ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
+        /// 该panel所在列
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public long Col{ get; set; }
         ///<summary>
-        /// templateUid
+        /// 该panel高度
         ///Required:true
         ///</summary>
         [Required]
-        public string TemplateUid{ get; set; }
+        public long Height{ get; set; }
         ///<summary>
-        /// Title
+        /// 该panel在dashboard中的顺序
         ///Required:true
         ///</summary>
         [Required]
-        public string Title{ get; set; }
+        public long Order{ get; set; }
+        ///<summary>
+        /// 更新panel的uuid
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string PanelUid{ get; set; }
+        ///<summary>
+        /// 该panel所在行
+        ///Required:true
+        ///</summary>
+        [Required]
+        public long Row{ get; set; }
+        ///<summary>
+        /// 该panel宽度
+        ///Required:true
+        ///</summary>
+        [Required]
+        public long Width{ get; set; }
     }
 }

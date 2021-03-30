@@ -70,7 +70,7 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   bool GroupBy{ get; set; }
         ///<summary>
-        /// 是否求速率
+        /// 是否求速率。仅对累积类型指标有意义
         ///</summary>
         public   bool Rate{ get; set; }
         ///<summary>

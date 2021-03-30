@@ -33,36 +33,40 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  updateOneClickAlarmOption
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class UpdateOneClickAlarmOption
     {
 
         ///<summary>
-        /// Description
+        /// 告警通知联系人
+        /// in: body
         ///</summary>
-        public string Description{ get; set; }
+        public List<BaseContact> Contacts{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 是否开启一键报警，1打开；0-关闭。默认为0
         ///</summary>
-        public long? FolderId{ get; set; }
+        public long? Enabled{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
+        /// 通知策略
+        /// in: body
+        ///</summary>
+        public List<NoticeOption> NoticeOption{ get; set; }
+        ///<summary>
+        /// 一键报警规则下的报警规则id
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string PolicyId{ get; set; }
         ///<summary>
-        /// templateUid
+        /// RuleOption
         ///Required:true
         ///</summary>
         [Required]
-        public string TemplateUid{ get; set; }
+        public RuleOption RuleOption{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// WebHookOption
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public WebHookOption WebHookOption{ get; set; }
     }
 }

@@ -33,36 +33,50 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  datasource
+    ///  previewPanelMonitorDataSpec
     /// </summary>
-    public class Datasource
+    public class PreviewPanelMonitorDataSpec
     {
 
         ///<summary>
-        /// customHttpHeader
-        ///</summary>
-        public Dictionary<String,string> CustomHttpHeader{ get; set; }
-        ///<summary>
-        /// 数据源名称
+        /// 该panel所属dashboard的uid
         ///Required:true
         ///</summary>
         [Required]
-        public string Name{ get; set; }
+        public string DashboardUid{ get; set; }
         ///<summary>
-        /// OpentsdbExtend
-        ///</summary>
-        public OpentsdbExtend OpentsdbExtend{ get; set; }
-        ///<summary>
-        /// jdcloud-monitor-opentsdb     后续可能会有其它。如jdcloud-monitor-prometheus等
+        /// 该panel包含的metric
         ///Required:true
         ///</summary>
         [Required]
-        public string PluginType{ get; set; }
+        public List<PanelMetricForCreate> PanelMetrics{ get; set; }
         ///<summary>
-        /// 数据源地址
+        /// 资源id列表,与标签服务互斥,且资源id列表与标签服务列表至少传一个
+        ///</summary>
+        public List<PanelResource> PanelResources{ get; set; }
+        ///<summary>
+        /// 标签服务列表,与资源id列表互斥,且资源id列表与标签服务列表至少传一个
+        ///</summary>
+        public List<PanelTagResource> PanelTagResources{ get; set; }
+        ///<summary>
+        /// topN的数量，图表类型为3(topN表格)时必填
+        ///</summary>
+        public long? PanelTopNum{ get; set; }
+        ///<summary>
+        /// 该panel的类型，1-折线图(明细);2-折线图(汇总);3-topN表格
         ///Required:true
         ///</summary>
         [Required]
-        public string Url{ get; set; }
+        public long PanelType{ get; set; }
+        ///<summary>
+        /// 该panel所属产品
+        ///Required:true
+        ///</summary>
+        [Required]
+        public string Product{ get; set; }
+        ///<summary>
+        /// 依据tag过滤(维度)
+        ///</summary>
+        public List<TagFilter> Tags{ get; set; }
     }
 }

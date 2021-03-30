@@ -28,41 +28,35 @@ using System.Collections.Generic;
 using System.Text;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  panelTagResource
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class PanelTagResource
     {
 
         ///<summary>
-        /// Description
-        ///</summary>
-        public string Description{ get; set; }
-        ///<summary>
-        /// FolderId，文件夹id，默认为0
-        ///</summary>
-        public long? FolderId{ get; set; }
-        ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
+        /// 标签服务对应的key
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string Key{ get; set; }
         ///<summary>
-        /// templateUid
+        /// region
         ///Required:true
         ///</summary>
         [Required]
-        public string TemplateUid{ get; set; }
+        [JsonProperty("regionId")]
+        public string RegionIdValue{ get; set; }
         ///<summary>
-        /// Title
+        /// 标签服务对应的values
         ///Required:true
         ///</summary>
         [Required]
-        public string Title{ get; set; }
+        public List<string> Values{ get; set; }
     }
 }

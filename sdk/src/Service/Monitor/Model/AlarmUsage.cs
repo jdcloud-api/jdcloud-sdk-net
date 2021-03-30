@@ -27,42 +27,27 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  alarmUsage
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class AlarmUsage
     {
 
         ///<summary>
-        /// Description
+        /// 规则类型：resourceMonitor资源监控；customMetric自定义监控；oneclickAlarm一键报警
         ///</summary>
-        public string Description{ get; set; }
+        public string AlarmType{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 总个数
         ///</summary>
-        public long? FolderId{ get; set; }
+        public long? AllCount{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
+        /// 启用个数
         ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
-        ///<summary>
-        /// templateUid
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
-        ///<summary>
-        /// Title
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public long? EnableCount{ get; set; }
     }
 }

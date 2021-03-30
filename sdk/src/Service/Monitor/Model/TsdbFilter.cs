@@ -33,36 +33,33 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  tsdbFilter
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class TsdbFilter
     {
 
         ///<summary>
-        /// Description
-        ///</summary>
-        public string Description{ get; set; }
-        ///<summary>
-        /// FolderId，文件夹id，默认为0
-        ///</summary>
-        public long? FolderId{ get; set; }
-        ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
+        /// 过滤类型支持以下几种
+        /// literal_or：精确匹配一个或多个值，比如key为host，value为web1，表示过滤host&#x3D;web1的数据(若要匹配多个值，value通过&#39;\\|&#39;分割，比如web1\\|web2)；
+        /// not_key：返回不包含key值的时序数据
+        /// wildcard：支持通配，比如key为host，value为web*，会匹配所有key为host，value为web开头的数据
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string FilterType{ get; set; }
         ///<summary>
-        /// templateUid
+        /// 是否对查询的tags分组,默认false
+        ///</summary>
+        public bool GroupBy{ get; set; }
+        ///<summary>
+        /// Tag键，对应上报数据中tag中的key，必传参数
         ///Required:true
         ///</summary>
         [Required]
-        public string TemplateUid{ get; set; }
+        public string Key{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// Tag值，对应上报数据中tag中的value
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string Value{ get; set; }
     }
 }

@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Newtonsoft.Json;
 
 namespace JDCloudSDK.Monitor.Model
 {
@@ -38,9 +39,14 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// HandleTagCode
+        /// 操作类型 1 复制原数据点，复制过程中只拷贝对原数据中tag改名的tag 2 不进行复制
         ///</summary>
         public long? HandleTagCode{ get; set; }
+        ///<summary>
+        /// HandleTagsValue
+        ///</summary>
+        [JsonProperty("handleTags")]
+        public List<DataTag> HandleTagsValue{ get; set; }
         ///<summary>
         /// PrefixMetric
         ///</summary>

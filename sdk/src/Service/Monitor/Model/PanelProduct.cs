@@ -27,42 +27,39 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  panelProduct
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class PanelProduct
     {
 
         ///<summary>
-        /// Description
+        /// 绑定tags，查数据必传
         ///</summary>
-        public string Description{ get; set; }
+        public Dictionary<String,string> BindTags{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 子维度
         ///</summary>
-        public long? FolderId{ get; set; }
+        public List<PanelDimension> Dimension{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
+        /// 产品标识
         ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string Product{ get; set; }
         ///<summary>
-        /// templateUid
-        ///Required:true
+        /// 产品名称
         ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
+        public string ProductName{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// serviceCode
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string ServiceCode{ get; set; }
+        ///<summary>
+        /// 标签服务处注册的serviceCode
+        ///</summary>
+        public string TagServiceCode{ get; set; }
     }
 }

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Monitor.Model;
 
 namespace  JDCloudSDK.Monitor.Apis
 {
@@ -35,7 +36,12 @@ namespace  JDCloudSDK.Monitor.Apis
     /// <summary>
     ///  根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
     /// </summary>
-    public class DescribeOneDataPointResponse : JdcloudResponse<DescribeOneDataPointResult>
+    public class LastDownsampleResult : JdcloudResult
     {
+        ///<summary>
+        /// Items
+        ///</summary>
+        public List<LastDownsampleRespItem> Items{ get; set; }
+
     }
 }

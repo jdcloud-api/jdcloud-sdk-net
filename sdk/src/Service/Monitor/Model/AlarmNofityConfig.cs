@@ -33,36 +33,28 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  alarmNofityConfig
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class AlarmNofityConfig
     {
 
         ///<summary>
-        /// Description
-        ///</summary>
-        public string Description{ get; set; }
-        ///<summary>
-        /// FolderId，文件夹id，默认为0
-        ///</summary>
-        public long? FolderId{ get; set; }
-        ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
+        /// ark节点
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string ArkNode{ get; set; }
         ///<summary>
-        /// templateUid
+        /// 通知channle名称
         ///Required:true
         ///</summary>
         [Required]
-        public string TemplateUid{ get; set; }
+        public string ChannelName{ get; set; }
         ///<summary>
-        /// Title
+        /// 通知channle目的地url
         ///Required:true
         ///</summary>
         [Required]
-        public string Title{ get; set; }
+        public string ChannelUrl{ get; set; }
     }
 }

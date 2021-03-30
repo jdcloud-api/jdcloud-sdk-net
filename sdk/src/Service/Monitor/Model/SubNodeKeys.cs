@@ -27,42 +27,23 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  subNodeKeys
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class SubNodeKeys
     {
 
         ///<summary>
-        /// Description
+        /// 该key所在层级
         ///</summary>
-        public string Description{ get; set; }
+        public long? Index{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// key
         ///</summary>
-        public long? FolderId{ get; set; }
-        ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
-        ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
-        ///<summary>
-        /// templateUid
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
-        ///<summary>
-        /// Title
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string Key{ get; set; }
     }
 }

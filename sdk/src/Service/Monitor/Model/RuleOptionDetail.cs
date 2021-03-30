@@ -38,7 +38,7 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
-        /// 规则触发条件,与模块参数同时指定时，优先使用rules
+        /// 规则触发条件,与模板参数同时指定时，优先使用rules
         ///</summary>
         public List<BasicRuleDetail> Rules{ get; set; }
         ///<summary>

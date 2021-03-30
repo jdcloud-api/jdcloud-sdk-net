@@ -39,6 +39,10 @@ namespace JDCloudSDK.Monitor.Model
     {
 
         ///<summary>
+        /// customHttpHeader
+        ///</summary>
+        public Dictionary<String,string> CustomHttpHeader{ get; set; }
+        ///<summary>
         /// OpentsdbExtend
         ///</summary>
         public OpentsdbExtend OpentsdbExtend{ get; set; }

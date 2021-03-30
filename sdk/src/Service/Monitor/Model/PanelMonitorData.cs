@@ -27,42 +27,55 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  panelMonitorData
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class PanelMonitorData
     {
 
         ///<summary>
-        /// Description
+        /// 聚合方式
         ///</summary>
-        public string Description{ get; set; }
+        public string Aggregator{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 监控数据
         ///</summary>
-        public long? FolderId{ get; set; }
+        public List<DataPoint> DataPoint{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
+        /// 采样方式
         ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string Downsample{ get; set; }
         ///<summary>
-        /// templateUid
-        ///Required:true
+        /// 采样周期
         ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
+        public string DownsamplePeriod{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// metric
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string Metric{ get; set; }
+        ///<summary>
+        /// metric名字
+        ///</summary>
+        public string MetricName{ get; set; }
+        ///<summary>
+        /// 实例id，汇总图无
+        ///</summary>
+        public string ResourceId{ get; set; }
+        ///<summary>
+        /// 实例名称，汇总图无；标签资源该值为实例id
+        ///</summary>
+        public string ResourceName{ get; set; }
+        ///<summary>
+        /// 该资源的维度值
+        ///</summary>
+        public Dictionary<String,string> Tags{ get; set; }
+        ///<summary>
+        /// metric单位
+        ///</summary>
+        public string Unit{ get; set; }
     }
 }

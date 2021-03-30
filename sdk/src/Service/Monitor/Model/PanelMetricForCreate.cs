@@ -33,36 +33,24 @@ namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  panelMetricForCreate
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class PanelMetricForCreate
     {
 
         ///<summary>
-        /// Description
+        /// 聚合方式，跨资源计算方式
         ///</summary>
-        public string Description{ get; set; }
+        public string Aggregator{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 采样方式，同一资源计算方式，如一分钟两个点，计算一分钟内这两个点的平均值得出一个点
         ///</summary>
-        public long? FolderId{ get; set; }
+        public string Downsample{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
+        /// metric
         ///Required:true
         ///</summary>
         [Required]
-        public Dictionary<String,object> Params{ get; set; }
-        ///<summary>
-        /// templateUid
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
-        ///<summary>
-        /// Title
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string Metric{ get; set; }
     }
 }

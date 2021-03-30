@@ -27,7 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
@@ -40,9 +39,7 @@ namespace JDCloudSDK.Monitor.Model
 
         ///<summary>
         /// filters, name为dashboardUids， values为dashboardUid列表，精确匹配，支持多个
-        ///Required:true
         ///</summary>
-        [Required]
         public List<Filter> Filters{ get; set; }
     }
 }

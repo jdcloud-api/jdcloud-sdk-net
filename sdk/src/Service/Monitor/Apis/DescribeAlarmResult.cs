@@ -75,6 +75,11 @@ namespace  JDCloudSDK.Monitor.Apis
         ///</summary>
         public   long? Enabled{ get; set; }
         ///<summary>
+        /// url回调设置数组
+        ///</summary>
+        public List<WebHookOption> MultiWebHook{ get; set; }
+
+        ///<summary>
         /// 通知策略
         ///</summary>
         public List<NoticeOption> NoticeOption{ get; set; }

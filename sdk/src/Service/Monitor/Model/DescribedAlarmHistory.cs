@@ -54,6 +54,10 @@ namespace JDCloudSDK.Monitor.Model
         ///</summary>
         public long? DurationTimes{ get; set; }
         ///<summary>
+        /// 是否是一键告警 (1-一键告警  0-非一键告警)
+        ///</summary>
+        public long? IsOneClickAlarm{ get; set; }
+        ///<summary>
         /// 告警持续时间，单位分钟
         ///</summary>
         public long? NoticeDurationTime{ get; set; }

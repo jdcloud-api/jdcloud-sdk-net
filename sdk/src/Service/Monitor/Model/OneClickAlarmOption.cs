@@ -27,42 +27,48 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  oneClickAlarmOption
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class OneClickAlarmOption
     {
 
         ///<summary>
-        /// Description
+        /// 通知的联系人
+        /// in: body
         ///</summary>
-        public string Description{ get; set; }
+        public List<BaseContact> Contacts{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 资源维度(vm-gpu、mongos-shard)
         ///</summary>
-        public long? FolderId{ get; set; }
+        public string Dimension{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
+        /// 资源维度名称
         ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string DimensionName{ get; set; }
         ///<summary>
-        /// templateUid
-        ///Required:true
+        /// 是否启用, 1表示启用规则，0表示禁用规则
         ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
+        public long? Enabled{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// 一键报警规则下的报警规则id
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string PolicyId{ get; set; }
+        ///<summary>
+        /// 资源类型(vm、database、db_ro……)
+        ///</summary>
+        public string Product{ get; set; }
+        ///<summary>
+        /// 资源类型名称
+        ///</summary>
+        public string ProductName{ get; set; }
+        ///<summary>
+        /// RuleOption
+        ///</summary>
+        public RuleOptionDetail RuleOption{ get; set; }
     }
 }

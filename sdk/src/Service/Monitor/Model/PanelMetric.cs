@@ -27,42 +27,35 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Monitor.Model
 {
 
     /// <summary>
-    ///  createGrafanaDashboardSpec
+    ///  panelMetric
     /// </summary>
-    public class CreateGrafanaDashboardSpec
+    public class PanelMetric
     {
 
         ///<summary>
-        /// Description
+        /// 推荐聚合方式
         ///</summary>
-        public string Description{ get; set; }
+        public string Aggregator{ get; set; }
         ///<summary>
-        /// FolderId，文件夹id，默认为0
+        /// 推荐采样方式
         ///</summary>
-        public long? FolderId{ get; set; }
+        public string Downsample{ get; set; }
         ///<summary>
-        /// Params, 模板参数名称及指定值，key为名称、value为指定值
-        ///Required:true
+        /// metric标识
         ///</summary>
-        [Required]
-        public Dictionary<String,object> Params{ get; set; }
+        public string Metric{ get; set; }
         ///<summary>
-        /// templateUid
-        ///Required:true
+        /// metric名字
         ///</summary>
-        [Required]
-        public string TemplateUid{ get; set; }
+        public string MetricName{ get; set; }
         ///<summary>
-        /// Title
-        ///Required:true
+        /// 单位
         ///</summary>
-        [Required]
-        public string Title{ get; set; }
+        public string Unit{ get; set; }
     }
 }
