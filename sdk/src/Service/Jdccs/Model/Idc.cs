@@ -51,5 +51,21 @@ namespace JDCloudSDK.Jdccs.Model
         /// 是否是商业化外部机房
         ///</summary>
         public bool IsExternalIdc{ get; set; }
+        ///<summary>
+        /// 机房地址
+        ///</summary>
+        public string Address{ get; set; }
+        ///<summary>
+        /// 机房主管
+        ///</summary>
+        public string Manager{ get; set; }
+        ///<summary>
+        /// 机房主管电话
+        ///</summary>
+        public string ManagerPhone{ get; set; }
+        ///<summary>
+        /// 机房类别 1:租用 2:自建 3:合作 4:其他
+        ///</summary>
+        public int? Category{ get; set; }
     }
 }

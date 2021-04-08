@@ -57,5 +57,25 @@ namespace JDCloudSDK.Jdccs.Model
         /// 其它设备总数目
         ///</summary>
         public int? Other{ get; set; }
+        ///<summary>
+        /// 已开通
+        ///</summary>
+        public int? Opened{ get; set; }
+        ///<summary>
+        /// 已上架
+        ///</summary>
+        public int? Launched{ get; set; }
+        ///<summary>
+        /// 操作中
+        ///</summary>
+        public int? Operating{ get; set; }
+        ///<summary>
+        /// 变更中
+        ///</summary>
+        public int? Modifying{ get; set; }
+        ///<summary>
+        /// 退订中
+        ///</summary>
+        public int? Canceling{ get; set; }
     }
 }

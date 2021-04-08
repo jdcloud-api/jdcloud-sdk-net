@@ -101,5 +101,17 @@ namespace JDCloudSDK.Jdccs.Model
         /// 规则状态 disabled:禁用 enabled:启用
         ///</summary>
         public string Status{ get; set; }
+        ///<summary>
+        /// 交换机信息
+        ///</summary>
+        public List<Switchboard> Switchboard{ get; set; }
+        ///<summary>
+        /// 通知对象用户ID,若多个用逗号分隔
+        ///</summary>
+        public string UserId{ get; set; }
+        ///<summary>
+        /// 通知对象组ID
+        ///</summary>
+        public string GroupId{ get; set; }
     }
 }

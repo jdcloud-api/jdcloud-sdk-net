@@ -101,5 +101,13 @@ namespace JDCloudSDK.Waf.Model
         /// 状态标识
         ///</summary>
         public string UpstreamErr{ get; set; }
+        ///<summary>
+        /// 是否已加入白名单
+        ///</summary>
+        public int? SkipExist{ get; set; }
+        ///<summary>
+        /// 是否已加入黑名单
+        ///</summary>
+        public int? DenyExist{ get; set; }
     }
 }

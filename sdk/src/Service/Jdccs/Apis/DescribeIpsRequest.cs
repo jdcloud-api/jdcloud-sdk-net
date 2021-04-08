@@ -48,15 +48,32 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
+        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        ///</summary>
+        public   string LineType{ get; set; }
+        ///<summary>
+        /// 状态 normal:正常 abnormal:异常
+        ///</summary>
+        public   string Status{ get; set; }
+        ///<summary>
+        /// IP地址段
+        ///</summary>
+        public   string CidrAddr{ get; set; }
+        ///<summary>
         /// ipId - 公网IP实例ID，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 状态 normal:正常 abnormal:异常
+        /// null
         ///</summary>
-        public   string Status{ get; set; }
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
         ///<summary>
         /// IDC机房ID
         ///Required:true

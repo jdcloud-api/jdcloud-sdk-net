@@ -56,6 +56,13 @@ namespace JDCloudSDK.Resourcetag.Model
         ///</summary>
         public List<TagFilter> TagFilters{ get; set; }
         ///<summary>
+        /// 控制标签显示参数, 默认为0
+        /// 0: 只显示普通用户标签
+        /// 1: 显示系统标签和普通用户标签
+        /// 
+        ///</summary>
+        public int? ShowTagStatus{ get; set; }
+        ///<summary>
         /// 排序依据
         ///</summary>
         public string OrderCondition{ get; set; }

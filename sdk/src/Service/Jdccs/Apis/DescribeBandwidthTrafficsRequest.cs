@@ -47,6 +47,14 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
+        /// 带宽（出口）名称
+        ///</summary>
+        public   string BandwidthName{ get; set; }
+        ///<summary>
         /// IDC机房ID
         ///Required:true
         ///</summary>

@@ -233,6 +233,25 @@ namespace JDCloudSDK.Jdccs.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询开放设备数据信息接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeOpenDevicesDataResponse DescribeOpenDevicesData(DescribeOpenDevicesDataRequest request) {
+            return  new DescribeOpenDevicesDataExecutor().Client(this).Execute<DescribeOpenDevicesDataResponse, DescribeOpenDevicesDataResult, DescribeOpenDevicesDataRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询开放设备数据信息接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeOpenDevicesDataResponse> DescribeOpenDevicesData(DescribeOpenDevicesDataRequest request) {
+            return await new DescribeOpenDevicesDataExecutor().Client(this).Execute<DescribeOpenDevicesDataResponse, DescribeOpenDevicesDataResult, DescribeOpenDevicesDataRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询带宽（出口）详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -286,6 +305,25 @@ namespace JDCloudSDK.Jdccs.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCabinetsResponse> DescribeCabinets(DescribeCabinetsRequest request) {
             return await new DescribeCabinetsExecutor().Client(this).Execute<DescribeCabinetsResponse, DescribeCabinetsResult, DescribeCabinetsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询开放设备列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeOpenDevicesResponse DescribeOpenDevices(DescribeOpenDevicesRequest request) {
+            return  new DescribeOpenDevicesExecutor().Client(this).Execute<DescribeOpenDevicesResponse, DescribeOpenDevicesResult, DescribeOpenDevicesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询开放设备列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeOpenDevicesResponse> DescribeOpenDevices(DescribeOpenDevicesRequest request) {
+            return await new DescribeOpenDevicesExecutor().Client(this).Execute<DescribeOpenDevicesResponse, DescribeOpenDevicesResult, DescribeOpenDevicesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -495,6 +533,25 @@ namespace JDCloudSDK.Jdccs.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeIpsResponse> DescribeIps(DescribeIpsRequest request) {
             return await new DescribeIpsExecutor().Client(this).Execute<DescribeIpsResponse, DescribeIpsResult, DescribeIpsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改报警规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateAlarmResponse UpdateAlarm(UpdateAlarmRequest request) {
+            return  new UpdateAlarmExecutor().Client(this).Execute<UpdateAlarmResponse, UpdateAlarmResult, UpdateAlarmRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改报警规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateAlarmResponse> UpdateAlarm(UpdateAlarmRequest request) {
+            return await new UpdateAlarmExecutor().Client(this).Execute<UpdateAlarmResponse, UpdateAlarmResult, UpdateAlarmRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

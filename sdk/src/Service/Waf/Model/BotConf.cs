@@ -45,5 +45,9 @@ namespace JDCloudSDK.Waf.Model
         /// 自定义类型bot。1-使能 0-禁止
         ///</summary>
         public int? EnableUserDefine{ get; set; }
+        ///<summary>
+        /// bot IDC开关。1-使能 0-禁止
+        ///</summary>
+        public int? EnableThreatIp{ get; set; }
     }
 }

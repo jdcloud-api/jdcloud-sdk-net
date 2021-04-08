@@ -89,9 +89,9 @@ namespace JDCloudSDK.Resourcetag.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.3
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.3";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,6 +138,71 @@ namespace JDCloudSDK.Resourcetag.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  资源标签解绑。&lt;br/&gt;
+        /// 注意cdn资源解绑标签时url中regionId必须指定为cn-all。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UnTagResourcesResponse UnTagResources(UnTagResourcesRequest request) {
+            return  new UnTagResourcesExecutor().Client(this).Execute<UnTagResourcesResponse, UnTagResourcesResult, UnTagResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  资源标签解绑。&lt;br/&gt;
+        /// 注意cdn资源解绑标签时url中regionId必须指定为cn-all。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UnTagResourcesResponse> UnTagResources(UnTagResourcesRequest request) {
+            return await new UnTagResourcesExecutor().Client(this).Execute<UnTagResourcesResponse, UnTagResourcesResult, UnTagResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据标签查找资源。 &lt;br/&gt;
+        /// 若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryResourceResponse QueryResource(QueryResourceRequest request) {
+            return  new QueryResourceExecutor().Client(this).Execute<QueryResourceResponse, QueryResourceResult, QueryResourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据标签查找资源。 &lt;br/&gt;
+        /// 若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryResourceResponse> QueryResource(QueryResourceRequest request) {
+            return await new QueryResourceExecutor().Client(this).Execute<QueryResourceResponse, QueryResourceResult, QueryResourceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取标签键
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeKeysResponse DescribeKeys(DescribeKeysRequest request) {
+            return  new DescribeKeysExecutor().Client(this).Execute<DescribeKeysResponse, DescribeKeysResult, DescribeKeysRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取标签键
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest request) {
+            return await new DescribeKeysExecutor().Client(this).Execute<DescribeKeysResponse, DescribeKeysResult, DescribeKeysRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获得资源与对应标签列表详情，不含资源名称和可用区。&lt;br/&gt;
         /// 注意查询cdn的资源时url中regionId必须指定为cn-all。&lt;br/&gt;
         /// 该接口目前不支持分页功能。
@@ -159,6 +224,25 @@ namespace JDCloudSDK.Resourcetag.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeResourcesResponse> DescribeResources(DescribeResourcesRequest request) {
             return await new DescribeResourcesExecutor().Client(this).Execute<DescribeResourcesResponse, DescribeResourcesResult, DescribeResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取标签值
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeValuesResponse DescribeValues(DescribeValuesRequest request) {
+            return  new DescribeValuesExecutor().Client(this).Execute<DescribeValuesResponse, DescribeValuesResult, DescribeValuesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取标签值
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeValuesResponse> DescribeValues(DescribeValuesRequest request) {
+            return await new DescribeValuesExecutor().Client(this).Execute<DescribeValuesResponse, DescribeValuesResult, DescribeValuesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -207,52 +291,6 @@ namespace JDCloudSDK.Resourcetag.Client
         /// <returns>请求结果信息</returns>
         public async Task<TagResourcesResponse> TagResources(TagResourcesRequest request) {
             return await new TagResourcesExecutor().Client(this).Execute<TagResourcesResponse, TagResourcesResult, TagResourcesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  资源标签解绑。&lt;br/&gt;
-        /// 注意cdn资源解绑标签时url中regionId必须指定为cn-all。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UnTagResourcesResponse UnTagResources(UnTagResourcesRequest request) {
-            return  new UnTagResourcesExecutor().Client(this).Execute<UnTagResourcesResponse, UnTagResourcesResult, UnTagResourcesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  资源标签解绑。&lt;br/&gt;
-        /// 注意cdn资源解绑标签时url中regionId必须指定为cn-all。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UnTagResourcesResponse> UnTagResources(UnTagResourcesRequest request) {
-            return await new UnTagResourcesExecutor().Client(this).Execute<UnTagResourcesResponse, UnTagResourcesResult, UnTagResourcesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  根据标签查找资源。 &lt;br/&gt;
-        /// 若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public QueryResourceResponse QueryResource(QueryResourceRequest request) {
-            return  new QueryResourceExecutor().Client(this).Execute<QueryResourceResponse, QueryResourceResult, QueryResourceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  根据标签查找资源。 &lt;br/&gt;
-        /// 若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<QueryResourceResponse> QueryResource(QueryResourceRequest request) {
-            return await new QueryResourceExecutor().Client(this).Execute<QueryResourceResponse, QueryResourceResult, QueryResourceRequest>(request).ConfigureAwait(false);
         }
 #endif
 

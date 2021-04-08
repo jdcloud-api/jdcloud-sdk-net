@@ -126,6 +126,14 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Condition{ get; set; }
         ///<summary>
+        /// 报警条件（英文）
+        ///</summary>
+        public string ConditionEn{ get; set; }
+        ///<summary>
+        /// 通知对象
+        ///</summary>
+        public object SendInfo{ get; set; }
+        ///<summary>
         /// 策略ID
         ///</summary>
         public int? StrategyId{ get; set; }

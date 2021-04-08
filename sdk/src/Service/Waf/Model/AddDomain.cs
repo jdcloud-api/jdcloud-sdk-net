@@ -45,11 +45,15 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public string WafInstanceId{ get; set; }
         ///<summary>
-        /// 域名
+        /// 域名，单个
         ///Required:true
         ///</summary>
         [Required]
-        public List<string> Domain{ get; set; }
+        public string Domain{ get; set; }
+        ///<summary>
+        /// 域名数组
+        ///</summary>
+        public List<string> Domains{ get; set; }
         ///<summary>
         /// 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
         ///Required:true
