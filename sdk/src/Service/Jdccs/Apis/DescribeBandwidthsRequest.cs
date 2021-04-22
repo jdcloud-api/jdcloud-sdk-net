@@ -48,15 +48,36 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// bandwidthId - 带宽实例IID，精确匹配，支持多个
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
+        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        ///</summary>
+        public   string LineType{ get; set; }
+        ///<summary>
+        /// 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+        ///</summary>
+        public   string ChargeType{ get; set; }
+        ///<summary>
+        /// 带宽（出口）名称
+        ///</summary>
+        public   string BandwidthName{ get; set; }
+        ///<summary>
+        /// 关联的公网IP
+        ///</summary>
+        public   string RelatedIp{ get; set; }
+        ///<summary>
+        /// bandwidthId - 带宽实例ID，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+        /// null
         ///</summary>
-        public   string LineType{ get; set; }
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
         ///<summary>
         /// IDC机房ID
         ///Required:true

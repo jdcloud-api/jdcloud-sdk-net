@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 
 namespace  JDCloudSDK.Jdccs.Apis
 {
@@ -46,6 +47,10 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
         /// 资源类型 bandwidth:带宽
         ///</summary>
         public   string ResourceType{ get; set; }
@@ -54,8 +59,18 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   string ResourceId{ get; set; }
         ///<summary>
+        /// 机房英文标识
+        ///</summary>
+        public   string Idc{ get; set; }
+        ///<summary>
         /// 规则状态 disabled:禁用 enabled:启用
         ///</summary>
         public   string Status{ get; set; }
+        ///<summary>
+        /// alarmId - 规则实施ID，精确匹配，支持多个
+        /// 
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
     }
 }

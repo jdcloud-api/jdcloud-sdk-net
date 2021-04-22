@@ -56,7 +56,7 @@ namespace JDCloudSDK.Resourcetag.Model
         ///<summary>
         /// 标签绑定的数据库SQL Server资源个数
         ///</summary>
-        public long? SqlServerResourceCount{ get; set; }
+        public long? SqlserverResourceCount{ get; set; }
         ///<summary>
         /// 标签绑定的MongoDB资源个数
         ///</summary>
@@ -133,5 +133,101 @@ namespace JDCloudSDK.Resourcetag.Model
         /// 标签绑定的Kubernetes集群资源个数
         ///</summary>
         public long? KubernetesNodegroupResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的网关资源个数
+        ///</summary>
+        public long? ApigatewayResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的对象存储资源个数
+        ///</summary>
+        public long? StorageResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的云数据库InfluxDB资源个数
+        ///</summary>
+        public long? TsdsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的云数据库Greenplum资源个数
+        ///</summary>
+        public long? JdwResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的DDos防护包资源个数
+        ///</summary>
+        public long? AntiproResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的Dts数据传输产品资源个数
+        ///</summary>
+        public long? DtsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的Cps云物理服务器资源个数
+        ///</summary>
+        public long? CpsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的edcps资源个数
+        ///</summary>
+        public long? EdcpsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的sgw资源个数
+        ///</summary>
+        public long? SgwResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的waf资源个数
+        ///</summary>
+        public long? WafResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的kafka资源个数
+        ///</summary>
+        public long? KafkaResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的zk资源个数
+        ///</summary>
+        public long? ZkResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的balance资源个数
+        ///</summary>
+        public long? BalanceResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的nlb资源个数
+        ///</summary>
+        public long? NlbResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的dnlb资源个数
+        ///</summary>
+        public long? DnlbResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的threatscanner资源个数
+        ///</summary>
+        public long? ThreatscannerResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的jns资源个数
+        ///</summary>
+        public long? JnsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的rabbitmq资源个数
+        ///</summary>
+        public long? RabbitmqResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的natgateway资源个数
+        ///</summary>
+        public long? NatgatewayResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的clickhouse资源个数
+        ///</summary>
+        public long? ClickHouseResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的tidb资源个数
+        ///</summary>
+        public long? TidbResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的dbs资源个数
+        ///</summary>
+        public long? DbsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的jdccs资源个数
+        ///</summary>
+        public long? JdccsResourceCount{ get; set; }
+        ///<summary>
+        /// 标签绑定的edcs资源个数
+        ///</summary>
+        public long? EpcsResourceCount{ get; set; }
     }
 }

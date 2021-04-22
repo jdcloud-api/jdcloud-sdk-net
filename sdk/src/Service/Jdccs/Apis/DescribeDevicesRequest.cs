@@ -48,20 +48,55 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
         /// 机柜ID
         ///</summary>
         public   string CabinetId{ get; set; }
         ///<summary>
+        /// 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+        ///</summary>
+        public   string DeviceType{ get; set; }
+        ///<summary>
+        /// 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+        ///</summary>
+        public   string AssetStatus{ get; set; }
+        ///<summary>
+        /// 资产归属 own:自备 lease:租赁
+        ///</summary>
+        public   string AssetBelong{ get; set; }
+        ///<summary>
+        /// 设备编码
+        ///</summary>
+        public   string DeviceNo{ get; set; }
+        ///<summary>
+        /// 设备SN号
+        ///</summary>
+        public   string SnNo{ get; set; }
+        ///<summary>
+        /// 机柜编码
+        ///</summary>
+        public   string CabinetNo{ get; set; }
+        ///<summary>
+        /// 工单模板CODE
+        ///</summary>
+        public   string TicketTemplateCode{ get; set; }
+        ///<summary>
         /// deviceId - 设备实例ID，精确匹配，支持多个
         /// snNo - 设备SN号，精确匹配，支持多个
+        /// deviceNo - 设备编码，精确匹配，支持多个
+        /// cabinetNo - 机柜编码，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+        /// deviceNo - 设备编码 cabinetNo - 机柜编码
         ///</summary>
-        public   string DeviceType{ get; set; }
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
         ///<summary>
         /// IDC机房ID
         ///Required:true

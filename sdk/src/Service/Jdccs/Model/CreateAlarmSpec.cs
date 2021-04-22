@@ -97,5 +97,9 @@ namespace JDCloudSDK.Jdccs.Model
         /// 通知对象用户ID,若多个用逗号分隔
         ///</summary>
         public string UserId{ get; set; }
+        ///<summary>
+        /// 通知对象组ID
+        ///</summary>
+        public string GroupId{ get; set; }
     }
 }

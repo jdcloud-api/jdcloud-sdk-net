@@ -89,5 +89,13 @@ namespace JDCloudSDK.Jdccs.Model
         /// 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string ReserveEndTime{ get; set; }
+        ///<summary>
+        /// 占用U数(U)
+        ///</summary>
+        public int? RackUOccupy{ get; set; }
+        ///<summary>
+        /// 空闲U数(U)
+        ///</summary>
+        public int? RackUFree{ get; set; }
     }
 }

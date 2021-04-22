@@ -41,7 +41,7 @@ namespace  JDCloudSDK.Waf.Apis
         ///<summary>
         /// 时间戳，单位毫秒
         ///</summary>
-        public List<int?> TimeScope{ get; set; }
+        public List<long?> TimeScope{ get; set; }
 
         ///<summary>
         /// qps数据

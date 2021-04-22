@@ -62,6 +62,34 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
+        /// 当前任务节点
+        ///</summary>
+        public string CurrentTaskNodeId{ get; set; }
+        ///<summary>
+        /// 工单类型ID
+        ///</summary>
+        public int? TicketTypeId{ get; set; }
+        ///<summary>
+        /// 工单模板ID
+        ///</summary>
+        public int? TicketTemplateId{ get; set; }
+        ///<summary>
+        /// 主账号pin
+        ///</summary>
+        public string OwnerPin{ get; set; }
+        ///<summary>
+        /// 子用户pin
+        ///</summary>
+        public string SubUserPin{ get; set; }
+        ///<summary>
+        /// 提交账号
+        ///</summary>
+        public string SubmitAccount{ get; set; }
+        ///<summary>
+        /// 用户操作
+        ///</summary>
+        public List<int?> UserOperation{ get; set; }
+        ///<summary>
         /// 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
         ///</summary>
         public string CreatedTime{ get; set; }

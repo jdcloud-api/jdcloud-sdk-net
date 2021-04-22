@@ -48,16 +48,39 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
+        /// 机柜类型 formal:正式机柜 reserved:预留机柜
+        ///</summary>
+        public   string CabinetType{ get; set; }
+        ///<summary>
+        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+        ///</summary>
+        public   string CabinetOpenStatus{ get; set; }
+        ///<summary>
+        /// 机柜编码
+        ///</summary>
+        public   string CabinetNo{ get; set; }
+        ///<summary>
+        /// 机柜关电工单使用 yes
+        ///</summary>
+        public   string DeviceMustBeEmpty{ get; set; }
+        ///<summary>
         /// roomNo - 房间号，精确匹配，支持多个
         /// cabinetId - 机柜ID，精确匹配，支持多个
+        /// cabinetNo - 机柜编码，精确匹配，支持多个
+        /// cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+        /// cabinetNo - 机柜编码 roomNo - 房间号
         ///</summary>
-        public   string CabinetOpenStatus{ get; set; }
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
         ///<summary>
         /// IDC机房ID
         ///Required:true

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Common.Model;
 
 namespace  JDCloudSDK.Jdccs.Apis
 {
@@ -46,8 +47,59 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
         /// 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
         ///</summary>
         public   string Type{ get; set; }
+        ///<summary>
+        /// 工单类型
+        ///</summary>
+        public   string TicketTypeName{ get; set; }
+        ///<summary>
+        /// 工单类型ID
+        ///</summary>
+        public   int? TicketTypeId{ get; set; }
+        ///<summary>
+        /// 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
+        ///</summary>
+        public   string Status{ get; set; }
+        ///<summary>
+        /// 工单编号
+        ///</summary>
+        public   string TicketNo{ get; set; }
+        ///<summary>
+        /// 工单名称
+        ///</summary>
+        public   string TicketTemplateName{ get; set; }
+        ///<summary>
+        /// 描述
+        ///</summary>
+        public   string Description{ get; set; }
+        ///<summary>
+        /// 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+        ///</summary>
+        public   string StartTime{ get; set; }
+        ///<summary>
+        /// 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+        ///</summary>
+        public   string EndTime{ get; set; }
+        ///<summary>
+        /// 提交账号
+        ///</summary>
+        public   string SubmitAccount{ get; set; }
+        ///<summary>
+        /// ticketNo - 工单编号，精确匹配，支持多个
+        /// 
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
+
+        ///<summary>
+        /// createdTime - 创建时间 closedTime - 关闭时间
+        ///</summary>
+        public List<JDCloudSDK.Common.Model.Sort> Sorts{ get; set; }
+
     }
 }

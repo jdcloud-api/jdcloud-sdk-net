@@ -50,7 +50,7 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string BandwidthId{ get; set; }
         ///<summary>
-        /// 带宽名称
+        /// 带宽（出口）名称
         ///</summary>
         public string BandwidthName{ get; set; }
         ///<summary>

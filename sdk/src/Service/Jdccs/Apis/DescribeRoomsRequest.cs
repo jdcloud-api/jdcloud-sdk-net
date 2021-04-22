@@ -48,6 +48,10 @@ namespace  JDCloudSDK.Jdccs.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// 是否查询全部，默认分页
+        ///</summary>
+        public   int? All{ get; set; }
+        ///<summary>
         /// roomNo - 房间号，精确匹配，支持多个
         /// 
         ///</summary>

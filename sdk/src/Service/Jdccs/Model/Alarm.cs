@@ -102,8 +102,20 @@ namespace JDCloudSDK.Jdccs.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
+        /// 通知方式 all:全部 sms：短信 email:邮件
+        ///</summary>
+        public string NoticeMethod{ get; set; }
+        ///<summary>
         /// 交换机信息
         ///</summary>
         public List<Switchboard> Switchboard{ get; set; }
+        ///<summary>
+        /// 通知对象用户ID,若多个用逗号分隔
+        ///</summary>
+        public string UserId{ get; set; }
+        ///<summary>
+        /// 通知对象组ID
+        ///</summary>
+        public string GroupId{ get; set; }
     }
 }

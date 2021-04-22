@@ -58,6 +58,10 @@ namespace JDCloudSDK.Resourcetag.Model
         ///</summary>
         public string ResourceName{ get; set; }
         ///<summary>
+        /// 资源详情url地址
+        ///</summary>
+        public string DetailUrl{ get; set; }
+        ///<summary>
         /// 可用区
         ///</summary>
         public string Az{ get; set; }
