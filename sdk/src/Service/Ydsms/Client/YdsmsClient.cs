@@ -214,6 +214,25 @@ namespace JDCloudSDK.Ydsms.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据pin发送短信
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SendMessagesByPinUsingPOSTResponse SendMessagesByPinUsingPOST(SendMessagesByPinUsingPOSTRequest request) {
+            return  new SendMessagesByPinUsingPOSTExecutor().Client(this).Execute<SendMessagesByPinUsingPOSTResponse, SendMessagesByPinUsingPOSTResult, SendMessagesByPinUsingPOSTRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据pin发送短信
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SendMessagesByPinUsingPOSTResponse> SendMessagesByPinUsingPOST(SendMessagesByPinUsingPOSTRequest request) {
+            return await new SendMessagesByPinUsingPOSTExecutor().Client(this).Execute<SendMessagesByPinUsingPOSTResponse, SendMessagesByPinUsingPOSTResult, SendMessagesByPinUsingPOSTRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询当前自然月内所有应用发送量总和
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -666,6 +685,25 @@ namespace JDCloudSDK.Ydsms.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetSmsTaskContentUsingGETResponse> GetSmsTaskContentUsingGET(GetSmsTaskContentUsingGETRequest request) {
             return await new GetSmsTaskContentUsingGETExecutor().Client(this).Execute<GetSmsTaskContentUsingGETResponse, GetSmsTaskContentUsingGETResult, GetSmsTaskContentUsingGETRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据订单号发送短信
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SendMessagesByOrderIdUsingPOSTResponse SendMessagesByOrderIdUsingPOST(SendMessagesByOrderIdUsingPOSTRequest request) {
+            return  new SendMessagesByOrderIdUsingPOSTExecutor().Client(this).Execute<SendMessagesByOrderIdUsingPOSTResponse, SendMessagesByOrderIdUsingPOSTResult, SendMessagesByOrderIdUsingPOSTRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据订单号发送短信
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SendMessagesByOrderIdUsingPOSTResponse> SendMessagesByOrderIdUsingPOST(SendMessagesByOrderIdUsingPOSTRequest request) {
+            return await new SendMessagesByOrderIdUsingPOSTExecutor().Client(this).Execute<SendMessagesByOrderIdUsingPOSTResponse, SendMessagesByOrderIdUsingPOSTResult, SendMessagesByOrderIdUsingPOSTRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
