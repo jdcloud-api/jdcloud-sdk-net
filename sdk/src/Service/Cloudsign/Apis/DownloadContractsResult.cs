@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Cloudsign.Model;
 
 namespace  JDCloudSDK.Cloudsign.Apis
 {
@@ -39,5 +40,14 @@ namespace  JDCloudSDK.Cloudsign.Apis
     /// </summary>
     public class DownloadContractsResult : JdcloudResult
     {
+        ///<summary>
+        /// ContractList
+        ///</summary>
+        public List<ContractInfo> ContractList{ get; set; }
+
+        ///<summary>
+        /// 合同数量
+        ///</summary>
+        public   int? TotalCount{ get; set; }
     }
 }

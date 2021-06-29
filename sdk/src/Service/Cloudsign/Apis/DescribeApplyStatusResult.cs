@@ -46,7 +46,7 @@ namespace  JDCloudSDK.Cloudsign.Apis
         ///</summary>
         public   int? UsedCapacity{ get; set; }
         ///<summary>
-        /// 当前服务状态(0:正常 -1:停服)
+        /// 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
         ///</summary>
         public   int? Status{ get; set; }
         ///<summary>

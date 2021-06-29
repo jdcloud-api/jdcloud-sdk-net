@@ -38,7 +38,11 @@ namespace JDCloudSDK.Cloudsign.Model
     {
 
         ///<summary>
-        /// 盖章类型（0 坐标 1 关键字）
+        /// 最多盖章数目（默认10）
+        ///</summary>
+        public int? StampMax{ get; set; }
+        ///<summary>
+        /// 盖章类型（0 坐标 1 关键字，默认为 1）
         ///</summary>
         public int? SignPositionType{ get; set; }
         ///<summary>
@@ -62,7 +66,7 @@ namespace JDCloudSDK.Cloudsign.Model
         ///</summary>
         public int? OffsetY{ get; set; }
         ///<summary>
-        /// 盖章页码（选择坐标盖章时需要）
+        /// 盖章页码（选择坐标盖章时需要传入本参数）
         ///</summary>
         public int? Page{ get; set; }
         ///<summary>
@@ -86,7 +90,7 @@ namespace JDCloudSDK.Cloudsign.Model
         ///</summary>
         public bool IsDefault{ get; set; }
         ///<summary>
-        /// 图片类型，只支持png格式
+        /// 图片类型
         ///</summary>
         public string ImageType{ get; set; }
         ///<summary>
