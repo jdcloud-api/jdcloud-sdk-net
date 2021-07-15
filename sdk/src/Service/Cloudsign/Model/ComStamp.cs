@@ -38,7 +38,11 @@ namespace JDCloudSDK.Cloudsign.Model
     {
 
         ///<summary>
-        /// 盖章类型（0 坐标 1 关键字）
+        /// 最多盖章数目（默认10）
+        ///</summary>
+        public int? StampMax{ get; set; }
+        ///<summary>
+        /// 盖章类型（0 坐标 1 关键字 默认1 ）
         ///</summary>
         public int? SignPositionType{ get; set; }
         ///<summary>
