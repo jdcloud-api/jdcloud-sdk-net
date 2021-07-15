@@ -176,25 +176,6 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  文本同步检测-检测文本中是否包含违规信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public InnerTextScanResponse InnerTextScan(InnerTextScanRequest request) {
-            return  new InnerTextScanExecutor().Client(this).Execute<InnerTextScanResponse, InnerTextScanResult, InnerTextScanRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  文本同步检测-检测文本中是否包含违规信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<InnerTextScanResponse> InnerTextScan(InnerTextScanRequest request) {
-            return await new InnerTextScanExecutor().Client(this).Execute<InnerTextScanResponse, InnerTextScanResult, InnerTextScanRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  提交音频异步检测任务
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -214,21 +195,21 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查看视频异步检测结果
+        ///  提交音频异步检测任务V2
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public VideoResultsResponse VideoResults(VideoResultsRequest request) {
-            return  new VideoResultsExecutor().Client(this).Execute<VideoResultsResponse, VideoResultsResult, VideoResultsRequest>(request);
+        public AsyncAudioScanV2Response AsyncAudioScanV2(AsyncAudioScanV2Request request) {
+            return  new AsyncAudioScanV2Executor().Client(this).Execute<AsyncAudioScanV2Response, AsyncAudioScanV2Result, AsyncAudioScanV2Request>(request);
         }
 #else
         /// <summary>
-        ///  查看视频异步检测结果
+        ///  提交音频异步检测任务V2
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<VideoResultsResponse> VideoResults(VideoResultsRequest request) {
-            return await new VideoResultsExecutor().Client(this).Execute<VideoResultsResponse, VideoResultsResult, VideoResultsRequest>(request).ConfigureAwait(false);
+        public async Task<AsyncAudioScanV2Response> AsyncAudioScanV2(AsyncAudioScanV2Request request) {
+            return await new AsyncAudioScanV2Executor().Client(this).Execute<AsyncAudioScanV2Response, AsyncAudioScanV2Result, AsyncAudioScanV2Request>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -290,21 +271,21 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  提交视频异步检测任务
+        ///  查看文本疑似结果，小于10s/20次，请求频率过快服务器会拒绝处理
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AsyncVideoScanResponse AsyncVideoScan(AsyncVideoScanRequest request) {
-            return  new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request);
+        public TextResultsV2Response TextResultsV2(TextResultsV2Request request) {
+            return  new TextResultsV2Executor().Client(this).Execute<TextResultsV2Response, TextResultsV2Result, TextResultsV2Request>(request);
         }
 #else
         /// <summary>
-        ///  提交视频异步检测任务
+        ///  查看文本疑似结果，小于10s/20次，请求频率过快服务器会拒绝处理
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AsyncVideoScanResponse> AsyncVideoScan(AsyncVideoScanRequest request) {
-            return await new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request).ConfigureAwait(false);
+        public async Task<TextResultsV2Response> TextResultsV2(TextResultsV2Request request) {
+            return await new TextResultsV2Executor().Client(this).Execute<TextResultsV2Response, TextResultsV2Result, TextResultsV2Request>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -347,6 +328,25 @@ namespace JDCloudSDK.Censor.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据taskid查询视频检测结果，小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public VideoResultsV2Response VideoResultsV2(VideoResultsV2Request request) {
+            return  new VideoResultsV2Executor().Client(this).Execute<VideoResultsV2Response, VideoResultsV2Result, VideoResultsV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  根据taskid查询视频检测结果，小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<VideoResultsV2Response> VideoResultsV2(VideoResultsV2Request request) {
+            return await new VideoResultsV2Executor().Client(this).Execute<VideoResultsV2Response, VideoResultsV2Result, VideoResultsV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  图片同步检测
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -362,6 +362,177 @@ namespace JDCloudSDK.Censor.Client
         /// <returns>请求结果信息</returns>
         public async Task<ImageScanResponse> ImageScan(ImageScanRequest request) {
             return await new ImageScanExecutor().Client(this).Execute<ImageScanResponse, ImageScanResult, ImageScanRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  语音检测结果获取接口，获取离线处理的数据后，下次调用，不会再次返回之前获取过的离线数据。小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AudioCallbackV2Response AudioCallbackV2(AudioCallbackV2Request request) {
+            return  new AudioCallbackV2Executor().Client(this).Execute<AudioCallbackV2Response, AudioCallbackV2Result, AudioCallbackV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  语音检测结果获取接口，获取离线处理的数据后，下次调用，不会再次返回之前获取过的离线数据。小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AudioCallbackV2Response> AudioCallbackV2(AudioCallbackV2Request request) {
+            return await new AudioCallbackV2Executor().Client(this).Execute<AudioCallbackV2Response, AudioCallbackV2Result, AudioCallbackV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  文本同步检测-检测文本中是否包含违规信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public InnerTextScanResponse InnerTextScan(InnerTextScanRequest request) {
+            return  new InnerTextScanExecutor().Client(this).Execute<InnerTextScanResponse, InnerTextScanResult, InnerTextScanRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  文本同步检测-检测文本中是否包含违规信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<InnerTextScanResponse> InnerTextScan(InnerTextScanRequest request) {
+            return await new InnerTextScanExecutor().Client(this).Execute<InnerTextScanResponse, InnerTextScanResult, InnerTextScanRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查看视频异步检测结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public VideoResultsResponse VideoResults(VideoResultsRequest request) {
+            return  new VideoResultsExecutor().Client(this).Execute<VideoResultsResponse, VideoResultsResult, VideoResultsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查看视频异步检测结果
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<VideoResultsResponse> VideoResults(VideoResultsRequest request) {
+            return await new VideoResultsExecutor().Client(this).Execute<VideoResultsResponse, VideoResultsResult, VideoResultsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  提交视频异步检测任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AsyncVideoScanResponse AsyncVideoScan(AsyncVideoScanRequest request) {
+            return  new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  提交视频异步检测任务
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AsyncVideoScanResponse> AsyncVideoScan(AsyncVideoScanRequest request) {
+            return await new AsyncVideoScanExecutor().Client(this).Execute<AsyncVideoScanResponse, AsyncVideoScanResult, AsyncVideoScanRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  视频检测结果获取接口，获取离线处理的数据后，下次调用，不会再次返回之前获取过的离线数据。小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public VideoCallbackV2Response VideoCallbackV2(VideoCallbackV2Request request) {
+            return  new VideoCallbackV2Executor().Client(this).Execute<VideoCallbackV2Response, VideoCallbackV2Result, VideoCallbackV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  视频检测结果获取接口，获取离线处理的数据后，下次调用，不会再次返回之前获取过的离线数据。小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<VideoCallbackV2Response> VideoCallbackV2(VideoCallbackV2Request request) {
+            return await new VideoCallbackV2Executor().Client(this).Execute<VideoCallbackV2Response, VideoCallbackV2Result, VideoCallbackV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据taskid查询语音检测结果，小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AudioResultsV2Response AudioResultsV2(AudioResultsV2Request request) {
+            return  new AudioResultsV2Executor().Client(this).Execute<AudioResultsV2Response, AudioResultsV2Result, AudioResultsV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  根据taskid查询语音检测结果，小于10s/20次，请求频率过快服务器会拒绝处理
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AudioResultsV2Response> AudioResultsV2(AudioResultsV2Request request) {
+            return await new AudioResultsV2Executor().Client(this).Execute<AudioResultsV2Response, AudioResultsV2Result, AudioResultsV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  提交视频异步检测任务V2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AsyncVideoScanV2Response AsyncVideoScanV2(AsyncVideoScanV2Request request) {
+            return  new AsyncVideoScanV2Executor().Client(this).Execute<AsyncVideoScanV2Response, AsyncVideoScanV2Result, AsyncVideoScanV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  提交视频异步检测任务V2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AsyncVideoScanV2Response> AsyncVideoScanV2(AsyncVideoScanV2Request request) {
+            return await new AsyncVideoScanV2Executor().Client(this).Execute<AsyncVideoScanV2Response, AsyncVideoScanV2Result, AsyncVideoScanV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  图片同步检测v2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ImageScanV2Response ImageScanV2(ImageScanV2Request request) {
+            return  new ImageScanV2Executor().Client(this).Execute<ImageScanV2Response, ImageScanV2Result, ImageScanV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  图片同步检测v2
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ImageScanV2Response> ImageScanV2(ImageScanV2Request request) {
+            return await new ImageScanV2Executor().Client(this).Execute<ImageScanV2Response, ImageScanV2Result, ImageScanV2Request>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  文本同步检测-检测文本中是否包含违规信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public TextScanV2Response TextScanV2(TextScanV2Request request) {
+            return  new TextScanV2Executor().Client(this).Execute<TextScanV2Response, TextScanV2Result, TextScanV2Request>(request);
+        }
+#else
+        /// <summary>
+        ///  文本同步检测-检测文本中是否包含违规信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<TextScanV2Response> TextScanV2(TextScanV2Request request) {
+            return await new TextScanV2Executor().Client(this).Execute<TextScanV2Response, TextScanV2Result, TextScanV2Request>(request).ConfigureAwait(false);
         }
 #endif
 

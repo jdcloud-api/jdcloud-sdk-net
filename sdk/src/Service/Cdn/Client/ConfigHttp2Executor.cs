@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  http2配置
+    ///  http2配置，中国境外/全球加速域名暂不支持该配置
     /// </summary>
     public class ConfigHttp2Executor : JdcloudExecutor
     {
         /// <summary>
-        ///  http2配置接口的Http 请求方法
+        ///  http2配置，中国境外/全球加速域名暂不支持该配置接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  http2配置接口的Http资源请求路径
+        ///  http2配置，中国境外/全球加速域名暂不支持该配置接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

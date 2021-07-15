@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  http2配置
+    ///  http2配置，中国境外/全球加速域名暂不支持该配置
     /// </summary>
     public class ConfigHttp2Request : JdcloudRequest
     {

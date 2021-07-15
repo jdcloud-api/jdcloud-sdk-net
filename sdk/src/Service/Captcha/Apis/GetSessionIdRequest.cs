@@ -50,7 +50,7 @@ namespace  JDCloudSDK.Captcha.Apis
         ///</summary>
         public   string Secret{ get; set; }
         ///<summary>
-        /// uuid，ios客户端传openudid, android客户端传androidid
+        /// uuid，ios客户端传openudid, android客户端传androidid, m, pc, wxapp客户端此值为空即可
         ///</summary>
         public   string Uuid{ get; set; }
         ///<summary>
@@ -62,11 +62,11 @@ namespace  JDCloudSDK.Captcha.Apis
         ///</summary>
         public   string UserAgent{ get; set; }
         ///<summary>
-        /// 指纹，客户端sdk获取
+        /// 指纹，ios和android客户端(clientType)从sdk获取, m, pc, wxapp客户端此值为空即可
         ///</summary>
         public   string FingerPrint{ get; set; }
         ///<summary>
-        /// 客户端类型, android, ios
+        /// 客户端类型, android, ios, pc, wxmapp, m
         ///</summary>
         public   string ClientType{ get; set; }
         ///<summary>

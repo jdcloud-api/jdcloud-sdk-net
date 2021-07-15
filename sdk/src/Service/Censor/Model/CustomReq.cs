@@ -69,7 +69,7 @@ namespace JDCloudSDK.Censor.Model
         [Required]
         public string Scenes{ get; set; }
         ///<summary>
-        /// white 白名单，black 黑名单，suspect 疑似名单
+        /// pass 白名单，block 黑名单，review 疑似名单
         ///Required:true
         ///</summary>
         [Required]

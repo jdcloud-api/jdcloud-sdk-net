@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  创建刷新预热任务
+    ///  创建刷新预热任务，
     /// </summary>
     public class CreateRefreshTaskResponse : JdcloudResponse<CreateRefreshTaskResult>
     {

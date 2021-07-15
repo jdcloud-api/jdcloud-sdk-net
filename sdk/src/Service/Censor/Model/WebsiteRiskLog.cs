@@ -66,6 +66,14 @@ namespace JDCloudSDK.Censor.Model
         ///</summary>
         public int? RiskLevel{ get; set; }
         ///<summary>
+        /// 资源类型
+        ///</summary>
+        public string ResourceType{ get; set; }
+        ///<summary>
+        /// 响应详情
+        ///</summary>
+        public string Response{ get; set; }
+        ///<summary>
         /// 处理状态 0未处理 1已处理
         ///</summary>
         public int? Status{ get; set; }

@@ -33,12 +33,12 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  创建刷新预热任务
+    ///  创建刷新预热任务，
     /// </summary>
     public class CreateRefreshTaskRequest : JdcloudRequest
     {
         ///<summary>
-        /// 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
+        /// 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)，中国境外/全球加速域名暂不支持预热功能
         ///</summary>
         public   string TaskType{ get; set; }
         ///<summary>

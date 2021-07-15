@@ -46,7 +46,8 @@ namespace  JDCloudSDK.Vod.Apis
         ///<summary>
         /// Templates
         ///</summary>
-        public   GroupedTranscodeTemplateData Templates{ get; set; }
+        public List<GroupedTranscodeTemplateData> Templates{ get; set; }
+
         ///<summary>
         /// 模板组ID
         ///Required:true

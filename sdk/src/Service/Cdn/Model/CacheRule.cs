@@ -46,6 +46,10 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public long? Ttl{ get; set; }
         ///<summary>
+        /// ConfigId
+        ///</summary>
+        public long? ConfigId{ get; set; }
+        ///<summary>
         /// Contents
         ///</summary>
         public string Contents{ get; set; }

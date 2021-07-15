@@ -58,8 +58,10 @@ namespace JDCloudSDK.Captcha.Model
         public int AppId{ get; set; }
         ///<summary>
         /// 场景id
+        ///Required:true
         ///</summary>
-        public int? SceneId{ get; set; }
+        [Required]
+        public int SceneId{ get; set; }
         ///<summary>
         /// 密钥，从界面获取
         ///</summary>
@@ -77,7 +79,7 @@ namespace JDCloudSDK.Captcha.Model
         [Required]
         public string UserAgent{ get; set; }
         ///<summary>
-        /// 客户端类型, android, ios, pc, m
+        /// 客户端类型, android, ios, pc, wxapp
         ///</summary>
         public string ClientType{ get; set; }
         ///<summary>

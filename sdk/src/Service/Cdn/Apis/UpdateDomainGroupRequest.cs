@@ -48,7 +48,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string PrimaryDomain{ get; set; }
         ///<summary>
-        /// 是否共享内存
+        /// 是否共享内存，共享缓存仅对中国境内加速域名生效
         ///</summary>
         public   string ShareCache{ get; set; }
         ///<summary>

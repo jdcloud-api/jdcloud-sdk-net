@@ -38,15 +38,15 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
-        /// Ips
+        /// ip回源配置，对应sourceType&#x3D;ips的取值
         ///</summary>
         public List<IpSourceInfo> Ips{ get; set; }
         ///<summary>
-        /// Domain
+        /// 域名回源配置，对应sourceType&#x3D;domain的取值
         ///</summary>
         public List<DomainSourceInfo> Domain{ get; set; }
         ///<summary>
-        /// OssSource
+        /// oss回源配置，对应sourceType&#x3D;oss的取值
         ///</summary>
         public string OssSource{ get; set; }
     }

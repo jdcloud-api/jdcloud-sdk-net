@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  分地区及运营商查询统计数据
+    ///  分地区及运营商查询统计数据，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryMixStatisticsWithAreaDataExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  分地区及运营商查询统计数据接口的Http 请求方法
+        ///  分地区及运营商查询统计数据，仅可查询中国境内的相关信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  分地区及运营商查询统计数据接口的Http资源请求路径
+        ///  分地区及运营商查询统计数据，仅可查询中国境内的相关信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

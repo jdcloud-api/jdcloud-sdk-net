@@ -51,7 +51,7 @@ namespace JDCloudSDK.Captcha.Model
         [Required]
         public long AppId{ get; set; }
         ///<summary>
-        /// 策略类型：1 智能组合,2过载保护,3自有策略
+        /// 策略类型：1 智能组合,2过载保护,3自有策略,4验证码策略
         ///</summary>
         public int? TacticsType{ get; set; }
         ///<summary>

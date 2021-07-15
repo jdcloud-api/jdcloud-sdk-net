@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询TOP Url
+    ///  查询TOP Url，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryStatisticsTopUrlRequest : JdcloudRequest
     {
@@ -50,15 +50,15 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Domain{ get; set; }
         ///<summary>
-        /// 待查询的子域名
+        /// 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
         ///</summary>
         public   string SubDomain{ get; set; }
         ///<summary>
-        /// Size
+        /// 查询的topN的条数，取值范围：1-100，默认为20
         ///</summary>
         public   int? Size{ get; set; }
         ///<summary>
-        /// 排序依据
+        /// 排序依据,当前可选：pv,flow，bandwidth, 分别表示按pv、按流量、按带宽topN url，默认为&quot;pv&quot;
         ///</summary>
         public   string TopBy{ get; set; }
     }

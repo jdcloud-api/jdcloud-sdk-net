@@ -547,6 +547,25 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  提交视频剪辑作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SubmitVeditJobResponse SubmitVeditJob(SubmitVeditJobRequest request) {
+            return  new SubmitVeditJobExecutor().Client(this).Execute<SubmitVeditJobResponse, SubmitVeditJobResult, SubmitVeditJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  提交视频剪辑作业
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SubmitVeditJobResponse> SubmitVeditJob(SubmitVeditJobRequest request) {
+            return await new SubmitVeditJobExecutor().Client(this).Execute<SubmitVeditJobResponse, SubmitVeditJobResult, SubmitVeditJobRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询域名
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -587,6 +606,65 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<ListSnapshotTemplatesResponse> ListSnapshotTemplates(ListSnapshotTemplatesRequest request) {
             return await new ListSnapshotTemplatesExecutor().Client(this).Execute<ListSnapshotTemplatesResponse, ListSnapshotTemplatesResult, ListSnapshotTemplatesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建视频剪辑工程
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVeditProjectResponse CreateVeditProject(CreateVeditProjectRequest request) {
+            return  new CreateVeditProjectExecutor().Client(this).Execute<CreateVeditProjectResponse, CreateVeditProjectResult, CreateVeditProjectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建视频剪辑工程
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVeditProjectResponse> CreateVeditProject(CreateVeditProjectRequest request) {
+            return await new CreateVeditProjectExecutor().Client(this).Execute<CreateVeditProjectResponse, CreateVeditProjectResult, CreateVeditProjectRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建视频剪辑作业
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateVeditJobResponse CreateVeditJob(CreateVeditJobRequest request) {
+            return  new CreateVeditJobExecutor().Client(this).Execute<CreateVeditJobResponse, CreateVeditJobResult, CreateVeditJobRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建视频剪辑作业
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateVeditJobResponse> CreateVeditJob(CreateVeditJobRequest request) {
+            return await new CreateVeditJobExecutor().Client(this).Execute<CreateVeditJobResponse, CreateVeditJobResult, CreateVeditJobRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频剪辑工程详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetVeditProjectResponse GetVeditProject(GetVeditProjectRequest request) {
+            return  new GetVeditProjectExecutor().Client(this).Execute<GetVeditProjectResponse, GetVeditProjectResult, GetVeditProjectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频剪辑工程详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetVeditProjectResponse> GetVeditProject(GetVeditProjectRequest request) {
+            return await new GetVeditProjectExecutor().Client(this).Execute<GetVeditProjectResponse, GetVeditProjectResult, GetVeditProjectRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1072,6 +1150,25 @@ namespace JDCloudSDK.Vod.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除视频剪辑工程
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteVeditProjectResponse DeleteVeditProject(DeleteVeditProjectRequest request) {
+            return  new DeleteVeditProjectExecutor().Client(this).Execute<DeleteVeditProjectResponse, DeleteVeditProjectResult, DeleteVeditProjectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除视频剪辑工程
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteVeditProjectResponse> DeleteVeditProject(DeleteVeditProjectRequest request) {
+            return await new DeleteVeditProjectExecutor().Client(this).Execute<DeleteVeditProjectResponse, DeleteVeditProjectResult, DeleteVeditProjectRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取视频源文件信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1144,6 +1241,31 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetTranscodeTemplateGroupResponse> GetTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request) {
             return await new GetTranscodeTemplateGroupExecutor().Client(this).Execute<GetTranscodeTemplateGroupResponse, GetTranscodeTemplateGroupResult, GetTranscodeTemplateGroupRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询视频剪辑工程列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - projectId[eq] 按照工程ID精确查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListVeditProjectsResponse ListVeditProjects(ListVeditProjectsRequest request) {
+            return  new ListVeditProjectsExecutor().Client(this).Execute<ListVeditProjectsResponse, ListVeditProjectsResult, ListVeditProjectsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询视频剪辑工程列表。
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///   - projectId[eq] 按照工程ID精确查询
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListVeditProjectsResponse> ListVeditProjects(ListVeditProjectsRequest request) {
+            return await new ListVeditProjectsExecutor().Client(this).Execute<ListVeditProjectsResponse, ListVeditProjectsResult, ListVeditProjectsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1422,6 +1544,25 @@ namespace JDCloudSDK.Vod.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateTranscodeTemplateResponse> CreateTranscodeTemplate(CreateTranscodeTemplateRequest request) {
             return await new CreateTranscodeTemplateExecutor().Client(this).Execute<CreateTranscodeTemplateResponse, CreateTranscodeTemplateResult, CreateTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改视频剪辑工程信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateVeditProjectResponse UpdateVeditProject(UpdateVeditProjectRequest request) {
+            return  new UpdateVeditProjectExecutor().Client(this).Execute<UpdateVeditProjectResponse, UpdateVeditProjectResult, UpdateVeditProjectRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改视频剪辑工程信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateVeditProjectResponse> UpdateVeditProject(UpdateVeditProjectRequest request) {
+            return await new UpdateVeditProjectExecutor().Client(this).Execute<UpdateVeditProjectResponse, UpdateVeditProjectResult, UpdateVeditProjectRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

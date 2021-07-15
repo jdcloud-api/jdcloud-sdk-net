@@ -42,7 +42,7 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public int? Priority{ get; set; }
         ///<summary>
-        /// 回源host
+        /// 自定义回源host，仅中国境内加速域名可配置
         ///</summary>
         public string SourceHost{ get; set; }
         ///<summary>
