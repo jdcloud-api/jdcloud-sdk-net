@@ -46,6 +46,10 @@ namespace JDCloudSDK.Openjrtc.Model
         ///</summary>
         public string RoomName{ get; set; }
         ///<summary>
+        /// 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+        ///</summary>
+        public int? RoomType{ get; set; }
+        ///<summary>
         /// appId
         ///</summary>
         public string AppId{ get; set; }

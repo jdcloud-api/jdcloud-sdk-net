@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>JDCloud API Gateway</Authors>
         <Company>JDCloud.com</Company>
-        <Version>2.2.2.1</Version>
+        <Version>2.5.0.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Description>京东云缓存Redis相关接口</Description>
         <Copyright>Copyright  ©  2012-2018  JDCloud.com</Copyright>

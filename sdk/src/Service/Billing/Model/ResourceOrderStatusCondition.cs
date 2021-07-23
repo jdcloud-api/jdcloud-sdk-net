@@ -39,7 +39,7 @@ namespace JDCloudSDK.Billing.Model
     {
 
         ///<summary>
-        /// 站点信息 0:中国 1:国际
+        /// 站点信息 0:中国 1:国际 10:专有云
         ///</summary>
         public int? Site{ get; set; }
         ///<summary>
@@ -53,7 +53,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public int? Status{ get; set; }
         ///<summary>
-        /// 资源id列表
+        /// 资源id列表(最多支持传入500个)
         ///Required:true
         ///</summary>
         [Required]

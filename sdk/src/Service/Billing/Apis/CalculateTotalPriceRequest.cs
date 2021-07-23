@@ -52,7 +52,7 @@ namespace  JDCloudSDK.Billing.Apis
         public List<OrderPriceProtocol> OrderList{ get; set; }
 
         ///<summary>
-        /// 操作时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+        /// 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
         ///</summary>
         public   string OperateTime{ get; set; }
         ///<summary>
@@ -73,6 +73,18 @@ namespace  JDCloudSDK.Billing.Apis
         /// 临时升配时必传，3-临时升配
         ///</summary>
         public   int? ProcessType{ get; set; }
+        ///<summary>
+        /// 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
+        ///</summary>
+        public   int? RenewMode{ get; set; }
+        ///<summary>
+        /// 续费统一到期日(1-28)，续费时必传
+        ///</summary>
+        public   int? UnifyExpireDay{ get; set; }
+        ///<summary>
+        /// 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
+        ///</summary>
+        public   int? TotalPriceRule{ get; set; }
         ///<summary>
         /// RegionIdValue
         ///Required:true

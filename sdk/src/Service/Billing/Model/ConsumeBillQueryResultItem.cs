@@ -90,7 +90,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string BillTime{ get; set; }
         ///<summary>
-        /// 账单金额
+        /// 账单金额/原价
         ///</summary>
         public double? BillFee{ get; set; }
         ///<summary>

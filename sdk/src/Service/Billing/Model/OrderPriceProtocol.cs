@@ -38,7 +38,7 @@ namespace JDCloudSDK.Billing.Model
     {
 
         ///<summary>
-        /// 资源id
+        /// 资源id(新购时不传，升降配、续费必须传)
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
@@ -46,7 +46,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string AppCode{ get; set; }
         ///<summary>
-        /// 产品线
+        /// 产品线(必传)
         ///</summary>
         public string ServiceCode{ get; set; }
         ///<summary>
@@ -54,19 +54,19 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public int? Site{ get; set; }
         ///<summary>
-        /// 地域
+        /// 地域(新购、升降配必传)
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 计费类型 1:按配置 2:按用量 3:包年包月
+        /// 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
         ///</summary>
         public int? BillingType{ get; set; }
         ///<summary>
-        /// 时长
+        /// 时长(包年包月新购、续费必传)
         ///</summary>
         public int? TimeSpan{ get; set; }
         ///<summary>
-        /// 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年
+        /// 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
         ///</summary>
         public int? TimeUnit{ get; set; }
         ///<summary>
@@ -74,7 +74,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public int? NetworkOperator{ get; set; }
         ///<summary>
-        /// 计算公式（配置细项）
+        /// 计算公式（配置细项）(新购、升降配必传)
         ///</summary>
         public List<Formula> Formula{ get; set; }
         ///<summary>

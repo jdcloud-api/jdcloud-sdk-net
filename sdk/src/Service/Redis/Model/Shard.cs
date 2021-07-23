@@ -33,7 +33,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  shard对象
+    ///  分片信息
     /// </summary>
     public class Shard
     {

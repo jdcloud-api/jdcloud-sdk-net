@@ -51,6 +51,10 @@ namespace JDCloudSDK.Openjrtc.Model
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
+        /// 应用默认创建的房间类型 1-小房间；2-大房间
+        ///</summary>
+        public int? RoomType{ get; set; }
+        ///<summary>
         /// 计费类型: Duration-按时长
         /// 
         ///</summary>

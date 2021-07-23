@@ -51,6 +51,10 @@ namespace JDCloudSDK.Redis.Model
         [Required]
         public string ResourceName{ get; set; }
         ///<summary>
+        /// 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+        ///</summary>
+        public string ResourceStatus{ get; set; }
+        ///<summary>
         /// service code（redis）
         ///Required:true
         ///</summary>

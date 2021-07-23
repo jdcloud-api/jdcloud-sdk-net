@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JRtcApp
+ * JrtcApp
  * 用户应用信息
  *
  * OpenAPI spec version: v1
@@ -51,6 +51,10 @@ namespace  JDCloudSDK.Openjrtc.Apis
         /// 
         ///</summary>
         public   string Status{ get; set; }
+        ///<summary>
+        /// 应用默认创建的房间类型 1-小房间；2-大房间
+        ///</summary>
+        public   int? RoomType{ get; set; }
         ///<summary>
         /// 计费类型: Duration-按时长
         /// 

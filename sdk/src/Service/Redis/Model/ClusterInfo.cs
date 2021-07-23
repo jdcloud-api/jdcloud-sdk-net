@@ -38,12 +38,16 @@ namespace JDCloudSDK.Redis.Model
     {
 
         ///<summary>
-        /// proxy列表
+        /// 代理列表
         ///</summary>
         public List<Proxy> Proxies{ get; set; }
         ///<summary>
-        /// shard列表
+        /// 分片列表
         ///</summary>
         public List<Shard> Shards{ get; set; }
+        ///<summary>
+        /// redis列表
+        ///</summary>
+        public List<JDCloudSDK.Redis.Model.Redis> Redis{ get; set; }
     }
 }

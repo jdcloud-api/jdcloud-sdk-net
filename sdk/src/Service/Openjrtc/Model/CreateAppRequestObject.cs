@@ -41,5 +41,9 @@ namespace JDCloudSDK.Openjrtc.Model
         /// 应用名称
         ///</summary>
         public string AppName{ get; set; }
+        ///<summary>
+        /// 应用创建的默认房间类型 1-小房间；2-大房间
+        ///</summary>
+        public int? RoomType{ get; set; }
     }
 }

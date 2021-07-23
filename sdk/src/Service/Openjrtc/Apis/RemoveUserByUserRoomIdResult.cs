@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
+ * RoomUser
+ * 房间人员管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,33 +26,17 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 
-namespace JDCloudSDK.Redis.Model
+namespace  JDCloudSDK.Openjrtc.Apis
 {
 
     /// <summary>
-    ///  filter
+    ///  移除房间内人员
+        ///         /// 
     /// </summary>
-    public class Filter
+    public class RemoveUserByUserRoomIdResult : JdcloudResult
     {
-
-        ///<summary>
-        /// 过滤条件的名称
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string Name{ get; set; }
-        ///<summary>
-        /// 过滤条件的操作符，默认eq
-        ///</summary>
-        public string Operator{ get; set; }
-        ///<summary>
-        /// 过滤条件的值
-        ///Required:true
-        ///</summary>
-        [Required]
-        public List<string> Values{ get; set; }
     }
 }

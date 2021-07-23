@@ -33,7 +33,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  proxy对象
+    ///  代理信息
     /// </summary>
     public class Proxy
     {

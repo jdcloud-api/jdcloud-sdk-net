@@ -134,7 +134,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public int? ChargeUnit{ get; set; }
         ///<summary>
-        /// 欠费过期状态
+        /// 欠费过期状态，1:包年包月正常 2：包年包月到期  3:按配置、按用量正常  4：按配置、按用量欠费
         ///</summary>
         public int? AeStatus{ get; set; }
         ///<summary>
@@ -209,5 +209,9 @@ namespace JDCloudSDK.Billing.Model
         /// 启服、停服、停止计费时间
         ///</summary>
         public string OperateTime{ get; set; }
+        ///<summary>
+        /// 欠费类型 1、无欠费，2、按配置欠费，3、按用量欠费，4、按配置和按用量都欠费
+        ///</summary>
+        public int? ArrearsType{ get; set; }
     }
 }

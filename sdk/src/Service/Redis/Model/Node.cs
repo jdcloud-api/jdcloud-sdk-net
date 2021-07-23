@@ -27,34 +27,27 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using JDCloudSDK.Core.Annotation;
 
 namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  节点对象
+    ///  节点信息
     /// </summary>
     public class Node
     {
 
         ///<summary>
         /// Id
-        ///Required:true
         ///</summary>
-        [Required]
-        public int Id{ get; set; }
+        public string Id{ get; set; }
         ///<summary>
         /// Ip
-        ///Required:true
         ///</summary>
-        [Required]
         public string Ip{ get; set; }
         ///<summary>
         /// Port
-        ///Required:true
         ///</summary>
-        [Required]
-        public int Port{ get; set; }
+        public int? Port{ get; set; }
     }
 }

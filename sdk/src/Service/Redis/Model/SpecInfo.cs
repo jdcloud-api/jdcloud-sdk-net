@@ -56,7 +56,7 @@ namespace JDCloudSDK.Redis.Model
         ///<summary>
         /// 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
         ///</summary>
-        public int? MaxConntion{ get; set; }
+        public int? MaxConnection{ get; set; }
         ///<summary>
         /// 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
         ///</summary>

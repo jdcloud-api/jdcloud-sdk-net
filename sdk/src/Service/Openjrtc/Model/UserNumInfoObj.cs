@@ -32,7 +32,7 @@ namespace JDCloudSDK.Openjrtc.Model
 {
 
     /// <summary>
-    ///  应用信息
+    ///  统计信息
     /// </summary>
     public class UserNumInfoObj
     {

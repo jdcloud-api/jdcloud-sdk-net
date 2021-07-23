@@ -38,19 +38,19 @@ namespace JDCloudSDK.Billing.Model
     {
 
         ///<summary>
-        /// 当前页
+        /// 当前页(默认:1)
         ///</summary>
         public int? CurrPageNo{ get; set; }
         ///<summary>
-        /// 页数
+        /// 总页数
         ///</summary>
         public int? NumberPages{ get; set; }
         ///<summary>
-        /// 每页记录数
+        /// 总记录数
         ///</summary>
         public int? NumberRecords{ get; set; }
         ///<summary>
-        /// 页面大小
+        /// 每页记录数(默认每页:10)
         ///</summary>
         public int? PageSize{ get; set; }
         ///<summary>

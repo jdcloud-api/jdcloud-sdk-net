@@ -32,7 +32,7 @@ namespace JDCloudSDK.Billing.Model
 {
 
     /// <summary>
-    ///  resourceOrderQueryCondition
+    ///  pin、resourceId、resourceIdList 必传一个
     /// </summary>
     public class ResourceOrderQueryCondition
     {
@@ -42,11 +42,11 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public int? Id{ get; set; }
         ///<summary>
-        /// 用户pin
+        /// 用户pin(pin、resourceId、resourceIdList 必传一个)
         ///</summary>
         public string Pin{ get; set; }
         ///<summary>
-        /// 资源id
+        /// 资源id(pin、resourceId、resourceIdList 必传一个)
         ///</summary>
         public string ResourceId{ get; set; }
         ///<summary>
@@ -70,7 +70,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public int? BillingType{ get; set; }
         ///<summary>
-        /// resourceIdList
+        /// resourceIdList(pin、resourceId、resourceIdList 必传一个)
         ///</summary>
         public List<string> ResourceIdList{ get; set; }
         ///<summary>

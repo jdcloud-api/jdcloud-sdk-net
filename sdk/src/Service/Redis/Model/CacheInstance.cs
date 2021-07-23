@@ -51,7 +51,7 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public string CacheInstanceClass{ get; set; }
         ///<summary>
-        /// 实例的总内存（MB）
+        /// 实例的总内存（MB），表示用户购买的可使用内存
         ///</summary>
         public int? CacheInstanceMemoryMB{ get; set; }
         ///<summary>
@@ -122,5 +122,9 @@ namespace JDCloudSDK.Redis.Model
         /// 单分片内存大小（MB）
         ///</summary>
         public int? MemoryMBPerShard{ get; set; }
+        ///<summary>
+        /// 扩展配置
+        ///</summary>
+        public RespExtension Extension{ get; set; }
     }
 }

@@ -53,7 +53,7 @@ namespace  JDCloudSDK.Redis.Apis
         [Required]
         public   string CacheInstanceId{ get; set; }
         ///<summary>
-        /// 查询缓存分析任务详情的任务ID
+        /// 任务ID，即request ID
         ///Required:true
         ///</summary>
         [Required]

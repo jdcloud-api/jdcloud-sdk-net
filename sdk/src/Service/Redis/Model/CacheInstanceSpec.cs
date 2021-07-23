@@ -88,5 +88,13 @@ namespace JDCloudSDK.Redis.Model
         /// 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
         ///</summary>
         public int? ShardNumber{ get; set; }
+        ///<summary>
+        /// 用户普通标签
+        ///</summary>
+        public List<Tag> UserTags{ get; set; }
+        ///<summary>
+        /// 扩展配置
+        ///</summary>
+        public ReqExtension Extension{ get; set; }
     }
 }

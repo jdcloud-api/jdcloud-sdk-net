@@ -32,17 +32,17 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  instanceVpcIp对象
+    ///  集群信息
     /// </summary>
     public class InstanceVpcIp
     {
 
         ///<summary>
-        /// proxy列表
+        /// 代理列表
         ///</summary>
-        public List<Node> Proxy{ get; set; }
+        public List<Node> Proxies{ get; set; }
         ///<summary>
-        /// 分片信息
+        /// 分片列表
         ///</summary>
         public List<RedisShard> Shards{ get; set; }
     }

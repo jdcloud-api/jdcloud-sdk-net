@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Redis Quota API
- * 缓存Redis配额查询、修改接口
+ * RegisterUser
+ * 用户管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,28 +26,33 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
 
-namespace JDCloudSDK.Redis.Model
+namespace  JDCloudSDK.Openjrtc.Apis
 {
 
     /// <summary>
-    ///  quota
+    ///  注册用户-将业务接入方用户体系的userId注册为jrtc系统内可识别和流转的用户id
+        ///         /// 
     /// </summary>
-    public class Quota
+    public class RegisterUserRequest : JdcloudRequest
     {
-
         ///<summary>
-        /// 配额项的名称
+        /// 应用ID
         ///</summary>
-        public string Name{ get; set; }
+        public   string AppId{ get; set; }
         ///<summary>
-        /// 配额
+        /// 用户名称
         ///</summary>
-        public int? Max{ get; set; }
+        public   string UserName{ get; set; }
         ///<summary>
-        /// 已使用的数目
+        /// 业务接入方用户体系定义的userId
         ///</summary>
-        public int? Used{ get; set; }
+        public   string UserId{ get; set; }
+        ///<summary>
+        /// 是否临时用户
+        ///</summary>
+        public   bool Temporary{ get; set; }
     }
 }

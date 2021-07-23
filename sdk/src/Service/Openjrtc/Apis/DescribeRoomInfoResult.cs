@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JRtcRoom
+ * JrtcRoom
  * 房间号管理接口
  *
  * OpenAPI spec version: v1
@@ -46,6 +46,10 @@ namespace  JDCloudSDK.Openjrtc.Apis
         /// 房间名称
         ///</summary>
         public   string RoomName{ get; set; }
+        ///<summary>
+        /// 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+        ///</summary>
+        public   int? RoomType{ get; set; }
         ///<summary>
         /// appId
         ///</summary>

@@ -157,6 +157,25 @@ namespace JDCloudSDK.Redis.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询正在执行的任务进度列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTaskProgressListResponse DescribeTaskProgressList(DescribeTaskProgressListRequest request) {
+            return  new DescribeTaskProgressListExecutor().Client(this).Execute<DescribeTaskProgressListResponse, DescribeTaskProgressListResult, DescribeTaskProgressListRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询正在执行的任务进度列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTaskProgressListResponse> DescribeTaskProgressList(DescribeTaskProgressListRequest request) {
+            return await new DescribeTaskProgressListExecutor().Client(this).Execute<DescribeTaskProgressListResponse, DescribeTaskProgressListResult, DescribeTaskProgressListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取Redis实例的IP白名单（只有白名单内的IP、网络才能访问该实例）
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -343,6 +362,25 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeCacheAnalysisListResponse> DescribeCacheAnalysisList(DescribeCacheAnalysisListRequest request) {
             return await new DescribeCacheAnalysisListExecutor().Client(this).Execute<DescribeCacheAnalysisListResponse, DescribeCacheAnalysisListResult, DescribeCacheAnalysisListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询支持的地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAvailableRegionResponse DescribeAvailableRegion(DescribeAvailableRegionRequest request) {
+            return  new DescribeAvailableRegionExecutor().Client(this).Execute<DescribeAvailableRegionResponse, DescribeAvailableRegionResult, DescribeAvailableRegionRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询支持的地域列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAvailableRegionResponse> DescribeAvailableRegion(DescribeAvailableRegionRequest request) {
+            return await new DescribeAvailableRegionExecutor().Client(this).Execute<DescribeAvailableRegionResponse, DescribeAvailableRegionResult, DescribeAvailableRegionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -581,6 +619,25 @@ namespace JDCloudSDK.Redis.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest request) {
             return await new DescribeUserQuotaExecutor().Client(this).Execute<DescribeUserQuotaResponse, DescribeUserQuotaResult, DescribeUserQuotaRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询支持的规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAvailableResourceResponse DescribeAvailableResource(DescribeAvailableResourceRequest request) {
+            return  new DescribeAvailableResourceExecutor().Client(this).Execute<DescribeAvailableResourceResponse, DescribeAvailableResourceResult, DescribeAvailableResourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询支持的规格列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAvailableResourceResponse> DescribeAvailableResource(DescribeAvailableResourceRequest request) {
+            return await new DescribeAvailableResourceExecutor().Client(this).Execute<DescribeAvailableResourceResponse, DescribeAvailableResourceResult, DescribeAvailableResourceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

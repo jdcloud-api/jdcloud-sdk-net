@@ -163,23 +163,142 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取房间信息
+        ///  查询房间内人员列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - status[eq] 在线状态 1-在线 2-离线
+        ///            - startTime[eq] 用户加入时间段开始时间-UTC时间  startTime,endTime同时有值时生效
+        ///            - endTime[eq] 用户加入时间段结束时间-UTC时间    startTime,endTime同时有值时生效
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest request) {
-            return  new DescribeRoomInfoExecutor().Client(this).Execute<DescribeRoomInfoResponse, DescribeRoomInfoResult, DescribeRoomInfoRequest>(request);
+        public DescribeRoomUsersResponse DescribeRoomUsers(DescribeRoomUsersRequest request) {
+            return  new DescribeRoomUsersExecutor().Client(this).Execute<DescribeRoomUsersResponse, DescribeRoomUsersResult, DescribeRoomUsersRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取房间信息
+        ///  查询房间内人员列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - status[eq] 在线状态 1-在线 2-离线
+        ///            - startTime[eq] 用户加入时间段开始时间-UTC时间  startTime,endTime同时有值时生效
+        ///            - endTime[eq] 用户加入时间段结束时间-UTC时间    startTime,endTime同时有值时生效
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeRoomInfoResponse> DescribeRoomInfo(DescribeRoomInfoRequest request) {
-            return await new DescribeRoomInfoExecutor().Client(this).Execute<DescribeRoomInfoResponse, DescribeRoomInfoResult, DescribeRoomInfoRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeRoomUsersResponse> DescribeRoomUsers(DescribeRoomUsersRequest request) {
+            return await new DescribeRoomUsersExecutor().Client(this).Execute<DescribeRoomUsersResponse, DescribeRoomUsersResult, DescribeRoomUsersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  统计房间内人数
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRoomUsersNumResponse DescribeRoomUsersNum(DescribeRoomUsersNumRequest request) {
+            return  new DescribeRoomUsersNumExecutor().Client(this).Execute<DescribeRoomUsersNumResponse, DescribeRoomUsersNumResult, DescribeRoomUsersNumRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  统计房间内人数
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRoomUsersNumResponse> DescribeRoomUsersNum(DescribeRoomUsersNumRequest request) {
+            return await new DescribeRoomUsersNumExecutor().Client(this).Execute<DescribeRoomUsersNumResponse, DescribeRoomUsersNumResult, DescribeRoomUsersNumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateRoomResponse CreateRoom(CreateRoomRequest request) {
+            return  new CreateRoomExecutor().Client(this).Execute<CreateRoomResponse, CreateRoomResult, CreateRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateRoomResponse> CreateRoom(CreateRoomRequest request) {
+            return await new CreateRoomExecutor().Client(this).Execute<CreateRoomResponse, CreateRoomResult, CreateRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询注册用户
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRegisterUserResponse DescribeRegisterUser(DescribeRegisterUserRequest request) {
+            return  new DescribeRegisterUserExecutor().Client(this).Execute<DescribeRegisterUserResponse, DescribeRegisterUserResult, DescribeRegisterUserRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询注册用户
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRegisterUserResponse> DescribeRegisterUser(DescribeRegisterUserRequest request) {
+            return await new DescribeRegisterUserExecutor().Client(this).Execute<DescribeRegisterUserResponse, DescribeRegisterUserResult, DescribeRegisterUserRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateUserRoomResponse UpdateUserRoom(UpdateUserRoomRequest request) {
+            return  new UpdateUserRoomExecutor().Client(this).Execute<UpdateUserRoomResponse, UpdateUserRoomResult, UpdateUserRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateUserRoomResponse> UpdateUserRoom(UpdateUserRoomRequest request) {
+            return await new UpdateUserRoomExecutor().Client(this).Execute<UpdateUserRoomResponse, UpdateUserRoomResult, UpdateUserRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询注册房间号列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - startTime[eq] 房间注册时间段开始时间-UTC时间 startTime,endTime同时有值时生效
+        ///            - endTime[eq] 房间注册时间段结束时间-UTC时间   startTime,endTime同时有值时生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUserRoomsResponse DescribeUserRooms(DescribeUserRoomsRequest request) {
+            return  new DescribeUserRoomsExecutor().Client(this).Execute<DescribeUserRoomsResponse, DescribeUserRoomsResult, DescribeUserRoomsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询注册房间号列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - startTime[eq] 房间注册时间段开始时间-UTC时间 startTime,endTime同时有值时生效
+        ///            - endTime[eq] 房间注册时间段结束时间-UTC时间   startTime,endTime同时有值时生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUserRoomsResponse> DescribeUserRooms(DescribeUserRoomsRequest request) {
+            return await new DescribeUserRoomsExecutor().Client(this).Execute<DescribeUserRoomsResponse, DescribeUserRoomsResult, DescribeUserRoomsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -205,23 +324,145 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询应用信息:
-        /// 
+        ///  发送自定义信令给房间内的人员
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeAppResponse DescribeApp(DescribeAppRequest request) {
-            return  new DescribeAppExecutor().Client(this).Execute<DescribeAppResponse, DescribeAppResult, DescribeAppRequest>(request);
+        public SendMessageToUserResponse SendMessageToUser(SendMessageToUserRequest request) {
+            return  new SendMessageToUserExecutor().Client(this).Execute<SendMessageToUserResponse, SendMessageToUserResult, SendMessageToUserRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询应用信息:
+        ///  发送自定义信令给房间内的人员
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SendMessageToUserResponse> SendMessageToUser(SendMessageToUserRequest request) {
+            return await new SendMessageToUserExecutor().Client(this).Execute<SendMessageToUserResponse, SendMessageToUserResult, SendMessageToUserRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改房间
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeAppResponse> DescribeApp(DescribeAppRequest request) {
-            return await new DescribeAppExecutor().Client(this).Execute<DescribeAppResponse, DescribeAppResult, DescribeAppRequest>(request).ConfigureAwait(false);
+        public UpdateRoomResponse UpdateRoom(UpdateRoomRequest request) {
+            return  new UpdateRoomExecutor().Client(this).Execute<UpdateRoomResponse, UpdateRoomResult, UpdateRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改房间
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateRoomResponse> UpdateRoom(UpdateRoomRequest request) {
+            return await new UpdateRoomExecutor().Client(this).Execute<UpdateRoomResponse, UpdateRoomResult, UpdateRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  生成token-用户加入房间时携带token校验通过后方能加入
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateTokenResponse CreateToken(CreateTokenRequest request) {
+            return  new CreateTokenExecutor().Client(this).Execute<CreateTokenResponse, CreateTokenResult, CreateTokenRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  生成token-用户加入房间时携带token校验通过后方能加入
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateTokenResponse> CreateToken(CreateTokenRequest request) {
+            return await new CreateTokenExecutor().Client(this).Execute<CreateTokenResponse, CreateTokenResult, CreateTokenRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  注册用户房间号-将业务接入方定义的userRoomId注册为jrtc系统内可识别和流转的房间号
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RegisterUserRoomResponse RegisterUserRoom(RegisterUserRoomRequest request) {
+            return  new RegisterUserRoomExecutor().Client(this).Execute<RegisterUserRoomResponse, RegisterUserRoomResult, RegisterUserRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  注册用户房间号-将业务接入方定义的userRoomId注册为jrtc系统内可识别和流转的房间号
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RegisterUserRoomResponse> RegisterUserRoom(RegisterUserRoomRequest request) {
+            return await new RegisterUserRoomExecutor().Client(this).Execute<RegisterUserRoomResponse, RegisterUserRoomResult, RegisterUserRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  注册用户-将业务接入方用户体系的userId注册为jrtc系统内可识别和流转的用户id
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RegisterUserResponse RegisterUser(RegisterUserRequest request) {
+            return  new RegisterUserExecutor().Client(this).Execute<RegisterUserResponse, RegisterUserResult, RegisterUserRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  注册用户-将业务接入方用户体系的userId注册为jrtc系统内可识别和流转的用户id
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RegisterUserResponse> RegisterUser(RegisterUserRequest request) {
+            return await new RegisterUserExecutor().Client(this).Execute<RegisterUserResponse, RegisterUserResult, RegisterUserRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  发送自定义信令给房间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SendMessageToRoomResponse SendMessageToRoom(SendMessageToRoomRequest request) {
+            return  new SendMessageToRoomExecutor().Client(this).Execute<SendMessageToRoomResponse, SendMessageToRoomResult, SendMessageToRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  发送自定义信令给房间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SendMessageToRoomResponse> SendMessageToRoom(SendMessageToRoomRequest request) {
+            return await new SendMessageToRoomExecutor().Client(this).Execute<SendMessageToRoomResponse, SendMessageToRoomResult, SendMessageToRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询peer对应的用户信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUserByPeerResponse DescribeUserByPeer(DescribeUserByPeerRequest request) {
+            return  new DescribeUserByPeerExecutor().Client(this).Execute<DescribeUserByPeerResponse, DescribeUserByPeerResult, DescribeUserByPeerRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询peer对应的用户信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUserByPeerResponse> DescribeUserByPeer(DescribeUserByPeerRequest request) {
+            return await new DescribeUserByPeerExecutor().Client(this).Execute<DescribeUserByPeerResponse, DescribeUserByPeerResult, DescribeUserByPeerRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -247,23 +488,21 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改房间
-        /// 
+        ///  发送自定义信令给房间内的人员
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public UpdateRoomResponse UpdateRoom(UpdateRoomRequest request) {
-            return  new UpdateRoomExecutor().Client(this).Execute<UpdateRoomResponse, UpdateRoomResult, UpdateRoomRequest>(request);
+        public PostMessageToUserResponse PostMessageToUser(PostMessageToUserRequest request) {
+            return  new PostMessageToUserExecutor().Client(this).Execute<PostMessageToUserResponse, PostMessageToUserResult, PostMessageToUserRequest>(request);
         }
 #else
         /// <summary>
-        ///  修改房间
-        /// 
+        ///  发送自定义信令给房间内的人员
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<UpdateRoomResponse> UpdateRoom(UpdateRoomRequest request) {
-            return await new UpdateRoomExecutor().Client(this).Execute<UpdateRoomResponse, UpdateRoomResult, UpdateRoomRequest>(request).ConfigureAwait(false);
+        public async Task<PostMessageToUserResponse> PostMessageToUser(PostMessageToUserRequest request) {
+            return await new PostMessageToUserExecutor().Client(this).Execute<PostMessageToUserResponse, PostMessageToUserResult, PostMessageToUserRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -310,23 +549,195 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建房间
+        ///  查询注册用户列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - startTime[eq] 用户注册时间段开始时间-UTC时间 startTime,endTime同时有值时生效
+        ///            - endTime[eq] 用户注册时间段结束时间-UTC时间 startTime,endTime同时有值时生效
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public CreateRoomResponse CreateRoom(CreateRoomRequest request) {
-            return  new CreateRoomExecutor().Client(this).Execute<CreateRoomResponse, CreateRoomResult, CreateRoomRequest>(request);
+        public DescribeRegisterUsersResponse DescribeRegisterUsers(DescribeRegisterUsersRequest request) {
+            return  new DescribeRegisterUsersExecutor().Client(this).Execute<DescribeRegisterUsersResponse, DescribeRegisterUsersResult, DescribeRegisterUsersRequest>(request);
         }
 #else
         /// <summary>
-        ///  创建房间
+        ///  查询注册用户列表
+        /// 允许通过条件过滤查询，支持的过滤字段如下：
+        ///            - startTime[eq] 用户注册时间段开始时间-UTC时间 startTime,endTime同时有值时生效
+        ///            - endTime[eq] 用户注册时间段结束时间-UTC时间 startTime,endTime同时有值时生效
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<CreateRoomResponse> CreateRoom(CreateRoomRequest request) {
-            return await new CreateRoomExecutor().Client(this).Execute<CreateRoomResponse, CreateRoomResult, CreateRoomRequest>(request).ConfigureAwait(false);
+        public async Task<DescribeRegisterUsersResponse> DescribeRegisterUsers(DescribeRegisterUsersRequest request) {
+            return await new DescribeRegisterUsersExecutor().Client(this).Execute<DescribeRegisterUsersResponse, DescribeRegisterUsersResult, DescribeRegisterUsersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  发送自定义信令给房间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PostMessageToUserRoomResponse PostMessageToUserRoom(PostMessageToUserRoomRequest request) {
+            return  new PostMessageToUserRoomExecutor().Client(this).Execute<PostMessageToUserRoomResponse, PostMessageToUserRoomResult, PostMessageToUserRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  发送自定义信令给房间
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PostMessageToUserRoomResponse> PostMessageToUserRoom(PostMessageToUserRoomRequest request) {
+            return await new PostMessageToUserRoomExecutor().Client(this).Execute<PostMessageToUserRoomResponse, PostMessageToUserRoomResult, PostMessageToUserRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除房间内所有人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveAllUsersByUserRoomIdResponse RemoveAllUsersByUserRoomId(RemoveAllUsersByUserRoomIdRequest request) {
+            return  new RemoveAllUsersByUserRoomIdExecutor().Client(this).Execute<RemoveAllUsersByUserRoomIdResponse, RemoveAllUsersByUserRoomIdResult, RemoveAllUsersByUserRoomIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除房间内所有人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveAllUsersByUserRoomIdResponse> RemoveAllUsersByUserRoomId(RemoveAllUsersByUserRoomIdRequest request) {
+            return await new RemoveAllUsersByUserRoomIdExecutor().Client(this).Execute<RemoveAllUsersByUserRoomIdResponse, RemoveAllUsersByUserRoomIdResult, RemoveAllUsersByUserRoomIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除房间内人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveRoomUserResponse RemoveRoomUser(RemoveRoomUserRequest request) {
+            return  new RemoveRoomUserExecutor().Client(this).Execute<RemoveRoomUserResponse, RemoveRoomUserResult, RemoveRoomUserRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除房间内人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveRoomUserResponse> RemoveRoomUser(RemoveRoomUserRequest request) {
+            return await new RemoveRoomUserExecutor().Client(this).Execute<RemoveRoomUserResponse, RemoveRoomUserResult, RemoveRoomUserRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除房间内人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveUserByUserRoomIdResponse RemoveUserByUserRoomId(RemoveUserByUserRoomIdRequest request) {
+            return  new RemoveUserByUserRoomIdExecutor().Client(this).Execute<RemoveUserByUserRoomIdResponse, RemoveUserByUserRoomIdResult, RemoveUserByUserRoomIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除房间内人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveUserByUserRoomIdResponse> RemoveUserByUserRoomId(RemoveUserByUserRoomIdRequest request) {
+            return await new RemoveUserByUserRoomIdExecutor().Client(this).Execute<RemoveUserByUserRoomIdResponse, RemoveUserByUserRoomIdResult, RemoveUserByUserRoomIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取房间信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest request) {
+            return  new DescribeRoomInfoExecutor().Client(this).Execute<DescribeRoomInfoResponse, DescribeRoomInfoResult, DescribeRoomInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取房间信息
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeRoomInfoResponse> DescribeRoomInfo(DescribeRoomInfoRequest request) {
+            return await new DescribeRoomInfoExecutor().Client(this).Execute<DescribeRoomInfoResponse, DescribeRoomInfoResult, DescribeRoomInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询应用信息:
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAppResponse DescribeApp(DescribeAppRequest request) {
+            return  new DescribeAppExecutor().Client(this).Execute<DescribeAppResponse, DescribeAppResult, DescribeAppRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询应用信息:
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAppResponse> DescribeApp(DescribeAppRequest request) {
+            return await new DescribeAppExecutor().Client(this).Execute<DescribeAppResponse, DescribeAppResult, DescribeAppRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  移除房间内所有人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public RemoveAllRoomUsersResponse RemoveAllRoomUsers(RemoveAllRoomUsersRequest request) {
+            return  new RemoveAllRoomUsersExecutor().Client(this).Execute<RemoveAllRoomUsersResponse, RemoveAllRoomUsersResult, RemoveAllRoomUsersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  移除房间内所有人员
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<RemoveAllRoomUsersResponse> RemoveAllRoomUsers(RemoveAllRoomUsersRequest request) {
+            return await new RemoveAllRoomUsersExecutor().Client(this).Execute<RemoveAllRoomUsersResponse, RemoveAllRoomUsersResult, RemoveAllRoomUsersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询注册房间号
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeUserRoomResponse DescribeUserRoom(DescribeUserRoomRequest request) {
+            return  new DescribeUserRoomExecutor().Client(this).Execute<DescribeUserRoomResponse, DescribeUserRoomResult, DescribeUserRoomRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询注册房间号
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeUserRoomResponse> DescribeUserRoom(DescribeUserRoomRequest request) {
+            return await new DescribeUserRoomExecutor().Client(this).Execute<DescribeUserRoomResponse, DescribeUserRoomResult, DescribeUserRoomRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

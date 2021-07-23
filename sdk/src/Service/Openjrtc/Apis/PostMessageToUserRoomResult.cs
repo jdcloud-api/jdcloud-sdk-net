@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
+ * UserMessage
+ * 自定义信令消息
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,29 +26,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
-using JDCloudSDK.Core.Annotation;
 
-namespace JDCloudSDK.Redis.Model
+namespace  JDCloudSDK.Openjrtc.Apis
 {
 
     /// <summary>
-    ///  tagFilter
+    ///  发送自定义信令给房间
     /// </summary>
-    public class TagFilter
+    public class PostMessageToUserRoomResult : JdcloudResult
     {
-
-        ///<summary>
-        /// Tag键
-        ///Required:true
-        ///</summary>
-        [Required]
-        public string Key{ get; set; }
-        ///<summary>
-        /// Tag值
-        ///Required:true
-        ///</summary>
-        [Required]
-        public List<string> Values{ get; set; }
     }
 }

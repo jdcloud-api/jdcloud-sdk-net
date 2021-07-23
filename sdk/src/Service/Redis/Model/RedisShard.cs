@@ -32,7 +32,7 @@ namespace JDCloudSDK.Redis.Model
 {
 
     /// <summary>
-    ///  分片对象
+    ///  分片信息
     /// </summary>
     public class RedisShard
     {
@@ -42,8 +42,8 @@ namespace JDCloudSDK.Redis.Model
         ///</summary>
         public Node Master{ get; set; }
         ///<summary>
-        /// slave列表
+        /// slave节点列表
         ///</summary>
-        public List<Node> Slave{ get; set; }
+        public List<Node> Slaves{ get; set; }
     }
 }

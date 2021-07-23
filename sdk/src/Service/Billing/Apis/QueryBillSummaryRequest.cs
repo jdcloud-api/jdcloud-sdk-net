@@ -41,13 +41,13 @@ namespace  JDCloudSDK.Billing.Apis
     public class QueryBillSummaryRequest : JdcloudRequest
     {
         ///<summary>
-        /// 计费开始时间
+        /// 账期开始时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
         ///Required:true
         ///</summary>
         [Required]
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 计费结束时间
+        /// 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
         ///Required:true
         ///</summary>
         [Required]
@@ -61,21 +61,25 @@ namespace  JDCloudSDK.Billing.Apis
         ///</summary>
         public   string ServiceCode{ get; set; }
         ///<summary>
-        /// 资源单id列表
+        /// 资源单id列表,最多支持传入500个
         ///</summary>
         public List<string> ResourceIds{ get; set; }
 
         ///<summary>
-        /// 标签
+        /// 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+        /// 示例:
+        /// 选择的标签为, 部门:广告部、部门:物流部、项目
+        /// 则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
+        /// 
         ///</summary>
         public List<Tags> Tags{ get; set; }
 
         ///<summary>
-        /// pageIndex
+        /// pageIndex 分页,默认从1开始
         ///</summary>
         public   int? PageIndex{ get; set; }
         ///<summary>
-        /// pageSize
+        /// pageSize 每页查询数据条数,最多支持1000条
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

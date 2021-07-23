@@ -42,7 +42,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string Pin{ get; set; }
         ///<summary>
-        /// appCode
+        /// 产品线代码
         ///</summary>
         public string AppCode{ get; set; }
         ///<summary>
@@ -50,7 +50,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string AppCodeName{ get; set; }
         ///<summary>
-        /// serviceCode
+        /// 产品代码
         ///</summary>
         public string ServiceCode{ get; set; }
         ///<summary>
@@ -78,7 +78,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 费用类型
+        /// 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
         ///</summary>
         public string ActionTypeName{ get; set; }
         ///<summary>
@@ -94,7 +94,7 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        /// 账单生成时间
+        /// 账单生成时间,仅用于查询帐单明细接口
         ///</summary>
         public string BillTime{ get; set; }
         ///<summary>

@@ -66,6 +66,14 @@ namespace JDCloudSDK.Billing.Model
         ///</summary>
         public double? ArrearFee{ get; set; }
         ///<summary>
+        /// 原价
+        ///</summary>
+        public double? BillFee2{ get; set; }
+        ///<summary>
+        /// 优惠金额
+        ///</summary>
+        public double? DiscountFee{ get; set; }
+        ///<summary>
         /// 分组显示值
         ///</summary>
         public string GroupTagValue{ get; set; }

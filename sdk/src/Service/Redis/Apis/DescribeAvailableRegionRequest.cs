@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
+ * Redis Available Region API
+ * 缓存Redis的地域列表接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,24 +26,25 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
-namespace JDCloudSDK.Redis.Model
+namespace  JDCloudSDK.Redis.Apis
 {
 
     /// <summary>
-    ///  sort
+    ///  查询支持的地域列表
     /// </summary>
-    public class Sort
+    public class DescribeAvailableRegionRequest : JdcloudRequest
     {
-
         ///<summary>
-        /// 排序条件的名称
+        /// 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
+        ///Required:true
         ///</summary>
-        public string Name{ get; set; }
-        ///<summary>
-        /// 排序条件的方向
-        ///</summary>
-        public string Direction{ get; set; }
+        [Required]
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }
