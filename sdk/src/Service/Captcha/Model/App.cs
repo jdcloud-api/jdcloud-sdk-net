@@ -49,7 +49,7 @@ namespace JDCloudSDK.Captcha.Model
         [Required]
         public string AppName{ get; set; }
         ///<summary>
-        /// 应用类型，可选值 app
+        /// 应用类型，可选值 app, pc, wxapp, m
         ///Required:true
         ///</summary>
         [Required]

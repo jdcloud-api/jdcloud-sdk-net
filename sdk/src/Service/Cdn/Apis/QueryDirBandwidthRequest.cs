@@ -57,5 +57,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 需要过滤的地区
         ///</summary>
         public   string Regions{ get; set; }
+        ///<summary>
+        /// 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+        ///</summary>
+        public   string CacheType{ get; set; }
     }
 }

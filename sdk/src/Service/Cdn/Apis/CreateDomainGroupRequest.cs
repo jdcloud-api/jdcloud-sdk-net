@@ -38,7 +38,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class CreateDomainGroupRequest : JdcloudRequest
     {
         ///<summary>
-        /// 是否共享内存
+        /// 是否共享内存，共享缓存仅对中国境内加速域名生效
         ///</summary>
         public   string ShareCache{ get; set; }
         ///<summary>

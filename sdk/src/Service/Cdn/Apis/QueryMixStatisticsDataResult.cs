@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询统计数据
+    ///  查询统计数据，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryMixStatisticsDataResult : JdcloudResult
     {

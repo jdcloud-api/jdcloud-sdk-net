@@ -366,7 +366,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询TOP Url
+        ///  查询TOP Url，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -375,7 +375,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  查询TOP Url
+        ///  查询TOP Url，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -860,7 +860,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询统计数据
+        ///  查询统计数据，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -869,7 +869,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  查询统计数据
+        ///  查询统计数据，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -955,7 +955,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  http2配置
+        ///  http2配置，中国境外/全球加速域名暂不支持该配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -964,7 +964,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  http2配置
+        ///  http2配置，中国境外/全球加速域名暂不支持该配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1183,7 +1183,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取所有上层节点的ip
+        ///  获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1192,7 +1192,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  获取所有上层节点的ip
+        ///  获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1392,7 +1392,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询TOP IP
+        ///  查询TOP IP，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1401,7 +1401,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  查询TOP IP
+        ///  查询TOP IP，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1772,7 +1772,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询统计数据并进行汇总加和
+        ///  查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1781,7 +1781,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  查询统计数据并进行汇总加和
+        ///  查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2304,6 +2304,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  批量添加缓存规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SetCacheRulesResponse SetCacheRules(SetCacheRulesRequest request) {
+            return  new SetCacheRulesExecutor().Client(this).Execute<SetCacheRulesResponse, SetCacheRulesResult, SetCacheRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  批量添加缓存规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SetCacheRulesResponse> SetCacheRules(SetCacheRulesRequest request) {
+            return await new SetCacheRulesExecutor().Client(this).Execute<SetCacheRulesResponse, SetCacheRulesResult, SetCacheRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置视频拖拽
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2437,7 +2456,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  分地区及运营商查询统计数据
+        ///  分地区及运营商查询统计数据，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2446,7 +2465,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  分地区及运营商查询统计数据
+        ///  分地区及运营商查询统计数据，仅可查询中国境内的相关信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2566,6 +2585,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCCProtectRuleResponse> DeleteCCProtectRule(DeleteCCProtectRuleRequest request) {
             return await new DeleteCCProtectRuleExecutor().Client(this).Execute<DeleteCCProtectRuleResponse, DeleteCCProtectRuleResult, DeleteCCProtectRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  分页查询直播流数据接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryStreamInfoResponse QueryStreamInfo(QueryStreamInfoRequest request) {
+            return  new QueryStreamInfoExecutor().Client(this).Execute<QueryStreamInfoResponse, QueryStreamInfoResult, QueryStreamInfoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  分页查询直播流数据接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryStreamInfoResponse> QueryStreamInfo(QueryStreamInfoRequest request) {
+            return await new QueryStreamInfoExecutor().Client(this).Execute<QueryStreamInfoResponse, QueryStreamInfoResult, QueryStreamInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -3102,7 +3140,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建刷新预热任务
+        ///  创建刷新预热任务，
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -3111,7 +3149,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  创建刷新预热任务
+        ///  创建刷新预热任务，
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -3212,6 +3250,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteWafBlackRulesResponse> DeleteWafBlackRules(DeleteWafBlackRulesRequest request) {
             return await new DeleteWafBlackRulesExecutor().Client(this).Execute<DeleteWafBlackRulesResponse, DeleteWafBlackRulesResult, DeleteWafBlackRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  无线宝按group查询的统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryJDBoxStatisticsDataWithGroupResponse QueryJDBoxStatisticsDataWithGroup(QueryJDBoxStatisticsDataWithGroupRequest request) {
+            return  new QueryJDBoxStatisticsDataWithGroupExecutor().Client(this).Execute<QueryJDBoxStatisticsDataWithGroupResponse, QueryJDBoxStatisticsDataWithGroupResult, QueryJDBoxStatisticsDataWithGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  无线宝按group查询的统计接口
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryJDBoxStatisticsDataWithGroupResponse> QueryJDBoxStatisticsDataWithGroup(QueryJDBoxStatisticsDataWithGroupRequest request) {
+            return await new QueryJDBoxStatisticsDataWithGroupExecutor().Client(this).Execute<QueryJDBoxStatisticsDataWithGroupResponse, QueryJDBoxStatisticsDataWithGroupResult, QueryJDBoxStatisticsDataWithGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

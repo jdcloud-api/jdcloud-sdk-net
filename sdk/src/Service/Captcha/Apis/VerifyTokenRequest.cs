@@ -54,6 +54,10 @@ namespace  JDCloudSDK.Captcha.Apis
         ///</summary>
         public   long? SceneId{ get; set; }
         ///<summary>
+        /// 密钥，从界面获取
+        ///</summary>
+        public   string Secret{ get; set; }
+        ///<summary>
         /// 客户端ip
         ///</summary>
         public   string Ip{ get; set; }
@@ -62,11 +66,7 @@ namespace  JDCloudSDK.Captcha.Apis
         ///</summary>
         public   string UserAgent{ get; set; }
         ///<summary>
-        /// 指纹，客户端sdk获取
-        ///</summary>
-        public   string FingerPrint{ get; set; }
-        ///<summary>
-        /// 客户端类型, android, ios
+        /// 客户端类型, 可选值: android, ios, pc, wxapp, m
         ///</summary>
         public   string ClientType{ get; set; }
         ///<summary>

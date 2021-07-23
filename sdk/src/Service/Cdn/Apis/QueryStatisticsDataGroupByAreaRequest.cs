@@ -50,7 +50,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Domain{ get; set; }
         ///<summary>
-        /// 待查询的子域名
+        /// 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
         ///</summary>
         public   string SubDomain{ get; set; }
         ///<summary>
@@ -58,23 +58,23 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Fields{ get; set; }
         ///<summary>
-        /// Area
+        /// 查询的区域，如beijing,shanghai。多个用逗号分隔
         ///</summary>
         public   string Area{ get; set; }
         ///<summary>
-        /// Isp
+        /// 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
         ///</summary>
         public   string Isp{ get; set; }
         ///<summary>
-        /// Origin
+        /// 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略
         ///</summary>
-        public   string Origin{ get; set; }
+        public   bool Origin{ get; set; }
         ///<summary>
         /// 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
         ///</summary>
         public   string Period{ get; set; }
         ///<summary>
-        /// 分组依据
+        /// 分组依据,可选值：[terminal,sdtfrom],如果为空，则只按area/isp进行group
         ///</summary>
         public   string GroupBy{ get; set; }
         ///<summary>
@@ -85,5 +85,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// true 代表查询境外数据，默认false查询境内数据
         ///</summary>
         public   bool Abroad{ get; set; }
+        ///<summary>
+        /// 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+        ///</summary>
+        public   string CacheType{ get; set; }
     }
 }

@@ -39,7 +39,7 @@ namespace  JDCloudSDK.Cdn.Apis
     public class SetIpBlackListRequest : JdcloudRequest
     {
         ///<summary>
-        /// ip名单,ips中url不能超过50条
+        /// ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
         ///</summary>
         public List<string> Ips{ get; set; }
 

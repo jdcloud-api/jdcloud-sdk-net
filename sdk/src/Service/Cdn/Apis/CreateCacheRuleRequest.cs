@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   int? Weight{ get; set; }
         ///<summary>
-        /// 缓存时间,单位秒
+        /// 缓存时间,单位秒，中国境内加速域名最长可配置2年，中国境外/全球加速域名最长可配置1年
         ///</summary>
         public   long? Ttl{ get; set; }
         ///<summary>

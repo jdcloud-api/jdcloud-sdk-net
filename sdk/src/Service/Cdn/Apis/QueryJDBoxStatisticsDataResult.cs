@@ -39,11 +39,11 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryJDBoxStatisticsDataResult : JdcloudResult
     {
         ///<summary>
-        /// StartTime
+        /// 2020/07/30 10:30，查询起始时间
         ///</summary>
         public   string StartTime{ get; set; }
         ///<summary>
-        /// EndTime
+        /// 2020/07/30 11:00，查询截止时间
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>

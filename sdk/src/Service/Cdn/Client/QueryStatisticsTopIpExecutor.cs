@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  查询TOP IP
+    ///  查询TOP IP，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryStatisticsTopIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询TOP IP接口的Http 请求方法
+        ///  查询TOP IP，仅可查询中国境内的相关信息接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  查询TOP IP接口的Http资源请求路径
+        ///  查询TOP IP，仅可查询中国境内的相关信息接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

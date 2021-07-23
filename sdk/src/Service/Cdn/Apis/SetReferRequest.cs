@@ -43,7 +43,7 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string ReferType{ get; set; }
         ///<summary>
-        /// 逗号隔开的域名列表，如果referList传空则为删除
+        /// 逗号隔开的域名列表，如果referList传空则为删除，中国境内加速域名至多可配置400条，中国境外/全球加速域名至多可配置50条
         ///</summary>
         public List<string> ReferList{ get; set; }
 

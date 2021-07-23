@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询TOP Url
+    ///  查询TOP Url，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryStatisticsTopUrlResponse : JdcloudResponse<QueryStatisticsTopUrlResult>
     {

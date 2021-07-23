@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询统计数据
+    ///  查询统计数据，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryMixStatisticsDataRequest : JdcloudRequest
     {
@@ -54,11 +54,11 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Fields{ get; set; }
         ///<summary>
-        /// Area
+        /// 查询的区域，如beijing,shanghai。多个用逗号分隔
         ///</summary>
         public   string Area{ get; set; }
         ///<summary>
-        /// Isp
+        /// 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
         ///</summary>
         public   string Isp{ get; set; }
         ///<summary>
@@ -69,5 +69,9 @@ namespace  JDCloudSDK.Cdn.Apis
         /// 查询协议，可选值:[http,https,all],传空默认返回全部协议汇总后的数据
         ///</summary>
         public   string Scheme{ get; set; }
+        ///<summary>
+        /// 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+        ///</summary>
+        public   string CacheType{ get; set; }
     }
 }

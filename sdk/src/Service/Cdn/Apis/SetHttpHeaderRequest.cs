@@ -39,15 +39,15 @@ namespace  JDCloudSDK.Cdn.Apis
     public class SetHttpHeaderRequest : JdcloudRequest
     {
         ///<summary>
-        /// header类型[resp,req]
+        /// header类型[resp,req],resp：配置响应头，req：配置请求头
         ///</summary>
         public   string HeaderType{ get; set; }
         ///<summary>
-        /// header名
+        /// header名，例如：Content-Disposition，可自定义，长度不能超过256个字符，不能包含中文字符，不能包含$和_，不支持设置如下头名：[&quot;Content-Length&quot;,&quot;Date&quot;,&quot;Host&quot;,&quot;Content-Encoding&quot;,&quot;If-Modified-Since&quot;,&quot;If-Range&quot;,&quot;Content-Type&quot;,&quot;Transfer-Encoding&quot;,&quot;Cache-Control&quot;,&quot;Last-Modified&quot;,&quot;Connection&quot;, &quot;Content-Range&quot;,&quot;ETag&quot;,&quot;Age&quot;,&quot;Authentication-Info&quot;,&quot;Proxy-Authenticate&quot;,&quot;Retry-After&quot;,&quot;Set-Cookie&quot;,&quot;Vary&quot;,&quot;Content-Location&quot;,&quot;Meter&quot;,&quot;Allow&quot;,&quot;Error&quot;,&quot;X-Trace&quot;, &quot;Proxy-Connection&quot;]
         ///</summary>
         public   string HeaderName{ get; set; }
         ///<summary>
-        /// header值
+        /// header值，不能包含($,_,#)，不能超过256个字符
         ///</summary>
         public   string HeaderValue{ get; set; }
         ///<summary>

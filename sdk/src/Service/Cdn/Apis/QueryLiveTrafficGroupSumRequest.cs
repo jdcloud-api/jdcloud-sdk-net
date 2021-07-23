@@ -50,15 +50,15 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Domain{ get; set; }
         ///<summary>
-        /// SubDomain
+        /// 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
         ///</summary>
         public   string SubDomain{ get; set; }
         ///<summary>
-        /// app名
+        /// 查询的App名称，多个用逗号分隔。
         ///</summary>
         public   string AppName{ get; set; }
         ///<summary>
-        /// 流名
+        /// 查询的流名称，多个用逗号分隔。
         ///</summary>
         public   string StreamName{ get; set; }
         ///<summary>
@@ -66,15 +66,15 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Fields{ get; set; }
         ///<summary>
-        /// Area
+        /// 查询的区域，如beijing,shanghai。多个用逗号分隔
         ///</summary>
         public   string Area{ get; set; }
         ///<summary>
-        /// Isp
+        /// 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
         ///</summary>
         public   string Isp{ get; set; }
         ///<summary>
-        /// 查询的流协议
+        /// 查询的流协议，取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
         ///</summary>
         public   string Scheme{ get; set; }
         ///<summary>
@@ -82,16 +82,20 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string Period{ get; set; }
         ///<summary>
-        /// 分组依据
+        /// 分组依据，可选值：[appname,streamname,domain,area,isp,scheme]
         ///</summary>
         public   string GroupBy{ get; set; }
         ///<summary>
-        /// ReqMethod
+        /// 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
         ///</summary>
         public   string ReqMethod{ get; set; }
         ///<summary>
-        /// cacheLevel
+        /// cacheLevel，可选值：[L1,L2,L3]
         ///</summary>
         public   string CacheLevel{ get; set; }
+        ///<summary>
+        /// 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+        ///</summary>
+        public   string CacheType{ get; set; }
     }
 }

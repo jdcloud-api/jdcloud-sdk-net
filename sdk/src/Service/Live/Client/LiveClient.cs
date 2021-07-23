@@ -138,6 +138,33 @@ namespace JDCloudSDK.Live.Client
 
 #if NET40||NET35
         /// <summary>
+        ///  添加域名翻译配置
+        /// - 添加域名级别的翻译模板配置
+        /// - 一个域名最多可绑定一个翻译模板
+        /// - 重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamDomainTranslateResponse AddLiveStreamDomainTranslate(AddLiveStreamDomainTranslateRequest request) {
+            return  new AddLiveStreamDomainTranslateExecutor().Client(this).Execute<AddLiveStreamDomainTranslateResponse, AddLiveStreamDomainTranslateResult, AddLiveStreamDomainTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加域名翻译配置
+        /// - 添加域名级别的翻译模板配置
+        /// - 一个域名最多可绑定一个翻译模板
+        /// - 重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamDomainTranslateResponse> AddLiveStreamDomainTranslate(AddLiveStreamDomainTranslateRequest request) {
+            return await new AddLiveStreamDomainTranslateExecutor().Client(this).Execute<AddLiveStreamDomainTranslateResponse, AddLiveStreamDomainTranslateResult, AddLiveStreamDomainTranslateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询在线流列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -262,6 +289,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteLiveStreamNotifyConfigResponse> DeleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) {
             return await new DeleteLiveStreamNotifyConfigExecutor().Client(this).Execute<DeleteLiveStreamNotifyConfigResponse, DeleteLiveStreamNotifyConfigResult, DeleteLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询翻译模板绑定
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeTranslateBindingResponse DescribeTranslateBinding(DescribeTranslateBindingRequest request) {
+            return  new DescribeTranslateBindingExecutor().Client(this).Execute<DescribeTranslateBindingResponse, DescribeTranslateBindingResult, DescribeTranslateBindingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询翻译模板绑定
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeTranslateBindingResponse> DescribeTranslateBinding(DescribeTranslateBindingRequest request) {
+            return await new DescribeTranslateBindingExecutor().Client(this).Execute<DescribeTranslateBindingResponse, DescribeTranslateBindingResult, DescribeTranslateBindingRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -572,6 +620,33 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  添加流翻译配置
+        /// - 添加流级别的翻译模板配置
+        /// - 一个流最多可绑定一个翻译模板
+        /// - 重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamTranslateResponse AddLiveStreamTranslate(AddLiveStreamTranslateRequest request) {
+            return  new AddLiveStreamTranslateExecutor().Client(this).Execute<AddLiveStreamTranslateResponse, AddLiveStreamTranslateResult, AddLiveStreamTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加流翻译配置
+        /// - 添加流级别的翻译模板配置
+        /// - 一个流最多可绑定一个翻译模板
+        /// - 重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamTranslateResponse> AddLiveStreamTranslate(AddLiveStreamTranslateRequest request) {
+            return await new AddLiveStreamTranslateExecutor().Client(this).Execute<AddLiveStreamTranslateResponse, AddLiveStreamTranslateResult, AddLiveStreamTranslateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  启动域名
         /// - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
         /// 
@@ -610,6 +685,29 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamPublishInfoByPageResponse> DescribeLiveStreamPublishInfoByPage(DescribeLiveStreamPublishInfoByPageRequest request) {
             return await new DescribeLiveStreamPublishInfoByPageExecutor().Client(this).Execute<DescribeLiveStreamPublishInfoByPageResponse, DescribeLiveStreamPublishInfoByPageResult, DescribeLiveStreamPublishInfoByPageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除流的翻译模板配置
+        /// - 删除流级别翻译模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamTranslateResponse DeleteLiveStreamTranslate(DeleteLiveStreamTranslateRequest request) {
+            return  new DeleteLiveStreamTranslateExecutor().Client(this).Execute<DeleteLiveStreamTranslateResponse, DeleteLiveStreamTranslateResult, DeleteLiveStreamTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除流的翻译模板配置
+        /// - 删除流级别翻译模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamTranslateResponse> DeleteLiveStreamTranslate(DeleteLiveStreamTranslateRequest request) {
+            return await new DeleteLiveStreamTranslateExecutor().Client(this).Execute<DeleteLiveStreamTranslateResponse, DeleteLiveStreamTranslateResult, DeleteLiveStreamTranslateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1032,6 +1130,29 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除域名的翻译模板配置
+        /// - 删除域名级别翻译模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamDomainTranslateResponse DeleteLiveStreamDomainTranslate(DeleteLiveStreamDomainTranslateRequest request) {
+            return  new DeleteLiveStreamDomainTranslateExecutor().Client(this).Execute<DeleteLiveStreamDomainTranslateResponse, DeleteLiveStreamDomainTranslateResult, DeleteLiveStreamDomainTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除域名的翻译模板配置
+        /// - 删除域名级别翻译模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamDomainTranslateResponse> DeleteLiveStreamDomainTranslate(DeleteLiveStreamDomainTranslateRequest request) {
+            return await new DeleteLiveStreamDomainTranslateExecutor().Client(this).Execute<DeleteLiveStreamDomainTranslateResponse, DeleteLiveStreamDomainTranslateResult, DeleteLiveStreamDomainTranslateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  添加域名截图配置
         /// - 添加域名级别的截图模板配置
         /// 
@@ -1110,6 +1231,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<SetLiveStreamSnapshotNotifyConfigResponse> SetLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) {
             return await new SetLiveStreamSnapshotNotifyConfigExecutor().Client(this).Execute<SetLiveStreamSnapshotNotifyConfigResponse, SetLiveStreamSnapshotNotifyConfigResult, SetLiveStreamSnapshotNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询域名下的翻译模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveDomainTranslateConfigResponse DescribeLiveDomainTranslateConfig(DescribeLiveDomainTranslateConfigRequest request) {
+            return  new DescribeLiveDomainTranslateConfigExecutor().Client(this).Execute<DescribeLiveDomainTranslateConfigResponse, DescribeLiveDomainTranslateConfigResult, DescribeLiveDomainTranslateConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询域名下的翻译模板配置
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveDomainTranslateConfigResponse> DescribeLiveDomainTranslateConfig(DescribeLiveDomainTranslateConfigRequest request) {
+            return await new DescribeLiveDomainTranslateConfigExecutor().Client(this).Execute<DescribeLiveDomainTranslateConfigResponse, DescribeLiveDomainTranslateConfigResult, DescribeLiveDomainTranslateConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1558,6 +1700,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddLiveStreamDomainWatermarkResponse> AddLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) {
             return await new AddLiveStreamDomainWatermarkExecutor().Client(this).Execute<AddLiveStreamDomainWatermarkResponse, AddLiveStreamDomainWatermarkResult, AddLiveStreamDomainWatermarkRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询系统默认翻译模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeSystemLiveStreamTranslateTemplatesResponse DescribeSystemLiveStreamTranslateTemplates(DescribeSystemLiveStreamTranslateTemplatesRequest request) {
+            return  new DescribeSystemLiveStreamTranslateTemplatesExecutor().Client(this).Execute<DescribeSystemLiveStreamTranslateTemplatesResponse, DescribeSystemLiveStreamTranslateTemplatesResult, DescribeSystemLiveStreamTranslateTemplatesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询系统默认翻译模板列表
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeSystemLiveStreamTranslateTemplatesResponse> DescribeSystemLiveStreamTranslateTemplates(DescribeSystemLiveStreamTranslateTemplatesRequest request) {
+            return await new DescribeSystemLiveStreamTranslateTemplatesExecutor().Client(this).Execute<DescribeSystemLiveStreamTranslateTemplatesResponse, DescribeSystemLiveStreamTranslateTemplatesResult, DescribeSystemLiveStreamTranslateTemplatesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2072,6 +2235,29 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  删除应用的翻译模板配置
+        /// - 删除应用级别的翻译模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveStreamAppTranslateResponse DeleteLiveStreamAppTranslate(DeleteLiveStreamAppTranslateRequest request) {
+            return  new DeleteLiveStreamAppTranslateExecutor().Client(this).Execute<DeleteLiveStreamAppTranslateResponse, DeleteLiveStreamAppTranslateResult, DeleteLiveStreamAppTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除应用的翻译模板配置
+        /// - 删除应用级别的翻译模板配置,重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveStreamAppTranslateResponse> DeleteLiveStreamAppTranslate(DeleteLiveStreamAppTranslateRequest request) {
+            return await new DeleteLiveStreamAppTranslateExecutor().Client(this).Execute<DeleteLiveStreamAppTranslateResponse, DeleteLiveStreamAppTranslateResult, DeleteLiveStreamAppTranslateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除域名级别录制模板配置
         /// - 删除域名级别录制模板配置,重新推流后生效
         /// 
@@ -2194,6 +2380,31 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamPublishListResponse> DescribeLiveStreamPublishList(DescribeLiveStreamPublishListRequest request) {
             return await new DescribeLiveStreamPublishListExecutor().Client(this).Execute<DescribeLiveStreamPublishListResponse, DescribeLiveStreamPublishListResult, DescribeLiveStreamPublishListRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  恢复指定流的翻译任务
+        /// - 恢复添加实时翻译字幕到指定流
+        /// - 指定的流需在线且配置了翻译模板，同时处于翻译暂停状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ResumeLiveStreamTranslateResponse ResumeLiveStreamTranslate(ResumeLiveStreamTranslateRequest request) {
+            return  new ResumeLiveStreamTranslateExecutor().Client(this).Execute<ResumeLiveStreamTranslateResponse, ResumeLiveStreamTranslateResult, ResumeLiveStreamTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  恢复指定流的翻译任务
+        /// - 恢复添加实时翻译字幕到指定流
+        /// - 指定的流需在线且配置了翻译模板，同时处于翻译暂停状态
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ResumeLiveStreamTranslateResponse> ResumeLiveStreamTranslate(ResumeLiveStreamTranslateRequest request) {
+            return await new ResumeLiveStreamTranslateExecutor().Client(this).Execute<ResumeLiveStreamTranslateResponse, ResumeLiveStreamTranslateResult, ResumeLiveStreamTranslateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2418,6 +2629,31 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  暂停指定流的翻译任务
+        /// - 暂停添加实时翻译字幕到指定流
+        /// - 指定的流需在线且配置了翻译模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public PauseLiveStreamTranslateResponse PauseLiveStreamTranslate(PauseLiveStreamTranslateRequest request) {
+            return  new PauseLiveStreamTranslateExecutor().Client(this).Execute<PauseLiveStreamTranslateResponse, PauseLiveStreamTranslateResult, PauseLiveStreamTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  暂停指定流的翻译任务
+        /// - 暂停添加实时翻译字幕到指定流
+        /// - 指定的流需在线且配置了翻译模板
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<PauseLiveStreamTranslateResponse> PauseLiveStreamTranslate(PauseLiveStreamTranslateRequest request) {
+            return await new PauseLiveStreamTranslateExecutor().Client(this).Execute<PauseLiveStreamTranslateResponse, PauseLiveStreamTranslateResult, PauseLiveStreamTranslateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  删除录制文件
         /// 
         /// </summary>
@@ -2517,6 +2753,33 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveStreamNotifyConfigResponse> DescribeLiveStreamNotifyConfig(DescribeLiveStreamNotifyConfigRequest request) {
             return await new DescribeLiveStreamNotifyConfigExecutor().Client(this).Execute<DescribeLiveStreamNotifyConfigResponse, DescribeLiveStreamNotifyConfigResult, DescribeLiveStreamNotifyConfigRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询翻译模板配置
+        /// - 翻译模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
+        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+        /// - 该查询旨在查询域名、应用、流最终生效的翻译模板配置,并非各级的模板绑定情况
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeLiveStreamTranslateConfigResponse DescribeLiveStreamTranslateConfig(DescribeLiveStreamTranslateConfigRequest request) {
+            return  new DescribeLiveStreamTranslateConfigExecutor().Client(this).Execute<DescribeLiveStreamTranslateConfigResponse, DescribeLiveStreamTranslateConfigResult, DescribeLiveStreamTranslateConfigRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询翻译模板配置
+        /// - 翻译模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
+        /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+        /// - 该查询旨在查询域名、应用、流最终生效的翻译模板配置,并非各级的模板绑定情况
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeLiveStreamTranslateConfigResponse> DescribeLiveStreamTranslateConfig(DescribeLiveStreamTranslateConfigRequest request) {
+            return await new DescribeLiveStreamTranslateConfigExecutor().Client(this).Execute<DescribeLiveStreamTranslateConfigResponse, DescribeLiveStreamTranslateConfigResult, DescribeLiveStreamTranslateConfigRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2644,6 +2907,33 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<AddCustomLiveStreamTranscodeTemplateResponse> AddCustomLiveStreamTranscodeTemplate(AddCustomLiveStreamTranscodeTemplateRequest request) {
             return await new AddCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<AddCustomLiveStreamTranscodeTemplateResponse, AddCustomLiveStreamTranscodeTemplateResult, AddCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加应用翻译配置
+        /// - 添加应用级别的翻译模板配置
+        /// - 一个应用最多可绑定一个翻译模板
+        /// - 重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddLiveStreamAppTranslateResponse AddLiveStreamAppTranslate(AddLiveStreamAppTranslateRequest request) {
+            return  new AddLiveStreamAppTranslateExecutor().Client(this).Execute<AddLiveStreamAppTranslateResponse, AddLiveStreamAppTranslateResult, AddLiveStreamAppTranslateRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加应用翻译配置
+        /// - 添加应用级别的翻译模板配置
+        /// - 一个应用最多可绑定一个翻译模板
+        /// - 重新推流后生效
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddLiveStreamAppTranslateResponse> AddLiveStreamAppTranslate(AddLiveStreamAppTranslateRequest request) {
+            return await new AddLiveStreamAppTranslateExecutor().Client(this).Execute<AddLiveStreamAppTranslateResponse, AddLiveStreamAppTranslateResult, AddLiveStreamAppTranslateRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

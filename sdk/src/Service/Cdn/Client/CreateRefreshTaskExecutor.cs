@@ -33,12 +33,12 @@ namespace JDCloudSDK.Cdn.Client
 {
 
     /// <summary>
-    ///  创建刷新预热任务
+    ///  创建刷新预热任务，
     /// </summary>
     public class CreateRefreshTaskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建刷新预热任务接口的Http 请求方法
+        ///  创建刷新预热任务，接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Cdn.Client
             }
         }
         /// <summary>
-        ///  创建刷新预热任务接口的Http资源请求路径
+        ///  创建刷新预热任务，接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

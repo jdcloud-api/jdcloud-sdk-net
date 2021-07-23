@@ -43,84 +43,84 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string AllStatus{ get; set; }
         ///<summary>
-        /// AllowNoReferHeader
+        /// 是否允许空refer访问
         ///</summary>
         public   string AllowNoReferHeader{ get; set; }
         ///<summary>
-        /// AllowNullReferHeader
+        /// null
         ///</summary>
         public   string AllowNullReferHeader{ get; set; }
         ///<summary>
-        /// DailyBandWidth
+        /// 日带宽（单位Mbps）
         ///</summary>
         public   int? DailyBandWidth{ get; set; }
         ///<summary>
-        /// ForbiddenType
+        /// 封禁类型，取值：domain,url
         ///</summary>
         public   string ForbiddenType{ get; set; }
         ///<summary>
-        /// MaxFileSize
+        /// 最大单个文件大小（单位MB）
         ///</summary>
         public   long? MaxFileSize{ get; set; }
         ///<summary>
-        /// MinFileSize
+        /// 最小单个文件大小（单位MB）
         ///</summary>
         public   long? MinFileSize{ get; set; }
         ///<summary>
-        /// SumFileSize
+        /// 总文件大小（单位MB）
         ///</summary>
         public   long? SumFileSize{ get; set; }
         ///<summary>
-        /// AvgFileSize
+        /// 平均文件大小（单位MB）
         ///</summary>
         public   long? AvgFileSize{ get; set; }
         ///<summary>
-        /// ReferList
+        /// 逗号隔开的域名列表
         ///</summary>
         public List<string> ReferList{ get; set; }
 
         ///<summary>
-        /// ReferType
+        /// refer类型，取值：block（黑名单），allow（白名单）
         ///</summary>
         public   string ReferType{ get; set; }
         ///<summary>
-        /// Domain
+        /// 域名
         ///</summary>
         public   string Domain{ get; set; }
         ///<summary>
-        /// Cname
+        /// 为加速域名生成的一个CNAME域名，需要在域名解析服务商处将加速域名CNAME解析到该域名
         ///</summary>
         public   string Cname{ get; set; }
         ///<summary>
-        /// ArchiveNo
+        /// 域名备案号
         ///</summary>
         public   string ArchiveNo{ get; set; }
         ///<summary>
-        /// Type
+        /// 域名加速类型，web表示图片及小文件加速
         ///</summary>
         public   string Type{ get; set; }
         ///<summary>
-        /// Created
+        /// 创建时间
         ///</summary>
         public   string Created{ get; set; }
         ///<summary>
-        /// Modified
+        /// 最后修改时间
         ///</summary>
         public   string Modified{ get; set; }
         ///<summary>
-        /// Status
+        /// 加速域名运行状态 ，online 表示启用；offline表示停用；configuring表示配置中；configure_failed表示配置失败
         ///</summary>
         public   string Status{ get; set; }
         ///<summary>
-        /// AuditStatus
+        /// 域名审核状态，取值：0（未审核），1（审核通过），2（审核不通过）
         ///</summary>
         public   string AuditStatus{ get; set; }
         ///<summary>
-        /// Source
+        /// null
         ///</summary>
         public   BackSourceInfo Source{ get; set; }
         ///<summary>
-        /// SourceType
+        /// 回源类型：取值 ips（IP列表），domain（域名）,oss（oss回源）
         ///</summary>
         public   string SourceType{ get; set; }
         ///<summary>
@@ -128,47 +128,47 @@ namespace  JDCloudSDK.Cdn.Apis
         ///</summary>
         public   string DefaultSourceHost{ get; set; }
         ///<summary>
-        /// BackSourceType
+        /// 回源类型，只能为http（80端口回源）或者https（443端口回源），默认为http
         ///</summary>
         public   string BackSourceType{ get; set; }
         ///<summary>
-        /// HttpType
+        /// http类型，只能为http或者https，默认为http。当设为https时，需要调用“设置通讯协议”接口上传证书和私钥
         ///</summary>
         public   string HttpType{ get; set; }
         ///<summary>
-        /// Certificate
+        /// 用户证书，当Type为https时必须设置
         ///</summary>
         public   string Certificate{ get; set; }
         ///<summary>
-        /// RsaKey
+        /// 证书私钥
         ///</summary>
         public   string RsaKey{ get; set; }
         ///<summary>
-        /// JumpType
+        /// 跳转类型，有三种类型：default、http、https
         ///</summary>
         public   string JumpType{ get; set; }
         ///<summary>
-        /// CertFrom
+        /// 证书来源，取值：ssl,defalut
         ///</summary>
         public   string CertFrom{ get; set; }
         ///<summary>
-        /// SslCertId
+        /// 证书id
         ///</summary>
         public   string SslCertId{ get; set; }
         ///<summary>
-        /// CertName
+        /// 证书名称
         ///</summary>
         public   string CertName{ get; set; }
         ///<summary>
-        /// CertType
+        /// 证书类型
         ///</summary>
         public   string CertType{ get; set; }
         ///<summary>
-        /// SslCertStartTime
+        /// 证书开始时间
         ///</summary>
         public   string SslCertStartTime{ get; set; }
         ///<summary>
-        /// SslCertEndTime
+        /// 证书结束时间
         ///</summary>
         public   string SslCertEndTime{ get; set; }
         ///<summary>

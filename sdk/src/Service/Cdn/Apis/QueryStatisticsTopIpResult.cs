@@ -34,7 +34,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询TOP IP
+    ///  查询TOP IP，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryStatisticsTopIpResult : JdcloudResult
     {

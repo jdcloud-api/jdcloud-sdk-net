@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Cdn.Apis
 {
 
     /// <summary>
-    ///  查询统计数据并进行汇总加和
+    ///  查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
     /// </summary>
     public class QueryMixTrafficGroupSumResponse : JdcloudResponse<QueryMixTrafficGroupSumResult>
     {

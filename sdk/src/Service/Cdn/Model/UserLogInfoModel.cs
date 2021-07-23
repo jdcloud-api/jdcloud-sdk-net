@@ -38,6 +38,10 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
+        /// domain所归属pin
+        ///</summary>
+        public string Pin{ get; set; }
+        ///<summary>
         /// 日志上传域名，如：www.a.com
         ///</summary>
         public string Domain{ get; set; }

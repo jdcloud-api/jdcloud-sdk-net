@@ -52,10 +52,12 @@ namespace JDCloudSDK.Captcha.Model
         public long SceneId{ get; set; }
         ///<summary>
         /// 密钥，从界面获取
+        ///Required:true
         ///</summary>
+        [Required]
         public string Secret{ get; set; }
         ///<summary>
-        /// uuid，ios客户端传openudid, android客户端传androidid
+        /// uuid，ios客户端传openudid, android客户端传androidid, pc和wxapp客户端可不传
         ///</summary>
         public string Uuid{ get; set; }
         ///<summary>
@@ -75,7 +77,7 @@ namespace JDCloudSDK.Captcha.Model
         ///</summary>
         public string FingerPrint{ get; set; }
         ///<summary>
-        /// 客户端类型, android, ios, pc, m
+        /// 客户端类型, android, ios, pc, wxapp, m
         ///Required:true
         ///</summary>
         [Required]
