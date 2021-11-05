@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,18 +34,25 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询启动模板列表
+    ///  
+        ///         /// 查询实例模板列表。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        ///         /// - 单次查询最大可查询100条实例模板数据。
         ///         /// 
     /// </summary>
     public class DescribeInstanceTemplatesResult : JdcloudResult
     {
         ///<summary>
-        /// InstanceTemplates
+        /// 实例模板列表。
         ///</summary>
         public List<InstanceTemplate> InstanceTemplates{ get; set; }
 
         ///<summary>
-        /// TotalCount
+        /// 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

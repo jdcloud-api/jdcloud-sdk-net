@@ -32,21 +32,27 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  quota
+    ///  配额信息。
     /// </summary>
     public class Quota
     {
 
         ///<summary>
-        /// 资源类型[instance，keypair，image，instanceTemplate]
+        /// 资源类型。支持范围：
+        /// &#x60;instance&#x60;：云主机。
+        /// &#x60;keypair&#x60;：密钥。
+        /// &#x60;image&#x60;：镜像。
+        /// &#x60;instanceTemplate&#x60;：实例模板。
+        /// &#x60;imageShare&#x60;：共享镜像。
+        /// 
         ///</summary>
         public string ResourceType{ get; set; }
         ///<summary>
-        /// 配额上限
+        /// 配额上限。
         ///</summary>
         public int? Limit{ get; set; }
         ///<summary>
-        /// 已用配额
+        /// 已用配额。
         ///</summary>
         public int? Used{ get; set; }
     }

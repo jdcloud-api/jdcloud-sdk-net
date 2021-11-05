@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instancePrivateIpAddress
+    ///  云主机弹性网卡内网主IP地址。
     /// </summary>
     public class InstancePrivateIpAddress
     {
 
         ///<summary>
-        /// 云主机ID
+        /// 云主机ID。
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 主网卡内网主IP地址
+        /// 内网主IP地址。
         ///</summary>
         public string PrivateIpAddress{ get; set; }
     }

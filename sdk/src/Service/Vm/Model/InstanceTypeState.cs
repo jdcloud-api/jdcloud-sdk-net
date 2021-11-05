@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceTypeState
+    ///  实例规格售卖状态信息。
     /// </summary>
     public class InstanceTypeState
     {
 
         ///<summary>
-        /// 可用区
+        /// 可用区。
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        /// 可售卖情况，true:可售卖、false:已售罄不可用
+        /// 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
         ///</summary>
         public bool InStock{ get; set; }
         ///<summary>
-        /// 可用库存数量，预留字段，敬请期待。
+        /// 可用库存数量，目前该字段为预留阶段，敬请期待。
         ///</summary>
         public int? AvailableCount{ get; set; }
     }

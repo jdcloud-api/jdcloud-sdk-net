@@ -33,39 +33,43 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceDiskAttachment
+    ///  云主机实例磁盘挂载点信息。
     /// </summary>
     public class InstanceDiskAttachment
     {
 
         ///<summary>
-        /// 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
-        /// 系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
-        /// 数据盘仅支持云硬盘(cloud)。
+        /// 磁盘类型。
+        /// **系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
+        /// **数据盘**：取值为：&#x60;local&#x60; 本地数据盘 或 &#x60;cloud&#x60; 云盘数据盘。
         /// 
         ///</summary>
         public string DiskCategory{ get; set; }
         ///<summary>
-        /// 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
-        /// 如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
-        /// 如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+        /// 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+        /// &#x60;true&#x60;：随实例删除。
+        /// &#x60;false&#x60;：不随实例删除。
         /// 
         ///</summary>
         public bool AutoDelete{ get; set; }
         ///<summary>
-        /// 本地磁盘配置
+        /// 本地磁盘配置，对应 &#x60;diskCategory&#x3D;local&#x60;。
         ///</summary>
         public LocalDisk LocalDisk{ get; set; }
         ///<summary>
-        /// 云硬盘配置
+        /// 云硬盘配置，对应 &#x60;diskCategory&#x3D;cloud&#x60;。
         ///</summary>
         public JDCloudSDK.Disk.Model.Disk CloudDisk{ get; set; }
         ///<summary>
-        /// 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
+        /// 磁盘逻辑挂载点。
+        /// **系统盘**：默认为vda。
+        /// **数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+        /// 
         ///</summary>
         public string DeviceName{ get; set; }
         ///<summary>
-        /// 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+        /// 磁盘挂载状态。
+        /// 取值范围：&#x60;attaching、detaching、attached、detached、error_attach、error_detach&#x60;。
         ///</summary>
         public string Status{ get; set; }
     }

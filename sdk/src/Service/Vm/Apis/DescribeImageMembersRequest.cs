@@ -35,20 +35,26 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像共享帐户列表，只允许操作您的个人私有镜像。
+    ///  
+        ///         /// 查询私有镜像共享给哪些京东云帐户。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[共享私有镜像](https://docs.jdcloud.com/cn/virtual-machines/share-image)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 只允许查询用户的私有镜像。
         ///         /// 
     /// </summary>
     public class DescribeImageMembersRequest : JdcloudRequest
     {
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID。
         ///Required:true
         ///</summary>
         [Required]

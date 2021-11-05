@@ -38,6 +38,10 @@ namespace JDCloudSDK.Cdn.Model
     {
 
         ///<summary>
+        /// EdgeType
+        ///</summary>
+        public int? EdgeType{ get; set; }
+        ///<summary>
         /// HeaderType
         ///</summary>
         public string HeaderType{ get; set; }

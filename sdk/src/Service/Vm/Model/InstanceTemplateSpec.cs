@@ -33,76 +33,91 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceTemplateSpec
+    ///  实例模板配置详细信息。
     /// </summary>
     public class InstanceTemplateSpec
     {
 
         ///<summary>
-        /// 实例规格，可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+        /// 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
         ///Required:true
         ///</summary>
         [Required]
         public string InstanceType{ get; set; }
         ///<summary>
-        /// 镜像ID，可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+        /// 镜像ID，可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
         ///Required:true
         ///</summary>
         [Required]
         public string ImageId{ get; set; }
         ///<summary>
-        /// 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+        /// 如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60;，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+        /// 
         ///</summary>
         public string Password{ get; set; }
         ///<summary>
-        /// 密钥对名称；当前只支持一个
+        /// 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>
-        /// 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+        /// 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
         /// 注意：key不要以连字符(-)结尾，否则此key不生效。
         /// 
         ///</summary>
         public List<Metadata> Metadata{ get; set; }
         ///<summary>
-        /// 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
-        /// launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-        /// launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+        /// 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+        /// **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+        /// **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
         /// 
         ///</summary>
         public List<Userdata> Userdata{ get; set; }
         ///<summary>
-        /// 主网卡主IP关联的弹性IP规格
+        /// 主网卡主IP关联的弹性公网IP配置。
         ///</summary>
         public InstanceTemplateElasticIpSpec ElasticIp{ get; set; }
         ///<summary>
-        /// 主网卡配置信息
+        /// 主网卡配置。
         ///Required:true
         ///</summary>
         [Required]
         public InstanceTemplateNetworkInterfaceAttachmentSpec PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        /// 系统盘配置信息
+        /// 系统盘配置。
         ///</summary>
         public InstanceTemplateDiskAttachmentSpec SystemDisk{ get; set; }
         ///<summary>
-        /// 数据盘配置信息
+        /// 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
         ///</summary>
         public List<InstanceTemplateDiskAttachmentSpec> DataDisks{ get; set; }
         ///<summary>
-        /// 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+        /// 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+        /// 可选值：
+        /// &#x60;keepCharging&#x60;（默认值）：停机后保持计费，不释放资源。
+        /// &#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。
+        /// 
         ///</summary>
         public string ChargeOnStopped{ get; set; }
         ///<summary>
-        /// 自动镜像策略ID。
+        /// 自动任务策略ID。
         ///</summary>
         public string AutoImagePolicyId{ get; set; }
         ///<summary>
-        /// 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+        /// 允许SSH密码登录。
+        /// 可选值：
+        /// &#x60;yes&#x60;（默认值）：允许SSH密码登录。
+        /// &#x60;no&#x60;：禁止SSH密码登录。
+        /// 仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+        /// 
         ///</summary>
         public string PassWordAuth{ get; set; }
         ///<summary>
-        /// 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+        /// 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+        /// 可选值：
+        /// &#x60;yes&#x60;：使用镜像登录凭证。
+        /// &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
+        /// 仅使用私有或共享镜像时此参数有效。
         ///</summary>
         public string ImageInherit{ get; set; }
     }

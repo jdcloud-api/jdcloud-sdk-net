@@ -36,28 +36,35 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  批量查询密钥对。&lt;br&gt;
-        ///         /// 此接口支持分页查询，默认每页20条。
+    ///  
+        ///         /// 批量查询密钥对。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[密钥概述](https://docs.jdcloud.com/cn/virtual-machines/keypair-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        ///         /// - 单次查询最大可查询100条密钥数据。
         ///         /// 
     /// </summary>
     public class DescribeKeypairsRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码；默认为1。
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// keyNames - 密钥对名称，精确匹配，支持多个
+        /// &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+        /// &#x60;keyNames&#x60;: 密钥对名称，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

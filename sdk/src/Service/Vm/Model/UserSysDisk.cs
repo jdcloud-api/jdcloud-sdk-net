@@ -32,29 +32,29 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  userSysDisk
+    ///  用户任意容量特殊本地盘配置信息。
     /// </summary>
     public class UserSysDisk
     {
 
         ///<summary>
-        /// 用户pin
+        /// 用户pin。
         ///</summary>
         public string Pin{ get; set; }
         ///<summary>
-        /// 地域
+        /// 地域。
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 系统类型
+        /// 系统类型。支持范围：&#x60;linux、windows&#x60;。
         ///</summary>
         public string SystemType{ get; set; }
         ///<summary>
-        /// 默认本地盘系统盘大小
+        /// 默认本地盘系统盘大小，单位GB。
         ///</summary>
         public int? SystemDiskSize{ get; set; }
         ///<summary>
-        /// 逗号分隔的规格列表，*代表所有。
+        /// 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。
         ///</summary>
         public string Flavors{ get; set; }
     }

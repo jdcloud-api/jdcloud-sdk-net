@@ -36,32 +36,44 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  批量查询云主机用户自定义元数据
+    ///  
+        ///         /// 批量查询云主机用户自定义元数据。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[自定义元数据](https://docs.jdcloud.com/cn/virtual-machines/userdata)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        ///         /// - 单次查询最大可查询10台云主机实例自定义元数据。
+        ///         /// 
     /// </summary>
     public class DescribeInstancesCustomDataRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码；默认为1。
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[1, 10]
+        /// 分页大小；默认为10；取值范围[1, 10]。
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// instanceId - 云主机ID，精确匹配，支持多个
-        /// privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-        /// vpcId - 私有网络ID，精确匹配，支持多个
-        /// status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
-        /// imageId - 镜像ID，精确匹配，支持多个
-        /// networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
-        /// subnetId - 子网ID，精确匹配，支持多个
+        /// &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+        /// &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
+        /// &#x60;privateIpAddress&#x60;: 主网卡内网主IP地址，模糊匹配，支持多个
+        /// &#x60;vpcId&#x60;: 私有网络ID，精确匹配，支持多个
+        /// &#x60;status&#x60;: 云主机状态，精确匹配，支持多个，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)
+        /// &#x60;name&#x60;: 云主机名称，模糊匹配，支持单个
+        /// &#x60;imageId&#x60;: 镜像ID，精确匹配，支持多个
+        /// &#x60;agId&#x60;: 使用可用组id，支持单个
+        /// &#x60;faultDomain&#x60;: 错误域，支持多个
+        /// &#x60;networkInterfaceId&#x60;: 弹性网卡ID，精确匹配，支持多个
+        /// &#x60;subnetId&#x60;: 子网ID，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

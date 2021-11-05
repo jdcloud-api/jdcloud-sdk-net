@@ -33,7 +33,14 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询一台云主机的详细信息
+    ///  
+        ///         /// 查询一台云主机实例的详细信息。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[查找实例](https://docs.jdcloud.com/cn/virtual-machines/search-instance)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 该接口与查询云主机列表返回的信息一致。
+        ///         /// - 只需要查询单个云主机实例详细信息的时候可以调用该接口。
         ///         /// 
     /// </summary>
     public class DescribeInstanceResponse : JdcloudResponse<DescribeInstanceResult>

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,13 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询启动模板列表
+    ///  
+        /// 查询实例模板列表。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        /// 
+        /// ## 接口说明
+        /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        /// - 单次查询最大可查询100条实例模板数据。
         /// 
     /// </summary>
     public class DescribeInstanceTemplatesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询启动模板列表
+        ///  
+        /// 查询实例模板列表。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        /// 
+        /// ## 接口说明
+        /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        /// - 单次查询最大可查询100条实例模板数据。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询启动模板列表
+        ///  
+        /// 查询实例模板列表。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        /// 
+        /// ## 接口说明
+        /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        /// - 单次查询最大可查询100条实例模板数据。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

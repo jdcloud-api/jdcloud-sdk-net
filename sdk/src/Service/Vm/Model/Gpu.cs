@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  描述实例类型Gpu信息
+    ///  云主机实例GPU信息。
     /// </summary>
     public class Gpu
     {
 
         ///<summary>
-        /// GPU型号
+        /// GPU卡型号。
         ///</summary>
         public string Model{ get; set; }
         ///<summary>
-        /// GPU数量
+        /// GPU卡数量。
         ///</summary>
         public int? Number{ get; set; }
     }

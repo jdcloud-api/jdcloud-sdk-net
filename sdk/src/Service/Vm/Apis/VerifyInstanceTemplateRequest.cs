@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,20 +35,26 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  校验启动模板的有效性
+    ///  
+        ///         /// 校验实例模板的有效性。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口可以校验实例模板是否有效，例如某些关联资源可能已经被删除了，此刻实例模板可能已经失效了。
         ///         /// 
     /// </summary>
     public class VerifyInstanceTemplateRequest : JdcloudRequest
     {
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 启动模板ID
+        /// 实例模板ID。
         ///Required:true
         ///</summary>
         [Required]

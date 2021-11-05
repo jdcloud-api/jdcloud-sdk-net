@@ -33,50 +33,54 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceType
+    ///  实例规格详细信息。
     /// </summary>
     public class InstanceType
     {
 
         ///<summary>
-        /// 实例规格类型
+        /// 实例规格族。
         ///</summary>
         public string Family{ get; set; }
         ///<summary>
-        /// 实例规格，比如g.b1.2xlarge
+        /// 实例规格。
         ///</summary>
         [JsonProperty("instanceType")]
         public string InstanceTypeValue{ get; set; }
         ///<summary>
-        /// cpu个数
+        /// cpu个数。
         ///</summary>
         public int? Cpu{ get; set; }
         ///<summary>
-        /// 内存大小
+        /// 内存大小。
         ///</summary>
         public int? MemoryMB{ get; set; }
         ///<summary>
-        /// 支持弹性网卡的数量
+        /// 支持绑定的弹性网卡数量，包括主网卡。
         ///</summary>
         public int? NicLimit{ get; set; }
         ///<summary>
-        /// 描述
+        /// 支持挂载的云硬盘数量，包括云盘系统盘。
+        ///</summary>
+        public int? CloudDiskCountLimit{ get; set; }
+        ///<summary>
+        /// 实例规格描述。
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
-        /// 规格状态
+        /// 实例规格售卖状态。已售罄的实例规格无法使用。
         ///</summary>
         public List<InstanceTypeState> State{ get; set; }
         ///<summary>
-        /// Gpu配置
+        /// GPU配置，针对GPU类型的实例规格有效。
         ///</summary>
         public Gpu Gpu{ get; set; }
         ///<summary>
-        /// 本地缓存盘配置，目前只有Gpu规格上才有
+        /// 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
         ///</summary>
         public List<LocalDisk> LocalDisks{ get; set; }
         ///<summary>
-        /// 实例规格代数
+        /// 实例规格代数。
         ///</summary>
         public int? Generation{ get; set; }
     }

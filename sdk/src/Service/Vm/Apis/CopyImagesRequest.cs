@@ -35,25 +35,32 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-        ///         /// 只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
+    ///  
+        ///         /// 镜像跨地域复制。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[镜像复制](https://docs.jdcloud.com/cn/virtual-machines/copy-image)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口将私有镜像复制到其它地域下。
+        ///         /// - 只支持云盘系统盘的镜像。
+        ///         /// - 不支持带有加密快照的镜像。
         ///         /// 
     /// </summary>
     public class CopyImagesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 源镜像ID
+        /// 要复制的私有镜像ID列表，最多支持10个。
         ///</summary>
         public List<string> SourceImageIds{ get; set; }
 
         ///<summary>
-        /// 目标区域
+        /// 目标地域。
         ///Required:true
         ///</summary>
         [Required]
         public   string DestinationRegion{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

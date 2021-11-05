@@ -33,13 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询镜像详情。
+    ///  
+        /// 查询镜像详情。
+        /// 
+        /// 详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+        /// 
+        /// ## 接口说明
+        /// - 该接口与查询镜像信息列表返回的信息一致。
+        /// - 只需要查询单个镜像信息的时候可以调用该接口。
         /// 
     /// </summary>
     public class DescribeImageExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询镜像详情。
+        ///  
+        /// 查询镜像详情。
+        /// 
+        /// 详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+        /// 
+        /// ## 接口说明
+        /// - 该接口与查询镜像信息列表返回的信息一致。
+        /// - 只需要查询单个镜像信息的时候可以调用该接口。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询镜像详情。
+        ///  
+        /// 查询镜像详情。
+        /// 
+        /// 详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+        /// 
+        /// ## 接口说明
+        /// - 该接口与查询镜像信息列表返回的信息一致。
+        /// - 只需要查询单个镜像信息的时候可以调用该接口。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

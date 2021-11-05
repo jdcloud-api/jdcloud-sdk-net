@@ -32,21 +32,21 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  云硬盘信息详情
+    ///  云硬盘信息。
     /// </summary>
     public class LightCloudDiskInfo
     {
 
         ///<summary>
-        /// 云硬盘ID
+        /// 云硬盘ID。
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
-        /// 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
+        /// 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        /// 云硬盘大小，单位为 GiB
+        /// 云硬盘大小，单位为 GiB。
         ///</summary>
         public int? DiskSizeGB{ get; set; }
     }

@@ -32,17 +32,19 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceNetworkAttribute
+    ///  云主机网卡属性信息。
     /// </summary>
     public class InstanceNetworkAttribute
     {
 
         ///<summary>
-        /// 弹性网卡ID
+        /// 弹性网卡ID。
         ///</summary>
         public string NetworkInterfaceId{ get; set; }
         ///<summary>
-        /// 随主机自动删除，默认为False
+        /// 是否随实例一起删除。
+        /// &#x60;true&#x60;：随实例删除。
+        /// &#x60;false&#x60;（默认值）：不随实例删除。
         ///</summary>
         public bool AutoDelete{ get; set; }
     }

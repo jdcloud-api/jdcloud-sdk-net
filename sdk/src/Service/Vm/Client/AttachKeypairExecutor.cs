@@ -33,13 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  绑定ssh密钥对。
+    ///  
+        /// 为云主机实例绑定密钥。
+        /// 
+        /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        /// 
+        /// ## 接口说明
+        /// - 只支持为 linux 云主机实例绑定密钥。
+        /// - 每台云主机实例只支持绑定一个密钥。如果云主机绑定的密钥被删除了，那么该云主机还可以再次绑定密钥。
         /// 
     /// </summary>
     public class AttachKeypairExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  绑定ssh密钥对。
+        ///  
+        /// 为云主机实例绑定密钥。
+        /// 
+        /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        /// 
+        /// ## 接口说明
+        /// - 只支持为 linux 云主机实例绑定密钥。
+        /// - 每台云主机实例只支持绑定一个密钥。如果云主机绑定的密钥被删除了，那么该云主机还可以再次绑定密钥。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  绑定ssh密钥对。
+        ///  
+        /// 为云主机实例绑定密钥。
+        /// 
+        /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        /// 
+        /// ## 接口说明
+        /// - 只支持为 linux 云主机实例绑定密钥。
+        /// - 每台云主机实例只支持绑定一个密钥。如果云主机绑定的密钥被删除了，那么该云主机还可以再次绑定密钥。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

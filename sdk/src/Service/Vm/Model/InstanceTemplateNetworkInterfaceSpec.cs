@@ -33,24 +33,28 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceTemplateNetworkInterfaceSpec
+    ///  实例模板弹性网卡设备详细配置。
     /// </summary>
     public class InstanceTemplateNetworkInterfaceSpec
     {
 
         ///<summary>
-        /// 子网ID 仅支持中心可用区的子网
+        /// 子网ID。
         ///Required:true
         ///</summary>
         [Required]
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 安全组ID列表
+        /// 安全组ID列表。
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
         ///<summary>
-        /// PortSecurity，取值为0或者1，默认为1
+        /// PortSecurity，源和目标IP地址校验，取值为0或者1。
         ///</summary>
         public int? SanityCheck{ get; set; }
+        ///<summary>
+        /// 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+        ///</summary>
+        public int? Ipv6AddressCount{ get; set; }
     }
 }

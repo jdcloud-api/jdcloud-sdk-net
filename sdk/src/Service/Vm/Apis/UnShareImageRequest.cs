@@ -35,25 +35,32 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  取消共享镜像，只允许操作您的个人私有镜像。
+    ///  
+        ///         /// 取消共享私有镜像。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[取消共享私有镜像](https://docs.jdcloud.com/cn/virtual-machines/cancel-share-image)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 只允许操作用户的私有镜像。
+        ///         /// - 原被共享用户将无法再使用该镜像创建云主机实例，同时使用该镜像创建的云主机实例也无法重置为原始系统状态。
         ///         /// 
     /// </summary>
     public class UnShareImageRequest : JdcloudRequest
     {
         ///<summary>
-        /// 需要取消的帐户
+        /// 需要取消的京东云帐户列表。
         ///</summary>
         public List<string> Pins{ get; set; }
 
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID。
         ///Required:true
         ///</summary>
         [Required]

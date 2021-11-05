@@ -33,18 +33,24 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  解绑ssh密钥对。
+    ///  
+        ///         /// 为云主机实例解绑密钥。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口解绑云主机实例中的密钥。
         ///         /// 
     /// </summary>
     public class DetachKeypairResult : JdcloudResult
     {
         ///<summary>
-        /// SuccessInstanceId
+        /// 请求成功的云主机实例ID列表。
         ///</summary>
         public List<string> SuccessInstanceId{ get; set; }
 
         ///<summary>
-        /// FailInstanceId
+        /// 请求失败的云主机实例ID列表。
         ///</summary>
         public List<string> FailInstanceId{ get; set; }
 

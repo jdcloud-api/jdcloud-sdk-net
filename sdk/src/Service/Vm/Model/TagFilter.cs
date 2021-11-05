@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  tagFilter
+    ///  自定义标签过滤器。
     /// </summary>
     public class TagFilter
     {
 
         ///<summary>
-        /// Tag键
+        /// 标签key。
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        /// Tag值
+        /// 标签value。
         ///</summary>
         public List<string> Values{ get; set; }
     }

@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Cdn.Apis
     public class SetHttpHeaderRequest : JdcloudRequest
     {
         ///<summary>
+        /// 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+        ///</summary>
+        public   int? EdgeType{ get; set; }
+        ///<summary>
         /// header类型[resp,req],resp：配置响应头，req：配置请求头
         ///</summary>
         public   string HeaderType{ get; set; }

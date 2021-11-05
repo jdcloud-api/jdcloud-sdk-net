@@ -48,6 +48,6 @@ namespace JDCloudSDK.Cdn.Model
         ///<summary>
         /// 查询结果,类型为HashMap&lt;String, Object&gt;
         ///</summary>
-        public Dictionary<String,string> Data{ get; set; }
+        public Dictionary<String,object> Data{ get; set; }
     }
 }

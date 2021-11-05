@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  chargeEvent
+    ///  云主机实例计费事件。
     /// </summary>
     public class ChargeEvent
     {

@@ -39,6 +39,10 @@ namespace  JDCloudSDK.Cdn.Apis
     public class QueryHttpHeaderRequest : JdcloudRequest
     {
         ///<summary>
+        /// header生效节点，0边缘，1回源，2两者都
+        ///</summary>
+        public   int? EdgeType{ get; set; }
+        ///<summary>
         /// 用户域名
         ///Required:true
         ///</summary>

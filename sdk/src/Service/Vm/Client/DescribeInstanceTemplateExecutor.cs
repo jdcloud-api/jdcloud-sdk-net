@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,13 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询启动模板详情
+    ///  
+        /// 查询实例模板详情。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        /// 
+        /// ## 接口说明
+        /// - 该接口与查询实例模板列表返回的信息一致。
+        /// - 只需要查询单个实例模板详细信息的时候可以调用该接口。
         /// 
     /// </summary>
     public class DescribeInstanceTemplateExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询启动模板详情
+        ///  
+        /// 查询实例模板详情。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        /// 
+        /// ## 接口说明
+        /// - 该接口与查询实例模板列表返回的信息一致。
+        /// - 只需要查询单个实例模板详细信息的时候可以调用该接口。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询启动模板详情
+        ///  
+        /// 查询实例模板详情。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        /// 
+        /// ## 接口说明
+        /// - 该接口与查询实例模板列表返回的信息一致。
+        /// - 只需要查询单个实例模板详细信息的时候可以调用该接口。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

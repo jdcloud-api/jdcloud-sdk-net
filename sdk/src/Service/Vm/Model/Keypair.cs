@@ -32,25 +32,25 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  keypair
+    ///  密钥信息。
     /// </summary>
     public class Keypair
     {
 
         ///<summary>
-        /// 密钥对名称
+        /// 密钥对名称。
         ///</summary>
         public string KeyName{ get; set; }
         ///<summary>
-        /// 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+        /// 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
         ///</summary>
         public string KeyFingerprint{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 密钥创建时间。
         ///</summary>
         public string CreateTime{ get; set; }
         ///<summary>
-        /// 绑定了此密钥的所有虚机id
+        /// 绑定了此密钥的云主机ID列表。
         ///</summary>
         public List<string> InstanceIds{ get; set; }
     }

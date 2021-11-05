@@ -33,25 +33,25 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceNetworkInterface
+    ///  云主机弹性网卡设备详细配置。
     /// </summary>
     public class InstanceNetworkInterface
     {
 
         ///<summary>
-        /// 弹性网卡ID
+        /// 弹性网卡ID。
         ///</summary>
         public string NetworkInterfaceId{ get; set; }
         ///<summary>
-        /// 以太网地址
+        /// 弹性网卡MAC地址。
         ///</summary>
         public string MacAddress{ get; set; }
         ///<summary>
-        /// 虚拟网络ID
+        /// 弹性网卡所属VPC的ID。
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        /// 子网ID
+        /// 子网ID。
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
@@ -59,15 +59,15 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public List<SecurityGroupSimple> SecurityGroups{ get; set; }
         ///<summary>
-        /// 源和目标IP地址校验，取值为0或者1
+        /// PortSecurity，源和目标IP地址校验，取值为0或者1。
         ///</summary>
         public int? SanityCheck{ get; set; }
         ///<summary>
-        /// 网卡主IP
+        /// 网卡主IP配置。
         ///</summary>
         public NetworkInterfacePrivateIp PrimaryIp{ get; set; }
         ///<summary>
-        /// 网卡辅IP
+        /// 网卡辅IP地址列表。
         ///</summary>
         public List<NetworkInterfacePrivateIp> SecondaryIps{ get; set; }
     }

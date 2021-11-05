@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  copyImage
+    ///  跨区复制镜像的映射关系。
     /// </summary>
     public class CopyImage
     {
 
         ///<summary>
-        /// 复制后的目标镜像ID
+        /// 跨区复制产生的目标镜像ID。
         ///</summary>
         public string DestinationImageId{ get; set; }
         ///<summary>
-        /// 源镜像ID
+        /// 源镜像ID。
         ///</summary>
         public string SourceImageId{ get; set; }
     }

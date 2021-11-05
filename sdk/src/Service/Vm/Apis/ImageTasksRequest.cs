@@ -35,24 +35,34 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询镜像导入导出任务详情
+    ///  
+        ///         /// 查询镜像任务详情。
+        ///         /// 
+        ///         /// 将京东云私有镜像导出至京东云以外环境。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：
+        ///         /// [导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
+        ///         /// [导出私有镜像](https://docs.jdcloud.com/cn/virtual-machines/export-private-image)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口可查询镜像导入或导出的任务详情。
         ///         /// 
     /// </summary>
     public class ImageTasksRequest : JdcloudRequest
     {
         ///<summary>
-        /// 任务种类。可选值：ImportImage， ExportImage
+        /// 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
         ///Required:true
         ///</summary>
         [Required]
         public   string TaskAction{ get; set; }
         ///<summary>
-        /// 任务id
+        /// 任务id列表。
         ///</summary>
         public List<int?> TaskIds{ get; set; }
 
         ///<summary>
-        /// 任务状态。可选值：pending,running,failed,finished
+        /// 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
         ///</summary>
         public   string TaskStatus{ get; set; }
         ///<summary>
@@ -64,15 +74,15 @@ namespace  JDCloudSDK.Vm.Apis
         ///</summary>
         public   DateTime? EndTime{ get; set; }
         ///<summary>
-        /// 页码；默认为1
+        /// 页码；默认为1。
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；默认为10；取值范围[1, 10]。
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

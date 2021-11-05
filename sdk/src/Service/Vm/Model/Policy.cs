@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  policy
+    ///  自动任务策略信息。
     /// </summary>
     public class Policy
     {
 
         ///<summary>
-        /// 策略ID。
+        /// 自动任务策略ID。
         ///</summary>
         public string PolicyId{ get; set; }
         ///<summary>
-        /// 策略类型。
+        /// 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。
         ///</summary>
         public string PolicyType{ get; set; }
     }

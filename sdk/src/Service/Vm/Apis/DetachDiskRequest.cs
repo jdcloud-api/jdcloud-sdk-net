@@ -35,30 +35,39 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+    ///  
+        ///         /// 为一台云主机缷载云硬盘
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[缷载云硬盘](https://docs.jdcloud.com/cn/virtual-machines/detach-cloud-disk)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
+        ///         /// - 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
         ///         /// 
     /// </summary>
     public class DetachDiskRequest : JdcloudRequest
     {
         ///<summary>
-        /// 云硬盘ID
+        /// 云硬盘ID。
         ///Required:true
         ///</summary>
         [Required]
         public   string DiskId{ get; set; }
         ///<summary>
-        /// 强制缷载，默认False。如果此参数传值为True，代表数据盘的IO会被强制断掉。
+        /// 是否强制缷载，默认False。
+        /// 如果此参数传值为True，数据盘的IO会被强制断掉。
+        /// 
         ///</summary>
         public   bool Force{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 云主机ID
+        /// 云主机ID。
         ///Required:true
         ///</summary>
         [Required]

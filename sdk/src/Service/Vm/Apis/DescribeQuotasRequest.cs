@@ -36,23 +36,30 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+    ///  
+        ///         /// 查询资源配额。
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口可查询 &#x60;云主机&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
         ///         /// 
     /// </summary>
     public class DescribeQuotasRequest : JdcloudRequest
     {
         ///<summary>
-        /// resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
+        /// &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+        /// &#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+        /// 私有镜像Id。
+        /// 查询镜像共享 &#x60;imageShare&#x60; 的配额时，此参数必传。
+        /// 
         ///</summary>
         public   string ImageId{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

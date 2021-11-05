@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -36,28 +36,36 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询启动模板列表
+    ///  
+        ///         /// 查询实例模板列表。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        ///         /// - 单次查询最大可查询100条实例模板数据。
         ///         /// 
     /// </summary>
     public class DescribeInstanceTemplatesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 页码；默认为1
+        /// 页码；默认为1。
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为20；取值范围[10, 100]
+        /// 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
-        /// name - 启动模板名称，模糊匹配，支持多个
-        /// instanceTemplateId - 启动模板ID，精确匹配，支持多个
+        /// &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+        /// &#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
+        /// &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }
 
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

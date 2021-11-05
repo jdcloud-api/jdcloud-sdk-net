@@ -33,15 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  批量查询密钥对。&lt;br&gt;
-        /// 此接口支持分页查询，默认每页20条。
+    ///  
+        /// 批量查询密钥对。
+        /// 
+        /// 详细操作说明请参考帮助文档：[密钥概述](https://docs.jdcloud.com/cn/virtual-machines/keypair-overview)
+        /// 
+        /// ## 接口说明
+        /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        /// - 单次查询最大可查询100条密钥数据。
         /// 
     /// </summary>
     public class DescribeKeypairsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  批量查询密钥对。&lt;br&gt;
-        /// 此接口支持分页查询，默认每页20条。
+        ///  
+        /// 批量查询密钥对。
+        /// 
+        /// 详细操作说明请参考帮助文档：[密钥概述](https://docs.jdcloud.com/cn/virtual-machines/keypair-overview)
+        /// 
+        /// ## 接口说明
+        /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        /// - 单次查询最大可查询100条密钥数据。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -51,8 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  批量查询密钥对。&lt;br&gt;
-        /// 此接口支持分页查询，默认每页20条。
+        ///  
+        /// 批量查询密钥对。
+        /// 
+        /// 详细操作说明请参考帮助文档：[密钥概述](https://docs.jdcloud.com/cn/virtual-machines/keypair-overview)
+        /// 
+        /// ## 接口说明
+        /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        /// - 单次查询最大可查询100条密钥数据。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

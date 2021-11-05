@@ -33,15 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-        /// 修改密码后，需要重启云主机后生效。
+    ///  
+        /// 修改云主机密码。
+        /// 
+        /// 详细操作说明请参考帮助文档：[重置密码](https://docs.jdcloud.com/cn/virtual-machines/reset-password)
+        /// 
+        /// ## 接口说明
+        /// - 实例没有正在进行中的任务时才可操作。
+        /// - 重置密码后，需要重启云主机后生效。
         /// 
     /// </summary>
     public class ModifyInstancePasswordExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-        /// 修改密码后，需要重启云主机后生效。
+        ///  
+        /// 修改云主机密码。
+        /// 
+        /// 详细操作说明请参考帮助文档：[重置密码](https://docs.jdcloud.com/cn/virtual-machines/reset-password)
+        /// 
+        /// ## 接口说明
+        /// - 实例没有正在进行中的任务时才可操作。
+        /// - 重置密码后，需要重启云主机后生效。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -51,8 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-        /// 修改密码后，需要重启云主机后生效。
+        ///  
+        /// 修改云主机密码。
+        /// 
+        /// 详细操作说明请参考帮助文档：[重置密码](https://docs.jdcloud.com/cn/virtual-machines/reset-password)
+        /// 
+        /// ## 接口说明
+        /// - 实例没有正在进行中的任务时才可操作。
+        /// - 重置密码后，需要重启云主机后生效。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

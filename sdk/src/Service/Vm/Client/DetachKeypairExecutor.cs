@@ -33,13 +33,25 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  解绑ssh密钥对。
+    ///  
+        /// 为云主机实例解绑密钥。
+        /// 
+        /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        /// 
+        /// ## 接口说明
+        /// - 调用该接口解绑云主机实例中的密钥。
         /// 
     /// </summary>
     public class DetachKeypairExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  解绑ssh密钥对。
+        ///  
+        /// 为云主机实例解绑密钥。
+        /// 
+        /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        /// 
+        /// ## 接口说明
+        /// - 调用该接口解绑云主机实例中的密钥。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +61,13 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  解绑ssh密钥对。
+        ///  
+        /// 为云主机实例解绑密钥。
+        /// 
+        /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        /// 
+        /// ## 接口说明
+        /// - 调用该接口解绑云主机实例中的密钥。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

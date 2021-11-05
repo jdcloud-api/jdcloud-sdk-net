@@ -34,19 +34,25 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  批量查询密钥对。&lt;br&gt;
-        ///         /// 此接口支持分页查询，默认每页20条。
+    ///  
+        ///         /// 批量查询密钥对。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[密钥概述](https://docs.jdcloud.com/cn/virtual-machines/keypair-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+        ///         /// - 单次查询最大可查询100条密钥数据。
         ///         /// 
     /// </summary>
     public class DescribeKeypairsResult : JdcloudResult
     {
         ///<summary>
-        /// Keypairs
+        /// 密钥信息列表。
         ///</summary>
         public List<Keypair> Keypairs{ get; set; }
 
         ///<summary>
-        /// 总的数据条数
+        /// 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

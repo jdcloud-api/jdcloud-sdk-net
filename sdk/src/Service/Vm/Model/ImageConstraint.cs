@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  imageConstraint
+    ///  镜像对实例规格的约束信息。
     /// </summary>
     public class ImageConstraint
     {
 
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID。
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 使用镜像创建实例的规格限制
+        /// 镜像对实例规格的约束信息。
         ///</summary>
         public ImageInstanceTypeConstraint ImageInstanceTypeConstraint{ get; set; }
     }

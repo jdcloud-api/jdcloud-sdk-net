@@ -33,17 +33,27 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceNetworkInterfaceAttachmentSpec
+    ///  云主机实例弹性网卡挂载点配置信息。
     /// </summary>
     public class InstanceNetworkInterfaceAttachmentSpec
     {
 
         ///<summary>
-        /// 网卡设备Index，主网卡只能是1
+        /// 网卡设备Index。创建实例时此参数无须指定且指定无效。
+        /// 对于主网卡默认Index为1，辅助网卡自动分配。
+        /// 
         ///</summary>
         public int? DeviceIndex{ get; set; }
         ///<summary>
-        /// 网卡接口规范
+        /// 是否随实例一起删除。
+        /// &#x60;true&#x60;：随实例删除。
+        /// &#x60;false&#x60;（默认值）：不随实例删除。
+        /// 
+        ///</summary>
+        public bool AutoDelete{ get; set; }
+        ///<summary>
+        /// 网卡设备详细配置。
+        /// 
         ///</summary>
         public NetworkInterfaceSpec NetworkInterface{ get; set; }
     }

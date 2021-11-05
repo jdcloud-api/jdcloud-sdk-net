@@ -33,13 +33,31 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  查询实例规格信息列表
+    ///  
+        /// 查询实例规格列表。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例规格类型](https://docs.jdcloud.com/cn/virtual-machines/instance-type-family)
+        /// 
+        /// ## 接口说明
+        /// - 调用该接口可查询全量实例规格信息。
+        /// - 可查询实例规格的CPU、内存大小、可绑定的弹性网卡数量、可挂载的云硬盘数量，是否售卖等信息。
+        /// - GPU 或 本地存储型的规格可查询 GPU型号、GPU卡数量、本地盘数量。
+        /// - 尽量使用过滤器查询关心的实例规格，并适当缓存这些信息。否则全量查询可能响应较慢。
         /// 
     /// </summary>
     public class DescribeInstanceTypesExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询实例规格信息列表
+        ///  
+        /// 查询实例规格列表。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例规格类型](https://docs.jdcloud.com/cn/virtual-machines/instance-type-family)
+        /// 
+        /// ## 接口说明
+        /// - 调用该接口可查询全量实例规格信息。
+        /// - 可查询实例规格的CPU、内存大小、可绑定的弹性网卡数量、可挂载的云硬盘数量，是否售卖等信息。
+        /// - GPU 或 本地存储型的规格可查询 GPU型号、GPU卡数量、本地盘数量。
+        /// - 尽量使用过滤器查询关心的实例规格，并适当缓存这些信息。否则全量查询可能响应较慢。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +67,16 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  查询实例规格信息列表
+        ///  
+        /// 查询实例规格列表。
+        /// 
+        /// 详细操作说明请参考帮助文档：[实例规格类型](https://docs.jdcloud.com/cn/virtual-machines/instance-type-family)
+        /// 
+        /// ## 接口说明
+        /// - 调用该接口可查询全量实例规格信息。
+        /// - 可查询实例规格的CPU、内存大小、可绑定的弹性网卡数量、可挂载的云硬盘数量，是否售卖等信息。
+        /// - GPU 或 本地存储型的规格可查询 GPU型号、GPU卡数量、本地盘数量。
+        /// - 尽量使用过滤器查询关心的实例规格，并适当缓存这些信息。否则全量查询可能响应较慢。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

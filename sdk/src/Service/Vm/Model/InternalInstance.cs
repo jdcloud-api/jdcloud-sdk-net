@@ -32,97 +32,100 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  internalInstance
+    ///  云主机实例信息。
     /// </summary>
     public class InternalInstance
     {
 
         ///<summary>
-        /// 云主机ID
+        /// 云主机ID。
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// 云主机名称
+        /// 云主机名称。
         ///</summary>
         public string InstanceName{ get; set; }
         ///<summary>
-        /// 实例规格
+        /// 实例规格。
         ///</summary>
         public string InstanceType{ get; set; }
         ///<summary>
-        /// 主网卡所属VPC的ID
+        /// 主网卡所属VPC的ID。
         ///</summary>
         public string VpcId{ get; set; }
         ///<summary>
-        /// 主网卡所属子网的ID
+        /// 主网卡所属子网的ID。
         ///</summary>
         public string SubnetId{ get; set; }
         ///<summary>
-        /// 主网卡主IP地址
+        /// 主网卡主内网IP地址。
         ///</summary>
         public string PrivateIpAddress{ get; set; }
         ///<summary>
-        /// 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+        /// 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// 云主机描述
+        /// 云主机描述。
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// 镜像ID
+        /// 云主机使用的镜像ID。
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 系统盘配置
+        /// 系统盘配置。
         ///</summary>
         public BriefInstanceDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        /// 数据盘配置
+        /// 数据盘配置列表。
         ///</summary>
         public List<BriefInstanceDiskAttachment> DataDisks{ get; set; }
         ///<summary>
-        /// 主网卡配置
+        /// 主网卡主IP关联的弹性公网IP配置。
         ///</summary>
         public BriefInstanceNetworkInterfaceAttachment PrimaryNetworkInterface{ get; set; }
         ///<summary>
-        /// 辅助网卡配置
+        /// 辅助网卡配置列表。
         ///</summary>
         public List<BriefInstanceNetworkInterfaceAttachment> SecondaryNetworkInterfaces{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 云主机实例的创建时间。
         ///</summary>
         public DateTime? LaunchTime{ get; set; }
         ///<summary>
-        /// 云主机所在可用区
+        /// 云主机所在可用区。
         ///</summary>
         public string Az{ get; set; }
         ///<summary>
-        /// 密钥对名称
+        /// 云主机使用的密钥对名称。
         ///</summary>
         public List<string> KeyNames{ get; set; }
         ///<summary>
-        /// 高可用组中的错误域
+        /// 高可用组中的错误域。
         ///</summary>
         public string FaultDomain{ get; set; }
         ///<summary>
-        /// 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
+        /// 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+        /// &#x60;keepCharging&#x60;：关机后继续计费。
+        /// &#x60;stopCharging&#x60;：关机后停止计费。
+        /// 
         ///</summary>
         public string ChargeOnStopped{ get; set; }
         ///<summary>
-        /// 实例所属的专有宿主机池
+        /// 云主机所属的专有宿主机池。
         ///</summary>
         public string DedicatedPoolId{ get; set; }
         ///<summary>
-        /// 专有宿主机ID
+        /// 云主机所属的专有宿主机ID。
         ///</summary>
         public string DedicatedHostId{ get; set; }
         ///<summary>
-        /// 实例的物理机 IP
+        /// 实例所在的物理机IP地址。
         ///</summary>
         public string HostIp{ get; set; }
         ///<summary>
-        /// 机架信息
+        /// 实例所在机架信息。
         ///</summary>
         public string Rack{ get; set; }
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,28 +35,36 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  修改一个启动模板的信息，包括名称、描述
+    ///  
+        ///         /// 修改实例模板属性。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 该接口只支持修改实例模板的名称或描述。
         ///         /// 
     /// </summary>
     public class UpdateInstanceTemplateRequest : JdcloudRequest
     {
         ///<summary>
-        /// 模板描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string Name{ get; set; }
+        ///<summary>
+        /// 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// 模板名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
-        ///</summary>
-        public   string Name{ get; set; }
-        ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 启动模板ID
+        /// 实例模板ID。
         ///Required:true
         ///</summary>
         [Required]

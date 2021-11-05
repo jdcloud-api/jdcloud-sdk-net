@@ -32,33 +32,37 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceTemplateDiskSpec
+    ///  实例模板磁盘配置。
     /// </summary>
     public class InstanceTemplateDiskSpec
     {
 
         ///<summary>
-        /// 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
+        /// 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
         ///</summary>
         public string DiskType{ get; set; }
         ///<summary>
-        /// 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
+        /// 云硬盘大小。单位为 GiB。
+        /// &#x60;ssd&#x60;：取值范围[20,1000]GB，步长为10GB。
+        /// &#x60;premium-hdd&#x60;：取值范围[20,3000]GB，步长为10GB。
+        /// &#x60;hdd.std1、ssd.gp1、ssd.io1&#x60;：取值范围[20-16000]GB，步长为10GB。
+        /// 
         ///</summary>
         public int? DiskSizeGB{ get; set; }
         ///<summary>
-        /// 用于创建云硬盘的快照ID
+        /// 创建云硬盘的快照ID。
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        /// 策略ID
+        /// 云盘快照策略ID。
         ///</summary>
         public string PolicyId{ get; set; }
         ///<summary>
-        /// 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
+        /// 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
         ///</summary>
         public bool Encrypt{ get; set; }
         ///<summary>
-        /// 用于指定云硬盘的iops值，仅支持ssd.io1类型的云盘
+        /// 云硬盘的最大iops。
         ///</summary>
         public int? Iops{ get; set; }
     }

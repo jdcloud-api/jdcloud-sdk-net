@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  metadata
+    ///  自定义元数据信息，以 key-value 键值对表示。
     /// </summary>
     public class Metadata
     {
 
         ///<summary>
-        /// 键，最大长度256，支持全字符
+        /// key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        /// 值，最大长度16k，支持全字符
+        /// value，字符长度不超过16KB，支持全字符。
         ///</summary>
         public string Value{ get; set; }
     }

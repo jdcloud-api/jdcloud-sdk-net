@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  描述实例绑定的安全组
+    ///  实例绑定的安全组信息。
     /// </summary>
     public class SecurityGroupSimple
     {
 
         ///<summary>
-        /// 安全组ID
+        /// 安全组ID。
         ///</summary>
         public string GroupId{ get; set; }
         ///<summary>
-        /// 安全组名称
+        /// 安全组名称。
         ///</summary>
         public string GroupName{ get; set; }
     }

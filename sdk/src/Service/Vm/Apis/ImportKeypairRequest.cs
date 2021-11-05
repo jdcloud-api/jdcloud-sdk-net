@@ -35,27 +35,35 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
-        ///         /// 若传入已存在的密钥名称，会返回错误。
+    ///  
+        ///         /// 导入密钥。
+        ///         /// 
+        ///         /// 与创建密钥不同的是，导入的密钥是由用户生成的。生成之后将公钥部分导入到京东云。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[创建密钥](https://docs.jdcloud.com/cn/virtual-machines/create-keypair)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口导入由其他工具生成的密钥对的公钥部分。
         ///         /// 
     /// </summary>
     public class ImportKeypairRequest : JdcloudRequest
     {
         ///<summary>
-        /// 密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
+        /// 密钥对名称，需要全局唯一。
+        /// 只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string KeyName{ get; set; }
         ///<summary>
-        /// 密钥对的公钥部分
+        /// 密钥对的公钥部分。
         ///Required:true
         ///</summary>
         [Required]
         public   string PublicKey{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

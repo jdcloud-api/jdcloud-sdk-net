@@ -35,26 +35,32 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
+    ///  
+        ///         /// 为云主机解绑弹性公网IP。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[解绑弹性公网IP](https://docs.jdcloud.com/cn/virtual-machines/disassociate-elastic-ip)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 该接口只支持解绑实例的主网卡的主内网IP上的弹性公网IP。
         ///         /// 
     /// </summary>
     public class DisassociateElasticIpRequest : JdcloudRequest
     {
         ///<summary>
-        /// 弹性公网IP的ID
+        /// 弹性公网IP的ID。
         ///Required:true
         ///</summary>
         [Required]
         public   string ElasticIpId{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 云主机ID
+        /// 云主机ID。
         ///Required:true
         ///</summary>
         [Required]

@@ -35,28 +35,34 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+    ///  
+        ///         /// 修改镜像属性。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 只支持修改镜像名称或描述。
         ///         /// 
     /// </summary>
     public class ModifyImageAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        /// 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+        /// 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID。
         ///Required:true
         ///</summary>
         [Required]

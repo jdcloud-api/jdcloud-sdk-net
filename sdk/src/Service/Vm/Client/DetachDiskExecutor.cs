@@ -33,13 +33,27 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+    ///  
+        /// 为一台云主机缷载云硬盘
+        /// 
+        /// 详细操作说明请参考帮助文档：[缷载云硬盘](https://docs.jdcloud.com/cn/virtual-machines/detach-cloud-disk)
+        /// 
+        /// ## 接口说明
+        /// - 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
+        /// - 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
         /// 
     /// </summary>
     public class DetachDiskExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        ///  
+        /// 为一台云主机缷载云硬盘
+        /// 
+        /// 详细操作说明请参考帮助文档：[缷载云硬盘](https://docs.jdcloud.com/cn/virtual-machines/detach-cloud-disk)
+        /// 
+        /// ## 接口说明
+        /// - 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
+        /// - 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +63,14 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+        ///  
+        /// 为一台云主机缷载云硬盘
+        /// 
+        /// 详细操作说明请参考帮助文档：[缷载云硬盘](https://docs.jdcloud.com/cn/virtual-machines/detach-cloud-disk)
+        /// 
+        /// ## 接口说明
+        /// - 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
+        /// - 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

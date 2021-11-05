@@ -32,37 +32,37 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  taskInfo
+    ///  镜像导出导出任务详情。
     /// </summary>
     public class TaskInfo
     {
 
         ///<summary>
-        /// 任务id
+        /// 任务ID。
         ///</summary>
         public int? TaskId{ get; set; }
         ///<summary>
-        /// 任务操作类型
+        /// 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
         ///</summary>
         public string Action{ get; set; }
         ///<summary>
-        /// 任务状态，pending,running,failed,finished
+        /// 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
         ///</summary>
         public string TaskStatus{ get; set; }
         ///<summary>
-        /// 任务进度，0-100
+        /// 任务进度，0% - 100%。
         ///</summary>
         public int? Progress{ get; set; }
         ///<summary>
-        /// 额外信息
+        /// 额外描述信息。
         ///</summary>
         public string Message{ get; set; }
         ///<summary>
-        /// 任务创建时间
+        /// 任务创建时间。
         ///</summary>
         public DateTime? CreatedTime{ get; set; }
         ///<summary>
-        /// 任务完成时间
+        /// 任务完成时间。
         ///</summary>
         public DateTime? FinishedTime{ get; set; }
     }

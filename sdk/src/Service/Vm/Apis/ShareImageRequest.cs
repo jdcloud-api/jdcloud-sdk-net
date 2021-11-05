@@ -35,26 +35,33 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-        ///         /// 整机镜像目前不支持共享。
+    ///  
+        ///         /// 共享私有镜像。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[共享私有镜像](https://docs.jdcloud.com/cn/virtual-machines/share-image)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 只允许共享用户的私有镜像。
+        ///         /// - 单个镜像最多可以共享给20个京东云帐户、不可以共享给自己。
+        ///         /// - 带有加密快照的打包镜像无法共享。
         ///         /// 
     /// </summary>
     public class ShareImageRequest : JdcloudRequest
     {
         ///<summary>
-        /// 需要共享的帐户
+        /// 共享的目标京东云帐户列表。
         ///</summary>
         public List<string> Pins{ get; set; }
 
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID。
         ///Required:true
         ///</summary>
         [Required]

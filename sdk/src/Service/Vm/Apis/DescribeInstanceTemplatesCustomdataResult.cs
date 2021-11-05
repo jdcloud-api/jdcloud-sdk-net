@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,18 +34,24 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询模板自定义元数据
+    ///  
+        ///         /// 查询实例模板上的自定义元数据。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 一般情况下由于自定义元数据比较大，所以限制每次最多查询10个实例模板。
         ///         /// 
     /// </summary>
     public class DescribeInstanceTemplatesCustomdataResult : JdcloudResult
     {
         ///<summary>
-        /// InstanceTemplatesCustomData
+        /// 自定义元数据列表。
         ///</summary>
         public List<InstanceTemplateCustomData> InstanceTemplatesCustomData{ get; set; }
 
         ///<summary>
-        /// TotalCount
+        /// 本次查询的总记录数。
         ///</summary>
         public   double? TotalCount{ get; set; }
     }

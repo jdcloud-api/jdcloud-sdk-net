@@ -32,20 +32,19 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceDiskAttribute
+    ///  云主机磁盘属性信息。
     /// </summary>
     public class InstanceDiskAttribute
     {
 
         ///<summary>
-        /// 云硬盘ID
+        /// 云硬盘ID。
         ///</summary>
         public string DiskId{ get; set; }
         ///<summary>
-        /// 随云主机一起删除，删除主机时自动删除此磁盘，默认为false，本地盘(local)不能更改此值。
-        /// 如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
-        /// 如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
-        /// 
+        /// 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+        /// &#x60;true&#x60;：随实例删除。
+        /// &#x60;false&#x60;（默认值）：不随实例删除。
         ///</summary>
         public bool AutoDelete{ get; set; }
     }

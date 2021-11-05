@@ -36,26 +36,34 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
-        ///         /// 不能修改主网卡。
+    ///  
+        ///         /// 修改云主机弹性网卡属性。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[配置弹性网卡删除属性](https://docs.jdcloud.com/cn/virtual-machines/configurate-eni-delete-attributes)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 当前只支持修改随云主机实例删除的属性。
+        ///         /// - 不支持修改主网卡。
         ///         /// 
     /// </summary>
     public class ModifyInstanceNetworkAttributeRequest : JdcloudRequest
     {
         ///<summary>
-        /// 弹性网卡列表
+        /// 弹性网卡列表。
+        ///Required:true
         ///</summary>
+        [Required]
         public List<InstanceNetworkAttribute> Networks{ get; set; }
 
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 云主机ID
+        /// 云主机ID。
         ///Required:true
         ///</summary>
         [Required]

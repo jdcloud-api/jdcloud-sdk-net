@@ -35,32 +35,41 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  绑定ssh密钥对。
+    ///  
+        ///         /// 为云主机实例绑定密钥。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 只支持为 linux 云主机实例绑定密钥。
+        ///         /// - 每台云主机实例只支持绑定一个密钥。如果云主机绑定的密钥被删除了，那么该云主机还可以再次绑定密钥。
         ///         /// 
     /// </summary>
     public class AttachKeypairRequest : JdcloudRequest
     {
         ///<summary>
-        /// 虚机Id
+        /// 要绑定的云主机Id列表。
         ///</summary>
         public List<string> InstanceIds{ get; set; }
 
         ///<summary>
-        /// 密码授权，绑定密钥后，根据此参数决定是否使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用
+        /// 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
+        /// &#x60;yes&#x60;：允许SSH密码登录。
+        /// &#x60;no&#x60;：禁止SSH密码登录。
         /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string PassWordAuth{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]
         [JsonProperty("regionId")]
         public   string RegionIdValue{ get; set; }
         ///<summary>
-        /// 密钥名称
+        /// 密钥名称。
         ///Required:true
         ///</summary>
         [Required]

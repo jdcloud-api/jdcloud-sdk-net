@@ -34,13 +34,17 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+    ///  
+        ///         /// 查询资源配额。
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 调用该接口可查询 &#x60;云主机&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
         ///         /// 
     /// </summary>
     public class DescribeQuotasResult : JdcloudResult
     {
         ///<summary>
-        /// 配额列表
+        /// 配额列表。
         ///</summary>
         public List<JDCloudSDK.Vm.Model.Quota> Quotas{ get; set; }
 

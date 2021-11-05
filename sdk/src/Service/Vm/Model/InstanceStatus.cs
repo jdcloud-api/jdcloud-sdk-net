@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  instanceStatus
+    ///  云主机实例状态。
     /// </summary>
     public class InstanceStatus
     {
 
         ///<summary>
-        /// 云主机ID
+        /// 云主机ID。
         ///</summary>
         public string InstanceId{ get; set; }
         ///<summary>
-        /// &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+        /// 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
         ///</summary>
         public string Status{ get; set; }
     }

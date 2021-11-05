@@ -33,13 +33,25 @@ namespace JDCloudSDK.Vm.Client
 {
 
     /// <summary>
-    ///  云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
+    ///  
+        /// 为云主机解绑弹性公网IP。
+        /// 
+        /// 详细操作说明请参考帮助文档：[解绑弹性公网IP](https://docs.jdcloud.com/cn/virtual-machines/disassociate-elastic-ip)
+        /// 
+        /// ## 接口说明
+        /// - 该接口只支持解绑实例的主网卡的主内网IP上的弹性公网IP。
         /// 
     /// </summary>
     public class DisassociateElasticIpExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
+        ///  
+        /// 为云主机解绑弹性公网IP。
+        /// 
+        /// 详细操作说明请参考帮助文档：[解绑弹性公网IP](https://docs.jdcloud.com/cn/virtual-machines/disassociate-elastic-ip)
+        /// 
+        /// ## 接口说明
+        /// - 该接口只支持解绑实例的主网卡的主内网IP上的弹性公网IP。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -49,7 +61,13 @@ namespace JDCloudSDK.Vm.Client
             }
         }
         /// <summary>
-        ///  云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
+        ///  
+        /// 为云主机解绑弹性公网IP。
+        /// 
+        /// 详细操作说明请参考帮助文档：[解绑弹性公网IP](https://docs.jdcloud.com/cn/virtual-machines/disassociate-elastic-ip)
+        /// 
+        /// ## 接口说明
+        /// - 该接口只支持解绑实例的主网卡的主内网IP上的弹性公网IP。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

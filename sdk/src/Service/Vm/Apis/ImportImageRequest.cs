@@ -35,71 +35,80 @@ namespace  JDCloudSDK.Vm.Apis
 {
 
     /// <summary>
-    ///  导入镜像，将外部镜像导入到京东云中
+    ///  
+        ///         /// 导入私有镜像。
+        ///         /// 
+        ///         /// 详细操作说明请参考帮助文档：[导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
+        ///         /// 
+        ///         /// ## 接口说明
+        ///         /// - 当前仅支持导入系统盘镜像。
+        ///         /// - 导入后的镜像将以 &#x60;云硬盘系统盘镜像&#x60; 格式作为私有镜像使用，同时会自动生成一个与导入镜像关联的快照。
         ///         /// 
     /// </summary>
     public class ImportImageRequest : JdcloudRequest
     {
         ///<summary>
-        /// 系统架构，可选值：x86_64,i386
+        /// 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
         ///Required:true
         ///</summary>
         [Required]
         public   string Architecture{ get; set; }
         ///<summary>
-        /// 操作系统，可选值：windows,linux
+        /// 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
         ///Required:true
         ///</summary>
         [Required]
         public   string OsType{ get; set; }
         ///<summary>
-        /// 平台名称，可选值：CentOS,Ubuntu,Windows Server,Other Linux,Other Windows
+        /// 镜像的操作系统平台名称。
+        /// 取值范围：&#x60;Ubuntu、CentOS、Windows Server、Other Linux、Other Windows&#x60;。
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public   string Platform{ get; set; }
         ///<summary>
-        /// 磁盘格式，可选值：qcow2,vhd,vmdk,raw
+        /// 磁盘格式，取值范围：&#x60;qcow2、vhd、vmdk、raw&#x60;。
         ///Required:true
         ///</summary>
         [Required]
         public   string DiskFormat{ get; set; }
         ///<summary>
-        /// 以此镜像需要制作的系统盘的默认大小，单位GB。最小值40，最大值500，要求值是10的整数倍
+        /// 以此镜像需要制作的系统盘的默认大小，单位GB。最小值40，最大值500，要求值是10的整数倍。
         ///Required:true
         ///</summary>
         [Required]
         public   int SystemDiskSizeGB{ get; set; }
         ///<summary>
-        /// 要导入镜像的对象存储外链地址
+        /// 要导入镜像的对象存储外链地址。
         ///Required:true
         ///</summary>
         [Required]
         public   string ImageUrl{ get; set; }
         ///<summary>
-        /// 镜像的操作系统版本
+        /// 镜像的操作系统版本。
         ///</summary>
         public   string OsVersion{ get; set; }
         ///<summary>
-        /// 导入镜像的自定义名称
+        /// 导入镜像的自定义名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
         ///Required:true
         ///</summary>
         [Required]
         public   string ImageName{ get; set; }
         ///<summary>
-        /// 导入镜像的描述信息
+        /// 导入镜像的描述信息。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
         ///</summary>
         public   string Description{ get; set; }
         ///<summary>
-        /// 是否强制导入。强制导入则忽略镜像的合规性检测
+        /// 是否强制导入。强制导入会忽略镜像的合规性检测。默认为false。
         ///</summary>
         public   bool ForceImport{ get; set; }
         ///<summary>
-        /// 用户导入镜像的幂等性保证。每次创建请传入不同的值，如果传值与某次的clientToken相同，则返还该次的请求结果
+        /// 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
         ///</summary>
         public   string ClientToken{ get; set; }
         ///<summary>
-        /// 地域ID
+        /// 地域ID。
         ///Required:true
         ///</summary>
         [Required]

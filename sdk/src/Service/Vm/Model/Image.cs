@@ -32,21 +32,23 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  image
+    ///  云主机镜像详细信息。
     /// </summary>
     public class Image
     {
 
         ///<summary>
-        /// 镜像ID
+        /// 镜像ID。
         ///</summary>
         public string ImageId{ get; set; }
         ///<summary>
-        /// 镜像名称
+        /// 镜像名称。
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
+        /// 镜像的操作系统平台名称。
+        /// 取值范围：&#x60;Ubuntu、CentOS、Windows Server、Other Linux、Other Windows&#x60;。
+        /// 
         ///</summary>
         public string Platform{ get; set; }
         ///<summary>
@@ -54,71 +56,84 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public string OsVersion{ get; set; }
         ///<summary>
-        /// 镜像架构。取值：i386,x86_64
+        /// 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
         ///</summary>
         public string Architecture{ get; set; }
         ///<summary>
-        /// 镜像系统盘大小
+        /// 镜像系统盘大小。
         ///</summary>
         public int? SystemDiskSizeGB{ get; set; }
         ///<summary>
-        /// 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
+        /// 镜像来源，取值范围：
+        /// &#x60;public&#x60;：官方镜像。
+        /// &#x60;thirdparty&#x60;：镜像市场镜像。
+        /// &#x60;private&#x60;：用户自己的私有镜像。
+        /// &#x60;shared&#x60;：其他用户分享的镜像。
+        /// &#x60;community&#x60;：社区镜像。
+        /// 
         ///</summary>
         public string ImageSource{ get; set; }
         ///<summary>
-        /// 镜像的操作系统类型。取值：windows,linux
+        /// 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
         ///</summary>
         public string OsType{ get; set; }
         ///<summary>
-        /// &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+        /// 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
         ///</summary>
         public string Status{ get; set; }
         ///<summary>
-        /// 创建时间
+        /// 镜像的创建时间。
         ///</summary>
         public DateTime? CreateTime{ get; set; }
         ///<summary>
-        /// 镜像文件实际大小
+        /// 镜像文件的实际大小。
         ///</summary>
         public int? SizeMB{ get; set; }
         ///<summary>
-        /// 镜像描述
+        /// 镜像描述。
         ///</summary>
         public string Desc{ get; set; }
         ///<summary>
-        /// 该镜像所有者的用户PIN
+        /// 该镜像拥有者的用户PIN。
         ///</summary>
         public string OwnerPin{ get; set; }
         ///<summary>
-        /// 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+        /// 镜像的使用权限。取值范围：
+        /// &#x60;all&#x60;：没有限制，所有人均可以使用。
+        /// &#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+        /// &#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+        /// 
         ///</summary>
         public string LaunchPermission{ get; set; }
         ///<summary>
-        /// 镜像系统盘配置
+        /// 镜像系统盘配置。
         ///</summary>
         public InstanceDiskAttachment SystemDisk{ get; set; }
         ///<summary>
-        /// 镜像数据盘映射信息
+        /// 镜像数据盘配置列表。
         ///</summary>
         public List<InstanceDiskAttachment> DataDisks{ get; set; }
         ///<summary>
-        /// 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
+        /// 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        /// 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
+        /// 镜像支持的系统盘类型。取值范围：
+        /// &#x60;localDisk&#x60;：本地盘系统盘。
+        /// &#x60;cloudDisk&#x60;：云盘系统盘。
+        /// 
         ///</summary>
         public string RootDeviceType{ get; set; }
         ///<summary>
-        /// 镜像复制和转换时的进度，仅显示数值，单位为百分比
+        /// 镜像复制和转换时的进度，仅显示数值，单位为百分比。
         ///</summary>
         public string Progress{ get; set; }
         ///<summary>
-        /// 该镜像的上下线状态
+        /// 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
         ///</summary>
         public bool Offline{ get; set; }
         ///<summary>
-        /// 该镜像所属的产品线标识
+        /// 已废弃。
         ///</summary>
         public string ServiceCode{ get; set; }
     }
