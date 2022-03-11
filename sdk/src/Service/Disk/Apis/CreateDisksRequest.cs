@@ -61,7 +61,7 @@ namespace  JDCloudSDK.Disk.Apis
         [Required]
         public   int MaxCount{ get; set; }
         ///<summary>
-        /// 用户标签
+        /// 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
         ///</summary>
         public List<Tag> UserTags{ get; set; }
 

@@ -42,8 +42,16 @@ namespace JDCloudSDK.Logs.Model
         ///</summary>
         public string UID{ get; set; }
         ///<summary>
+        /// 是否展示实列列表
+        ///</summary>
+        public long? DisableTable{ get; set; }
+        ///<summary>
         /// 模板名称
         ///</summary>
         public string Name{ get; set; }
+        ///<summary>
+        /// 是否是特殊模式的系统日志
+        ///</summary>
+        public long? SpecialMode{ get; set; }
     }
 }

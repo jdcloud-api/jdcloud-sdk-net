@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志搜索接口
+ * 日志扫描接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Logs.Model;
 
 namespace  JDCloudSDK.Logs.Apis
 {
@@ -42,6 +43,10 @@ namespace  JDCloudSDK.Logs.Apis
         ///</summary>
         public List<Dictionary<String,object>> Data{ get; set; }
 
+        ///<summary>
+        /// SearchFields
+        ///</summary>
+        public   SearchFields SearchFields{ get; set; }
         ///<summary>
         /// 总数
         ///</summary>

@@ -39,7 +39,7 @@ namespace JDCloudSDK.Lb.Model
     {
 
         ///<summary>
-        /// 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp &lt;br&gt;【dnlb】取值为Tcp
+        /// 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp, Icmp(仅支持alb/nlb的Udp的Backend) &lt;br&gt;【dnlb】取值为Tcp, Icmp(仅支持dnlb的Udp的Backend)
         ///Required:true
         ///</summary>
         [Required]
@@ -61,15 +61,15 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public int? IntervalSeconds{ get; set; }
         ///<summary>
-        /// 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
+        /// 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
         ///</summary>
         public int? Port{ get; set; }
         ///<summary>
-        /// 检查域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
+        /// 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
         ///</summary>
         public string HttpDomain{ get; set; }
         ///<summary>
-        /// 检查路径, 健康检查的目标路径，必须以&quot;/&quot;开头，允许输入具体的文件路径，默认为根目录。当protocol为http时，必填, 仅支持HTTP协议
+        /// 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
         ///</summary>
         public string HttpPath{ get; set; }
         ///<summary>

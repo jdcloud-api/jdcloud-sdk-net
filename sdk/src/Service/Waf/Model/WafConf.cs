@@ -46,9 +46,13 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? WafMode{ get; set; }
         ///<summary>
-        /// 0表示宽松，1表示正常，2表示严格
+        /// 0表示宽松，1表示正常，2表示严格, 3表示自定义
         ///</summary>
         public int? WafLevel{ get; set; }
+        ///<summary>
+        /// 自定义规则集Id
+        ///</summary>
+        public long? UsrPolicy{ get; set; }
         ///<summary>
         /// 自定义页面名称
         ///</summary>

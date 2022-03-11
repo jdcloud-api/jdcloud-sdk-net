@@ -52,7 +52,7 @@ namespace JDCloudSDK.Disk.Model
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// 云硬盘描述
+        /// 云硬盘描述,默认为空
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
@@ -68,15 +68,15 @@ namespace JDCloudSDK.Disk.Model
         [Required]
         public int DiskSizeGB{ get; set; }
         ///<summary>
-        /// 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+        /// 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
         ///</summary>
         public int? Iops{ get; set; }
         ///<summary>
-        /// 用于创建云硬盘的快照ID
+        /// 用于创建云硬盘的快照ID，默认为空
         ///</summary>
         public string SnapshotId{ get; set; }
         ///<summary>
-        /// 策略ID
+        /// 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
         ///</summary>
         public string PolicyId{ get; set; }
         ///<summary>

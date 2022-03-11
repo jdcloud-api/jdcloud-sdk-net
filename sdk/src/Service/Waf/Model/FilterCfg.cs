@@ -58,7 +58,7 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string ReqValue{ get; set; }
         ///<summary>
-        /// 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,按先后顺序，多个时用 , 分隔
+        /// 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
         ///</summary>
         public string DecodeFunc{ get; set; }
         ///<summary>

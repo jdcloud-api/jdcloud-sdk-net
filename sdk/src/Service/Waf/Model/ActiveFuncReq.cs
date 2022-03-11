@@ -52,5 +52,9 @@ namespace JDCloudSDK.Waf.Model
         /// 是否使能 0表示否
         ///</summary>
         public int? Enable{ get; set; }
+        ///<summary>
+        /// 是否国密
+        ///</summary>
+        public int? IsGm{ get; set; }
     }
 }

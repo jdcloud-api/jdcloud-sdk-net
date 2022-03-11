@@ -42,9 +42,9 @@ namespace JDCloudSDK.Logs.Model
         ///</summary>
         public string Aggregate{ get; set; }
         ///<summary>
-        /// CretedTime
+        /// CreatedTime
         ///</summary>
-        public DateTime? CretedTime{ get; set; }
+        public DateTime? CreatedTime{ get; set; }
         ///<summary>
         /// 开启自定义单位
         ///</summary>
@@ -81,6 +81,14 @@ namespace JDCloudSDK.Logs.Model
         /// 监控任务名称
         ///</summary>
         public string Name{ get; set; }
+        ///<summary>
+        /// 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
+        ///</summary>
+        public string SettingType{ get; set; }
+        ///<summary>
+        /// SqlSpec
+        ///</summary>
+        public MetricTaskSqlSpec SqlSpec{ get; set; }
         ///<summary>
         /// 单位
         ///</summary>

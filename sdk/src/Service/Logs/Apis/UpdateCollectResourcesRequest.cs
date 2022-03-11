@@ -47,7 +47,7 @@ namespace  JDCloudSDK.Logs.Apis
         [Required]
         public   string Action{ get; set; }
         ///<summary>
-        /// 采集实例列表（系统日志存在上限限制20）
+        /// 采集实例列表（系统日志存在上限限制）
         ///</summary>
         public List<Resource> Resources{ get; set; }
 

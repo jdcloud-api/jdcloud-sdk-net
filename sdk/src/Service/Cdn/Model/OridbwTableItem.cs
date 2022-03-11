@@ -42,9 +42,9 @@ namespace JDCloudSDK.Cdn.Model
         ///</summary>
         public string GroupByname{ get; set; }
         ///<summary>
-        /// DomainTyep
+        /// DomainType
         ///</summary>
-        public string DomainTyep{ get; set; }
+        public string DomainType{ get; set; }
         ///<summary>
         /// OriflowPercent
         ///</summary>

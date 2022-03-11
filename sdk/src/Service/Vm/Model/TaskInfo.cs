@@ -32,7 +32,7 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  镜像导出导出任务详情。
+    ///  镜像导入导出任务详情。
     /// </summary>
     public class TaskInfo
     {
@@ -40,7 +40,7 @@ namespace JDCloudSDK.Vm.Model
         ///<summary>
         /// 任务ID。
         ///</summary>
-        public int? TaskId{ get; set; }
+        public string TaskId{ get; set; }
         ///<summary>
         /// 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
         ///</summary>
@@ -54,6 +54,10 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public int? Progress{ get; set; }
         ///<summary>
+        /// 任务失败的原因。
+        ///</summary>
+        public string ErrorInfo{ get; set; }
+        ///<summary>
         /// 额外描述信息。
         ///</summary>
         public string Message{ get; set; }
@@ -65,5 +69,25 @@ namespace JDCloudSDK.Vm.Model
         /// 任务完成时间。
         ///</summary>
         public DateTime? FinishedTime{ get; set; }
+        ///<summary>
+        /// 镜像ID。
+        ///</summary>
+        public string ImageId{ get; set; }
+        ///<summary>
+        /// 导出镜像时有效，表示目标OSS存储地址。
+        ///</summary>
+        public string OssUrl{ get; set; }
+        ///<summary>
+        /// 导出镜像时有效，表示生成的ossObject名称。
+        ///</summary>
+        public string OssObject{ get; set; }
+        ///<summary>
+        /// 导入镜像时有效，表示用户指定的镜像名称。
+        ///</summary>
+        public string ImageName{ get; set; }
+        ///<summary>
+        /// 导入镜像时有效，源OSS外链地址。
+        ///</summary>
+        public string ImageUrl{ get; set; }
     }
 }

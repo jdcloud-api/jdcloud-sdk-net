@@ -47,11 +47,19 @@ namespace  JDCloudSDK.Lb.Apis
         [Required]
         public   string ListenerName{ get; set; }
         ///<summary>
-        /// 监听协议, 取值为Tcp, Tls, Http, Https &lt;br&gt;【alb】支持Http, Https，Tcp和Tls &lt;br&gt;【nlb】支持Tcp  &lt;br&gt;【dnlb】支持Tcp
+        /// 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https，Tcp、Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
         ///Required:true
         ///</summary>
         [Required]
         public   string Protocol{ get; set; }
+        ///<summary>
+        /// 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为False
+        ///</summary>
+        public   bool HstsEnable{ get; set; }
+        ///<summary>
+        /// 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为31536000(1年)
+        ///</summary>
+        public   int? HstsMaxAge{ get; set; }
         ///<summary>
         /// 监听端口，取值范围为[1, 65535]
         ///Required:true
@@ -79,12 +87,12 @@ namespace  JDCloudSDK.Lb.Apis
         ///</summary>
         public   string Action{ get; set; }
         ///<summary>
-        /// 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
+        /// 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
         ///</summary>
         public List<CertificateSpec> CertificateSpecs{ get; set; }
 
         ///<summary>
-        /// 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
+        /// 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
         ///</summary>
         public   int? ConnectionIdleTimeSeconds{ get; set; }
         ///<summary>

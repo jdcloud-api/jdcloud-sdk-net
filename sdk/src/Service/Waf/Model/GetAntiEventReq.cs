@@ -92,5 +92,9 @@ namespace JDCloudSDK.Waf.Model
         /// 排序方式，desc-倒序 asc-增序
         ///</summary>
         public string SortDesc{ get; set; }
+        ///<summary>
+        /// false表示查询，true表示导出
+        ///</summary>
+        public bool IsExport{ get; set; }
     }
 }

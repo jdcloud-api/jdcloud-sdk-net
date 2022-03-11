@@ -38,7 +38,7 @@ namespace JDCloudSDK.Antipro.Model
     {
 
         ///<summary>
-        /// 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器
+        /// 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器公网 IP, waf: Web应用防护墙 IP, ccs: 托管区公网 IP
         ///</summary>
         public string Type{ get; set; }
         ///<summary>

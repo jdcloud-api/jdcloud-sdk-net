@@ -42,15 +42,17 @@ namespace JDCloudSDK.Antipro.Model
         ///</summary>
         public string Ip{ get; set; }
         ///<summary>
-        /// 公网 IP 类型或绑定资源类型:
-        ///   0: 未知类型,
-        ///   1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-        ///   10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-        ///   11: 云主机,
-        ///   12: 负载均衡,
-        ///   13: 原生容器实例,
-        ///   14: 原生容器 Pod,
-        ///   2: 云物理服务器,
+        /// 公网 IP 类型或绑定资源类型. 
+        /// &lt;br&gt;- 0: 未知类型
+        /// &lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)
+        /// &lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)
+        /// &lt;br&gt;- 11: 云主机
+        /// &lt;br&gt;- 12: 负载均衡
+        /// &lt;br&gt;- 13: 原生容器实例
+        /// &lt;br&gt;- 14: 原生容器 Pod
+        /// &lt;br&gt;- 2: 云物理服务器
+        /// &lt;br&gt;- 3: Web应用防火墙 IP
+        /// &lt;br&gt;- 4: 托管区公网 IP
         /// 
         ///</summary>
         public int? ResourceType{ get; set; }
@@ -67,12 +69,7 @@ namespace JDCloudSDK.Antipro.Model
         ///</summary>
         public string EndTime{ get; set; }
         ///<summary>
-        /// 触发原因:
-        /// 0: 未知,
-        /// 1: 四层,
-        /// 2: 七层,
-        /// 3: 四层和七层
-        /// 
+        /// 触发原因. &lt;br&gt;- 0: 未知&lt;br&gt;- 1: 四层&lt;br&gt;- 2: 七层&lt;br&gt;- 3: 四层和七层
         ///</summary>
         public int? Cause{ get; set; }
         ///<summary>

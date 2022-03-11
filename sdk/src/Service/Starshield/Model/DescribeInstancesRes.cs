@@ -62,6 +62,10 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public int? TrafficExpansion{ get; set; }
         ///<summary>
+        /// 已使用流量（单位：Byte）
+        ///</summary>
+        public double? FlowUsedCnt{ get; set; }
+        ///<summary>
         /// 剩余流量(单位：Gb)
         ///</summary>
         public double? FlowRemain{ get; set; }

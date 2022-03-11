@@ -149,5 +149,9 @@ namespace JDCloudSDK.Vm.Model
         /// 云主机所属的专有宿主机ID。
         ///</summary>
         public string DedicatedHostId{ get; set; }
+        ///<summary>
+        /// 资源组ID
+        ///</summary>
+        public string ResourceGroupId{ get; set; }
     }
 }

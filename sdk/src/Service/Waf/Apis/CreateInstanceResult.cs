@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Waf.Apis
 {
 
     /// <summary>
-    ///  createInstanceResult
+    ///  创建waf实例
     /// </summary>
     public class CreateInstanceResult : JdcloudResult
     {
@@ -41,5 +41,9 @@ namespace  JDCloudSDK.Waf.Apis
         /// buyId
         ///</summary>
         public   string BuyId{ get; set; }
+        ///<summary>
+        /// wafInstanceId
+        ///</summary>
+        public   string WafInstanceId{ get; set; }
     }
 }

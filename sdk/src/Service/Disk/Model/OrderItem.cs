@@ -42,7 +42,7 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 0:升序 1:降序，必填
+        /// 0:升序 1:降序，默认不排序
         ///</summary>
         public int? Direction{ get; set; }
     }

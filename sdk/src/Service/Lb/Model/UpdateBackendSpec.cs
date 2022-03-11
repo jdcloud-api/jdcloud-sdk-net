@@ -58,7 +58,7 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public List<string> AgIds{ get; set; }
         ///<summary>
-        /// 【alb Tcp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
+        /// 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
         ///</summary>
         public bool ProxyProtocol{ get; set; }
         ///<summary>
@@ -97,6 +97,10 @@ namespace JDCloudSDK.Lb.Model
         /// 【alb Http协议】获取负载均衡的vip, 取值为False(不获取)或True(获取)
         ///</summary>
         public bool HttpForwardedVip{ get; set; }
+        ///<summary>
+        /// 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
+        ///</summary>
+        public bool HttpForwardedClientPort{ get; set; }
         ///<summary>
         /// 【alb,dnlb】关闭健康检查，取值为false(不关闭)或true(关闭)
         ///</summary>

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Live.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.3
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.3";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -521,6 +521,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  查询直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryLiveForwardTaskResponse QueryLiveForwardTask(QueryLiveForwardTaskRequest request) {
+            return  new QueryLiveForwardTaskExecutor().Client(this).Execute<QueryLiveForwardTaskResponse, QueryLiveForwardTaskResult, QueryLiveForwardTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryLiveForwardTaskResponse> QueryLiveForwardTask(QueryLiveForwardTaskRequest request) {
+            return await new QueryLiveForwardTaskExecutor().Client(this).Execute<QueryLiveForwardTaskResponse, QueryLiveForwardTaskResult, QueryLiveForwardTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询直播流播放人数排行
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -777,6 +798,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  停止直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopLiveForwardTaskResponse StopLiveForwardTask(StopLiveForwardTaskRequest request) {
+            return  new StopLiveForwardTaskExecutor().Client(this).Execute<StopLiveForwardTaskResponse, StopLiveForwardTaskResult, StopLiveForwardTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  停止直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopLiveForwardTaskResponse> StopLiveForwardTask(StopLiveForwardTaskRequest request) {
+            return await new StopLiveForwardTaskExecutor().Client(this).Execute<StopLiveForwardTaskResponse, StopLiveForwardTaskResult, StopLiveForwardTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询时移配置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1002,6 +1044,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteCustomLiveStreamTranscodeTemplateResponse> DeleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) {
             return await new DeleteCustomLiveStreamTranscodeTemplateExecutor().Client(this).Execute<DeleteCustomLiveStreamTranscodeTemplateResponse, DeleteCustomLiveStreamTranscodeTemplateResult, DeleteCustomLiveStreamTranscodeTemplateRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteLiveForwardTaskResponse DeleteLiveForwardTask(DeleteLiveForwardTaskRequest request) {
+            return  new DeleteLiveForwardTaskExecutor().Client(this).Execute<DeleteLiveForwardTaskResponse, DeleteLiveForwardTaskResult, DeleteLiveForwardTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteLiveForwardTaskResponse> DeleteLiveForwardTask(DeleteLiveForwardTaskRequest request) {
+            return await new DeleteLiveForwardTaskExecutor().Client(this).Execute<DeleteLiveForwardTaskResponse, DeleteLiveForwardTaskResult, DeleteLiveForwardTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2300,6 +2363,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  更新直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateLiveForwardTaskResponse UpdateLiveForwardTask(UpdateLiveForwardTaskRequest request) {
+            return  new UpdateLiveForwardTaskExecutor().Client(this).Execute<UpdateLiveForwardTaskResponse, UpdateLiveForwardTaskResult, UpdateLiveForwardTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateLiveForwardTaskResponse> UpdateLiveForwardTask(UpdateLiveForwardTaskRequest request) {
+            return await new UpdateLiveForwardTaskExecutor().Client(this).Execute<UpdateLiveForwardTaskResponse, UpdateLiveForwardTaskResult, UpdateLiveForwardTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询系统默认转码模板列表
         /// 
         /// </summary>
@@ -2495,6 +2579,27 @@ namespace JDCloudSDK.Live.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开始直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartLiveForwardTaskResponse StartLiveForwardTask(StartLiveForwardTaskRequest request) {
+            return  new StartLiveForwardTaskExecutor().Client(this).Execute<StartLiveForwardTaskResponse, StartLiveForwardTaskResult, StartLiveForwardTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开始直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartLiveForwardTaskResponse> StartLiveForwardTask(StartLiveForwardTaskRequest request) {
+            return await new StartLiveForwardTaskExecutor().Client(this).Execute<StartLiveForwardTaskResponse, StartLiveForwardTaskResult, StartLiveForwardTaskRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  查询转码模板配置
         /// - 转码模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
         /// - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
@@ -2556,6 +2661,27 @@ namespace JDCloudSDK.Live.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLiveAppResponse> DescribeLiveApp(DescribeLiveAppRequest request) {
             return await new DescribeLiveAppExecutor().Client(this).Execute<DescribeLiveAppResponse, DescribeLiveAppResult, DescribeLiveAppRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateLiveForwardTaskResponse CreateLiveForwardTask(CreateLiveForwardTaskRequest request) {
+            return  new CreateLiveForwardTaskExecutor().Client(this).Execute<CreateLiveForwardTaskResponse, CreateLiveForwardTaskResult, CreateLiveForwardTaskRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建直播拉流转推任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateLiveForwardTaskResponse> CreateLiveForwardTask(CreateLiveForwardTaskRequest request) {
+            return await new CreateLiveForwardTaskExecutor().Client(this).Execute<CreateLiveForwardTaskResponse, CreateLiveForwardTaskResult, CreateLiveForwardTaskRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

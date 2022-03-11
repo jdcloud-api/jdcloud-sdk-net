@@ -51,7 +51,7 @@ namespace JDCloudSDK.Lb.Model
         [Required]
         public string LoadBalancerId{ get; set; }
         ///<summary>
-        /// 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp &lt;br&gt;【nlb】取值范围：Tcp &lt;br&gt;【dnlb】取值范围：Tcp
+        /// 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp、Udp &lt;br&gt;【nlb】取值范围：Tcp、Udp &lt;br&gt;【dnlb】取值范围：Tcp、Udp
         ///Required:true
         ///</summary>
         [Required]
@@ -81,7 +81,7 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public List<string> AgIds{ get; set; }
         ///<summary>
-        /// 【alb Tcp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
+        /// 【alb Tcp、Udp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
         ///</summary>
         public bool ProxyProtocol{ get; set; }
         ///<summary>
@@ -120,5 +120,9 @@ namespace JDCloudSDK.Lb.Model
         /// 【alb Http协议】获取负载均衡的vip, 取值为False(不获取)或True(获取), 默认为False
         ///</summary>
         public bool HttpForwardedVip{ get; set; }
+        ///<summary>
+        /// 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取), 默认为False
+        ///</summary>
+        public bool HttpForwardedClientPort{ get; set; }
     }
 }

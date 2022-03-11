@@ -45,10 +45,16 @@ namespace JDCloudSDK.Antipro.Model
         [Required]
         public bool Eip{ get; set; }
         ///<summary>
-        /// 是否防护云物理服务器
+        /// 是否防护云物理服务器公网 IP
         ///Required:true
         ///</summary>
         [Required]
         public bool Cps{ get; set; }
+        ///<summary>
+        /// 是否防护托管区公网 IP
+        ///Required:true
+        ///</summary>
+        [Required]
+        public bool Ccs{ get; set; }
     }
 }

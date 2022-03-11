@@ -42,7 +42,7 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public Meta Meta{ get; set; }
         ///<summary>
-        /// Whether this record can be modified/deleted (true means it&#39;s managed by JDC StarShield)
+        /// 此记录是否可以被修改/删除（true意味着它由星盾管理）。
         ///</summary>
         public bool Locked{ get; set; }
         ///<summary>
@@ -50,51 +50,51 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public Data Data{ get; set; }
         ///<summary>
-        /// DNS record name
+        /// DNS记录名称
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// Time to live for DNS record. Value of 1 is &#39;automatic&#39;
+        /// DNS记录的生存时间。值为1是 &quot;自动&quot;。
         ///</summary>
         public double? Ttl{ get; set; }
         ///<summary>
-        /// Zone identifier tag
+        /// 域标识符标签
         ///</summary>
         public string Zone_id{ get; set; }
         ///<summary>
-        /// When the record was last modified
+        /// 记录最近修改时间
         ///</summary>
         public string Modified_on{ get; set; }
         ///<summary>
-        /// When the record was created
+        /// 创建记录时间
         ///</summary>
         public string Created_on{ get; set; }
         ///<summary>
-        /// Whether the record can be proxied by JDC StarShield or not
+        /// 记录是否由星盾代理
         ///</summary>
         public bool Proxiable{ get; set; }
         ///<summary>
-        /// A valid IPv4 address
+        /// 有效的IPv4地址
         ///</summary>
         public string Content{ get; set; }
         ///<summary>
-        /// Record type
+        /// 记录类型
         ///</summary>
         public string Ty_pe{ get; set; }
         ///<summary>
-        /// DNS record identifier tag
+        /// DNS记录标识符标签
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// Whether the record is receiving the performance and security benefits of JDC StarShield
+        /// 是否利用星盾的性能和安全优势
         ///</summary>
         public bool Proxied{ get; set; }
         ///<summary>
-        /// The domain of the record
+        /// 记录的域名
         ///</summary>
         public string Zone_name{ get; set; }
         ///<summary>
-        /// Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+        /// 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
         ///</summary>
         public double? Priority{ get; set; }
     }

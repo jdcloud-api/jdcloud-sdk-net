@@ -35,7 +35,12 @@ namespace  JDCloudSDK.Ipanti.Apis
 {
 
     /// <summary>
-    ///  业务流量报表
+    ///  业务流量报表        
+        ///         /// 参数 serviceIp 优先级大于 instanceId.
+        ///         /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        ///         /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        ///         /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        ///         /// 
     /// </summary>
     public class DescribeBusinessGraphRequest : JdcloudRequest
     {
@@ -53,6 +58,11 @@ namespace  JDCloudSDK.Ipanti.Apis
         /// 高防实例 Id 列表
         ///</summary>
         public List<string> InstanceId{ get; set; }
+
+        ///<summary>
+        /// 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+        ///</summary>
+        public List<string> ServiceIp{ get; set; }
 
         ///<summary>
         /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可

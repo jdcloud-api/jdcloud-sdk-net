@@ -65,6 +65,10 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? Rate{ get; set; }
         ///<summary>
+        /// 限速burst大小
+        ///</summary>
+        public int? Burst{ get; set; }
+        ///<summary>
         /// forbidden redirect，缺省为forbidden
         ///</summary>
         public string MatchAction{ get; set; }

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Vm.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.4
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.4";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -298,6 +298,53 @@ namespace JDCloudSDK.Vm.Client
         /// <returns>请求结果信息</returns>
         public async Task<ShareImageResponse> ShareImage(ShareImageRequest request) {
             return await new ShareImageExecutor().Client(this).Execute<ShareImageResponse, ShareImageResult, ShareImageRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  
+        /// 存量主机加入高可用组。
+        /// 
+        /// 存量主机加入高可用组，或者主机从一个高可用组移动到另一个高可用组
+        /// 
+        /// ## 接口说明
+        /// - 不支持专属宿主机上的实例调整高可用组。
+        /// - 除GPU、vGPU（以P开头）外的一代机暂不支持调整高可用组。
+        /// - 与该高可用组关联实例模板的VPC不同的不支持调整高可用组。
+        /// - 与该高可用组可用区不匹配的实例不支持调整高可用组。
+        /// - 本地系统盘机型不支持强制均衡。
+        /// - 仅支持实例状态为已停止的实例强制均衡调整高可用组。
+        /// - 若不强制均衡，仅支持实例状态为运行中或已停止的实例调整高可用组。
+        /// - 若强制均衡，带本地数据盘的实例需确认清除本地盘数据。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstancePlacementResponse ModifyInstancePlacement(ModifyInstancePlacementRequest request) {
+            return  new ModifyInstancePlacementExecutor().Client(this).Execute<ModifyInstancePlacementResponse, ModifyInstancePlacementResult, ModifyInstancePlacementRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  
+        /// 存量主机加入高可用组。
+        /// 
+        /// 存量主机加入高可用组，或者主机从一个高可用组移动到另一个高可用组
+        /// 
+        /// ## 接口说明
+        /// - 不支持专属宿主机上的实例调整高可用组。
+        /// - 除GPU、vGPU（以P开头）外的一代机暂不支持调整高可用组。
+        /// - 与该高可用组关联实例模板的VPC不同的不支持调整高可用组。
+        /// - 与该高可用组可用区不匹配的实例不支持调整高可用组。
+        /// - 本地系统盘机型不支持强制均衡。
+        /// - 仅支持实例状态为已停止的实例强制均衡调整高可用组。
+        /// - 若不强制均衡，仅支持实例状态为运行中或已停止的实例调整高可用组。
+        /// - 若强制均衡，带本地数据盘的实例需确认清除本地盘数据。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstancePlacementResponse> ModifyInstancePlacement(ModifyInstancePlacementRequest request) {
+            return await new ModifyInstancePlacementExecutor().Client(this).Execute<ModifyInstancePlacementResponse, ModifyInstancePlacementResult, ModifyInstancePlacementRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -563,7 +610,8 @@ namespace JDCloudSDK.Vm.Client
         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
         /// 
         /// ## 接口说明
-        /// - 该接口只支持修改实例模板的名称或描述。
+        /// - 名称、描述、实例模板配置信息至少要传一项。
+        /// - 参数时，对应的参数不做更改。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -579,7 +627,8 @@ namespace JDCloudSDK.Vm.Client
         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
         /// 
         /// ## 接口说明
-        /// - 该接口只支持修改实例模板的名称或描述。
+        /// - 名称、描述、实例模板配置信息至少要传一项。
+        /// - 参数时，对应的参数不做更改。
         /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1132,14 +1181,14 @@ namespace JDCloudSDK.Vm.Client
         ///  
         /// 创建实例模板。
         /// 
-        /// 实例模板是创建云主机实例的配置信息模板，包括镜像、实例规格、系统盘及数据盘类型和容量、私有网络及子网配置、安全组及登录信息等。实例模板可用于创建实例及用于配置高可用组，创建高可用组时必须指定实例模板。您每次创建实例时无需重新指定实例模板已包括的参数，缩短您的部署时间。
+        /// 实例模板是创建云主机实例的配置信息模板，包括镜像、实例规格、系统盘及数据盘类型和容量、私有网络及子网配置、安全组及登录信息等。实例模板可用于创建实例及用于配置高可用组（创建高可用组时必须指定实例模板）。使用实例模板创建实例时，无需重新指定实例模板已包括的参数，缩短您的部署时间。
         /// 
-        /// 请注意：实例模板一经创建后其属性将不能编辑。
+        /// 请注意：实例模板一经创建后其属性将不能编辑，如需调整参数请重新创建实例模板替换使用。
         /// 
         /// 详细操作说明请参考帮助文档：[创建实例模板](https://docs.jdcloud.com/cn/virtual-machines/create-instance-template)
         /// 
         /// ## 接口说明
-        /// - 创建实例模板的限制基本与创建云主机一致，可参考 [创建云主机](https://docs.jdcloud.com/cn/virtual-machines/create-instance-template)。
+        /// - 创建实例模板的限制基本与创建云主机一致，可参考 [创建云主机](https://docs.jdcloud.com/cn/virtual-machines/create-instance)。
         /// - 实例模板中包含创建云主机的大部分配置参数，可以避免每次创建云主机时的重复性配置参数的工作。
         /// - 使用实例模板创建云主机时，如果再次指定了某些参数，并且与实例模板中的参数相冲突，那么新指定的参数会替换模板中的参数，以新指定的参数为准。
         /// - 使用实例模板创建云主机时，如果再次指定了镜像ID，并且与模板中的镜像ID不一致，那么模板中的 &#x60;systemDisk&#x60; 和 &#x60;dataDisks&#x60; 配置会失效，以新指定的镜像为准。
@@ -1156,14 +1205,14 @@ namespace JDCloudSDK.Vm.Client
         ///  
         /// 创建实例模板。
         /// 
-        /// 实例模板是创建云主机实例的配置信息模板，包括镜像、实例规格、系统盘及数据盘类型和容量、私有网络及子网配置、安全组及登录信息等。实例模板可用于创建实例及用于配置高可用组，创建高可用组时必须指定实例模板。您每次创建实例时无需重新指定实例模板已包括的参数，缩短您的部署时间。
+        /// 实例模板是创建云主机实例的配置信息模板，包括镜像、实例规格、系统盘及数据盘类型和容量、私有网络及子网配置、安全组及登录信息等。实例模板可用于创建实例及用于配置高可用组（创建高可用组时必须指定实例模板）。使用实例模板创建实例时，无需重新指定实例模板已包括的参数，缩短您的部署时间。
         /// 
-        /// 请注意：实例模板一经创建后其属性将不能编辑。
+        /// 请注意：实例模板一经创建后其属性将不能编辑，如需调整参数请重新创建实例模板替换使用。
         /// 
         /// 详细操作说明请参考帮助文档：[创建实例模板](https://docs.jdcloud.com/cn/virtual-machines/create-instance-template)
         /// 
         /// ## 接口说明
-        /// - 创建实例模板的限制基本与创建云主机一致，可参考 [创建云主机](https://docs.jdcloud.com/cn/virtual-machines/create-instance-template)。
+        /// - 创建实例模板的限制基本与创建云主机一致，可参考 [创建云主机](https://docs.jdcloud.com/cn/virtual-machines/create-instance)。
         /// - 实例模板中包含创建云主机的大部分配置参数，可以避免每次创建云主机时的重复性配置参数的工作。
         /// - 使用实例模板创建云主机时，如果再次指定了某些参数，并且与实例模板中的参数相冲突，那么新指定的参数会替换模板中的参数，以新指定的参数为准。
         /// - 使用实例模板创建云主机时，如果再次指定了镜像ID，并且与模板中的镜像ID不一致，那么模板中的 &#x60;systemDisk&#x60; 和 &#x60;dataDisks&#x60; 配置会失效，以新指定的镜像为准。

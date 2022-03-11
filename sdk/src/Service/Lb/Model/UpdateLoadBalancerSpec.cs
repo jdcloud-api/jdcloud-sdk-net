@@ -50,8 +50,16 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
+        /// 是否绑定域名，包括外网和内网，缺省为不改变原值
+        ///</summary>
+        public bool DomainEnable{ get; set; }
+        ///<summary>
         /// 删除保护，取值为True(开启)或False(关闭)，默认为False
         ///</summary>
         public bool DeleteProtection{ get; set; }
+        ///<summary>
+        /// 变更loadBalancer的vip地址，新地址只允许是loadBalancer本子网中的空闲ip地址，缺省为不改变原值
+        ///</summary>
+        public string PrivateIpAddress{ get; set; }
     }
 }

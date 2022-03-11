@@ -74,9 +74,11 @@ namespace JDCloudSDK.Waf.Model
         public int Disable{ get; set; }
         ///<summary>
         /// 策略规则, 格式：[&quot;13311112222&quot;,&quot;13211112222&quot;]
-        ///Required:true
         ///</summary>
-        [Required]
         public string Rules{ get; set; }
+        ///<summary>
+        /// 自定义名单上传文件内容,base64编码
+        ///</summary>
+        public string Bz64File{ get; set; }
     }
 }

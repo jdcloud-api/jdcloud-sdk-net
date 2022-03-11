@@ -38,11 +38,11 @@ namespace JDCloudSDK.Starshield.Model
     {
 
         ///<summary>
-        /// setting name
+        /// 设置名称
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// type of the values
+        /// 值的类型
         ///</summary>
         public List<string> Properties{ get; set; }
     }

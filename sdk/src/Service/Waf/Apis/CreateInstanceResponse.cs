@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Waf.Apis
 {
 
     /// <summary>
-    ///  createInstanceResponse
+    ///  创建waf实例
     /// </summary>
     public class CreateInstanceResponse : JdcloudResponse<CreateInstanceResult>
     {

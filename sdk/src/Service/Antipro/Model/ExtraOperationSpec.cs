@@ -39,13 +39,13 @@ namespace JDCloudSDK.Antipro.Model
     {
 
         ///<summary>
-        /// 操作类型 1: 购买成功后自动导入 ip, 需要传 ip
+        /// 操作类型. - 1: 购买成功后自动导入 ip, 需要传 ip
         ///Required:true
         ///</summary>
         [Required]
         public int OperationType{ get; set; }
         ///<summary>
-        /// 支持弹性公网 ip 和云物理机公网 ip
+        /// 支持弹性公网 IP, 云物理机公网 IP, Web应用防护墙IP, 托管区IP
         ///</summary>
         public string Ip{ get; set; }
     }

@@ -36,6 +36,11 @@ namespace  JDCloudSDK.Ipanti.Apis
 
     /// <summary>
     ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        ///         /// 参数 serviceIp 优先级大于 instanceId.
+        ///         /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+        ///         /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+        ///         /// - serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+        ///         /// 
     /// </summary>
     public class DescribeDDoSIpAttackLogsRequest : JdcloudRequest
     {
@@ -61,6 +66,11 @@ namespace  JDCloudSDK.Ipanti.Apis
         /// 高防实例 ID
         ///</summary>
         public List<string> InstanceId{ get; set; }
+
+        ///<summary>
+        /// 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+        ///</summary>
+        public List<string> ServiceIp{ get; set; }
 
         ///<summary>
         /// 区域 ID, 高防不区分区域, 传 cn-north-1 即可

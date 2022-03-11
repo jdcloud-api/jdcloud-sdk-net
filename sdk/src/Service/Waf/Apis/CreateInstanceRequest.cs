@@ -36,7 +36,7 @@ namespace  JDCloudSDK.Waf.Apis
 {
 
     /// <summary>
-    ///  createInstanceRequest
+    ///  创建waf实例
     /// </summary>
     public class CreateInstanceRequest : JdcloudRequest
     {

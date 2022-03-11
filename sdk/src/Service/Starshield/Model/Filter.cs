@@ -38,23 +38,23 @@ namespace JDCloudSDK.Starshield.Model
     {
 
         ///<summary>
-        /// Filter identifier
+        /// 筛选器标识符
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// The filter expression to be used
+        /// 要使用的筛选器表达式
         ///</summary>
         public string Expression{ get; set; }
         ///<summary>
-        /// Whether this filter is currently paused
+        /// 此筛选器当前是否已暂停
         ///</summary>
         public bool Paused{ get; set; }
         ///<summary>
-        /// A note that you can use to describe the purpose of the filter
+        /// 可用于描述过滤器用途的注释
         ///</summary>
         public string Description{ get; set; }
         ///<summary>
-        /// Short reference tag to quickly select related rules.
+        /// 短引用标记，用于快速选择相关规则。
         ///</summary>
         public string Ref{ get; set; }
     }

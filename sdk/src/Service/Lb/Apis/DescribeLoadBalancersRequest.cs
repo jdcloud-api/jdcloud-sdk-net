@@ -54,6 +54,8 @@ namespace  JDCloudSDK.Lb.Apis
         /// loadBalancerIds - 负载均衡ID列表，支持多个
         /// loadBalancerNames - 负载均衡名称列表，支持多个
         /// vpcId - 负载均衡所在Vpc的Id，支持单个
+        /// azType - 负载均衡所在可用区类型，取值包括：all(全部可用区)、standard(标准可用区)、edge(边缘可用区)。默认standard ，支持单个
+        /// azs - 边缘可用区，支持多个
         /// 
         ///</summary>
         public List<JDCloudSDK.Common.Model.Filter> Filters{ get; set; }

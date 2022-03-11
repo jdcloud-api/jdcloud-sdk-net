@@ -89,9 +89,9 @@ namespace JDCloudSDK.Cdn.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.4
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.4";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -1069,6 +1069,25 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  回源改写批量配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ConfigBackSourceRulesResponse ConfigBackSourceRules(ConfigBackSourceRulesRequest request) {
+            return  new ConfigBackSourceRulesExecutor().Client(this).Execute<ConfigBackSourceRulesResponse, ConfigBackSourceRulesResult, ConfigBackSourceRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  回源改写批量配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ConfigBackSourceRulesResponse> ConfigBackSourceRules(ConfigBackSourceRulesRequest request) {
+            return await new ConfigBackSourceRulesExecutor().Client(this).Execute<ConfigBackSourceRulesResponse, ConfigBackSourceRulesResult, ConfigBackSourceRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  设置WAF白名单开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1183,7 +1202,7 @@ namespace JDCloudSDK.Cdn.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
+        ///  查询IP归属，适用于查询边缘节点，仅支持中国境内IP地址查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1192,7 +1211,7 @@ namespace JDCloudSDK.Cdn.Client
         }
 #else
         /// <summary>
-        ///  获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
+        ///  查询IP归属，适用于查询边缘节点，仅支持中国境内IP地址查询
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -3250,6 +3269,25 @@ namespace JDCloudSDK.Cdn.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteWafBlackRulesResponse> DeleteWafBlackRules(DeleteWafBlackRulesRequest request) {
             return await new DeleteWafBlackRulesExecutor().Client(this).Execute<DeleteWafBlackRulesResponse, DeleteWafBlackRulesResult, DeleteWafBlackRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询回源改写批量配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public QueryBackSourceRulesResponse QueryBackSourceRules(QueryBackSourceRulesRequest request) {
+            return  new QueryBackSourceRulesExecutor().Client(this).Execute<QueryBackSourceRulesResponse, QueryBackSourceRulesResult, QueryBackSourceRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询回源改写批量配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<QueryBackSourceRulesResponse> QueryBackSourceRules(QueryBackSourceRulesRequest request) {
+            return await new QueryBackSourceRulesExecutor().Client(this).Execute<QueryBackSourceRulesResponse, QueryBackSourceRulesResult, QueryBackSourceRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

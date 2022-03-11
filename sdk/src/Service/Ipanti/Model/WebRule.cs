@@ -58,9 +58,13 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? CnameStatus{ get; set; }
         ///<summary>
-        /// 高防 IP
+        /// 该规则使用中的高防 IP
         ///</summary>
         public string ServiceIp{ get; set; }
+        ///<summary>
+        /// 已配置的高防 IP 列表
+        ///</summary>
+        public ServiceIpConfig ServiceIpConfig{ get; set; }
         ///<summary>
         /// Protocol
         ///</summary>
@@ -106,21 +110,25 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public int? HttpCertStatus{ get; set; }
         ///<summary>
-        /// 证书 Id
+        /// 证书 Id, (废弃, 绑定证书信息通过 certs 字段查看)
         ///</summary>
         public string CertId{ get; set; }
         ///<summary>
-        /// 证书名称
+        /// 证书名称, (废弃, 绑定证书信息通过 certs 字段查看)
         ///</summary>
         public string CertName{ get; set; }
         ///<summary>
-        /// 证书内容
+        /// 证书内容, (废弃, 绑定证书信息通过 certs 字段查看)
         ///</summary>
         public string HttpsCertContent{ get; set; }
         ///<summary>
-        /// 证书私钥
+        /// 证书私钥, (废弃, 绑定证书信息通过 certs 字段查看)
         ///</summary>
         public string HttpsRsaKey{ get; set; }
+        ///<summary>
+        /// 网站规则绑定证书信息
+        ///</summary>
+        public List<Cert> BindCerts{ get; set; }
         ///<summary>
         /// 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
         ///</summary>
@@ -162,9 +170,13 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<string> SslProtocols{ get; set; }
         ///<summary>
-        /// 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+        /// 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
         ///</summary>
         public string SuiteLevel{ get; set; }
+        ///<summary>
+        /// 自定义加密套件等级, suiteLevel 为 custom 是有效
+        ///</summary>
+        public List<string> UserSuiteLevel{ get; set; }
         ///<summary>
         /// 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
         ///</summary>

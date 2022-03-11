@@ -41,11 +41,11 @@ namespace  JDCloudSDK.Disk.Apis
     public class DescribeSnapshotPoliciesRequest : JdcloudRequest
     {
         ///<summary>
-        /// 策略名称
+        /// 策略名称,默认为空
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
-        /// 策略ID
+        /// 策略ID,默认为空
         ///</summary>
         public List<string> PolicyId{ get; set; }
 

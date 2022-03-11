@@ -108,5 +108,9 @@ namespace JDCloudSDK.Waf.Model
         /// 云鼎的serviceCode
         ///</summary>
         public string ServiceCode{ get; set; }
+        ///<summary>
+        /// 购物车活动参数
+        ///</summary>
+        public string BuyScenario{ get; set; }
     }
 }

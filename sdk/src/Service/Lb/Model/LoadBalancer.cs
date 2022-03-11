@@ -94,5 +94,9 @@ namespace JDCloudSDK.Lb.Model
         /// LoadBalancer的创建时间
         ///</summary>
         public string CreatedTime{ get; set; }
+        ///<summary>
+        /// 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
+        ///</summary>
+        public string AzType{ get; set; }
     }
 }

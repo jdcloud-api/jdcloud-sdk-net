@@ -39,7 +39,7 @@ namespace JDCloudSDK.Antipro.Model
     {
 
         ///<summary>
-        /// 操作类型 1: 新购防护包, 3: 升级防护包
+        /// 操作类型.&lt;br&gt;- 1: 新购防护包&lt;br&gt;- 3: 升级防护包
         ///Required:true
         ///</summary>
         [Required]
@@ -49,13 +49,11 @@ namespace JDCloudSDK.Antipro.Model
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// 防护包实例名称, 新购防护包时必传
-        /// 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-        /// 
+        /// 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// 套餐类型, 1: 独享 IP, 2: 共享 IP
+        /// 套餐类型.&lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
         ///Required:true
         ///</summary>
         [Required]
@@ -71,25 +69,19 @@ namespace JDCloudSDK.Antipro.Model
         ///Required:true
         ///</summary>
         [Required]
-        public int Bp{ get; set; }
+        public int BpGbps{ get; set; }
         ///<summary>
         /// 弹性带宽: 0, 10, 20, 单位: Gbps
         ///Required:true
         ///</summary>
         [Required]
-        public int Ep{ get; set; }
+        public int EpGbps{ get; set; }
         ///<summary>
-        /// 购买防护包时长, 新购防护包时必传
-        /// - timeUnit 为 3 时, 可取值 1-9
-        /// - timeUnit 为 4 时, 可取值 1-3
-        /// 
+        /// 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
         ///</summary>
         public int? TimeSpan{ get; set; }
         ///<summary>
-        /// 购买时长类型, 新购防护包时必传
-        /// - 3: 月
-        /// - 4: 年
-        /// 
+        /// 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
         ///</summary>
         public int? TimeUnit{ get; set; }
         ///<summary>

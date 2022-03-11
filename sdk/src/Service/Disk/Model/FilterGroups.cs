@@ -39,7 +39,10 @@ namespace JDCloudSDK.Disk.Model
     {
 
         ///<summary>
-        /// Filters
+        /// policyId - 策略Id,精确匹配，支持多个
+        /// status - 策略状态，精确匹配，支持多个
+        /// name - 策略名称，模糊匹配，支持单个
+        /// 
         ///</summary>
         public List<Filter> Filters{ get; set; }
     }

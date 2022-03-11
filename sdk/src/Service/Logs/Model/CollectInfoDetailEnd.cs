@@ -42,7 +42,11 @@ namespace JDCloudSDK.Logs.Model
         ///</summary>
         public string UID{ get; set; }
         ///<summary>
-        /// 日志来源，只能是 custom
+        /// 高可用组资源multi
+        ///</summary>
+        public List<AgResourceEnd> AgResource{ get; set; }
+        ///<summary>
+        /// 日志来源
         ///</summary>
         public string AppCode{ get; set; }
         ///<summary>
@@ -53,6 +57,22 @@ namespace JDCloudSDK.Logs.Model
         /// Enabled
         ///</summary>
         public long? Enabled{ get; set; }
+        ///<summary>
+        /// 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+        ///</summary>
+        public string LogCustomTarget{ get; set; }
+        ///<summary>
+        /// 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+        ///</summary>
+        public Dictionary<String,object> LogCustomTargetConf{ get; set; }
+        ///<summary>
+        /// 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+        ///</summary>
+        public bool LogtopicEnabled{ get; set; }
+        ///<summary>
+        /// 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+        ///</summary>
+        public long? ResourceMode{ get; set; }
         ///<summary>
         /// 采集实例类型, 只能是 all/part
         ///</summary>
@@ -65,6 +85,10 @@ namespace JDCloudSDK.Logs.Model
         /// 产品线
         ///</summary>
         public string ServiceCode{ get; set; }
+        ///<summary>
+        /// TagResource
+        ///</summary>
+        public TagResourceEnd TagResource{ get; set; }
         ///<summary>
         /// 日志类型名称
         ///</summary>

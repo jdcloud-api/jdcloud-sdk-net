@@ -32,17 +32,17 @@ namespace JDCloudSDK.Vm.Model
 {
 
     /// <summary>
-    ///  自定义标签信息。
+    ///  tag
     /// </summary>
     public class Tag
     {
 
         ///<summary>
-        /// 标签key。长度不能超过127字符，不能以 &#x60;jrn:&#x60; 或 &#x60;jdc-&#x60; 开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+        /// Tag键
         ///</summary>
         public string Key{ get; set; }
         ///<summary>
-        /// 标签value。长度不能超过255字符，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+        /// Tag值
         ///</summary>
         public string Value{ get; set; }
     }

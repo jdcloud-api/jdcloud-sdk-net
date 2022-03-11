@@ -89,9 +89,9 @@ namespace JDCloudSDK.Openjrtc.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.3
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.3";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -192,6 +192,27 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  下发混流任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StartMcuTranscodeResponse StartMcuTranscode(StartMcuTranscodeRequest request) {
+            return  new StartMcuTranscodeExecutor().Client(this).Execute<StartMcuTranscodeResponse, StartMcuTranscodeResult, StartMcuTranscodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  下发混流任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StartMcuTranscodeResponse> StartMcuTranscode(StartMcuTranscodeRequest request) {
+            return await new StartMcuTranscodeExecutor().Client(this).Execute<StartMcuTranscodeResponse, StartMcuTranscodeResult, StartMcuTranscodeRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  统计房间内人数
         /// 
         /// </summary>
@@ -272,6 +293,27 @@ namespace JDCloudSDK.Openjrtc.Client
         /// <returns>请求结果信息</returns>
         public async Task<UpdateUserRoomResponse> UpdateUserRoom(UpdateUserRoomRequest request) {
             return await new UpdateUserRoomExecutor().Client(this).Execute<UpdateUserRoomResponse, UpdateUserRoomResult, UpdateUserRoomRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加录制规则
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddRecordRuleResponse AddRecordRule(AddRecordRuleRequest request) {
+            return  new AddRecordRuleExecutor().Client(this).Execute<AddRecordRuleResponse, AddRecordRuleResult, AddRecordRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加录制规则
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddRecordRuleResponse> AddRecordRule(AddRecordRuleRequest request) {
+            return await new AddRecordRuleExecutor().Client(this).Execute<AddRecordRuleResponse, AddRecordRuleResult, AddRecordRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -427,6 +469,27 @@ namespace JDCloudSDK.Openjrtc.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  关闭房间内的指定流
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CloseRoomUserStreamResponse CloseRoomUserStream(CloseRoomUserStreamRequest request) {
+            return  new CloseRoomUserStreamExecutor().Client(this).Execute<CloseRoomUserStreamResponse, CloseRoomUserStreamResult, CloseRoomUserStreamRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭房间内的指定流
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CloseRoomUserStreamResponse> CloseRoomUserStream(CloseRoomUserStreamRequest request) {
+            return await new CloseRoomUserStreamExecutor().Client(this).Execute<CloseRoomUserStreamResponse, CloseRoomUserStreamResult, CloseRoomUserStreamRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  发送自定义信令给房间
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -484,6 +547,27 @@ namespace JDCloudSDK.Openjrtc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeRoomOnlineUserNumResponse> DescribeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) {
             return await new DescribeRoomOnlineUserNumExecutor().Client(this).Execute<DescribeRoomOnlineUserNumResponse, DescribeRoomOnlineUserNumResult, DescribeRoomOnlineUserNumRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  中止混流任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public StopMcuTranscodeResponse StopMcuTranscode(StopMcuTranscodeRequest request) {
+            return  new StopMcuTranscodeExecutor().Client(this).Execute<StopMcuTranscodeResponse, StopMcuTranscodeResult, StopMcuTranscodeRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  中止混流任务
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<StopMcuTranscodeResponse> StopMcuTranscode(StopMcuTranscodeRequest request) {
+            return await new StopMcuTranscodeExecutor().Client(this).Execute<StopMcuTranscodeResponse, StopMcuTranscodeResult, StopMcuTranscodeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -654,6 +738,27 @@ namespace JDCloudSDK.Openjrtc.Client
         /// <returns>请求结果信息</returns>
         public async Task<RemoveUserByUserRoomIdResponse> RemoveUserByUserRoomId(RemoveUserByUserRoomIdRequest request) {
             return await new RemoveUserByUserRoomIdExecutor().Client(this).Execute<RemoveUserByUserRoomIdResponse, RemoveUserByUserRoomIdResult, RemoveUserByUserRoomIdRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加推流规则
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddPushStreamRuleResponse AddPushStreamRule(AddPushStreamRuleRequest request) {
+            return  new AddPushStreamRuleExecutor().Client(this).Execute<AddPushStreamRuleResponse, AddPushStreamRuleResult, AddPushStreamRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加推流规则
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddPushStreamRuleResponse> AddPushStreamRule(AddPushStreamRuleRequest request) {
+            return await new AddPushStreamRuleExecutor().Client(this).Execute<AddPushStreamRuleResponse, AddPushStreamRuleResult, AddPushStreamRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

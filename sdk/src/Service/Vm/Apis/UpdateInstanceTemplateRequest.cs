@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Text;
 using JDCloudSDK.Core.Service;
 
+using JDCloudSDK.Vm.Model;
 using JDCloudSDK.Core.Annotation;
 using Newtonsoft.Json;
 
@@ -41,21 +42,24 @@ namespace  JDCloudSDK.Vm.Apis
         ///         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
         ///         /// 
         ///         /// ## 接口说明
-        ///         /// - 该接口只支持修改实例模板的名称或描述。
+        ///         /// - 名称、描述、实例模板配置信息至少要传一项。
+        ///         /// - 参数时，对应的参数不做更改。
         ///         /// 
     /// </summary>
     public class UpdateInstanceTemplateRequest : JdcloudRequest
     {
         ///<summary>
         /// 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
-        ///Required:true
         ///</summary>
-        [Required]
         public   string Name{ get; set; }
         ///<summary>
         /// 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
         ///</summary>
         public   string Description{ get; set; }
+        ///<summary>
+        /// 实例模板配置信息。
+        ///</summary>
+        public   UpdateInstanceTemplateSpec InstanceTemplateData{ get; set; }
         ///<summary>
         /// 地域ID。
         ///Required:true

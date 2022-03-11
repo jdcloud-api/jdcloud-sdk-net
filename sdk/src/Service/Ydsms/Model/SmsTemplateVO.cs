@@ -46,6 +46,10 @@ namespace JDCloudSDK.Ydsms.Model
         ///</summary>
         public int? ApplyStatus{ get; set; }
         ///<summary>
+        /// 短信模板审核说明
+        ///</summary>
+        public string AuditorExplanation{ get; set; }
+        ///<summary>
         /// 创建时间
         ///</summary>
         public DateTime? CreateTime{ get; set; }

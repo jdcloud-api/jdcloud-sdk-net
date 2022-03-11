@@ -59,10 +59,8 @@ namespace  JDCloudSDK.Lb.Apis
         ///</summary>
         public   string Type{ get; set; }
         ///<summary>
-        /// 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
-        ///Required:true
+        /// 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
         ///</summary>
-        [Required]
         public List<string> Azs{ get; set; }
 
         ///<summary>
@@ -73,6 +71,10 @@ namespace  JDCloudSDK.Lb.Apis
         /// 负载均衡关联的弹性IP规格
         ///</summary>
         public   JDCloudSDK.Vpc.Model.ElasticIpSpec ElasticIp{ get; set; }
+        ///<summary>
+        /// 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
+        ///</summary>
+        public   string PrivateIpAddress{ get; set; }
         ///<summary>
         /// 【alb】 安全组 ID列表
         ///</summary>

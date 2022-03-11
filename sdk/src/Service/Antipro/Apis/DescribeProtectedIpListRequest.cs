@@ -49,9 +49,9 @@ namespace  JDCloudSDK.Antipro.Apis
         ///<summary>
         /// 实例 Id, 缺省时查询用户所有已防护 IP
         ///</summary>
-        public   int? InstanceId{ get; set; }
+        public   string InstanceId{ get; set; }
         ///<summary>
-        /// 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP, 4: 托管区公网 IP
+        /// 被防护 IP类型. &lt;br&gt;- 0: 全部&lt;br&gt;- 1: 弹性公网 IP&lt;br&gt;- 2: 云物理服务器公网 IP&lt;br&gt;- 3: Web应用防护墙公网 IP&lt;br&gt;- 4: 托管区公网 IP
         ///Required:true
         ///</summary>
         [Required]

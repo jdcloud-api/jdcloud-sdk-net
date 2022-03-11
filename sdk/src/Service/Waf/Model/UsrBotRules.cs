@@ -93,5 +93,9 @@ namespace JDCloudSDK.Waf.Model
         /// 统计维度
         ///</summary>
         public string Unit{ get; set; }
+        ///<summary>
+        /// 持续时间, 单位分钟，范围[1-24*60]
+        ///</summary>
+        public int? BlockTime{ get; set; }
     }
 }

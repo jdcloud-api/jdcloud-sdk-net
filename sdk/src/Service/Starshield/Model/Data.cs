@@ -38,83 +38,83 @@ namespace JDCloudSDK.Starshield.Model
     {
 
         ///<summary>
-        /// Size of location in meters
+        /// 位置的大小（米）
         ///</summary>
         public double? Size{ get; set; }
         ///<summary>
-        /// Altitude of location in meters
+        /// 位置高度（米）
         ///</summary>
         public double? Altitude{ get; set; }
         ///<summary>
-        /// Degrees of longitude
+        /// 经度
         ///</summary>
         public double? Long_degrees{ get; set; }
         ///<summary>
-        /// Degrees of latitude
+        /// 纬度
         ///</summary>
         public double? Lat_degrees{ get; set; }
         ///<summary>
-        /// Horizontal precision of location
+        /// 水平定位精度
         ///</summary>
         public double? Precision_horz{ get; set; }
         ///<summary>
-        /// Vertical precision of location
+        /// 垂直定位精度
         ///</summary>
         public double? Precision_vert{ get; set; }
         ///<summary>
-        /// Longitude direction
+        /// 经度方向
         ///</summary>
         public string Long_direction{ get; set; }
         ///<summary>
-        /// Minutes of longitude
+        /// 经度分
         ///</summary>
         public double? Long_minutes{ get; set; }
         ///<summary>
-        /// Seconds of longitude
+        /// 经度秒
         ///</summary>
         public double? Long_seconds{ get; set; }
         ///<summary>
-        /// Latitude direction
+        /// 纬度方向
         ///</summary>
         public string Lat_direction{ get; set; }
         ///<summary>
-        /// Minutes of latitude
+        /// 纬度分
         ///</summary>
         public double? Lat_minutes{ get; set; }
         ///<summary>
-        /// Seconds of latitude
+        /// 纬度秒
         ///</summary>
         public double? Lat_seconds{ get; set; }
         ///<summary>
-        /// A service type, prefixed with an underscore
+        /// 以下划线为前缀的服务类型
         ///</summary>
         public string Service{ get; set; }
         ///<summary>
-        /// A valid protocol
+        /// 有效的协议
         ///</summary>
         public string Proto{ get; set; }
         ///<summary>
-        /// A valid hostname
+        /// 有效的主机名
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
-        /// Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+        /// 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
         ///</summary>
         public double? Priority{ get; set; }
         ///<summary>
-        /// The record weight
+        /// 记录的权重
         ///</summary>
         public double? Weight{ get; set; }
         ///<summary>
-        /// The port of the service
+        /// 服务的端口
         ///</summary>
         public double? Port{ get; set; }
         ///<summary>
-        /// A valid hostname
+        /// 有效的主机名
         ///</summary>
         public string Target{ get; set; }
         ///<summary>
-        /// Type
+        /// 类型
         ///</summary>
         public double? Ty_pe{ get; set; }
         ///<summary>
@@ -126,7 +126,7 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public double? Algorithm{ get; set; }
         ///<summary>
-        /// Certificate
+        /// 证书
         ///</summary>
         public string Certificate{ get; set; }
         ///<summary>
@@ -134,19 +134,19 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public double? Flags{ get; set; }
         ///<summary>
-        /// Protocol
+        /// 协议
         ///</summary>
         public double? Protocol{ get; set; }
         ///<summary>
-        /// Public Key
+        /// 公钥
         ///</summary>
         public string Public_key{ get; set; }
         ///<summary>
-        /// Digest Type
+        /// 摘要类型
         ///</summary>
         public double? Digest_type{ get; set; }
         ///<summary>
-        /// Digest
+        /// 摘要
         ///</summary>
         public string Digest{ get; set; }
         ///<summary>
@@ -178,11 +178,11 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public double? Matching_type{ get; set; }
         ///<summary>
-        /// fingerprint
+        /// 指纹
         ///</summary>
         public string Fingerprint{ get; set; }
         ///<summary>
-        /// The record content
+        /// 记录内容
         ///</summary>
         public string Content{ get; set; }
     }

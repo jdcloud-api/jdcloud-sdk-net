@@ -56,6 +56,6 @@ namespace JDCloudSDK.Openjrtc.Model
         ///<summary>
         /// 分页内容
         ///</summary>
-        public List<UserNumInfoObj> Content{ get; set; }
+        public List<UserNumInfo> Content{ get; set; }
     }
 }

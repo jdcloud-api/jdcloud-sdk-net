@@ -70,7 +70,7 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? BlockType{ get; set; }
         ///<summary>
-        /// block 持续时间，单位为分钟[1~9999999]
+        /// block 持续时间，单位为分钟[1~24*60]
         ///</summary>
         public int? BlockTime{ get; set; }
         ///<summary>

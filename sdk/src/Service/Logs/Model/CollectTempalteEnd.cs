@@ -53,5 +53,9 @@ namespace JDCloudSDK.Logs.Model
         /// 日志路径
         ///</summary>
         public string LogPath{ get; set; }
+        ///<summary>
+        /// 首行正则
+        ///</summary>
+        public string RegexpStr{ get; set; }
     }
 }

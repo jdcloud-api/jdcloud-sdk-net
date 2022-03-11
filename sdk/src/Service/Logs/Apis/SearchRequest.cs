@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志搜索接口
+ * 日志扫描接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -55,11 +55,11 @@ namespace  JDCloudSDK.Logs.Apis
         ///</summary>
         public   bool CaseSensitive{ get; set; }
         ///<summary>
-        /// 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+        /// 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
         ///</summary>
         public   string StartTime{ get; set; }
         ///<summary>
-        /// 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+        /// 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
         ///</summary>
         public   string EndTime{ get; set; }
         ///<summary>

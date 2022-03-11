@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ydsms.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.3
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.3";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -191,6 +191,25 @@ namespace JDCloudSDK.Ydsms.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyStatusUsingGETResponse> ModifyStatusUsingGET(ModifyStatusUsingGETRequest request) {
             return await new ModifyStatusUsingGETExecutor().Client(this).Execute<ModifyStatusUsingGETResponse, ModifyStatusUsingGETResult, ModifyStatusUsingGETRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据加密pin发送短信
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SendMessagesByEncPinUsingPOSTResponse SendMessagesByEncPinUsingPOST(SendMessagesByEncPinUsingPOSTRequest request) {
+            return  new SendMessagesByEncPinUsingPOSTExecutor().Client(this).Execute<SendMessagesByEncPinUsingPOSTResponse, SendMessagesByEncPinUsingPOSTResult, SendMessagesByEncPinUsingPOSTRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据加密pin发送短信
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SendMessagesByEncPinUsingPOSTResponse> SendMessagesByEncPinUsingPOST(SendMessagesByEncPinUsingPOSTRequest request) {
+            return await new SendMessagesByEncPinUsingPOSTExecutor().Client(this).Execute<SendMessagesByEncPinUsingPOSTResponse, SendMessagesByEncPinUsingPOSTResult, SendMessagesByEncPinUsingPOSTRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

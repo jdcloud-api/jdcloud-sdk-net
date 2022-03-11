@@ -89,9 +89,9 @@ namespace JDCloudSDK.Starshield.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.4
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.4";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -335,6 +335,27 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  浏览器完整性检查与不良行为检查类似，寻找最常被垃圾邮件发送者滥用的常见HTTP头，并拒绝他们访问您的页面。它还会对没有用户代理或非标准用户代理（也是滥用机器人、爬虫或访客常用的）的访客提出挑战质询。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetBrowserCheckSettingResponse GetBrowserCheckSetting(GetBrowserCheckSettingRequest request) {
+            return  new GetBrowserCheckSettingExecutor().Client(this).Execute<GetBrowserCheckSettingResponse, GetBrowserCheckSettingResult, GetBrowserCheckSettingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  浏览器完整性检查与不良行为检查类似，寻找最常被垃圾邮件发送者滥用的常见HTTP头，并拒绝他们访问您的页面。它还会对没有用户代理或非标准用户代理（也是滥用机器人、爬虫或访客常用的）的访客提出挑战质询。
+        /// 
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetBrowserCheckSettingResponse> GetBrowserCheckSetting(GetBrowserCheckSettingRequest request) {
+            return await new GetBrowserCheckSettingExecutor().Client(this).Execute<GetBrowserCheckSettingResponse, GetBrowserCheckSettingResult, GetBrowserCheckSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  对于给定域，列出所有激活的证书包
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -413,6 +434,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建新过滤器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateFiltersResponse CreateFilters(CreateFiltersRequest request) {
+            return  new CreateFiltersExecutor().Client(this).Execute<CreateFiltersResponse, CreateFiltersResult, CreateFiltersRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建新过滤器
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateFiltersResponse> CreateFilters(CreateFiltersRequest request) {
+            return await new CreateFiltersExecutor().Client(this).Execute<CreateFiltersResponse, CreateFiltersResult, CreateFiltersRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  图像调整为通过星盾的网络提供的图像提供按需调整、转换和优化。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -451,6 +491,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeDevelopmentModeSettingResponse> ChangeDevelopmentModeSetting(ChangeDevelopmentModeSettingRequest request) {
             return await new ChangeDevelopmentModeSettingExecutor().Client(this).Execute<ChangeDevelopmentModeSettingResponse, ChangeDevelopmentModeSettingResult, ChangeDevelopmentModeSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据订单号查询套餐实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceByOrderNoResponse DescribeInstanceByOrderNo(DescribeInstanceByOrderNoRequest request) {
+            return  new DescribeInstanceByOrderNoExecutor().Client(this).Execute<DescribeInstanceByOrderNoResponse, DescribeInstanceByOrderNoResult, DescribeInstanceByOrderNoRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据订单号查询套餐实例详情
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceByOrderNoResponse> DescribeInstanceByOrderNo(DescribeInstanceByOrderNoRequest request) {
+            return await new DescribeInstanceByOrderNoExecutor().Client(this).Execute<DescribeInstanceByOrderNoResponse, DescribeInstanceByOrderNoResult, DescribeInstanceByOrderNoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -497,6 +556,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetAlwaysOnlineSettingResponse> GetAlwaysOnlineSetting(GetAlwaysOnlineSettingRequest request) {
             return await new GetAlwaysOnlineSettingExecutor().Client(this).Execute<GetAlwaysOnlineSettingResponse, GetAlwaysOnlineSettingResult, GetAlwaysOnlineSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新一个现有的筛选器。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateIndividualFilterResponse UpdateIndividualFilter(UpdateIndividualFilterRequest request) {
+            return  new UpdateIndividualFilterExecutor().Client(this).Execute<UpdateIndividualFilterResponse, UpdateIndividualFilterResult, UpdateIndividualFilterRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新一个现有的筛选器。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateIndividualFilterResponse> UpdateIndividualFilter(UpdateIndividualFilterRequest request) {
+            return await new UpdateIndividualFilterExecutor().Client(this).Execute<UpdateIndividualFilterResponse, UpdateIndividualFilterResult, UpdateIndividualFilterRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -831,6 +909,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  购买流量包
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateFlowPackResponse CreateFlowPack(CreateFlowPackRequest request) {
+            return  new CreateFlowPackExecutor().Client(this).Execute<CreateFlowPackResponse, CreateFlowPackResult, CreateFlowPackRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  购买流量包
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateFlowPackResponse> CreateFlowPack(CreateFlowPackRequest request) {
+            return await new CreateFlowPackExecutor().Client(this).Execute<CreateFlowPackResponse, CreateFlowPackResult, CreateFlowPackRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  为该域启用加密TLS 1.3功能。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -846,6 +943,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetZoneEnableTLS1_3SettingResponse> GetZoneEnableTLS1_3Setting(GetZoneEnableTLS1_3SettingRequest request) {
             return await new GetZoneEnableTLS1_3SettingExecutor().Client(this).Execute<GetZoneEnableTLS1_3SettingResponse, GetZoneEnableTLS1_3SettingResult, GetZoneEnableTLS1_3SettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询Bot开启状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeBotStatusResponse DescribeBotStatus(DescribeBotStatusRequest request) {
+            return  new DescribeBotStatusExecutor().Client(this).Execute<DescribeBotStatusResponse, DescribeBotStatusResult, DescribeBotStatusRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询Bot开启状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeBotStatusResponse> DescribeBotStatus(DescribeBotStatusRequest request) {
+            return await new DescribeBotStatusExecutor().Client(this).Execute<DescribeBotStatusResponse, DescribeBotStatusResult, DescribeBotStatusRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -884,6 +1000,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetMinimumTLSVersionSettingResponse> GetMinimumTLSVersionSetting(GetMinimumTLSVersionSettingRequest request) {
             return await new GetMinimumTLSVersionSettingExecutor().Client(this).Execute<GetMinimumTLSVersionSettingResponse, GetMinimumTLSVersionSettingResult, GetMinimumTLSVersionSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  域的相关配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GetAllZoneSettingsResponse GetAllZoneSettings(GetAllZoneSettingsRequest request) {
+            return  new GetAllZoneSettingsExecutor().Client(this).Execute<GetAllZoneSettingsResponse, GetAllZoneSettingsResult, GetAllZoneSettingsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  域的相关配置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GetAllZoneSettingsResponse> GetAllZoneSettings(GetAllZoneSettingsRequest request) {
+            return await new GetAllZoneSettingsExecutor().Client(this).Execute<GetAllZoneSettingsResponse, GetAllZoneSettingsResult, GetAllZoneSettingsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -928,6 +1063,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  列出当前定义的所有防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListOfFirewallRulesResponse ListOfFirewallRules(ListOfFirewallRulesRequest request) {
+            return  new ListOfFirewallRulesExecutor().Client(this).Execute<ListOfFirewallRulesResponse, ListOfFirewallRulesResult, ListOfFirewallRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  列出当前定义的所有防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListOfFirewallRulesResponse> ListOfFirewallRules(ListOfFirewallRulesRequest request) {
+            return await new ListOfFirewallRulesExecutor().Client(this).Execute<ListOfFirewallRulesResponse, ListOfFirewallRulesResult, ListOfFirewallRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取当前域随机加密设置
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -962,6 +1116,44 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeMinimumTLSVersionSettingResponse> ChangeMinimumTLSVersionSetting(ChangeMinimumTLSVersionSettingRequest request) {
             return await new ChangeMinimumTLSVersionSettingExecutor().Client(this).Execute<ChangeMinimumTLSVersionSettingResponse, ChangeMinimumTLSVersionSettingResult, ChangeMinimumTLSVersionSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新自定义页面URL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateCustomPageURLResponse UpdateCustomPageURL(UpdateCustomPageURLRequest request) {
+            return  new UpdateCustomPageURLExecutor().Client(this).Execute<UpdateCustomPageURLResponse, UpdateCustomPageURLResult, UpdateCustomPageURLRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新自定义页面URL
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateCustomPageURLResponse> UpdateCustomPageURL(UpdateCustomPageURLRequest request) {
+            return await new UpdateCustomPageURLExecutor().Client(this).Execute<UpdateCustomPageURLResponse, UpdateCustomPageURLResult, UpdateCustomPageURLRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取页面规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListPageRulesResponse ListPageRules(ListPageRulesRequest request) {
+            return  new ListPageRulesExecutor().Client(this).Execute<ListPageRulesResponse, ListPageRulesResult, ListPageRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取页面规则列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListPageRulesResponse> ListPageRules(ListPageRulesRequest request) {
+            return await new ListPageRulesExecutor().Client(this).Execute<ListPageRulesResponse, ListPageRulesResult, ListPageRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1023,6 +1215,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建域
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateZoneResponse CreateZone(CreateZoneRequest request) {
+            return  new CreateZoneExecutor().Client(this).Execute<CreateZoneResponse, CreateZoneResult, CreateZoneRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建域
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateZoneResponse> CreateZone(CreateZoneRequest request) {
+            return await new CreateZoneExecutor().Client(this).Execute<CreateZoneResponse, CreateZoneResult, CreateZoneRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  为你的网站选择适当的安全配置文件，这将自动调整每个安全设置。如果你选择定制一个单独的安全设置，该配置文件将成为自定义。
         /// 
         /// </summary>
@@ -1040,6 +1251,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetSecurityLevelSettingResponse> GetSecurityLevelSetting(GetSecurityLevelSettingRequest request) {
             return await new GetSecurityLevelSettingExecutor().Client(this).Execute<GetSecurityLevelSettingResponse, GetSecurityLevelSettingResult, GetSecurityLevelSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListAvailablePageRuleSettingResponse ListAvailablePageRuleSetting(ListAvailablePageRuleSettingRequest request) {
+            return  new ListAvailablePageRuleSettingExecutor().Client(this).Execute<ListAvailablePageRuleSettingResponse, ListAvailablePageRuleSettingResult, ListAvailablePageRuleSettingRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListAvailablePageRuleSettingResponse> ListAvailablePageRuleSetting(ListAvailablePageRuleSettingRequest request) {
+            return await new ListAvailablePageRuleSettingExecutor().Client(this).Execute<ListAvailablePageRuleSettingResponse, ListAvailablePageRuleSettingResult, ListAvailablePageRuleSettingRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1084,6 +1314,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetPseudoIPv4SettingResponse> GetPseudoIPv4Setting(GetPseudoIPv4SettingRequest request) {
             return await new GetPseudoIPv4SettingExecutor().Client(this).Execute<GetPseudoIPv4SettingResponse, GetPseudoIPv4SettingResult, GetPseudoIPv4SettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  域可以使用的可用自定义页面列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListAvailableCustomPagesResponse ListAvailableCustomPages(ListAvailableCustomPagesRequest request) {
+            return  new ListAvailableCustomPagesExecutor().Client(this).Execute<ListAvailableCustomPagesResponse, ListAvailableCustomPagesResult, ListAvailableCustomPagesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  域可以使用的可用自定义页面列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListAvailableCustomPagesResponse> ListAvailableCustomPages(ListAvailableCustomPagesRequest request) {
+            return await new ListAvailableCustomPagesExecutor().Client(this).Execute<ListAvailableCustomPagesResponse, ListAvailableCustomPagesResult, ListAvailableCustomPagesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1168,6 +1417,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeSecurityLevelSettingResponse> ChangeSecurityLevelSetting(ChangeSecurityLevelSettingRequest request) {
             return await new ChangeSecurityLevelSettingExecutor().Client(this).Execute<ChangeSecurityLevelSettingResponse, ChangeSecurityLevelSettingResult, ChangeSecurityLevelSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  上载域的新SSL证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateSSLConfigurationResponse CreateSSLConfiguration(CreateSSLConfigurationRequest request) {
+            return  new CreateSSLConfigurationExecutor().Client(this).Execute<CreateSSLConfigurationResponse, CreateSSLConfigurationResult, CreateSSLConfigurationRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  上载域的新SSL证书
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateSSLConfigurationResponse> CreateSSLConfiguration(CreateSSLConfigurationRequest request) {
+            return await new CreateSSLConfigurationExecutor().Client(this).Execute<CreateSSLConfigurationResponse, CreateSSLConfigurationResult, CreateSSLConfigurationRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1307,6 +1575,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  对于一个特定域，订购一个高级证书包
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OrderAdvancedCertificateManagerCertificatePackResponse OrderAdvancedCertificateManagerCertificatePack(OrderAdvancedCertificateManagerCertificatePackRequest request) {
+            return  new OrderAdvancedCertificateManagerCertificatePackExecutor().Client(this).Execute<OrderAdvancedCertificateManagerCertificatePackResponse, OrderAdvancedCertificateManagerCertificatePackResult, OrderAdvancedCertificateManagerCertificatePackRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  对于一个特定域，订购一个高级证书包
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OrderAdvancedCertificateManagerCertificatePackResponse> OrderAdvancedCertificateManagerCertificatePack(OrderAdvancedCertificateManagerCertificatePackRequest request) {
+            return await new OrderAdvancedCertificateManagerCertificatePackExecutor().Client(this).Execute<OrderAdvancedCertificateManagerCertificatePackResponse, OrderAdvancedCertificateManagerCertificatePackResult, OrderAdvancedCertificateManagerCertificatePackRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  自动优化移动设备上网站访问者的图像加载
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1341,6 +1628,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteAdvancedCertificateManagerCertificatePackResponse> DeleteAdvancedCertificateManagerCertificatePack(DeleteAdvancedCertificateManagerCertificatePackRequest request) {
             return await new DeleteAdvancedCertificateManagerCertificatePackExecutor().Client(this).Execute<DeleteAdvancedCertificateManagerCertificatePackResponse, DeleteAdvancedCertificateManagerCertificatePackResult, DeleteAdvancedCertificateManagerCertificatePackRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修补域的通用SSL设置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EditUniversalSSLSettingsResponse EditUniversalSSLSettings(EditUniversalSSLSettingsRequest request) {
+            return  new EditUniversalSSLSettingsExecutor().Client(this).Execute<EditUniversalSSLSettingsResponse, EditUniversalSSLSettingsResult, EditUniversalSSLSettingsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修补域的通用SSL设置
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EditUniversalSSLSettingsResponse> EditUniversalSSLSettings(EditUniversalSSLSettingsRequest request) {
+            return await new EditUniversalSSLSettingsExecutor().Client(this).Execute<EditUniversalSSLSettingsResponse, EditUniversalSSLSettingsResult, EditUniversalSSLSettingsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1399,6 +1705,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetRocketLoaderSettingResponse> GetRocketLoaderSetting(GetRocketLoaderSettingRequest request) {
             return await new GetRocketLoaderSettingExecutor().Client(this).Execute<GetRocketLoaderSettingResponse, GetRocketLoaderSettingResult, GetRocketLoaderSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除页面规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeletePageRuleResponse DeletePageRule(DeletePageRuleRequest request) {
+            return  new DeletePageRuleExecutor().Client(this).Execute<DeletePageRuleResponse, DeletePageRuleResult, DeletePageRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除页面规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeletePageRuleResponse> DeletePageRule(DeletePageRuleRequest request) {
+            return await new DeletePageRuleExecutor().Client(this).Execute<DeletePageRuleResponse, DeletePageRuleResult, DeletePageRuleRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1483,6 +1808,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建新的防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateFirewallRulesResponse CreateFirewallRules(CreateFirewallRulesRequest request) {
+            return  new CreateFirewallRulesExecutor().Client(this).Execute<CreateFirewallRulesResponse, CreateFirewallRulesResult, CreateFirewallRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建新的防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateFirewallRulesResponse> CreateFirewallRules(CreateFirewallRulesRequest request) {
+            return await new CreateFirewallRulesExecutor().Client(this).Execute<CreateFirewallRulesResponse, CreateFirewallRulesResult, CreateFirewallRulesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  为该域启用加密TLS 1.3功能。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1517,6 +1861,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeAutomaticHTTPSRewritesSettingResponse> ChangeAutomaticHTTPSRewritesSetting(ChangeAutomaticHTTPSRewritesSettingRequest request) {
             return await new ChangeAutomaticHTTPSRewritesSettingExecutor().Client(this).Execute<ChangeAutomaticHTTPSRewritesSettingResponse, ChangeAutomaticHTTPSRewritesSettingResult, ChangeAutomaticHTTPSRewritesSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除现有防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteIndividualFirewallRulesResponse DeleteIndividualFirewallRules(DeleteIndividualFirewallRulesRequest request) {
+            return  new DeleteIndividualFirewallRulesExecutor().Client(this).Execute<DeleteIndividualFirewallRulesResponse, DeleteIndividualFirewallRulesResult, DeleteIndividualFirewallRulesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除现有防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteIndividualFirewallRulesResponse> DeleteIndividualFirewallRules(DeleteIndividualFirewallRulesRequest request) {
+            return await new DeleteIndividualFirewallRulesExecutor().Client(this).Execute<DeleteIndividualFirewallRulesResponse, DeleteIndividualFirewallRulesResult, DeleteIndividualFirewallRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1609,6 +1972,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建页面规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreatePageRuleResponse CreatePageRule(CreatePageRuleRequest request) {
+            return  new CreatePageRuleExecutor().Client(this).Execute<CreatePageRuleResponse, CreatePageRuleResult, CreatePageRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建页面规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreatePageRuleResponse> CreatePageRule(CreatePageRuleRequest request) {
+            return await new CreatePageRuleExecutor().Client(this).Execute<CreatePageRuleResponse, CreatePageRuleResult, CreatePageRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  SSL对访问者的连接进行加密，并保护信用卡号码和其他进出网站的个人数据。
         /// SSL最多需要5分钟才能完全激活。需要在星盾激活你的根域或www域。
         /// Off，访客和星盾之间没有SSL，星盾和你的Web服务器之间也没有SSL（所有HTTP流量）。
@@ -1638,6 +2020,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeSSLSettingResponse> ChangeSSLSetting(ChangeSSLSettingRequest request) {
             return await new ChangeSSLSettingExecutor().Client(this).Execute<ChangeSSLSettingResponse, ChangeSSLSettingResult, ChangeSSLSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  列出、搜索、排序和筛选域的DNS记录。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ListDNSRecordsResponse ListDNSRecords(ListDNSRecordsRequest request) {
+            return  new ListDNSRecordsExecutor().Client(this).Execute<ListDNSRecordsResponse, ListDNSRecordsResult, ListDNSRecordsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  列出、搜索、排序和筛选域的DNS记录。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ListDNSRecordsResponse> ListDNSRecords(ListDNSRecordsRequest request) {
+            return await new ListDNSRecordsExecutor().Client(this).Execute<ListDNSRecordsResponse, ListDNSRecordsResult, ListDNSRecordsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1701,6 +2102,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  开启BOT
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OpenFirewallBotResponse OpenFirewallBot(OpenFirewallBotRequest request) {
+            return  new OpenFirewallBotExecutor().Client(this).Execute<OpenFirewallBotResponse, OpenFirewallBotResult, OpenFirewallBotRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  开启BOT
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OpenFirewallBotResponse> OpenFirewallBot(OpenFirewallBotRequest request) {
+            return await new OpenFirewallBotExecutor().Client(this).Execute<OpenFirewallBotResponse, OpenFirewallBotResult, OpenFirewallBotRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  启用IP地理定位，让星盾对您网站的访问者进行地理定位，并将国家代码传递给您。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1716,6 +2136,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetIPGeolocationSettingResponse> GetIPGeolocationSetting(GetIPGeolocationSettingRequest request) {
             return await new GetIPGeolocationSettingExecutor().Client(this).Execute<GetIPGeolocationSettingResponse, GetIPGeolocationSettingResult, GetIPGeolocationSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateDNSRecordResponse UpdateDNSRecord(UpdateDNSRecordRequest request) {
+            return  new UpdateDNSRecordExecutor().Client(this).Execute<UpdateDNSRecordResponse, UpdateDNSRecordResult, UpdateDNSRecordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateDNSRecordResponse> UpdateDNSRecord(UpdateDNSRecordRequest request) {
+            return await new UpdateDNSRecordExecutor().Client(this).Execute<UpdateDNSRecordResponse, UpdateDNSRecordResult, UpdateDNSRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1764,6 +2203,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeServerSideExcludeSettingResponse> ChangeServerSideExcludeSetting(ChangeServerSideExcludeSettingRequest request) {
             return await new ChangeServerSideExcludeSettingExecutor().Client(this).Execute<ChangeServerSideExcludeSettingResponse, ChangeServerSideExcludeSettingResult, ChangeServerSideExcludeSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更改异常检测类型WAF规则包的灵敏度和操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EditFirewallPackageResponse EditFirewallPackage(EditFirewallPackageRequest request) {
+            return  new EditFirewallPackageExecutor().Client(this).Execute<EditFirewallPackageResponse, EditFirewallPackageResult, EditFirewallPackageRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更改异常检测类型WAF规则包的灵敏度和操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EditFirewallPackageResponse> EditFirewallPackage(EditFirewallPackageRequest request) {
+            return await new EditFirewallPackageExecutor().Client(this).Execute<EditFirewallPackageResponse, EditFirewallPackageResult, EditFirewallPackageRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1867,6 +2325,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ChangeBrowserCheckSettingResponse> ChangeBrowserCheckSetting(ChangeBrowserCheckSettingRequest request) {
             return await new ChangeBrowserCheckSettingExecutor().Client(this).Execute<ChangeBrowserCheckSettingResponse, ChangeBrowserCheckSettingResult, ChangeBrowserCheckSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteDNSRecordResponse DeleteDNSRecord(DeleteDNSRecordRequest request) {
+            return  new DeleteDNSRecordExecutor().Client(this).Execute<DeleteDNSRecordResponse, DeleteDNSRecordResult, DeleteDNSRecordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteDNSRecordResponse> DeleteDNSRecord(DeleteDNSRecordRequest request) {
+            return await new DeleteDNSRecordExecutor().Client(this).Execute<DeleteDNSRecordResponse, DeleteDNSRecordResult, DeleteDNSRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1995,6 +2472,25 @@ namespace JDCloudSDK.Starshield.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  更新一个单独的现有防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateIndividualFirewallRuleResponse UpdateIndividualFirewallRule(UpdateIndividualFirewallRuleRequest request) {
+            return  new UpdateIndividualFirewallRuleExecutor().Client(this).Execute<UpdateIndividualFirewallRuleResponse, UpdateIndividualFirewallRuleResult, UpdateIndividualFirewallRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新一个单独的现有防火墙规则。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateIndividualFirewallRuleResponse> UpdateIndividualFirewallRule(UpdateIndividualFirewallRuleRequest request) {
+            return await new UpdateIndividualFirewallRuleExecutor().Client(this).Execute<UpdateIndividualFirewallRuleResponse, UpdateIndividualFirewallRuleResult, UpdateIndividualFirewallRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  获取有关单个防火墙包的信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -2029,6 +2525,44 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<GetMirageSettingResponse> GetMirageSetting(GetMirageSettingRequest request) {
             return await new GetMirageSettingExecutor().Client(this).Execute<GetMirageSettingResponse, GetMirageSettingResult, GetMirageSettingRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  替换页面规则。最终规则将与此请求传递的数据完全匹配。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdatePageRuleResponse UpdatePageRule(UpdatePageRuleRequest request) {
+            return  new UpdatePageRuleExecutor().Client(this).Execute<UpdatePageRuleResponse, UpdatePageRuleResult, UpdatePageRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  替换页面规则。最终规则将与此请求传递的数据完全匹配。
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdatePageRuleResponse> UpdatePageRule(UpdatePageRuleRequest request) {
+            return await new UpdatePageRuleExecutor().Client(this).Execute<UpdatePageRuleResponse, UpdatePageRuleResult, UpdatePageRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新规则组的状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EditRuleGroupResponse EditRuleGroup(EditRuleGroupRequest request) {
+            return  new EditRuleGroupExecutor().Client(this).Execute<EditRuleGroupResponse, EditRuleGroupResult, EditRuleGroupRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新规则组的状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EditRuleGroupResponse> EditRuleGroup(EditRuleGroupRequest request) {
+            return await new EditRuleGroupExecutor().Client(this).Execute<EditRuleGroupResponse, EditRuleGroupResult, EditRuleGroupRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2233,6 +2767,25 @@ namespace JDCloudSDK.Starshield.Client
         /// <returns>请求结果信息</returns>
         public async Task<ListRuleGroupsResponse> ListRuleGroups(ListRuleGroupsRequest request) {
             return await new ListRuleGroupsExecutor().Client(this).Execute<ListRuleGroupsResponse, ListRuleGroupsResult, ListRuleGroupsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建DNS记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateDNSRecordResponse CreateDNSRecord(CreateDNSRecordRequest request) {
+            return  new CreateDNSRecordExecutor().Client(this).Execute<CreateDNSRecordResponse, CreateDNSRecordResult, CreateDNSRecordRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建DNS记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateDNSRecordResponse> CreateDNSRecord(CreateDNSRecordRequest request) {
+            return await new CreateDNSRecordExecutor().Client(this).Execute<CreateDNSRecordResponse, CreateDNSRecordResult, CreateDNSRecordRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

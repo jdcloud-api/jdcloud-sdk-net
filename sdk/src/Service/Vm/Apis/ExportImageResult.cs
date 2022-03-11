@@ -53,6 +53,6 @@ namespace  JDCloudSDK.Vm.Apis
         ///<summary>
         /// 导出任务id。
         ///</summary>
-        public   int? ExportTaskId{ get; set; }
+        public   string TaskId{ get; set; }
     }
 }

@@ -46,9 +46,7 @@ namespace  JDCloudSDK.Ydsms.Apis
         public   string AppDesc{ get; set; }
         ///<summary>
         /// 云鼎应用id
-        ///Required:true
         ///</summary>
-        [Required]
         public   string AppId{ get; set; }
         ///<summary>
         /// 应用名称
@@ -56,5 +54,13 @@ namespace  JDCloudSDK.Ydsms.Apis
         ///</summary>
         [Required]
         public   string AppName{ get; set; }
+        ///<summary>
+        /// accessKeyId
+        ///</summary>
+        public   string AccessKeyId{ get; set; }
+        ///<summary>
+        /// accessKeySecret
+        ///</summary>
+        public   string AccessKeySecret{ get; set; }
     }
 }

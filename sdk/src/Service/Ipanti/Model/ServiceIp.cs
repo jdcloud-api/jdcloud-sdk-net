@@ -39,9 +39,13 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 高防 IP
+        /// 高防IP
         ///</summary>
         [JsonProperty("serviceIp")]
         public string ServiceIpValue{ get; set; }
+        ///<summary>
+        /// 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
+        ///</summary>
+        public string SecurityStatus{ get; set; }
     }
 }

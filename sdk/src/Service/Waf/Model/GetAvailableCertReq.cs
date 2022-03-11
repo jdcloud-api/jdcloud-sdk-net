@@ -50,5 +50,9 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         [Required]
         public string Domain{ get; set; }
+        ///<summary>
+        /// 是否国密
+        ///</summary>
+        public int? IsGm{ get; set; }
     }
 }

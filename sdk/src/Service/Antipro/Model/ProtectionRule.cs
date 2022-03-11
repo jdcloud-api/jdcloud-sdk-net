@@ -38,7 +38,7 @@ namespace JDCloudSDK.Antipro.Model
     {
 
         ///<summary>
-        /// 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
+        /// 防护规则类型. &lt;br&gt;- 0: 默认防护包规则&lt;br&gt;- 1: IP 自定义规则
         ///</summary>
         public int? Type{ get; set; }
         ///<summary>

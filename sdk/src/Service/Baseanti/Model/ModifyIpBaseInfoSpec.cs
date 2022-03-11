@@ -39,13 +39,21 @@ namespace JDCloudSDK.Baseanti.Model
     {
 
         ///<summary>
-        /// 公网 IP 地址, 仅支持 IPv4
+        /// 公网 IP 地址, 支持 IPv4 或 IPv6. 
+        /// &lt;br&gt;如果是IPv4, 应使用点分10进制格式
+        /// &lt;br&gt;如果是IPv6, 应使用\&quot;:\&quot;分隔的8组十六进制格式(字母使用小写格式), 其中连续的 0 以及每组的前导的 0 均应省略, 例如 2001:&lt;b&gt;0&lt;/b&gt;db8:&lt;b&gt;0&lt;/b&gt;2de:&lt;b&gt;0000&lt;/b&gt;:&lt;b&gt;0000&lt;/b&gt;:&lt;b&gt;0000&lt;/b&gt;:&lt;b&gt;0000&lt;/b&gt;:&lt;b&gt;0&lt;/b&gt;e13 应表示为 2001:db8:2de::e13&quot;
+        /// 
         ///Required:true
         ///</summary>
         [Required]
         public string Ip{ get; set; }
         ///<summary>
-        /// 公网 IP 类型或绑定资源类型. &lt;br&gt;- 2: 云物理服务器公网 IP&lt;br&gt;- 5: 京舰公网 IP
+        /// 公网 IP 类型或绑定资源类型. 
+        /// &lt;br&gt;- 2: 云物理服务器公网 IP
+        /// &lt;br&gt;- 3: Web应用防火墙 IP
+        /// &lt;br&gt;- 4: 托管区公网 IP
+        /// &lt;br&gt;- 5: 京舰公网 IP
+        /// 
         ///Required:true
         ///</summary>
         [Required]

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Ipanti.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.3
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.3";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,6 +136,25 @@ namespace JDCloudSDK.Ipanti.Client
 
 
 
+#if NET40||NET35
+        /// <summary>
+        ///  高防返回客户端状态码报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeStatusGraphResponse DescribeStatusGraph(DescribeStatusGraphRequest request) {
+            return  new DescribeStatusGraphExecutor().Client(this).Execute<DescribeStatusGraphResponse, DescribeStatusGraphResult, DescribeStatusGraphRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  高防返回客户端状态码报表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeStatusGraphResponse> DescribeStatusGraph(DescribeStatusGraphRequest request) {
+            return await new DescribeStatusGraphExecutor().Client(this).Execute<DescribeStatusGraphResponse, DescribeStatusGraphResult, DescribeStatusGraphRequest>(request).ConfigureAwait(false);
+        }
+#endif
 #if NET40||NET35
         /// <summary>
         ///  更新实例弹性防护带宽
@@ -618,6 +637,11 @@ namespace JDCloudSDK.Ipanti.Client
 #if NET40||NET35
         /// <summary>
         ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -627,6 +651,11 @@ namespace JDCloudSDK.Ipanti.Client
 #else
         /// <summary>
         ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -903,6 +932,12 @@ namespace JDCloudSDK.Ipanti.Client
 #if NET40||NET35
         /// <summary>
         ///  查询攻击次数及流量峰值
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -912,6 +947,12 @@ namespace JDCloudSDK.Ipanti.Client
 #else
         /// <summary>
         ///  查询攻击次数及流量峰值
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1758,6 +1799,11 @@ namespace JDCloudSDK.Ipanti.Client
 #if NET40||NET35
         /// <summary>
         ///  查询各类型攻击次数
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -1767,6 +1813,11 @@ namespace JDCloudSDK.Ipanti.Client
 #else
         /// <summary>
         ///  查询各类型攻击次数
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2156,7 +2207,12 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新建与并发连接数统计报表
+        ///  新建与并发连接数统计报表        
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2165,7 +2221,12 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  新建与并发连接数统计报表
+        ///  新建与并发连接数统计报表        
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2290,6 +2351,11 @@ namespace JDCloudSDK.Ipanti.Client
 #if NET40||NET35
         /// <summary>
         ///  DDos 防护流量报表
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2299,6 +2365,11 @@ namespace JDCloudSDK.Ipanti.Client
 #else
         /// <summary>
         ///  DDos 防护流量报表
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2342,6 +2413,25 @@ namespace JDCloudSDK.Ipanti.Client
         /// <returns>请求结果信息</returns>
         public async Task<DisableBlackListRuleOfForwardRuleResponse> DisableBlackListRuleOfForwardRule(DisableBlackListRuleOfForwardRuleRequest request) {
             return await new DisableBlackListRuleOfForwardRuleExecutor().Client(this).Execute<DisableBlackListRuleOfForwardRuleResponse, DisableBlackListRuleOfForwardRuleResult, DisableBlackListRuleOfForwardRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据高防计费资源ID查询对应的实例Id, 调用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/createInstance&#39;&gt;createInstance&lt;/a&gt; 接口成功后，跟据message字段返回的计费资源Id查询对应的高防实例ID, 需要高防实例实际创建成功以后才可查询得到
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceIdByResourceIdResponse DescribeInstanceIdByResourceId(DescribeInstanceIdByResourceIdRequest request) {
+            return  new DescribeInstanceIdByResourceIdExecutor().Client(this).Execute<DescribeInstanceIdByResourceIdResponse, DescribeInstanceIdByResourceIdResult, DescribeInstanceIdByResourceIdRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据高防计费资源ID查询对应的实例Id, 调用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/createInstance&#39;&gt;createInstance&lt;/a&gt; 接口成功后，跟据message字段返回的计费资源Id查询对应的高防实例ID, 需要高防实例实际创建成功以后才可查询得到
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceIdByResourceIdResponse> DescribeInstanceIdByResourceId(DescribeInstanceIdByResourceIdRequest request) {
+            return await new DescribeInstanceIdByResourceIdExecutor().Client(this).Execute<DescribeInstanceIdByResourceIdResponse, DescribeInstanceIdByResourceIdResult, DescribeInstanceIdByResourceIdRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -2517,7 +2607,12 @@ namespace JDCloudSDK.Ipanti.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  业务流量报表
+        ///  业务流量报表        
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -2526,7 +2621,12 @@ namespace JDCloudSDK.Ipanti.Client
         }
 #else
         /// <summary>
-        ///  业务流量报表
+        ///  业务流量报表        
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+        /// 
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>

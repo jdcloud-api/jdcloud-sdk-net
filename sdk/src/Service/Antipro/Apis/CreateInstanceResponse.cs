@@ -33,7 +33,7 @@ namespace  JDCloudSDK.Antipro.Apis
 {
 
     /// <summary>
-    ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+    ///  创建防护包实例
     /// </summary>
     public class CreateInstanceResponse : JdcloudResponse<CreateInstanceResult>
     {

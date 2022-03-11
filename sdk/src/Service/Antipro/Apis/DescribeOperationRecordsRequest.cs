@@ -59,14 +59,7 @@ namespace  JDCloudSDK.Antipro.Apis
         [Required]
         public   string EndTime{ get; set; }
         ///<summary>
-        /// 操作类型, 默认查全部.
-        /// - 0: 全部
-        /// - 1: 套餐变更
-        /// - 2: 防护规则变更
-        /// - 3: 防护对象变更
-        /// - 4: IP 地址变更
-        /// - 5: 防护包名称变更
-        /// 
+        /// 操作类型, 默认查全部. &lt;br&gt;- 0: 全部&lt;br&gt;- 1: 套餐变更&lt;br&gt;- 2: 防护规则变更&lt;br&gt;- 3: 防护对象变更&lt;br&gt;- 4: IP 地址变更&lt;br&gt;- 5: 防护包名称变更&lt;br&gt;- 6: IP地址库变更&lt;br&gt;- 7: 端口库变更&lt;br&gt;- 8: 访问控制规则变更
         ///</summary>
         public   int? Action{ get; set; }
         ///<summary>

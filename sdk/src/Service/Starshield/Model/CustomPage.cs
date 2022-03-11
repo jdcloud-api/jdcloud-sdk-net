@@ -38,35 +38,35 @@ namespace JDCloudSDK.Starshield.Model
     {
 
         ///<summary>
-        /// The name of the Custom Page type
+        /// 自定义页面类型的名称
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// When the Custom Page was created
+        /// 创建自定义页面时间
         ///</summary>
         public string Created_on{ get; set; }
         ///<summary>
-        /// When the Custom Page was last modified
+        /// 上次修改自定义页面的时间
         ///</summary>
         public string Modified_on{ get; set; }
         ///<summary>
-        /// A URL that is associated with the Custom Page.
+        /// 与自定义页面关联的URL。
         ///</summary>
         public string Url{ get; set; }
         ///<summary>
-        /// The Custom Page state
+        /// 自定义页面状态
         ///</summary>
         public string State{ get; set; }
         ///<summary>
-        /// String tokens that must be present in your customized HTML page
+        /// 自定义HTML页面中必须存在的字符串标记
         ///</summary>
         public List<string> Required_tokens{ get; set; }
         ///<summary>
-        /// The &#39;target&#39; needed as part of the query string when previewing the Custom Page
+        /// 预览自定义页面时，需要将“target”作为查询字符串的一部分
         ///</summary>
         public string Preview_target{ get; set; }
         ///<summary>
-        /// A short description of the Custom Page.
+        /// 自定义页面的简短描述。
         ///</summary>
         public string Description{ get; set; }
     }

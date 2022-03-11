@@ -30,12 +30,13 @@ using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Antipro.Model;
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Antipro.Apis
 {
 
     /// <summary>
-    ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+    ///  创建防护包实例
     /// </summary>
     public class CreateInstanceRequest : JdcloudRequest
     {
@@ -46,10 +47,15 @@ namespace  JDCloudSDK.Antipro.Apis
         [Required]
         public   CreateInstanceSpec CreateInstanceSpec{ get; set; }
         ///<summary>
-        /// 地域编码
+        /// 自动续费配置, 默认不开通
+        ///</summary>
+        public   AutoRenewalSpec AutoRenewalSpec{ get; set; }
+        ///<summary>
+        /// 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
     }
 }

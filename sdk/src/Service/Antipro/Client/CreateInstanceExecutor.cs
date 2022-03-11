@@ -33,12 +33,12 @@ namespace JDCloudSDK.Antipro.Client
 {
 
     /// <summary>
-    ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+    ///  创建防护包实例
     /// </summary>
     public class CreateInstanceExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海接口的Http 请求方法
+        ///  创建防护包实例接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +47,7 @@ namespace JDCloudSDK.Antipro.Client
             }
         }
         /// <summary>
-        ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海接口的Http资源请求路径
+        ///  创建防护包实例接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

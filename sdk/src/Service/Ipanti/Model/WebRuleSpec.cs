@@ -39,9 +39,13 @@ namespace JDCloudSDK.Ipanti.Model
     {
 
         ///<summary>
-        /// 高防 IP
+        /// 高防 IP, serviceIps 为空时生效
         ///</summary>
         public string ServiceIp{ get; set; }
+        ///<summary>
+        /// 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+        ///</summary>
+        public List<string> ServiceIps{ get; set; }
         ///<summary>
         /// 子域名
         ///Required:true
@@ -121,9 +125,13 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public List<string> SslProtocols{ get; set; }
         ///<summary>
-        /// 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+        /// 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
         ///</summary>
         public string SuiteLevel{ get; set; }
+        ///<summary>
+        /// 自定义加密套件等级, suiteLevel 为 custom 是有效
+        ///</summary>
+        public List<string> UserSuiteLevel{ get; set; }
         ///<summary>
         /// 健康检查开关, 0: 关闭, 1: 开启
         ///</summary>

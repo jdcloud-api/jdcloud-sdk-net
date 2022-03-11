@@ -52,6 +52,6 @@ namespace  JDCloudSDK.Vm.Apis
         ///<summary>
         /// 导入任务id。
         ///</summary>
-        public   int? ImportTaskId{ get; set; }
+        public   string TaskId{ get; set; }
     }
 }

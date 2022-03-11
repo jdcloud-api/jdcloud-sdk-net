@@ -201,5 +201,9 @@ namespace JDCloudSDK.Vm.Model
         /// 
         ///</summary>
         public string ImageInherit{ get; set; }
+        ///<summary>
+        /// 资源组ID
+        ///</summary>
+        public string ResourceGroupId{ get; set; }
     }
 }

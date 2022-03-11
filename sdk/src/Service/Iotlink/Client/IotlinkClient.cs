@@ -89,9 +89,9 @@ namespace JDCloudSDK.Iotlink.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,21 +157,21 @@ namespace JDCloudSDK.Iotlink.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  物联网卡开机操作
+        ///  根据物联网卡imsi查询该卡的生命周期信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public OpenIotCardResponse OpenIotCard(OpenIotCardRequest request) {
-            return  new OpenIotCardExecutor().Client(this).Execute<OpenIotCardResponse, OpenIotCardResult, OpenIotCardRequest>(request);
+        public LifeStatusByIMSIResponse LifeStatusByIMSI(LifeStatusByIMSIRequest request) {
+            return  new LifeStatusByIMSIExecutor().Client(this).Execute<LifeStatusByIMSIResponse, LifeStatusByIMSIResult, LifeStatusByIMSIRequest>(request);
         }
 #else
         /// <summary>
-        ///  物联网卡开机操作
+        ///  根据物联网卡imsi查询该卡的生命周期信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<OpenIotCardResponse> OpenIotCard(OpenIotCardRequest request) {
-            return await new OpenIotCardExecutor().Client(this).Execute<OpenIotCardResponse, OpenIotCardResult, OpenIotCardRequest>(request).ConfigureAwait(false);
+        public async Task<LifeStatusByIMSIResponse> LifeStatusByIMSI(LifeStatusByIMSIRequest request) {
+            return await new LifeStatusByIMSIExecutor().Client(this).Execute<LifeStatusByIMSIResponse, LifeStatusByIMSIResult, LifeStatusByIMSIRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -191,25 +191,6 @@ namespace JDCloudSDK.Iotlink.Client
         /// <returns>请求结果信息</returns>
         public async Task<CloseIotCardResponse> CloseIotCard(CloseIotCardRequest request) {
             return await new CloseIotCardExecutor().Client(this).Execute<CloseIotCardResponse, CloseIotCardResult, CloseIotCardRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  物联网卡查询通用操作
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SearchResponse Search(SearchRequest request) {
-            return  new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  物联网卡查询通用操作
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SearchResponse> Search(SearchRequest request) {
-            return await new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -290,6 +271,25 @@ namespace JDCloudSDK.Iotlink.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据物联网卡IMSI查询该卡的GPRS状态信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GprsStatusByIMSIResponse GprsStatusByIMSI(GprsStatusByIMSIRequest request) {
+            return  new GprsStatusByIMSIExecutor().Client(this).Execute<GprsStatusByIMSIResponse, GprsStatusByIMSIResult, GprsStatusByIMSIRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据物联网卡IMSI查询该卡的GPRS状态信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GprsStatusByIMSIResponse> GprsStatusByIMSI(GprsStatusByIMSIRequest request) {
+            return await new GprsStatusByIMSIExecutor().Client(this).Execute<GprsStatusByIMSIResponse, GprsStatusByIMSIResult, GprsStatusByIMSIRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  物联网卡开启流量操作
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -309,6 +309,25 @@ namespace JDCloudSDK.Iotlink.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  根据物联网卡imsi查询该卡的开关机状态信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OnOffStatusByIMSIResponse OnOffStatusByIMSI(OnOffStatusByIMSIRequest request) {
+            return  new OnOffStatusByIMSIExecutor().Client(this).Execute<OnOffStatusByIMSIResponse, OnOffStatusByIMSIResult, OnOffStatusByIMSIRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据物联网卡imsi查询该卡的开关机状态信息
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OnOffStatusByIMSIResponse> OnOffStatusByIMSI(OnOffStatusByIMSIRequest request) {
+            return await new OnOffStatusByIMSIExecutor().Client(this).Execute<OnOffStatusByIMSIResponse, OnOffStatusByIMSIResult, OnOffStatusByIMSIRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  根据物联网卡iccid查询该卡的当月套餐内的GPRS实时使用量
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -324,6 +343,63 @@ namespace JDCloudSDK.Iotlink.Client
         /// <returns>请求结果信息</returns>
         public async Task<GprsRealtimeInfoResponse> GprsRealtimeInfo(GprsRealtimeInfoRequest request) {
             return await new GprsRealtimeInfoExecutor().Client(this).Execute<GprsRealtimeInfoResponse, GprsRealtimeInfoResult, GprsRealtimeInfoRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  物联网卡开机操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public OpenIotCardResponse OpenIotCard(OpenIotCardRequest request) {
+            return  new OpenIotCardExecutor().Client(this).Execute<OpenIotCardResponse, OpenIotCardResult, OpenIotCardRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  物联网卡开机操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<OpenIotCardResponse> OpenIotCard(OpenIotCardRequest request) {
+            return await new OpenIotCardExecutor().Client(this).Execute<OpenIotCardResponse, OpenIotCardResult, OpenIotCardRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  物联网卡查询通用操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public SearchResponse Search(SearchRequest request) {
+            return  new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  物联网卡查询通用操作
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<SearchResponse> Search(SearchRequest request) {
+            return await new SearchExecutor().Client(this).Execute<SearchResponse, SearchResult, SearchRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  根据物联网卡imsi查询该卡的当月套餐内的GPRS实时使用量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public GprsRealtimeInfoByIMSIResponse GprsRealtimeInfoByIMSI(GprsRealtimeInfoByIMSIRequest request) {
+            return  new GprsRealtimeInfoByIMSIExecutor().Client(this).Execute<GprsRealtimeInfoByIMSIResponse, GprsRealtimeInfoByIMSIResult, GprsRealtimeInfoByIMSIRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  根据物联网卡imsi查询该卡的当月套餐内的GPRS实时使用量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<GprsRealtimeInfoByIMSIResponse> GprsRealtimeInfoByIMSI(GprsRealtimeInfoByIMSIRequest request) {
+            return await new GprsRealtimeInfoByIMSIExecutor().Client(this).Execute<GprsRealtimeInfoByIMSIResponse, GprsRealtimeInfoByIMSIResult, GprsRealtimeInfoByIMSIRequest>(request).ConfigureAwait(false);
         }
 #endif
 

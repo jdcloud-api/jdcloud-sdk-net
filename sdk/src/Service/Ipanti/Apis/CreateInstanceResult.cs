@@ -42,7 +42,7 @@ namespace  JDCloudSDK.Ipanti.Apis
         ///</summary>
         public   int? Code{ get; set; }
         ///<summary>
-        /// 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+        /// 新购或升级成功时为计费资源ID, 创建实例失败时给出具体原因
         ///</summary>
         public   string Message{ get; set; }
     }

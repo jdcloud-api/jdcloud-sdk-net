@@ -41,11 +41,10 @@ namespace  JDCloudSDK.Logs.Apis
     public class CreateCollectInfoRequest : JdcloudRequest
     {
         ///<summary>
-        /// 采集状态，0-禁用，1-启用
-        ///Required:true
+        /// 高可用组资源
         ///</summary>
-        [Required]
-        public   bool Enabled{ get; set; }
+        public List<AgResource> AgResource{ get; set; }
+
         ///<summary>
         /// 日志来源，只能是 custom/jdcloud
         ///Required:true
@@ -53,11 +52,48 @@ namespace  JDCloudSDK.Logs.Apis
         [Required]
         public   string AppCode{ get; set; }
         ///<summary>
-        /// 产品线,当日志来源为jdcloud时，必填
+        /// 采集状态，0-禁用，1-启用
         ///Required:true
         ///</summary>
         [Required]
-        public   string ServiceCode{ get; set; }
+        public   bool Enabled{ get; set; }
+        ///<summary>
+        /// 过滤器是否启用。当appcode为custom时必填
+        ///</summary>
+        public   bool FilterEnabled{ get; set; }
+        ///<summary>
+        /// 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
+        ///</summary>
+        public   string LogCustomTarget{ get; set; }
+        ///<summary>
+        /// 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+        ///</summary>
+        public   Dictionary<String,object> LogCustomTargetConf{ get; set; }
+        ///<summary>
+        /// 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
+        ///</summary>
+        public   string LogFile{ get; set; }
+        ///<summary>
+        /// 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+        ///</summary>
+        public List<string> LogFilters{ get; set; }
+
+        ///<summary>
+        /// 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
+        ///</summary>
+        public   string LogPath{ get; set; }
+        ///<summary>
+        /// 目的地是否是日志服务logtopic，只支持业务应用日志
+        ///</summary>
+        public   bool LogtopicEnabled{ get; set; }
+        ///<summary>
+        /// 首行正则
+        ///</summary>
+        public   string RegexpStr{ get; set; }
+        ///<summary>
+        /// 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+        ///</summary>
+        public   long? ResourceMode{ get; set; }
         ///<summary>
         /// 采集实例类型, 只能是 all/part  当选择all时，传入的实例列表无效；custom类型的采集配置目前仅支持part方式，即用户指定实例列表；
         ///Required:true
@@ -70,26 +106,19 @@ namespace  JDCloudSDK.Logs.Apis
         public List<Resource> Resources{ get; set; }
 
         ///<summary>
+        /// 产品线,当日志来源为jdcloud时，必填
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string ServiceCode{ get; set; }
+        ///<summary>
+        /// TagResource
+        ///</summary>
+        public   TagResource TagResource{ get; set; }
+        ///<summary>
         /// 日志类型。当appcode为jdcloud时为必填
         ///</summary>
         public   string TemplateUID{ get; set; }
-        ///<summary>
-        /// 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
-        ///</summary>
-        public   string LogPath{ get; set; }
-        ///<summary>
-        /// 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
-        ///</summary>
-        public   string LogFile{ get; set; }
-        ///<summary>
-        /// 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-        ///</summary>
-        public List<string> LogFilters{ get; set; }
-
-        ///<summary>
-        /// 过滤器是否启用。当appcode为custom时必填
-        ///</summary>
-        public   bool FilterEnabled{ get; set; }
         ///<summary>
         /// 地域 Id
         ///Required:true

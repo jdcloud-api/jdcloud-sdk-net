@@ -58,9 +58,13 @@ namespace JDCloudSDK.Ipanti.Model
         ///</summary>
         public string OriginType{ get; set; }
         ///<summary>
-        /// 高防 IP
+        /// 该规则使用中的高防 IP
         ///</summary>
         public string ServiceIp{ get; set; }
+        ///<summary>
+        /// 已配置的高防 IP 列表
+        ///</summary>
+        public ServiceIpConfig ServiceIpConfig{ get; set; }
         ///<summary>
         /// 端口号
         ///</summary>

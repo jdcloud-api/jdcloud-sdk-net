@@ -52,14 +52,12 @@ namespace  JDCloudSDK.Vm.Apis
     {
         ///<summary>
         /// 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
-        ///Required:true
         ///</summary>
-        [Required]
         public   string TaskAction{ get; set; }
         ///<summary>
         /// 任务id列表。
         ///</summary>
-        public List<int?> TaskIds{ get; set; }
+        public List<string> TaskIds{ get; set; }
 
         ///<summary>
         /// 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
@@ -78,7 +76,7 @@ namespace  JDCloudSDK.Vm.Apis
         ///</summary>
         public   int? PageNumber{ get; set; }
         ///<summary>
-        /// 分页大小；默认为10；取值范围[1, 10]。
+        /// 分页大小；取值范围[10, 100]。
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>

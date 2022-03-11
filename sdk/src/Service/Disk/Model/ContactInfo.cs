@@ -46,11 +46,11 @@ namespace JDCloudSDK.Disk.Model
         ///</summary>
         public int? Email{ get; set; }
         ///<summary>
-        /// 联系人id
+        /// 联系人id,默认为空
         ///</summary>
         public List<int?> PersonIds{ get; set; }
         ///<summary>
-        /// 联系组id
+        /// 联系组id,默认为空
         ///</summary>
         public List<int?> GroupIds{ get; set; }
     }

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Vpc.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.0
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.0";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -136,25 +136,6 @@ namespace JDCloudSDK.Vpc.Client
 
 
 
-#if NET40||NET35
-        /// <summary>
-        ///  运营修改NAT网关，修改带宽需要先停止网关
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public OpModifyNatGatewayResponse OpModifyNatGateway(OpModifyNatGatewayRequest request) {
-            return  new OpModifyNatGatewayExecutor().Client(this).Execute<OpModifyNatGatewayResponse, OpModifyNatGatewayResult, OpModifyNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营修改NAT网关，修改带宽需要先停止网关
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<OpModifyNatGatewayResponse> OpModifyNatGateway(OpModifyNatGatewayRequest request) {
-            return await new OpModifyNatGatewayExecutor().Client(this).Execute<OpModifyNatGatewayResponse, OpModifyNatGatewayResult, OpModifyNatGatewayRequest>(request).ConfigureAwait(false);
-        }
-#endif
 #if NET40||NET35
         /// <summary>
         ///  删除弹性公网IP
@@ -229,25 +210,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyNetworkAclRulesResponse> ModifyNetworkAclRules(ModifyNetworkAclRulesRequest request) {
             return await new ModifyNetworkAclRulesExecutor().Client(this).Execute<ModifyNetworkAclRulesResponse, ModifyNetworkAclRulesResult, ModifyNetworkAclRulesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询网段信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSegmentResponse DescribeSegment(DescribeSegmentRequest request) {
-            return  new DescribeSegmentExecutor().Client(this).Execute<DescribeSegmentResponse, DescribeSegmentResult, DescribeSegmentRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询网段信息详情
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSegmentResponse> DescribeSegment(DescribeSegmentRequest request) {
-            return await new DescribeSegmentExecutor().Client(this).Execute<DescribeSegmentResponse, DescribeSegmentResult, DescribeSegmentRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -366,25 +328,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询NAT网关信息详情接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNatGatewayResponse DescribeNatGateway(DescribeNatGatewayRequest request) {
-            return  new DescribeNatGatewayExecutor().Client(this).Execute<DescribeNatGatewayResponse, DescribeNatGatewayResult, DescribeNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询NAT网关信息详情接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNatGatewayResponse> DescribeNatGateway(DescribeNatGatewayRequest request) {
-            return await new DescribeNatGatewayExecutor().Client(this).Execute<DescribeNatGatewayResponse, DescribeNatGatewayResult, DescribeNatGatewayRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  添加安全组规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -423,25 +366,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  启动NAT网关接口，欠费停服客户不允许启动
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StartNatGatewayResponse StartNatGateway(StartNatGatewayRequest request) {
-            return  new StartNatGatewayExecutor().Client(this).Execute<StartNatGatewayResponse, StartNatGatewayResult, StartNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启动NAT网关接口，欠费停服客户不允许启动
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StartNatGatewayResponse> StartNatGateway(StartNatGatewayRequest request) {
-            return await new StartNatGatewayExecutor().Client(this).Execute<StartNatGatewayResponse, StartNatGatewayResult, StartNatGatewayRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询配额信息
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -457,25 +381,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest request) {
             return await new DescribeQuotaExecutor().Client(this).Execute<DescribeQuotaResponse, DescribeQuotaResult, DescribeQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询弹性公网IP线路计费类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProviderBillingTypeResponse DescribeProviderBillingType(DescribeProviderBillingTypeRequest request) {
-            return  new DescribeProviderBillingTypeExecutor().Client(this).Execute<DescribeProviderBillingTypeResponse, DescribeProviderBillingTypeResult, DescribeProviderBillingTypeRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询弹性公网IP线路计费类型
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProviderBillingTypeResponse> DescribeProviderBillingType(DescribeProviderBillingTypeRequest request) {
-            return await new DescribeProviderBillingTypeExecutor().Client(this).Execute<DescribeProviderBillingTypeResponse, DescribeProviderBillingTypeResult, DescribeProviderBillingTypeRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -537,25 +442,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  绑定安全组接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AssociateSecurityGroupResponse AssociateSecurityGroup(AssociateSecurityGroupRequest request) {
-            return  new AssociateSecurityGroupExecutor().Client(this).Execute<AssociateSecurityGroupResponse, AssociateSecurityGroupResult, AssociateSecurityGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  绑定安全组接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AssociateSecurityGroupResponse> AssociateSecurityGroup(AssociateSecurityGroupRequest request) {
-            return await new AssociateSecurityGroupExecutor().Client(this).Execute<AssociateSecurityGroupResponse, AssociateSecurityGroupResult, AssociateSecurityGroupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除私有网络
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -613,25 +499,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  修改配额信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyQuotaResponse ModifyQuota(ModifyQuotaRequest request) {
-            return  new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改配额信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyQuotaResponse> ModifyQuota(ModifyQuotaRequest request) {
-            return await new ModifyQuotaExecutor().Client(this).Execute<ModifyQuotaResponse, ModifyQuotaResult, ModifyQuotaRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询子网信息详情
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -647,25 +514,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeSubnetResponse> DescribeSubnet(DescribeSubnetRequest request) {
             return await new DescribeSubnetExecutor().Client(this).Execute<DescribeSubnetResponse, DescribeSubnetResult, DescribeSubnetRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营删除弹性公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public OpDeleteElasticIpResponse OpDeleteElasticIp(OpDeleteElasticIpRequest request) {
-            return  new OpDeleteElasticIpExecutor().Client(this).Execute<OpDeleteElasticIpResponse, OpDeleteElasticIpResult, OpDeleteElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营删除弹性公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<OpDeleteElasticIpResponse> OpDeleteElasticIp(OpDeleteElasticIpRequest request) {
-            return await new OpDeleteElasticIpExecutor().Client(this).Execute<OpDeleteElasticIpResponse, OpDeleteElasticIpResult, OpDeleteElasticIpRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -765,63 +613,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  运营强制解绑弹性Ip接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ForceDisassociateElasticIpResponse ForceDisassociateElasticIp(ForceDisassociateElasticIpRequest request) {
-            return  new ForceDisassociateElasticIpExecutor().Client(this).Execute<ForceDisassociateElasticIpResponse, ForceDisassociateElasticIpResult, ForceDisassociateElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营强制解绑弹性Ip接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ForceDisassociateElasticIpResponse> ForceDisassociateElasticIp(ForceDisassociateElasticIpRequest request) {
-            return await new ForceDisassociateElasticIpExecutor().Client(this).Execute<ForceDisassociateElasticIpResponse, ForceDisassociateElasticIpResult, ForceDisassociateElasticIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  运营修改弹性公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public OpModifyElasticIpResponse OpModifyElasticIp(OpModifyElasticIpRequest request) {
-            return  new OpModifyElasticIpExecutor().Client(this).Execute<OpModifyElasticIpResponse, OpModifyElasticIpResult, OpModifyElasticIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  运营修改弹性公网IP
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<OpModifyElasticIpResponse> OpModifyElasticIp(OpModifyElasticIpRequest request) {
-            return await new OpModifyElasticIpExecutor().Client(this).Execute<OpModifyElasticIpResponse, OpModifyElasticIpResult, OpModifyElasticIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除NAT网关接口，NAT网关需要先停止再删除
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteNatGatewayResponse DeleteNatGateway(DeleteNatGatewayRequest request) {
-            return  new DeleteNatGatewayExecutor().Client(this).Execute<DeleteNatGatewayResponse, DeleteNatGatewayResult, DeleteNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除NAT网关接口，NAT网关需要先停止再删除
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteNatGatewayResponse> DeleteNatGateway(DeleteNatGatewayRequest request) {
-            return await new DeleteNatGatewayExecutor().Client(this).Execute<DeleteNatGatewayResponse, DeleteNatGatewayResult, DeleteNatGatewayRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  移除networkAcl规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -837,44 +628,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<RemoveNetworkAclRulesResponse> RemoveNetworkAclRules(RemoveNetworkAclRulesRequest request) {
             return await new RemoveNetworkAclRulesExecutor().Client(this).Execute<RemoveNetworkAclRulesResponse, RemoveNetworkAclRulesResult, RemoveNetworkAclRulesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  启用授信网卡接口，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableNetworkInterfaceResponse EnableNetworkInterface(EnableNetworkInterfaceRequest request) {
-            return  new EnableNetworkInterfaceExecutor().Client(this).Execute<EnableNetworkInterfaceResponse, EnableNetworkInterfaceResult, EnableNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  启用授信网卡接口，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableNetworkInterfaceResponse> EnableNetworkInterface(EnableNetworkInterfaceRequest request) {
-            return await new EnableNetworkInterfaceExecutor().Client(this).Execute<EnableNetworkInterfaceResponse, EnableNetworkInterfaceResult, EnableNetworkInterfaceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除NetworkInterfacePermission接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DeleteNetworkInterfacePermissionResponse DeleteNetworkInterfacePermission(DeleteNetworkInterfacePermissionRequest request) {
-            return  new DeleteNetworkInterfacePermissionExecutor().Client(this).Execute<DeleteNetworkInterfacePermissionResponse, DeleteNetworkInterfacePermissionResult, DeleteNetworkInterfacePermissionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除NetworkInterfacePermission接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DeleteNetworkInterfacePermissionResponse> DeleteNetworkInterfacePermission(DeleteNetworkInterfacePermissionRequest request) {
-            return await new DeleteNetworkInterfacePermissionExecutor().Client(this).Execute<DeleteNetworkInterfacePermissionResponse, DeleteNetworkInterfacePermissionResult, DeleteNetworkInterfacePermissionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -936,25 +689,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建NAT网关接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateNatGatewayResponse CreateNatGateway(CreateNatGatewayRequest request) {
-            return  new CreateNatGatewayExecutor().Client(this).Execute<CreateNatGatewayResponse, CreateNatGatewayResult, CreateNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建NAT网关接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateNatGatewayResponse> CreateNatGateway(CreateNatGatewayRequest request) {
-            return await new CreateNatGatewayExecutor().Client(this).Execute<CreateNatGatewayResponse, CreateNatGatewayResult, CreateNatGatewayRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建子网
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1012,25 +746,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  创建NetworkInterfacePermission接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateNetworkInterfacePermissionResponse CreateNetworkInterfacePermission(CreateNetworkInterfacePermissionRequest request) {
-            return  new CreateNetworkInterfacePermissionExecutor().Client(this).Execute<CreateNetworkInterfacePermissionResponse, CreateNetworkInterfacePermissionResult, CreateNetworkInterfacePermissionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建NetworkInterfacePermission接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateNetworkInterfacePermissionResponse> CreateNetworkInterfacePermission(CreateNetworkInterfacePermissionRequest request) {
-            return await new CreateNetworkInterfacePermissionExecutor().Client(this).Execute<CreateNetworkInterfacePermissionResponse, CreateNetworkInterfacePermissionResult, CreateNetworkInterfacePermissionRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  移除路由表规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1065,25 +780,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<CreateVpcPeeringResponse> CreateVpcPeering(CreateVpcPeeringRequest request) {
             return await new CreateVpcPeeringExecutor().Client(this).Execute<CreateVpcPeeringResponse, CreateVpcPeeringResult, CreateVpcPeeringRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询网段列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeSegmentsResponse DescribeSegments(DescribeSegmentsRequest request) {
-            return  new DescribeSegmentsExecutor().Client(this).Execute<DescribeSegmentsResponse, DescribeSegmentsResult, DescribeSegmentsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询网段列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeSegmentsResponse> DescribeSegments(DescribeSegmentsRequest request) {
-            return await new DescribeSegmentsExecutor().Client(this).Execute<DescribeSegmentsResponse, DescribeSegmentsResult, DescribeSegmentsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1183,25 +879,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  移除路由传播
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public RemoveRoutePropagationResponse RemoveRoutePropagation(RemoveRoutePropagationRequest request) {
-            return  new RemoveRoutePropagationExecutor().Client(this).Execute<RemoveRoutePropagationResponse, RemoveRoutePropagationResult, RemoveRoutePropagationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  移除路由传播
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<RemoveRoutePropagationResponse> RemoveRoutePropagation(RemoveRoutePropagationRequest request) {
-            return await new RemoveRoutePropagationExecutor().Client(this).Execute<RemoveRoutePropagationResponse, RemoveRoutePropagationResult, RemoveRoutePropagationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改networkAcl接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1278,63 +955,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询弹性公网IP列表状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeElasticIpsStatusResponse DescribeElasticIpsStatus(DescribeElasticIpsStatusRequest request) {
-            return  new DescribeElasticIpsStatusExecutor().Client(this).Execute<DescribeElasticIpsStatusResponse, DescribeElasticIpsStatusResult, DescribeElasticIpsStatusRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询弹性公网IP列表状态
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeElasticIpsStatusResponse> DescribeElasticIpsStatus(DescribeElasticIpsStatusRequest request) {
-            return await new DescribeElasticIpsStatusExecutor().Client(this).Execute<DescribeElasticIpsStatusResponse, DescribeElasticIpsStatusResult, DescribeElasticIpsStatusRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询NetworkInterfacePermission资源列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNetworkInterfacePermissionsResponse DescribeNetworkInterfacePermissions(DescribeNetworkInterfacePermissionsRequest request) {
-            return  new DescribeNetworkInterfacePermissionsExecutor().Client(this).Execute<DescribeNetworkInterfacePermissionsResponse, DescribeNetworkInterfacePermissionsResult, DescribeNetworkInterfacePermissionsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询NetworkInterfacePermission资源列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNetworkInterfacePermissionsResponse> DescribeNetworkInterfacePermissions(DescribeNetworkInterfacePermissionsRequest request) {
-            return await new DescribeNetworkInterfacePermissionsExecutor().Client(this).Execute<DescribeNetworkInterfacePermissionsResponse, DescribeNetworkInterfacePermissionsResult, DescribeNetworkInterfacePermissionsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询可用线路列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeProvidersResponse DescribeProviders(DescribeProvidersRequest request) {
-            return  new DescribeProvidersExecutor().Client(this).Execute<DescribeProvidersResponse, DescribeProvidersResult, DescribeProvidersRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询可用线路列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeProvidersResponse> DescribeProviders(DescribeProvidersRequest request) {
-            return await new DescribeProvidersExecutor().Client(this).Execute<DescribeProvidersResponse, DescribeProvidersResult, DescribeProvidersRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  创建网卡接口，只能创建辅助网卡
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1373,25 +993,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询NAT网关列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeNatGatewaysResponse DescribeNatGateways(DescribeNatGatewaysRequest request) {
-            return  new DescribeNatGatewaysExecutor().Client(this).Execute<DescribeNatGatewaysResponse, DescribeNatGatewaysResult, DescribeNatGatewaysRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询NAT网关列表接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeNatGatewaysResponse> DescribeNatGateways(DescribeNatGatewaysRequest request) {
-            return await new DescribeNatGatewaysExecutor().Client(this).Execute<DescribeNatGatewaysResponse, DescribeNatGatewaysResult, DescribeNatGatewaysRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  修改路由表规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1407,44 +1008,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyRouteTableRulesResponse> ModifyRouteTableRules(ModifyRouteTableRulesRequest request) {
             return await new ModifyRouteTableRulesExecutor().Client(this).Execute<ModifyRouteTableRulesResponse, ModifyRouteTableRulesResult, ModifyRouteTableRulesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  创建路由传播接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddRoutePropagationResponse AddRoutePropagation(AddRoutePropagationRequest request) {
-            return  new AddRoutePropagationExecutor().Client(this).Execute<AddRoutePropagationResponse, AddRoutePropagationResult, AddRoutePropagationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  创建路由传播接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddRoutePropagationResponse> AddRoutePropagation(AddRoutePropagationRequest request) {
-            return await new AddRoutePropagationExecutor().Client(this).Execute<AddRoutePropagationResponse, AddRoutePropagationResult, AddRoutePropagationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询授信弹性网卡列表，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAuthorizedNetworkInterfacesResponse DescribeAuthorizedNetworkInterfaces(DescribeAuthorizedNetworkInterfacesRequest request) {
-            return  new DescribeAuthorizedNetworkInterfacesExecutor().Client(this).Execute<DescribeAuthorizedNetworkInterfacesResponse, DescribeAuthorizedNetworkInterfacesResult, DescribeAuthorizedNetworkInterfacesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询授信弹性网卡列表，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAuthorizedNetworkInterfacesResponse> DescribeAuthorizedNetworkInterfaces(DescribeAuthorizedNetworkInterfacesRequest request) {
-            return await new DescribeAuthorizedNetworkInterfacesExecutor().Client(this).Execute<DescribeAuthorizedNetworkInterfacesResponse, DescribeAuthorizedNetworkInterfacesResult, DescribeAuthorizedNetworkInterfacesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1521,82 +1084,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyRouteTableResponse> ModifyRouteTable(ModifyRouteTableRequest request) {
             return await new ModifyRouteTableExecutor().Client(this).Execute<ModifyRouteTableResponse, ModifyRouteTableResult, ModifyRouteTableRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询授信网卡资源详情，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeAuthorizedNetworkInterfaceResponse DescribeAuthorizedNetworkInterface(DescribeAuthorizedNetworkInterfaceRequest request) {
-            return  new DescribeAuthorizedNetworkInterfaceExecutor().Client(this).Execute<DescribeAuthorizedNetworkInterfaceResponse, DescribeAuthorizedNetworkInterfaceResult, DescribeAuthorizedNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询授信网卡资源详情，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeAuthorizedNetworkInterfaceResponse> DescribeAuthorizedNetworkInterface(DescribeAuthorizedNetworkInterfaceRequest request) {
-            return await new DescribeAuthorizedNetworkInterfaceExecutor().Client(this).Execute<DescribeAuthorizedNetworkInterfaceResponse, DescribeAuthorizedNetworkInterfaceResult, DescribeAuthorizedNetworkInterfaceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  解绑安全组接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisassociateSecurityGroupResponse DisassociateSecurityGroup(DisassociateSecurityGroupRequest request) {
-            return  new DisassociateSecurityGroupExecutor().Client(this).Execute<DisassociateSecurityGroupResponse, DisassociateSecurityGroupResult, DisassociateSecurityGroupRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  解绑安全组接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisassociateSecurityGroupResponse> DisassociateSecurityGroup(DisassociateSecurityGroupRequest request) {
-            return await new DisassociateSecurityGroupExecutor().Client(this).Execute<DisassociateSecurityGroupResponse, DisassociateSecurityGroupResult, DisassociateSecurityGroupRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改路由传播接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyRoutePropagationResponse ModifyRoutePropagation(ModifyRoutePropagationRequest request) {
-            return  new ModifyRoutePropagationExecutor().Client(this).Execute<ModifyRoutePropagationResponse, ModifyRoutePropagationResult, ModifyRoutePropagationRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改路由传播接口
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyRoutePropagationResponse> ModifyRoutePropagation(ModifyRoutePropagationRequest request) {
-            return await new ModifyRoutePropagationExecutor().Client(this).Execute<ModifyRoutePropagationResponse, ModifyRoutePropagationResult, ModifyRoutePropagationRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  停止NAT网关接口，非欠费停服，由客户自己停止的NAT网关继续计费
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public StopNatGatewayResponse StopNatGateway(StopNatGatewayRequest request) {
-            return  new StopNatGatewayExecutor().Client(this).Execute<StopNatGatewayResponse, StopNatGatewayResult, StopNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  停止NAT网关接口，非欠费停服，由客户自己停止的NAT网关继续计费
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<StopNatGatewayResponse> StopNatGateway(StopNatGatewayRequest request) {
-            return await new StopNatGatewayExecutor().Client(this).Execute<StopNatGatewayResponse, StopNatGatewayResult, StopNatGatewayRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1715,25 +1202,6 @@ namespace JDCloudSDK.Vpc.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  停用授信网卡接口，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DisableNetworkInterfaceResponse DisableNetworkInterface(DisableNetworkInterfaceRequest request) {
-            return  new DisableNetworkInterfaceExecutor().Client(this).Execute<DisableNetworkInterfaceResponse, DisableNetworkInterfaceResult, DisableNetworkInterfaceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  停用授信网卡接口，仅支持京东云许可服务账号使用
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DisableNetworkInterfaceResponse> DisableNetworkInterface(DisableNetworkInterfaceRequest request) {
-            return await new DisableNetworkInterfaceExecutor().Client(this).Execute<DisableNetworkInterfaceResponse, DisableNetworkInterfaceResult, DisableNetworkInterfaceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  删除弹性网卡接口
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -1749,25 +1217,6 @@ namespace JDCloudSDK.Vpc.Client
         /// <returns>请求结果信息</returns>
         public async Task<DeleteNetworkInterfaceResponse> DeleteNetworkInterface(DeleteNetworkInterfaceRequest request) {
             return await new DeleteNetworkInterfaceExecutor().Client(this).Execute<DeleteNetworkInterfaceResponse, DeleteNetworkInterfaceResult, DeleteNetworkInterfaceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  修改NAT网关接口，修改网关规格或带宽需要先停止网关
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ModifyNatGatewayResponse ModifyNatGateway(ModifyNatGatewayRequest request) {
-            return  new ModifyNatGatewayExecutor().Client(this).Execute<ModifyNatGatewayResponse, ModifyNatGatewayResult, ModifyNatGatewayRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  修改NAT网关接口，修改网关规格或带宽需要先停止网关
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ModifyNatGatewayResponse> ModifyNatGateway(ModifyNatGatewayRequest request) {
-            return await new ModifyNatGatewayExecutor().Client(this).Execute<ModifyNatGatewayResponse, ModifyNatGatewayResult, ModifyNatGatewayRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35

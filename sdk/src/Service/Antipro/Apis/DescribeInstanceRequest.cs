@@ -29,6 +29,7 @@ using System.Text;
 using JDCloudSDK.Core.Service;
 
 using JDCloudSDK.Core.Annotation;
+using Newtonsoft.Json;
 
 namespace  JDCloudSDK.Antipro.Apis
 {
@@ -39,11 +40,12 @@ namespace  JDCloudSDK.Antipro.Apis
     public class DescribeInstanceRequest : JdcloudRequest
     {
         ///<summary>
-        /// 地域编码
+        /// 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
         ///Required:true
         ///</summary>
         [Required]
-        public override  string RegionId{ get; set; }
+        [JsonProperty("regionId")]
+        public   string RegionIdValue{ get; set; }
         ///<summary>
         /// 防护包实例 Id
         ///Required:true

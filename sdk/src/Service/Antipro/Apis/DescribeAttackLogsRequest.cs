@@ -34,11 +34,7 @@ namespace  JDCloudSDK.Antipro.Apis
 {
 
     /// <summary>
-    ///  查询攻击记录, 参数 ip 优先级大于 instanceId
-        ///         ///   - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录
-        ///         ///   - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录
-        ///         ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
-        ///         /// 
+    ///  查询攻击记录, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录. &lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录. &lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
     /// </summary>
     public class DescribeAttackLogsRequest : JdcloudRequest
     {
@@ -67,9 +63,7 @@ namespace  JDCloudSDK.Antipro.Apis
         ///</summary>
         public   string InstanceId{ get; set; }
         ///<summary>
-        /// DDoS 防护包已防护的公网 IP
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-        /// 
+        /// DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
         ///</summary>
         public List<string> Ip{ get; set; }
 

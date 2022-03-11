@@ -79,7 +79,7 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public DenyActionCfg Action{ get; set; }
         ///<summary>
-        /// 规则类型，general-通用规则，advanced-高级规则，缺省为general
+        /// 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
         ///</summary>
         public string RuleType{ get; set; }
         ///<summary>
@@ -106,5 +106,9 @@ namespace JDCloudSDK.Waf.Model
         /// 统计维度
         ///</summary>
         public string Unit{ get; set; }
+        ///<summary>
+        /// 持续时间, 单位分钟，范围[1-24*60]
+        ///</summary>
+        public int? BlockTime{ get; set; }
     }
 }

@@ -50,6 +50,10 @@ namespace JDCloudSDK.Logs.Model
         ///</summary>
         public List<string> Filters{ get; set; }
         ///<summary>
+        /// logsetUID 日志集UID
+        ///</summary>
+        public string LogsetUID{ get; set; }
+        ///<summary>
         /// logtopicUID 日志主题UID
         ///</summary>
         public string LogtopicUID{ get; set; }
@@ -57,9 +61,5 @@ namespace JDCloudSDK.Logs.Model
         /// 采集文件路径，支持通配
         ///</summary>
         public string Path{ get; set; }
-        ///<summary>
-        /// 用户 PIN
-        ///</summary>
-        public string Pin{ get; set; }
     }
 }

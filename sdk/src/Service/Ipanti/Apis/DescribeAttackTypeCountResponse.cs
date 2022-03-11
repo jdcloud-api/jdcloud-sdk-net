@@ -34,6 +34,11 @@ namespace  JDCloudSDK.Ipanti.Apis
 
     /// <summary>
     ///  查询各类型攻击次数
+        ///         /// 参数 serviceIp 优先级大于 instanceId.
+        ///         /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        ///         /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        ///         /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        ///         /// 
     /// </summary>
     public class DescribeAttackTypeCountResponse : JdcloudResponse<DescribeAttackTypeCountResult>
     {

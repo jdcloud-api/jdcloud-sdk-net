@@ -45,9 +45,13 @@ namespace JDCloudSDK.Ipanti.Model
         [Required]
         public string Protocol{ get; set; }
         ///<summary>
-        /// 高防 IP
+        /// 高防 IP, serviceIps 为空时生效
         ///</summary>
         public string ServiceIp{ get; set; }
+        ///<summary>
+        /// 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+        ///</summary>
+        public List<string> ServiceIps{ get; set; }
         ///<summary>
         /// 端口号, 取值范围[1, 65535]
         ///Required:true

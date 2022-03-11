@@ -66,6 +66,18 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? HttpStatus{ get; set; }
         ///<summary>
+        /// https证书绑定状态
+        ///</summary>
+        public int? HttpsCertUpdateStatus{ get; set; }
+        ///<summary>
+        /// 国密https证书绑定状态
+        ///</summary>
+        public int? GmHttpsCertUpdateStatus{ get; set; }
+        ///<summary>
+        /// 是否支持国密证书
+        ///</summary>
+        public int? GmCertSupport{ get; set; }
+        ///<summary>
         /// 防护状态，0：关闭 1：开启
         ///</summary>
         public AntiStatus AntiStatus{ get; set; }

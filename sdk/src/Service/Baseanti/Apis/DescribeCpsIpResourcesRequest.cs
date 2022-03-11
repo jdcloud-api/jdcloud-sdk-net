@@ -49,6 +49,10 @@ namespace  JDCloudSDK.Baseanti.Apis
         ///</summary>
         public   int? PageSize{ get; set; }
         ///<summary>
+        /// IP 模糊匹配
+        ///</summary>
+        public   string Ip{ get; set; }
+        ///<summary>
         /// 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
         ///Required:true
         ///</summary>

@@ -51,8 +51,12 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public string Domain{ get; set; }
         ///<summary>
-        /// 0表示宽松，1表示正常，2表示严格
+        /// 0表示宽松，1表示正常，2表示严格, 3表示自定义
         ///</summary>
         public int? WafLevel{ get; set; }
+        ///<summary>
+        /// 自定义规则集id，wafLevel为3时可以设置
+        ///</summary>
+        public long? UsrPolicy{ get; set; }
     }
 }

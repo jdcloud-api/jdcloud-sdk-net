@@ -105,6 +105,10 @@ namespace  JDCloudSDK.Vm.Apis
         ///</summary>
         public   string ServiceCode{ get; set; }
         ///<summary>
+        /// CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;aarch64&#x60;。
+        ///</summary>
+        public   string Architecture{ get; set; }
+        ///<summary>
         /// 页码；默认为1。
         ///</summary>
         public   int? PageNumber{ get; set; }

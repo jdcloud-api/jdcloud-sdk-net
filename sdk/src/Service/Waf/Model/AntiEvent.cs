@@ -102,11 +102,11 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string UpstreamErr{ get; set; }
         ///<summary>
-        /// 是否已加入白名单
+        /// 是否已加入白名单，0表示否
         ///</summary>
         public int? SkipExist{ get; set; }
         ///<summary>
-        /// 是否已加入黑名单
+        /// 是否已加入黑名单，0表示否
         ///</summary>
         public int? DenyExist{ get; set; }
     }

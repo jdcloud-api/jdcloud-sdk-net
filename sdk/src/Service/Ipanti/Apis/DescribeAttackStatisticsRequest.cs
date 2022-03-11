@@ -36,6 +36,12 @@ namespace  JDCloudSDK.Ipanti.Apis
 
     /// <summary>
     ///  查询攻击次数及流量峰值
+        ///         /// 参数 serviceIp 优先级大于 instanceId.
+        ///         /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        ///         /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        ///         /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        ///         /// CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+        ///         /// 
     /// </summary>
     public class DescribeAttackStatisticsRequest : JdcloudRequest
     {
@@ -53,6 +59,11 @@ namespace  JDCloudSDK.Ipanti.Apis
         /// 高防实例 ID
         ///</summary>
         public List<string> InstanceId{ get; set; }
+
+        ///<summary>
+        /// 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+        ///</summary>
+        public List<string> ServiceIp{ get; set; }
 
         ///<summary>
         /// 攻击类型, 0 为 DDoS, 1 为 CC

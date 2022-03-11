@@ -39,7 +39,8 @@ namespace JDCloudSDK.Vm.Client
         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
         /// 
         /// ## 接口说明
-        /// - 该接口只支持修改实例模板的名称或描述。
+        /// - 名称、描述、实例模板配置信息至少要传一项。
+        /// - 参数时，对应的参数不做更改。
         /// 
     /// </summary>
     public class UpdateInstanceTemplateExecutor : JdcloudExecutor
@@ -51,7 +52,8 @@ namespace JDCloudSDK.Vm.Client
         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
         /// 
         /// ## 接口说明
-        /// - 该接口只支持修改实例模板的名称或描述。
+        /// - 名称、描述、实例模板配置信息至少要传一项。
+        /// - 参数时，对应的参数不做更改。
         /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
@@ -67,7 +69,8 @@ namespace JDCloudSDK.Vm.Client
         /// 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
         /// 
         /// ## 接口说明
-        /// - 该接口只支持修改实例模板的名称或描述。
+        /// - 名称、描述、实例模板配置信息至少要传一项。
+        /// - 参数时，对应的参数不做更改。
         /// 接口的Http资源请求路径
         /// </summary>
         public override string Url

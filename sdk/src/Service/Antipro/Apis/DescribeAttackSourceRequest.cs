@@ -39,9 +39,7 @@ namespace  JDCloudSDK.Antipro.Apis
     public class DescribeAttackSourceRequest : JdcloudRequest
     {
         ///<summary>
-        /// DDoS 防护包已防护的公网 IP
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-        /// 
+        /// DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
         ///Required:true
         ///</summary>
         [Required]

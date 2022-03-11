@@ -57,6 +57,12 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public string Name{ get; set; }
         ///<summary>
+        /// 0 网页防篡改 1 网站防篡改
+        ///Required:true
+        ///</summary>
+        [Required]
+        public int Website{ get; set; }
+        ///<summary>
         /// url
         ///Required:true
         ///</summary>

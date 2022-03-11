@@ -41,26 +41,28 @@ namespace  JDCloudSDK.Logs.Apis
     public class UpdateCollectInfoRequest : JdcloudRequest
     {
         ///<summary>
+        /// 高可用组资源
+        ///</summary>
+        public List<AgResource> AgResource{ get; set; }
+
+        ///<summary>
         /// 采集状态，0-禁用，1-启用
         ///Required:true
         ///</summary>
         [Required]
         public   bool Enabled{ get; set; }
         ///<summary>
-        /// 采集实例类型, 只能是 all/part  当选择all时，传入的实例列表无效
-        ///Required:true
+        /// 过滤器是否启用。当appcode为custom时必填
         ///</summary>
-        [Required]
-        public   string ResourceType{ get; set; }
+        public   bool FilterEnabled{ get; set; }
         ///<summary>
-        /// 采集实例列表（存在上限限制20）
+        /// 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
         ///</summary>
-        public List<Resource> Resources{ get; set; }
-
+        public   string LogCustomTarget{ get; set; }
         ///<summary>
-        /// 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
+        /// 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
         ///</summary>
-        public   string LogPath{ get; set; }
+        public   Dictionary<String,object> LogCustomTargetConf{ get; set; }
         ///<summary>
         /// 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
         ///</summary>
@@ -71,9 +73,36 @@ namespace  JDCloudSDK.Logs.Apis
         public List<string> LogFilters{ get; set; }
 
         ///<summary>
-        /// 过滤器是否启用。当appcode为custom时必填
+        /// 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
         ///</summary>
-        public   bool FilterEnabled{ get; set; }
+        public   string LogPath{ get; set; }
+        ///<summary>
+        /// 目的地是否是日志服务logtopic，只支持业务应用日志
+        ///</summary>
+        public   bool LogtopicEnabled{ get; set; }
+        ///<summary>
+        /// 首行正则
+        ///</summary>
+        public   string RegexpStr{ get; set; }
+        ///<summary>
+        /// 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+        ///</summary>
+        public   long? ResourceMode{ get; set; }
+        ///<summary>
+        /// 采集实例类型, 只能是 all/part  当选择all时，传入的实例列表无效
+        ///Required:true
+        ///</summary>
+        [Required]
+        public   string ResourceType{ get; set; }
+        ///<summary>
+        /// 采集实例列表（存在上限限制）
+        ///</summary>
+        public List<Resource> Resources{ get; set; }
+
+        ///<summary>
+        /// TagResource
+        ///</summary>
+        public   TagResource TagResource{ get; set; }
         ///<summary>
         /// 地域 Id
         ///Required:true

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Waf.Client
         }
 
         /// <summary>
-        ///  版本号 1.2.3
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.2.3";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -157,25 +157,6 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取网站业务风控事件信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskEventsResponse ListRiskEvents(ListRiskEventsRequest request) {
-            return  new ListRiskEventsExecutor().Client(this).Execute<ListRiskEventsResponse, ListRiskEventsResult, ListRiskEventsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控事件信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskEventsResponse> ListRiskEvents(ListRiskEventsRequest request) {
-            return await new ListRiskEventsExecutor().Client(this).Execute<ListRiskEventsResponse, ListRiskEventsResult, ListRiskEventsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  获取网站在一定时间内的qps信息。
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -195,21 +176,21 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置网站已知类型bot规则
+        ///  获取网站在一定时间内的状态码报表信息。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetBotStdRulesResponse SetBotStdRules(SetBotStdRulesRequest request) {
-            return  new SetBotStdRulesExecutor().Client(this).Execute<SetBotStdRulesResponse, SetBotStdRulesResult, SetBotStdRulesRequest>(request);
+        public GetStatusCodeInfoResponse GetStatusCodeInfo(GetStatusCodeInfoRequest request) {
+            return  new GetStatusCodeInfoExecutor().Client(this).Execute<GetStatusCodeInfoResponse, GetStatusCodeInfoResult, GetStatusCodeInfoRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置网站已知类型bot规则
+        ///  获取网站在一定时间内的状态码报表信息。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetBotStdRulesResponse> SetBotStdRules(SetBotStdRulesRequest request) {
-            return await new SetBotStdRulesExecutor().Client(this).Execute<SetBotStdRulesResponse, SetBotStdRulesResult, SetBotStdRulesRequest>(request).ConfigureAwait(false);
+        public async Task<GetStatusCodeInfoResponse> GetStatusCodeInfo(GetStatusCodeInfoRequest request) {
+            return await new GetStatusCodeInfoExecutor().Client(this).Execute<GetStatusCodeInfoResponse, GetStatusCodeInfoResult, GetStatusCodeInfoRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -233,21 +214,21 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除事件信息
+        ///  获取实例ID及相关信息列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DelRiskEventsResponse DelRiskEvents(DelRiskEventsRequest request) {
-            return  new DelRiskEventsExecutor().Client(this).Execute<DelRiskEventsResponse, DelRiskEventsResult, DelRiskEventsRequest>(request);
+        public GetWafInstanceResponse GetWafInstance(GetWafInstanceRequest request) {
+            return  new GetWafInstanceExecutor().Client(this).Execute<GetWafInstanceResponse, GetWafInstanceResult, GetWafInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除事件信息
+        ///  获取实例ID及相关信息列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DelRiskEventsResponse> DelRiskEvents(DelRiskEventsRequest request) {
-            return await new DelRiskEventsExecutor().Client(this).Execute<DelRiskEventsResponse, DelRiskEventsResult, DelRiskEventsRequest>(request).ConfigureAwait(false);
+        public async Task<GetWafInstanceResponse> GetWafInstance(GetWafInstanceRequest request) {
+            return await new GetWafInstanceExecutor().Client(this).Execute<GetWafInstanceResponse, GetWafInstanceResult, GetWafInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -290,6 +271,25 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
+        ///  创建waf实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
+            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建waf实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
+            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
         ///  绑定证书
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -305,6 +305,25 @@ namespace JDCloudSDK.Waf.Client
         /// <returns>请求结果信息</returns>
         public async Task<BindCertResponse> BindCert(BindCertRequest request) {
             return await new BindCertExecutor().Client(this).Execute<BindCertResponse, BindCertResult, BindCertRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  更新网站
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public UpdateDomainResponse UpdateDomain(UpdateDomainRequest request) {
+            return  new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  更新网站
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<UpdateDomainResponse> UpdateDomain(UpdateDomainRequest request) {
+            return await new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -328,40 +347,40 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  激活bot 威胁情报库
+        ///  cname解析到回源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableBotThreatIpResponse EnableBotThreatIp(EnableBotThreatIpRequest request) {
-            return  new EnableBotThreatIpExecutor().Client(this).Execute<EnableBotThreatIpResponse, EnableBotThreatIpResult, EnableBotThreatIpRequest>(request);
+        public EnableCname2RsExternalResponse EnableCname2RsExternal(EnableCname2RsExternalRequest request) {
+            return  new EnableCname2RsExternalExecutor().Client(this).Execute<EnableCname2RsExternalResponse, EnableCname2RsExternalResult, EnableCname2RsExternalRequest>(request);
         }
 #else
         /// <summary>
-        ///  激活bot 威胁情报库
+        ///  cname解析到回源
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableBotThreatIpResponse> EnableBotThreatIp(EnableBotThreatIpRequest request) {
-            return await new EnableBotThreatIpExecutor().Client(this).Execute<EnableBotThreatIpResponse, EnableBotThreatIpResult, EnableBotThreatIpRequest>(request).ConfigureAwait(false);
+        public async Task<EnableCname2RsExternalResponse> EnableCname2RsExternal(EnableCname2RsExternalRequest request) {
+            return await new EnableCname2RsExternalExecutor().Client(this).Execute<EnableCname2RsExternalResponse, EnableCname2RsExternalResult, EnableCname2RsExternalRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  设置网站bot威胁情报库规则
+        ///  获取网站列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetBotThreatIpRuleResponse SetBotThreatIpRule(SetBotThreatIpRuleRequest request) {
-            return  new SetBotThreatIpRuleExecutor().Client(this).Execute<SetBotThreatIpRuleResponse, SetBotThreatIpRuleResult, SetBotThreatIpRuleRequest>(request);
+        public ListDomainsResponse ListDomains(ListDomainsRequest request) {
+            return  new ListDomainsExecutor().Client(this).Execute<ListDomainsResponse, ListDomainsResult, ListDomainsRequest>(request);
         }
 #else
         /// <summary>
-        ///  设置网站bot威胁情报库规则
+        ///  获取网站列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetBotThreatIpRuleResponse> SetBotThreatIpRule(SetBotThreatIpRuleRequest request) {
-            return await new SetBotThreatIpRuleExecutor().Client(this).Execute<SetBotThreatIpRuleResponse, SetBotThreatIpRuleResult, SetBotThreatIpRuleRequest>(request).ConfigureAwait(false);
+        public async Task<ListDomainsResponse> ListDomains(ListDomainsRequest request) {
+            return await new ListDomainsExecutor().Client(this).Execute<ListDomainsResponse, ListDomainsResult, ListDomainsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -400,82 +419,6 @@ namespace JDCloudSDK.Waf.Client
         /// <returns>请求结果信息</returns>
         public async Task<AntiLevelWafResponse> AntiLevelWaf(AntiLevelWafRequest request) {
             return await new AntiLevelWafExecutor().Client(this).Execute<AntiLevelWafResponse, AntiLevelWafResult, AntiLevelWafRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站业务风控js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskJsResponse ListRiskJs(ListRiskJsRequest request) {
-            return  new ListRiskJsExecutor().Client(this).Execute<ListRiskJsResponse, ListRiskJsResult, ListRiskJsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskJsResponse> ListRiskJs(ListRiskJsRequest request) {
-            return await new ListRiskJsExecutor().Client(this).Execute<ListRiskJsResponse, ListRiskJsResult, ListRiskJsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除风险控制变量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelRiskVarsResponse DelRiskVars(DelRiskVarsRequest request) {
-            return  new DelRiskVarsExecutor().Client(this).Execute<DelRiskVarsResponse, DelRiskVarsResult, DelRiskVarsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除风险控制变量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelRiskVarsResponse> DelRiskVars(DelRiskVarsRequest request) {
-            return await new DelRiskVarsExecutor().Client(this).Execute<DelRiskVarsResponse, DelRiskVarsResult, DelRiskVarsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeJsPagesResponse DescribeJsPages(DescribeJsPagesRequest request) {
-            return  new DescribeJsPagesExecutor().Client(this).Execute<DescribeJsPagesResponse, DescribeJsPagesResult, DescribeJsPagesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeJsPagesResponse> DescribeJsPages(DescribeJsPagesRequest request) {
-            return await new DescribeJsPagesExecutor().Client(this).Execute<DescribeJsPagesResponse, DescribeJsPagesResult, DescribeJsPagesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站自定义类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListBotUsrRulesResponse ListBotUsrRules(ListBotUsrRulesRequest request) {
-            return  new ListBotUsrRulesExecutor().Client(this).Execute<ListBotUsrRulesResponse, ListBotUsrRulesResult, ListBotUsrRulesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站自定义类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListBotUsrRulesResponse> ListBotUsrRules(ListBotUsrRulesRequest request) {
-            return await new ListBotUsrRulesExecutor().Client(this).Execute<ListBotUsrRulesResponse, ListBotUsrRulesResult, ListBotUsrRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -575,59 +518,21 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  删除风险控制用户自定义名单
+        ///  获取网站在一定时间内的日志详情。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DelRiskUsrListsResponse DelRiskUsrLists(DelRiskUsrListsRequest request) {
-            return  new DelRiskUsrListsExecutor().Client(this).Execute<DelRiskUsrListsResponse, DelRiskUsrListsResult, DelRiskUsrListsRequest>(request);
+        public GetEsLogDetailResponse GetEsLogDetail(GetEsLogDetailRequest request) {
+            return  new GetEsLogDetailExecutor().Client(this).Execute<GetEsLogDetailResponse, GetEsLogDetailResult, GetEsLogDetailRequest>(request);
         }
 #else
         /// <summary>
-        ///  删除风险控制用户自定义名单
+        ///  获取网站在一定时间内的日志详情。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DelRiskUsrListsResponse> DelRiskUsrLists(DelRiskUsrListsRequest request) {
-            return await new DelRiskUsrListsExecutor().Client(this).Execute<DelRiskUsrListsResponse, DelRiskUsrListsResult, DelRiskUsrListsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListIpsResponse ListIps(ListIpsRequest request) {
-            return  new ListIpsExecutor().Client(this).Execute<ListIpsResponse, ListIpsResult, ListIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListIpsResponse> ListIps(ListIpsRequest request) {
-            return await new ListIpsExecutor().Client(this).Execute<ListIpsResponse, ListIpsResult, ListIpsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站业务防控规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelRiskRuleResponse DelRiskRule(DelRiskRuleRequest request) {
-            return  new DelRiskRuleExecutor().Client(this).Execute<DelRiskRuleResponse, DelRiskRuleResult, DelRiskRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除网站业务防控规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelRiskRuleResponse> DelRiskRule(DelRiskRuleRequest request) {
-            return await new DelRiskRuleExecutor().Client(this).Execute<DelRiskRuleResponse, DelRiskRuleResult, DelRiskRuleRequest>(request).ConfigureAwait(false);
+        public async Task<GetEsLogDetailResponse> GetEsLogDetail(GetEsLogDetailRequest request) {
+            return await new GetEsLogDetailExecutor().Client(this).Execute<GetEsLogDetailResponse, GetEsLogDetailResult, GetEsLogDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -647,519 +552,6 @@ namespace JDCloudSDK.Waf.Client
         /// <returns>请求结果信息</returns>
         public async Task<DescribeLbOutIpResponse> DescribeLbOutIp(DescribeLbOutIpRequest request) {
             return await new DescribeLbOutIpExecutor().Client(this).Execute<DescribeLbOutIpResponse, DescribeLbOutIpResult, DescribeLbOutIpRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取域名可用证书列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetAvailableCertForDomainResponse GetAvailableCertForDomain(GetAvailableCertForDomainRequest request) {
-            return  new GetAvailableCertForDomainExecutor().Client(this).Execute<GetAvailableCertForDomainResponse, GetAvailableCertForDomainResult, GetAvailableCertForDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取域名可用证书列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetAvailableCertForDomainResponse> GetAvailableCertForDomain(GetAvailableCertForDomainRequest request) {
-            return await new GetAvailableCertForDomainExecutor().Client(this).Execute<GetAvailableCertForDomainResponse, GetAvailableCertForDomainResult, GetAvailableCertForDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除js页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelJsPageResponse DelJsPage(DelJsPageRequest request) {
-            return  new DelJsPageExecutor().Client(this).Execute<DelJsPageResponse, DelJsPageResult, DelJsPageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除js页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelJsPageResponse> DelJsPage(DelJsPageRequest request) {
-            return await new DelJsPageExecutor().Client(this).Execute<DelJsPageResponse, DelJsPageResult, DelJsPageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站的waf自定义规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListWafRulesResponse ListWafRules(ListWafRulesRequest request) {
-            return  new ListWafRulesExecutor().Client(this).Execute<ListWafRulesResponse, ListWafRulesResult, ListWafRulesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站的waf自定义规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListWafRulesResponse> ListWafRules(ListWafRulesRequest request) {
-            return await new ListWafRulesExecutor().Client(this).Execute<ListWafRulesResponse, ListWafRulesResult, ListWafRulesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站已知类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListBotStdRulesResponse ListBotStdRules(ListBotStdRulesRequest request) {
-            return  new ListBotStdRulesExecutor().Client(this).Execute<ListBotStdRulesResponse, ListBotStdRulesResult, ListBotStdRulesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站已知类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListBotStdRulesResponse> ListBotStdRules(ListBotStdRulesRequest request) {
-            return await new ListBotStdRulesExecutor().Client(this).Execute<ListBotStdRulesResponse, ListBotStdRulesResult, ListBotStdRulesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  使能账号安全
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableRiskAccountResponse EnableRiskAccount(EnableRiskAccountRequest request) {
-            return  new EnableRiskAccountExecutor().Client(this).Execute<EnableRiskAccountResponse, EnableRiskAccountResult, EnableRiskAccountRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  使能账号安全
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableRiskAccountResponse> EnableRiskAccount(EnableRiskAccountRequest request) {
-            return await new EnableRiskAccountExecutor().Client(this).Execute<EnableRiskAccountResponse, EnableRiskAccountResult, EnableRiskAccountRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  新增风险控制策略信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetRiskPolicyResponse SetRiskPolicy(SetRiskPolicyRequest request) {
-            return  new SetRiskPolicyExecutor().Client(this).Execute<SetRiskPolicyResponse, SetRiskPolicyResult, SetRiskPolicyRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  新增风险控制策略信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetRiskPolicyResponse> SetRiskPolicy(SetRiskPolicyRequest request) {
-            return await new SetRiskPolicyExecutor().Client(this).Execute<SetRiskPolicyResponse, SetRiskPolicyResult, SetRiskPolicyRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  使能数据风控
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableRiskResponse EnableRisk(EnableRiskRequest request) {
-            return  new EnableRiskExecutor().Client(this).Execute<EnableRiskResponse, EnableRiskResult, EnableRiskRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  使能数据风控
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableRiskResponse> EnableRisk(EnableRiskRequest request) {
-            return await new EnableRiskExecutor().Client(this).Execute<EnableRiskResponse, EnableRiskResult, EnableRiskRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置网站业务风控js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetRiskJsResponse SetRiskJs(SetRiskJsRequest request) {
-            return  new SetRiskJsExecutor().Client(this).Execute<SetRiskJsResponse, SetRiskJsResult, SetRiskJsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置网站业务风控js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetRiskJsResponse> SetRiskJs(SetRiskJsRequest request) {
-            return await new SetRiskJsExecutor().Client(this).Execute<SetRiskJsResponse, SetRiskJsResult, SetRiskJsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置网站waf自定义防护条件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetWafConditionResponse SetWafCondition(SetWafConditionRequest request) {
-            return  new SetWafConditionExecutor().Client(this).Execute<SetWafConditionResponse, SetWafConditionResult, SetWafConditionRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置网站waf自定义防护条件
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetWafConditionResponse> SetWafCondition(SetWafConditionRequest request) {
-            return await new SetWafConditionExecutor().Client(this).Execute<SetWafConditionResponse, SetWafConditionResult, SetWafConditionRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站bot威胁情报库
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListBotThreatIpRuleResponse ListBotThreatIpRule(ListBotThreatIpRuleRequest request) {
-            return  new ListBotThreatIpRuleExecutor().Client(this).Execute<ListBotThreatIpRuleResponse, ListBotThreatIpRuleResult, ListBotThreatIpRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站bot威胁情报库
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListBotThreatIpRuleResponse> ListBotThreatIpRule(ListBotThreatIpRuleRequest request) {
-            return await new ListBotThreatIpRuleExecutor().Client(this).Execute<ListBotThreatIpRuleResponse, ListBotThreatIpRuleResult, ListBotThreatIpRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新网站自定义类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateBotUsrRuleResponse UpdateBotUsrRule(UpdateBotUsrRuleRequest request) {
-            return  new UpdateBotUsrRuleExecutor().Client(this).Execute<UpdateBotUsrRuleResponse, UpdateBotUsrRuleResult, UpdateBotUsrRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新网站自定义类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateBotUsrRuleResponse> UpdateBotUsrRule(UpdateBotUsrRuleRequest request) {
-            return await new UpdateBotUsrRuleExecutor().Client(this).Execute<UpdateBotUsrRuleResponse, UpdateBotUsrRuleResult, UpdateBotUsrRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站业务风控用户自定义名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskUsrListsResponse ListRiskUsrLists(ListRiskUsrListsRequest request) {
-            return  new ListRiskUsrListsExecutor().Client(this).Execute<ListRiskUsrListsResponse, ListRiskUsrListsResult, ListRiskUsrListsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控用户自定义名单
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskUsrListsResponse> ListRiskUsrLists(ListRiskUsrListsRequest request) {
-            return await new ListRiskUsrListsExecutor().Client(this).Execute<ListRiskUsrListsResponse, ListRiskUsrListsResult, ListRiskUsrListsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站自定义类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelBotUsrRuleResponse DelBotUsrRule(DelBotUsrRuleRequest request) {
-            return  new DelBotUsrRuleExecutor().Client(this).Execute<DelBotUsrRuleResponse, DelBotUsrRuleResult, DelBotUsrRuleRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除网站自定义类型bot规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelBotUsrRuleResponse> DelBotUsrRule(DelBotUsrRuleRequest request) {
-            return await new DelBotUsrRuleExecutor().Client(this).Execute<DelBotUsrRuleResponse, DelBotUsrRuleResult, DelBotUsrRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  使能数据风控风险控制功能
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableRiskCtlResponse EnableRiskCtl(EnableRiskCtlRequest request) {
-            return  new EnableRiskCtlExecutor().Client(this).Execute<EnableRiskCtlResponse, EnableRiskCtlResult, EnableRiskCtlRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  使能数据风控风险控制功能
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableRiskCtlResponse> EnableRiskCtl(EnableRiskCtlRequest request) {
-            return await new EnableRiskCtlExecutor().Client(this).Execute<EnableRiskCtlResponse, EnableRiskCtlResult, EnableRiskCtlRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddIpsResponse AddIps(AddIpsRequest request) {
-            return  new AddIpsExecutor().Client(this).Execute<AddIpsResponse, AddIpsResult, AddIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddIpsResponse> AddIps(AddIpsRequest request) {
-            return await new AddIpsExecutor().Client(this).Execute<AddIpsResponse, AddIpsResult, AddIpsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站风险控制策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelRiskPolicysResponse DelRiskPolicys(DelRiskPolicysRequest request) {
-            return  new DelRiskPolicysExecutor().Client(this).Execute<DelRiskPolicysResponse, DelRiskPolicysResult, DelRiskPolicysRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除网站风险控制策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelRiskPolicysResponse> DelRiskPolicys(DelRiskPolicysRequest request) {
-            return await new DelRiskPolicysExecutor().Client(this).Execute<DelRiskPolicysResponse, DelRiskPolicysResult, DelRiskPolicysRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取风险控制事件信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskConfDefaultResponse ListRiskConfDefault(ListRiskConfDefaultRequest request) {
-            return  new ListRiskConfDefaultExecutor().Client(this).Execute<ListRiskConfDefaultResponse, ListRiskConfDefaultResult, ListRiskConfDefaultRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取风险控制事件信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskConfDefaultResponse> ListRiskConfDefault(ListRiskConfDefaultRequest request) {
-            return await new ListRiskConfDefaultExecutor().Client(this).Execute<ListRiskConfDefaultResponse, ListRiskConfDefaultResult, ListRiskConfDefaultRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取实例ID及相关信息列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetWafInstanceResponse GetWafInstance(GetWafInstanceRequest request) {
-            return  new GetWafInstanceExecutor().Client(this).Execute<GetWafInstanceResponse, GetWafInstanceResult, GetWafInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取实例ID及相关信息列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetWafInstanceResponse> GetWafInstance(GetWafInstanceRequest request) {
-            return await new GetWafInstanceExecutor().Client(this).Execute<GetWafInstanceResponse, GetWafInstanceResult, GetWafInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateIpsResponse UpdateIps(UpdateIpsRequest request) {
-            return  new UpdateIpsExecutor().Client(this).Execute<UpdateIpsResponse, UpdateIpsResult, UpdateIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateIpsResponse> UpdateIps(UpdateIpsRequest request) {
-            return await new UpdateIpsExecutor().Client(this).Execute<UpdateIpsResponse, UpdateIpsResult, UpdateIpsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public CreateInstanceResponse CreateInstance(CreateInstanceRequest request) {
-            return  new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest request) {
-            return await new CreateInstanceExecutor().Client(this).Execute<CreateInstanceResponse, CreateInstanceResult, CreateInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  激活bot
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public EnableBotResponse EnableBot(EnableBotRequest request) {
-            return  new EnableBotExecutor().Client(this).Execute<EnableBotResponse, EnableBotResult, EnableBotRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  激活bot
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<EnableBotResponse> EnableBot(EnableBotRequest request) {
-            return await new EnableBotExecutor().Client(this).Execute<EnableBotResponse, EnableBotResult, EnableBotRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  更新网站
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public UpdateDomainResponse UpdateDomain(UpdateDomainRequest request) {
-            return  new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  更新网站
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<UpdateDomainResponse> UpdateDomain(UpdateDomainRequest request) {
-            return await new UpdateDomainExecutor().Client(this).Execute<UpdateDomainResponse, UpdateDomainResult, UpdateDomainRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListDomainsResponse ListDomains(ListDomainsRequest request) {
-            return  new ListDomainsExecutor().Client(this).Execute<ListDomainsResponse, ListDomainsResult, ListDomainsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站列表
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListDomainsResponse> ListDomains(ListDomainsRequest request) {
-            return await new ListDomainsExecutor().Client(this).Execute<ListDomainsResponse, ListDomainsResult, ListDomainsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetJsPageResponse SetJsPage(SetJsPageRequest request) {
-            return  new SetJsPageExecutor().Client(this).Execute<SetJsPageResponse, SetJsPageResult, SetJsPageRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置js插入页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetJsPageResponse> SetJsPage(SetJsPageRequest request) {
-            return await new SetJsPageExecutor().Client(this).Execute<SetJsPageResponse, SetJsPageResult, SetJsPageRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站业务风控变量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskVarsResponse ListRiskVars(ListRiskVarsRequest request) {
-            return  new ListRiskVarsExecutor().Client(this).Execute<ListRiskVarsResponse, ListRiskVarsResult, ListRiskVarsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控变量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskVarsResponse> ListRiskVars(ListRiskVarsRequest request) {
-            return await new ListRiskVarsExecutor().Client(this).Execute<ListRiskVarsResponse, ListRiskVarsResult, ListRiskVarsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站业务风控策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskPolicysResponse ListRiskPolicys(ListRiskPolicysRequest request) {
-            return  new ListRiskPolicysExecutor().Client(this).Execute<ListRiskPolicysResponse, ListRiskPolicysResult, ListRiskPolicysRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控策略
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskPolicysResponse> ListRiskPolicys(ListRiskPolicysRequest request) {
-            return await new ListRiskPolicysExecutor().Client(this).Execute<ListRiskPolicysResponse, ListRiskPolicysResult, ListRiskPolicysRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站在一定时间内的日志详情。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public GetEsLogDetailResponse GetEsLogDetail(GetEsLogDetailRequest request) {
-            return  new GetEsLogDetailExecutor().Client(this).Execute<GetEsLogDetailResponse, GetEsLogDetailResult, GetEsLogDetailRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站在一定时间内的日志详情。
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<GetEsLogDetailResponse> GetEsLogDetail(GetEsLogDetailRequest request) {
-            return await new GetEsLogDetailExecutor().Client(this).Execute<GetEsLogDetailResponse, GetEsLogDetailResult, GetEsLogDetailRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1202,78 +594,59 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新增网站业务风控防护规则
+        ///  获取域名可用证书列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetRiskRuleResponse SetRiskRule(SetRiskRuleRequest request) {
-            return  new SetRiskRuleExecutor().Client(this).Execute<SetRiskRuleResponse, SetRiskRuleResult, SetRiskRuleRequest>(request);
+        public GetAvailableCertForDomainResponse GetAvailableCertForDomain(GetAvailableCertForDomainRequest request) {
+            return  new GetAvailableCertForDomainExecutor().Client(this).Execute<GetAvailableCertForDomainResponse, GetAvailableCertForDomainResult, GetAvailableCertForDomainRequest>(request);
         }
 #else
         /// <summary>
-        ///  新增网站业务风控防护规则
+        ///  获取域名可用证书列表
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetRiskRuleResponse> SetRiskRule(SetRiskRuleRequest request) {
-            return await new SetRiskRuleExecutor().Client(this).Execute<SetRiskRuleResponse, SetRiskRuleResult, SetRiskRuleRequest>(request).ConfigureAwait(false);
+        public async Task<GetAvailableCertForDomainResponse> GetAvailableCertForDomain(GetAvailableCertForDomainRequest request) {
+            return await new GetAvailableCertForDomainExecutor().Client(this).Execute<GetAvailableCertForDomainResponse, GetAvailableCertForDomainResult, GetAvailableCertForDomainRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新增风险控制事件信息
+        ///  获取网站的waf自定义规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetRiskEventResponse SetRiskEvent(SetRiskEventRequest request) {
-            return  new SetRiskEventExecutor().Client(this).Execute<SetRiskEventResponse, SetRiskEventResult, SetRiskEventRequest>(request);
+        public ListWafRulesResponse ListWafRules(ListWafRulesRequest request) {
+            return  new ListWafRulesExecutor().Client(this).Execute<ListWafRulesResponse, ListWafRulesResult, ListWafRulesRequest>(request);
         }
 #else
         /// <summary>
-        ///  新增风险控制事件信息
+        ///  获取网站的waf自定义规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetRiskEventResponse> SetRiskEvent(SetRiskEventRequest request) {
-            return await new SetRiskEventExecutor().Client(this).Execute<SetRiskEventResponse, SetRiskEventResult, SetRiskEventRequest>(request).ConfigureAwait(false);
+        public async Task<ListWafRulesResponse> ListWafRules(ListWafRulesRequest request) {
+            return await new ListWafRulesExecutor().Client(this).Execute<ListWafRulesResponse, ListWafRulesResult, ListWafRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  激活自定义bot
+        ///  获取网站已知类型bot规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public EnableUsrBotResponse EnableUsrBot(EnableUsrBotRequest request) {
-            return  new EnableUsrBotExecutor().Client(this).Execute<EnableUsrBotResponse, EnableUsrBotResult, EnableUsrBotRequest>(request);
+        public ListBotStdRulesResponse ListBotStdRules(ListBotStdRulesRequest request) {
+            return  new ListBotStdRulesExecutor().Client(this).Execute<ListBotStdRulesResponse, ListBotStdRulesResult, ListBotStdRulesRequest>(request);
         }
 #else
         /// <summary>
-        ///  激活自定义bot
+        ///  获取网站已知类型bot规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<EnableUsrBotResponse> EnableUsrBot(EnableUsrBotRequest request) {
-            return await new EnableUsrBotExecutor().Client(this).Execute<EnableUsrBotResponse, EnableUsrBotResult, EnableUsrBotRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站业务风控事件详细信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskEventVarsResponse ListRiskEventVars(ListRiskEventVarsRequest request) {
-            return  new ListRiskEventVarsExecutor().Client(this).Execute<ListRiskEventVarsResponse, ListRiskEventVarsResult, ListRiskEventVarsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控事件详细信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskEventVarsResponse> ListRiskEventVars(ListRiskEventVarsRequest request) {
-            return await new ListRiskEventVarsExecutor().Client(this).Execute<ListRiskEventVarsResponse, ListRiskEventVarsResult, ListRiskEventVarsRequest>(request).ConfigureAwait(false);
+        public async Task<ListBotStdRulesResponse> ListBotStdRules(ListBotStdRulesRequest request) {
+            return await new ListBotStdRulesExecutor().Client(this).Execute<ListBotStdRulesResponse, ListBotStdRulesResult, ListBotStdRulesRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1297,59 +670,21 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新增风险控制用户自定义名单信息
+        ///  升配订单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetRiskUsrListResponse SetRiskUsrList(SetRiskUsrListRequest request) {
-            return  new SetRiskUsrListExecutor().Client(this).Execute<SetRiskUsrListResponse, SetRiskUsrListResult, SetRiskUsrListRequest>(request);
+        public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest request) {
+            return  new UpgradeInstanceExecutor().Client(this).Execute<UpgradeInstanceResponse, UpgradeInstanceResult, UpgradeInstanceRequest>(request);
         }
 #else
         /// <summary>
-        ///  新增风险控制用户自定义名单信息
+        ///  升配订单
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetRiskUsrListResponse> SetRiskUsrList(SetRiskUsrListRequest request) {
-            return await new SetRiskUsrListExecutor().Client(this).Execute<SetRiskUsrListResponse, SetRiskUsrListResult, SetRiskUsrListRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  获取网站业务风控规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public ListRiskRulesResponse ListRiskRules(ListRiskRulesRequest request) {
-            return  new ListRiskRulesExecutor().Client(this).Execute<ListRiskRulesResponse, ListRiskRulesResult, ListRiskRulesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  获取网站业务风控规则
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<ListRiskRulesResponse> ListRiskRules(ListRiskRulesRequest request) {
-            return await new ListRiskRulesExecutor().Client(this).Execute<ListRiskRulesResponse, ListRiskRulesResult, ListRiskRulesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站业务防控js页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelRiskJsResponse DelRiskJs(DelRiskJsRequest request) {
-            return  new DelRiskJsExecutor().Client(this).Execute<DelRiskJsResponse, DelRiskJsResult, DelRiskJsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除网站业务防控js页面
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelRiskJsResponse> DelRiskJs(DelRiskJsRequest request) {
-            return await new DelRiskJsExecutor().Client(this).Execute<DelRiskJsResponse, DelRiskJsResult, DelRiskJsRequest>(request).ConfigureAwait(false);
+        public async Task<UpgradeInstanceResponse> UpgradeInstance(UpgradeInstanceRequest request) {
+            return await new UpgradeInstanceExecutor().Client(this).Execute<UpgradeInstanceResponse, UpgradeInstanceResult, UpgradeInstanceRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1373,21 +708,21 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新增网站自定义类型bot规则
+        ///  设置网站waf自定义防护条件
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public AddBotUsrRuleResponse AddBotUsrRule(AddBotUsrRuleRequest request) {
-            return  new AddBotUsrRuleExecutor().Client(this).Execute<AddBotUsrRuleResponse, AddBotUsrRuleResult, AddBotUsrRuleRequest>(request);
+        public SetWafConditionResponse SetWafCondition(SetWafConditionRequest request) {
+            return  new SetWafConditionExecutor().Client(this).Execute<SetWafConditionResponse, SetWafConditionResult, SetWafConditionRequest>(request);
         }
 #else
         /// <summary>
-        ///  新增网站自定义类型bot规则
+        ///  设置网站waf自定义防护条件
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<AddBotUsrRuleResponse> AddBotUsrRule(AddBotUsrRuleRequest request) {
-            return await new AddBotUsrRuleExecutor().Client(this).Execute<AddBotUsrRuleResponse, AddBotUsrRuleResult, AddBotUsrRuleRequest>(request).ConfigureAwait(false);
+        public async Task<SetWafConditionResponse> SetWafCondition(SetWafConditionRequest request) {
+            return await new SetWafConditionExecutor().Client(this).Execute<SetWafConditionResponse, SetWafConditionResult, SetWafConditionRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -1411,78 +746,21 @@ namespace JDCloudSDK.Waf.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  新增风险控制事件详细信息
+        ///  获取网站在一定时间内主要的防护信息,新接口，无url响应时间分布。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public SetRiskEventVarsResponse SetRiskEventVars(SetRiskEventVarsRequest request) {
-            return  new SetRiskEventVarsExecutor().Client(this).Execute<SetRiskEventVarsResponse, SetRiskEventVarsResult, SetRiskEventVarsRequest>(request);
+        public GetMainAntiInfoNewResponse GetMainAntiInfoNew(GetMainAntiInfoNewRequest request) {
+            return  new GetMainAntiInfoNewExecutor().Client(this).Execute<GetMainAntiInfoNewResponse, GetMainAntiInfoNewResult, GetMainAntiInfoNewRequest>(request);
         }
 #else
         /// <summary>
-        ///  新增风险控制事件详细信息
+        ///  获取网站在一定时间内主要的防护信息,新接口，无url响应时间分布。
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<SetRiskEventVarsResponse> SetRiskEventVars(SetRiskEventVarsRequest request) {
-            return await new SetRiskEventVarsExecutor().Client(this).Execute<SetRiskEventVarsResponse, SetRiskEventVarsResult, SetRiskEventVarsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除事件及所属的策略、变量信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelRiskEventVarsResponse DelRiskEventVars(DelRiskEventVarsRequest request) {
-            return  new DelRiskEventVarsExecutor().Client(this).Execute<DelRiskEventVarsResponse, DelRiskEventVarsResult, DelRiskEventVarsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除事件及所属的策略、变量信息
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelRiskEventVarsResponse> DelRiskEventVars(DelRiskEventVarsRequest request) {
-            return await new DelRiskEventVarsExecutor().Client(this).Execute<DelRiskEventVarsResponse, DelRiskEventVarsResult, DelRiskEventVarsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  删除网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DelIpsResponse DelIps(DelIpsRequest request) {
-            return  new DelIpsExecutor().Client(this).Execute<DelIpsResponse, DelIpsResult, DelIpsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  删除网站黑白名单ip配置
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DelIpsResponse> DelIps(DelIpsRequest request) {
-            return await new DelIpsExecutor().Client(this).Execute<DelIpsResponse, DelIpsResult, DelIpsRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  设置风险控制变量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public SetRiskVarResponse SetRiskVar(SetRiskVarRequest request) {
-            return  new SetRiskVarExecutor().Client(this).Execute<SetRiskVarResponse, SetRiskVarResult, SetRiskVarRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  设置风险控制变量
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<SetRiskVarResponse> SetRiskVar(SetRiskVarRequest request) {
-            return await new SetRiskVarExecutor().Client(this).Execute<SetRiskVarResponse, SetRiskVarResult, SetRiskVarRequest>(request).ConfigureAwait(false);
+        public async Task<GetMainAntiInfoNewResponse> GetMainAntiInfoNew(GetMainAntiInfoNewRequest request) {
+            return await new GetMainAntiInfoNewExecutor().Client(this).Execute<GetMainAntiInfoNewResponse, GetMainAntiInfoNewResult, GetMainAntiInfoNewRequest>(request).ConfigureAwait(false);
         }
 #endif
 

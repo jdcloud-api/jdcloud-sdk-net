@@ -136,5 +136,9 @@ namespace JDCloudSDK.Vm.Model
         /// 已废弃。
         ///</summary>
         public string ServiceCode{ get; set; }
+        ///<summary>
+        /// 是否来自导入镜像。
+        ///</summary>
+        public bool Imported{ get; set; }
     }
 }

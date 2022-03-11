@@ -38,7 +38,7 @@ namespace JDCloudSDK.Starshield.Model
     {
 
         ///<summary>
-        /// The literal uri path to be rewritten.
+        /// 要重写的字面URI路径。
         ///</summary>
         public string Value{ get; set; }
     }

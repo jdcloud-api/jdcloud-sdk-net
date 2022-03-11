@@ -45,7 +45,7 @@ namespace JDCloudSDK.Disk.Model
         [Required]
         public string Name{ get; set; }
         ///<summary>
-        /// 快照描述
+        /// 快照描述,默认为空
         ///</summary>
         public string Description{ get; set; }
         ///<summary>

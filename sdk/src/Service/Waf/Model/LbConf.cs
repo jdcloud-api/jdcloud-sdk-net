@@ -45,7 +45,7 @@ namespace JDCloudSDK.Waf.Model
         [Required]
         public List<string> Protocols{ get; set; }
         ///<summary>
-        /// ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+        /// ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
         ///</summary>
         public List<string> SslProtocols{ get; set; }
         ///<summary>
@@ -75,6 +75,14 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? HttpsCertUpdateStatus{ get; set; }
         ///<summary>
+        /// 国密https证书状态,非配置项。-10为未绑定，0为已绑定
+        ///</summary>
+        public int? GmHttpsCertUpdateStatus{ get; set; }
+        ///<summary>
+        /// 是否支持国密证书
+        ///</summary>
+        public int? GmCertSupport{ get; set; }
+        ///<summary>
         /// 协议状态,非配置项。0为正常，-10为不正常
         ///</summary>
         public int? HttpStatus{ get; set; }
@@ -87,9 +95,13 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? EnableKeepalive{ get; set; }
         ///<summary>
-        /// 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+        /// 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
         ///</summary>
         public int? SuiteLevel{ get; set; }
+        ///<summary>
+        /// 自定义加密套件
+        ///</summary>
+        public List<string> UserSuiteLevel{ get; set; }
         ///<summary>
         /// 请求头是否支持下划线，1-是，0-否
         ///</summary>

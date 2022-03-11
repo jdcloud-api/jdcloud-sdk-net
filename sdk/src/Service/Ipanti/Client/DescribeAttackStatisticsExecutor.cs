@@ -34,11 +34,23 @@ namespace JDCloudSDK.Ipanti.Client
 
     /// <summary>
     ///  查询攻击次数及流量峰值
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+        /// 
     /// </summary>
     public class DescribeAttackStatisticsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询攻击次数及流量峰值接口的Http 请求方法
+        ///  查询攻击次数及流量峰值
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +59,13 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  查询攻击次数及流量峰值接口的Http资源请求路径
+        ///  查询攻击次数及流量峰值
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+        /// - 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+        /// - serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+        /// CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

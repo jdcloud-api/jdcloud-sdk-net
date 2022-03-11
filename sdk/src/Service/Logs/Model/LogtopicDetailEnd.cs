@@ -46,6 +46,14 @@ namespace JDCloudSDK.Logs.Model
         ///</summary>
         public string UID{ get; set; }
         ///<summary>
+        /// 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
+        ///</summary>
+        public string AppCode{ get; set; }
+        ///<summary>
+        /// 日志主题采集的日志类型
+        ///</summary>
+        public string AppName{ get; set; }
+        ///<summary>
         /// 采集配置UID
         ///</summary>
         public string CollectInfoUID{ get; set; }
@@ -73,6 +81,10 @@ namespace JDCloudSDK.Logs.Model
         /// 日志主题名称
         ///</summary>
         public string Name{ get; set; }
+        ///<summary>
+        /// 预处理模式
+        ///</summary>
+        public string PrePattern{ get; set; }
         ///<summary>
         /// 地域信息
         ///</summary>

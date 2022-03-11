@@ -50,13 +50,17 @@ namespace JDCloudSDK.Antipro.Model
         ///</summary>
         public string Region{ get; set; }
         ///<summary>
-        /// 套餐类型, 1: 独享 IP, 2: 共享 IP
+        /// 套餐类型. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
         ///</summary>
         public int? Type{ get; set; }
         ///<summary>
         /// 可防护 IP 个数
         ///</summary>
         public int? IpCount{ get; set; }
+        ///<summary>
+        /// 可添加的访问控制规则数量
+        ///</summary>
+        public int? AclLimit{ get; set; }
         ///<summary>
         /// 保底带宽, 单位 Gbps
         ///</summary>
@@ -85,5 +89,9 @@ namespace JDCloudSDK.Antipro.Model
         /// 资源 Id
         ///</summary>
         public string ResourceId{ get; set; }
+        ///<summary>
+        /// Tag信息
+        ///</summary>
+        public List<Tag> Tags{ get; set; }
     }
 }

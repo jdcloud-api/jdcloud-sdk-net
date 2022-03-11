@@ -52,6 +52,10 @@ namespace  JDCloudSDK.Logs.Apis
         ///</summary>
         public   string Name{ get; set; }
         ///<summary>
+        /// 日志主题采集的日志类型
+        ///</summary>
+        public   string AppName{ get; set; }
+        ///<summary>
         /// 地域 Id
         ///Required:true
         ///</summary>

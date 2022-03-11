@@ -43,7 +43,7 @@ namespace JDCloudSDK.Lb.Model
         ///</summary>
         public string LbType{ get; set; }
         ///<summary>
-        /// 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
+        /// 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
         ///Required:true
         ///</summary>
         [Required]

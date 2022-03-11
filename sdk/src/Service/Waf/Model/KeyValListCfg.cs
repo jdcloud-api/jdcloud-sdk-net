@@ -50,7 +50,7 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public int? Disable{ get; set; }
         ///<summary>
-        /// 0-5 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5
+        /// 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
         ///</summary>
         public int? MatchOp{ get; set; }
         ///<summary>

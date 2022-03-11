@@ -50,6 +50,10 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         public string Name{ get; set; }
         ///<summary>
+        /// 0 网页防篡改 1 网站防篡改
+        ///</summary>
+        public int? Website{ get; set; }
+        ///<summary>
         /// 是否使能，0表示否
         ///</summary>
         public int? Enable{ get; set; }

@@ -56,5 +56,9 @@ namespace JDCloudSDK.Waf.Model
         ///</summary>
         [Required]
         public string CertId{ get; set; }
+        ///<summary>
+        /// 是否国密
+        ///</summary>
+        public int? IsGm{ get; set; }
     }
 }

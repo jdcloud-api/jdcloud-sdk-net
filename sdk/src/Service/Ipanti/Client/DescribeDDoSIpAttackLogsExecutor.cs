@@ -34,11 +34,21 @@ namespace JDCloudSDK.Ipanti.Client
 
     /// <summary>
     ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+        /// 
     /// </summary>
     public class DescribeDDoSIpAttackLogsExecutor : JdcloudExecutor
     {
         /// <summary>
-        ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)接口的Http 请求方法
+        ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+        /// 接口的Http 请求方法
         /// </summary>
         public override  string Method
         {
@@ -47,7 +57,12 @@ namespace JDCloudSDK.Ipanti.Client
             }
         }
         /// <summary>
-        ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)接口的Http资源请求路径
+        ///  查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+        /// 参数 serviceIp 优先级大于 instanceId.
+        /// - 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+        /// - 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+        /// - serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+        /// 接口的Http资源请求路径
         /// </summary>
         public override string Url
         {

@@ -89,9 +89,9 @@ namespace JDCloudSDK.Antipro.Client
         }
 
         /// <summary>
-        ///  版本号 1.1.0
+        ///  版本号 1.2.8
         ///</summary>
-        public const string ClientVersion = "1.1.0";
+        public const string ClientVersion = "1.2.8";
 
         private const string apiVersion = "v1";
         private const string userAgentPrefix = "JdcloudSdkDotNet";
@@ -138,7 +138,349 @@ namespace JDCloudSDK.Antipro.Client
 
 #if NET40||NET35
         /// <summary>
-        ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+        ///  查询防护包实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest request) {
+            return  new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询防护包实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
+            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  添加防护包防护 IP. &lt;br&gt;- 防护包仅能防护防护包实例所在区域的公网 IP, 且该公网 IP 未被其他防护包防护, 如果已经被其他防护包防护, 请先调用删除防护包防护 IP 接口删除防护 IP&lt;br&gt;- 防护包可添加的防护 IP 个数小于等于防护包的可防护 IP 数量减去已防护的 IP 数量&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt; 接口查询防护包可防护的弹性公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口查询防护包可防护的云物理服务器公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describewafipresources&#39;&gt;describeWafIpResources&lt;/a&gt; 接口查询防护包可防护的Web应用防火墙公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeccsipresources&#39;&gt;describeCcsIpResources&lt;/a&gt; 接口查询防护包可防护的托管区公网 IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public AddProtectedIpResponse AddProtectedIp(AddProtectedIpRequest request) {
+            return  new AddProtectedIpExecutor().Client(this).Execute<AddProtectedIpResponse, AddProtectedIpResult, AddProtectedIpRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  添加防护包防护 IP. &lt;br&gt;- 防护包仅能防护防护包实例所在区域的公网 IP, 且该公网 IP 未被其他防护包防护, 如果已经被其他防护包防护, 请先调用删除防护包防护 IP 接口删除防护 IP&lt;br&gt;- 防护包可添加的防护 IP 个数小于等于防护包的可防护 IP 数量减去已防护的 IP 数量&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt; 接口查询防护包可防护的弹性公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口查询防护包可防护的云物理服务器公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describewafipresources&#39;&gt;describeWafIpResources&lt;/a&gt; 接口查询防护包可防护的Web应用防火墙公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeccsipresources&#39;&gt;describeCcsIpResources&lt;/a&gt; 接口查询防护包可防护的托管区公网 IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<AddProtectedIpResponse> AddProtectedIp(AddProtectedIpRequest request) {
+            return await new AddProtectedIpExecutor().Client(this).Execute<AddProtectedIpResponse, AddProtectedIpResult, AddProtectedIpRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的 IP 库列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpSetsResponse DescribeIpSets(DescribeIpSetsRequest request) {
+            return  new DescribeIpSetsExecutor().Client(this).Execute<DescribeIpSetsResponse, DescribeIpSetsResult, DescribeIpSetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的 IP 库列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpSetsResponse> DescribeIpSets(DescribeIpSetsRequest request) {
+            return await new DescribeIpSetsExecutor().Client(this).Execute<DescribeIpSetsResponse, DescribeIpSetsResult, DescribeIpSetsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的云物理服务器公网 IP(包括云物理服务器弹性公网 IP 及云物理服务器基础网络实例的公网 IP)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeCpsIpResourcesResponse DescribeCpsIpResources(DescribeCpsIpResourcesRequest request) {
+            return  new DescribeCpsIpResourcesExecutor().Client(this).Execute<DescribeCpsIpResourcesResponse, DescribeCpsIpResourcesResult, DescribeCpsIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的云物理服务器公网 IP(包括云物理服务器弹性公网 IP 及云物理服务器基础网络实例的公网 IP)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeCpsIpResourcesResponse> DescribeCpsIpResources(DescribeCpsIpResourcesRequest request) {
+            return await new DescribeCpsIpResourcesExecutor().Client(this).Execute<DescribeCpsIpResourcesResponse, DescribeCpsIpResourcesResult, DescribeCpsIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询攻击来源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAttackSourceResponse DescribeAttackSource(DescribeAttackSourceRequest request) {
+            return  new DescribeAttackSourceExecutor().Client(this).Execute<DescribeAttackSourceResponse, DescribeAttackSourceResult, DescribeAttackSourceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询攻击来源
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAttackSourceResponse> DescribeAttackSource(DescribeAttackSourceRequest request) {
+            return await new DescribeAttackSourceExecutor().Client(this).Execute<DescribeAttackSourceResponse, DescribeAttackSourceResult, DescribeAttackSourceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的访问控制规则总开关状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceAclEnableResponse DescribeInstanceAclEnable(DescribeInstanceAclEnableRequest request) {
+            return  new DescribeInstanceAclEnableExecutor().Client(this).Execute<DescribeInstanceAclEnableResponse, DescribeInstanceAclEnableResult, DescribeInstanceAclEnableRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的访问控制规则总开关状态
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceAclEnableResponse> DescribeInstanceAclEnable(DescribeInstanceAclEnableRequest request) {
+            return await new DescribeInstanceAclEnableExecutor().Client(this).Execute<DescribeInstanceAclEnableResponse, DescribeInstanceAclEnableResult, DescribeInstanceAclEnableRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  升级防护包实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest request) {
+            return  new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  升级防护包实例
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest request) {
+            return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  获取防护包实例或 IP 的防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeProtectionRuleResponse DescribeProtectionRule(DescribeProtectionRuleRequest request) {
+            return  new DescribeProtectionRuleExecutor().Client(this).Execute<DescribeProtectionRuleResponse, DescribeProtectionRuleResult, DescribeProtectionRuleRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  获取防护包实例或 IP 的防护规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeProtectionRuleResponse> DescribeProtectionRule(DescribeProtectionRuleRequest request) {
+            return await new DescribeProtectionRuleExecutor().Client(this).Execute<DescribeProtectionRuleResponse, DescribeProtectionRuleResult, DescribeProtectionRuleRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改访问控制规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyAclPriorityResponse ModifyAclPriority(ModifyAclPriorityRequest request) {
+            return  new ModifyAclPriorityExecutor().Client(this).Execute<ModifyAclPriorityResponse, ModifyAclPriorityResult, ModifyAclPriorityRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改访问控制规则
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyAclPriorityResponse> ModifyAclPriority(ModifyAclPriorityRequest request) {
+            return await new ModifyAclPriorityExecutor().Client(this).Execute<ModifyAclPriorityResponse, ModifyAclPriorityResult, ModifyAclPriorityRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询防护包实例列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
+            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询防护包实例列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
+            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询攻击记录, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录. &lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录. &lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAttackLogsResponse DescribeAttackLogs(DescribeAttackLogsRequest request) {
+            return  new DescribeAttackLogsExecutor().Client(this).Execute<DescribeAttackLogsResponse, DescribeAttackLogsResult, DescribeAttackLogsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询攻击记录, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录. &lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录. &lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAttackLogsResponse> DescribeAttackLogs(DescribeAttackLogsRequest request) {
+            return await new DescribeAttackLogsExecutor().Client(this).Execute<DescribeAttackLogsResponse, DescribeAttackLogsResult, DescribeAttackLogsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  打开实例的访问控制规则总开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public EnableInstanceAclResponse EnableInstanceAcl(EnableInstanceAclRequest request) {
+            return  new EnableInstanceAclExecutor().Client(this).Execute<EnableInstanceAclResponse, EnableInstanceAclResult, EnableInstanceAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  打开实例的访问控制规则总开关
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<EnableInstanceAclResponse> EnableInstanceAcl(EnableInstanceAclRequest request) {
+            return await new EnableInstanceAclExecutor().Client(this).Execute<EnableInstanceAclResponse, EnableInstanceAclResult, EnableInstanceAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  关闭实例的访问控制规则. 支持批量操作, 批量操作时 aclId 传多个, 以 &#39;,&#39; 分隔
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DisableAclResponse DisableAcl(DisableAclRequest request) {
+            return  new DisableAclExecutor().Client(this).Execute<DisableAclResponse, DisableAclResult, DisableAclRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  关闭实例的访问控制规则. 支持批量操作, 批量操作时 aclId 传多个, 以 &#39;,&#39; 分隔
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DisableAclResponse> DisableAcl(DisableAclRequest request) {
+            return await new DisableAclExecutor().Client(this).Execute<DisableAclResponse, DisableAclResult, DisableAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建实例的 IP 库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public CreateIpSetResponse CreateIpSet(CreateIpSetRequest request) {
+            return  new CreateIpSetExecutor().Client(this).Execute<CreateIpSetResponse, CreateIpSetResult, CreateIpSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  创建实例的 IP 库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<CreateIpSetResponse> CreateIpSet(CreateIpSetRequest request) {
+            return await new CreateIpSetExecutor().Client(this).Execute<CreateIpSetResponse, CreateIpSetResult, CreateIpSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的端口库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribePortSetResponse DescribePortSet(DescribePortSetRequest request) {
+            return  new DescribePortSetExecutor().Client(this).Execute<DescribePortSetResponse, DescribePortSetResult, DescribePortSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的端口库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribePortSetResponse> DescribePortSet(DescribePortSetRequest request) {
+            return await new DescribePortSetExecutor().Client(this).Execute<DescribePortSetResponse, DescribePortSetResult, DescribePortSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除实例的 IP 库. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeleteIpSetResponse DeleteIpSet(DeleteIpSetRequest request) {
+            return  new DeleteIpSetExecutor().Client(this).Execute<DeleteIpSetResponse, DeleteIpSetResult, DeleteIpSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除实例的 IP 库. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeleteIpSetResponse> DeleteIpSet(DeleteIpSetRequest request) {
+            return await new DeleteIpSetExecutor().Client(this).Execute<DeleteIpSetResponse, DeleteIpSetResult, DeleteIpSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的私有网络弹性公网 IP(不包括运营商级 NAT 保留地址和 IPv6)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeElasticIpResourcesResponse DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
+            return  new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的私有网络弹性公网 IP(不包括运营商级 NAT 保留地址和 IPv6)
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeElasticIpResourcesResponse> DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
+            return await new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询操作日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeOperationRecordsResponse DescribeOperationRecords(DescribeOperationRecordsRequest request) {
+            return  new DescribeOperationRecordsExecutor().Client(this).Execute<DescribeOperationRecordsResponse, DescribeOperationRecordsResult, DescribeOperationRecordsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询操作日志
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeOperationRecordsResponse> DescribeOperationRecords(DescribeOperationRecordsRequest request) {
+            return await new DescribeOperationRecordsExecutor().Client(this).Execute<DescribeOperationRecordsResponse, DescribeOperationRecordsResult, DescribeOperationRecordsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  创建防护包实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -147,7 +489,7 @@ namespace JDCloudSDK.Antipro.Client
         }
 #else
         /// <summary>
-        ///  创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+        ///  创建防护包实例
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -195,50 +537,21 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询防护包实例
+        ///  修改访问控制规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest request) {
-            return  new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request);
+        public ModifyAclResponse ModifyAcl(ModifyAclRequest request) {
+            return  new ModifyAclExecutor().Client(this).Execute<ModifyAclResponse, ModifyAclResult, ModifyAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询防护包实例
+        ///  修改访问控制规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstanceResponse> DescribeInstance(DescribeInstanceRequest request) {
-            return await new DescribeInstanceExecutor().Client(this).Execute<DescribeInstanceResponse, DescribeInstanceResult, DescribeInstanceRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  添加防护包防护 IP.
-        /// - 防护包仅能防护防护包实例所在区域的公网 IP, 且该公网 IP 未被其他防护包防护, 如果已经被其他防护包防护, 请先调用删除防护包防护 IP 接口删除防护 IP
-        /// - 防护包可添加的防护 IP 个数小于等于防护包的可防护 IP 数量减去已防护的 IP 数量
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询防护包可防护的弹性公网 IP
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询防护包可防护的云物理服务器公网 IP
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public AddProtectedIpResponse AddProtectedIp(AddProtectedIpRequest request) {
-            return  new AddProtectedIpExecutor().Client(this).Execute<AddProtectedIpResponse, AddProtectedIpResult, AddProtectedIpRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  添加防护包防护 IP.
-        /// - 防护包仅能防护防护包实例所在区域的公网 IP, 且该公网 IP 未被其他防护包防护, 如果已经被其他防护包防护, 请先调用删除防护包防护 IP 接口删除防护 IP
-        /// - 防护包可添加的防护 IP 个数小于等于防护包的可防护 IP 数量减去已防护的 IP 数量
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询防护包可防护的弹性公网 IP
-        /// - 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询防护包可防护的云物理服务器公网 IP
-        /// 
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<AddProtectedIpResponse> AddProtectedIp(AddProtectedIpRequest request) {
-            return await new AddProtectedIpExecutor().Client(this).Execute<AddProtectedIpResponse, AddProtectedIpResult, AddProtectedIpRequest>(request).ConfigureAwait(false);
+        public async Task<ModifyAclResponse> ModifyAcl(ModifyAclRequest request) {
+            return await new ModifyAclExecutor().Client(this).Execute<ModifyAclResponse, ModifyAclResult, ModifyAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -262,25 +575,6 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询 DDoS 防护包可防护的云物理服务器公网 IP(包括云物理服务器弹性公网 IP 及云物理服务器基础网络实例的公网 IP)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeCpsIpResourcesResponse DescribeCpsIpResources(DescribeCpsIpResourcesRequest request) {
-            return  new DescribeCpsIpResourcesExecutor().Client(this).Execute<DescribeCpsIpResourcesResponse, DescribeCpsIpResourcesResult, DescribeCpsIpResourcesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询 DDoS 防护包可防护的云物理服务器公网 IP(包括云物理服务器弹性公网 IP 及云物理服务器基础网络实例的公网 IP)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeCpsIpResourcesResponse> DescribeCpsIpResources(DescribeCpsIpResourcesRequest request) {
-            return await new DescribeCpsIpResourcesExecutor().Client(this).Execute<DescribeCpsIpResourcesResponse, DescribeCpsIpResourcesResult, DescribeCpsIpResourcesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
         ///  查询防护规则 Geo 拦截可设置区域
         /// </summary>
         /// <param name="request">请求参数信息</param>
@@ -300,11 +594,7 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  攻击记录统计, 参数 ip 优先级大于 instanceId
-        ///   - 指定 ip 参数时, 忽略 instanceId 参数, 统计 ip 的攻击情况
-        ///   - 未指定 ip 时, 统计 instanceId 指定实例相关攻击情况
-        ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击情况
-        /// 
+        ///  攻击记录统计, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 统计 ip 的攻击情况. &lt;br&gt;- 未指定 ip 时, 统计 instanceId 指定实例相关攻击情况. &lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击情况
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -313,11 +603,7 @@ namespace JDCloudSDK.Antipro.Client
         }
 #else
         /// <summary>
-        ///  攻击记录统计, 参数 ip 优先级大于 instanceId
-        ///   - 指定 ip 参数时, 忽略 instanceId 参数, 统计 ip 的攻击情况
-        ///   - 未指定 ip 时, 统计 instanceId 指定实例相关攻击情况
-        ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击情况
-        /// 
+        ///  攻击记录统计, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 统计 ip 的攻击情况. &lt;br&gt;- 未指定 ip 时, 统计 instanceId 指定实例相关攻击情况. &lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击情况
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -327,40 +613,97 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询攻击来源
+        ///  创建访问控制规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeAttackSourceResponse DescribeAttackSource(DescribeAttackSourceRequest request) {
-            return  new DescribeAttackSourceExecutor().Client(this).Execute<DescribeAttackSourceResponse, DescribeAttackSourceResult, DescribeAttackSourceRequest>(request);
+        public CreateAclResponse CreateAcl(CreateAclRequest request) {
+            return  new CreateAclExecutor().Client(this).Execute<CreateAclResponse, CreateAclResult, CreateAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询攻击来源
+        ///  创建访问控制规则
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeAttackSourceResponse> DescribeAttackSource(DescribeAttackSourceRequest request) {
-            return await new DescribeAttackSourceExecutor().Client(this).Execute<DescribeAttackSourceResponse, DescribeAttackSourceResult, DescribeAttackSourceRequest>(request).ConfigureAwait(false);
+        public async Task<CreateAclResponse> CreateAcl(CreateAclRequest request) {
+            return await new CreateAclExecutor().Client(this).Execute<CreateAclResponse, CreateAclResult, CreateAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  升级防护包实例
+        ///  删除实例的访问控制规则. 支持批量操作, 批量操作时 aclId个, 以 &#39;,&#39; 分隔
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest request) {
-            return  new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request);
+        public DeleteAclResponse DeleteAcl(DeleteAclRequest request) {
+            return  new DeleteAclExecutor().Client(this).Execute<DeleteAclResponse, DeleteAclResult, DeleteAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  升级防护包实例
+        ///  删除实例的访问控制规则. 支持批量操作, 批量操作时 aclId个, 以 &#39;,&#39; 分隔
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest request) {
-            return await new ModifyInstanceExecutor().Client(this).Execute<ModifyInstanceResponse, ModifyInstanceResult, ModifyInstanceRequest>(request).ConfigureAwait(false);
+        public async Task<DeleteAclResponse> DeleteAcl(DeleteAclRequest request) {
+            return await new DeleteAclExecutor().Client(this).Execute<DeleteAclResponse, DeleteAclResult, DeleteAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询防护包实例的访问控制列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeAclsResponse DescribeAcls(DescribeAclsRequest request) {
+            return  new DescribeAclsExecutor().Client(this).Execute<DescribeAclsResponse, DescribeAclsResult, DescribeAclsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询防护包实例的访问控制列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeAclsResponse> DescribeAcls(DescribeAclsRequest request) {
+            return await new DescribeAclsExecutor().Client(this).Execute<DescribeAclsResponse, DescribeAclsResult, DescribeAclsRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  删除实例的端口库. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DeletePortSetResponse DeletePortSet(DeletePortSetRequest request) {
+            return  new DeletePortSetExecutor().Client(this).Execute<DeletePortSetResponse, DeletePortSetResult, DeletePortSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  删除实例的端口库. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DeletePortSetResponse> DeletePortSet(DeletePortSetRequest request) {
+            return await new DeletePortSetExecutor().Client(this).Execute<DeletePortSetResponse, DeletePortSetResult, DeletePortSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询已添加的访问控制规则数量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeInstanceAclCntResponse DescribeInstanceAclCnt(DescribeInstanceAclCntRequest request) {
+            return  new DescribeInstanceAclCntExecutor().Client(this).Execute<DescribeInstanceAclCntResponse, DescribeInstanceAclCntResult, DescribeInstanceAclCntRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询已添加的访问控制规则数量
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeInstanceAclCntResponse> DescribeInstanceAclCnt(DescribeInstanceAclCntRequest request) {
+            return await new DescribeInstanceAclCntExecutor().Client(this).Execute<DescribeInstanceAclCntResponse, DescribeInstanceAclCntResult, DescribeInstanceAclCntRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -384,21 +727,78 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  获取防护包实例或 IP 的防护规则
+        ///  创建实例的端口库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeProtectionRuleResponse DescribeProtectionRule(DescribeProtectionRuleRequest request) {
-            return  new DescribeProtectionRuleExecutor().Client(this).Execute<DescribeProtectionRuleResponse, DescribeProtectionRuleResult, DescribeProtectionRuleRequest>(request);
+        public CreatePortSetResponse CreatePortSet(CreatePortSetRequest request) {
+            return  new CreatePortSetExecutor().Client(this).Execute<CreatePortSetResponse, CreatePortSetResult, CreatePortSetRequest>(request);
         }
 #else
         /// <summary>
-        ///  获取防护包实例或 IP 的防护规则
+        ///  创建实例的端口库
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeProtectionRuleResponse> DescribeProtectionRule(DescribeProtectionRuleRequest request) {
-            return await new DescribeProtectionRuleExecutor().Client(this).Execute<DescribeProtectionRuleResponse, DescribeProtectionRuleResult, DescribeProtectionRuleRequest>(request).ConfigureAwait(false);
+        public async Task<CreatePortSetResponse> CreatePortSet(CreatePortSetRequest request) {
+            return await new CreatePortSetExecutor().Client(this).Execute<CreatePortSetResponse, CreatePortSetResult, CreatePortSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的Web应用防护墙 IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeWafIpResourcesResponse DescribeWafIpResources(DescribeWafIpResourcesRequest request) {
+            return  new DescribeWafIpResourcesExecutor().Client(this).Execute<DescribeWafIpResourcesResponse, DescribeWafIpResourcesResult, DescribeWafIpResourcesRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询 DDoS 防护包可防护的Web应用防护墙 IP
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeWafIpResourcesResponse> DescribeWafIpResources(DescribeWafIpResourcesRequest request) {
+            return await new DescribeWafIpResourcesExecutor().Client(this).Execute<DescribeWafIpResourcesResponse, DescribeWafIpResourcesResult, DescribeWafIpResourcesRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的 IP 库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribeIpSetResponse DescribeIpSet(DescribeIpSetRequest request) {
+            return  new DescribeIpSetExecutor().Client(this).Execute<DescribeIpSetResponse, DescribeIpSetResult, DescribeIpSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的 IP 库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribeIpSetResponse> DescribeIpSet(DescribeIpSetRequest request) {
+            return await new DescribeIpSetExecutor().Client(this).Execute<DescribeIpSetResponse, DescribeIpSetResult, DescribeIpSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询实例的端口库列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public DescribePortSetsResponse DescribePortSets(DescribePortSetsRequest request) {
+            return  new DescribePortSetsExecutor().Client(this).Execute<DescribePortSetsResponse, DescribePortSetsResult, DescribePortSetsRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  查询实例的端口库列表
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<DescribePortSetsResponse> DescribePortSets(DescribePortSetsRequest request) {
+            return await new DescribePortSetsExecutor().Client(this).Execute<DescribePortSetsResponse, DescribePortSetsResult, DescribePortSetsRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -441,48 +841,59 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询防护包实例列表
+        ///  关闭实例的访问控制规则总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request) {
-            return  new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request);
+        public DisableInstanceAclResponse DisableInstanceAcl(DisableInstanceAclRequest request) {
+            return  new DisableInstanceAclExecutor().Client(this).Execute<DisableInstanceAclResponse, DisableInstanceAclResult, DisableInstanceAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询防护包实例列表
+        ///  关闭实例的访问控制规则总开关
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest request) {
-            return await new DescribeInstancesExecutor().Client(this).Execute<DescribeInstancesResponse, DescribeInstancesResult, DescribeInstancesRequest>(request).ConfigureAwait(false);
+        public async Task<DisableInstanceAclResponse> DisableInstanceAcl(DisableInstanceAclRequest request) {
+            return await new DisableInstanceAclExecutor().Client(this).Execute<DisableInstanceAclResponse, DisableInstanceAclResult, DisableInstanceAclRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询攻击记录, 参数 ip 优先级大于 instanceId
-        ///   - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录
-        ///   - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录
-        ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
-        /// 
+        ///  打开实例的访问控制规则. 支持批量操作, 批量操作时 aclId 传多个, 以 &#39;,&#39; 分隔
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public DescribeAttackLogsResponse DescribeAttackLogs(DescribeAttackLogsRequest request) {
-            return  new DescribeAttackLogsExecutor().Client(this).Execute<DescribeAttackLogsResponse, DescribeAttackLogsResult, DescribeAttackLogsRequest>(request);
+        public EnableAclResponse EnableAcl(EnableAclRequest request) {
+            return  new EnableAclExecutor().Client(this).Execute<EnableAclResponse, EnableAclResult, EnableAclRequest>(request);
         }
 #else
         /// <summary>
-        ///  查询攻击记录, 参数 ip 优先级大于 instanceId
-        ///   - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录
-        ///   - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录
-        ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
-        /// 
+        ///  打开实例的访问控制规则. 支持批量操作, 批量操作时 aclId 传多个, 以 &#39;,&#39; 分隔
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
-        public async Task<DescribeAttackLogsResponse> DescribeAttackLogs(DescribeAttackLogsRequest request) {
-            return await new DescribeAttackLogsExecutor().Client(this).Execute<DescribeAttackLogsResponse, DescribeAttackLogsResult, DescribeAttackLogsRequest>(request).ConfigureAwait(false);
+        public async Task<EnableAclResponse> EnableAcl(EnableAclRequest request) {
+            return await new EnableAclExecutor().Client(this).Execute<EnableAclResponse, EnableAclResult, EnableAclRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  修改实例的 IP 库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyIpSetResponse ModifyIpSet(ModifyIpSetRequest request) {
+            return  new ModifyIpSetExecutor().Client(this).Execute<ModifyIpSetResponse, ModifyIpSetResult, ModifyIpSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例的 IP 库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyIpSetResponse> ModifyIpSet(ModifyIpSetRequest request) {
+            return await new ModifyIpSetExecutor().Client(this).Execute<ModifyIpSetResponse, ModifyIpSetResult, ModifyIpSetRequest>(request).ConfigureAwait(false);
         }
 #endif
 #if NET40||NET35
@@ -506,11 +917,26 @@ namespace JDCloudSDK.Antipro.Client
 #endif
 #if NET40||NET35
         /// <summary>
-        ///  查询各类型攻击次数, 参数 ip 优先级大于 instanceId
-        ///   - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数
-        ///   - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数
-        ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
-        /// 
+        ///  修改实例的端口库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public ModifyPortSetResponse ModifyPortSet(ModifyPortSetRequest request) {
+            return  new ModifyPortSetExecutor().Client(this).Execute<ModifyPortSetResponse, ModifyPortSetResult, ModifyPortSetRequest>(request);
+        }
+#else
+        /// <summary>
+        ///  修改实例的端口库
+        /// </summary>
+        /// <param name="request">请求参数信息</param>
+        /// <returns>请求结果信息</returns>
+        public async Task<ModifyPortSetResponse> ModifyPortSet(ModifyPortSetRequest request) {
+            return await new ModifyPortSetExecutor().Client(this).Execute<ModifyPortSetResponse, ModifyPortSetResult, ModifyPortSetRequest>(request).ConfigureAwait(false);
+        }
+#endif
+#if NET40||NET35
+        /// <summary>
+        ///  查询各类型攻击次数, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数&lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数&lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -519,11 +945,7 @@ namespace JDCloudSDK.Antipro.Client
         }
 #else
         /// <summary>
-        ///  查询各类型攻击次数, 参数 ip 优先级大于 instanceId
-        ///   - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数
-        ///   - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数
-        ///   - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
-        /// 
+        ///  查询各类型攻击次数, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数&lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数&lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
         /// </summary>
         /// <param name="request">请求参数信息</param>
         /// <returns>请求结果信息</returns>
@@ -548,44 +970,6 @@ namespace JDCloudSDK.Antipro.Client
         /// <returns>请求结果信息</returns>
         public async Task<ModifyProtectionRuleResponse> ModifyProtectionRule(ModifyProtectionRuleRequest request) {
             return await new ModifyProtectionRuleExecutor().Client(this).Execute<ModifyProtectionRuleResponse, ModifyProtectionRuleResult, ModifyProtectionRuleRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询 DDoS 防护包可防护的私有网络弹性公网 IP(不包括运营商级 NAT 保留地址和 IPv6)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeElasticIpResourcesResponse DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
-            return  new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询 DDoS 防护包可防护的私有网络弹性公网 IP(不包括运营商级 NAT 保留地址和 IPv6)
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeElasticIpResourcesResponse> DescribeElasticIpResources(DescribeElasticIpResourcesRequest request) {
-            return await new DescribeElasticIpResourcesExecutor().Client(this).Execute<DescribeElasticIpResourcesResponse, DescribeElasticIpResourcesResult, DescribeElasticIpResourcesRequest>(request).ConfigureAwait(false);
-        }
-#endif
-#if NET40||NET35
-        /// <summary>
-        ///  查询操作日志
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public DescribeOperationRecordsResponse DescribeOperationRecords(DescribeOperationRecordsRequest request) {
-            return  new DescribeOperationRecordsExecutor().Client(this).Execute<DescribeOperationRecordsResponse, DescribeOperationRecordsResult, DescribeOperationRecordsRequest>(request);
-        }
-#else
-        /// <summary>
-        ///  查询操作日志
-        /// </summary>
-        /// <param name="request">请求参数信息</param>
-        /// <returns>请求结果信息</returns>
-        public async Task<DescribeOperationRecordsResponse> DescribeOperationRecords(DescribeOperationRecordsRequest request) {
-            return await new DescribeOperationRecordsExecutor().Client(this).Execute<DescribeOperationRecordsResponse, DescribeOperationRecordsResult, DescribeOperationRecordsRequest>(request).ConfigureAwait(false);
         }
 #endif
 

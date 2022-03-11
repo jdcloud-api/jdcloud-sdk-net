@@ -42,17 +42,15 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public List<string> Products{ get; set; }
         ///<summary>
-        /// The priority of the rule to allow control of processing order.
-        /// A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.
-        /// 
+        /// 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
         ///</summary>
         public double? Priority{ get; set; }
         ///<summary>
-        /// Whether this firewall rule is currently paused.
+        /// 此防火墙规则当前是否已暂停。
         ///</summary>
         public bool Paused{ get; set; }
         ///<summary>
-        /// Short reference tag to quickly select related rules.
+        /// 短引用标记，用于快速选择相关规则。
         ///</summary>
         public string Ref{ get; set; }
         ///<summary>
@@ -60,7 +58,7 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public Action_parameters Action_parameters{ get; set; }
         ///<summary>
-        /// The action to apply to a matched request. Note that action &quot;log&quot; is only available for enterprise customers.
+        /// 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
         ///</summary>
         public string Action{ get; set; }
         ///<summary>
@@ -68,11 +66,11 @@ namespace JDCloudSDK.Starshield.Model
         ///</summary>
         public Filter Filter{ get; set; }
         ///<summary>
-        /// Firewall Rule identifier
+        /// 防火墙规则标识符
         ///</summary>
         public string Id{ get; set; }
         ///<summary>
-        /// A description of the rule to help identify it.
+        /// 对规则的描述，以帮助识别它。
         ///</summary>
         public string Description{ get; set; }
     }

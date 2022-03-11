@@ -38,11 +38,11 @@ namespace JDCloudSDK.Starshield.Model
     {
 
         ///<summary>
-        /// Will exist if JDC StarShield automatically added this DNS record during initial setup.
+        /// 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
         ///</summary>
         public bool Auto_added{ get; set; }
         ///<summary>
-        /// Where the record originated from
+        /// 记录来自哪里
         ///</summary>
         public string Source{ get; set; }
     }

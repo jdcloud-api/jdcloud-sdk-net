@@ -49,11 +49,11 @@ namespace JDCloudSDK.Vm.Model
         ///</summary>
         public List<string> SecurityGroups{ get; set; }
         ///<summary>
-        /// PortSecurity，源和目标IP地址校验，取值为0或者1。
+        /// 参数已弃用，指定无效。
         ///</summary>
         public int? SanityCheck{ get; set; }
         ///<summary>
-        /// 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+        /// 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
         ///</summary>
         public int? Ipv6AddressCount{ get; set; }
     }
