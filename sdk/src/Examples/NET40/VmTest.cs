@@ -32,7 +32,7 @@ namespace JDCloudSDK.Test.NET40
             instanceSpec.Description = "dotnet-sdk";
 
             // 主网卡
-            NetworkInterfaceSpec networkInterfaceSpec = new NetworkInterfaceSpec();
+            JDCloudSDK.Vm.Model.NetworkInterfaceSpec networkInterfaceSpec = new JDCloudSDK.Vm.Model.NetworkInterfaceSpec();
             networkInterfaceSpec.SubnetId = "subnet-j0yka3pkcu";
             networkInterfaceSpec.Az = "cn-north-1a";
             InstanceNetworkInterfaceAttachmentSpec instanceNetworkInterfaceAttachmentSpec = new InstanceNetworkInterfaceAttachmentSpec();
@@ -48,7 +48,7 @@ namespace JDCloudSDK.Test.NET40
             InstanceDiskAttachmentSpec dataDisk1 = new InstanceDiskAttachmentSpec();
             dataDisk1.DiskCategory = "cloud";
             dataDisk1.AutoDelete = true;
-            dataDisk1.CloudDiskSpec = new DiskSpec();
+            dataDisk1.CloudDiskSpec = new JDCloudSDK.Vm.Model.DiskSpec();
             dataDisk1.CloudDiskSpec.Name = "sdk-test-disk1";
             dataDisk1.CloudDiskSpec.DiskSizeGB = 50;
             dataDisk1.CloudDiskSpec.DiskType = "premium-hdd";
@@ -56,7 +56,7 @@ namespace JDCloudSDK.Test.NET40
             InstanceDiskAttachmentSpec dataDisk2 = new InstanceDiskAttachmentSpec();
             dataDisk2.DiskCategory = "cloud";
             dataDisk2.AutoDelete = true;
-            dataDisk2.CloudDiskSpec = new DiskSpec();
+            dataDisk2.CloudDiskSpec = new JDCloudSDK.Vm.Model.DiskSpec();
             dataDisk2.CloudDiskSpec.Name = "sdk-test-disk2";
             dataDisk2.CloudDiskSpec.DiskSizeGB = 40;
             dataDisk2.CloudDiskSpec.DiskType = "ssd";
@@ -67,13 +67,13 @@ namespace JDCloudSDK.Test.NET40
             instanceSpec.DataDisks = dataDisks;
 
             // 公网IP
-            ElasticIpSpec elasticIpSpec = new ElasticIpSpec();
+            JDCloudSDK.Vm.Model.ElasticIpSpec elasticIpSpec = new JDCloudSDK.Vm.Model.ElasticIpSpec();
             elasticIpSpec.BandwidthMbps = 2;
             elasticIpSpec.Provider = "BGP";
             instanceSpec.ElasticIp = elasticIpSpec;
 
             // 计费方式
-            ChargeSpec chargeSpec = new ChargeSpec();
+            JDCloudSDK.Charge.Model.ChargeSpec chargeSpec = new JDCloudSDK.Charge.Model.ChargeSpec();
             chargeSpec.ChargeMode = "postpaid_by_duration";
 
             // 请求创建
@@ -87,7 +87,6 @@ namespace JDCloudSDK.Test.NET40
 
 
             Console.WriteLine(JsonConvert.SerializeObject(response));
-            // Console.WriteLine();
         }
 
         [Test]

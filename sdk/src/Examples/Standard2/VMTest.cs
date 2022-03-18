@@ -36,7 +36,7 @@ namespace JDCloudSDK.Test.Standard2
             instanceSpec.Description="dotnet-sdk";
 
             // 主网卡
-            NetworkInterfaceSpec networkInterfaceSpec = new NetworkInterfaceSpec();
+            JDCloudSDK.Vm.Model.NetworkInterfaceSpec networkInterfaceSpec = new JDCloudSDK.Vm.Model.NetworkInterfaceSpec();
             networkInterfaceSpec.SubnetId= "subnet-j0yka3pkcu";
             networkInterfaceSpec.Az="cn-north-1a";
             InstanceNetworkInterfaceAttachmentSpec instanceNetworkInterfaceAttachmentSpec = new InstanceNetworkInterfaceAttachmentSpec();
@@ -73,11 +73,11 @@ namespace JDCloudSDK.Test.Standard2
             // 公网IP
             //ElasticIpSpec elasticIpSpec = new ElasticIpSpec();
             //elasticIpSpec.BandwidthMbps = 2;
-           // elasticIpSpec.Provider = "BGP";
-           // instanceSpec.ElasticIp = elasticIpSpec;
+            // elasticIpSpec.Provider = "BGP";
+            // instanceSpec.ElasticIp = elasticIpSpec;
 
             // 计费方式
-            ChargeSpec chargeSpec = new ChargeSpec();
+            JDCloudSDK.Vm.Model.ChargeSpec chargeSpec = new JDCloudSDK.Vm.Model.ChargeSpec();
             chargeSpec.ChargeMode = "postpaid_by_duration";
 
             // 请求创建
@@ -131,9 +131,9 @@ namespace JDCloudSDK.Test.Standard2
             describeInstancesRequest.RegionId = "cn-north-1";
             describeInstancesRequest.PageSize = 20;
             describeInstancesRequest.PageNumber = 1;
-            List<Filter> filters = new List<Filter>();
+            List<JDCloudSDK.Common.Model.Filter> filters = new List<JDCloudSDK.Common.Model.Filter>();
 
-            Filter filter = new Filter();
+            JDCloudSDK.Common.Model.Filter filter = new JDCloudSDK.Common.Model.Filter();
             filter.Name = "name";
             List<string> filterValues = new List<string>();
             filterValues.Add("河北新明2");

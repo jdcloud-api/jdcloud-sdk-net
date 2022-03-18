@@ -42,12 +42,12 @@ namespace JDCloudSDK.Test.Standard2
             request.RegionId = "cn-north-1";
             request.PageNumber = 1;
             request.PageSize = 100;
-            Filter diskFilter = new Filter();
+            JDCloudSDK.Common.Model. Filter diskFilter = new JDCloudSDK.Common.Model.Filter();
             diskFilter.Name = "status";
             List<string> val = new List<string>();
             val.Add("available");
             diskFilter.Values = val;
-            request.Filters = new List<Filter>();
+            request.Filters = new List<JDCloudSDK.Common.Model.Filter>();
             request.Filters.Add(diskFilter);
             var result = diskClient.DescribeDisks(request).Result;
             _output.WriteLine(JsonConvert.SerializeObject(result)); 
@@ -102,7 +102,7 @@ namespace JDCloudSDK.Test.Standard2
             request.PageSize = 100;
             request.PageNumber = 1;
 
-            Filter snpFilter = new Filter();
+            JDCloudSDK.Common.Model.Filter snpFilter = new JDCloudSDK.Common.Model.Filter();
             snpFilter.Name ="diskId";
             List<string> val1 = new List<string>();
             val1.Add("vol-bwxyeo32bv");
@@ -112,7 +112,7 @@ namespace JDCloudSDK.Test.Standard2
             //List<String> val2 = new List<String>();
             //val2.Add("available");
             //stateFilter.Values = val2;
-            request.Filters = new List<Filter>();
+            request.Filters = new List<JDCloudSDK.Common.Model.Filter>();
             request.Filters.Add(snpFilter);
            // request.Filters.Add(stateFilter);
             var result = diskClient.DescribeSnapshots(request);
