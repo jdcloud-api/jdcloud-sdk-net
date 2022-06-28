@@ -19,10 +19,6 @@
     <PropertyGroup Condition="'$(Configuration)|$(Platform)|$(TargetFramework)'=='Debug|AnyCPU|netstandard2.0'">
         <DocumentationFile>bin\Debug\netstandard2.0\JDCloudSDK.jke.xml</DocumentationFile>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
     </ItemGroup>

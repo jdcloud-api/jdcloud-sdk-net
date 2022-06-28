@@ -27,9 +27,6 @@
         <None Include="../../../icon/icon.png" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    </ItemGroup>
-    <ItemGroup>
         <ProjectReference Include="..\..\Core\JDCloudSDK.Core.csproj" />
     </ItemGroup>
 </Project>
