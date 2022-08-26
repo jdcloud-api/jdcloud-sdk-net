@@ -606,6 +606,7 @@ namespace JDCloudSDK.Core.Client
                         
 #else
                         string value = System.Net.WebUtility.UrlEncode(encodeStr);
+                        value = value.Replace("+", "%20");
 
 #endif
                         dic.Add(pname,value);
